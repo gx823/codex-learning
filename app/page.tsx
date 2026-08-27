@@ -6,7 +6,6 @@ type GameStatus = 'menu' | 'playing' | 'paused' | 'levelclear' | 'gameover' | 'v
 type GameMode = 'campaign' | 'endless';
 type ObjectKind = 'letter' | 'cloud' | 'heart';
 type CharacterId = 'mio' | 'elaina' | 'frieren';
-type VoiceCue = 'clear' | 'dash' | 'hit';
 
 type FlyingObject = {
   id: number;
@@ -101,24 +100,6 @@ const CHARACTERS: Record<CharacterId, {
 };
 
 const CHARACTER_IDS = Object.keys(CHARACTERS) as CharacterId[];
-
-const VOICE_LINES: Record<CharacterId, Record<VoiceCue, string>> = {
-  mio: {
-    dash: '星光借我一程！',
-    hit: '哎呀，差一点！',
-    clear: '今晚的星光，顺利送达！',
-  },
-  elaina: {
-    dash: '看好了，这就是天才魔女的速度！',
-    hit: '呀！这可不能算！',
-    clear: '哼哼，果然没有我办不到的路线。',
-  },
-  frieren: {
-    dash: '稍微认真一点吧。',
-    hit: '嗯……大意了。',
-    clear: '送到了。还算顺利。',
-  },
-};
 
 const BACKGROUND_THEMES = [
   { top: '#625da0', middle: '#9c90cf', bottom: '#f1b7c6', celestial: '#fff0ba', silhouette: '#464263', light: '#ffd86c' },
@@ -266,27 +247,6 @@ export default function Home() {
     });
   }, [ensureAudio]);
 
-  const speakVoice = useCallback((cue: VoiceCue) => {
-    if (mutedRef.current || !('speechSynthesis' in window)) return;
-    const character = modelRef.current.character;
-    const utterance = new SpeechSynthesisUtterance(VOICE_LINES[character][cue]);
-    const voiceStyle = {
-      mio: { rate: 1.08, pitch: 1.22, volume: 0.68 },
-      elaina: { rate: 1.13, pitch: 1.32, volume: 0.72 },
-      frieren: { rate: 0.88, pitch: 0.98, volume: 0.66 },
-    }[character];
-    utterance.lang = 'zh-CN';
-    utterance.rate = voiceStyle.rate;
-    utterance.pitch = voiceStyle.pitch;
-    utterance.volume = voiceStyle.volume;
-    const voices = window.speechSynthesis.getVoices();
-    utterance.voice = voices.find((voice) => /zh[-_](CN|Hans)/i.test(voice.lang) && /Xiaoxiao|Xiaoyi|Huihui|Ting-Ting|Meijia/i.test(voice.name))
-      ?? voices.find((voice) => voice.lang.toLowerCase().startsWith('zh'))
-      ?? null;
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
-  }, []);
-
   const stopBgm = useCallback(() => {
     bgmRef.current?.pause();
     const generated = generatedBgmRef.current;
@@ -391,9 +351,8 @@ export default function Home() {
     model.dashTime = 3.2;
     model.invincible = 3.2;
     playSound('dash');
-    speakVoice('dash');
     setUi((previous) => ({ ...previous, energy: 0 }));
-  }, [playSound, speakVoice]);
+  }, [playSound]);
 
   const startGame = useCallback((mode: GameMode = 'campaign') => {
     const current = modelRef.current;
@@ -484,7 +443,6 @@ export default function Home() {
     });
     return () => {
       stopBgm();
-      window.speechSynthesis?.cancel();
       if (customBgmUrlRef.current) URL.revokeObjectURL(customBgmUrlRef.current);
     };
   }, [stopBgm]);
@@ -947,7 +905,6 @@ export default function Home() {
       });
       stopBgm();
       playSound('end');
-      if (victory) speakVoice('clear');
     };
 
     const update = (delta: number, now: number) => {
@@ -1050,7 +1007,6 @@ export default function Home() {
           model.invincible = 1.55;
           burst(item.x, item.y, '#a8a2ca', 18);
           playSound('hit');
-          speakVoice('hit');
         } else {
           remaining.push(item);
         }
@@ -1098,7 +1054,6 @@ export default function Home() {
             time: Math.ceil(model.time),
           });
           playSound('end');
-          speakVoice('clear');
         }
       } else if (model.lives <= 0 || (model.mode === 'campaign' && model.time <= 0)) finish(false);
     };
@@ -1117,7 +1072,7 @@ export default function Home() {
       cancelAnimationFrame(frame);
       observer.disconnect();
     };
-  }, [playSound, setGameStatus, speakVoice, stopBgm]);
+  }, [playSound, setGameStatus, stopBgm]);
 
   const updatePointer = (event: React.PointerEvent<HTMLCanvasElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -1169,7 +1124,6 @@ export default function Home() {
               setMuted(next);
               if (next) {
                 stopBgm();
-                window.speechSynthesis?.cancel();
               }
               else if (statusRef.current === 'playing') startBgm();
             }}
@@ -1207,11 +1161,13 @@ export default function Home() {
             ref={canvasRef}
             aria-label="星穹邮差游戏区域。使用方向键或 WASD 移动，空格释放流星冲刺。"
             onPointerDown={(event) => {
+              if (event.pointerType === 'mouse') return;
               event.currentTarget.setPointerCapture(event.pointerId);
               pointerRef.current.active = true;
               updatePointer(event);
             }}
             onPointerMove={(event) => {
+              if (event.pointerType === 'mouse') return;
               if (pointerRef.current.active) updatePointer(event);
             }}
             onPointerUp={() => { pointerRef.current.active = false; }}
