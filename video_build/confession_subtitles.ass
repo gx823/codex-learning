@@ -1,0 +1,18 @@
+[Script Info]
+Title: 想要结束我爱你游戏 - 告白短片
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,32,&H00FFFFFF,&H000000FF,&H009C456B,&H80000000,-1,0,0,0,100,100,0,0,1,2.6,0.8,2,75,75,36,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.08,0:00:04.58,Default,美久,0,0,0,,ねえ、雪也。もう、この「好きって言ったら負け」のゲーム……終わりにしない？\N雪也，我们别再玩“先说喜欢就输了”的游戏了，好吗？
+Dialogue: 0,0:00:04.75,0:00:09.08,Default,雪也,0,0,0,,それ、俺の台詞。ずっと前から……美久が好きだ。\N这正是我想说的。其实从很早以前……我就喜欢美久。
+Dialogue: 0,0:00:09.85,0:00:12.03,Default,美久,0,0,0,,……じゃあ、引き分け？\N……那我们算平局？
+Dialogue: 0,0:00:12.25,0:00:14.90,Default,雪也,0,0,0,,いや。二人とも、勝ちだ。\N不。我们两个，都赢了。
