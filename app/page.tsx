@@ -5,6 +5,8 @@ import { type ChangeEvent, useCallback, useEffect, useRef, useState } from 'reac
 type GameStatus = 'menu' | 'playing' | 'paused' | 'levelclear' | 'gameover' | 'victory';
 type GameMode = 'campaign' | 'endless';
 type ObjectKind = 'letter' | 'cloud' | 'heart';
+type CharacterId = 'mio' | 'elaina' | 'frieren';
+type VoiceCue = 'clear' | 'dash' | 'hit';
 
 type FlyingObject = {
   id: number;
@@ -38,6 +40,7 @@ type GameModel = {
   combo: number;
   energy: number;
   lives: number;
+  character: CharacterId;
   mode: GameMode;
   level: number;
   delivered: number;
@@ -54,6 +57,79 @@ type GameModel = {
 const PRE_FINAL_TARGETS = [8, 12, 16, 20, 24, 28, 32] as const;
 const FINAL_LEVEL_TARGET = PRE_FINAL_TARGETS.reduce((sum, target) => sum + target, 0);
 const ENDLESS_THRESHOLDS = [0, 15, 30, 45, 60, 75, 90, 120] as const;
+
+const CHARACTERS: Record<CharacterId, {
+  name: string;
+  title: string;
+  perk: string;
+  sprite: string;
+  maxLives: number;
+  moveSpeed: number;
+  letterValue: number;
+  magnetRadius: number;
+}> = {
+  mio: {
+    name: '星野澪',
+    title: '均衡型 · 夜行魔女',
+    perk: '生命 3 · 标准速度',
+    sprite: '/stellar-courier.png',
+    maxLives: 3,
+    moveSpeed: 1,
+    letterValue: 1,
+    magnetRadius: 230,
+  },
+  elaina: {
+    name: '伊雷娜',
+    title: '耐久型 · 灰之魔女',
+    perk: '生命 5 · 移速 82%',
+    sprite: '/witch-silver.png',
+    maxLives: 5,
+    moveSpeed: 0.82,
+    letterValue: 1,
+    magnetRadius: 230,
+  },
+  frieren: {
+    name: '芙莉莲',
+    title: '收集型 · 白袍法师',
+    perk: '生命 2 · 信封 ×2',
+    sprite: '/witch-white-mage.png',
+    maxLives: 2,
+    moveSpeed: 1.08,
+    letterValue: 2,
+    magnetRadius: 310,
+  },
+};
+
+const CHARACTER_IDS = Object.keys(CHARACTERS) as CharacterId[];
+
+const VOICE_LINES: Record<CharacterId, Record<VoiceCue, string>> = {
+  mio: {
+    dash: '星光借我一程！',
+    hit: '哎呀，差一点！',
+    clear: '今晚的星光，顺利送达！',
+  },
+  elaina: {
+    dash: '看好了，这就是天才魔女的速度！',
+    hit: '呀！这可不能算！',
+    clear: '哼哼，果然没有我办不到的路线。',
+  },
+  frieren: {
+    dash: '稍微认真一点吧。',
+    hit: '嗯……大意了。',
+    clear: '送到了。还算顺利。',
+  },
+};
+
+const BACKGROUND_THEMES = [
+  { top: '#625da0', middle: '#9c90cf', bottom: '#f1b7c6', celestial: '#fff0ba', silhouette: '#464263', light: '#ffd86c' },
+  { top: '#352a72', middle: '#7259a6', bottom: '#c79bc9', celestial: '#e8d8ff', silhouette: '#30294f', light: '#d9b5ff' },
+  { top: '#29356f', middle: '#645da2', bottom: '#ec9fae', celestial: '#ffe6ed', silhouette: '#353556', light: '#ff9fb3' },
+  { top: '#123f63', middle: '#30718a', bottom: '#8ec5c2', celestial: '#dffcf6', silhouette: '#173c50', light: '#7af3dd' },
+  { top: '#17345f', middle: '#3c7390', bottom: '#b9dae2', celestial: '#e8ffff', silhouette: '#284f68', light: '#85ffd2' },
+  { top: '#281f57', middle: '#674674', bottom: '#d16b78', celestial: '#fff1c4', silhouette: '#352341', light: '#ffb45f' },
+  { top: '#160f35', middle: '#38214d', bottom: '#8e4552', celestial: '#ff8b78', silhouette: '#1d1730', light: '#ff7267' },
+  { top: '#100c1d', middle: '#401526', bottom: '#b33b29', celestial: '#ff633e', silhouette: '#160f1b', light: '#ffb027' },
+] as const;
 
 const LEVELS = [
   { name: '黄昏屋檐', subtitle: '让扫帚适应晚风', target: PRE_FINAL_TARGETS[0], time: 34, speed: 0.86, cloudSpeed: 0.9, cloudRate: 0.22, spawnBase: 0.82 },
@@ -85,7 +161,7 @@ function getEndlessLevel(delivered: number) {
   return 0;
 }
 
-function createModel(mode: GameMode = 'campaign'): GameModel {
+function createModel(mode: GameMode = 'campaign', character: CharacterId = 'mio'): GameModel {
   return {
     width: 900,
     height: 520,
@@ -102,7 +178,8 @@ function createModel(mode: GameMode = 'campaign'): GameModel {
     score: 0,
     combo: 0,
     energy: 0,
-    lives: 3,
+    lives: CHARACTERS[character].maxLives,
+    character,
     mode,
     level: 0,
     delivered: 0,
@@ -136,7 +213,7 @@ export default function Home() {
   const statusRef = useRef<GameStatus>('menu');
   const keysRef = useRef<Set<string>>(new Set());
   const pointerRef = useRef<{ active: boolean; x: number; y: number }>({ active: false, x: 0, y: 0 });
-  const imageRef = useRef<HTMLImageElement | null>(null);
+  const characterImagesRef = useRef<Partial<Record<CharacterId, HTMLImageElement>>>({});
   const audioRef = useRef<AudioContext | null>(null);
   const bgmRef = useRef<HTMLAudioElement | null>(null);
   const customBgmUrlRef = useRef<string | null>(null);
@@ -148,6 +225,7 @@ export default function Home() {
   const [highScore, setHighScore] = useState(0);
   const [isShareVersion, setIsShareVersion] = useState(false);
   const [customMusicName, setCustomMusicName] = useState('');
+  const [selectedCharacter, setSelectedCharacter] = useState<CharacterId>('mio');
 
   const setGameStatus = useCallback((next: GameStatus) => {
     statusRef.current = next;
@@ -187,6 +265,27 @@ export default function Home() {
       oscillator.stop(audio.currentTime + index * 0.07 + 0.2);
     });
   }, [ensureAudio]);
+
+  const speakVoice = useCallback((cue: VoiceCue) => {
+    if (mutedRef.current || !('speechSynthesis' in window)) return;
+    const character = modelRef.current.character;
+    const utterance = new SpeechSynthesisUtterance(VOICE_LINES[character][cue]);
+    const voiceStyle = {
+      mio: { rate: 1.08, pitch: 1.22, volume: 0.68 },
+      elaina: { rate: 1.13, pitch: 1.32, volume: 0.72 },
+      frieren: { rate: 0.88, pitch: 0.98, volume: 0.66 },
+    }[character];
+    utterance.lang = 'zh-CN';
+    utterance.rate = voiceStyle.rate;
+    utterance.pitch = voiceStyle.pitch;
+    utterance.volume = voiceStyle.volume;
+    const voices = window.speechSynthesis.getVoices();
+    utterance.voice = voices.find((voice) => /zh[-_](CN|Hans)/i.test(voice.lang) && /Xiaoxiao|Xiaoyi|Huihui|Ting-Ting|Meijia/i.test(voice.name))
+      ?? voices.find((voice) => voice.lang.toLowerCase().startsWith('zh'))
+      ?? null;
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+  }, []);
 
   const stopBgm = useCallback(() => {
     bgmRef.current?.pause();
@@ -277,6 +376,14 @@ export default function Home() {
     event.target.value = '';
   }, [stopBgm]);
 
+  const chooseCharacter = useCallback((character: CharacterId) => {
+    setSelectedCharacter(character);
+    modelRef.current.character = character;
+    modelRef.current.lives = CHARACTERS[character].maxLives;
+    setUi((previous) => ({ ...previous, lives: CHARACTERS[character].maxLives }));
+    window.localStorage.setItem('starry-post-character', character);
+  }, []);
+
   const activateDash = useCallback(() => {
     const model = modelRef.current;
     if (statusRef.current !== 'playing' || model.energy < 100 || model.dashTime > 0) return;
@@ -284,12 +391,13 @@ export default function Home() {
     model.dashTime = 3.2;
     model.invincible = 3.2;
     playSound('dash');
+    speakVoice('dash');
     setUi((previous) => ({ ...previous, energy: 0 }));
-  }, [playSound]);
+  }, [playSound, speakVoice]);
 
   const startGame = useCallback((mode: GameMode = 'campaign') => {
     const current = modelRef.current;
-    const next = createModel(mode);
+    const next = createModel(mode, selectedCharacter);
     next.width = current.width;
     next.height = current.height;
     next.player = { x: Math.max(36, next.width * 0.11), y: Math.max(80, next.height * 0.47), vx: 0, vy: 0 };
@@ -299,6 +407,7 @@ export default function Home() {
     keysRef.current.clear();
     setUi({
       ...INITIAL_UI,
+      lives: next.lives,
       mode,
       time: mode === 'endless' ? Number.POSITIVE_INFINITY : LEVELS[0].time,
       target: mode === 'endless' ? ENDLESS_THRESHOLDS[1] : LEVELS[0].target,
@@ -306,7 +415,7 @@ export default function Home() {
     setGameStatus('playing');
     playSound('start');
     startBgm(true);
-  }, [playSound, setGameStatus, startBgm]);
+  }, [playSound, selectedCharacter, setGameStatus, startBgm]);
 
   const startNextLevel = useCallback(() => {
     const model = modelRef.current;
@@ -361,11 +470,21 @@ export default function Home() {
     const saved = Number(window.localStorage.getItem('starry-post-high-score') || 0);
     setHighScore(Number.isFinite(saved) ? saved : 0);
     setIsShareVersion(window.location.hostname !== '127.0.0.1' && window.location.hostname !== 'localhost');
-    const image = new Image();
-    image.src = '/stellar-courier.png';
-    imageRef.current = image;
+    const savedCharacter = window.localStorage.getItem('starry-post-character') as CharacterId | null;
+    if (savedCharacter && CHARACTER_IDS.includes(savedCharacter)) {
+      setSelectedCharacter(savedCharacter);
+      modelRef.current.character = savedCharacter;
+      modelRef.current.lives = CHARACTERS[savedCharacter].maxLives;
+      setUi((previous) => ({ ...previous, lives: CHARACTERS[savedCharacter].maxLives }));
+    }
+    CHARACTER_IDS.forEach((characterId) => {
+      const image = new Image();
+      image.src = CHARACTERS[characterId].sprite;
+      characterImagesRef.current[characterId] = image;
+    });
     return () => {
       stopBgm();
+      window.speechSynthesis?.cancel();
       if (customBgmUrlRef.current) URL.revokeObjectURL(customBgmUrlRef.current);
     };
   }, [stopBgm]);
@@ -524,18 +643,34 @@ export default function Home() {
       const ratio = Math.min(window.devicePixelRatio || 1, 2);
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
       context.clearRect(0, 0, width, height);
+      const theme = BACKGROUND_THEMES[model.level];
       const sky = context.createLinearGradient(0, 0, 0, height);
-      sky.addColorStop(0, '#5f5b9f');
-      sky.addColorStop(0.52, '#9f91d0');
-      sky.addColorStop(1, '#f2b8c6');
+      sky.addColorStop(0, theme.top);
+      sky.addColorStop(0.52, theme.middle);
+      sky.addColorStop(1, theme.bottom);
       context.fillStyle = sky;
       context.fillRect(0, 0, width, height);
+
+      if (model.level === 4) {
+        context.save();
+        context.globalAlpha = 0.34;
+        context.lineCap = 'round';
+        ['#72ffd2', '#9cb9ff', '#e4aaff'].forEach((color, index) => {
+          context.strokeStyle = color;
+          context.lineWidth = 22 - index * 4;
+          context.beginPath();
+          context.moveTo(-40, height * (0.22 + index * 0.08));
+          context.bezierCurveTo(width * 0.28, height * (0.02 + index * 0.08), width * 0.62, height * (0.48 - index * 0.03), width + 50, height * (0.13 + index * 0.06));
+          context.stroke();
+        });
+        context.restore();
+      }
 
       context.save();
       model.stars.forEach((star) => {
         const twinkle = 0.5 + Math.sin(model.worldTime * 2.2 + star.x) * 0.5;
         context.globalAlpha = star.alpha * (0.58 + twinkle * 0.42);
-        context.fillStyle = '#fffbe2';
+        context.fillStyle = model.level >= 6 ? '#ffd9c5' : '#fffbe2';
         context.beginPath();
         context.arc(star.x % (width + 20), star.y % (height * 0.78), star.size, 0, Math.PI * 2);
         context.fill();
@@ -545,40 +680,164 @@ export default function Home() {
       const moonX = width * 0.79;
       const moonY = height * 0.2;
       context.save();
-      context.shadowColor = '#fff3c8';
+      context.shadowColor = theme.celestial;
       context.shadowBlur = 42;
-      context.fillStyle = '#fff2c4';
+      context.fillStyle = theme.celestial;
       context.beginPath();
-      context.arc(moonX, moonY, Math.min(60, width * 0.07), 0, Math.PI * 2);
+      context.arc(moonX, moonY, Math.min(model.level === 7 ? 76 : 60, width * 0.08), 0, Math.PI * 2);
       context.fill();
       context.shadowBlur = 0;
-      context.fillStyle = '#7771b3';
-      context.beginPath();
-      context.arc(moonX - 22, moonY - 15, Math.min(61, width * 0.071), 0, Math.PI * 2);
-      context.fill();
+      if (model.level === 0 || model.level === 2 || model.level === 3) {
+        context.fillStyle = theme.middle;
+        context.beginPath();
+        context.arc(moonX - 22, moonY - 15, Math.min(61, width * 0.071), 0, Math.PI * 2);
+        context.fill();
+      } else if (model.level === 6) {
+        context.fillStyle = '#161126';
+        context.beginPath();
+        context.arc(moonX - 9, moonY + 2, Math.min(54, width * 0.065), 0, Math.PI * 2);
+        context.fill();
+      }
       context.restore();
 
       const horizon = height * 0.87;
-      context.fillStyle = '#494568';
-      context.beginPath();
-      context.moveTo(0, horizon);
-      for (let x = 0; x <= width + 50; x += 45) {
-        const roof = horizon - 22 - ((x / 45) % 3) * 13;
-        context.lineTo(x, roof);
-        context.lineTo(x + 18, roof - 18);
-        context.lineTo(x + 36, roof);
-        context.lineTo(x + 45, roof);
+      context.fillStyle = theme.silhouette;
+      context.strokeStyle = theme.silhouette;
+      context.lineWidth = 8;
+
+      if (model.level === 0) {
+        context.beginPath();
+        context.moveTo(0, horizon);
+        for (let x = 0; x <= width + 50; x += 45) {
+          const roof = horizon - 22 - ((x / 45) % 3) * 13;
+          context.lineTo(x, roof);
+          context.lineTo(x + 18, roof - 18);
+          context.lineTo(x + 36, roof);
+          context.lineTo(x + 45, roof);
+        }
+        context.lineTo(width, height);
+        context.lineTo(0, height);
+        context.closePath();
+        context.fill();
+      } else if (model.level === 1) {
+        context.fillRect(0, horizon - 18, width, height - horizon + 18);
+        for (let x = 0; x < width; x += 80) context.fillRect(x, horizon - 44 - (x % 160 ? 20 : 0), 58, 70);
+        const towerX = width * 0.72;
+        context.fillRect(towerX - 35, horizon - 215, 70, 230);
+        context.beginPath();
+        context.moveTo(towerX - 48, horizon - 215);
+        context.lineTo(towerX, horizon - 282);
+        context.lineTo(towerX + 48, horizon - 215);
+        context.fill();
+        context.fillStyle = theme.celestial;
+        context.beginPath();
+        context.arc(towerX, horizon - 180, 21, 0, Math.PI * 2);
+        context.fill();
+        context.strokeStyle = theme.silhouette;
+        context.lineWidth = 3;
+        context.beginPath();
+        context.moveTo(towerX, horizon - 180);
+        context.lineTo(towerX, horizon - 194);
+        context.moveTo(towerX, horizon - 180);
+        context.lineTo(towerX + 11, horizon - 174);
+        context.stroke();
+      } else if (model.level === 2) {
+        context.globalAlpha = 0.42;
+        context.fillStyle = '#f8a8b8';
+        for (let y = horizon - 82; y < height; y += 18) context.fillRect(0, y, width, 2);
+        context.globalAlpha = 1;
+        context.fillStyle = theme.silhouette;
+        context.fillRect(0, horizon, width, height - horizon);
+        context.strokeStyle = '#312f58';
+        context.lineWidth = 3;
+        context.beginPath();
+        context.moveTo(0, horizon - 120);
+        context.quadraticCurveTo(width * 0.5, horizon - 72, width, horizon - 130);
+        context.stroke();
+        for (let x = 70; x < width; x += 120) {
+          context.fillStyle = '#ff9db2';
+          roundedRect(context, x, horizon - 112 + Math.sin(x) * 8, 25, 34, 8);
+          context.fill();
+        }
+      } else if (model.level === 3) {
+        context.fillRect(0, horizon - 9, width, height - horizon + 9);
+        context.fillRect(width * 0.72, horizon - 162, 34, 165);
+        context.beginPath();
+        context.moveTo(width * 0.70, horizon - 162);
+        context.lineTo(width * 0.74, horizon - 205);
+        context.lineTo(width * 0.78, horizon - 162);
+        context.fill();
+        context.fillStyle = theme.light;
+        context.beginPath();
+        context.arc(width * 0.74, horizon - 150, 10, 0, Math.PI * 2);
+        context.fill();
+        context.globalAlpha = 0.35;
+        for (let x = 40; x < width; x += 92) context.fillRect(x, horizon + 12, 4, 60);
+        context.globalAlpha = 1;
+      } else if (model.level === 4) {
+        context.beginPath();
+        context.moveTo(0, height);
+        context.lineTo(0, horizon - 45);
+        for (let x = 0; x <= width; x += 110) {
+          context.lineTo(x + 45, horizon - 110 - (x % 220 ? 35 : 0));
+          context.lineTo(x + 110, horizon - 35);
+        }
+        context.lineTo(width, height);
+        context.closePath();
+        context.fill();
+        context.strokeStyle = '#dff7f4';
+        context.lineWidth = 7;
+        for (let x = 0; x < width; x += 110) {
+          context.beginPath();
+          context.moveTo(x + 13, horizon - 66);
+          context.lineTo(x + 45, horizon - 110 - (x % 220 ? 35 : 0));
+          context.lineTo(x + 70, horizon - 77);
+          context.stroke();
+        }
+      } else if (model.level === 5) {
+        context.fillRect(0, horizon, width, height - horizon);
+        const gateX = width * 0.69;
+        context.fillRect(gateX - 82, horizon - 177, 15, 182);
+        context.fillRect(gateX + 67, horizon - 177, 15, 182);
+        context.fillRect(gateX - 104, horizon - 190, 208, 18);
+        context.fillRect(gateX - 91, horizon - 215, 182, 15);
+        context.fillStyle = theme.light;
+        for (let x = 46; x < width; x += 130) {
+          context.beginPath();
+          context.arc(x, horizon - 55 - (x % 260 ? 24 : 0), 9, 0, Math.PI * 2);
+          context.fill();
+        }
+      } else if (model.level === 6) {
+        context.fillRect(0, horizon, width, height - horizon);
+        for (let x = 20; x < width; x += 105) {
+          const towerHeight = 75 + (x % 210 ? 65 : 0);
+          context.fillRect(x, horizon - towerHeight, 62, towerHeight);
+          context.beginPath();
+          context.moveTo(x - 9, horizon - towerHeight);
+          context.lineTo(x + 31, horizon - towerHeight - 54);
+          context.lineTo(x + 71, horizon - towerHeight);
+          context.fill();
+        }
+      } else {
+        context.beginPath();
+        context.moveTo(0, height);
+        context.lineTo(0, horizon - 30);
+        for (let x = 0; x <= width; x += 70) {
+          context.lineTo(x + 22, horizon - 90 - (x % 140 ? 46 : 0));
+          context.lineTo(x + 70, horizon - 18);
+        }
+        context.lineTo(width, height);
+        context.closePath();
+        context.fill();
+        context.fillStyle = theme.light;
+        context.globalAlpha = 0.82;
+        for (let x = 16; x < width; x += 62) context.fillRect(x, horizon + 14 + (x % 3) * 8, 7, 30 + (x % 4) * 9);
+        context.globalAlpha = 1;
       }
-      context.lineTo(width, height);
-      context.lineTo(0, height);
-      context.closePath();
-      context.fill();
-      context.globalAlpha = 0.85;
-      context.fillStyle = '#ffd968';
-      for (let x = 18; x < width; x += 48) {
-        const y = horizon + 3 + ((x / 48) % 2) * 10;
-        context.fillRect(x, y, 5, 7);
-      }
+
+      context.globalAlpha = 0.82;
+      context.fillStyle = theme.light;
+      for (let x = 18; x < width; x += 68) context.fillRect(x, horizon + 3 + ((x / 68) % 2) * 10, 5, 7);
       context.globalAlpha = 1;
 
       if (model.dashTime > 0) {
@@ -610,15 +869,20 @@ export default function Home() {
       });
       context.globalAlpha = 1;
 
-      const image = imageRef.current;
+      const image = characterImagesRef.current[model.character];
       const flicker = model.invincible > 0 && model.dashTime <= 0 && Math.floor(model.invincible * 12) % 2 === 0;
       if (image?.complete && image.naturalWidth && !flicker) {
-        const drawWidth = Math.min(226, width * 0.29);
-        const drawHeight = drawWidth * (image.naturalHeight / image.naturalWidth);
+        const maxDrawWidth = model.character === 'frieren' ? 194 : 226;
+        const maxDrawHeight = model.character === 'frieren' ? 205 : 190;
+        const scale = Math.min(maxDrawWidth / image.naturalWidth, maxDrawHeight / image.naturalHeight, width * 0.29 / image.naturalWidth);
+        const drawWidth = image.naturalWidth * scale;
+        const drawHeight = image.naturalHeight * scale;
+        const drawX = model.player.x + 52 - drawWidth * (model.character === 'frieren' ? 0.45 : 0.32);
+        const drawY = model.player.y + 42 - drawHeight * (model.character === 'frieren' ? 0.5 : 0.34);
         context.save();
         context.shadowColor = model.dashTime > 0 ? '#fff4a8' : '#39335a55';
         context.shadowBlur = model.dashTime > 0 ? 26 : 12;
-        context.drawImage(image, model.player.x - drawWidth * 0.28, model.player.y - drawHeight * 0.28, drawWidth, drawHeight);
+        context.drawImage(image, drawX, drawY, drawWidth, drawHeight);
         context.restore();
       }
     };
@@ -645,7 +909,7 @@ export default function Home() {
         : 1 - model.time / config.time;
       const roll = Math.random();
       let kind: ObjectKind = roll < 1 - config.cloudRate ? 'letter' : 'cloud';
-      if (roll > 0.985 && model.lives < 3) kind = 'heart';
+      if (roll > 0.985 && model.lives < CHARACTERS[model.character].maxLives) kind = 'heart';
       const size = kind === 'cloud' ? 72 + Math.random() * 25 : kind === 'heart' ? 35 : 39 + Math.random() * 9;
       model.objects.push({
         id: model.nextId++,
@@ -683,6 +947,7 @@ export default function Home() {
       });
       stopBgm();
       playSound('end');
+      if (victory) speakVoice('clear');
     };
 
     const update = (delta: number, now: number) => {
@@ -702,13 +967,14 @@ export default function Home() {
       const keys = keysRef.current;
       const horizontal = (keys.has('arrowright') || keys.has('d') ? 1 : 0) - (keys.has('arrowleft') || keys.has('a') ? 1 : 0);
       const vertical = (keys.has('arrowdown') || keys.has('s') ? 1 : 0) - (keys.has('arrowup') || keys.has('w') ? 1 : 0);
-      const speed = model.dashTime > 0 ? 430 : 290;
+      const characterConfig = CHARACTERS[model.character];
+      const speed = (model.dashTime > 0 ? 430 : 290) * characterConfig.moveSpeed;
       const smoothing = Math.min(1, delta * 11);
       if (pointerRef.current.active) {
         const targetX = pointerRef.current.x - 52;
         const targetY = pointerRef.current.y - 42;
-        model.player.x += (targetX - model.player.x) * Math.min(1, delta * 9);
-        model.player.y += (targetY - model.player.y) * Math.min(1, delta * 9);
+        model.player.x += (targetX - model.player.x) * Math.min(1, delta * 9 * characterConfig.moveSpeed);
+        model.player.y += (targetY - model.player.y) * Math.min(1, delta * 9 * characterConfig.moveSpeed);
         model.player.vx *= 0.8;
         model.player.vy *= 0.8;
       } else {
@@ -728,7 +994,7 @@ export default function Home() {
           const dx = model.player.x + 75 - item.x;
           const dy = model.player.y + 45 - item.y;
           const distance = Math.max(1, Math.hypot(dx, dy));
-          if (distance < 230) {
+          if (distance < characterConfig.magnetRadius) {
             item.x += (dx / distance) * 450 * delta;
             item.y += (dy / distance) * 450 * delta;
           }
@@ -745,8 +1011,9 @@ export default function Home() {
         }
         if (item.kind === 'letter') {
           model.combo += 1;
-          model.delivered += 1;
-          model.totalDelivered += 1;
+          const letterValue = characterConfig.letterValue;
+          model.delivered += letterValue;
+          model.totalDelivered += letterValue;
           if (model.mode === 'endless') {
             model.delivered = model.totalDelivered;
             const nextTier = getEndlessLevel(model.totalDelivered);
@@ -764,12 +1031,12 @@ export default function Home() {
             }
           }
           const multiplier = Math.min(5, 1 + Math.floor(model.combo / 5));
-          model.score += 100 * multiplier;
+          model.score += 100 * multiplier * letterValue;
           model.energy = Math.min(100, model.energy + 12 + multiplier * 2);
           burst(item.x, item.y, '#ffe06d', 13);
           playSound('catch');
         } else if (item.kind === 'heart') {
-          model.lives = Math.min(3, model.lives + 1);
+          model.lives = Math.min(characterConfig.maxLives, model.lives + 1);
           model.score += 250;
           burst(item.x, item.y, '#ff9fba', 16);
           playSound('catch');
@@ -783,6 +1050,7 @@ export default function Home() {
           model.invincible = 1.55;
           burst(item.x, item.y, '#a8a2ca', 18);
           playSound('hit');
+          speakVoice('hit');
         } else {
           remaining.push(item);
         }
@@ -830,6 +1098,7 @@ export default function Home() {
             time: Math.ceil(model.time),
           });
           playSound('end');
+          speakVoice('clear');
         }
       } else if (model.lives <= 0 || (model.mode === 'campaign' && model.time <= 0)) finish(false);
     };
@@ -848,7 +1117,7 @@ export default function Home() {
       cancelAnimationFrame(frame);
       observer.disconnect();
     };
-  }, [playSound, setGameStatus, stopBgm]);
+  }, [playSound, setGameStatus, speakVoice, stopBgm]);
 
   const updatePointer = (event: React.PointerEvent<HTMLCanvasElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -869,6 +1138,7 @@ export default function Home() {
   const deliveryLabel = ui.mode === 'endless'
     ? endlessTierEnd === null ? `${ui.delivered} 封` : `${ui.delivered}/${endlessTierEnd} 封`
     : `${ui.delivered}/${ui.target} 封`;
+  const activeCharacter = CHARACTERS[selectedCharacter];
 
   return (
     <main className="game-shell">
@@ -885,7 +1155,7 @@ export default function Home() {
           <div className="record-chip"><span>最高记录</span><strong>{highScore.toString().padStart(5, '0')}</strong></div>
           {isShareVersion && (
             <label className="music-picker" title={customMusicName || '从设备选择你拥有的 MP3，音乐仅在本机播放'}>
-              <span>{customMusicName ? 'BGM 已载入' : '选择本地 BGM'}</span>
+              <span>{customMusicName ? 'STYX HELIX 已载入' : '选择 STYX HELIX'}</span>
               <input type="file" accept="audio/mpeg,audio/mp3,.mp3" onChange={chooseCustomBgm} />
             </label>
           )}
@@ -897,7 +1167,10 @@ export default function Home() {
               const next = !muted;
               mutedRef.current = next;
               setMuted(next);
-              if (next) stopBgm();
+              if (next) {
+                stopBgm();
+                window.speechSynthesis?.cancel();
+              }
               else if (statusRef.current === 'playing') startBgm();
             }}
           >{muted ? '×' : '♪'}</button>
@@ -914,7 +1187,7 @@ export default function Home() {
           <div className="hud-block score-block"><span>本次得分</span><b>{scoreLabel}</b></div>
           <div className="hud-block"><span>星笺连击</span><b>{ui.combo} <em>×{multiplier}</em></b></div>
           <div className="lives" aria-label={`剩余 ${ui.lives} 点生命`}>
-            {[0, 1, 2].map((heart) => <i key={heart} className={heart < ui.lives ? 'active' : ''}>♥</i>)}
+            {Array.from({ length: activeCharacter.maxLives }, (_, heart) => <i key={heart} className={heart < ui.lives ? 'active' : ''}>♥</i>)}
           </div>
           <div className="time-chip"><span>{ui.mode === 'endless' ? '模式' : '剩余时间'}</span><strong>{Number.isFinite(ui.time) ? ui.time : '∞'}{Number.isFinite(ui.time) && <small>s</small>}</strong></div>
           <button
@@ -951,6 +1224,23 @@ export default function Home() {
               <p className="kicker">今晚的信件，会变成谁的愿望？</p>
               <h2>把今晚的星光<br />送到每一扇窗前</h2>
               <p className="intro-copy">选择你的夜航方式。收集星笺、避开暴雨云，蓄满能量即可冲破夜空。</p>
+              <div className="character-selector" aria-label="选择角色">
+                {CHARACTER_IDS.map((characterId) => {
+                  const character = CHARACTERS[characterId];
+                  return (
+                    <button
+                      key={characterId}
+                      type="button"
+                      className={`character-card ${selectedCharacter === characterId ? 'selected' : ''}`}
+                      aria-pressed={selectedCharacter === characterId}
+                      onClick={() => chooseCharacter(characterId)}
+                    >
+                      <span className="character-portrait"><img src={character.sprite} alt="" /></span>
+                      <span className="character-copy"><strong>{character.name}</strong><small>{character.title}</small><b>{character.perk}</b></span>
+                    </button>
+                  );
+                })}
+              </div>
               <div className="mode-selector">
                 <button type="button" className="mode-card campaign-mode" onClick={() => startGame('campaign')}>
                   <span>STORY ROUTE</span>
