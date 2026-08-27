@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "build:game": "vite build --config standalone/vite.config.ts",
+    "preview:game": "vite preview --config standalone/vite.config.ts --host 127.0.0.1",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },

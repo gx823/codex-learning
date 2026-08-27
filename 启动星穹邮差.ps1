@@ -4,7 +4,19 @@ $gameRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $gameUrl = 'http://127.0.0.1:4173/'
 $port = '4173'
 $localMusic = Join-Path $gameRoot '.local-assets\styx-helix.mp3'
-$servedMusic = Join-Path $gameRoot 'dist\client\audio\styx-helix.mp3'
+$gameIndex = Join-Path $gameRoot 'outputs\standalone-dist\index.html'
+$servedMusic = Join-Path $gameRoot 'outputs\standalone-dist\audio\styx-helix.mp3'
+
+if (-not (Test-Path -LiteralPath $gameIndex)) {
+  $npmCommand = (Get-Command npm.cmd -ErrorAction SilentlyContinue).Source
+  if ($npmCommand) {
+    Start-Process -FilePath $npmCommand `
+      -ArgumentList @('run', 'build:game') `
+      -WorkingDirectory $gameRoot `
+      -WindowStyle Hidden `
+      -Wait
+  }
+}
 
 if (Test-Path -LiteralPath $localMusic) {
   $servedMusicDirectory = Split-Path -Parent $servedMusic
@@ -31,7 +43,7 @@ if (-not (Test-GameReady)) {
   }
 
   Start-Process -FilePath $npmCommand `
-    -ArgumentList @('run', 'start', '--', '--port', $port) `
+    -ArgumentList @('run', 'preview:game', '--', '--port', $port) `
     -WorkingDirectory $gameRoot `
     -WindowStyle Hidden
 
