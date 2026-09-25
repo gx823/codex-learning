@@ -20,7 +20,7 @@ public:
     UFUNCTION(BlueprintCallable) static bool CopyNPCSlots(USkeleton* Source, USkeleton* Target);
     /** Three Q/R locomotion clips only. Full-frame native replay before removing source-root XY; no saves. */
     UFUNCTION(BlueprintCallable) static FString RepairNPCHorizontalRootTravel(UAnimSequence* Source,
-        UAnimSequence* Target, USkeletalMesh* TargetMesh, UIKRetargeter* Retargeter, bool bApply);
+        UAnimSequence* Target, USkeletalMesh* TargetMesh, UObject* RetargeterObject, bool bApply);
     /** Detailed read-only physics probe or bounded anatomy candidate. Apply never saves; script binds a prior probe. */
     UFUNCTION(BlueprintCallable) static FString InspectOrRepairNPCPhysics(UHCM5VS2NPCProfile* Profile,
         UPhysicsAsset* Physics, bool bApply);

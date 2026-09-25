@@ -1,0 +1,14 @@
+{
+  "status": "PARTIAL_USER_REVIEW",
+  "contact_sheet": "standalone_contact.jpg",
+  "observations": [
+    "Visible bright gap between interior wall and ceiling in GuildInside/CafeInside",
+    "Night views are too dark in several districts",
+    "Aerial town remains sparse with abrupt ground transitions"
+  ],
+  "image_paths": [
+    "BEAUTY_SHOTS/Afternoon_GuildInside.png",
+    "BEAUTY_SHOTS/Night_Temple.png",
+    "BEAUTY_SHOTS/Afternoon_Aerial.png"
+  ]
+}

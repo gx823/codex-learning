@@ -95,9 +95,10 @@ bool UHCM5VS2NPCEditor::CopyNPCSlots(USkeleton* Source, USkeleton* Target)
 }
 
 FString UHCM5VS2NPCEditor::RepairNPCHorizontalRootTravel(UAnimSequence* Source, UAnimSequence* Target,
-    USkeletalMesh* TargetMesh, UIKRetargeter* Retargeter, bool bApply)
+    USkeletalMesh* TargetMesh, UObject* RetargeterObject, bool bApply)
 {
 #if WITH_EDITOR
+    UIKRetargeter* Retargeter=Cast<UIKRetargeter>(RetargeterObject);
     auto R = MakeShared<FJsonObject>();
     R->SetBoolField(TEXT("applied"), false);
     const TSet<FString> AllowedSources = {

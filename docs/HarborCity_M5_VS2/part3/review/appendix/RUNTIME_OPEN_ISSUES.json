@@ -1,0 +1,17 @@
+{
+  "status": "OPEN",
+  "observations": [
+    {
+      "issue": "Driving seated hand candidate invalid",
+      "evidence": "demo_20260925_203546/game.log:1375",
+      "message": "VS2_DRIVING_HANDS_CANDIDATE_INVALID Seated home grip outside actual unstretched arm reach",
+      "layer": "packaged runtime warning; visual user review required"
+    },
+    {
+      "issue": "Crowd navigation data warning",
+      "evidence": "demo_20260925_203546/game.log:1391",
+      "message": "Unable to find RecastNavMesh instance while trying to create UCrowdManager instance",
+      "layer": "packaged runtime warning; do not certify all NPC paths"
+    }
+  ]
+}

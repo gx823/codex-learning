@@ -1,0 +1,10 @@
+{
+  "status": "PASS_QA_ONLY_DELTA",
+  "old_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+  "new_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+  "source_differences": [
+    "Source/HarborCity/M1/HCM1TestM5.cpp"
+  ],
+  "content_differences": [],
+  "meaning": "All inventory-covered config/other C++/source assets identical. Only legacy mesh assertions, diagnostics and indoor grounded test placement changed. Cooked binaries are not asserted byte-identical. Old-candidate results retain original EXE identity; new candidate regression runs separately."
+}

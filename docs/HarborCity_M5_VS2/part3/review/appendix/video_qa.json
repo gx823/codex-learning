@@ -1,0 +1,16 @@
+{
+  "video": "..\\docs\\HarborCity_M5_VS2\\part3\\M5_VS2_TOWN_PLAYTHROUGH.mp4",
+  "specs": {
+    "duration": 269.336188,
+    "format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.96855380937,
+    "video_codec": "h264",
+    "has_audio": true,
+    "audio_codec": "aac"
+  },
+  "timeline": null,
+  "contact_sheet": "..\\docs\\HarborCity_M5_VS2\\part3\\final_demo_contact.jpg",
+  "flags": []
+}

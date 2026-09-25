@@ -1,0 +1,6 @@
+{
+  "hero": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/BP_TownHero",
+  "animation": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/ABP_TownFlight",
+  "game_mode": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/BP_TownGameMode",
+  "map": "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown"
+}

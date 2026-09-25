@@ -1,0 +1,21 @@
+{
+  "status": "PARTIAL_VISUAL_REVIEW",
+  "recording_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+  "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\recordings\\20260925_210237_78E5546A\\capture.json",
+  "contact_sheet": "final_demo_contact.jpg",
+  "observed": [
+    "Afternoon/dusk/night district observations",
+    "Pistol hit visible, health32 aftertwo damageevents",
+    "Car entered/driven/exited",
+    "Flight and first-person high-altitude view around255s",
+    "Return toground"
+  ],
+  "unmet": [
+    "Melee did not damage target",
+    "No complete punch/gun/vehicle knockdown andfour getups proof",
+    "No NPC dialogue segment",
+    "Combat close-up obscured by near geometry; car shot briefly obscured by tree"
+  ],
+  "audio": "Native WAV nonzero after normalforegroundactivation; RMS-32.138dBFS. Listening/subjective sound quality USER_REVIEW.",
+  "input_layer": "B Action with disclosed A shot placements; OS keyboard/mouse NOT_RUN"
+}

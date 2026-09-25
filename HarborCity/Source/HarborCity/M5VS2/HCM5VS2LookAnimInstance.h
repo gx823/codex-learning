@@ -10,6 +10,7 @@ class HARBORCITY_API UHCM5VS2LookAnimInstance : public UHCM4R2PlayerAnimInstance
 {
     GENERATED_BODY()
 public:
+    bool bTownIdleGestureActive = false;
     virtual void NativeInitializeAnimation() override;
     virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 

@@ -1,0 +1,2673 @@
+{
+  "status": "PARTIAL",
+  "package": {
+    "schema_version": 6,
+    "milestone": "M5_VS2",
+    "started_at": "2026-09-25T20:52:56.6942246+08:00",
+    "status": "PASS",
+    "project": "D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject",
+    "engine": "E:\\UE_5.8",
+    "target": "HarborCity Win64 Development",
+    "maps": [
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown"
+    ],
+    "candidate_directory": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e",
+    "actual_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+    "cache_root": "D:\\GameDev\\Cache\\Unreal\\HarborCity",
+    "max_parallel_actions": 8,
+    "cook_process_count": 1,
+    "shader_workers": 0,
+    "stages": [
+      {
+        "name": "EditorBuild",
+        "status": "PASS",
+        "started_at": "2026-09-25T20:53:15.0653244+08:00",
+        "executable": "C:\\Users\\HP\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "arguments": [
+          "-NoLogo",
+          "-NoProfile",
+          "-File",
+          "D:\\科研学习\\codex学习\\tools\\build_m5_vs2.ps1",
+          "-Target",
+          "Editor",
+          "-MaxParallelActions",
+          "8"
+        ],
+        "exit_code": 0,
+        "ended_at": "2026-09-25T20:54:15.5691464+08:00"
+      },
+      {
+        "name": "GameBuild",
+        "status": "PASS",
+        "started_at": "2026-09-25T20:54:15.5706634+08:00",
+        "executable": "C:\\Users\\HP\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "arguments": [
+          "-NoLogo",
+          "-NoProfile",
+          "-File",
+          "D:\\科研学习\\codex学习\\tools\\build_m5_vs2.ps1",
+          "-Target",
+          "Game",
+          "-MaxParallelActions",
+          "8"
+        ],
+        "exit_code": 0,
+        "ended_at": "2026-09-25T20:55:36.2120116+08:00"
+      },
+      {
+        "name": "CookStagePakPackageArchive",
+        "status": "PASS",
+        "started_at": "2026-09-25T20:55:36.5831041+08:00",
+        "executable": "E:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\DotNet\\10.0\\win-x64\\dotnet.exe",
+        "arguments": [
+          "E:\\UE_5.8\\Engine\\Binaries\\DotNET\\AutomationTool\\AutomationTool.dll",
+          "-NoCompile",
+          "-NoP4",
+          "-UTF8Output",
+          "BuildCookRun",
+          "-project=D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject",
+          "-target=HarborCity",
+          "-platform=Win64",
+          "-clientconfig=Development",
+          "-skipbuild",
+          "-nocompileeditor",
+          "-cook",
+          "-stage",
+          "-pak",
+          "-package",
+          "-archive",
+          "-map=/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown",
+          "-skipeditorcontent",
+          "-unrealexe=E:\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+          "-CookOutputDir=D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\package_work\\20260925_205256_675_f65e250e\\Cooked\\Windows",
+          "-stagingdirectory=D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\package_work\\20260925_205256_675_f65e250e\\Staged",
+          "-archivedirectory=E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive",
+          "-unattended",
+          "-AdditionalCookerOptions=-CookProcessCount=1 -noshaderworker -LocalDataCachePath=D:\\GameDev\\Cache\\Unreal\\HarborCity\\DDC -ZenDataPath=D:\\GameDev\\Cache\\Unreal\\HarborCity\\Zen -language=en -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5\\Audio\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5\\Geometry\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5\\Map\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5\\Materials\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5\\Textures\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS1\\HeroSelestia\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M4\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M4R2\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\Weapons\\Pistol\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\Characters\\Mannequins\\Anims\\Unarmed\\Attack\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\Characters\\Mannequins\\Anims\\Pistol\" -CookDir=\"D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\Part3\\Town_ea45a319b3dd\""
+        ],
+        "exit_code": 0,
+        "note": "UAT internal stages share one process exit code; console and UAT logs preserve each stage boundary.",
+        "ended_at": "2026-09-25T20:58:13.7360631+08:00"
+      },
+      {
+        "name": "CookedMapAudit",
+        "status": "PASS",
+        "executable": "E:\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+        "exit_code": 0,
+        "reused_existing_audit": false,
+        "report_path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\commandlets\\20260925_205813_778_a811aea8_cooked_maps\\map_audit.json"
+      },
+      {
+        "name": "VerifyArchiveFiles",
+        "status": "PASS",
+        "ended_at": "2026-09-25T20:58:44.8001641+08:00",
+        "note": "File/hash verification only; actual game launch remains NOT_RUN."
+      }
+    ],
+    "packaged_runtime": "NOT_RUN",
+    "reuse_cook_requested": false,
+    "full_cook_required": true,
+    "crypto_configuration": {
+      "status": "PASS_CONFIGURATION_ONLY",
+      "private_config_sha256": "8DCA674C1BEA1A75C80D72AA5DFCC66C5F1C6D70A0BD1A27E9DE5B5BD244F6D3",
+      "key_bytes": 32,
+      "full_asset_encryption_requested": true,
+      "pak_index_encryption_requested": true,
+      "signing_requested": false,
+      "actual_container_encryption": "NOT_RUN",
+      "no_key_extraction_test": "NOT_RUN"
+    },
+    "asset_extraction_protection": "NOT_RUN_REQUIRES_BOUND_NATIVE_VERIFICATION",
+    "private_review_exclusions": [
+      "HarborCity/Config/DefaultCrypto.ini",
+      "HarborCity/Config/DefaultEncryption.ini",
+      "**/Crypto.json",
+      "**/CryptoKeys*.json",
+      "HarborCity/Intermediate/**",
+      "**/response_files_before_bom_*.zip",
+      "docs/HarborCity_M5_VS2/package_work/**",
+      "assets/M5_VS1/hero/Selestia/PrivateCryptoVerification/**"
+    ],
+    "configured_default_map": "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown.L_HarborTown",
+    "configured_maps_to_cook": [
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown"
+    ],
+    "configured_cook_directories": [
+      "/Game/HarborCity/M5/Audio",
+      "/Game/HarborCity/M5/Geometry",
+      "/Game/HarborCity/M5/Map",
+      "/Game/HarborCity/M5/Materials",
+      "/Game/HarborCity/M5/Textures",
+      "/Game/HarborCity/M5VS1/HeroSelestia",
+      "/Game/HarborCity/M4",
+      "/Game/HarborCity/M4R2",
+      "/Game/Weapons/Pistol",
+      "/Game/Characters/Mannequins/Anims/Unarmed/Attack",
+      "/Game/Characters/Mannequins/Anims/Pistol",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd"
+    ],
+    "configured_never_cook_directories": [
+      "/Game/HarborCity/M5VS1/Hero",
+      "/Game/HarborCity/M5VS1/HeroMioV3",
+      "/Game/HarborCity/M5VS1/HeroSelestiaProbe",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Retarget"
+    ],
+    "default_map_guard": "PASS",
+    "release_scripts": [
+      {
+        "path": "D:\\科研学习\\codex学习\\tools\\package_m5_vs2.ps1",
+        "sha256": "1F7322A508E93BE3C16F22B0BE5E0D8997C0E1A2ABD0C90702118606DE6DC20B"
+      },
+      {
+        "path": "D:\\科研学习\\codex学习\\tools\\build_m5_vs2.ps1",
+        "sha256": "44C2AE351F657A756E14257FF7291EEF3CF00BC7BD85057C7B7E32B7CF4A7BD8"
+      },
+      {
+        "path": "D:\\科研学习\\codex学习\\tools\\launch_game_m5_vs1.ps1",
+        "sha256": "5B7D95AFC06B0D1646F3BE1023D7A0EF1D1C0B1197041AFD7BC302B8EF4AB5BB"
+      },
+      {
+        "path": "D:\\科研学习\\codex学习\\tools\\launch_editor_game_m5_vs1.ps1",
+        "sha256": "51F6B0EEF685256F5324269C6402BB83F99746DD213862BE1D85E1126BE57BF3"
+      },
+      {
+        "path": "D:\\科研学习\\codex学习\\tools\\m5_vs2_release_guards.ps1",
+        "sha256": "2941B91F43C7F31901B8E1DFC78323FF4E0988F893BD09AA0A839A33D63A5677"
+      },
+      {
+        "path": "D:\\科研学习\\codex学习\\tools\\build.ps1",
+        "sha256": "A4BC9CD7E41D4AC408F9E213BF4E441F3FE2A8D9C2C19EC010223D11F7D33457"
+      },
+      {
+        "path": "D:\\科研学习\\codex学习\\tools\\normalize_response_files.py",
+        "sha256": "D84DF70F6D0343A9D448443B772E50FAC7A303B26BB10763F1B309F06DCE3E99"
+      }
+    ],
+    "license_notice_inputs": [
+      {
+        "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\ASSET_LICENSE_NOTICES.md",
+        "name": "ASSET_LICENSE_NOTICES.md",
+        "bytes": 1539,
+        "sha256": "963225B9FF1A525EE5EA26C2D3C1BE5BD92DA7C6534CEBD0C5745F68756C5849"
+      }
+    ],
+    "work_free_bytes_before": 58292293632,
+    "minimum_work_free_bytes": 21474836480,
+    "work_directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\package_work\\20260925_205256_675_f65e250e",
+    "free_bytes_before": 13860704256,
+    "minimum_free_bytes": 10737418240,
+    "existing_candidates": [
+      "Candidate_20260925_183839_379_2c29c6f2",
+      "Candidate_20260925_185332_103_ccbc985f",
+      "Candidate_20260925_194722_644_45d4aae0",
+      "Candidate_20260925_204029_714_ce542027"
+    ],
+    "source_inventory": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\source_inventory.json",
+    "source_inventory_sha256": "9A5BCB33EFA00C1FD4CFEBA87E4D623B13B2B1A674E44B7F80621EE3D1CB650D",
+    "content_inventory": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\content_inventory.json",
+    "content_inventory_sha256": "8D8E9EC10ABD888ABF6ECF176F9795ECC8FD83E14D746B154174E7BA56623B3D",
+    "native_cache_environment": {
+      "UE-ZenDataPath": "D:\\GameDev\\Cache\\Unreal\\HarborCity\\Zen",
+      "UE-ZenSubprocessDataPath": "D:\\GameDev\\Cache\\Unreal\\HarborCity\\Zen",
+      "UE-LocalDataCachePath": "D:\\GameDev\\Cache\\Unreal\\HarborCity\\DDC"
+    },
+    "text_log_privacy": {
+      "status": "PASS",
+      "redacted_files": [],
+      "scope": "Only this invocation newly written text build logs; raw response ZIP and Cook metadata remain private, excluded from review archives."
+    },
+    "explicit_cook_directories": [
+      "HarborCity/M5/Audio",
+      "HarborCity/M5/Geometry",
+      "HarborCity/M5/Map",
+      "HarborCity/M5/Materials",
+      "HarborCity/M5/Textures",
+      "HarborCity/M5VS1/HeroSelestia",
+      "HarborCity/M4",
+      "HarborCity/M4R2",
+      "Weapons/Pistol",
+      "Characters/Mannequins/Anims/Unarmed/Attack",
+      "Characters/Mannequins/Anims/Pistol",
+      "HarborCity/M5VS2/Part3/Town_ea45a319b3dd"
+    ],
+    "staging_directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\package_work\\20260925_205256_675_f65e250e\\Staged",
+    "cook_source_candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e",
+    "cook_output_directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\package_work\\20260925_205256_675_f65e250e\\Cooked\\Windows",
+    "cooked_project_maps": [
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown"
+    ],
+    "cooked_game_worlds": [
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown.L_HarborTown"
+    ],
+    "cooked_map_audit": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\commandlets\\20260925_205813_778_a811aea8_cooked_maps\\map_audit.json",
+    "m5_asset_cook_coverage": "PASS",
+    "m5_excluded_asset_guard": "PASS",
+    "m5_required_packages": [
+      "/Game/HarborCity/M4R2/Animation/ABP_M4R2_Player",
+      "/Game/HarborCity/M4R2/Audio/SW_M4R2_PistolShot",
+      "/Game/HarborCity/M4R2/Audio/SW_M4R2_Reload",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_GaugeFace",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_GaugeMark",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Headliner",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Leather",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Metal",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Polymer",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Stitch",
+      "/Game/HarborCity/M4R2/Interior/Meshes/SM_M4R2_Cabin",
+      "/Game/HarborCity/M4R2/Interior/Meshes/SM_M4R2_SpeedNeedle",
+      "/Game/HarborCity/M4R2/Interior/Meshes/SM_M4R2_SteeringWheel",
+      "/Game/HarborCity/M4R2/Materials/M_M4R2_MuzzleFlash",
+      "/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal",
+      "/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride",
+      "/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery",
+      "/Game/HarborCity/M5/Map/DA_CyberHarborNavigation",
+      "/Game/HarborCity/M5/Map/T_CyberHarborNorthUp",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/ABP_M4R2_Player_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/BP_M5_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/BP_M5_SelestiaGameMode",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Halo/M_Selestia_Halo",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Halo/SM_Selestia_Halo",
+      "/Game/HarborCity/M5VS1/HeroSelestia/SKM_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/SKM_Selestia_Arms",
+      "/Game/HarborCity/M5VS1/HeroSelestia/SK_Selestia",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_ClothWhoosh",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_CoastalWind",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_MotorLoop",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_PistolReport",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_StoneStep",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/MainlandCoast",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad0",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad1",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad2",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad3",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad4",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad5",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Navigation/DA_HarborTown",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Navigation/T_HarborTown",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish1/Geometry/GreenMainland",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish1/M_MainlandMeadow",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Geometry/GreenMainland",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Geometry/GuildHallCompleteRoof",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Geometry/HarborCafeCompleteRoof",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/M_MainlandMeadow",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Navigation/DA_HarborTown",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Navigation/T_HarborTown",
+      "/Game/Weapons/Pistol/Materials/MI_Weapon_Pistol",
+      "/Game/Weapons/Pistol/Meshes/PA_Pistol",
+      "/Game/Weapons/Pistol/Meshes/SKM_Pistol",
+      "/Game/Weapons/Pistol/Meshes/SK_Pistol",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_AORM",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_D",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_Masks",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_N",
+      "/Game/Weapons/Rifle/Materials/M_Weapon"
+    ],
+    "m5_audited_packages": [
+      "/Game/HarborCity/M4/Animation/ABP_M4_Player",
+      "/Game/HarborCity/M4/Animation/AM_M4_HitBack",
+      "/Game/HarborCity/M4/Animation/AM_M4_HitFront",
+      "/Game/HarborCity/M4/Animation/AM_M4_HitLeft",
+      "/Game/HarborCity/M4/Animation/AM_M4_HitRight",
+      "/Game/HarborCity/M4/Animation/MM_M4_HitLeft",
+      "/Game/HarborCity/M4/Animation/MM_M4_HitRight",
+      "/Game/HarborCity/M4/Animation/MM_M4_PistolHipIdle",
+      "/Game/HarborCity/M4/Appearance/Materials/M_M4_OutfitFade",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ANing_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ANing_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ANing_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ANing_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ANing_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ANing_trim",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_CafeOchre_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_CafeOchre_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_CafeOchre_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_CafeOchre_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_CafeOchre_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_CafeOchre_trim",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ChenBo_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ChenBo_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ChenBo_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ChenBo_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ChenBo_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ChenBo_trim",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ClayRed_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ClayRed_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ClayRed_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ClayRed_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ClayRed_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ClayRed_trim",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_HarborNavy_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_HarborNavy_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_HarborNavy_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_HarborNavy_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_HarborNavy_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_HarborNavy_trim",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_LinXia_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_LinXia_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_LinXia_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_LinXia_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_LinXia_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_LinXia_trim",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_SeaSage_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_SeaSage_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_SeaSage_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_SeaSage_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_SeaSage_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_SeaSage_trim",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ShuQiao_collar",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ShuQiao_pants",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ShuQiao_shirt",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ShuQiao_shoes",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ShuQiao_skin",
+      "/Game/HarborCity/M4/Appearance/Materials/MI_M4_ShuQiao_trim",
+      "/Game/HarborCity/M4/Audio/SW_M4_Empty",
+      "/Game/HarborCity/M4/Audio/SW_M4_PistolShot",
+      "/Game/HarborCity/M4/Audio/SW_M4_PunchHit",
+      "/Game/HarborCity/M4/Audio/SW_M4_Reload",
+      "/Game/HarborCity/M4/Materials/M_M4_BloodDecal",
+      "/Game/HarborCity/M4/Materials/M_M4_BloodMist",
+      "/Game/HarborCity/M4/Materials/M_M4_Brass",
+      "/Game/HarborCity/M4/Materials/M_M4_BulletDecal",
+      "/Game/HarborCity/M4/Materials/M_M4_PistolDetails",
+      "/Game/HarborCity/M4/Materials/M_M4_PistolPolymer",
+      "/Game/HarborCity/M4/Materials/M_M4_PistolSlide",
+      "/Game/HarborCity/M4/Materials/M_M4_Spark",
+      "/Game/HarborCity/M4/Weapons/SM_M4_Pistol",
+      "/Game/HarborCity/M4R2/Animation/ABP_M4R2_Player",
+      "/Game/HarborCity/M4R2/Audio/SW_M4R2_PistolShot",
+      "/Game/HarborCity/M4R2/Audio/SW_M4R2_Reload",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_GaugeFace",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_GaugeMark",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Headliner",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Leather",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Metal",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Polymer",
+      "/Game/HarborCity/M4R2/Interior/Materials/M_M4R2_Stitch",
+      "/Game/HarborCity/M4R2/Interior/Meshes/SM_M4R2_Cabin",
+      "/Game/HarborCity/M4R2/Interior/Meshes/SM_M4R2_SpeedNeedle",
+      "/Game/HarborCity/M4R2/Interior/Meshes/SM_M4R2_SteeringWheel",
+      "/Game/HarborCity/M4R2/Map/DA_SeafrontNavigation",
+      "/Game/HarborCity/M4R2/Map/T_SeafrontNorthUp",
+      "/Game/HarborCity/M4R2/Materials/M_M4R2_MuzzleFlash",
+      "/Game/HarborCity/M4R2/Meshes/SKM_M4R2_FirstPersonArms",
+      "/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal",
+      "/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride",
+      "/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_00",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_01",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_02",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_03",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_04",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_05",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_06",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_07",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_08",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_09",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_10",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_11",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_12",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_13",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_14",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_15",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_16",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_17",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_18",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_19",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_20",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_21",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_22",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_23",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_24",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_25",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_26",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_27",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_28",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Ramp_29",
+      "/Game/HarborCity/M5/Geometry/SM_M5_Sign",
+      "/Game/HarborCity/M5/Map/DA_CyberHarborNavigation",
+      "/Game/HarborCity/M5/Map/T_CyberHarborNorthUp",
+      "/Game/HarborCity/M5/Materials/M_M5_amber",
+      "/Game/HarborCity/M5/Materials/M_M5_blue",
+      "/Game/HarborCity/M5/Materials/M_M5_coral",
+      "/Game/HarborCity/M5/Materials/M_M5_cyan",
+      "/Game/HarborCity/M5/Materials/M_M5_distant",
+      "/Game/HarborCity/M5/Materials/M_M5_glass",
+      "/Game/HarborCity/M5/Materials/M_M5_green",
+      "/Game/HarborCity/M5/Materials/M_M5_metal",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_Arcade_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_Cinema_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_CourtyardGate",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_EastWorkshop_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_Gallery_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_HarborDepot_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_HarborHousing_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_InfoName",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_InfoScreen",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_MarketA_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_MarketB_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_PlazaWest_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_SouthLoft_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_SouthStation_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_SouthStudio_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_TowerAnnex_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_TowerName",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_WestArc_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Sign_WestHotel_Sign",
+      "/Game/HarborCity/M5/Materials/M_M5_Terminal",
+      "/Game/HarborCity/M5/Materials/M_M5_warm",
+      "/Game/HarborCity/M5/Materials/M_M5_window",
+      "/Game/HarborCity/M5/Materials/M_M5_windowwarm",
+      "/Game/HarborCity/M5/Textures/T_M5_Arcade_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_Cinema_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_CourtyardGate",
+      "/Game/HarborCity/M5/Textures/T_M5_EastWorkshop_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_Gallery_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_HarborDepot_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_HarborHousing_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_InfoName",
+      "/Game/HarborCity/M5/Textures/T_M5_InfoScreen",
+      "/Game/HarborCity/M5/Textures/T_M5_MarketA_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_MarketB_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_PlazaWest_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_SouthLoft_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_SouthStation_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_SouthStudio_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_Terminal",
+      "/Game/HarborCity/M5/Textures/T_M5_TowerAnnex_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_TowerName",
+      "/Game/HarborCity/M5/Textures/T_M5_WestArc_Sign",
+      "/Game/HarborCity/M5/Textures/T_M5_WestHotel_Sign",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/ABP_M4R2_Player_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/AM_M4_HitBack_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/AM_M4_HitFront_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/AM_M4_HitLeft_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/AM_M4_HitRight_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/BS_Idle_Walk_Run_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Pistol_Idle_ADS_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Bwd_Left_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Bwd_Right_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Bwd_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Fwd_Left_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Fwd_Right_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Fwd_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Left_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Jog_Right_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Bwd_Left_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Bwd_Right_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Bwd_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Fwd_Left_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Fwd_Right_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Fwd_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Left_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MF_Unarmed_Walk_Right_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Attack_01_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Attack_02_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Attack_03_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Fall_Loop_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_HitReact_Back_Med_01_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_HitReact_Front_Lgt_01_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Idle_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Jump_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Land_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_M4_HitLeft_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_M4_HitRight_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Pistol_Fire_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Animation/MM_Pistol_Reload_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/BP_M5_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/BP_M5_SelestiaGameMode",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Halo/M_Selestia_Halo",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Halo/SM_Selestia_Halo",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Materials/M_Selestia_body",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Materials/M_Selestia_costume",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Materials/M_Selestia_face",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Materials/M_Selestia_hair",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Materials/M_Selestia_option",
+      "/Game/HarborCity/M5VS1/HeroSelestia/SK_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/SKM_Selestia",
+      "/Game/HarborCity/M5VS1/HeroSelestia/SKM_Selestia_Arms",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Textures/T_Selestia_body",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Textures/T_Selestia_costume",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Textures/T_Selestia_costume_normal",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Textures/T_Selestia_face",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Textures/T_Selestia_face_mask_2",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Textures/T_Selestia_hair_alpha",
+      "/Game/HarborCity/M5VS1/HeroSelestia/Textures/T_Selestia_hair_normal",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_ClothWhoosh",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_CoastalWind",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_MotorLoop",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_PistolReport",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Audio/SW_VS2_StoneStep",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/MainlandCoast",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad0",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad1",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad2",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad3",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad4",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Geometry/StoneRoad5",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Navigation/DA_HarborTown",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Navigation/T_HarborTown",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Geometry/GreenMainland",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Geometry/GuildHallCompleteRoof",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Geometry/HarborCafeCompleteRoof",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/M_MainlandMeadow",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Navigation/DA_HarborTown",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish_09359b49/Navigation/T_HarborTown",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish1/Geometry/GreenMainland",
+      "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/Polish1/M_MainlandMeadow",
+      "/Game/Weapons/Pistol/Materials/MI_Weapon_Pistol",
+      "/Game/Weapons/Pistol/Meshes/PA_Pistol",
+      "/Game/Weapons/Pistol/Meshes/SK_Pistol",
+      "/Game/Weapons/Pistol/Meshes/SKM_Pistol",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_AORM",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_D",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_Masks",
+      "/Game/Weapons/Pistol/Textures/T_Pistol_N",
+      "/Game/Weapons/Rifle/Materials/M_Weapon"
+    ],
+    "actual_executable_sha256": "3D117D5BBB6C403B1470BE6F2D95BA34D3C03B48E834BDE4BBB40BA971B503A2",
+    "archive_directory": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive",
+    "pak_files": [
+      {
+        "FullName": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Content\\Paks\\global.ucas",
+        "Length": 3507536,
+        "SHA256": "B7046FC8A21DB00CD4EEC6539E606A90C933674ED3C749B4BE625C8661650CC2"
+      },
+      {
+        "FullName": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Content\\Paks\\global.utoc",
+        "Length": 842,
+        "SHA256": "B7A82F3A972BD0859738B92A249DB5399BAFDAD7D7C028D1FCEADB7D36B81890"
+      },
+      {
+        "FullName": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.pak",
+        "Length": 11098283,
+        "SHA256": "7E65DF9198EEA8C52BE802D79EBABE935314745D5883DDFD0708FED7E1C79954"
+      },
+      {
+        "FullName": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.ucas",
+        "Length": 477569520,
+        "SHA256": "A4B010207C8D1A51EFAD0F0D4D107437F0611B1C6E97E6D83D1FFC25CB5B561E"
+      },
+      {
+        "FullName": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.utoc",
+        "Length": 474132,
+        "SHA256": "C4FB9BBF492FEE8688818F82C217F9DE4B1495C17AAD38BE7DC64C1663CFF3A1"
+      }
+    ],
+    "archive_fingerprint_guard": "PASS",
+    "license_notices": [
+      {
+        "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\ASSET_LICENSE_NOTICES.md",
+        "archive_relative_path": "Windows/HarborCity/ThirdPartyNotices/ASSET_LICENSE_NOTICES.md",
+        "sha256": "963225B9FF1A525EE5EA26C2D3C1BE5BD92DA7C6534CEBD0C5745F68756C5849",
+        "bytes": 1539
+      }
+    ],
+    "license_notice_guard": "PASS",
+    "private_archive_guard": {
+      "status": "PASS",
+      "forbidden_file_count": 0,
+      "scope": "Loose archive files only; encrypted container contents require the independent native check."
+    },
+    "archive_inventory": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\archive_inventory.json",
+    "archive_inventory_sha256": "575F5405733162BCEA961A0F833D5AA28B5B7DF29DDF48D7EA665015ECB571A5",
+    "archive_inventory_file_count": 111,
+    "full_archive_inventory_guard": "PASS",
+    "work_free_bytes_after": 56506978304,
+    "free_bytes_after": 12445782016,
+    "source_inputs_stable_during_package": true,
+    "content_inputs_stable_during_package": true,
+    "release_scripts_stable_during_package": true,
+    "ended_at": "2026-09-25T20:59:22.0845106+08:00",
+    "exit_code": 0,
+    "post_package_complete_notice_additions": [
+      {
+        "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS1\\licenses\\AndroidOpenSourceProject_License.txt",
+        "destination": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\ThirdPartyNotices\\AndroidOpenSourceProject_License.txt",
+        "sha256": "5DA12BFAFFE32A5C3E1129BCCCB606EE4D674FFE9A2C63D78E1C1F68153DCBB3"
+      },
+      {
+        "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS1\\licenses\\M5_Original_Music_LICENSE.txt",
+        "destination": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\ThirdPartyNotices\\M5_Original_Music_LICENSE.txt",
+        "sha256": "E9B6FBC16CB755AFB56DB286DBEB4B4D573EE0E3B5DAA47F2094FF419FDF4629"
+      },
+      {
+        "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS1\\licenses\\M4R2_Audio_Provenance_original.md",
+        "destination": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\ThirdPartyNotices\\M4R2_Audio_Provenance_original.md",
+        "sha256": "918957235F23E23B598664D69FB45DCC734F234666FE00919B32D56A64FAE944"
+      },
+      {
+        "source": "D:\\科研学习\\codex学习\\HarborCity\\Plugins\\KawaiiPhysics\\LICENSE",
+        "destination": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\ThirdPartyNotices\\KawaiiPhysics_LICENSE.txt",
+        "sha256": "9A06867EEB04A441EB68E6C0E1FB1189691A3CD708C2507D123D369884C1DFDB"
+      },
+      {
+        "source": "D:\\科研学习\\codex学习\\HarborCity\\Plugins\\VRM4U\\LICENSE",
+        "destination": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\ThirdPartyNotices\\VRM4U_LICENSE.txt",
+        "sha256": "4BC13B35ACF8FEEAC664656D487FFE998D9CF9C0AACEE398CF51A091EA46A25C"
+      },
+      {
+        "source": "D:\\科研学习\\codex学习\\HarborCity\\Plugins\\VRM4U\\LICENSE_assimp",
+        "destination": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\ThirdPartyNotices\\VRM4U_assimp_LICENSE.txt",
+        "sha256": "A26CCC3DBF2F58EA99C100945A8A126FA0F9F4D7FD2B49AA8BDB8E09355864D8"
+      },
+      {
+        "source": "D:\\科研学习\\codex学习\\HarborCity\\Plugins\\VRM4U\\ThirdParty\\assimp\\LICENSE",
+        "destination": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\ThirdPartyNotices\\assimp_LICENSE.txt",
+        "sha256": "A26CCC3DBF2F58EA99C100945A8A126FA0F9F4D7FD2B49AA8BDB8E09355864D8"
+      }
+    ],
+    "post_notice_binary_check": "PASS_UNCHANGED"
+  },
+  "runtime": [
+    {
+      "mode": "soak",
+      "quality": "High",
+      "status": "COMPLETE",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+      "duration_seconds": 1810.6275397986174,
+      "checks": 71,
+      "failed": 0,
+      "failures": [],
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_195957_m5_vs2_soak\\results.json"
+    },
+    {
+      "mode": "perf",
+      "quality": "High",
+      "status": "COMPLETE",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+      "duration_seconds": 79.84790259972215,
+      "checks": 12,
+      "failed": 0,
+      "failures": [],
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_203014_m5_vs2_perf\\results.json"
+    },
+    {
+      "mode": "perf",
+      "quality": "Epic",
+      "status": "COMPLETE",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+      "duration_seconds": 79.88493359833956,
+      "checks": 12,
+      "failed": 0,
+      "failures": [],
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_203141_m5_vs2_perf\\results.json"
+    },
+    {
+      "mode": "smoke",
+      "quality": "High",
+      "status": "COMPLETE",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+      "duration_seconds": 18.453737001866102,
+      "checks": 10,
+      "failed": 0,
+      "failures": [],
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_203318_m5_vs2_smoke\\results.json"
+    },
+    {
+      "mode": "beauty",
+      "quality": "High",
+      "status": "COMPLETE",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+      "duration_seconds": 120.591761700809,
+      "checks": 68,
+      "failed": 0,
+      "failures": [],
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_194722_644_45d4aae0\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_203342_m5_vs2_beauty\\results.json"
+    },
+    {
+      "mode": "m5_full",
+      "quality": "High",
+      "status": "COMPLETE_WITH_FAILURES",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+      "duration_seconds": 15.186072200536728,
+      "checks": 26,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "M5 original proportions and normalized bind units",
+          "status": "FAIL",
+          "evidence_level": "A-runtime",
+          "expected": "247 private bones, unit bind scales, uniform whole-character scale 1.25",
+          "actual": "scale=X=1.250 Y=1.250 Z=1.250 bones=250 unit_binds=1",
+          "elapsed_seconds": 3.6741217002272606
+        },
+        {
+          "name": "Harbor checkpoint actual save file state",
+          "status": "FAIL",
+          "evidence_level": "B-Action Save + file readback",
+          "expected": "M5.Signal.Harbor",
+          "actual": "no readable slot",
+          "elapsed_seconds": 15.174081902951002
+        }
+      ],
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_210041_m5_full\\results.json"
+    },
+    {
+      "mode": "demo",
+      "quality": "High",
+      "status": "COMPLETE_WITH_FAILURES",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+      "duration_seconds": 277.8194571994245,
+      "checks": 10,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "B actual attack damages adult NPC",
+          "status": "FAIL",
+          "evidence_level": "B-Action with A shot placement",
+          "expected": "damage through Attack Action, not direct damage function",
+          "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen00\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n}",
+          "elapsed_seconds": 211.51632989943027
+        }
+      ],
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_210228_m5_vs2_demo\\results.json"
+    }
+  ],
+  "performance": [
+    {
+      "quality": "High",
+      "segments": [
+        {
+          "label": "South approach walk",
+          "frames": 1105,
+          "mean_fps": 92.023,
+          "p99_ms": 12.292,
+          "wall_seconds": 12.008,
+          "status": "PASS"
+        },
+        {
+          "label": "Market approach walk",
+          "frames": 1082,
+          "mean_fps": 90.083,
+          "p99_ms": 12.924,
+          "wall_seconds": 12.011,
+          "status": "PASS"
+        },
+        {
+          "label": "High aerial hover",
+          "frames": 1172,
+          "mean_fps": 97.659,
+          "p99_ms": 11.812,
+          "wall_seconds": 12.001,
+          "status": "PASS"
+        },
+        {
+          "label": "Town aerial traversal",
+          "frames": 1250,
+          "mean_fps": 104.158,
+          "p99_ms": 11.469,
+          "wall_seconds": 12.001,
+          "status": "PASS"
+        }
+      ],
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "gpu_util_average": 96.5625,
+      "adapter_peak_gib": 3.9423828125,
+      "scope": "GPU total used memory at 5s intervals, includes other applications; not exact process-local peak",
+      "raw": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\perf_20260925_203011\\adapter_samples.csv"
+    },
+    {
+      "quality": "Epic",
+      "segments": [
+        {
+          "label": "South approach walk",
+          "frames": 721,
+          "mean_fps": 60.059,
+          "p99_ms": 19.571,
+          "wall_seconds": 12.005,
+          "status": "PASS"
+        },
+        {
+          "label": "Market approach walk",
+          "frames": 738,
+          "mean_fps": 61.484,
+          "p99_ms": 19.415,
+          "wall_seconds": 12.003,
+          "status": "PASS"
+        },
+        {
+          "label": "High aerial hover",
+          "frames": 812,
+          "mean_fps": 67.652,
+          "p99_ms": 17.595,
+          "wall_seconds": 12.003,
+          "status": "PASS"
+        },
+        {
+          "label": "Town aerial traversal",
+          "frames": 841,
+          "mean_fps": 70.017,
+          "p99_ms": 17.292,
+          "wall_seconds": 12.011,
+          "status": "PASS"
+        }
+      ],
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "gpu_util_average": 97.125,
+      "adapter_peak_gib": 4.8125,
+      "scope": "GPU total used memory at 5s intervals, includes other applications; not exact process-local peak",
+      "raw": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\perf_20260925_203138\\adapter_samples.csv"
+    }
+  ],
+  "video": {
+    "status": "ENCODED",
+    "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\M5_VS2_TOWN_PLAYTHROUGH.mp4",
+    "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\recordings\\20260925_210237_78E5546A\\capture.json",
+    "duration_seconds": 269.33618299999995,
+    "actual_capture_fps": 29.969979933962314,
+    "audio": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\recordings\\20260925_210237_78E5546A\\game_audio.wav",
+      "bytes": 51720236,
+      "sha256": "bc4188a69110514ac53709d436449ed03092bfc26b57de57eebca11921c1be7a",
+      "riff_complete": true,
+      "chunks": [
+        {
+          "id": "fmt ",
+          "bytes": 16,
+          "offset": 20
+        },
+        {
+          "id": "data",
+          "bytes": 51720192,
+          "offset": 44
+        }
+      ],
+      "sample_rate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "sample_frames": 12930048,
+      "duration_seconds": 269.376,
+      "rms_dbfs": -32.13847005792861,
+      "peak_normalized": 0.71820068359375,
+      "nonzero_samples": 25826515,
+      "clipped_samples": 0,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.54594103420873,
+          "peak_normalized": 0.092254638671875
+        },
+        {
+          "start_seconds": 1.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.1564092137553,
+          "peak_normalized": 0.091583251953125
+        },
+        {
+          "start_seconds": 2.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.94645419918008,
+          "peak_normalized": 0.11334228515625
+        },
+        {
+          "start_seconds": 3.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.627978643463166,
+          "peak_normalized": 0.084625244140625
+        },
+        {
+          "start_seconds": 4.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.73717335166373,
+          "peak_normalized": 0.150054931640625
+        },
+        {
+          "start_seconds": 5.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.630441039923326,
+          "peak_normalized": 0.164581298828125
+        },
+        {
+          "start_seconds": 6.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.153654169815326,
+          "peak_normalized": 0.153106689453125
+        },
+        {
+          "start_seconds": 7.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.161847751050395,
+          "peak_normalized": 0.0885009765625
+        },
+        {
+          "start_seconds": 8.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.934061369399025,
+          "peak_normalized": 0.078948974609375
+        },
+        {
+          "start_seconds": 9.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.49923241521089,
+          "peak_normalized": 0.086456298828125
+        },
+        {
+          "start_seconds": 10.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.32925903071186,
+          "peak_normalized": 0.103302001953125
+        },
+        {
+          "start_seconds": 11.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.4552753392077,
+          "peak_normalized": 0.094024658203125
+        },
+        {
+          "start_seconds": 12.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.30217330139246,
+          "peak_normalized": 0.087371826171875
+        },
+        {
+          "start_seconds": 13.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.51666798956224,
+          "peak_normalized": 0.08758544921875
+        },
+        {
+          "start_seconds": 14.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.880782391736346,
+          "peak_normalized": 0.1365966796875
+        },
+        {
+          "start_seconds": 15.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.2166961772587,
+          "peak_normalized": 0.145843505859375
+        },
+        {
+          "start_seconds": 16.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.40063742791254,
+          "peak_normalized": 0.136810302734375
+        },
+        {
+          "start_seconds": 17.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.39680692783842,
+          "peak_normalized": 0.1561279296875
+        },
+        {
+          "start_seconds": 18.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.116955570633515,
+          "peak_normalized": 0.097442626953125
+        },
+        {
+          "start_seconds": 19.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.13193667864867,
+          "peak_normalized": 0.090057373046875
+        },
+        {
+          "start_seconds": 20.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.60960630075257,
+          "peak_normalized": 0.089019775390625
+        },
+        {
+          "start_seconds": 21.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.44808402529766,
+          "peak_normalized": 0.0902099609375
+        },
+        {
+          "start_seconds": 22.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.39071415116618,
+          "peak_normalized": 0.081512451171875
+        },
+        {
+          "start_seconds": 23.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.768244055435055,
+          "peak_normalized": 0.089752197265625
+        },
+        {
+          "start_seconds": 24.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.93692932354478,
+          "peak_normalized": 0.07489013671875
+        },
+        {
+          "start_seconds": 25.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.623977687438135,
+          "peak_normalized": 0.097625732421875
+        },
+        {
+          "start_seconds": 26.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.389147596591755,
+          "peak_normalized": 0.106109619140625
+        },
+        {
+          "start_seconds": 27.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.60881539772144,
+          "peak_normalized": 0.098968505859375
+        },
+        {
+          "start_seconds": 28.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.23680266297291,
+          "peak_normalized": 0.085662841796875
+        },
+        {
+          "start_seconds": 29.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.043153590350286,
+          "peak_normalized": 0.079986572265625
+        },
+        {
+          "start_seconds": 30.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.13039941637874,
+          "peak_normalized": 0.069091796875
+        },
+        {
+          "start_seconds": 31.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.089702186712714,
+          "peak_normalized": 0.081634521484375
+        },
+        {
+          "start_seconds": 32.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.80270533109935,
+          "peak_normalized": 0.08221435546875
+        },
+        {
+          "start_seconds": 33.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.19101041729185,
+          "peak_normalized": 0.0955810546875
+        },
+        {
+          "start_seconds": 34.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.8090739001094,
+          "peak_normalized": 0.1033935546875
+        },
+        {
+          "start_seconds": 35.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.72660363955727,
+          "peak_normalized": 0.08660888671875
+        },
+        {
+          "start_seconds": 36.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.377385314830484,
+          "peak_normalized": 0.087982177734375
+        },
+        {
+          "start_seconds": 37.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.1159170501854,
+          "peak_normalized": 0.134002685546875
+        },
+        {
+          "start_seconds": 38.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.930013882990025,
+          "peak_normalized": 0.152618408203125
+        },
+        {
+          "start_seconds": 39.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.11222003492436,
+          "peak_normalized": 0.149383544921875
+        },
+        {
+          "start_seconds": 40.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.895555771942824,
+          "peak_normalized": 0.082977294921875
+        },
+        {
+          "start_seconds": 41.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.43449162341949,
+          "peak_normalized": 0.085540771484375
+        },
+        {
+          "start_seconds": 42.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.548079174933605,
+          "peak_normalized": 0.091583251953125
+        },
+        {
+          "start_seconds": 43.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.88544939490904,
+          "peak_normalized": 0.091766357421875
+        },
+        {
+          "start_seconds": 44.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.60669109382123,
+          "peak_normalized": 0.097991943359375
+        },
+        {
+          "start_seconds": 45.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.56819463513904,
+          "peak_normalized": 0.062957763671875
+        },
+        {
+          "start_seconds": 46.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -38.322612525265626,
+          "peak_normalized": 0.04412841796875
+        },
+        {
+          "start_seconds": 47.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.53788153090127,
+          "peak_normalized": 0.13568115234375
+        },
+        {
+          "start_seconds": 48.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.83586103184545,
+          "peak_normalized": 0.080902099609375
+        },
+        {
+          "start_seconds": 49.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.615911575204166,
+          "peak_normalized": 0.058624267578125
+        },
+        {
+          "start_seconds": 50.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.76071578012791,
+          "peak_normalized": 0.081207275390625
+        },
+        {
+          "start_seconds": 51.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.05479861217809,
+          "peak_normalized": 0.07073974609375
+        },
+        {
+          "start_seconds": 52.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -37.815628462425,
+          "peak_normalized": 0.058868408203125
+        },
+        {
+          "start_seconds": 53.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.37310493856164,
+          "peak_normalized": 0.06976318359375
+        },
+        {
+          "start_seconds": 54.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.75691180877276,
+          "peak_normalized": 0.084259033203125
+        },
+        {
+          "start_seconds": 55.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.649001066981675,
+          "peak_normalized": 0.0865478515625
+        },
+        {
+          "start_seconds": 56.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.77108271255266,
+          "peak_normalized": 0.14532470703125
+        },
+        {
+          "start_seconds": 57.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.058164461366744,
+          "peak_normalized": 0.080230712890625
+        },
+        {
+          "start_seconds": 58.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.99726480533897,
+          "peak_normalized": 0.085296630859375
+        },
+        {
+          "start_seconds": 59.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.57288362415095,
+          "peak_normalized": 0.099151611328125
+        },
+        {
+          "start_seconds": 60.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.16973001173879,
+          "peak_normalized": 0.082733154296875
+        },
+        {
+          "start_seconds": 61.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.52210146493616,
+          "peak_normalized": 0.091033935546875
+        },
+        {
+          "start_seconds": 62.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.36520654481766,
+          "peak_normalized": 0.080657958984375
+        },
+        {
+          "start_seconds": 63.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.26939332384946,
+          "peak_normalized": 0.079376220703125
+        },
+        {
+          "start_seconds": 64.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.48383267347807,
+          "peak_normalized": 0.080230712890625
+        },
+        {
+          "start_seconds": 65.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.8805173777042,
+          "peak_normalized": 0.088623046875
+        },
+        {
+          "start_seconds": 66.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.18098015929552,
+          "peak_normalized": 0.0987548828125
+        },
+        {
+          "start_seconds": 67.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.591088355515204,
+          "peak_normalized": 0.141693115234375
+        },
+        {
+          "start_seconds": 68.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.77332103077289,
+          "peak_normalized": 0.147857666015625
+        },
+        {
+          "start_seconds": 69.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.59670124778018,
+          "peak_normalized": 0.151123046875
+        },
+        {
+          "start_seconds": 70.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.98269733477691,
+          "peak_normalized": 0.1734619140625
+        },
+        {
+          "start_seconds": 71.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.132282342534744,
+          "peak_normalized": 0.088470458984375
+        },
+        {
+          "start_seconds": 72.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.3921775461617,
+          "peak_normalized": 0.086181640625
+        },
+        {
+          "start_seconds": 73.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.58453543910662,
+          "peak_normalized": 0.0982666015625
+        },
+        {
+          "start_seconds": 74.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.78983535543589,
+          "peak_normalized": 0.0799560546875
+        },
+        {
+          "start_seconds": 75.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.006641015279754,
+          "peak_normalized": 0.086578369140625
+        },
+        {
+          "start_seconds": 76.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.871970538631885,
+          "peak_normalized": 0.075927734375
+        },
+        {
+          "start_seconds": 77.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.18491695803945,
+          "peak_normalized": 0.079803466796875
+        },
+        {
+          "start_seconds": 78.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.70099557491833,
+          "peak_normalized": 0.13275146484375
+        },
+        {
+          "start_seconds": 79.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.45281702224354,
+          "peak_normalized": 0.1470947265625
+        },
+        {
+          "start_seconds": 80.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.951734101291,
+          "peak_normalized": 0.154754638671875
+        },
+        {
+          "start_seconds": 81.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.69871344486373,
+          "peak_normalized": 0.148773193359375
+        },
+        {
+          "start_seconds": 82.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.80670075336835,
+          "peak_normalized": 0.1077880859375
+        },
+        {
+          "start_seconds": 83.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.829924612034276,
+          "peak_normalized": 0.09722900390625
+        },
+        {
+          "start_seconds": 84.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.633114018288296,
+          "peak_normalized": 0.089385986328125
+        },
+        {
+          "start_seconds": 85.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.061428931226295,
+          "peak_normalized": 0.079864501953125
+        },
+        {
+          "start_seconds": 86.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.00559417592605,
+          "peak_normalized": 0.079925537109375
+        },
+        {
+          "start_seconds": 87.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.952874724308984,
+          "peak_normalized": 0.079193115234375
+        },
+        {
+          "start_seconds": 88.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.45708581709348,
+          "peak_normalized": 0.089813232421875
+        },
+        {
+          "start_seconds": 89.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.8638549107763,
+          "peak_normalized": 0.0972900390625
+        },
+        {
+          "start_seconds": 90.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.36671126084382,
+          "peak_normalized": 0.09075927734375
+        },
+        {
+          "start_seconds": 91.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.385149863283566,
+          "peak_normalized": 0.109161376953125
+        },
+        {
+          "start_seconds": 92.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.8643073789095,
+          "peak_normalized": 0.0863037109375
+        },
+        {
+          "start_seconds": 93.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.06590582024926,
+          "peak_normalized": 0.0760498046875
+        },
+        {
+          "start_seconds": 94.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.19595879588019,
+          "peak_normalized": 0.080322265625
+        },
+        {
+          "start_seconds": 95.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.62559495863817,
+          "peak_normalized": 0.072662353515625
+        },
+        {
+          "start_seconds": 96.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.93931475397762,
+          "peak_normalized": 0.07958984375
+        },
+        {
+          "start_seconds": 97.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.943525866756346,
+          "peak_normalized": 0.08935546875
+        },
+        {
+          "start_seconds": 98.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.760881930968544,
+          "peak_normalized": 0.08917236328125
+        },
+        {
+          "start_seconds": 99.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.20122543199308,
+          "peak_normalized": 0.09820556640625
+        },
+        {
+          "start_seconds": 100.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.99112586258125,
+          "peak_normalized": 0.083740234375
+        },
+        {
+          "start_seconds": 101.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.56175756894935,
+          "peak_normalized": 0.158843994140625
+        },
+        {
+          "start_seconds": 102.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.98536996871202,
+          "peak_normalized": 0.146514892578125
+        },
+        {
+          "start_seconds": 103.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.835321761964494,
+          "peak_normalized": 0.14263916015625
+        },
+        {
+          "start_seconds": 104.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.09749992533479,
+          "peak_normalized": 0.0863037109375
+        },
+        {
+          "start_seconds": 105.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.581474770671164,
+          "peak_normalized": 0.099273681640625
+        },
+        {
+          "start_seconds": 106.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.69191738972844,
+          "peak_normalized": 0.09417724609375
+        },
+        {
+          "start_seconds": 107.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.780335912369786,
+          "peak_normalized": 0.081451416015625
+        },
+        {
+          "start_seconds": 108.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.812284064949296,
+          "peak_normalized": 0.0821533203125
+        },
+        {
+          "start_seconds": 109.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.64438243619029,
+          "peak_normalized": 0.0816650390625
+        },
+        {
+          "start_seconds": 110.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -38.77836028703714,
+          "peak_normalized": 0.048553466796875
+        },
+        {
+          "start_seconds": 111.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.82575800070738,
+          "peak_normalized": 0.060028076171875
+        },
+        {
+          "start_seconds": 112.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.37198876773774,
+          "peak_normalized": 0.140167236328125
+        },
+        {
+          "start_seconds": 113.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.7588228915148,
+          "peak_normalized": 0.056640625
+        },
+        {
+          "start_seconds": 114.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.56521911598593,
+          "peak_normalized": 0.081451416015625
+        },
+        {
+          "start_seconds": 115.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.30615035456103,
+          "peak_normalized": 0.066864013671875
+        },
+        {
+          "start_seconds": 116.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -38.1281285692687,
+          "peak_normalized": 0.05950927734375
+        },
+        {
+          "start_seconds": 117.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.330982327900884,
+          "peak_normalized": 0.067291259765625
+        },
+        {
+          "start_seconds": 118.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.71526667780087,
+          "peak_normalized": 0.08441162109375
+        },
+        {
+          "start_seconds": 119.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.631944949277425,
+          "peak_normalized": 0.086700439453125
+        },
+        {
+          "start_seconds": 120.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.15271010222419,
+          "peak_normalized": 0.080841064453125
+        },
+        {
+          "start_seconds": 121.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.04536058387208,
+          "peak_normalized": 0.080322265625
+        },
+        {
+          "start_seconds": 122.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.9841305063431,
+          "peak_normalized": 0.08538818359375
+        },
+        {
+          "start_seconds": 123.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.5595955170325,
+          "peak_normalized": 0.099273681640625
+        },
+        {
+          "start_seconds": 124.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.15395880749279,
+          "peak_normalized": 0.0828857421875
+        },
+        {
+          "start_seconds": 125.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.50493467957058,
+          "peak_normalized": 0.0911865234375
+        },
+        {
+          "start_seconds": 126.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.34752547852625,
+          "peak_normalized": 0.080810546875
+        },
+        {
+          "start_seconds": 127.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.25205553489126,
+          "peak_normalized": 0.07952880859375
+        },
+        {
+          "start_seconds": 128.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.46853160756591,
+          "peak_normalized": 0.08038330078125
+        },
+        {
+          "start_seconds": 129.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.866402263564936,
+          "peak_normalized": 0.08880615234375
+        },
+        {
+          "start_seconds": 130.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.16803516475672,
+          "peak_normalized": 0.09893798828125
+        },
+        {
+          "start_seconds": 131.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.22116662852642,
+          "peak_normalized": 0.15692138671875
+        },
+        {
+          "start_seconds": 132.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.89520333854839,
+          "peak_normalized": 0.136566162109375
+        },
+        {
+          "start_seconds": 133.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.3961425173384,
+          "peak_normalized": 0.156341552734375
+        },
+        {
+          "start_seconds": 134.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.03483693478534,
+          "peak_normalized": 0.1478271484375
+        },
+        {
+          "start_seconds": 135.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.11463656816233,
+          "peak_normalized": 0.088623046875
+        },
+        {
+          "start_seconds": 136.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.37699038219491,
+          "peak_normalized": 0.086334228515625
+        },
+        {
+          "start_seconds": 137.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.569993494268616,
+          "peak_normalized": 0.09844970703125
+        },
+        {
+          "start_seconds": 138.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.77786958990263,
+          "peak_normalized": 0.080047607421875
+        },
+        {
+          "start_seconds": 139.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.99262508586463,
+          "peak_normalized": 0.086700439453125
+        },
+        {
+          "start_seconds": 140.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.856466338794895,
+          "peak_normalized": 0.076080322265625
+        },
+        {
+          "start_seconds": 141.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.16774562854745,
+          "peak_normalized": 0.079925537109375
+        },
+        {
+          "start_seconds": 142.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.671297161905606,
+          "peak_normalized": 0.1605224609375
+        },
+        {
+          "start_seconds": 143.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.31348409094123,
+          "peak_normalized": 0.201812744140625
+        },
+        {
+          "start_seconds": 144.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.005394543438825,
+          "peak_normalized": 0.15753173828125
+        },
+        {
+          "start_seconds": 145.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.61817393961638,
+          "peak_normalized": 0.166046142578125
+        },
+        {
+          "start_seconds": 146.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.79338197513055,
+          "peak_normalized": 0.10797119140625
+        },
+        {
+          "start_seconds": 147.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.81581446671808,
+          "peak_normalized": 0.09735107421875
+        },
+        {
+          "start_seconds": 148.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.618240207070855,
+          "peak_normalized": 0.089569091796875
+        },
+        {
+          "start_seconds": 149.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.04430561455363,
+          "peak_normalized": 0.08001708984375
+        },
+        {
+          "start_seconds": 150.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.987985069497014,
+          "peak_normalized": 0.080078125
+        },
+        {
+          "start_seconds": 151.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.935389785097186,
+          "peak_normalized": 0.07940673828125
+        },
+        {
+          "start_seconds": 152.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.44161904406698,
+          "peak_normalized": 0.089935302734375
+        },
+        {
+          "start_seconds": 153.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.849976635643124,
+          "peak_normalized": 0.097442626953125
+        },
+        {
+          "start_seconds": 154.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.354036605953034,
+          "peak_normalized": 0.090911865234375
+        },
+        {
+          "start_seconds": 155.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.371707411220875,
+          "peak_normalized": 0.10931396484375
+        },
+        {
+          "start_seconds": 156.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.84860184016687,
+          "peak_normalized": 0.086456298828125
+        },
+        {
+          "start_seconds": 157.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.04857564538218,
+          "peak_normalized": 0.076171875
+        },
+        {
+          "start_seconds": 158.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.178185121783955,
+          "peak_normalized": 0.08050537109375
+        },
+        {
+          "start_seconds": 159.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.608457723498475,
+          "peak_normalized": 0.072784423828125
+        },
+        {
+          "start_seconds": 160.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.92370291914739,
+          "peak_normalized": 0.079742431640625
+        },
+        {
+          "start_seconds": 161.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.93078554796558,
+          "peak_normalized": 0.0894775390625
+        },
+        {
+          "start_seconds": 162.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.747491329545475,
+          "peak_normalized": 0.089324951171875
+        },
+        {
+          "start_seconds": 163.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.187450060845,
+          "peak_normalized": 0.09832763671875
+        },
+        {
+          "start_seconds": 164.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.97567410781781,
+          "peak_normalized": 0.083892822265625
+        },
+        {
+          "start_seconds": 165.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.5336396301288,
+          "peak_normalized": 0.158935546875
+        },
+        {
+          "start_seconds": 166.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.972491086621595,
+          "peak_normalized": 0.1466064453125
+        },
+        {
+          "start_seconds": 167.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.6715059675986,
+          "peak_normalized": 0.14263916015625
+        },
+        {
+          "start_seconds": 168.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.08111621564856,
+          "peak_normalized": 0.086456298828125
+        },
+        {
+          "start_seconds": 169.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.56835459772093,
+          "peak_normalized": 0.09942626953125
+        },
+        {
+          "start_seconds": 170.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.67821542765666,
+          "peak_normalized": 0.094329833984375
+        },
+        {
+          "start_seconds": 171.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.76732576277234,
+          "peak_normalized": 0.081573486328125
+        },
+        {
+          "start_seconds": 172.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.79712146139905,
+          "peak_normalized": 0.082244873046875
+        },
+        {
+          "start_seconds": 173.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.63390086088174,
+          "peak_normalized": 0.0819091796875
+        },
+        {
+          "start_seconds": 174.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -38.72767758313531,
+          "peak_normalized": 0.048828125
+        },
+        {
+          "start_seconds": 175.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.77501348934457,
+          "peak_normalized": 0.060302734375
+        },
+        {
+          "start_seconds": 176.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.33576245437847,
+          "peak_normalized": 0.14044189453125
+        },
+        {
+          "start_seconds": 177.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.736613917294754,
+          "peak_normalized": 0.05670166015625
+        },
+        {
+          "start_seconds": 178.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.532619010567906,
+          "peak_normalized": 0.08172607421875
+        },
+        {
+          "start_seconds": 179.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.27267652065865,
+          "peak_normalized": 0.0670166015625
+        },
+        {
+          "start_seconds": 180.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -38.09623777433826,
+          "peak_normalized": 0.059661865234375
+        },
+        {
+          "start_seconds": 181.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -36.51403245584464,
+          "peak_normalized": 0.06201171875
+        },
+        {
+          "start_seconds": 182.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.884995510694196,
+          "peak_normalized": 0.080230712890625
+        },
+        {
+          "start_seconds": 183.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.60198193418967,
+          "peak_normalized": 0.075286865234375
+        },
+        {
+          "start_seconds": 184.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.77383276779658,
+          "peak_normalized": 0.1373291015625
+        },
+        {
+          "start_seconds": 185.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.999931273941854,
+          "peak_normalized": 0.078826904296875
+        },
+        {
+          "start_seconds": 186.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.77787552217129,
+          "peak_normalized": 0.082000732421875
+        },
+        {
+          "start_seconds": 187.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.693469095943186,
+          "peak_normalized": 0.092041015625
+        },
+        {
+          "start_seconds": 188.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.22432254539779,
+          "peak_normalized": 0.083343505859375
+        },
+        {
+          "start_seconds": 189.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.63792896541915,
+          "peak_normalized": 0.081634521484375
+        },
+        {
+          "start_seconds": 190.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.33926014613671,
+          "peak_normalized": 0.08148193359375
+        },
+        {
+          "start_seconds": 191.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.25094486579053,
+          "peak_normalized": 0.08203125
+        },
+        {
+          "start_seconds": 192.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.253854290730715,
+          "peak_normalized": 0.082489013671875
+        },
+        {
+          "start_seconds": 193.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.176265274365385,
+          "peak_normalized": 0.182037353515625
+        },
+        {
+          "start_seconds": 194.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.185296184726763,
+          "peak_normalized": 0.1856689453125
+        },
+        {
+          "start_seconds": 195.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.261315858069484,
+          "peak_normalized": 0.172271728515625
+        },
+        {
+          "start_seconds": 196.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.37246817658702,
+          "peak_normalized": 0.190521240234375
+        },
+        {
+          "start_seconds": 197.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.70370990272462,
+          "peak_normalized": 0.0823974609375
+        },
+        {
+          "start_seconds": 198.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.22621118414148,
+          "peak_normalized": 0.089019775390625
+        },
+        {
+          "start_seconds": 199.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.066070379678344,
+          "peak_normalized": 0.084625244140625
+        },
+        {
+          "start_seconds": 200.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.5181753390604,
+          "peak_normalized": 0.091339111328125
+        },
+        {
+          "start_seconds": 201.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.41841151530439,
+          "peak_normalized": 0.097564697265625
+        },
+        {
+          "start_seconds": 202.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.92564186727956,
+          "peak_normalized": 0.088165283203125
+        },
+        {
+          "start_seconds": 203.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.85598688818226,
+          "peak_normalized": 0.09539794921875
+        },
+        {
+          "start_seconds": 204.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.90281249435902,
+          "peak_normalized": 0.079437255859375
+        },
+        {
+          "start_seconds": 205.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -19.631998210751526,
+          "peak_normalized": 0.562042236328125
+        },
+        {
+          "start_seconds": 206.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -19.48823582968853,
+          "peak_normalized": 0.667327880859375
+        },
+        {
+          "start_seconds": 207.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -25.105213841320673,
+          "peak_normalized": 0.673370361328125
+        },
+        {
+          "start_seconds": 208.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -20.413831839864752,
+          "peak_normalized": 0.486907958984375
+        },
+        {
+          "start_seconds": 209.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -19.293998890538436,
+          "peak_normalized": 0.71820068359375
+        },
+        {
+          "start_seconds": 210.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -30.933247253166737,
+          "peak_normalized": 0.1156005859375
+        },
+        {
+          "start_seconds": 211.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.35222235784754,
+          "peak_normalized": 0.116363525390625
+        },
+        {
+          "start_seconds": 212.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.69222833129791,
+          "peak_normalized": 0.114013671875
+        },
+        {
+          "start_seconds": 213.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.3347968939928,
+          "peak_normalized": 0.095733642578125
+        },
+        {
+          "start_seconds": 214.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.58997024878528,
+          "peak_normalized": 0.095367431640625
+        },
+        {
+          "start_seconds": 215.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.64623796760047,
+          "peak_normalized": 0.097076416015625
+        },
+        {
+          "start_seconds": 216.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.31158839961862,
+          "peak_normalized": 0.108245849609375
+        },
+        {
+          "start_seconds": 217.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.18599067930548,
+          "peak_normalized": 0.107208251953125
+        },
+        {
+          "start_seconds": 218.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.56316609917734,
+          "peak_normalized": 0.09967041015625
+        },
+        {
+          "start_seconds": 219.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.78796409555786,
+          "peak_normalized": 0.110015869140625
+        },
+        {
+          "start_seconds": 220.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -29.334047114051778,
+          "peak_normalized": 0.111785888671875
+        },
+        {
+          "start_seconds": 221.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -27.005377077291094,
+          "peak_normalized": 0.128631591796875
+        },
+        {
+          "start_seconds": 222.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -28.242404921807793,
+          "peak_normalized": 0.13153076171875
+        },
+        {
+          "start_seconds": 223.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.06000518546334,
+          "peak_normalized": 0.08819580078125
+        },
+        {
+          "start_seconds": 224.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -28.939693209629883,
+          "peak_normalized": 0.1268310546875
+        },
+        {
+          "start_seconds": 225.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.675799958254963,
+          "peak_normalized": 0.133636474609375
+        },
+        {
+          "start_seconds": 226.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -31.331086655846825,
+          "peak_normalized": 0.128753662109375
+        },
+        {
+          "start_seconds": 227.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.29902718224076,
+          "peak_normalized": 0.09100341796875
+        },
+        {
+          "start_seconds": 228.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.27750077562547,
+          "peak_normalized": 0.0853271484375
+        },
+        {
+          "start_seconds": 229.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.03658309080677,
+          "peak_normalized": 0.07861328125
+        },
+        {
+          "start_seconds": 230.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.22322256907228,
+          "peak_normalized": 0.087554931640625
+        },
+        {
+          "start_seconds": 231.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.028029245625255,
+          "peak_normalized": 0.07940673828125
+        },
+        {
+          "start_seconds": 232.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.549054374662184,
+          "peak_normalized": 0.09466552734375
+        },
+        {
+          "start_seconds": 233.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.46034743044873,
+          "peak_normalized": 0.08782958984375
+        },
+        {
+          "start_seconds": 234.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.313385431477634,
+          "peak_normalized": 0.096893310546875
+        },
+        {
+          "start_seconds": 235.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.43758267723473,
+          "peak_normalized": 0.08734130859375
+        },
+        {
+          "start_seconds": 236.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.594655969558026,
+          "peak_normalized": 0.088623046875
+        },
+        {
+          "start_seconds": 237.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.42150387931587,
+          "peak_normalized": 0.070159912109375
+        },
+        {
+          "start_seconds": 238.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.82139052346443,
+          "peak_normalized": 0.06640625
+        },
+        {
+          "start_seconds": 239.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.89713359397214,
+          "peak_normalized": 0.08099365234375
+        },
+        {
+          "start_seconds": 240.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.485341736802674,
+          "peak_normalized": 0.078399658203125
+        },
+        {
+          "start_seconds": 241.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.23336105061278,
+          "peak_normalized": 0.107147216796875
+        },
+        {
+          "start_seconds": 242.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.717547465171116,
+          "peak_normalized": 0.0989990234375
+        },
+        {
+          "start_seconds": 243.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.80387603227057,
+          "peak_normalized": 0.0958251953125
+        },
+        {
+          "start_seconds": 244.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.64793207894595,
+          "peak_normalized": 0.08648681640625
+        },
+        {
+          "start_seconds": 245.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.3675673713562,
+          "peak_normalized": 0.092193603515625
+        },
+        {
+          "start_seconds": 246.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.90757751656109,
+          "peak_normalized": 0.086029052734375
+        },
+        {
+          "start_seconds": 247.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.696846110153416,
+          "peak_normalized": 0.083038330078125
+        },
+        {
+          "start_seconds": 248.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.0379579881889,
+          "peak_normalized": 0.073699951171875
+        },
+        {
+          "start_seconds": 249.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.154799932936044,
+          "peak_normalized": 0.09552001953125
+        },
+        {
+          "start_seconds": 250.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.108990799639734,
+          "peak_normalized": 0.0931396484375
+        },
+        {
+          "start_seconds": 251.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.893114152192865,
+          "peak_normalized": 0.09881591796875
+        },
+        {
+          "start_seconds": 252.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.28926251127492,
+          "peak_normalized": 0.09112548828125
+        },
+        {
+          "start_seconds": 253.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.60664387499517,
+          "peak_normalized": 0.088470458984375
+        },
+        {
+          "start_seconds": 254.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -35.678081829132054,
+          "peak_normalized": 0.064178466796875
+        },
+        {
+          "start_seconds": 255.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.444606471504756,
+          "peak_normalized": 0.08721923828125
+        },
+        {
+          "start_seconds": 256.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.23253811944277,
+          "peak_normalized": 0.0859375
+        },
+        {
+          "start_seconds": 257.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.84191210722493,
+          "peak_normalized": 0.093170166015625
+        },
+        {
+          "start_seconds": 258.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.13689363408923,
+          "peak_normalized": 0.099151611328125
+        },
+        {
+          "start_seconds": 259.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.147873184516314,
+          "peak_normalized": 0.0928955078125
+        },
+        {
+          "start_seconds": 260.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.56667816947046,
+          "peak_normalized": 0.0753173828125
+        },
+        {
+          "start_seconds": 261.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.329782283019036,
+          "peak_normalized": 0.091827392578125
+        },
+        {
+          "start_seconds": 262.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.00623628404616,
+          "peak_normalized": 0.08355712890625
+        },
+        {
+          "start_seconds": 263.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.62986697566408,
+          "peak_normalized": 0.079986572265625
+        },
+        {
+          "start_seconds": 264.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.439934027296914,
+          "peak_normalized": 0.07818603515625
+        },
+        {
+          "start_seconds": 265.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.43571887889885,
+          "peak_normalized": 0.0985107421875
+        },
+        {
+          "start_seconds": 266.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -33.362955098092876,
+          "peak_normalized": 0.099395751953125
+        },
+        {
+          "start_seconds": 267.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -32.66793106802684,
+          "peak_normalized": 0.093841552734375
+        },
+        {
+          "start_seconds": 268.0,
+          "sample_frames": 48000,
+          "rms_dbfs": -34.367838495612666,
+          "peak_normalized": 0.080657958984375
+        },
+        {
+          "start_seconds": 269.0,
+          "sample_frames": 18048,
+          "rms_dbfs": -33.712494603886604,
+          "peak_normalized": 0.0733642578125
+        }
+      ],
+      "signal_present": true,
+      "listening_status": "NOT_RUN",
+      "sound_effect_quality": "USER_REVIEW",
+      "meaning": "PCM structure and measured signal only; neither proves every effect was heard or sounds appropriate"
+    },
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.64003d",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 61,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "2000/1",
+          "avg_frame_rate": "8072000/269349",
+          "time_base": "1/16000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 4309376,
+          "duration": "269.336000",
+          "bit_rate": "6683698",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "8072",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc63.8.101 libx264"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "mime_codec_string": "mp4a.40.2",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 1024,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 12928137,
+          "duration": "269.336187",
+          "bit_rate": "192008",
+          "nb_frames": "12627",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler"
+          }
+        }
+      ],
+      "format": {
+        "filename": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\M5_VS2_TOWN_PLAYTHROUGH.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "269.336188",
+        "size": "231841258",
+        "bit_rate": "6886301",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.6.100"
+        }
+      }
+    },
+    "timing": "native wall timestamps, VFR; no interpolation, synthetic replacement, speed change or extra terminal freeze",
+    "visual": "USER_REVIEW",
+    "listening": "NOT_RUN",
+    "capture_metadata_note": "Recorder retains historical milestone M5_VS1 tag; actual VS2 package/map identity is established by standalone validation launch/results, not by that tag.",
+    "recording_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe"
+  },
+  "source_input_layers": {
+    "A": "explicit placement, camera framing, runtime assertions",
+    "B": "Enhanced Input player actions; real physics within each shot",
+    "C": "NOT_RUN: OS keyboard/mouse response and subjective quality require user"
+  },
+  "uncompleted": [
+    "adult proportion/wardrobe approval",
+    "cloth-floor penetration and four recovery orientations",
+    "live vehicle-on-pedestrian footage",
+    "NPC dialogue footage",
+    "stray hair final determination",
+    "stride and start/stop visual approval",
+    "fully furnished interiors and authored lighthouse/temple",
+    "fantasy dialogue portraits/music/vehicle/weapon art",
+    "complete sidequest walkthrough",
+    "all-zone normal continuous-route performance"
+  ],
+  "previous_failures_retained": true
+}

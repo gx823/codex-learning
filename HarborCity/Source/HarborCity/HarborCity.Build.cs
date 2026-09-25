@@ -29,6 +29,7 @@ public class HarborCity : ModuleRules
 
 		// Runtime calibration uses the existing platform mapper to identify the local mouse device.
 		PrivateDependencyModuleNames.AddRange(new string[] { "ApplicationCore", "MovieSceneCapture", "RenderCore", "RHI" });
+		PrivateDependencyModuleNames.Add("ImageCore");
 		PrivateDependencyModuleNames.AddRange(new string[] { "AnimGraphRuntime", "AnimationWarpingRuntime", "AudioMixer", "AnimationCore", "Chaos" });
 		// Read-only VS2 diagnostics inspect the already-enabled VRM4U spring node.
 		PrivateDependencyModuleNames.Add("VRM4U");

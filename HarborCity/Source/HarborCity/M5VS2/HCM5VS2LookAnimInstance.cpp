@@ -107,7 +107,8 @@ void UHCM5VS2LookAnimInstance::UpdateVS2Motion(float DeltaSeconds)
         && PC->GetPlayerMode() == EHCPlayerMode::OnFoot && !PC->IsFirstPersonPerspective()
         && PC->IsGameplayFocused() && !PC->IsDialogueOpen() && !bVS2Flying
         && Combat->GetPlayerHealth() > 0 && Combat->GetWeaponMode() == EHCM4WeaponMode::Unarmed
-        && !Combat->IsAttacking() && !Combat->IsReloading() && !Combat->IsAimHeld();
+        && !Combat->IsAttacking() && !Combat->IsReloading() && !Combat->IsAimHeld()
+        && !bTownIdleGestureActive;
     if (!bVS2MotionEligible || !FMath::IsFinite(DeltaSeconds) || DeltaSeconds <= 0)
     {
         VS2MotionPoseIndex = 0; VS2MotionElapsed = 0; VS2WarpAlpha = 0; VS2StrideScale = 1;

@@ -1,0 +1,88 @@
+{
+  "status": "STOPPED",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_185332_103_ccbc985f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+  "package_record": "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/builds/20260925_185332_103_ccbc985f_package/package.json",
+  "runs": [
+    {
+      "mode": "perf",
+      "quality": "High",
+      "status": "COMPLETE",
+      "started": "2026-09-25T19:12:12.923173",
+      "helper_exit_code": 0,
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\perf_20260925_191214",
+      "launch": {
+        "status": "EXITED",
+        "pid": 4080,
+        "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_185332_103_ccbc985f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+        "kind": "STANDALONE_PACKAGE",
+        "input_layer": "ENGINE_ACTION_NOT_OS",
+        "arguments": [
+          "-M5Test=m5_vs2_perf",
+          "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS2_perf_20260925_191214",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\perf_20260925_191214\\game.log\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+          "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+        ],
+        "started": "2026-09-25T19:12:14.4575909+08:00",
+        "map": "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown",
+        "exit_code": 0,
+        "ended": "2026-09-25T19:13:40.3201689+08:00"
+      },
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_185332_103_ccbc985f\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_191217_m5_vs2_perf\\results.json",
+      "result_status": "COMPLETE"
+    },
+    {
+      "mode": "soak",
+      "quality": "High",
+      "status": "COMPLETE_WITH_FAILURES",
+      "started": "2026-09-25T19:15:13.958729",
+      "helper_exit_code": 0,
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\soak_20260925_191515",
+      "launch": {
+        "status": "EXITED",
+        "pid": 19180,
+        "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_185332_103_ccbc985f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+        "kind": "STANDALONE_PACKAGE",
+        "input_layer": "ENGINE_ACTION_NOT_OS",
+        "arguments": [
+          "-M5Test=m5_vs2_soak",
+          "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS2_soak_20260925_191515",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\soak_20260925_191515\\game.log\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+          "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+        ],
+        "started": "2026-09-25T19:15:15.6595525+08:00",
+        "map": "/Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown",
+        "exit_code": 0,
+        "ended": "2026-09-25T19:45:07.7248506+08:00"
+      },
+      "results": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_185332_103_ccbc985f\\Archive\\Windows\\HarborCity\\Saved\\M5Tests\\20260925_191519_m5_vs2_soak\\results.json",
+      "result_status": "COMPLETE"
+    }
+  ],
+  "os_input": "NOT_RUN",
+  "history": [
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\part3\\standalone_validation_attempt_20260925_191513.json"
+  ],
+  "error": "[WinError 183] 当文件已存在时，无法创建该文件。: 'D:\\\\科研学习\\\\codex学习\\\\docs\\\\HarborCity_M5_VS2\\\\part3\\\\standalone_results\\\\soak_High'"
+}

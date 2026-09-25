@@ -1,0 +1,6 @@
+{
+  "status": "PRELIMINARY_MIXED_QUALITY",
+  "reason": "First High sample set eight groups to2, but foliage/shading/landscape retained3. Stored GameUserSettings readback exposed omitted groups. Do not label it a full High preset.",
+  "required_followup": "After current pipeline, run one corrected High-only sample; preserve this preliminary result and replace summary High data with corrected actual run.",
+  "code_changed": "launcher sets remaining three scalability groups, no engine/game code or art modifications"
+}

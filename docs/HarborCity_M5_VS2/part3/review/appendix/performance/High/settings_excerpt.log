@@ -1,0 +1,28 @@
+LogCsvProfiler: Display: Metadata set : commandline="" -M5Test=m5_vs2_perf /Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown -unattended -windowed -ResX=1920 -ResY=1080 -ForceRes -language=en -nosplash -M1AutoQuit -HCM1SaveSlot=HarborCity_M5_VS1_Test_VS2_perf_20260925_203011 -abslog=D:\科研学习\codex学习\docs\HarborCity_M5_VS2\part3\perf_20260925_203011\game.log -LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC -ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen -ExecCmds="sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality"""
+LogInit: Command Line:  -M5Test=m5_vs2_perf /Game/HarborCity/M5VS2/Part3/Town_ea45a319b3dd/L_HarborTown -unattended -windowed -ResX=1920 -ResY=1080 -ForceRes -language=en -nosplash -M1AutoQuit -HCM1SaveSlot=HarborCity_M5_VS1_Test_VS2_perf_20260925_203011 -abslog=D:\科研学习\codex学习\docs\HarborCity_M5_VS2\part3\perf_20260925_203011\game.log -LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC -ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen -ExecCmds="sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality"
+[2026.09.25-12.30.15:187][  0]sg.GlobalIlluminationQuality = "2"
+[2026.09.25-12.30.15:189][  0]sg.FoliageQuality = "2"
+[2026.09.25-12.30.15:189][  0]sg.ShadingQuality = "2"
+[2026.09.25-12.30.15:189][  0]sg.LandscapeQuality = "2"
+[2026.09.25-12.30.15:189][  0]r.ScreenPercentage = "100"
+[2026.09.25-12.30.15:189][  0]r.VSync = "0"
+[2026.09.25-12.30.15:189][  0]t.MaxFPS = "0"
+[2026.09.25-12.30.15:189][  0]r.ScreenPercentage = "100"      LastSetBy: Console
+[2026.09.25-12.30.15:189][  0]r.VSync = "0"      LastSetBy: Console
+[2026.09.25-12.30.15:189][  0]t.MaxFPS = "0"      LastSetBy: Console
+[2026.09.25-12.30.15:189][  0]sg.FoliageQuality = "2"      LastSetBy: Console
+[2026.09.25-12.30.15:189][  0]sg.ShadingQuality = "2"      LastSetBy: Console
+[2026.09.25-12.30.15:189][  0]sg.LandscapeQuality = "2"      LastSetBy: Console
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	sg.GlobalIlluminationQuality 2
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	sg.FoliageQuality 2
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	sg.ShadingQuality 2
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	sg.LandscapeQuality 2
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	r.ScreenPercentage 100
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	r.VSync 0
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	t.MaxFPS 0
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	r.ScreenPercentage
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	r.VSync
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	t.MaxFPS
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	sg.FoliageQuality
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	sg.ShadingQuality
+[2026.09.25-12.30.15:189][  0]LogEngine: Warning: 	sg.LandscapeQuality

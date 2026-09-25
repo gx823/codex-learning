@@ -1,0 +1,3 @@
+[2026.09.25-13.00.45:559][254]LogTemp: Display: M1_TEST_FAIL [A-runtime] M5 original proportions and normalized bind units : scale=X=1.250 Y=1.250 Z=1.250 bones=250 unit_binds=1
+[2026.09.25-13.00.57:060][182]LogTemp: Display: M1_TEST_FAIL [B-Action Save + file readback] Harbor checkpoint actual save file state : no readable slot
+[2026.09.25-13.00.57:079][182]LogTemp: Display: M1_TEST_FINISHED E:/GameDev/Builds/HarborCity/M5_VS2/Candidate_20260925_205256_675_f65e250e/Archive/Windows/HarborCity/Saved/M5Tests/20260925_210041_m5_full

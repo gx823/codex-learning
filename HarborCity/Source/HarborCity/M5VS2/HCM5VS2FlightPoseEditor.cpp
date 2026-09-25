@@ -81,7 +81,7 @@ bool ClothSettings(UAnimGraphNode_Base* Node,FName& ForceProperty,FString& Root,
 }
 #endif
 
-FString UHCM5VS2FlightPoseEditor::AuthorFlightLoops(UAnimSequence* Source,const TArray<UAnimSequence*>& Loops,bool Apply,bool ReadbackOnly)
+FString UHCM5VS2FlightPoseEditor::AuthorFlightLoops(UAnimSequence* Source,const TArray<UAnimSequence*>& Loops,bool Apply,bool ReadbackOnly,bool bTownPolish)
 {
 #if WITH_EDITOR
     auto R=MakeShared<FJsonObject>();R->SetBoolField(TEXT("apply"),Apply);R->SetBoolField(TEXT("readback_only"),ReadbackOnly);
@@ -103,7 +103,8 @@ FString UHCM5VS2FlightPoseEditor::AuthorFlightLoops(UAnimSequence* Source,const 
     const FVector Lateral=FVector::VectorPlaneProject(Position(TEXT("UpperArm_L"))-Position(TEXT("UpperArm_R")),Up).GetSafeNormal();
     if(Forward.IsNearlyZero()||Lateral.IsNearlyZero()||FMath::Abs(Forward|Lateral)>.2)return Finish(R,TEXT("Actual source body basis is not well-conditioned"));
     R->SetArrayField(TEXT("measured_model_forward"),XYZ(Forward));R->SetArrayField(TEXT("measured_model_left"),XYZ(Lateral));
-    const float LeanDegrees[]={0,16,28,-5,5},ArmSpread[]={.45f,.35f,.25f,.6f,.5f},ArmFore[]={.1f,-.12f,-.3f,.12f,.22f};
+    const float LeanDegrees[]={0,bTownPolish?18.f:16.f,bTownPolish?35.f:28.f,-5,5},ArmSpread[]={.45f,.35f,.25f,.6f,.5f},ArmFore[]={.1f,-.12f,-.3f,.12f,.22f};
+    R->SetBoolField(TEXT("town_pose_revision"),bTownPolish);
     TArray<TSharedPtr<FJsonValue>> Audits;double MaxAngular=0,MaxTranslation=0,MaxScale=0;
     for(int32 Kind=0;Kind<5;++Kind)
     {
@@ -113,7 +114,7 @@ FString UHCM5VS2FlightPoseEditor::AuthorFlightLoops(UAnimSequence* Source,const 
             const double Wave=FMath::Sin(2.*PI*Frame/60.);const FQuat Lean=FQuat::FindBetweenNormals(Up,(Up*FMath::Cos(FMath::DegreesToRadians(LeanDegrees[Kind]))+Forward*FMath::Sin(FMath::DegreesToRadians(LeanDegrees[Kind]))).GetSafeNormal());
             TArray<FTransform> Pose=Base;Pose[0].SetRotation((Lean*Pose[0].GetRotation()).GetNormalized());
             // Gentle whole-body breath is bounded under 0.5 cm; no actor/root motion extraction.
-            Pose[0].AddToTranslation(Up*(Wave*.45));
+            Pose[0].AddToTranslation(Up*(Wave*(bTownPolish?1.2:.45)));
             for(int32 Side=0;Side<2;++Side)
             {
                 const FString S=Side==0?TEXT("L"):TEXT("R");const float Sign=Side==0?1.f:-1.f;
@@ -124,8 +125,8 @@ FString UHCM5VS2FlightPoseEditor::AuthorFlightLoops(UAnimSequence* Source,const 
                 // Relaxed asymmetric suspension: one knee hangs lower, the other bends back.
                 // Direction vectors use the source skeleton's measured forward/up axes;
                 // preserve every segment length, hand/finger track and skirt local pose.
-                const double ThighFore=Kind==2?(Side==0?.04:.14):(Side==0?.10:.32);
-                const double CalfBack=Kind==2?(Side==0?.20:.34):(Side==0?.28:.58);
+                const double ThighFore=bTownPolish?(Side==0?.12:.30):(Kind==2?(Side==0?.04:.14):(Side==0?.10:.32));
+                const double CalfBack=bTownPolish?(Side==0?.70:1.05):(Kind==2?(Side==0?.20:.34):(Side==0?.28:.58));
                 const double LegWave=Wave*(Side==0?.018:-.018);
                 Good&=PointBone(Ref,Pose,Bone(TEXT("UpperLeg_")),Bone(TEXT("LowerLeg_")),Direction(Sign*.025,ThighFore+LegWave,-1));
                 Good&=PointBone(Ref,Pose,Bone(TEXT("LowerLeg_")),Bone(TEXT("Foot_")),Direction(0,-CalfBack-LegWave,-1));

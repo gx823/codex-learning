@@ -1,0 +1,70 @@
+{
+  "status": "PARTIAL",
+  "disabled": "project UDP Messaging and TCP Messaging transport settings; packaged config included",
+  "runtime": {
+    "time": "2026-09-25T21:04:39.1721379+08:00",
+    "status": "SAMPLED",
+    "tcp": [
+      {
+        "State": 2,
+        "LocalAddress": "0.0.0.0",
+        "LocalPort": 1985
+      }
+    ],
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_205256_675_f65e250e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe",
+    "udp": [],
+    "scope": "Final candidate process sample; no firewall prompt directly observed"
+  },
+  "remaining": "Unreal Trace TCP control listener on1985, bound0.0.0.0. Actual trigger of a Windows firewall prompt was not directly observed. Do not claim no prompt.",
+  "evidence": [
+    {
+      "file": "E:/UE_5.8/Engine/Source/Runtime/TraceLog/Private/Trace/Control.cpp",
+      "lines": [
+        18,
+        57,
+        111,
+        255,
+        357
+      ]
+    },
+    {
+      "file": "E:/UE_5.8/Engine/Source/Runtime/TraceLog/Public/Trace/Config.h",
+      "lines": [
+        76,
+        82,
+        84
+      ]
+    },
+    {
+      "file": "E:/UE_5.8/Engine/Source/Programs/UnrealBuildTool/Configuration/Rules/TargetRules.cs",
+      "lines": [
+        1326,
+        1327,
+        1335
+      ]
+    }
+  ],
+  "options_reviewed": [
+    "Disable project UDP/TCP messaging: applied; does not govern TraceLog control",
+    "Trace command-line/config: no runtime control-listener-disable entry found in inspected local source; notraceserver only prevents trace daemon auto-launch",
+    "bEnableTrace=false requires a unique engine build environment; not applied to the installed frozen engine",
+    "Public Trace shutdown frees writer buffers; not used during gameplay as an unverified workaround"
+  ],
+  "engine_source_modified": false,
+  "system_firewall_modified": false,
+  "previous_candidate_sample": {
+    "status": "SAMPLED",
+    "tcp": [
+      {
+        "State": 2,
+        "LocalAddress": "0.0.0.0",
+        "LocalPort": 1985
+      }
+    ],
+    "udp": [],
+    "time": "2026-09-25T19:16:15.5416605+08:00",
+    "pid": 19180,
+    "scope": "One native standalone process sample; does not certify absence of prompts on other machines",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS2\\Candidate_20260925_185332_103_ccbc985f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity.exe"
+  }
+}

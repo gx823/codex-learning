@@ -1,0 +1,10 @@
+{
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i7-14650HX",
+    "NumberOfCores": 16,
+    "NumberOfLogicalProcessors": 24
+  },
+  "ram_gib": 15.71,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "mode": "1920x1080 uncapped; actual sample data separate"
+}

@@ -11,7 +11,7 @@ class HARBORCITY_API UHCM5VS2FlightPoseEditor : public UBlueprintFunctionLibrary
 public:
     /** Five fresh copies: Hover,Forward,Boost,Ascending,Descending. Never saves. */
     UFUNCTION(BlueprintCallable, Category="HarborCity|VS2|Flight")
-    static FString AuthorFlightLoops(UAnimSequence* SourceIdle,const TArray<UAnimSequence*>& Loops,bool bApply,bool bReadbackOnly = false);
+    static FString AuthorFlightLoops(UAnimSequence* SourceIdle,const TArray<UAnimSequence*>& Loops,bool bApply,bool bReadbackOnly = false,bool bTownPolish = false);
     /** New copy of an authored GASMotion ABP; existing physics/FP/combat retained. */
     UFUNCTION(BlueprintCallable, Category="HarborCity|VS2|Flight")
     static FString ConfigureFlightGraph(UAnimBlueprint* Candidate,const TArray<UAnimSequence*>& Loops,

@@ -1,0 +1,63 @@
+{
+	"status": "COMPLETE",
+	"mode": "m5_vs2_soak",
+	"map": "L_HarborTown",
+	"test_suite": "M5_VS1",
+	"world_type": "Game",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"recorded_utc": "2026-09-25T11:12:10.710Z",
+	"duration_seconds": 33.871236298233271,
+	"simulation_seconds": 3.4077888987958431,
+	"phase_clock": "world DeltaSeconds while running; wall time only while paused",
+	"completed_enter_exit_cycles": 0,
+	"input_method": "M4: explicit A fixtures and normal B EnhancedInput/Key input; per-check provenance. Not OS input or user visual acceptance.",
+	"save_slot": "HarborCity_M5_VS1_Test_VS2_soak_20260925_191127",
+	"m3_escape_stop":
+	{
+		"viewport_hook_bound": true,
+		"user_stop_latched": false,
+		"event_source": "NOT_RUN",
+		"scope": "This revision's explicit isolated test only. Esc is not consumed; normal game pause binding remains. No global keyboard interception, P override, automatic resume or auto-quit after stop.",
+		"queued_input_scope": "UE5.8 exposes no action-scoped removal for private InputsInjectedThisTick. No mappings cleared or private access; pressed keys flushed, gameplay motion cleared, every harness update/injection/new step permanently stopped. Normal Esc pause handles already queued input; same-frame queue clearing is not claimed.",
+		"event_frame": 0,
+		"held_actions_at_event": 0,
+		"held_actions_now": 0,
+		"runner_held_injection_calls_after_event": 0,
+		"game_paused_at_report": false,
+		"pause_menu_at_report": false,
+		"car_input_telemetry_at_report": "{\"available\":true,\"occupied\":false,\"speed_kmh\":0.00003,\"signed_speed_cm_s\":0.000047,\"gear\":0,\"target_gear\":0,\"rpm\":900.0,\"throttle\":0.0,\"brake\":1.0,\"steering\":0.0,\"handbrake\":true,\"parking\":true,\"position\":[70.000424,-949.99319,22.65389],\"velocity\":[-0.0,0.000052,-0.000819],\"up_z\":0.999981,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.673319,\"spring_force\":163343.859375,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[159.998399,-814.889205,6.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.674412,\"spring_force\":162798.796875,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-20.001601,-814.889076,6.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.617776,\"spring_force\":191114.484375,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[159.998405,-1079.094126,6.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.618869,\"spring_force\":190568.125,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-20.001595,-1079.093997,6.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":19,\"suspension_query_ignored_objects_gt\":20,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+		"character_velocity_at_report": "X=0.000 Y=0.000 Z=0.000",
+		"auto_quit_suppressed": false
+	},
+	"checks": [
+		{
+			"name": "Runtime actors",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "M1 controller, character, car, switch",
+			"actual": "PC=1 character=1 car=1 lamp=1",
+			"elapsed_seconds": 3.8686956986784935
+		},
+		{
+			"name": "Isolated save slot",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "HarborCity_M2_V1_Test_*",
+			"actual": "HarborCity_M5_VS1_Test_VS2_soak_20260925_191127",
+			"elapsed_seconds": 3.8707170002162457
+		},
+		{
+			"name": "R2 initial focus timeout",
+			"status": "FAIL",
+			"evidence_level": "A-runtime prerequisite",
+			"expected": "actual focused window within30s",
+			"actual": "no test input sent",
+			"elapsed_seconds": 33.870530299842358
+		}
+	],
+	"failures": 1,
+	"render_loop_mean_fps": 63.847728314948519,
+	"p99_frame_ms": 46.892497688531876,
+	"frames_over_100ms": 2,
+	"performance_scope": "Wall-clock actor ticks during scripted functional tests, includes pause and fixture overhead; not a standardized gameplay benchmark."
+}

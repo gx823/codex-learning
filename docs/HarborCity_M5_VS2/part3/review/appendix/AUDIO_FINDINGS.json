@@ -1,0 +1,43 @@
+{
+  "status": "PARTIAL_ROOT_CAUSE_SCOPE",
+  "historical": [
+    {
+      "source": "docs/HarborCity_M4_R2/M4_R2_STATUS.md:38",
+      "finding": "Final192.136s video had signal only about6-16s combat; from17s toend digital silence. Historical claim that every frame of every R2 recording was silent is not supported."
+    },
+    {
+      "source": "docs/HarborCity_M5_VS2/README.md:16",
+      "finding": "Gate2 flight recording native audio track was silent."
+    }
+  ],
+  "current_capture_path": "Native Unreal master submix StartRecordingOutput/StopRecordingOutput; not desktop microphone or loopback endpoint. No -nosound argument in new actual launcher.",
+  "changes": [
+    "Harbor wind loop",
+    "distance-triggered stone footsteps",
+    "vehicle motor loop driven by speed",
+    "shot-count-triggered report and melee cloth whoosh",
+    "Bounded au.NeverDisableSubmixes override during capture only, previous value restored"
+  ],
+  "cause_limit": "Missing sustained source content explains long historical silent spans. Did not independently reconstruct every old recording or identify a single common historical cause. Current encoded audio signal and perception assessed separately.",
+  "sources": [
+    "Source/HarborCity/M3/HCM3Recording.cpp",
+    "Source/HarborCity/M5VS2/HCM5VS2TownRuntime.cpp",
+    "tools/run_m5_vs2_part3.ps1"
+  ],
+  "auditory_quality": "USER_REVIEW",
+  "standalone_silent_attempt": "Candidate194722 demo: full native WAV digital silence; not encoded as an audible deliverable.",
+  "foreground_probe": {
+    "capture": "recordings/20260925_205140_3D7F88D1/capture.json",
+    "candidate": "204029_714_ce542027",
+    "activation": "Normal Sky foreground activation before recording; no volume override, no stop-hotkey workaround",
+    "signal": true,
+    "rms_dbfs": -33.29914405417287,
+    "peak": 0.169219970703125
+  },
+  "inference": "Engine source multiplies primary audio by actual application-focus volume. Same content produced nonzero sound after normal foreground activation; startup focus is the leading explanation for the silent automated run, not a demonstrated common cause of all historical recordings.",
+  "engine_references": [
+    "ApplicationCore/Private/Windows/WindowsPlatformApplicationMisc.cpp:259",
+    "Engine/Private/AudioDevice.cpp:4776"
+  ],
+  "regression": "Foreground-confirmed independent capture is required. Do not count IsPlaying alone as audible evidence."
+}
