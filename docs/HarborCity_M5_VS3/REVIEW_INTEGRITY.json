@@ -1,0 +1,523 @@
+{
+  "status": "PASS",
+  "zip": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS3\\M5_VS3_REVIEW.zip",
+  "sha256": "6a4247df84bd157445131860a6f68ec8fe0a017fc858df374dfe12cebb19d9e3",
+  "files": [
+    {
+      "path": "appendix/BATTLE_HARNESS_REPAIR.json",
+      "sha256": "82153b604746dfc49463e1f600238536c42358606985ffb8cf46c43c1dafa4d7"
+    },
+    {
+      "path": "appendix/CAPTURE.json",
+      "sha256": "3f697508086c36e71a7487e896abc0534919e8668ca90908b4cbb9ae7fe4640c"
+    },
+    {
+      "path": "appendix/COMPLETED_FULL_SCOPE.json",
+      "sha256": "0b5cc891ee8f0a24c726dd9acd8d0f9e1a9b42bf06c289ff17911ed71a822a21"
+    },
+    {
+      "path": "appendix/DELIVERY.json",
+      "sha256": "b708a2adb0f5456f67a1cb8ba33e53fbaf177ce988f69e89bbea34301b1f34a9"
+    },
+    {
+      "path": "appendix/DELIVERY_BUILD.json",
+      "sha256": "5e7eb359caa69b26acbd0007786393d6ff788cc751649c9f2fef4c5f3ebb9585"
+    },
+    {
+      "path": "appendix/DELIVERY_ENCRYPTION.json",
+      "sha256": "85ec9aa2ff338750cf84abd589e3d9106ff2c731f78308dfd6ebba02f356c28d"
+    },
+    {
+      "path": "appendix/DELIVERY_NETWORK_SAMPLE.json",
+      "sha256": "d8544d45fb57ae5fc42b70d07b28893e86adc0611f3b46a7d300b66540f70b51"
+    },
+    {
+      "path": "appendix/DELIVERY_VEHICLE_SCOPE.json",
+      "sha256": "1707abe7f2f13b3220c86b8526cd5fa899116fef376306548b79e28f3b68ceb3"
+    },
+    {
+      "path": "appendix/DISPLAY_MEASUREMENT.json",
+      "sha256": "306b7b21a9a9280de6a24dc7111d4f6996d14655467d44376cf2e11c41373521"
+    },
+    {
+      "path": "appendix/DISPLAY_RESTORED.json",
+      "sha256": "ccd68c234cb5957ff316e4c9a9c4886d2f0c0ad0e1d37f14506bc3d77201b732"
+    },
+    {
+      "path": "appendix/EDITOR_BATTLE_AIM_PROBE.json",
+      "sha256": "6b7b2150a39635646daf6eceef9f0c5a450eade410ee75497f4aee1090c145ce"
+    },
+    {
+      "path": "appendix/EDITOR_COMBAT_INITIAL.json",
+      "sha256": "58eb60f83d8c4cc3ba69b11383bcdffc08ccb81addbe91d095099c3f884d7010"
+    },
+    {
+      "path": "appendix/EDITOR_SAVE_REPAIR.json",
+      "sha256": "c8cd19e6e84d96ed8e03684270d20c59b49a9c619406cc5f4d5a2d9b2c046214"
+    },
+    {
+      "path": "appendix/ENCRYPTION_CHECK.json",
+      "sha256": "8b9b2dbcdf208cac55bdcb0a26fde71ce239d6713b0ad5c1db3e1f179e7beb2c"
+    },
+    {
+      "path": "appendix/FINAL_CANDIDATE_EQUIVALENCE.json",
+      "sha256": "97916585d4cfba01d35fee713c2e42237ef419375c5db27a06456344db6ee056"
+    },
+    {
+      "path": "appendix/FINAL_ENCRYPTION_CHECK.json",
+      "sha256": "88ca269926a18758ea97597534a30262fc1a1c50d9b12c7d7a4506ffe956e734"
+    },
+    {
+      "path": "appendix/FINAL_NETWORK_SAMPLE.json",
+      "sha256": "964618967246a2fa9ca13ed46e27723fd244c4546dc83e0163ae6a98d39d84d6"
+    },
+    {
+      "path": "appendix/FINAL_RECORDING_ONLY_DIFF.json",
+      "sha256": "7521373254c65f3c4b687d53cb0e217805c5ecb7e0dd8debb740039c0d79c413"
+    },
+    {
+      "path": "appendix/FINAL_REOPEN_SCOPE.json",
+      "sha256": "99015698a7db49a30c18cce83255a49300d44fa48401310f98bbeee1b1c165f7"
+    },
+    {
+      "path": "appendix/FROZEN_FILE_COMPARISON.json",
+      "sha256": "22c74cba369407d085c2120a7c2375e6d0c7f0b6525d00336bf393cf48ee5a2f"
+    },
+    {
+      "path": "appendix/LOAD_DIAGNOSTIC_BEFORE.json",
+      "sha256": "91b18b9cf03afa600e4f57dbcd96512a5cbbac4952b7467f10f18ebf6c5c405a"
+    },
+    {
+      "path": "appendix/LOAD_REPAIR.json",
+      "sha256": "575a643e4bc57f2c0b18fcf3b04ff261f4df19577267bdfc7a48a0c2132aa58f"
+    },
+    {
+      "path": "appendix/LOAD_REPAIR_EDITOR_AFTER.json",
+      "sha256": "552d59d1c319f51e7fdc3af346c59054b4774e31a210228aa866c23586f80206"
+    },
+    {
+      "path": "appendix/m5_full_20260926_033606_launch.json",
+      "sha256": "649bd7044a14ecc245583bfbd27a7799209afe32570f8d36d7e8c0fb190ec74c"
+    },
+    {
+      "path": "appendix/m5_full_20260926_033606_results.json",
+      "sha256": "7b0c4301fe0a501a16c10fef459260c3acfb1f103f81a45e4a0595f74a3ae0f9"
+    },
+    {
+      "path": "appendix/m5_full_20260926_041127_launch.json",
+      "sha256": "ce953842fa9dc2c81ad75f3597959c81de32e8da13884b7c37f329565b4039ec"
+    },
+    {
+      "path": "appendix/m5_full_20260926_041127_results.json",
+      "sha256": "9236825d98a21f8b9b2e6b1f518ec2c7cf6fead5367c950c25f18681262b471f"
+    },
+    {
+      "path": "appendix/m5_full_20260926_042813_launch.json",
+      "sha256": "8db195cf55ed95bad319ee28792f734b042fad097282c932c631df78d3213644"
+    },
+    {
+      "path": "appendix/m5_full_20260926_042813_results.json",
+      "sha256": "e41b5a998995a3c761fd5b79eae24bf310193bbd09466f2c571dad0f460e5e41"
+    },
+    {
+      "path": "appendix/m5_reopen_20260926_054007_launch.json",
+      "sha256": "8560e7f2053ca2da152338e2e3aece56f5dbb4c1bf1542d9dbc863722ee588c4"
+    },
+    {
+      "path": "appendix/m5_reopen_20260926_054007_results.json",
+      "sha256": "dd151d57e71e73d466a3e97a8c636bc678c07ccded7f9db0993f62afdfc66a2d"
+    },
+    {
+      "path": "appendix/m5_resume_full_20260926_042548_launch.json",
+      "sha256": "85091e27c7efaa0058804529b46c537dcccf0a36c67a33c6a8540381d108393e"
+    },
+    {
+      "path": "appendix/m5_resume_full_20260926_042548_results.json",
+      "sha256": "887ef4b2a4cbe193d5cbf11a2d9a2c7918fd744fa68380105179e81435a2ae86"
+    },
+    {
+      "path": "appendix/m5_vs3_art_20260926_033341_launch.json",
+      "sha256": "e4a1023ad0b50e7fc282ad943b2823d11f8c44b27211480f9985f766fc4adf64"
+    },
+    {
+      "path": "appendix/m5_vs3_art_20260926_033341_results.json",
+      "sha256": "ec19b54fb876cc3ce154eb51c186ff671d9a6ce8a2d3883df6e295457813d6af"
+    },
+    {
+      "path": "appendix/m5_vs3_art_20260926_051647_launch.json",
+      "sha256": "a2ba2eb110acf34ef1785b6e2587c6fe3e53103e7878b0d676d46c2f03994d9a"
+    },
+    {
+      "path": "appendix/m5_vs3_art_20260926_051647_results.json",
+      "sha256": "4189e346c14de65e00b183b021fa38133655be82065bf807555c96620ccdc6b7"
+    },
+    {
+      "path": "appendix/m5_vs3_demo_20260926_051834_launch.json",
+      "sha256": "8ccc94cc844b64dc8efcba80c36f02ae0a3e48ab719752ac4784b9b1e6d25452"
+    },
+    {
+      "path": "appendix/m5_vs3_demo_20260926_051834_results.json",
+      "sha256": "14376b303dcbe7a58f1698c82230a47568c1a51a09e783224de067877e23e200"
+    },
+    {
+      "path": "appendix/m5_vs3_demo_20260926_053033_launch.json",
+      "sha256": "0db21d630a31f7175ff1a01f319130249772fb988451ca1d5ddc980086109fea"
+    },
+    {
+      "path": "appendix/m5_vs3_demo_20260926_053033_results.json",
+      "sha256": "2d5d641d9d073bb2ab226c03d3d8db47e6bf51e643823f57ac17b604c5f9279b"
+    },
+    {
+      "path": "appendix/NativeVideo_278s.png",
+      "sha256": "f865ac5239dda7c3931e158fc44e80ac13d1178bb6e79862f000250b965c2cf9"
+    },
+    {
+      "path": "appendix/NativeVideo_286s.png",
+      "sha256": "7cfc04941286676e918f167fb65b41b678415ae0264cc60134aef5091db96365"
+    },
+    {
+      "path": "appendix/NativeVideo_292s.png",
+      "sha256": "8ba67392a0e744696b3cc8a5e4239bbbf288094426390b8a62d648a1955a3674"
+    },
+    {
+      "path": "appendix/OS_FINAL_F9_thumb.jpg",
+      "sha256": "926936707f27cb332416f0c71460f0fa0cb59ea1ed643feb35ba8498598fcbc3"
+    },
+    {
+      "path": "appendix/OS_FINAL_LAUNCH.json",
+      "sha256": "14f86f598d5491ad248f8039aaa99561e2d3a35b29ee0eb5a3193a420b2d4f2d"
+    },
+    {
+      "path": "appendix/OS_FINAL_PAUSE_thumb.jpg",
+      "sha256": "68aae5eea9f883d89c8a422bde5d091c661185668417301159da20ce5c526880"
+    },
+    {
+      "path": "appendix/OS_FINAL_RESULTS.json",
+      "sha256": "624afc75068e887d71c67c03c84758d3399247a7e346fd86f9fc31b9ea524aca"
+    },
+    {
+      "path": "appendix/OS_KEYBOARD_RESULTS.json",
+      "sha256": "d0ff010d263977302a25cee7ae8600ebeebc3f3f73c2565e278368b322df9e33"
+    },
+    {
+      "path": "appendix/OS_LOAD_LAUNCH.json",
+      "sha256": "c16786ee346f61898cfe77864b6695288b953c7efc4bf02a78f68c8eb29868dd"
+    },
+    {
+      "path": "appendix/perf_20260926_053618_launch.json",
+      "sha256": "063258e2c0ee665fa0460403049e1d21667cbceeea1b0091aef33ff2436a76fb"
+    },
+    {
+      "path": "appendix/perf_20260926_053618_results.json",
+      "sha256": "1b280e493ef1f3fb85502e035f82ece8f4745eaa9492b1e66f997824f45177fe"
+    },
+    {
+      "path": "appendix/perf_20260926_053810_launch.json",
+      "sha256": "ea8623969f3359a9ea372d739ac4de813f9ccd67a71852aa6303721e1c163188"
+    },
+    {
+      "path": "appendix/perf_20260926_053810_results.json",
+      "sha256": "6043c5e42c67dbd7011490de0a515f74f3cfd3bb51c7d6ba88ba8f54f23a6a13"
+    },
+    {
+      "path": "appendix/PERFORMANCE_MEASUREMENTS.json",
+      "sha256": "8d0b68ecc7e62d6f99fe597d46518f6b568eabd2655c183a0ae9cce87ad80826"
+    },
+    {
+      "path": "appendix/RECORDING_FLOW_FIX.json",
+      "sha256": "2e1d463af323a3a21fc4f044dcf711a15e05dd14d51072a3c72e86b26854f3d4"
+    },
+    {
+      "path": "appendix/RECORDING_SPAWN_FAILURE.json",
+      "sha256": "3420596aa212bc12f7bffcc02ee6285c6fc43ef5391cf0cf3e3ff42cc86cc86e"
+    },
+    {
+      "path": "appendix/RESUME_ENTRY_LIMITATION.json",
+      "sha256": "84b9c02b793514346fd813c09a74314eeeba327acb7cc2cb69ebc0f12ff513eb"
+    },
+    {
+      "path": "appendix/RIDE_BEFORE.json",
+      "sha256": "b89f31d08fcc4003613fe77eaa561e56ee97e99e86108d16efead2f392115b4b"
+    },
+    {
+      "path": "appendix/RIDE_REPAIR.json",
+      "sha256": "ddbce8ba0846769ffb3082bbf2606cfc670f943ea99a251654cd64bdd1b34c47"
+    },
+    {
+      "path": "appendix/RIDE_WALKABLE_ATTEMPT.json",
+      "sha256": "9ca209514b692af4bfa247823f9181ff09644ee093993586c948b26dfd7c11ce"
+    },
+    {
+      "path": "appendix/SHIPPING_NETWORK.json",
+      "sha256": "c965f1eafbd715df11ce7cf47bfed5eb89fab4198de39eb9d861fb166b61131d"
+    },
+    {
+      "path": "appendix/SHIPPING_NETWORK_FINAL.json",
+      "sha256": "5eb34436f567a9c1df601c98c37dc0cf18d2d651f77a6a26a7ee3fc528121032"
+    },
+    {
+      "path": "appendix/SOURCE_CHANGES.patch",
+      "sha256": "da1cdc75167bb3b43ebddb6e72eaed1c23d2615d084d8ad539741bd9ae005de3"
+    },
+    {
+      "path": "appendix/STANDALONE_VALIDATION.json",
+      "sha256": "7c8c74447d2a3559ffd10e363d66ca8dc1c7e75dcfd96bb1eb7daeaf80c6c415"
+    },
+    {
+      "path": "appendix/VEHICLE_SCOPED_CHANGE.json",
+      "sha256": "67c4499a07ede5ce4ad3062ea831da41d95403c31f350f60886913478451293b"
+    },
+    {
+      "path": "appendix/VIDEO_TECHNICAL.json",
+      "sha256": "af434267cfb05cccf8f8bfb0e7fea975df71ff42a04fd27feb026510da9393ee"
+    },
+    {
+      "path": "ARCANE_LINEWORK.svg",
+      "sha256": "f9e464bcf635cda27fb4a3fa189c48b2629cda8d0bda14c3a2d20fa518d90c5e"
+    },
+    {
+      "path": "ASSET_LICENSE_NOTICES.md",
+      "sha256": "ac11ea7454e631059518073f51a67041a3ea01b48cd8b5bd3e31b3ab170b957f"
+    },
+    {
+      "path": "CONTROLS.md",
+      "sha256": "e299a35664c9cfddf926ec5514514a2312f451d00b35c3d8a58678602cda5e53"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_FlightStamina.png",
+      "sha256": "4dca48622e9e2f9f0f2ac62a42bb3268027e6344e5fdaedf6017a1549904c916"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_m5_story_complete.png",
+      "sha256": "711e4ec5a58e02ad80f221bdfe63b64ff5efc60c3f69e985a238070ba864aa3e"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_MagicGun.png",
+      "sha256": "86a24655773d2aab7f53bcf560e7700cc4e254ef40c10306582a96568ceaefb2"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_PunchImpact.png",
+      "sha256": "1a0a488b4e58b32dd345b30f0ab3d816760a89641940755fb8cd20c906da61df"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_Spell1Rune.png",
+      "sha256": "d585972b3928a82a1d5a31b4a99b681f8213f5672d02a0e9f90f85df9453d3be"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_Spell2Rune.png",
+      "sha256": "21f22847a4598879dbbd80a43092a5267210b9cdee132ae017010a07f33c3dae"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_Spell3Rune.png",
+      "sha256": "49fbc18b595a12cd7c905e643b11fbb4fe32d2a8165d9afc48ac0eaaefa0aa9b"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_Spell4Rune.png",
+      "sha256": "86ddf6a49cca2b792842752ff6c4c8d2dd5b87652dc59e97232d60189f279933"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_StaminaAutoLanding.png",
+      "sha256": "8885f357acd6a37e85369157a4dd78ccfead55d7214c6d2e1613f07fb9cef5f6"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_SwordCombo.png",
+      "sha256": "803077e0afe4598781fb164873568f0bf3c6c23f37683925d6dcf1b5b9effd9c"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_SwordDraw.png",
+      "sha256": "a9d95a6be822bed0cccab80b861bc1fb6867234195f465127e4ddb452e04eda0"
+    },
+    {
+      "path": "images/m5_full_20260926_042813_SwordFirstPerson.png",
+      "sha256": "7612b8ebb5ce5b2b718382569a446a64dfcf0b8d9fb99da85c5a113dac015b1e"
+    },
+    {
+      "path": "images/m5_reopen_20260926_054007_m5_reopened_completion.png",
+      "sha256": "77c9666018b95b341d68f298862ba595ef71f29cd9c768c4ccf479da5f4a7193"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_FP_1.png",
+      "sha256": "0cd639fc893de8c1fb27c9f891573a01b0618ddf1821ced71905078eba8f71ac"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_FP_2.png",
+      "sha256": "8482ff2323ece966baf8dd3592fb7f6d1f7c89e3663cf0fdaedc35eed4c237ac"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_FP_3.png",
+      "sha256": "6a34515eaceb4558912bd8e0b06a1a37a1ddb9564856c30c93dce493877661a2"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_FP_4.png",
+      "sha256": "c0dcc69a4a448c94b93ed3ee3894e2fa86599a27f2edb90c3c26caff69dd5bc0"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_TP_1.png",
+      "sha256": "0a01b0f66d7dd5bcb5d96b98b7a5985f12d420c52174969040c2975e5cc40833"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_TP_2.png",
+      "sha256": "a38b67ae7dedc58b50baaf54791a6e6037b73f97e416aa9d9b56e81c8ebc0b3d"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_TP_3.png",
+      "sha256": "e6232dd888883633a8ef56a5a5c3a10777a1eb193bce66e1f33b6a89802c3be6"
+    },
+    {
+      "path": "images/m5_vs3_art_20260926_051647_Arcane_TP_4.png",
+      "sha256": "5f696df321e05865574465f12bda30bddf245e6dfca0483759e4208396948f52"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_DemoSaveLoad.png",
+      "sha256": "27e5c3a0998f4e4c91e922c96e6ea794ef0cdfffe165048b4c34678ec729016e"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_FlightFirstPerson.png",
+      "sha256": "feb5a8dc98672d41d04ec9ab45ee62bbcee9278dd22ad78b35ffa87408638c8a"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_FlightStamina.png",
+      "sha256": "34d0039577be52e843fa2da12c8121bec2de14c51d9ec828ae16848f111d0429"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_MagicGun.png",
+      "sha256": "d9e0acceaf70923578d43546b706317daf2eaf3314ba2f7157662036f14901e6"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_PunchImpact.png",
+      "sha256": "4ca032b2e87a12f937ed645ee7e95ce349b1d935ae5920bfd44030ef2888c174"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Spell1Rune.png",
+      "sha256": "21b37080d26476327a48e8458c6b8df1a8d9eb086eceb9c5945c984d268148de"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Spell2Rune.png",
+      "sha256": "dcb950e50764a791942e5d5ee15015a5db21c2c7114d9941d9897a0225dfaaec"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Spell3Rune.png",
+      "sha256": "cc23c6be3c7ef39bfa3de711c76a427af0718419135202b66f8e82265e1cd2f7"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Spell4Rune.png",
+      "sha256": "d770c8f5915d0032c8a63120109263ffdd0396e2410f78d806301c0f97317355"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_StaminaAutoLanding.png",
+      "sha256": "8d9c7f3ee8f21385bed413312cc37046f3cb8ae0b6385b3cb9a901f760fb7503"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_SwordCombo.png",
+      "sha256": "5b623c19ad9c8fbe2cd89a86e397f3df287997b983e19ce0adb512e5eafe697b"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_SwordDraw.png",
+      "sha256": "1f9152c823c78a5664d9625b2ecd7d97bc9c338f9fe480637d4483975da3ad84"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_SwordFirstPerson.png",
+      "sha256": "f8317f99c08e36e7b6f96a00e524a9cc5f6575f571214411c658a2463322045c"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing1_Afternoon_Boost.png",
+      "sha256": "36634c03795663e68f7f5e9e698aefa8653d5e597b01a0873b3afb47ba5b8602"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing1_Afternoon_Forward.png",
+      "sha256": "58f1b56402cfbad94ee86754f3b32bb6225bdf02597cd521412589966597d5c1"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing1_Afternoon_Hover.png",
+      "sha256": "c214159cf52cc60f140eec6197c239c4aa945d04272ccd001137c179ac92b2ba"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing1_Night_Boost.png",
+      "sha256": "9d88cda45d72fb57eabda970c57e113817ffe0ee0c577b0cf8634a8b255ad069"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing1_Night_Forward.png",
+      "sha256": "376fe306364df5fc3ed2968fe1191532a630f4ebb0df26deb5703645266ef09b"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing1_Night_Hover.png",
+      "sha256": "a8ee372a69215980193ad1b8cb4a1d99d1198b085b20dc342ba329489de701b1"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing2_Afternoon_Boost.png",
+      "sha256": "b64469ed6054167693f407b23b067c6c1d40abe8b4df16c444ef8cf398f49485"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing2_Afternoon_Forward.png",
+      "sha256": "0ed8196314e14988431f2e8bebe5be761454c17cb8f8b9530cf6bf9c9019b005"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing2_Afternoon_Hover.png",
+      "sha256": "c8fd3057b4187f3edbd94214c3efc2a9445b9f112bc62523f7796d2142dcae3a"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing2_Night_Boost.png",
+      "sha256": "5e9c8cbda58622cc6e25b3393d78f2620adf4d0c43a55bef960083acac6d828f"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing2_Night_Forward.png",
+      "sha256": "a205acdcfc84ed2dcd025cb160936774500ba0f8367452ca4f74899c3f846973"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing2_Night_Hover.png",
+      "sha256": "851ec86a8d0beb241e65230643d165bef77e2ef733439d50ed909f481b9addb9"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing3_Afternoon_Boost.png",
+      "sha256": "6b547e076f85bfe841850b48b1776e338253dc30b063f5c510ff4996236a9ed5"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing3_Afternoon_Forward.png",
+      "sha256": "1503726adbaeaeec9638873a34fa221784d63020178c478320eb0e2679fa9ff5"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing3_Afternoon_Hover.png",
+      "sha256": "fcf9ef36d5e076852c1dc3f1697eca3e3c9d550d042b6ce5454a8cedc391898a"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing3_Night_Boost.png",
+      "sha256": "1c8167deee74be535931933362e56c838259aa5bbeb58c6e80c22a8b9bff643a"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing3_Night_Forward.png",
+      "sha256": "3774174af8bc29b1aea7405a70ac741132eebd68a156c52c24f6bd2dfd10f26d"
+    },
+    {
+      "path": "images/m5_vs3_demo_20260926_053033_Wing3_Night_Hover.png",
+      "sha256": "e850c565640add409b57ffb1ec391a159283c1712a046eaaa0b2fce0c1d9e574"
+    },
+    {
+      "path": "index.html",
+      "sha256": "cef1dbe592eaf38aa9d5c7f7284f8abea6b9253721ef93159e0a6ecb5c5f5de3"
+    },
+    {
+      "path": "MAGIC_ART_DIRECTION.md",
+      "sha256": "1acc7c402fbec1885af3d016339e9541bfe0077516de01d0225991d868e7d9e0"
+    },
+    {
+      "path": "NEXT_TOWN_LAYOUT.svg",
+      "sha256": "ace5241fadf15255e7a24e7736454e459e0e292de01a18e7146deed81bc8cd64"
+    },
+    {
+      "path": "PERFORMANCE.md",
+      "sha256": "3f17658ee82e839d8d7d37b9977a6838f9a4448552eceda033fa91c8e7ac855d"
+    },
+    {
+      "path": "PURCHASE_CANDIDATES.md",
+      "sha256": "73cc338223ec0ef0754f2ef4601d0e21eea8af271dbb663829c95c6e7dbd55f3"
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "b9ec219191acfc69ffd53fbf50e0c9ba7dbe6ad6d97219a25958c79523bfc266"
+    },
+    {
+      "path": "wings.html",
+      "sha256": "e8572b0cbf784cf4dba7101cd070fc3193635437c1f45a832cd56e73c30c210f"
+    }
+  ]
+}

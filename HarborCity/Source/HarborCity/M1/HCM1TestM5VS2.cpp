@@ -8,6 +8,7 @@
 #include "M5VS2/HCM5VS2CornerTimeDirector.h"
 #include "M4R2/HCM4R2Navigation.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "Engine/SkeletalMesh.h"
 #include "EngineUtils.h"
 #include "Camera/CameraActor.h"
@@ -149,10 +150,34 @@ void AHCM1TestRunner::AddM5VS2Tests()
         Sample(TEXT("South approach walk"),12);Sample(TEXT("Market approach walk"),12);
         AddStep(TEXT("B stop before flight"),2,[this]{Release(TEXT("Move"));});Tap(TEXT("FlightToggle"),1);
         AddStep(TEXT("B climb"),7,[this]{Hold(TEXT("Jump"),FInputActionValue(true));},[this]{Release(TEXT("Jump"));});
-        Sample(TEXT("High aerial hover"),12);
+        const bool VS3=GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"));
+        Sample(TEXT("High aerial hover"),VS3?4:12);
         AddStep(TEXT("B forward flight"),.1,[this]{Hold(TEXT("Move"),FInputActionValue(FVector2D(0,1)));});
-        Sample(TEXT("Town aerial traversal"),12);
+        Sample(TEXT("Town aerial traversal"),VS3?5:12);
         AddStep(TEXT("B end route"),1,[this]{Release(TEXT("Move"));});
+        if(VS3){
+            AddStep(TEXT("Wait for actual stamina landing"),16,[]{});
+            const auto Crowd=MakeShared<TArray<TWeakObjectPtr<AHCM3NPC>>>();
+            AddStep(TEXT("A six-adult spell stress fixture"),1,[this,Crowd]{
+                PlaceCharacter(FVector(0,-6800,110),90);PC->SetControlRotation(FRotator(-5,90,0));
+                for(TActorIterator<AHCM3NPC> It(GetWorld());It&&Crowd->Num()<6;++It)if(It->StableId.ToString().StartsWith(TEXT("VS2_Citizen"))&&!It->IsDead()){
+                    const int32 I=Crowd->Num();const FVector P=FVector((I%3-1)*95,-6540+(I/3)*100,110);
+                    FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(VS3SpellCrowd),false,*It);Q.AddIgnoredActor(Character);
+                    if(GetWorld()->LineTraceSingleByChannel(H,P+FVector(0,0,40),P-FVector(0,0,160),ECC_Visibility,Q)&&H.ImpactNormal.Z>.8){
+                        It->SetActorLocation(H.ImpactPoint+FVector(0,0,It->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+4),false,nullptr,ETeleportType::TeleportPhysics);Crowd->Add(*It);
+                    }
+                }
+                Check(TEXT("Spell stress has six existing adult NPCs"),Crowd->Num()==6,TEXT("six live authored adults, A placement only"),FString::FromInt(Crowd->Num()),TEXT("A-fixture"));
+            });
+            AddStep(TEXT("Begin measured multiple-spell AI response"),.05,[this]{FrameTimes.Reset();});
+            Tap(TEXT("Spell4"),.8);Tap(TEXT("Spell3"),.8);Tap(TEXT("Spell2"),3.8);Tap(TEXT("Spell1"),.8);
+            AddStep(TEXT("Measure ordinary NPC reactions to spells"),8,[]{},[this,Crowd]{
+                TArray<double> Sorted=FrameTimes;Sorted.Sort();double Sum=0;for(double T:Sorted)Sum+=T;
+                const double FPS=Sum>0?1000.*Sorted.Num()/Sum:0,P99=Sorted.IsEmpty()?0:Sorted[FMath::Clamp(FMath::CeilToInt(Sorted.Num()*.99)-1,0,Sorted.Num()-1)];
+                int32 Damaged=0;for(const auto& N:*Crowd)if(N.IsValid()&&N->GetHealth()<100)++Damaged;
+                Check(TEXT("Multiple spells and six NPC AI performance"),FPS>=60&&P99<=25,TEXT("uncapped; mean>=60 p99<=25; ordinary NPC reactions, not forced six attackers"),FString::Printf(TEXT("frames=%d mean_fps=%.3f p99_ms=%.3f wall_seconds=%.3f npcs=%d damaged=%d"),Sorted.Num(),FPS,P99,Sum/1000.,Crowd->Num(),Damaged),TEXT("B-Action spells + A crowd placement and wall-frame readback"));
+            });
+        }
         return;
     }
     if(Mode==TEXT("m5_vs2_beauty"))

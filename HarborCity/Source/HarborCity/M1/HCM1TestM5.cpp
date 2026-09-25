@@ -27,6 +27,9 @@
 #include "UObject/StrongObjectPtr.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
+#include "Dom/JsonObject.h"
+#include "Serialization/JsonSerializer.h"
+#include "Serialization/JsonReader.h"
 #if WITH_EDITOR
 #include "ShaderCompiler.h"
 #include "SkeletalRenderPublic.h"
@@ -39,6 +42,7 @@ struct FM5SequenceState
     TWeakObjectPtr<AHCM5StoryDirector> Story;
     TWeakObjectPtr<AHCM3NPC> Target;
     int32 BeforeShots = 0, BeforeHits = 0;
+    int32 TargetDamageHitsStart = 0;
     bool bAttemptShot = false;
     FVector MovementStart = FVector::ZeroVector;
     uint64 PlacementFrame = 0;
@@ -67,6 +71,7 @@ FString M5InteractionReadback(AHCM1PlayerController* PC, AHCM1Character* Charact
 
 void AHCM1TestRunner::AddM5Tests()
 {
+    if (Mode.StartsWith(TEXT("m5_vs3_"))) { AddM5VS3Tests(); return; }
     if (Mode.StartsWith(TEXT("m5_vs2_"))) { AddM5VS2Tests(); return; }
     const auto S = MakeShared<FM5SequenceState>();
     const bool bReview = Mode == TEXT("m5_review");
@@ -158,7 +163,7 @@ void AHCM1TestRunner::AddM5Tests()
         {
             if (!S->Story.IsValid()) return;
             RequireCamera(Label+TEXT(" stable story stage"),S->Story->GetStageId()==Expected,
-                Expected.ToString(),S->Story->GetDiagnostics(),TEXT("B-Action then A-readback"));
+                Expected.ToString(),S->Story->GetDiagnostics()+TEXT(" status=")+PC->GetStatusMessage()+TEXT(" vehicle=")+Car->GetPlacementDiagnostic(),TEXT("B-Action then A-readback"));
             if (bFinished) return;
             FHCM3QuestNavigationTarget Target;
             const bool bTarget=S->Story->GetNavigationTarget(Target);
@@ -207,7 +212,7 @@ void AHCM1TestRunner::AddM5Tests()
         {
             TStrongObjectPtr<UHCM1SaveGame> Saved(Cast<UHCM1SaveGame>(UGameplayStatics::LoadGameFromSlot(PC->GetSaveSlotName(),0)));
             RequireCamera(Label+TEXT(" actual save file state"),Saved.IsValid()&&Saved->M5Story.Version==1&&Saved->M5Story.StageId==Expected,
-                Expected.ToString(),Saved.IsValid()?Saved->M5Story.StageId.ToString():TEXT("no readable slot"),TEXT("B-Action Save + file readback"));
+                Expected.ToString(),Saved.IsValid()?Saved->M5Story.StageId.ToString():TEXT("no readable slot; ")+PC->GetStatusMessage(),TEXT("B-Action Save + file readback"));
         });
     };
 
@@ -241,14 +246,14 @@ void AHCM1TestRunner::AddM5Tests()
         for(const FTransform& Bone:Hero->GetRefSkeleton().GetRefBonePose())bUnitBinds &= Bone.GetScale3D().Equals(FVector::OneVector,.00001);
         Check(TEXT("M5 original proportions and normalized bind units"),bUnitBinds
             &&PlayerMesh->GetRelativeScale3D().Equals(FVector(1.25),.00001)
-            &&Hero->GetRefSkeleton().GetNum()==247,
-            TEXT("247 private bones, unit bind scales, uniform whole-character scale 1.25"),
+            &&Hero->GetRefSkeleton().GetNum()==(GetWorld()->GetMapName()==TEXT("L_HarborTown")?250:247),
+            TEXT("247 original bones; town adds 3 virtual IK bones; unit bind scales; uniform mesh scale 1.25"),
             FString::Printf(TEXT("scale=%s bones=%d unit_binds=%d"),*PlayerMesh->GetRelativeScale3D().ToString(),Hero->GetRefSkeleton().GetNum(),bUnitBinds),TEXT("A-runtime"));
         Check(TEXT("M5 first-person camera uses original eye height"),FMath::IsNearlyEqual(Character->BaseEyeHeight,57.4561f,.02f),
             TEXT("original eye reference 117.164879cm * 1.25 - mesh offset 89cm"),
             FString::SanitizeFloat(Character->BaseEyeHeight),TEXT("A-runtime; no head-animation camera inheritance"));
         bool bExpectedPerspective=!PC->IsFirstPersonPerspective();
-        if(Mode==TEXT("m5_reopen")||Mode==TEXT("m5_route_reopen"))
+        if(Mode==TEXT("m5_reopen")||Mode==TEXT("m5_route_reopen")||Mode==TEXT("m5_resume_full"))
         {
             TStrongObjectPtr<UHCM4R2ViewPreferences> Views(Cast<UHCM4R2ViewPreferences>(
                 UGameplayStatics::LoadGameFromSlot(PC->GetSaveSlotName()+TEXT("_Views"),0)));
@@ -261,7 +266,7 @@ void AHCM1TestRunner::AddM5Tests()
         }
         RequireCamera(TEXT("M5 fresh isolated initial state"),S->Story->GetStageId()==TEXT("M5.Signal.Contact")&&IsOnFoot()
             &&bExpectedPerspective&&PC->GetCombatComponent()->GetWeaponMode()==EHCM4WeaponMode::Unarmed,
-            (Mode==TEXT("m5_reopen")||Mode==TEXT("m5_route_reopen"))?TEXT("fresh Contact and unarmed; persisted view preference retained before Load")
+            (Mode==TEXT("m5_reopen")||Mode==TEXT("m5_route_reopen")||Mode==TEXT("m5_resume_full"))?TEXT("fresh Contact and unarmed; persisted view preference retained before Load")
                 :TEXT("fresh Contact, TP, unarmed; no test stage reset"),S->Story->GetDiagnostics(),TEXT("A-runtime prerequisite"));
         Check(TEXT("M5 unchanged base look gains"),PC->GetOnFootLookDegreesPerActionUnit().Equals(FVector2D(1.5,1.5),.0001)
             &&PC->GetDrivingLookDegreesPerActionUnit().Equals(FVector2D(1.125,1.125),.0001),
@@ -311,6 +316,7 @@ void AHCM1TestRunner::AddM5Tests()
                 TEXT("unmodified production NPC stand/save validation passes after disk restore"),Citizen?Citizen->GetActorLocation().ToString():TEXT("missing"),TEXT("A-runtime validation"));
         });
         Music(TEXT("Restored checkpoint ambience"),bRoute?EHCM5MusicMode::Exploration:EHCM5MusicMode::Interior);
+        if(!bRoute&&GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/")))AddStep(TEXT("VS3 restored side quests"),.1,[]{},[this]{auto* E=PC->GetM3Experience();Check(TEXT("Both side quests survive fresh-process Load"),E&&E->GetCoffeeStage()==EHCM3QuestStage::Complete&&E->GetRideStage()==EHCM3QuestStage::Complete,TEXT("both Complete"),E?E->GetQuestHUD(PC):TEXT("missing"),TEXT("B-Action Load + A readback"));});
         Screenshot(bRoute?TEXT("m5_reopened_route"):TEXT("m5_reopened_completion"));
         return;
     }
@@ -738,19 +744,28 @@ void AHCM1TestRunner::AddM5Tests()
         return;
     }
 
+    if(Mode==TEXT("m5_resume_full")){
+        Tap(TEXT("Load"),1.);
+        Stage(TEXT("Resume remaining regression from saved checkpoint"),TEXT("M5.Signal.Harbor"),TEXT("M5_Harbor"));
+    }else{
     Stage(TEXT("Initial"),TEXT("M5.Signal.Contact"),TEXT("M5_Contact"));
     Music(TEXT("Street exploration"),EHCM5MusicMode::Exploration);
     Dialogue(TEXT("M5_Contact"),TEXT("m5_chapter1"));
     Stage(TEXT("Accepted delivery"),TEXT("M5.Signal.Harbor"),TEXT("M5_Harbor"));
     Music(TEXT("Contact interior"),EHCM5MusicMode::Interior);
     SaveCheck(TEXT("Harbor checkpoint"),TEXT("M5.Signal.Harbor"));
+    if (Mode==TEXT("m5_save_probe")) return;
     Dialogue(TEXT("M5_Harbor"),TEXT("m5_chapter2"));
     Stage(TEXT("First investigation"),TEXT("M5.Signal.Ambush"),TEXT("M5_InterceptorA"));
     Tap(TEXT("Load"),1.);
     Stage(TEXT("Actual earlier checkpoint restored"),TEXT("M5.Signal.Harbor"),TEXT("M5_Harbor"));
+    if (Mode==TEXT("m5_load_probe")) return;
+    }
     Dialogue(TEXT("M5_Harbor"),TEXT("m5_chapter2_replay"));
     Stage(TEXT("Investigation after load"),TEXT("M5.Signal.Ambush"),TEXT("M5_InterceptorA"));
-    Tap(TEXT("ToggleWeapon"),.6);Tap(TEXT("Perspective"),.5);
+    Tap(TEXT("ToggleWeapon"),.6);
+    if(GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/")))Tap(TEXT("ToggleWeapon"),.6);
+    Tap(TEXT("Perspective"),.5);
     AddStep(TEXT("M5 actual ADS projection"),.6,[this]{Hold(TEXT("Aim"),FInputActionValue(true));},[this]
     {
         const double Ratio=FMath::Tan(FMath::DegreesToRadians(Character->GetFollowCamera()->FieldOfView*.5))
@@ -764,6 +779,7 @@ void AHCM1TestRunner::AddM5Tests()
         AddStep(TEXT("M5 A intercept target fixture"),.5,[this,S,Id,PlaceNear]
         {
             S->Target=Cast<AHCM3NPC>(M5Target(GetWorld(),Id));
+            S->TargetDamageHitsStart=PC->GetCombatComponent()->GetDamageHitCount();
             if(!RequireCamera(TEXT("M5 real live interceptor"),S->Target.IsValid()&&!S->Target->IsDead()&&PlaceNear(S->Target.Get(),360.f),
                 TEXT("existing live authored NPC, player placed near it"),Id.ToString(),TEXT("A-fixture")))return;
             S->Target->GetCharacterMovement()->StopMovementImmediately();
@@ -771,12 +787,18 @@ void AHCM1TestRunner::AddM5Tests()
             Check(TEXT("M5 stationary ballistic fixture disclosed"),true,TEXT("A: target movement tick suspended; health/collision/damage routes unchanged"),Id.ToString(),TEXT("A-fixture"));
         });
         Music(TEXT("Courtyard combat"),EHCM5MusicMode::Combat);
+        AddStep(TEXT("M5 actual ADS for narrow adult target"),.5,[this]{Hold(TEXT("Aim"),FInputActionValue(true));});
         for (int32 Shot=0;Shot<5;++Shot)
         {
             AddStep(TEXT("M5 A aim at actual target"),.35,[this,S]
             {
-                if(S->Target.IsValid()&&!S->Target->IsDead())
-                    PC->SetControlRotation((S->Target->GetActorLocation()+FVector(0,0,25)-PC->PlayerCameraManager->GetCameraLocation()).Rotation());
+                if(S->Target.IsValid()&&!S->Target->IsDead()){
+                    FVector AimPoint=S->Target->GetActorLocation()+FVector(0,0,25);
+                    const auto* Mesh=S->Target->GetMesh();
+                    for(FName Bone:{TEXT("J_Bip_C_UpperChest"),TEXT("J_Bip_C_Chest"),TEXT("spine_03"),TEXT("spine_02")})
+                        if(Mesh->GetBoneIndex(Bone)!=INDEX_NONE){AimPoint=Mesh->GetBoneLocation(Bone);break;}
+                    PC->SetControlRotation((AimPoint-PC->PlayerCameraManager->GetCameraLocation()).Rotation());
+                }
             });
             AddStep(TEXT("M5 real Attack action"),.1,[this,S]
             {
@@ -788,20 +810,24 @@ void AHCM1TestRunner::AddM5Tests()
             {
                 if(!S->bAttemptShot)return;
                 auto C=PC->GetCombatComponent();
-                Check(TEXT("M5 real accepted shot and target damage"),C->GetShotCount()==S->BeforeShots+1&&C->GetDamageHitCount()>S->BeforeHits,
-                    TEXT("one accepted shot through combat chain, at least one damage hit; no ApplyDamage fixture"),
-                    FString::Printf(TEXT("shots %d->%d hits %d->%d hit=%s hp=%.1f"),S->BeforeShots,C->GetShotCount(),S->BeforeHits,C->GetDamageHitCount(),
-                        *GetNameSafe(C->GetLastHit().GetActor()),S->Target.IsValid()?S->Target->GetHealth():-1.f),TEXT("B-Action; A aim fixture"));
+                Check(TEXT("M5 actual shot accepted; ray outcome recorded"),C->GetShotCount()==S->BeforeShots+1,
+                    TEXT("one accepted shot; moving/falling targets may be missed; target defeat and actual damage are asserted separately"),
+                    FString::Printf(TEXT("shots %d->%d hits %d->%d hit=%s hp=%.1f muzzleBlocked=%d muzzle=%s rayTarget=%s view=%s"),S->BeforeShots,C->GetShotCount(),S->BeforeHits,C->GetDamageHitCount(),
+                        *GetNameSafe(C->GetLastHit().GetActor()),S->Target.IsValid()?S->Target->GetHealth():-1.f,C->WasLastMuzzleBlocked(),
+                        *C->GetLastAcceptedShot().WorldMuzzle.ToString(),*C->GetLastAcceptedShot().AimPoint.ToString(),*PC->PlayerCameraManager->GetCameraLocation().ToString()),TEXT("B-Action ADS/fire; A current-pose aim fixture"));
             });
         }
+        AddStep(TEXT("M5 release combat ADS"),.2,[this]{Release(TEXT("Aim"));});
         AddStep(TEXT("M5 actual interceptor outcome"),.6,[]{},[this,S,Id]
         {
             const bool bDead=S->Target.IsValid()&&S->Target->IsDead();
             if(S->Target.IsValid()&&!bDead)S->Target->GetCharacterMovement()->SetComponentTickEnabled(true);
-            RequireCamera(TEXT("M5 actual interceptor defeated ")+Id.ToString(),bDead,TEXT("real NPC dead after Attack actions"),S->Story->GetDiagnostics(),TEXT("B-Action"));
+            RequireCamera(TEXT("M5 actual interceptor defeated ")+Id.ToString(),bDead&&PC->GetCombatComponent()->GetDamageHitCount()>S->TargetDamageHitsStart,
+                TEXT("real NPC dead after Attack actions, with actual damage hits recorded"),S->Story->GetDiagnostics(),TEXT("B-Action"));
         });
     }
     Stage(TEXT("Battle complete"),TEXT("M5.Signal.RecoverShard"),TEXT("M5_RelayCache"));
+    if(Mode==TEXT("m5_battle_probe"))return;
     ApproachInteraction(TEXT("M5_RelayCache"),TEXT("M5 cache"));
     Tap(TEXT("Interact"),.6);
     Stage(TEXT("Evidence collected"),TEXT("M5.Signal.Tower"),TEXT("M5_TowerUplink"));
@@ -849,6 +875,7 @@ void AHCM1TestRunner::AddM5Tests()
     Stage(TEXT("Public evidence broadcast"),TEXT("M5.Signal.Debrief"),TEXT("M5_Contact"));
     Dialogue(TEXT("M5_Contact"),TEXT("m5_chapter4"));
     Stage(TEXT("First night complete"),TEXT("M5.Signal.Complete"),NAME_None);
+    if((Mode==TEXT("m5_full")||Mode==TEXT("m5_resume_full"))&&GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/")))AddM5VS3SideQuests();
     SaveCheck(TEXT("Complete checkpoint"),TEXT("M5.Signal.Complete"));Tap(TEXT("Load"),1.);
     Stage(TEXT("Complete reload"),TEXT("M5.Signal.Complete"),NAME_None);
     AddStep(TEXT("M5 tagged-state negative validation"),.2,[this,S]
@@ -865,4 +892,12 @@ void AHCM1TestRunner::AddM5Tests()
             TEXT("version0 optional extension accepted; Validate does not advance/reset the live quest"),S->Story->GetDiagnostics(),TEXT("A-validation"));
     });
     Screenshot(TEXT("m5_story_complete"));
+    if((Mode==TEXT("m5_full")||Mode==TEXT("m5_resume_full"))&&GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"))){const FString OriginalMode=Mode;Mode=TEXT("m5_vs3_combat");AddM5VS3Tests();Mode=TEXT("m5_vs3_flight");AddM5VS3Tests();Mode=OriginalMode;}
+    if((Mode==TEXT("m5_full")||Mode==TEXT("m5_resume_full"))&&GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"))){
+        AddStep(TEXT("Natural private BGM two-track cycle"),1,[this]{Steps[StepIndex].Duration=FMath::Max(1.,435.-GetWorld()->GetTimeSeconds());},[this,S]{
+            const FString Diag=S->Story->GetMusic()->GetDiagnostics();TSharedPtr<FJsonObject> J;const auto Reader=TJsonReaderFactory<>::Create(Diag);
+            const bool Parsed=FJsonSerializer::Deserialize(Reader,J)&&J.IsValid();
+            Check(TEXT("Private BGM naturally alternates back to track one"),Parsed&&J->GetBoolField(TEXT("private_playlist"))&&J->GetNumberField(TEXT("transitions"))>=2&&J->GetNumberField(TEXT("playlist_index"))==0,TEXT("two natural-duration crossfades, index zero; audibility is separate"),Diag,TEXT("A-runtime audio component clocks, no seek/speedup"));
+        });
+    }
 }

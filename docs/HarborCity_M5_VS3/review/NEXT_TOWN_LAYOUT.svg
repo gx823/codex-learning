@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1080" viewBox="0 0 1400 1080">
+<defs>
+ <pattern id="fields" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><rect width="18" height="18" fill="#b3bd7b"/><path d="M0 6H18" stroke="#8a9a5f" stroke-width="5"/></pattern>
+ <pattern id="forest" width="42" height="38" patternUnits="userSpaceOnUse"><rect width="42" height="38" fill="#80a590"/><circle cx="12" cy="14" r="13" fill="#426f62"/><circle cx="35" cy="30" r="14" fill="#567e68"/></pattern>
+ <pattern id="houses" width="46" height="55" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)"><rect x="6" y="7" width="27" height="34" rx="3" fill="#b96d55"/><path d="M19 7V41" stroke="#733f3b" stroke-width="2"/></pattern>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#273e48"/></marker>
+</defs>
+<rect width="1400" height="1080" fill="#f6f2e9"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#243b46">
+<text x="58" y="58" font-size="32" font-weight="bold">下一段港町布局 · 约 480 × 440 米</text>
+<text x="58" y="91" font-size="18">规划草图 / 本轮未扩建　　弯曲街道、密集城区、陆地海岸衔接</text>
+<rect x="55" y="125" width="1070" height="820" rx="16" fill="#9ac9ce"/>
+<path d="M55 125H885C1010 175 920 240 965 320S912 420 1000 485S975 630 955 678S870 735 895 805S837 875 850 945H55Z" fill="#baca9e"/>
+<path d="M55 125H335L322 276L195 344L55 308Z" fill="url(#forest)"/>
+<path d="M55 659L184 612L273 732L244 945H55Z" fill="url(#fields)"/>
+<path d="M167 205C279 135 554 137 761 200S876 371 855 518S870 704 764 811S432 874 306 779S176 544 154 401S131 261 167 205Z" fill="#d7d5b7" stroke="#828b86" stroke-width="16"/>
+<path d="M167 205C279 135 554 137 761 200S876 371 855 518S870 704 764 811S432 874 306 779S176 544 154 401S131 261 167 205Z" fill="none" stroke="#e5e2c9" stroke-width="5" stroke-dasharray="8 13"/>
+<path d="M230 305Q343 222 390 301L405 411L291 449L221 417Z" fill="url(#houses)"/>
+<path d="M460 216Q589 183 680 250L656 345L484 362Z" fill="url(#houses)"/>
+<path d="M690 369Q804 340 824 436L816 505L675 491Z" fill="url(#houses)"/>
+<path d="M614 552Q763 557 790 644L725 734L617 716Z" fill="url(#houses)"/>
+<path d="M330 614Q442 579 509 654L522 778L371 772Z" fill="url(#houses)"/>
+<path d="M229 487L373 489L350 561L235 608Z" fill="url(#houses)"/>
+<g fill="none" stroke-linecap="round">
+<path d="M140 642Q247 513 361 529T526 489Q620 421 648 301T743 182" stroke="#f1e0be" stroke-width="30"/>
+<path d="M252 847Q289 688 409 605T534 490Q681 499 869 594T1024 612" stroke="#f1e0be" stroke-width="27"/>
+<path d="M259 311Q390 397 427 444Q450 483 534 490Q645 594 567 731Q512 818 639 886" stroke="#eee0bb" stroke-width="21"/>
+<path d="M351 207Q422 265 457 346T535 402Q775 412 841 281" stroke="#eee0bb" stroke-width="18"/>
+<path d="M232 351Q196 574 316 699T724 747Q850 637 809 440T727 267" stroke="#f0dfb9" stroke-width="17"/>
+<path d="M731 193Q711 280 746 330T730 465Q706 544 776 602T928 666" stroke="#7dbcc8" stroke-width="27"/>
+</g>
+<circle cx="534" cy="490" r="74" fill="#eedbb3" stroke="#d0b78b" stroke-width="3"/>
+<circle cx="534" cy="490" r="18" fill="#79b7bf" stroke="#faf7e8" stroke-width="8"/>
+<path d="M719 462L754 469M763 580L790 610" stroke="#837f70" stroke-width="24"/>
+<path d="M904 491L1014 529L1042 646L971 715" fill="none" stroke="#839d9d" stroke-width="20"/>
+<g fill="#a58661" stroke="#695c50" stroke-width="2"><rect x="936" y="554" width="124" height="13"/><rect x="948" y="604" width="146" height="13"/><rect x="928" y="655" width="137" height="13"/></g>
+<g fill="#bdbbac" stroke="#686f78" stroke-width="3"><path d="M530 228L552 165L647 160L690 214L662 246Z"/><rect x="563" y="170" width="32" height="48"/><rect x="624" y="164" width="30" height="52"/></g>
+<ellipse cx="610" cy="199" rx="115" ry="64" fill="none" stroke="#a4b096" stroke-width="3"/>
+<g fill="#bb7c61" stroke="#765644" stroke-width="3"><rect x="393" y="392" width="69" height="44" rx="4"/><rect x="475" y="585" width="73" height="46" rx="4"/><rect x="788" y="535" width="59" height="35" rx="3"/><rect x="306" y="581" width="53" height="29" rx="3"/></g>
+<path d="M968 743L985 718L1002 743V795H968Z" fill="#f0e4c5" stroke="#6f7980" stroke-width="3"/><circle cx="985" cy="750" r="8" fill="#edc576"/>
+<g font-size="19" paint-order="stroke" stroke="#f8f4e6" stroke-width="5" stroke-linejoin="round">
+<text x="451" y="536">中央喷泉广场</text><text x="371" y="382">信使公会</text><text x="589" y="154">城堡山丘</text><text x="174" y="185">城外森林</text><text x="82" y="830">农田与风车</text><text x="785" y="529">港口咖啡馆</text><text x="955" y="535">码头 / 帆船</text><text x="975" y="825">灯塔</text><text x="466" y="654">市场与酒馆</text><text x="650" y="571">运河 / 石桥</text><text x="238" y="484">铁匠与工坊</text><text x="342" y="822">居住区</text><text x="155" y="689">陆路城门</text></g>
+<path d="M1068 227V170" stroke="#273e48" stroke-width="3" marker-end="url(#arrow)"/><text x="1059" y="157" font-size="22">北</text>
+<path d="M81 910H303M81 902V919M303 902V919" stroke="#273e48" stroke-width="3"/><text x="160" y="900" font-size="17">约 100m</text>
+<g transform="translate(1152 170)" font-size="18"><text font-weight="bold">施工约束</text><text y="43">保留现有样板</text><text y="72">嵌入中央街区</text><text y="126">驾驶环路</text><text y="155">沿城墙内侧弯行</text><text y="209">步行捷径</text><text y="238">拱廊、桥、楼梯</text><text y="292">主线 ID 不变</text><text y="321">下一段再移点位</text><text y="375">城外大地形</text><text y="404">消除方岛观感</text><text y="458">高空视线</text><text y="487">山丘→屋顶→港湾</text></g>
+<text x="60" y="1002" font-size="19">建筑候选：同作者 Seaside Town（港口与住房）＋ Highlands Castle（城墙、城门和高地地标）。</text>
+<text x="60" y="1035" font-size="18">此图仅为下一段施工布局，不是本游戏实机画面；本轮地图范围保持不变。</text>
+</g></svg>

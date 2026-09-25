@@ -1,4 +1,5 @@
 #include "HCM1PlayerController.h"
+#include "M5VS3/HCM5VS3Abilities.h"
 
 #include "HCM1Character.h"
 #include "M5VS2/HCM5VS2FlightComponent.h"
@@ -50,7 +51,11 @@ double GetSaveHorizontalLimit(const UWorld* World, const AHCM2SceneSettings* Sce
         && Scene->SceneId == FName(TEXT("M5_CyberHarbor"))
         && Scene->MapName == FName(TEXT("L_M5_CyberHarbor"))
         && UGameplayStatics::GetCurrentLevelName(World, true) == TEXT("L_M5_CyberHarbor");
-    return bM5World ? 18000.0 : 10000.0;
+    const bool bHarborWorld = World && IsValid(Scene) && Scene->GetWorld() == World
+        && Scene->HasValidSaveIdentity() && Scene->MapName == TEXT("L_HarborTown")
+        && (Scene->SceneId == TEXT("M5_VS2_HarborTown") || Scene->SceneId == TEXT("M5_VS3_HarborTown"))
+        && UGameplayStatics::GetCurrentLevelName(World, true) == TEXT("L_HarborTown");
+    return bM5World || bHarborWorld ? 18000.0 : 10000.0;
 }
 
 bool IsBoundedTransform(const FTransform& Transform, double HorizontalLimit)
@@ -108,6 +113,12 @@ void AHCM1PlayerController::CreateInputObjects()
     OnFootContext->MapKey(GetM1Action(TEXT("Attack")), EKeys::LeftMouseButton);
     OnFootContext->MapKey(GetM1Action(TEXT("Aim")), EKeys::RightMouseButton);
     OnFootContext->MapKey(GetM1Action(TEXT("ToggleWeapon")), EKeys::Q);
+    OnFootContext->MapKey(GetM1Action(TEXT("ToggleWeapon")), EKeys::MouseScrollUp);
+    OnFootContext->MapKey(GetM1Action(TEXT("ToggleWeapon")), EKeys::MouseScrollDown);
+    OnFootContext->MapKey(AddAction(TEXT("Spell1"),EInputActionValueType::Boolean),EKeys::One);
+    OnFootContext->MapKey(AddAction(TEXT("Spell2"),EInputActionValueType::Boolean),EKeys::Two);
+    OnFootContext->MapKey(AddAction(TEXT("Spell3"),EInputActionValueType::Boolean),EKeys::Three);
+    OnFootContext->MapKey(AddAction(TEXT("Spell4"),EInputActionValueType::Boolean),EKeys::Four);
     OnFootContext->MapKey(GetM1Action(TEXT("Reload")), EKeys::R);
     bool bLegacyCameraInput = false;
 #if !UE_BUILD_SHIPPING
@@ -189,6 +200,12 @@ void AHCM1PlayerController::SetupInputComponent()
     Input->BindAction(GetM1Action(TEXT("Load")), ETriggerEvent::Started, this, &ThisClass::LoadPressed);
     Input->BindAction(GetM1Action(TEXT("DialogueCancel")), ETriggerEvent::Started, this, &ThisClass::EndNPCDialogue);
     Input->BindAction(GetM1Action(TEXT("Attack")), ETriggerEvent::Started, this, &ThisClass::AttackPressed);
+    Input->BindAction(GetM1Action(TEXT("Attack")),ETriggerEvent::Completed,this,&ThisClass::AttackReleased);
+    Input->BindAction(GetM1Action(TEXT("Attack")),ETriggerEvent::Canceled,this,&ThisClass::AttackReleased);
+    Input->BindAction(GetM1Action(TEXT("Spell1")),ETriggerEvent::Started,this,&ThisClass::SpellOne);
+    Input->BindAction(GetM1Action(TEXT("Spell2")),ETriggerEvent::Started,this,&ThisClass::SpellTwo);
+    Input->BindAction(GetM1Action(TEXT("Spell3")),ETriggerEvent::Started,this,&ThisClass::SpellThree);
+    Input->BindAction(GetM1Action(TEXT("Spell4")),ETriggerEvent::Started,this,&ThisClass::SpellFour);
     // Level-triggered hold restores ADS after reload; SetAimHeld ignores unchanged states and
     // still gates reload, pause, focus, dialogue and possession. Completed/Canceled releases it.
     Input->BindAction(GetM1Action(TEXT("Aim")), ETriggerEvent::Triggered, this, &ThisClass::AimPressed);
@@ -299,6 +316,7 @@ void AHCM1PlayerController::ApplyInputContexts()
 
 void AHCM1PlayerController::ClearGameplayInput()
 {
+    if(ControlledCharacter)ControlledCharacter->GetAbilities()->ResetTransient();
     if (GetFlightComponent()) GetFlightComponent()->ClearFlightInput();
     if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->CancelTransient(TEXT("ClearGameplayInput"));
     DriveAxis = FVector2D::ZeroVector;
@@ -724,7 +742,7 @@ void AHCM1PlayerController::RestartPrototype()
     UGameplayStatics::OpenLevel(this, FName(*UGameplayStatics::GetCurrentLevelName(this, true)));
 }
 FString AHCM1PlayerController::GetExperienceTitle() const
-{ return GetWorld() && GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS2/")) ? TEXT("海湾漫游 · M5-VS2 港町") : M5Story ? TEXT("海湾漫游 · 夜航") : M3Experience ? TEXT("海湾漫游 · M4-R2") : SceneSettings ? TEXT("海湾漫游 · 海滨街道") : TEXT("海湾漫游"); }
+{ if(GetWorld() && GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"))) return TEXT("海湾漫游 · M5-VS3 剑与魔法"); return GetWorld() && GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS2/")) ? TEXT("海湾漫游 · M5-VS2 港町") : M5Story ? TEXT("海湾漫游 · 夜航") : M3Experience ? TEXT("海湾漫游 · M4-R2") : SceneSettings ? TEXT("海湾漫游 · 海滨街道") : TEXT("海湾漫游"); }
 FString AHCM1PlayerController::GetSceneControlHint() const
 { return M5Story ? FString::Printf(TEXT("T  深夜／蓝调时刻（当前：%s）"),SceneSettings && SceneSettings->IsDusk()?TEXT("深夜"):TEXT("蓝调")) : SceneSettings ? FString::Printf(TEXT("T  下午／黄昏（当前：%s）"), SceneSettings->IsDusk() ? TEXT("黄昏") : TEXT("下午")) : FString(); }
 void AHCM1PlayerController::QuitPrototype()
@@ -959,6 +977,7 @@ bool AHCM1PlayerController::LoadGameNow()
     ControlledCharacter->SetActorTransform(Rechecked, false, nullptr, ETeleportType::TeleportPhysics);
     ControlledCharacter->SetSeated(false);
     SetControlRotation(Rechecked.Rotator());
+    if (auto* Flight=ControlledCharacter->GetFlightComponent()) Flight->RestoreFullStamina();
     for (const auto& Pair : Lights) Pair.Value->SetLightEnabled(Save->LightStates.FindChecked(Pair.Key));
     if (SceneSettings) SceneSettings->SetDuskPreset(Save->bSceneDusk);
     if (M3Experience && GetCombatComponent()) GetCombatComponent()->RestoreSave(Save);
@@ -973,6 +992,11 @@ UHCM4CombatComponent* AHCM1PlayerController::GetCombatComponent() const
 float AHCM1PlayerController::GetCurrentAimLookMultiplier() const
 { const UHCM4CombatComponent* Combat = GetCombatComponent(); return Combat ? Combat->GetAimLookMultiplier() : 1.f; }
 void AHCM1PlayerController::AttackPressed() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->RequestAttack(); }
+void AHCM1PlayerController::AttackReleased(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->ReleaseSword();}
+void AHCM1PlayerController::SpellOne(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(0);}
+void AHCM1PlayerController::SpellTwo(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(1);}
+void AHCM1PlayerController::SpellThree(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(2);}
+void AHCM1PlayerController::SpellFour(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(3);}
 void AHCM1PlayerController::AimPressed() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->SetAimHeld(true); }
 void AHCM1PlayerController::AimReleased() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->SetAimHeld(false); }
 void AHCM1PlayerController::ToggleWeaponPressed() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->RequestToggleWeapon(); }

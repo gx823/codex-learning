@@ -1,4 +1,5 @@
 #include "HCM3Recording.h"
+#include "M5VS3/HCM5VS3QA.h"
 #include "M1/HCM1PlayerController.h"
 #include "M1/HCM1Character.h"
 #include "Async/Async.h"
@@ -127,7 +128,13 @@ AHCM3Recording::AHCM3Recording()
     FString Mode;
     Recording->bR2 = FParse::Value(FCommandLine::Get(), TEXT("M4Test="), Mode) && Mode.StartsWith(TEXT("r2_"));
     Recording->bR2 |= FParse::Value(FCommandLine::Get(), TEXT("M5Test="), Mode) && Mode.StartsWith(TEXT("m5_"));
-    Recording->bVS2Part3 = Mode.StartsWith(TEXT("m5_vs2_"));
+    Recording->bVS2Part3 = Mode.StartsWith(TEXT("m5_vs2_")) || Mode.StartsWith(TEXT("m5_vs3_"));
+#endif
+#if UE_BUILD_SHIPPING
+    if(HCM5VS3LocalQA()){
+        Recording->bM4=FParse::Value(FCommandLine::Get(),TEXT("HCM4RecordSeconds="),Recording->Seconds);
+        Recording->bR2=Recording->bM4; Recording->bVS2Part3=true;
+    }
 #endif
     Recording->Seconds = FMath::Clamp(Recording->Seconds, 0.f, Recording->bM4 ? 360.f : 150.f);
     Recording->Delay = Recording->bM4 ? 0.f : FMath::Clamp(Recording->Delay, 3.f, 60.f);
@@ -160,7 +167,7 @@ void AHCM3Recording::BeginPlay()
     { Stop(TEXT("vs2_private_map_required")); return; }
     // Create an isolated evidence directory before the delay so Esc can leave a
     // truthful zero-frame stop record instead of silently arming a later capture.
-    S.Directory = FString(TEXT("D:/科研学习/codex学习/docs/HarborCity_M5_VS2/recordings")) /
+    S.Directory = FString(TEXT("D:/绉戠爺瀛︿範/codex瀛︿範/docs/HarborCity_M5_VS2/recordings")) /
         (FDateTime::Now().ToString(TEXT("%Y%m%d_%H%M%S")) + TEXT("_") + FGuid::NewGuid().ToString(EGuidFormats::Digits));
     if (!IFileManager::Get().MakeDirectory(*S.Directory, true))
     { Stop(TEXT("vs2_recording_directory_unavailable")); return; }
@@ -223,7 +230,8 @@ bool AHCM3Recording::IsR2AudioExportPending() const
 }
 void AHCM3Recording::FinishR2GameplayCapture()
 {
-#if !UE_BUILD_SHIPPING
+    if(!HCM5VS3LocalQA() && UE_BUILD_SHIPPING)return;
+#if 1
     FString Slot;
     if (!Recording || !Recording->bR2 || !FParse::Value(FCommandLine::Get(), TEXT("HCM1SaveSlot="), Slot)
         || (!Slot.StartsWith(TEXT("HarborCity_M2_V1_Test_M4_R2_")) && !Slot.StartsWith(TEXT("HarborCity_M5_VS1_Test_"))) || Slot.Len() > 100) return;
@@ -280,8 +288,11 @@ void AHCM3Recording::Tick(float DeltaSeconds)
         FString M5Slot,M5Mode;
         if(!S.bVS2 && FParse::Value(FCommandLine::Get(),TEXT("M5Test="),M5Mode) && M5Mode.StartsWith(TEXT("m5_")) &&
            FParse::Value(FCommandLine::Get(),TEXT("HCM1SaveSlot="),M5Slot) && M5Slot.StartsWith(TEXT("HarborCity_M5_VS1_Test_")))
-            S.Directory=FPaths::ConvertRelativePathToFull(FString(S.bVS2Part3?TEXT("D:/科研学习/codex学习/docs/HarborCity_M5_VS2/part3/recordings"):TEXT("D:/科研学习/codex学习/docs/HarborCity_M5_VS1/recordings"))/
+            S.Directory=FPaths::ConvertRelativePathToFull(FString(S.bVS2Part3?TEXT("D:/绉戠爺瀛︿範/codex瀛︿範/docs/HarborCity_M5_VS2/part3/recordings"):TEXT("D:/绉戠爺瀛︿範/codex瀛︿範/docs/HarborCity_M5_VS1/recordings"))/
                 (FDateTime::Now().ToString(TEXT("%Y%m%d_%H%M%S"))+TEXT("_")+FGuid::NewGuid().ToString(EGuidFormats::Digits).Left(8)));
+        if(HCM5VS3LocalQA())
+            S.Directory=FString(TEXT("D:/\u79d1\u7814\u5b66\u4e60/codex\u5b66\u4e60/docs/HarborCity_M5_VS3/recordings"))/
+                (FDateTime::Now().ToString(TEXT("%Y%m%d_%H%M%S"))+TEXT("_")+FGuid::NewGuid().ToString(EGuidFormats::Digits).Left(8));
         IFileManager::Get().MakeDirectory(*S.Directory, true);
         const IConsoleVariable* Latency = IConsoleManager::Get().FindConsoleVariable(TEXT("framegrabber.framelatency"));
         S.FrameLatency = Latency ? Latency->GetInt() : -1;
@@ -307,7 +318,7 @@ void AHCM3Recording::Tick(float DeltaSeconds)
             // UE 5.8 can auto-disable a silent master submix before its recording
             // buffer is filled. Render the actual silent mix during this private
             // capture; never synthesize or substitute audio after recording.
-            if (S.bVS2)
+            if (S.bVS2 || HCM5VS3LocalQA())
             {
                 IConsoleVariable* NeverDisable = IConsoleManager::Get().FindConsoleVariable(TEXT("au.NeverDisableSubmixes"));
                 if (!NeverDisable) { Stop(TEXT("vs2_native_submix_capture_control_missing")); return; }

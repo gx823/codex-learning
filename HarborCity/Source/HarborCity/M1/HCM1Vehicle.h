@@ -57,6 +57,9 @@ public:
     UFUNCTION(BlueprintCallable, Category="HarborCity|Vehicle")
     bool RestoreSavedTransform(const FTransform& Transform, AActor* AvoidActor = nullptr);
 
+    /** Last placement query only; bounded readback for save/reset diagnostics. */
+    const FString& GetPlacementDiagnostic() const { return PlacementDiagnostic; }
+
     /** Read-only ground, footprint and clearance check; does not move the vehicle. */
     bool QuerySafeVehicleTransform(const FTransform& Requested, FTransform& Out) const
     { return ResolveSafeVehicleTransform(Requested, nullptr, Out); }
@@ -114,6 +117,7 @@ protected:
     TArray<TObjectPtr<UStaticMeshComponent>> WheelVisuals;
 
 private:
+    mutable FString PlacementDiagnostic;
     UPROPERTY(VisibleAnywhere) TObjectPtr<UHCM4R2CockpitComponent> Cockpit;
     uint64 CameraResetSerial = 0;
     UPROPERTY(Transient)

@@ -1,0 +1,7 @@
+{
+  "status": "STATIC_FLOW_FIX_RUNTIME_PENDING",
+  "finding": "Demo included Pause actions. Native recorder intentionally stops on pause/focus loss.",
+  "change": "Only skip scripted pause pair in recorded Demo; combat/full non-recorded regression retains it. Recorder and Esc/focus safeguards untouched.",
+  "current_full_regression_exe": "Candidate_20260926_040051_164_48327d43",
+  "needs_candidate_rebuild_for_demo_only": true
+}

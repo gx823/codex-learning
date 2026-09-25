@@ -1,3 +1,5 @@
+#include "GameFramework/GameUserSettings.h"
+#include "M5VS3/HCM5VS3QA.h"
 #include "HCM1TestRunner.h"
 #include "HCM1PlayerController.h"
 #include "HCM1Character.h"
@@ -48,7 +50,14 @@ void AHCM1TestRunner::BeginPlay()
     bM3Run = !bM4Run && FParse::Value(FCommandLine::Get(), TEXT("M3Test="), Mode);
     bM2Run = !bM4Run && !bM3Run && FParse::Value(FCommandLine::Get(), TEXT("M2Test="), Mode);
     bRunning = bM4Run || bM3Run || bM2Run || FParse::Value(FCommandLine::Get(), TEXT("M1Test="), Mode);
+#else
+    bM5Run=bM4Run=bRunning=HCM5VS3LocalQA();
+    if(bRunning) FParse::Value(FCommandLine::Get(),TEXT("M5Test="),Mode);
 #endif
+    if(bRunning && HCM5VS3LocalQA()){
+        int32 Quality=2; FParse::Value(FCommandLine::Get(),TEXT("M5Quality="),Quality);
+        if(auto* Settings=UGameUserSettings::GetGameUserSettings()){Settings->SetOverallScalabilityLevel(FMath::Clamp(Quality,2,3));Settings->SetResolutionScaleValueEx(100);Settings->SetVSyncEnabled(false);Settings->SetFrameRateLimit(0);Settings->ApplySettings(false);}
+    }
     SetActorTickEnabled(bRunning);
     if (!bRunning) return;
     StartedAt = LastFrameAt = FPlatformTime::Seconds();

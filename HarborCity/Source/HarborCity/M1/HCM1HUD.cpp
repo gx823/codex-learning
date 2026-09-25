@@ -1,6 +1,9 @@
 #include "HCM1HUD.h"
 
 #include "HCM1PlayerController.h"
+#include "HCM1Character.h"
+#include "M5VS3/HCM5VS3Abilities.h"
+#include "Widgets/Notifications/SProgressBar.h"
 #include "M5VS2/HCM5VS2FlightComponent.h"
 #include "M4/HCM4CombatComponent.h"
 #include "M4R2/HCM4R2Navigation.h"
@@ -103,6 +106,16 @@ public:
                         [SNew(STextBlock).Text(this, &SHCM1Overlay::DialogueHint).Font(Body).ColorAndOpacity(FLinearColor(.75f,.83f,.88f))]
                     ]]]
             ]
+            + SOverlay::Slot().HAlign(HAlign_Left).VAlign(VAlign_Bottom).Padding(26)
+            [SNew(SBox).WidthOverride(345).Visibility_Lambda([this](){const auto* A=Abilities();return A&&A->IsEnabled()&&Controller.IsValid()&&!Controller->IsPauseMenuOpen()&&!Controller->IsDialogueOpen()?EVisibility::HitTestInvisible:EVisibility::Collapsed;})
+                [SNew(SBorder).Padding(12).BorderBackgroundColor(FLinearColor(.025f,.045f,.065f,.9f))
+                    [SNew(SVerticalBox)
+                    +SVerticalBox::Slot().AutoHeight()[SNew(STextBlock).Font(Body).Text_Lambda([this](){return FText::FromString(FString::Printf(TEXT("魔力 %.0f / 100"),Abilities()?Abilities()->GetMP():0));})]
+                    +SVerticalBox::Slot().AutoHeight().Padding(0,4)[SNew(SProgressBar).Percent_Lambda([this](){return TOptional<float>(Abilities()?Abilities()->GetMP()/100.f:0);}).FillColorAndOpacity(FLinearColor(.25,.6,1))]
+                    +SVerticalBox::Slot().AutoHeight()[SNew(STextBlock).Font(Body).Text_Lambda([this](){return FText::FromString(Abilities()?Abilities()->GetHUDText():FString());})]
+                    +SVerticalBox::Slot().AutoHeight().Padding(0,6)[SNew(STextBlock).Font(Body).Text_Lambda([this](){auto* F=Controller.IsValid()?Controller->GetFlightComponent():nullptr;return FText::FromString(FString::Printf(TEXT("飞行体力 %.0f / 100%s"),F?F->GetStamina():0,F&&F->IsExhausted()?TEXT(" · 滑翔/休息"):TEXT("")));})]
+                    +SVerticalBox::Slot().AutoHeight()[SNew(SProgressBar).Percent_Lambda([this](){auto* F=Controller.IsValid()?Controller->GetFlightComponent():nullptr;return TOptional<float>(F?F->GetStamina()/100.f:0);}).FillColorAndOpacity(FLinearColor(.3,1,.75))]
+                ]]]
             + SOverlay::Slot().HAlign(HAlign_Center).VAlign(VAlign_Bottom).Padding(20, 20, 20, 76)
             [
                 SNew(SVerticalBox)
@@ -157,6 +170,7 @@ public:
         ];
     }
 private:
+    UHCM5VS3Abilities* Abilities() const {auto* H=Controller.IsValid()?Controller->GetControlledCharacter():nullptr;return H?H->GetAbilities():nullptr;}
     TWeakObjectPtr<AHCM1PlayerController> Controller;
     EVisibility ControlsVisibility() const
     { return Controller.IsValid() && Controller->IsControlsPanelOpen() ? EVisibility::HitTestInvisible : EVisibility::Collapsed; }

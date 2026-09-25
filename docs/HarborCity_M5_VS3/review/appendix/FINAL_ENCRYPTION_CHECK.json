@@ -1,0 +1,51 @@
+{
+  "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+  "candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_042016_280_0e0ad460",
+  "exe_sha256": "336A37492F8EE24250172836A21B4A9C993DE85D9FC0225F6B11DDF066BD8AD8",
+  "containers": [
+    {
+      "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_042016_280_0e0ad460\\Archive\\Windows\\HarborCity\\Content\\Paks\\global.ucas",
+      "sha256": "5fec275978ec9836d92ec32240c56cb838ee11d906420431a5f359cd432109e5"
+    },
+    {
+      "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_042016_280_0e0ad460\\Archive\\Windows\\HarborCity\\Content\\Paks\\global.utoc",
+      "sha256": "a7a8ddf89c300943dcbdb18cbfb887981d02699b380bc9bb1422d47ec3620e96"
+    },
+    {
+      "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_042016_280_0e0ad460\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.pak",
+      "sha256": "5a89ec1ef793d40c54709715220f69dcb3b6910e546404869b33654d09ed609e"
+    },
+    {
+      "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_042016_280_0e0ad460\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.ucas",
+      "sha256": "eb651923be03c9810adc825c6fd18c1baa66db202b4eee6d12b571fb5b187ef7"
+    },
+    {
+      "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_042016_280_0e0ad460\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.utoc",
+      "sha256": "bdcf257c439c284342f741d74a9c99fc19f7ba6a553308c335c7c363b2a7d6e2"
+    }
+  ],
+  "targets": [
+    {
+      "filename": "../../../HarborCity/Content/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp.uasset",
+      "chunk_type": "ExportBundleData",
+      "bytes": 7433875,
+      "keyed_outputs": [
+        {
+          "relative_path": "HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\SKM_Selestia_Warp.uheader",
+          "bytes": 69089,
+          "sha256": "ea1fc1e5fe9e0e4c7359e18c2ebdfc7a92f4bb3caf04949166387e6558d19531"
+        },
+        {
+          "relative_path": "HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\SKM_Selestia_Warp.uexp",
+          "bytes": 7364786,
+          "sha256": "f54ff840337b46c99a5d1c5589b3c026c0e59c7c4ad4f14527dda3a519ceebf9"
+        }
+      ],
+      "with_key": "PASS_POSITIVE_CONTROL",
+      "without_key": "PASS_DIRECT_EXTRACTION_REFUSED"
+    }
+  ],
+  "game_loading": "NOT_RUN",
+  "visual": "USER_REVIEW",
+  "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim."
+}

@@ -1,0 +1,74 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.8",
+  "Category": "",
+  "Description": "",
+  "Modules": [
+    {
+      "Name": "HarborCity",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "Engine",
+        "AIModule",
+        "UMG"
+      ]
+    },
+    {
+      "Name": "HarborCityEditor",
+      "Type": "UncookedOnly",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "ChaosVehiclesPlugin",
+      "Enabled": true
+    },
+    {
+      "Name": "ControlRig",
+      "Enabled": true
+    },
+    {
+      "Name": "ModelingToolsEditorMode",
+      "Enabled": true,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "StateTree",
+      "Enabled": true
+    },
+    {
+      "Name": "GameplayStateTree",
+      "Enabled": true
+    },
+    {
+      "Name": "ModelContextProtocol",
+      "Enabled": true,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "AllToolsets",
+      "Enabled": true,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "VRM4U",
+      "Enabled": true
+    },
+    {
+      "Name": "KawaiiPhysics",
+      "Enabled": true
+    },
+    {
+      "Name": "AnimationWarping",
+      "Enabled": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "TEST_ENTRY_BLOCKED",
+  "gameplay_read_attempted": false,
+  "cause": "m5_resume_full was not included among modes accepting persisted first-person view preference; fresh-entry check required TP.",
+  "next": "Use supported m5_full with a new isolated slot; retain all previous slots and _Views files.",
+  "evidence": "20260926_042555_m5_resume_full/results.json"
+}

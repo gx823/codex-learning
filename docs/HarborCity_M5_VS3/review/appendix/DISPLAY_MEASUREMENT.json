@@ -1,0 +1,84 @@
+{
+  "status": "ACTUAL_1920_1080_CONFIRMED",
+  "previous_actual": [
+    1707,
+    960
+  ],
+  "cause": "QA ApplySettings(false) reapplied saved WindowedFullscreen; BaseEngine disables game high DPI and unattended Windows path also suppresses DPI setup.",
+  "project_only_test_override": {
+    "Engine.ini": {
+      "bAllowHighDPIInGameMode": true,
+      "bAllowHighDpiWhenUnattended": true
+    },
+    "GameUserSettings.ini": {
+      "FullscreenMode": 2
+    }
+  },
+  "system_display_settings_changed": false,
+  "backup": "D:\\科研学习\\codex学习\\.private\\M5_VS3\\display_before_capture",
+  "screenshots": [
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_FP_1.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_FP_2.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_FP_3.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_FP_4.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_TP_1.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_TP_2.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_TP_3.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051654_m5_vs3_art\\Arcane_TP_4.png",
+      "size": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "sources": [
+    "UE Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:1010",
+    "UE Runtime/ApplicationCore/Private/Windows/WindowsPlatformApplicationMisc.cpp:292",
+    "UE Runtime/Engine/Private/GameUserSettings.cpp:563"
+  ],
+  "restoration": "record separately after all tests",
+  "per_process_dpi_awareness": "NOT_RETAINED; temporary Engine.ini was absent by final close. Native engine viewport/output resolution is separately verified in CAPTURE.json; do not infer it from Windows-tool screenshot dimensions."
+}

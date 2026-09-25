@@ -110,6 +110,7 @@ bool UHCM5VS2FlightComponent::TryToggleFlight()
     if (!CanAcceptInput() || !IsFlightAvailable()) return false;
     if (bFlying)
     {
+        if(bExhausted) return Reject(TEXT("体力耗尽，正滑翔降落；可水平移动寻找陆地。"));
         if (bLanding) { bLanding = false; LastReason = TEXT("降落已取消，继续悬停。"); GetPC()->ShowStatusMessage(LastReason); return true; }
         FHitResult Ground;
         if (!FindLandingSurface(Ground)) return Reject(TEXT("这里不能降落，请飞到可站立的地面上方。"));
@@ -117,6 +118,7 @@ bool UHCM5VS2FlightComponent::TryToggleFlight()
         GetPC()->ShowStatusMessage(LastReason); return true;
     }
     UCharacterMovementComponent* Move = Character->GetCharacterMovement();
+    if(Stamina<30.f) return Reject(TEXT("体力需恢复至 30% 才能起飞，请在地面休息。"));
     if (!Move->IsMovingOnGround()) return Reject(TEXT("请先在地面站稳后起飞。"));
     UHCM4CombatComponent* Combat = Character->GetCombatComponent();
     if (Combat->IsAttacking() || Combat->IsReloading() || Combat->GetPlayerHealth() <= 0)
@@ -223,13 +225,24 @@ void UHCM5VS2FlightComponent::FinishLanding()
 void UHCM5VS2FlightComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTick)
 {
     Super::TickComponent(DeltaTime,TickType,ThisTick);
-    if (!bFlying || !Character.IsValid() || DeltaTime <= 0) return;
+    if (!Character.IsValid() || DeltaTime <= 0) return;
+    if(!bFlying)
+    {
+        if(CanAcceptInput() && Character->GetCharacterMovement()->IsMovingOnGround())
+        {Stamina=FMath::Min(100.f,Stamina+10.f*DeltaTime); if(Stamina>=30.f){bExhausted=false;bLowStaminaNotified=false;}}
+        return;
+    }
     UCharacterMovementComponent* Move = Character->GetCharacterMovement();
     AHCM5VS2FlightBounds* Bounds = GetFlightBounds();
     if (!Bounds || Move->MovementMode != MOVE_Flying)
     { ResetForGroundTransition(); if (Move->MovementMode == MOVE_Flying) Move->SetMovementMode(MOVE_Falling); return; }
     if (!CanAcceptInput())
     { ClearFlightInput(); Move->StopMovementImmediately(); Move->StopActiveMovement(); return; }
+    Stamina=FMath::Max(0.f,Stamina-DeltaTime*(IsBoosting()?10.f:5.f));
+    if(Stamina<25.f&&!bLowStaminaNotified)
+    {bLowStaminaNotified=true;GetPC()->ShowStatusMessage(TEXT("飞行体力不足 25%，请尽快降落。"));}
+    if(Stamina<=0 && !bExhausted)
+    {bExhausted=true;bBoost=false;bAscend=false;bLanding=true;GetPC()->ShowStatusMessage(TEXT("体力耗尽：自动滑翔降落，不能上升。"));}
     const double Now = GetWorld()->GetTimeSeconds();
     if (Now - LastNPCRefresh > 1.) RefreshIgnoredNPCs();
     Character->ConsumeMovementInputVector();
@@ -254,7 +267,10 @@ void UHCM5VS2FlightComponent::TickComponent(float DeltaTime, ELevelTick TickType
     {
         FHitResult Ground;
         if (!FindLandingSurface(Ground))
-        { bLanding = false; Reject(TEXT("下方不再是安全地面，降落已取消。")); Target = FVector::ZeroVector; }
+        {
+            if(!bExhausted){ bLanding=false; Reject(TEXT("下方不再是安全地面，降落已取消。"));Target=FVector::ZeroVector;}
+            else {Target=(Forward*HorizontalInput.Y+Right*HorizontalInput.X)*CruiseSpeed*.5f;Target.Z=-180.f;}
+        }
         else
         {
             const float Distance = Position.Z - HH - Ground.ImpactPoint.Z;
@@ -265,6 +281,7 @@ void UHCM5VS2FlightComponent::TickComponent(float DeltaTime, ELevelTick TickType
                 && Move->Velocity.Size2D() < 30.f && FMath::Abs(Move->Velocity.Z) < 100.f)
             { FinishLanding(); return; }
             Target = FVector(0,0,-FMath::Min(VerticalSpeed,FMath::Max(30.f,FMath::Sqrt(2.f*FlightBraking*FMath::Max(0.f,Distance-3.f)))));
+            if(bExhausted)Target.Z=FMath::Max(Target.Z,-180.);
         }
     }
     // Soft return begins 100 m beyond the sample bounds; no teleport or abrupt reversal.
@@ -282,12 +299,15 @@ void UHCM5VS2FlightComponent::TickComponent(float DeltaTime, ELevelTick TickType
     const float MinCenterZ = Bounds->SeaLevelZ + Bounds->WaterClearance + HH;
     const float MaxCenterZ = Bounds->SeaLevelZ + Bounds->CeilingHeight + HH;
     // A dry landing can finish below the water-clearance band, never on/below water itself.
-    const float MinimumZ = bLanding ? Bounds->SeaLevelZ + HH + 1.f : MinCenterZ;
+    FHitResult ExhaustedGround;
+    const bool bDryLanding=bLanding&&FindLandingSurface(ExhaustedGround);
+    const float MinimumZ = bDryLanding ? Bounds->SeaLevelZ + HH + 1.f : MinCenterZ;
     const float LowerDistance = FMath::Max(0.f,float(Position.Z-MinimumZ));
     const float UpperDistance = FMath::Max(0.f,float(MaxCenterZ-Position.Z));
     Target.Z = FMath::Clamp(Target.Z, -double(FMath::Sqrt(2.f*FlightBraking*LowerDistance)), double(FMath::Sqrt(2.f*FlightBraking*UpperDistance)));
     // Taking off from a low dry quay raises gently into the clearance band.
     if (Position.Z < MinimumZ) Target.Z = FMath::Max(Target.Z, 240.);
+    if(bExhausted && Position.Z>=MinimumZ) Target.Z=FMath::Min(Target.Z,0.);
     const bool bDecelerating = Target.SizeSquared() < Move->Velocity.SizeSquared();
     FVector Next = FMath::VInterpConstantTo(Move->Velocity,Target,DeltaTime,bDecelerating ? FlightBraking : FlightAcceleration);
     // Final velocity clamp prevents a long frame from crossing the sea/ceiling plane.
@@ -325,6 +345,7 @@ FString UHCM5VS2FlightComponent::GetFlightDiagnostics() const
     TSharedRef<FJsonObject> Json = MakeShared<FJsonObject>();
     Json->SetBoolField(TEXT("available"),IsFlightAvailable()); Json->SetBoolField(TEXT("flying"),bFlying);
     Json->SetBoolField(TEXT("landing"),bLanding); Json->SetBoolField(TEXT("boost"),bBoost);
+    Json->SetNumberField(TEXT("stamina"),Stamina); Json->SetBoolField(TEXT("exhausted"),bExhausted);
     Json->SetStringField(TEXT("presentation_state"),GetFlightPresentationState().ToString());
     Json->SetBoolField(TEXT("ascend"),bAscend); Json->SetBoolField(TEXT("descend"),bDescend);
     Json->SetNumberField(TEXT("input_x"),HorizontalInput.X); Json->SetNumberField(TEXT("input_y"),HorizontalInput.Y);

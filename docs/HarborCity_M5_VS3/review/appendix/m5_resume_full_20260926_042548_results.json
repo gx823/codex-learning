@@ -1,0 +1,176 @@
+{
+	"status": "COMPLETE",
+	"mode": "m5_resume_full",
+	"map": "L_HarborTown",
+	"test_suite": "M5_VS1",
+	"world_type": "Game",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"recorded_utc": "2026-09-25T20:25:58.415Z",
+	"duration_seconds": 3.1672499030828476,
+	"simulation_seconds": 3.0280095040798187,
+	"phase_clock": "world DeltaSeconds while running; wall time only while paused",
+	"completed_enter_exit_cycles": 0,
+	"input_method": "M4: explicit A fixtures and normal B EnhancedInput/Key input; per-check provenance. Not OS input or user visual acceptance.",
+	"save_slot": "HarborCity_M5_VS1_Test_VS3_m5_full_20260926_041127",
+	"m3_escape_stop":
+	{
+		"viewport_hook_bound": true,
+		"user_stop_latched": false,
+		"event_source": "NOT_RUN",
+		"scope": "This revision's explicit isolated test only. Esc is not consumed; normal game pause binding remains. No global keyboard interception, P override, automatic resume or auto-quit after stop.",
+		"queued_input_scope": "UE5.8 exposes no action-scoped removal for private InputsInjectedThisTick. No mappings cleared or private access; pressed keys flushed, gameplay motion cleared, every harness update/injection/new step permanently stopped. Normal Esc pause handles already queued input; same-frame queue clearing is not claimed.",
+		"event_frame": 0,
+		"held_actions_at_event": 0,
+		"held_actions_now": 0,
+		"runner_held_injection_calls_after_event": 0,
+		"game_paused_at_report": false,
+		"pause_menu_at_report": false,
+		"car_input_telemetry_at_report": "{\"available\":true,\"occupied\":false,\"speed_kmh\":0.001232,\"signed_speed_cm_s\":0.000209,\"gear\":0,\"target_gear\":0,\"rpm\":900.0,\"throttle\":0.0,\"brake\":1.0,\"steering\":0.0,\"handbrake\":true,\"parking\":true,\"position\":[70.007272,-949.874201,22.632571],\"velocity\":[0.0,0.0,0.034222],\"up_z\":0.999981,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.672363,\"spring_force\":163821.546875,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[160.005092,-814.76989,6.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.67336,\"spring_force\":163328.3125,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-19.994899,-814.770229,6.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.616656,\"spring_force\":191637.65625,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[160.005768,-1078.974818,6.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.617653,\"spring_force\":191144.53125,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-19.994223,-1078.975157,6.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":19,\"suspension_query_ignored_objects_gt\":20,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+		"character_velocity_at_report": "X=0.000 Y=0.000 Z=0.000",
+		"auto_quit_suppressed": false
+	},
+	"m4_r1_performance":
+	{
+		"method": "Actual game-thread wall deltas per test step, including diagnostics/capture cost. Fixture/setup steps are separate. Compare only matched route/settings; reaction and impact windows are separate observations, not a sustained all-AI-active route.",
+		"cpu": "Intel(R) Core(TM) i7-14650HX",
+		"gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+		"viewport_width": 1707,
+		"viewport_height": 960,
+		"actual_console_settings":
+		{
+			"t.MaxFPS": "0",
+			"r.VSync": "0",
+			"r.ScreenPercentage": "100",
+			"sg.ViewDistanceQuality": "2",
+			"sg.ShadowQuality": "2",
+			"sg.GlobalIlluminationQuality": "2",
+			"sg.ReflectionQuality": "2",
+			"sg.PostProcessQuality": "2",
+			"sg.TextureQuality": "2",
+			"sg.EffectsQuality": "2"
+		},
+		"truncated_frame_count": 0,
+		"scenes": [
+			{
+				"step_index": 1,
+				"scene": "M4 R2 await initial game focus",
+				"wall_seconds": 0.004948202520608902,
+				"average_fps": 202.09358768867546,
+				"p99_frame_ms": 4.948202520608902,
+				"max_frame_ms": 4.948202520608902,
+				"frames_above_50ms": 0,
+				"frames_above_100ms": 0,
+				"unfocused_frames": 0,
+				"wall_frame_ms": [
+					4.948202520608902
+				],
+				"wall_frame_world_seconds": [
+					3.0285095041035675
+				]
+			}
+		],
+		"activity_2hz": [
+			{
+				"world_seconds": 3.0285095041035675,
+				"step_index": 1,
+				"alive_npcs": 19,
+				"corpses": 0,
+				"living_ragdolls": 0,
+				"awake_living_bodies": 0,
+				"awake_dead_bodies": 0,
+				"fleeing": 0,
+				"countering": 0,
+				"punching": 0,
+				"panic_path_requests_cumulative": 0,
+				"counter_path_requests_cumulative": 0
+			}
+		]
+	},
+	"checks": [
+		{
+			"name": "Runtime actors",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "M1 controller, character, car, switch",
+			"actual": "PC=1 character=1 car=1 lamp=1",
+			"elapsed_seconds": 3.1048579029738903
+		},
+		{
+			"name": "Isolated save slot",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "HarborCity_M2_V1_Test_*",
+			"actual": "HarborCity_M5_VS1_Test_VS3_m5_full_20260926_041127",
+			"elapsed_seconds": 3.1057784035801888
+		},
+		{
+			"name": "R2 initial real application focus",
+			"status": "PASS",
+			"evidence_level": "A-runtime prerequisite",
+			"expected": "actual application activation before any test input; no focus override",
+			"actual": "focused=1",
+			"elapsed_seconds": 3.112447801977396
+		},
+		{
+			"name": "M5 scene prerequisites",
+			"status": "PASS",
+			"evidence_level": "A-runtime prerequisite",
+			"expected": "actual M5 director, six authored targets, combat and real application focus",
+			"actual": "mode=0 pawn=BP_TownHero_C_2147482313 speed=0.001 km/h characterCount=1",
+			"elapsed_seconds": 3.114773903042078
+		},
+		{
+			"name": "M5 actual purchased Selestia player mesh",
+			"status": "PASS",
+			"evidence_level": "A-runtime asset identity; not visual approval",
+			"expected": "private Selestia mesh in the real possessed character; rejected procedural heroes excluded",
+			"actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp.SKM_Selestia_Warp",
+			"elapsed_seconds": 3.1246023029088974
+		},
+		{
+			"name": "M5 active animation matches combat configured class",
+			"status": "PASS",
+			"evidence_level": "A-runtime",
+			"expected": "Selestia AnimBP active without old combat class override",
+			"actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/ABP_TownFlight.ABP_TownFlight_C",
+			"elapsed_seconds": 3.1314295008778572
+		},
+		{
+			"name": "M5 original proportions and normalized bind units",
+			"status": "PASS",
+			"evidence_level": "A-runtime",
+			"expected": "247 original bones; town adds 3 virtual IK bones; unit bind scales; uniform mesh scale 1.25",
+			"actual": "scale=X=1.250 Y=1.250 Z=1.250 bones=250 unit_binds=1",
+			"elapsed_seconds": 3.139325100928545
+		},
+		{
+			"name": "M5 first-person camera uses original eye height",
+			"status": "PASS",
+			"evidence_level": "A-runtime; no head-animation camera inheritance",
+			"expected": "original eye reference 117.164879cm * 1.25 - mesh offset 89cm",
+			"actual": "57.4561",
+			"elapsed_seconds": 3.146135400980711
+		},
+		{
+			"name": "M5 fresh isolated initial state",
+			"status": "FAIL",
+			"evidence_level": "A-runtime prerequisite",
+			"expected": "fresh Contact, TP, unarmed; no test stage reset",
+			"actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Contact\",\r\n\t\"chapter\": \"01 · 寄给明天的包裹\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_Contact\",\r\n\t\"target_location\": \"X=-4650.000 Y=-4450.000 Z=94.952\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": false,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 3.0228569507598877,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\"\r\n\t]\r\n}",
+			"elapsed_seconds": 3.1534010022878647
+		},
+		{
+			"name": "M5 unchanged base look gains",
+			"status": "PASS",
+			"evidence_level": "A-readback",
+			"expected": "on-foot1.5; driving1.125=0.75 base",
+			"actual": "X=1.500 Y=1.500 / X=1.125 Y=1.125",
+			"elapsed_seconds": 3.1672376021742821
+		}
+	],
+	"failures": 1,
+	"render_loop_mean_fps": 106.1183737067049,
+	"p99_frame_ms": 38.671400398015976,
+	"frames_over_100ms": 1,
+	"performance_scope": "Wall-clock actor ticks during scripted functional tests, includes pause and fixture overhead; not a standardized gameplay benchmark."
+}

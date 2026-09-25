@@ -76,3 +76,8 @@ env/
 /video_build/*.wav
 /video_build/*.m4a
 /video_build/voices*/
+
+# M5-VS3 private material
+.private/
+HarborCity/Content/HarborCity/Private/Music/
+docs/HarborCity_M5_VS3/private/

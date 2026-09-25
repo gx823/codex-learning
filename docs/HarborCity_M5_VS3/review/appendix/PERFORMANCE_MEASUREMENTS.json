@@ -1,0 +1,440 @@
+{
+  "status": "MEASURED",
+  "resolution": "1920x1080 requested by QA launch; screen percentage 100, VSync and cap disabled by QA code",
+  "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 592.82",
+  "quality_measurements": {
+    "High": {
+      "run": "perf_20260926_053618",
+      "results": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_053621_m5_vs2_perf\\results.json",
+      "launch": {
+        "status": "RUNNING",
+        "pid": 12252,
+        "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_052401_469_58434958\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+        "kind": "STANDALONE_PACKAGE",
+        "input_layer": "ENGINE_ACTION_NOT_OS",
+        "arguments": [
+          "-M5Test=m5_vs2_perf",
+          "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_perf_20260926_053618",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\perf_20260926_053618\\game.log\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+          "-HCM5VS3QA",
+          "-M5Quality=2",
+          "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality\""
+        ],
+        "started": "2026-09-26T05:36:18.3371847+08:00",
+        "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+      },
+      "phases": [
+        {
+          "name": "South approach walk",
+          "status": "PASS",
+          "frames": 1245.0,
+          "mean_fps": 103.744,
+          "p99_ms": 11.517,
+          "wall_seconds": 12.001
+        },
+        {
+          "name": "Market approach walk",
+          "status": "PASS",
+          "frames": 1251.0,
+          "mean_fps": 104.221,
+          "p99_ms": 11.825,
+          "wall_seconds": 12.003
+        },
+        {
+          "name": "High aerial hover",
+          "status": "PASS",
+          "frames": 416.0,
+          "mean_fps": 103.965,
+          "p99_ms": 11.47,
+          "wall_seconds": 4.001
+        },
+        {
+          "name": "Town aerial traversal",
+          "status": "PASS",
+          "frames": 530.0,
+          "mean_fps": 105.853,
+          "p99_ms": 11.326,
+          "wall_seconds": 5.007
+        },
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "PASS",
+          "frames": 1555.0,
+          "mean_fps": 105.803,
+          "p99_ms": 11.627,
+          "wall_seconds": 14.697,
+          "npcs": 6.0,
+          "damaged": 3.0
+        }
+      ],
+      "weighted_mean_fps": 104.73914774990045,
+      "worst_phase_p99_ms": 11.825,
+      "whole_adapter_peak_gib": 4.6240234375,
+      "adapter_samples": [
+        {
+          "time": "2026/09/26 05:36:23.534",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4721.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:36:28.633",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4717.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:36:33.705",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4718.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:36:38.780",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4718.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:36:43.857",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4726.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:36:48.935",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4723.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:36:54.023",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4722.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:36:59.097",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4724.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:04.168",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4718.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:09.228",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4727.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:14.315",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4724.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:19.396",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4717.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:24.458",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4719.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:29.571",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4711.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:34.640",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4712.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:39.721",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4721.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:44.790",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4724.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:49.865",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4723.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:37:54.945",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 4735.0,
+          "utilization_percent": 99.0
+        }
+      ],
+      "six_npc_melee_status": "NOT_RUN",
+      "stress_scope": "Ordinary AI response near six placed adult NPCs; damaged count measured. Simultaneous melee by six NPCs was not separately verified.",
+      "stress_measured": {
+        "name": "Multiple spells and six NPC AI performance",
+        "status": "PASS",
+        "frames": 1555.0,
+        "mean_fps": 105.803,
+        "p99_ms": 11.627,
+        "wall_seconds": 14.697,
+        "npcs": 6.0,
+        "damaged": 3.0
+      }
+    },
+    "Epic": {
+      "run": "perf_20260926_053810",
+      "results": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_053813_m5_vs2_perf\\results.json",
+      "launch": {
+        "status": "RUNNING",
+        "pid": 26400,
+        "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_052401_469_58434958\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+        "kind": "STANDALONE_PACKAGE",
+        "input_layer": "ENGINE_ACTION_NOT_OS",
+        "arguments": [
+          "-M5Test=m5_vs2_perf",
+          "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_perf_20260926_053810",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\perf_20260926_053810\\game.log\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+          "-HCM5VS3QA",
+          "-M5Quality=3",
+          "-ExecCmds=\"sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 3,sg.ReflectionQuality 3,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,sg.ShadingQuality 3,sg.LandscapeQuality 3,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality\""
+        ],
+        "started": "2026-09-26T05:38:10.5947745+08:00",
+        "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+      },
+      "phases": [
+        {
+          "name": "South approach walk",
+          "status": "PASS",
+          "frames": 781.0,
+          "mean_fps": 65.065,
+          "p99_ms": 18.689,
+          "wall_seconds": 12.003
+        },
+        {
+          "name": "Market approach walk",
+          "status": "PASS",
+          "frames": 806.0,
+          "mean_fps": 67.149,
+          "p99_ms": 18.813,
+          "wall_seconds": 12.003
+        },
+        {
+          "name": "High aerial hover",
+          "status": "PASS",
+          "frames": 283.0,
+          "mean_fps": 70.669,
+          "p99_ms": 16.989,
+          "wall_seconds": 4.005
+        },
+        {
+          "name": "Town aerial traversal",
+          "status": "PASS",
+          "frames": 358.0,
+          "mean_fps": 71.448,
+          "p99_ms": 16.852,
+          "wall_seconds": 5.011
+        },
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "PASS",
+          "frames": 1037.0,
+          "mean_fps": 70.496,
+          "p99_ms": 17.074,
+          "wall_seconds": 14.71,
+          "npcs": 6.0,
+          "damaged": 3.0
+        }
+      ],
+      "weighted_mean_fps": 68.40274868013073,
+      "worst_phase_p99_ms": 18.813,
+      "whole_adapter_peak_gib": 5.494140625,
+      "adapter_samples": [
+        {
+          "time": "2026/09/26 05:38:15.761",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5598.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:20.843",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5618.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:25.901",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5615.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:30.993",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5618.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:36.072",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5612.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:41.174",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5622.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:46.272",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5621.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:51.378",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5621.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:38:56.484",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5626.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:01.583",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5603.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:06.681",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5621.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:11.777",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5618.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:16.857",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5619.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:21.960",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5615.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:27.044",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5624.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:32.134",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5614.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:37.228",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5625.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:42.321",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5615.0,
+          "utilization_percent": 99.0
+        },
+        {
+          "time": "2026/09/26 05:39:47.383",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "used_mib": 5625.0,
+          "utilization_percent": 99.0
+        }
+      ],
+      "six_npc_melee_status": "NOT_RUN",
+      "stress_scope": "Ordinary AI response near six placed adult NPCs; damaged count measured. Simultaneous melee by six NPCs was not separately verified.",
+      "stress_measured": {
+        "name": "Multiple spells and six NPC AI performance",
+        "status": "PASS",
+        "frames": 1037.0,
+        "mean_fps": 70.496,
+        "p99_ms": 17.074,
+        "wall_seconds": 14.71,
+        "npcs": 6.0,
+        "damaged": 3.0
+      }
+    }
+  },
+  "global_p99_status": "NOT_COMPUTED_RAW_PHASE_SAMPLES_NOT_RETAINED",
+  "sampling_notes": [
+    "No recording during measured runs.",
+    "Frame times are actual wall time, not a configured FPS cap.",
+    "Adapter VRAM includes desktop and other applications.",
+    "No GPU/CPU stage timings retained; utilization alone cannot establish an exact bottleneck."
+  ],
+  "resolution_validation": {
+    "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_053048_4DADC048\\capture.json",
+    "scene_viewport_size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "native_output_size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "note": "Performance runs used the same temporary project window configuration; 100% render scale, no recorder. Original config restored after tests."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "RUNNING",
+  "pid": 22476,
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_052401_469_58434958\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "kind": "STANDALONE_PACKAGE",
+  "input_layer": "ENGINE_ACTION_NOT_OS",
+  "arguments": [
+    "-M5Test=m5_vs3_demo",
+    "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+    "-unattended",
+    "-windowed",
+    "-ResX=1920",
+    "-ResY=1080",
+    "-ForceRes",
+    "-language=en",
+    "-nosplash",
+    "-M1AutoQuit",
+    "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_demo_20260926_053033",
+    "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\m5_vs3_demo_20260926_053033\\game.log\"",
+    "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+    "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+    "-HCM5VS3QA",
+    "-M5Quality=2",
+    "-M5PublicCapture",
+    "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+    "-HCM4RecordSeconds=360",
+    "-HCM3RecordDelay=6"
+  ],
+  "started": "2026-09-26T05:30:33.5626133+08:00",
+  "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+}

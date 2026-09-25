@@ -58,6 +58,8 @@ private:
     TFunction<void()> M5ReviewCameraCleanup;
     void AddM5Tests();
     void AddM5VS2Tests();
+    void AddM5VS3Tests();
+    void AddM5VS3SideQuests();
     bool bM3FinishPending = false, bM3SuppressAutoQuit = false, bM3EndingPlay = false;
     uint64 M3LastCaptureFrame = MAX_uint64;
     double M3FinishWaitStarted = 0;

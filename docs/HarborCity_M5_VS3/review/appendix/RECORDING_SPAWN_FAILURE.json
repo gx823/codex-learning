@@ -1,0 +1,10 @@
+{
+  "status": "NOT_RECORDED",
+  "results": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_051837_m5_vs3_demo\\results.json",
+  "functional_status": "COMPLETE",
+  "failures": 0,
+  "duration_seconds": 313.12087949737906,
+  "cause": "AHCM3Experience recorder spawn remained inside !UE_BUILD_SHIPPING, although recorder implementation had Shipping QA support.",
+  "fix": "Spawn one recorder only for explicit HCM5VS3LocalQA and bounded positive recording duration; also enable and restore existing silent-submix recording override in this QA path.",
+  "public_bgm_muted": true
+}

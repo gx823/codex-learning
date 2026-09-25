@@ -1,0 +1,31 @@
+{
+  "source": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_042816_m5_full\\results.json",
+  "duration_seconds": 438.65940929949284,
+  "overall_failures": 7,
+  "checks": [
+    {
+      "name": "Evidence checkpoint actual save file state",
+      "status": "PASS",
+      "evidence_level": "B-Action Save + file readback",
+      "expected": "M5.Signal.Tower",
+      "actual": "M5.Signal.Tower",
+      "elapsed_seconds": 49.2871865965426
+    },
+    {
+      "name": "Coffee delivered through actual dialogue input",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "Complete",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  2 m",
+      "elapsed_seconds": 90.6210599988699
+    },
+    {
+      "name": "Private BGM naturally alternates back to track one",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio component clocks, no seek/speedup",
+      "expected": "two natural-duration crossfades, index zero; audibility is separate",
+      "actual": "{\r\n\t\"requested_mode\": 1,\r\n\t\"current_mode\": 1,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 2,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"public_capture_bgm_muted\": false,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 19.244741439819336,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 436.6170269995928
+    }
+  ]
+}

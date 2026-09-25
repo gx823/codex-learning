@@ -1,0 +1,8 @@
+{
+  "status": "PARTIAL_NOT_RESOLVED",
+  "finding": "Vehicle parked legally: body-curb gap 24.997 cm, driver present, can_pickup_at_curb true. Passenger north of car, fixed left-first exit chose the opposite south side; physical exit safe but NPC stand validation rejected it.",
+  "change": "Waiting NPCs prefer their nearer side; retain ground/capsule/sweep checks and fallback. Driver and already seated passenger exit preference unchanged.",
+  "latest_evidence": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\HarborCity\\Saved\\M5Tests\\20260926_050239_m5_vs3_ride_probe\\results.json",
+  "conclusion": "All five legal curb fixture locations had no exit satisfying the NPC own walking destination validator. Nearest-side preference alone was insufficient. Ground, collision, navigation and original curb/distance thresholds were retained; no passenger teleport. No further attempts in this delivery.",
+  "remaining": "Inspect pickup-area NavMesh/standing exclusions and door corridor next; ordinary car driving/reverse unaffected by this issue."
+}

@@ -66,13 +66,14 @@ bool AHCM5VS2CornerTimeDirector::SetTimeOfDay(FName Period)
     if (Period != TEXT("Afternoon") && Period != TEXT("Dusk") && Period != TEXT("Night")) return false;
     if (!BindWorld()) return false;
     const bool Dusk = Period == TEXT("Dusk"), Night = Period == TEXT("Night");
+    const bool VS3=GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"));
     Sun->SetActorRotation(Dusk ? FRotator(-8,155,0) : FRotator(-32,138,0));
     Sun->GetLightComponent()->SetIntensity(Night ? 0.f : Dusk ? 3.5f : 6.f);
     Sun->GetLightComponent()->SetLightColor(Dusk ? FLinearColor(1,.39f,.19f) : FLinearColor(1,.97f,.91f),true);
     Moon->SetActorRotation(FRotator(-38,-25,0));
-    Moon->GetLightComponent()->SetIntensity(Night ? .7f : 0.f);
+    Moon->GetLightComponent()->SetIntensity(Night ? (VS3?1.25f:.7f) : 0.f);
     Moon->GetLightComponent()->SetLightColor(FLinearColor(.50f,.65f,1.f),true);
-    Sky->GetLightComponent()->SetIntensity(Night ? .8f : Dusk ? .75f : 1.1f);
+    Sky->GetLightComponent()->SetIntensity(Night ? (VS3?1.1f:.8f) : Dusk ? .75f : 1.1f);
     Sky->GetLightComponent()->SetLightColor(Night ? FLinearColor(.65f,.72f,1.f) : Dusk ? FLinearColor(.65f,.53f,.70f) : FLinearColor::White);
     FPostProcessSettings& P = Post->Settings;
     P.bOverride_AutoExposureMethod = true; P.AutoExposureMethod = EAutoExposureMethod::AEM_Manual;

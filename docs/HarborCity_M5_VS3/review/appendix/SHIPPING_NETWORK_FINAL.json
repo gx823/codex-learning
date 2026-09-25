@@ -1,0 +1,11 @@
+{
+  "time": "2026-09-26T03:34:23.5206154+08:00",
+  "game_processes": [
+    {
+      "ProcessId": 30556,
+      "ExecutablePath": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_032704_927_ad0c3489\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe"
+    }
+  ],
+  "game_tcp_listeners": [],
+  "trace_1985": []
+}

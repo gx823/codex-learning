@@ -6,6 +6,7 @@
 #include "M4/HCM4R1SteeringMovement.h"
 #include "M4R1/HCM4R1VehicleImpactComponent.h"
 #include "M4R2/HCM4R2CockpitComponent.h"
+#include "M3/HCM3NPC.h"
 
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
@@ -403,7 +404,12 @@ bool AHCM1Vehicle::FindSafeExitTransform(ACharacter* Character, FTransform& Out)
     const float DoorY = 65.0f;
     const float ExitY = FMath::Max(190.0f, 110.0f + Radius + 30.0f);
     const float FloorNormalZ = Character->GetCharacterMovement()->GetWalkableFloorZ();
-    const float SideOrder[] = {-1.0f, 1.0f};
+    // A waiting passenger approaches the nearer door. Driver exits and an
+    // already seated passenger retain their existing left-first preference.
+    const AHCM3NPC* WaitingNPC = Cast<AHCM3NPC>(Character);
+    const float PreferredSide = WaitingNPC && !WaitingNPC->GetIsPassenger()
+        && FVector::DotProduct(Character->GetActorLocation()-GetActorLocation(),Right)>0.f ? 1.f : -1.f;
+    const float SideOrder[] = {PreferredSide, -PreferredSide};
     const float ForeAftOrder[] = {15.0f, -100.0f, 105.0f};
     for (const float Side : SideOrder)
     {
@@ -431,7 +437,13 @@ bool AHCM1Vehicle::FindSafeExitTransform(ACharacter* Character, FTransform& Out)
             {
                 continue;
             }
-            Out = FTransform(Yaw, ExitCenter, Character->GetActorScale3D());
+            const FTransform Candidate(Yaw, ExitCenter, Character->GetActorScale3D());
+            if (WaitingNPC && !WaitingNPC->GetIsPassenger())
+            {
+                FTransform WalkableStand;
+                if (!WaitingNPC->ResolvePassengerDoorStand(Candidate, WalkableStand)) continue;
+            }
+            Out = Candidate;
             return true;
         }
     }
@@ -440,9 +452,12 @@ bool AHCM1Vehicle::FindSafeExitTransform(ACharacter* Character, FTransform& Out)
 
 bool AHCM1Vehicle::ResolveSafeVehicleTransform(const FTransform& Requested, AActor* AvoidActor, FTransform& Out) const
 {
+    PlacementDiagnostic = TEXT("pending");
+    FString FilterDiagnostic;
+    const auto Reject = [this](const FString& Reason) { PlacementDiagnostic = Reason; return false; };
     if (!GetWorld() || Requested.ContainsNaN() || Requested.GetLocation().GetAbsMax() > 1000000.0)
     {
-        return false;
+        return Reject(TEXT("invalid requested transform/world"));
     }
     FCollisionQueryParams GroundQuery(SCENE_QUERY_STAT(HCM1ResetGround), false, this);
     GroundQuery.AddIgnoredActor(AvoidActor);
@@ -452,7 +467,7 @@ bool AHCM1Vehicle::ResolveSafeVehicleTransform(const FTransform& Requested, AAct
     if (!GetWorld()->LineTraceSingleByChannel(Ground, RequestLocation + FVector(0, 0, 350),
         RequestLocation - FVector(0, 0, 1000), ECC_Visibility, GroundQuery) || !IsUsableGround(Ground, MinNormalZ))
     {
-        return false;
+        return Reject(TEXT("ground missing or unsafe: ")+GetNameSafe(Ground.GetComponent()));
     }
 
     // Include the real official body and wheel visuals, which have no separate collision bodies.
@@ -474,7 +489,7 @@ bool AHCM1Vehicle::ResolveSafeVehicleTransform(const FTransform& Requested, AAct
     }
     if (!LocalBox.IsValid)
     {
-        return false;
+        return Reject(TEXT("missing vehicle visual bounds"));
     }
     const FVector BoxCenter = LocalBox.GetCenter();
     const FVector Extent = LocalBox.GetExtent().ComponentMax(FVector(225.0f, 100.0f, 55.0f));
@@ -483,7 +498,7 @@ bool AHCM1Vehicle::ResolveSafeVehicleTransform(const FTransform& Requested, AAct
     const FVector GroundForward = FVector::VectorPlaneProject(YawForward, Ground.ImpactNormal).GetSafeNormal();
     if (GroundForward.IsNearlyZero())
     {
-        return false;
+        return Reject(TEXT("invalid ground forward"));
     }
     const FQuat Rotation = FRotationMatrix::MakeFromXZ(GroundForward, Ground.ImpactNormal).ToQuat();
     const FVector Origin = Ground.ImpactPoint + Ground.ImpactNormal * (FMath::Max(0.0, -LocalBox.Min.Z) + 12.0);
@@ -502,7 +517,7 @@ bool AHCM1Vehicle::ResolveSafeVehicleTransform(const FTransform& Requested, AAct
                 !IsUsableGround(Support, MinNormalZ) ||
                 FMath::Abs(FVector::DotProduct(Support.ImpactPoint - Ground.ImpactPoint, Ground.ImpactNormal)) > 30.0f)
             {
-                return false;
+                return Reject(TEXT("corner support missing/uneven: ")+GetNameSafe(Support.GetComponent()));
             }
         }
     }
@@ -511,15 +526,16 @@ bool AHCM1Vehicle::ResolveSafeVehicleTransform(const FTransform& Requested, AAct
     if (GetWorld()->OverlapBlockingTestByChannel(Candidate.TransformPosition(BoxCenter), Rotation,
         ECC_Vehicle, FCollisionShape::MakeBox(Extent + FVector(3.0)), ClearanceQuery))
     {
-        return false;
+        return Reject(TEXT("vehicle clearance overlaps world"));
     }
     if (IsValid(AvoidActor) && AvoidActor != this)
     {
         // Respect the player's saved capsule even while its normal collision is disabled in a transition.
         FBox AvoidWorldBox(ForceInit), PreviousAllPrimitivesBox(ForceInit);
+        const ACharacter* AvoidCharacter = Cast<ACharacter>(AvoidActor);
         FString TestMode;
         const bool bR2SaveDiagnostic = FParse::Value(FCommandLine::Get(),TEXT("M4Test="),TestMode) && TestMode.StartsWith(TEXT("r2_"));
-        AvoidActor->ForEachComponent<UPrimitiveComponent>(false, [&AvoidWorldBox,&PreviousAllPrimitivesBox,bR2SaveDiagnostic](const UPrimitiveComponent* Component)
+        AvoidActor->ForEachComponent<UPrimitiveComponent>(false, [&AvoidWorldBox,&PreviousAllPrimitivesBox,&FilterDiagnostic,AvoidActor,AvoidCharacter,bR2SaveDiagnostic](const UPrimitiveComponent* Component)
         {
             // Editor camera proxies/frustums are not the player. Keep the real
             // capsule and mesh even when a possession transition disables collision.
@@ -530,23 +546,36 @@ bool AHCM1Vehicle::ResolveSafeVehicleTransform(const FTransform& Requested, AAct
                 // not the player's physical capsule/world mesh. Their inactive or
                 // transformed display bounds must not invalidate a real saved car.
                 const bool bDisplayOnly = Component->FirstPersonPrimitiveType==EFirstPersonPrimitiveType::FirstPerson;
-                if(!bDisplayOnly) AvoidWorldBox += Component->Bounds.GetBox();
+                // A character's capsule and world body remain physical even while
+                // disabled during possession. Wings, weapons and anchored takeoff
+                // effects are presentation, not additional player clearance.
+                const bool bPhysicalBody = AvoidCharacter
+                    ? Component==AvoidCharacter->GetCapsuleComponent() || Component==AvoidCharacter->GetMesh()
+                    : Component->GetCollisionEnabled()!=ECollisionEnabled::NoCollision;
+                if(!bDisplayOnly && bPhysicalBody) AvoidWorldBox += Component->Bounds.GetBox();
+                else if(FVector::Dist(Component->Bounds.Origin,AvoidActor->GetActorLocation())>300.f)
+                    FilterDiagnostic += Component->GetName()+TEXT(" ");
                 if(bR2SaveDiagnostic) UE_LOG(LogTemp,Display,TEXT("M4R2_SAVE_AVOID component=%s firstPersonDisplay=%d bounds=%s"),*Component->GetName(),bDisplayOnly,*Component->Bounds.GetBox().ToString());
             }
         });
         if (AvoidWorldBox.IsValid)
         {
             const FBox AvoidLocalBox = AvoidWorldBox.TransformBy(Candidate.ToInverseMatrixWithScale());
+            if(PreviousAllPrimitivesBox.IsValid && LocalBox.ExpandBy(15.f).Intersect(PreviousAllPrimitivesBox.TransformBy(Candidate.ToInverseMatrixWithScale()))
+                && !LocalBox.ExpandBy(15.f).Intersect(AvoidLocalBox))
+                FilterDiagnostic=TEXT("old decoration aggregate intersected; physical body clear; excluded distant effects: ")+FilterDiagnostic;
+            else FilterDiagnostic.Empty();
             if(bR2SaveDiagnostic) UE_LOG(LogTemp,Display,TEXT("M4R2_SAVE_AVOID_COMPARE oldIntersects=%d physicalIntersects=%d old=%s physical=%s vehicle=%s"),
                 PreviousAllPrimitivesBox.IsValid && LocalBox.ExpandBy(15.f).Intersect(PreviousAllPrimitivesBox.TransformBy(Candidate.ToInverseMatrixWithScale())),
                 LocalBox.ExpandBy(15.f).Intersect(AvoidLocalBox),*PreviousAllPrimitivesBox.ToString(),*AvoidWorldBox.ToString(),*LocalBox.ToString());
             if (LocalBox.ExpandBy(15.0f).Intersect(AvoidLocalBox))
             {
-                return false;
+                return Reject(TEXT("player physical bounds intersects vehicle; ")+AvoidWorldBox.ToString());
             }
         }
     }
     Out = Candidate;
+    PlacementDiagnostic = TEXT("safe; ")+FilterDiagnostic.Left(1000);
     return true;
 }
 

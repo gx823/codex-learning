@@ -110,7 +110,8 @@ bool UHCM3EditorNavigation::InitializeForAuthoring(UObject* WorldContextObject)
     if (!World || World->WorldType != EWorldType::Editor ||
         (World->GetOutermost()->GetName() != TEXT("/Game/HarborCity/Maps/L_M2_SeafrontStreet") &&
          World->GetOutermost()->GetName() != TEXT("/Game/HarborCity/Maps/L_M5_CyberHarbor") &&
-         !(World->GetOutermost()->GetName().StartsWith(TEXT("/Game/HarborCity/M5VS2/Part3/Town_")) &&
+         !((World->GetOutermost()->GetName().StartsWith(TEXT("/Game/HarborCity/M5VS2/Part3/Town_")) ||
+            World->GetOutermost()->GetName().StartsWith(TEXT("/Game/HarborCity/M5VS3/Town_"))) &&
            World->GetOutermost()->GetName().EndsWith(TEXT("/L_HarborTown"))))) return false;
     UNavigationSystemV1* Before = FNavigationSystem::GetCurrent<UNavigationSystemV1>(World);
     if (!Before) FNavigationSystem::AddNavigationSystemToWorld(*World, FNavigationSystemRunMode::EditorMode);
@@ -151,6 +152,18 @@ bool UHCM3EditorNavigation::BuildForAuthoring(UObject* WorldContextObject)
         Nav->IsNavigationBuildingLocked(ENavigationBuildLock::InitialLock),
         Nav->IsNavigationBuildingLocked(ENavigationBuildLock::Custom),
         Nav->IsNavigationBuildingLocked(ENavigationBuildLock::NoUpdateInPIE));
+    // The duplicated VS3 world can retain the source world's async-load lock
+    // after its delayed-unlock registration is gone. Only this explicit offline
+    // authoring path may retire that one lock, after compilation was drained and
+    // the normal callback received its full idle grace period. Other locks stay.
+    if (IsRunningCommandlet() && World->GetOutermost()->GetName().StartsWith(TEXT("/Game/HarborCity/M5VS3/Town_"))
+        && FPlatformTime::Seconds()-WaitStarted >= 5.0
+        && FAssetCompilingManager::Get().GetNumRemainingAssets()==0
+        && Nav->IsNavigationBuildingLocked(ENavigationBuildLock::AsyncLoadLock))
+    {
+        UE_LOG(LogTemp,Display,TEXT("VS3_AUTHOR_NAV retire stale offline AsyncLoadLock after drained compilation"));
+        Nav->RemoveNavigationBuildLock(ENavigationBuildLock::AsyncLoadLock, UNavigationSystemV1::ELockRemovalRebuildAction::NoRebuild);
+    }
     const bool bLocked = Nav->IsNavigationBuildingLocked(uint8(~uint8(ENavigationBuildLock::NoUpdateInEditor)));
     UE_LOG(LogTemp, Display, TEXT("M3_AUTHOR_NAV_BUILD pre locked_excluding_editor_auto_update=%d remaining=%d"), bLocked, Nav->GetNumRemainingBuildTasks());
     if (bLocked) return false;

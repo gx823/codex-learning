@@ -1,0 +1,25 @@
+{
+  "status": "PASS_SCOPED_OS_KEYS",
+  "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\appendix\\OS_FINAL_LAUNCH.json",
+  "actions": [
+    "F9",
+    "P",
+    "P",
+    "Alt+F4"
+  ],
+  "observed": [
+    "Fresh chapter one viewpoint changed to chapter four completion viewpoint after real F9.",
+    "P displayed the pause menu; second P dismissed it.",
+    "Game closed normally."
+  ],
+  "screenshots": [
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\OS_FINAL_BEFORE.png",
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\OS_FINAL_F9.png",
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\OS_FINAL_PAUSE.png",
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\OS_FINAL_RESUME.png"
+  ],
+  "limitations": [
+    "Windows tool screenshot framing differs from native engine capture; these are input evidence, not 1080p beauty shots.",
+    "No relative OS mouse calibration. No BGM listening acceptance inferred."
+  ]
+}

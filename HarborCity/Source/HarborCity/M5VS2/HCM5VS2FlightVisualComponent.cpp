@@ -48,9 +48,14 @@ void UHCM5VS2FlightVisualComponent::BeginPlay()
         || !FeatherMesh||!RibbonMesh||!RuneMesh||!LightMaterial)
     {SetComponentTickEnabled(false);return;}
     WingGlow=UMaterialInstanceDynamic::Create(WingMaterial?WingMaterial.Get():LightMaterial.Get(),this);
+    bVS3LayeredWings=GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"));
+    if(bVS3LayeredWings){
+        if(auto* Shape=LoadObject<UStaticMesh>(nullptr,TEXT("/Game/HarborCity/M5VS3/Combat/SM_SilkFeather.SM_SilkFeather")))FeatherMesh=Shape;
+        if(auto* Surface=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/HarborCity/M5VS3/Combat/M_WingSilk.M_WingSilk")))WingGlow=UMaterialInstanceDynamic::Create(Surface,this);
+    }
     WindGlow=UMaterialInstanceDynamic::Create(LightMaterial,this);
     RuneGlow=UMaterialInstanceDynamic::Create(LightMaterial,this);
-    for(int32 I=0;I<20;++I)Feathers.Add(MakePiece(FeatherMesh,WingGlow,*FString::Printf(TEXT("VS2LightFeather%02d"),I)));
+    for(int32 I=0;I<(bVS3LayeredWings?84:20);++I)Feathers.Add(MakePiece(FeatherMesh,WingGlow,*FString::Printf(TEXT("VS2LightFeather%02d"),I)));
     for(int32 I=0;I<8;++I)Ribbons.Add(MakePiece(RibbonMesh,WindGlow,*FString::Printf(TEXT("VS2WindRibbon%02d"),I)));
     Rune=MakePiece(RuneMesh,RuneGlow,TEXT("VS2TakeoffRune"));
     AddTickPrerequisiteComponent(Body);AddTickPrerequisiteComponent(Flight);
@@ -72,7 +77,7 @@ void UHCM5VS2FlightVisualComponent::StartRune()
 void UHCM5VS2FlightVisualComponent::TickComponent(float DeltaTime,ELevelTick TickType,FActorComponentTickFunction* ThisTick)
 {
     Super::TickComponent(DeltaTime,TickType,ThisTick);
-    if(!Body||!Flight||Feathers.Num()!=20||Ribbons.Num()!=8||!Rune||!FMath::IsFinite(DeltaTime)||DeltaTime<=0)return;
+    if(!Body||!Flight||Feathers.Num()!=(bVS3LayeredWings?84:20)||Ribbons.Num()!=8||!Rune||!FMath::IsFinite(DeltaTime)||DeltaTime<=0)return;
     const auto* Character=Cast<AHCM1Character>(GetOwner());
     const auto* PC=Character?Cast<AHCM1PlayerController>(Character->GetController()):nullptr;
     // Explicit PC gate also covers FP full-body meshes that remain owner-visible.
@@ -99,7 +104,25 @@ void UHCM5VS2FlightVisualComponent::TickComponent(float DeltaTime,ELevelTick Tic
     const float FlapAmplitude=TakingOff?22.f:Boost?3.f:10.f;
     const float Flap=FMath::Sin(VisualSeconds*(TakingOff?8.f:4.2f))*FlapAmplitude;
     VisibleFeathers=0;VisibleRibbons=0;
-    for(int32 SideIndex=0;SideIndex<2;++SideIndex)
+    if(bVS3LayeredWings)for(int32 SideIndex=0;SideIndex<2;++SideIndex){
+        const float Side=SideIndex==0?-1.f:1.f;
+        for(int32 Row=0;Row<3;++Row)for(int32 I=0;I<14;++I){
+            const float T=I/13.f;const float Breadth=WingStyle==1?1.16f:WingStyle==2?.85f:1.f;
+            // A shoulder, elbow and wrist curve with three overlapping feather rows.
+            FVector Base(-19.f-Row*3,Side*(16+T*88*Breadth),18+48*FMath::Sin(T*PI*.8f)-Row*9);
+            const float Length=(Row==0?70+45*T:Row==1?36+25*T:18+13*T)*(WingStyle==2?1.2f:1.f);
+            FVector Axis(-(Boost?.85f:.22f)-T*.2f,Side*(.35f+.9f*T),(WingStyle==1?.35f:.05f)-.9f*T);
+            Axis.Normalize();FVector Tip=Base+Axis*Length;
+            if(WingStyle==2)Tip.Z+=28*FMath::Square(T);
+            const FQuat Flapping(FVector::ForwardVector,FMath::DegreesToRadians(Side*(Flap+2*FMath::Sin(VisualSeconds*3-T*2))));
+            Base=Flapping.RotateVector(Base);Tip=Flapping.RotateVector(Tip);
+            const FVector Delta=Tip-Base;const auto Rotation=FRotationMatrix::MakeFromXZ(Frame.RotateVector(Delta.GetSafeNormal()),Frame.RotateVector(FVector::BackwardVector)).ToQuat();
+            auto* Feather=Feathers[SideIndex*42+Row*14+I].Get();const float Spread=FMath::Max(.02f,WingAlpha);
+            Feather->SetWorldTransform(FTransform(Rotation,Anchor+Frame.RotateVector(Base)*Size,FVector(Delta.Size()/100*Size*Spread,(Row==0?1.65f:Row==1?1.25f:.8f)*Size*Spread,Size)));
+            Feather->SetOwnerNoSee(false);const bool Show=CanShow&&WingAlpha>.01f;Visible(Feather,Show);VisibleFeathers+=Show?1:0;
+        }
+    }
+    else for(int32 SideIndex=0;SideIndex<2;++SideIndex)
     {
         const float Side=SideIndex==0?-1.f:1.f;
         for(int32 I=0;I<10;++I)

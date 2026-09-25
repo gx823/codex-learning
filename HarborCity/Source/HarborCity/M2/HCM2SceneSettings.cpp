@@ -22,7 +22,7 @@ bool AHCM2SceneSettings::HasValidSaveIdentity() const
 {
     if (SceneId.IsNone() || PlayerId.IsNone() || MapName.IsNone() ||
         MapName.ToString() != UGameplayStatics::GetCurrentLevelName(this, true) ||
-        (!SaveSlot.StartsWith(TEXT("HarborCity_M2_")) && !SaveSlot.StartsWith(TEXT("HarborCity_M5_VS1")) && !SaveSlot.StartsWith(TEXT("HarborCity_M5_VS2_"))) || SaveSlot.Len() > 100) return false;
+        (!SaveSlot.StartsWith(TEXT("HarborCity_M2_")) && !SaveSlot.StartsWith(TEXT("HarborCity_M5_VS1")) && !SaveSlot.StartsWith(TEXT("HarborCity_M5_VS2_")) && !SaveSlot.StartsWith(TEXT("HarborCity_M5_VS3_"))) || SaveSlot.Len() > 100) return false;
     for (TCHAR C : SaveSlot) if (!FChar::IsAlnum(C) && C != TEXT('_')) return false;
     return true;
 }

@@ -183,7 +183,9 @@ bool UHCM5VS2DrivingHandsComponent::UpdateHands(float Dt,FString& Error)
     // Fit one fixed modest seated shoulder lean from actual limb reach. Never
     // stretch bones or animate the camera/seat. 15cm is a rejection bound, not
     // permission to invent a body proportion when the fit fails.
-    if(!bFitted)
+    // Animated shoulders change their reach envelope. Re-evaluate the bounded
+    // seat fit from fresh source atoms; a first-frame fit cannot remain authoritative.
+    if(true)
     {
         bool Found=false;for(float Lean=0;Lean<=15.001f;Lean+=.5f)
         {
@@ -194,6 +196,9 @@ bool UHCM5VS2DrivingHandsComponent::UpdateHands(float Dt,FString& Error)
                 const double Length=(FVector::Distance(U.GetLocation(),L.GetLocation())+FVector::Distance(L.GetLocation(),H.GetLocation()))*Scale.X;
                 const FVector Target=TargetContactWorld[Side]-WristTargetWorld[Side].RotateVector(PalmContact[Side]*Scale);
                 Fits&=FVector::Distance(Mount.TransformPosition(U.GetLocation()),Target)<Length*.97;
+                FQuat HomeRotation;FVector HomeContact;GripTarget(Side,Home[Side],0,HomeRotation,HomeContact);
+                const FVector HomeWrist=HomeContact-HomeRotation.RotateVector(PalmContact[Side]*Scale);
+                Fits&=FVector::Distance(Mount.TransformPosition(U.GetLocation()),HomeWrist)<Length*.97;
             }
             if(Fits){FittedShoulderForwardCm=Lean;Found=true;break;}
         }
@@ -216,7 +221,11 @@ bool UHCM5VS2DrivingHandsComponent::UpdateHands(float Dt,FString& Error)
             return FVector::Distance(Shoulder,Target)<=Reach;
         };
         if(Reachable(SeatAngle[Side]))continue;
-        if(!Reachable(Home[Side]))return Fail(TEXT("Seated home grip outside actual unstretched arm reach"));
+        if(!Reachable(Home[Side])) {
+            // A lifted regrip is cosmetic; reduce its lift before testing the actual rim.
+            Lift[Side]=0;Release[Side]=0;
+            if(!Reachable(Home[Side]))return Fail(TEXT("Seated home grip outside actual unstretched arm reach"));
+        }
         double Inside=Home[Side],Outside=SeatAngle[Side];
         for(int32 I=0;I<10;++I){const double Mid=(Inside+Outside)*.5;if(Reachable(Mid))Inside=Mid;else Outside=Mid;}
         SeatAngle[Side]=Inside;WheelLocalAngle[Side]=WheelAngle+Inside;Sliding[Side]=true;

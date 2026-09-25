@@ -1,0 +1,29 @@
+{
+  "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+  "candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_025540_444_90b59701",
+  "exe_sha256": "9A40FD4F47C8288DD7229DED9B1ACB7AD5D1AB5038DC2F745245F2E973260844",
+  "target": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp",
+  "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim.",
+  "native_calls": [
+    {
+      "test": "pak_info",
+      "exit_code": 0
+    },
+    {
+      "test": "list_with_key",
+      "exit_code": 0
+    },
+    {
+      "test": "utoc_info",
+      "exit_code": 0
+    },
+    {
+      "test": "extract_with_key",
+      "exit_code": 0
+    },
+    {
+      "test": "extract_no_key",
+      "exit_code": 1
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "Vehicle CPP excluding saved/reset placement resolver; physics, drive inputs, steering, camera functions untouched by this scoped load diagnostic change",
+  "source": "Source/HarborCity/M1/HCM1Vehicle.cpp",
+  "excluded_function": "AHCM1Vehicle::ResolveSafeVehicleTransform",
+  "old_file_sha256": "90e7e10a86c8c8453f43ecae64d1f7d297794cc8f76869b6ef4a069cca698905",
+  "new_file_sha256": "ee5d0338e25cc31090035c0f7c600b4229bcd9bca24a84811541c51825fe3871"
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PARTIAL",
+  "candidate": "Candidate_20260926_052401_469_58434958",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_052401_469_58434958\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "sections": [
+    {
+      "title": "A · 阻断修复（PARTIAL）",
+      "conclusion": "第一章读档失败已修复：安全位置查询误把隐藏装饰组件合入玩家体积。主线四章、咖啡支线已走通，新进程与真实 F9 恢复通关状态。接送仍无法找到可行走的车门落脚点；重开另有旧 NPC、旧音乐模式断言失败。相机避让、接触反应、动画主导的非致命倒地及公会、咖啡馆、夜景已修改；倒地自然度和第一人称姿态未验收。"
+    },
+    {
+      "title": "B · 剑与魔法（PARTIAL / USER_REVIEW）",
+      "conclusion": "空手、剑、魔法枪切换，剑连击／蓄力、四种魔法、MP／冷却已接入并运行。魔法阵改为多层原创符文、卫星小阵、卷草和独立徽记，分层显现、反向旋转、消散；四种法术颜色与图案不同。第一人称握剑、拔收剑及倒地表现仍需打磨；治疗与护盾的完整数值专项未补齐。"
+    },
+    {
+      "title": "C · 飞行（USER_REVIEW）",
+      "conclusion": "普通飞行约二十秒、加速消耗加倍，耗尽缓降和地面恢复已在独立包验证。保留前倾、侧倾和安全衣层；三种原创立体羽毛排列已拍午后／夜晚的悬停、前飞和加速对比，等待选择。"
+    },
+    {
+      "title": "D · 私人 BGM（USER_REVIEW）",
+      "conclusion": "两首用户音乐已本机导入、调节响度并交替循环；自然时长循环已运行验证。实际音量、衔接和压低效果仍待试听。公开录像关闭私人 BGM，只保留游戏音效；音乐源文件、转码和音乐资产不上传。"
+    },
+    {
+      "title": "E · 下一段准备（PARTIAL）",
+      "conclusion": "已核对 Fab 已有资源，列出同作者建筑与翅膀付费候选，完成弯曲海岸港町布局草图；本轮没有购买或扩图。魔导车尚无合格替换，保留原车；新增多种成年路人面孔未完成。"
+    }
+  ],
+  "manual": "先用 Q、左键、1—4 和 V 检查剑与魔法的手感、遮挡和倒地；用 F／Shift 飞到体力耗尽，选择翅膀方案一／二／三；试听两首 BGM 的循环与音量。接送支线当前不可完成。",
+  "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\review\\index.html",
+  "zip": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\M5_VS3_REVIEW.zip",
+  "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\M5_VS3_PLAYTHROUGH.mp4",
+  "release_tag": "harborcity-m5-vs3-20260926-052401-469-58434958",
+  "release_url": "https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs3-20260926-052401-469-58434958",
+  "release_body": "M5-VS3 限定范围候选（PARTIAL）。新增原创多层魔法阵、剑与魔法、飞行体力及三种翅膀排列；主线读档已修复。接送支线、倒地自然度、第一人称握剑等仍有缺口。\n\n附件为审阅 ZIP、5分03秒原生1080p实机录像及完整性清单。录像只有游戏音效，私人商业 BGM 已关闭。没有上传完整游戏、存档、Selestia／其他付费源文件或私人音乐资产。\n\n战斗、魔法、翅膀和 BGM 的用户验收 PENDING。详细范围和失败记录见审阅页。",
+  "user_acceptance": {
+    "combat": "PENDING",
+    "magic": "PENDING",
+    "wings": "PENDING",
+    "bgm": "PENDING"
+  },
+  "desktop_control": "STOPPED_GAME_CLOSED",
+  "test_layers": {
+    "logic": "See per-check provenance",
+    "engine_input": "Actual standalone Actions/Keys, fixture placement identified separately",
+    "real_os": "F9 and P pause/resume observed; relative mouse NOT_RUN"
+  }
+}

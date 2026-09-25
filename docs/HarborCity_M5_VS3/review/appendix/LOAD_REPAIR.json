@@ -1,0 +1,10 @@
+{
+  "status": "STANDALONE_ENGINE_INPUT_PASS_REAL_OS_NEW_FIX_PENDING",
+  "failed_run": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\HarborCity\\Saved\\M5Tests\\20260926_035652_m5_load_probe\\results.json",
+  "finding": "Player aggregate bounds included 109 registered primitives, including invisible noncolliding VS2TakeoffRune at world origin. Player was at (8580,-5400,89); aggregate falsely overlapped saved vehicle. Real capsule/world mesh localized around player.",
+  "fix": "Use canonical character capsule and world mesh even during collision-disabled possession transitions. Exclude presentation primitives; retain ground, four support rays, world clearance and physical body clearance.",
+  "after_run": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\HarborCity\\Saved\\M5Tests\\20260926_035941_m5_load_probe\\results.json",
+  "actual_vehicle_readback": "safe; old decoration aggregate intersected; physical body clear; excluded distant effects: VS3FirstSword VS3FirstMagicGun VS2TakeoffRune M4R2_FirstPersonBody M4R2_FirstPersonPistol M4R2_FPFlashA M4R2_FPFlashB M4R2_FPFlashCap ",
+  "standalone_run": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_041134_m5_full\\results.json",
+  "standalone_readback": "safe; old decoration aggregate intersected; physical body clear; excluded distant effects: VS3FirstSword VS3FirstMagicGun VS2TakeoffRune M4R2_FirstPersonBody M4R2_FirstPersonPistol M4R2_FPFlashA M4R2_FPFlashB M4R2_FPFlashCap "
+}

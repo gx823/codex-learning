@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "before": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_040051_164_48327d43",
+  "after": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_042016_280_0e0ad460",
+  "changed_source_files": [
+    "Source/HarborCity/M1/HCM1TestM5.cpp",
+    "Source/HarborCity/M1/HCM1TestM5VS3.cpp"
+  ],
+  "production_source_and_configuration_unchanged": true,
+  "content_inventory_identical": true
+}

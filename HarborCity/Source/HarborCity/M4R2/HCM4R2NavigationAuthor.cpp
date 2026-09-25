@@ -20,6 +20,9 @@ UHCM4R2NavigationSystem::UHCM4R2NavigationSystem(const FObjectInitializer& Initi
 
 void UHCM4R2NavigationSystem::SetMapAgents()
 {
+    // NPCs use ordinary PathFollowing plus CharacterMovement avoidance, not
+    // DetourCrowd. Do not instantiate an unused manager before nav data loads.
+    CrowdManagerClass.Reset();
     SupportedAgents.Reset();
     for(int32 I=0;I<2;++I)
     {

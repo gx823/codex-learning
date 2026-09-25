@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "excluded": [
+    "FindSafeExitTransform",
+    "ResolveSafeVehicleTransform",
+    "M3/HCM3NPC.h include"
+  ],
+  "scope": "CPP outside placement/exit guards, compared with pre-VS3 backup",
+  "remaining_diff": []
+}

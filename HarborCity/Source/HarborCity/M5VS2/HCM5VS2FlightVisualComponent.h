@@ -29,6 +29,8 @@ public:
     /** Optional feather-only material. Null preserves the complete original effect. */
     UPROPERTY(EditAnywhere, Category="FlightVisual") TObjectPtr<UMaterialInterface> WingMaterial;
     UFUNCTION(BlueprintPure, Category="FlightVisual") FString GetFlightVisualDiagnostics() const;
+    UFUNCTION(BlueprintCallable,Category="FlightVisual") void SetWingStyle(int32 Style){WingStyle=FMath::Clamp(Style,0,2);}
+    UPROPERTY(EditAnywhere,Category="FlightVisual") int32 WingStyle=0;
 protected:
     virtual void BeginPlay() override;
     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
@@ -43,6 +45,7 @@ private:
     UPROPERTY(Transient) TObjectPtr<UMaterialInstanceDynamic> RuneGlow;
     float VisualSeconds=0, WingAlpha=0, WindAlpha=0, RuneAge=100;
     bool bWasFlying=false, bFirstPersonHidden=true;
+    bool bVS3LayeredWings=false;
     int32 VisibleFeathers=0,VisibleRibbons=0;
     FTransform RuneTransform;
     UStaticMeshComponent* MakePiece(UStaticMesh* Shape,UMaterialInterface* Material,FName Name);

@@ -1,0 +1,85 @@
+{
+  "status": "PARTIAL",
+  "source": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\M5Tests\\20260926_054010_m5_reopen\\results.json",
+  "failed_checks": [
+    {
+      "name": "M5 corrected citizen remains restorable after restart",
+      "status": "FAIL",
+      "evidence_level": "A-runtime validation",
+      "expected": "unmodified production NPC stand/save validation passes after disk restore",
+      "actual": "missing",
+      "elapsed_seconds": 6.822398599237204
+    },
+    {
+      "name": "Restored checkpoint ambience music mode and bounded players",
+      "status": "FAIL",
+      "evidence_level": "A-runtime audio state",
+      "expected": "mode=3; 1..2 native playing channels; auditory quality not asserted",
+      "actual": "{\r\n\t\"requested_mode\": 1,\r\n\t\"current_mode\": 1,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"public_capture_bgm_muted\": false,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 8.6443195343017578,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 8.807985298335552
+    },
+    {
+      "name": "Both side quests survive fresh-process Load",
+      "status": "FAIL",
+      "evidence_level": "B-Action Load + A readback",
+      "expected": "both Complete",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+      "elapsed_seconds": 8.910177998244762
+    }
+  ],
+  "interpretation": [
+    "M5_Citizen01 lookup is absent in this town; its stand-restoration assertion is not a successful NPC restoration test.",
+    "Legacy assertion hardcodes Interior mode. Actual private playlist is active, mode Exploration, one playing channel. Keep FAIL; no claim that audio stopped.",
+    "Coffee Complete and Ride Active match the actual earlier save; both Complete cannot pass because ride boarding remains unresolved."
+  ],
+  "passed_restore_checks": [
+    {
+      "name": "M5 restart restores the actual saved view preference",
+      "status": "PASS",
+      "evidence_level": "A-disk and runtime",
+      "expected": "compare live perspective to the previous process isolated _Views file; never reset it",
+      "actual": "file_present=1 live_first_person=1 saved_on_foot=1",
+      "elapsed_seconds": 3.21970159932971
+    },
+    {
+      "name": "M5 disk checkpoint exists before Load",
+      "status": "PASS",
+      "evidence_level": "A-disk prerequisite",
+      "expected": "actual previous-process checkpoint; route mode requires both actors outside legacy bounds; never synthesized",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_full_20260926_042813",
+      "elapsed_seconds": 4.1950364001095295
+    },
+    {
+      "name": "Fresh-process restored checkpoint stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Complete",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": false,\r\n\t\"target_id\": \"None\",\r\n\t\"target_location\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": false,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 6.3308892250061035,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"4.154 save_imported stage=M5.Signal.Complete\"\r\n\t]\r\n} status=读取成功：玩家、车辆、照明、任务和路人状态已恢复。 vehicle=safe; ",
+      "elapsed_seconds": 6.495798900723457
+    },
+    {
+      "name": "Fresh-process restored checkpoint story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "completed story has no target",
+      "actual": "None X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 6.498094901442528
+    },
+    {
+      "name": "M5 restart restored playable checkpoint",
+      "status": "PASS",
+      "evidence_level": "B-Action + A-readback",
+      "expected": "one live player; expected completion flag restored through Load Action",
+      "actual": "mode=0 pawn=BP_TownHero_C_2147482313 speed=0.001 km/h characterCount=1",
+      "elapsed_seconds": 6.805068999528885
+    },
+    {
+      "name": "M5 restart retains expected victories",
+      "status": "PASS",
+      "evidence_level": "B-Action + A-readback",
+      "expected": "route has zero victories; completed checkpoint has two and no repeat enemies",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": false,\r\n\t\"target_id\": \"None\",\r\n\t\"target_location\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": false,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 6.6397204399108887,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"4.154 save_imported stage=M5.Signal.Complete\"\r\n\t]\r\n}",
+      "elapsed_seconds": 6.80755539983511
+    }
+  ]
+}

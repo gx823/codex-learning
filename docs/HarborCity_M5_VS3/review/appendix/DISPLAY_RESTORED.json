@@ -1,0 +1,7 @@
+{
+  "time": "2026-09-26T05:43:53.6471308+08:00",
+  "earlier_attempt": "Game was still exiting; removal found Engine.ini already absent. Verification deferred until exit, then restored again.",
+  "game_closed": true,
+  "scope": "After confirmed process exit: pre-existing GameUserSettings restored byte-identically; originally absent Engine.ini confirmed absent",
+  "status": "PASS"
+}

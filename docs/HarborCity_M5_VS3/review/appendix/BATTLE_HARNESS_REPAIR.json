@@ -1,0 +1,24 @@
+{
+  "status": "TARGET_DEFEATS_PASS_OLD_PER_SHOT_ASSERTIONS_FAIL",
+  "evidence": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M5Tests\\20260926_041824_m5_battle_probe\\results.json",
+  "conclusion": "Both actual interceptors defeated by Attack input. Two shots during falling missed with muzzleBlocked=0, impacting temple ground. No production weapon damage/spread changes. Old 100%-accuracy assertion replaced by accepted-shot readback plus per-target actual damage and death requirement.",
+  "next": "Standalone remaining regression resumes from existing chapter-one checkpoint.",
+  "failed_checks_preserved": [
+    {
+      "name": "M5 real accepted shot and target damage",
+      "status": "FAIL",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot through combat chain, at least one damage hit; no ApplyDamage fixture",
+      "actual": "shots 2->3 hits 2->2 hit=StaticMeshActor_751 hp=32.0 muzzleBlocked=0 muzzle=X=-4507.752 Y=7884.758 Z=318.202 rayTarget=X=-5295.361 Y=7893.308 Z=182.172 view=X=-4440.000 Y=7900.000 Z=332.278",
+      "elapsed_seconds": 37.0025869011879
+    },
+    {
+      "name": "M5 real accepted shot and target damage",
+      "status": "FAIL",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot through combat chain, at least one damage hit; no ApplyDamage fixture",
+      "actual": "shots 6->7 hits 5->5 hit=StaticMeshActor_751 hp=32.0 muzzleBlocked=0 muzzle=X=-5105.718 Y=7723.441 Z=307.305 rayTarget=X=-5881.805 Y=7767.321 Z=174.109 view=X=-5037.506 Y=7734.029 Z=321.656",
+      "elapsed_seconds": 45.41128220036626
+    }
+  ]
+}

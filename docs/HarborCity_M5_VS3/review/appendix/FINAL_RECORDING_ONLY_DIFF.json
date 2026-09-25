@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "previous": "Candidate_20260926_050531_365_2ffa4c80",
+  "final": "Candidate_20260926_052401_469_58434958",
+  "production_source_config_changes": [
+    "Source/HarborCity/M3/HCM3Recording.cpp",
+    "Source/HarborCity/M3/HCM3Experience.cpp"
+  ],
+  "content_inventory_equal": true,
+  "scope": "Only local opt-in recorder spawning/silent submix capture changed; previous standalone art and functional demo evidence remains scoped to its original EXE."
+}

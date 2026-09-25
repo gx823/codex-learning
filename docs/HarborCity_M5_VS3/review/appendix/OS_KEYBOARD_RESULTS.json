@@ -1,0 +1,16 @@
+{
+  "status": "PARTIAL",
+  "input_layer": "REAL_OS_KEYBOARD_VIA_SKY",
+  "candidate": "E:/GameDev/Builds/HarborCity/M5_VS3/Candidate_20260926_032704_927_ad0c3489/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe",
+  "pause_resume": "PASS",
+  "window_mode_alt_enter": "PASS",
+  "F9": "INPUT_DELIVERED_LOAD_REJECTED",
+  "F9_message": "存档中的车辆位置不安全，保留当前游戏。",
+  "F9_screenshot": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\OS_F9_READBACK.png",
+  "relative_mouse_calibration": "NOT_RUN",
+  "notes": [
+    "Initial window cropped; titlebar UIA click failed. One unrelated attack/view change occurred; not counted as an intended attack test.",
+    "Alt+Enter restored full HUD; F9 error then visible.",
+    "Alt+F4 closed the plain game normally."
+  ]
+}

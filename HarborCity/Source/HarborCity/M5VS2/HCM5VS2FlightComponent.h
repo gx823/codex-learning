@@ -39,6 +39,9 @@ public:
     UFUNCTION(BlueprintPure, Category="Flight") bool IsFlightAvailable() const;
     UFUNCTION(BlueprintPure, Category="Flight") bool IsFlying() const { return bFlying; }
     UFUNCTION(BlueprintPure, Category="Flight") bool IsLanding() const { return bLanding; }
+    UFUNCTION(BlueprintPure, Category="Flight") float GetStamina() const { return Stamina; }
+    UFUNCTION(BlueprintPure, Category="Flight") bool IsExhausted() const { return bExhausted; }
+    void RestoreFullStamina() { Stamina=100.f; bExhausted=false; }
     UFUNCTION(BlueprintPure, Category="Flight") bool IsBoosting() const { return bFlying && bBoost && !bLanding; }
     UFUNCTION(BlueprintPure, Category="Flight") FName GetFlightPresentationState() const;
     UFUNCTION(BlueprintPure, Category="Flight") float GetHeightAboveSea() const;
@@ -75,6 +78,8 @@ private:
     bool bSavedOrientToMovement = true, bSavedControllerDesiredRotation = false;
     float SavedMaxFlySpeed = 0, SavedMaxAcceleration = 0, SavedFlyingBraking = 0;
     float TakeoffFeetZ = 0;
+    float Stamina = 100.f;
+    bool bExhausted = false, bLowStaminaNotified = false;
     double TakeoffUntil = 0, LastBoundaryNotice = -100, LastNPCRefresh = -100;
     FString LastReason;
     int32 TakeoffCount = 0, LandingCount = 0, RejectedCount = 0;

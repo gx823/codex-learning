@@ -201,6 +201,11 @@ private:
     void SavePressed();
     void LoadPressed();
     void AttackPressed();
+    void AttackReleased();
+    void SpellOne();
+    void SpellTwo();
+    void SpellThree();
+    void SpellFour();
     void AimPressed();
     void AimReleased();
     void ToggleWeaponPressed();

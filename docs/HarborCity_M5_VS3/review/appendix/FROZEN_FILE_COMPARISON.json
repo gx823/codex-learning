@@ -1,0 +1,30 @@
+{
+  "evidence_layer": "A byte comparison only; not runtime test",
+  "files": [
+    {
+      "file": "Source/HarborCity/M1/HCM1Vehicle.cpp",
+      "status": "PASS",
+      "sha256": "90e7e10a86c8c8453f43ecae64d1f7d297794cc8f76869b6ef4a069cca698905"
+    },
+    {
+      "file": "Source/HarborCity/M1/HCM1Vehicle.h",
+      "status": "PASS",
+      "sha256": "c954f08ffa69babc8a6f8b51875f87ad77b2effb7fdf388243fcc1e9b20ccdca"
+    },
+    {
+      "file": "Source/HarborCity/M4/HCM4R1SteeringMovement.cpp",
+      "status": "PASS",
+      "sha256": "3f2ed7304cdd91e51f2064d21aad6685d8f1eec874008f571c4f6bd09e2c716b"
+    },
+    {
+      "file": "Source/HarborCity/M4/HCM4R1SteeringMovement.h",
+      "status": "PASS",
+      "sha256": "6306ef3d92d470a3dd10a0e6b55203235d8fb7741abd4d20eb61df1ae49cf5bf"
+    },
+    {
+      "file": "Config/DefaultInput.ini",
+      "status": "PASS",
+      "sha256": "4dffc0cd6b704125e9093b7c7da0b5e1ea7fe63d0d71b227985c85446ec93717"
+    }
+  ]
+}
