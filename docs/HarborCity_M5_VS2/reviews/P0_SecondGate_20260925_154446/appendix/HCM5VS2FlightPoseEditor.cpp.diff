@@ -1,0 +1,58 @@
+--- D:\科研学习\codex学习\docs\HarborCity_M5_VS2\source_snapshots\flight_graph_node_deduction_20260925_042823\HCM5VS2FlightPoseEditor.cpp
++++ D:\科研学习\codex学习\HarborCity\Source\HarborCity\M5VS2\HCM5VS2FlightPoseEditor.cpp
+@@ -120,10 +120,16 @@
+                 const auto Bone=[&](const TCHAR* Prefix){return FName(*(FString(Prefix)+S));};
+                 const auto Direction=[&](double X,double Y,double Z){return Lean.RotateVector((Lateral*X+Forward*Y+Up*Z).GetSafeNormal());};
+                 bool Good=PointBone(Ref,Pose,Bone(TEXT("UpperArm_")),Bone(TEXT("LowerArm_")),Direction(Sign*(ArmSpread[Kind]+Wave*.015),ArmFore[Kind],-1));
+-                Good&=PointBone(Ref,Pose,Bone(TEXT("LowerArm_")),Bone(TEXT("Hand_")),Direction(Sign*.08,ArmFore[Kind]+.28,-1));
+-                Good&=PointBone(Ref,Pose,Bone(TEXT("UpperLeg_")),Bone(TEXT("LowerLeg_")),Direction(Sign*.025,.08+Wave*.015,-1));
+-                Good&=PointBone(Ref,Pose,Bone(TEXT("LowerLeg_")),Bone(TEXT("Foot_")),Direction(0,-.22-Wave*.02,-1));
+-                Good&=PointBone(Ref,Pose,Bone(TEXT("Foot_")),Bone(TEXT("Toe_")),Direction(0,.8,-.5));
++                Good&=PointBone(Ref,Pose,Bone(TEXT("LowerArm_")),Bone(TEXT("Hand_")),Direction(Sign*.10,ArmFore[Kind]+(Side==0?.48:.40),-1));
++                // Relaxed asymmetric suspension: one knee hangs lower, the other bends back.
++                // Direction vectors use the source skeleton's measured forward/up axes;
++                // preserve every segment length, hand/finger track and skirt local pose.
++                const double ThighFore=Kind==2?(Side==0?.04:.14):(Side==0?.10:.32);
++                const double CalfBack=Kind==2?(Side==0?.20:.34):(Side==0?.28:.58);
++                const double LegWave=Wave*(Side==0?.018:-.018);
++                Good&=PointBone(Ref,Pose,Bone(TEXT("UpperLeg_")),Bone(TEXT("LowerLeg_")),Direction(Sign*.025,ThighFore+LegWave,-1));
++                Good&=PointBone(Ref,Pose,Bone(TEXT("LowerLeg_")),Bone(TEXT("Foot_")),Direction(0,-CalfBack-LegWave,-1));
++                Good&=PointBone(Ref,Pose,Bone(TEXT("Foot_")),Bone(TEXT("Toe_")),Direction(0,.65,-.7));
+                 if(!Good)return Finish(R,TEXT("Actual limb hierarchy does not match directional solver"));
+             }
+             Frames.Add(MoveTemp(Pose));
+@@ -179,8 +185,24 @@
+     for(auto* Loop:Loops)if(!Owned(Loop)||Loop->GetDataModel()->GetNumberOfKeys()!=61)return Finish(R,TEXT("Actual authored loops required"));
+     if(Takeoff->GetName()!=TEXT("M_Relaxed_Jump_F_Start_Stand_Rfoot_Cut_InPlace_SelestiaTransition")||Landing->GetName()!=TEXT("M_Relaxed_Jump_F_Land_Stand_Light_Rfoot_Cut_InPlace_SelestiaTransition"))return Finish(R,TEXT("Exact previously retargeted transition clips required"));
+     TArray<UEdGraph*> Graphs;BP->GetAllGraphs(Graphs);UEdGraph* Graph=nullptr;UEdGraphPin* Prior=nullptr;UEdGraphPin* Sink=nullptr;
++    TArray<UAnimGraphNode_SequencePlayer*> Existing;Existing.Init(nullptr,7);int32 ExistingCount=0;
++    for(auto* G:Graphs)for(UEdGraphNode* N:G->Nodes)
++        if(auto* Player=Cast<UAnimGraphNode_SequencePlayer>(N))
++            for(int32 I=0;I<7;++I)if(N->GetName()==FString::Printf(TEXT("VS2Flight_Clip%d"),I))
++            {if(Existing[I])return Finish(R,TEXT("Duplicate existing flight clip"));Existing[I]=Player;++ExistingCount;}
++    if(ExistingCount)
++    {
++        if(ExistingCount!=7||Existing[0]->Node.GetSequence()!=Takeoff||Existing[6]->Node.GetSequence()!=Landing)
++            return Finish(R,TEXT("Complete existing flight branch with unchanged takeoff/landing required"));
++        BP->Modify();
++        for(int32 I=0;I<5;++I){Existing[I+1]->Modify();Existing[I+1]->Node.SetSequence(Loops[I]);}
++        FBlueprintEditorUtils::MarkBlueprintAsModified(BP);FKismetEditorUtilities::CompileBlueprint(BP);
++        if(BP->Status==BS_Error)return Finish(R,TEXT("Existing flight loop replacement compile failed"));
++        R->SetStringField(TEXT("mode"),TEXT("REPLACE_FIVE_LOOPS_ONLY_EXISTING_GRAPH_RETAINED"));
++        return Finish(R);
++    }
+     TArray<UAnimGraphNode_Base*> Physics;
+-    for(auto* G:Graphs)for(auto* N:G->Nodes)
++    for(auto* G:Graphs)for(UEdGraphNode* N:G->Nodes)
+     {
+         if(N->GetName().StartsWith(TEXT("VS2Flight_")))return Finish(R,TEXT("Partial/repeated flight graph authoring refused"));
+         if(N->GetClass()->GetName().Contains(TEXT("KawaiiPhysics")))Physics.Add(CastChecked<UAnimGraphNode_Base>(N));
+@@ -238,7 +260,7 @@
+     const auto* Defaults=Cast<UHCM5VS2LookAnimInstance>(BP->GeneratedClass->GetDefaultObject());
+     if(!Defaults||!Defaults->bVS2FlightPosesEnabled||!Defaults->bVS2GASMotionEnabled)return Finish(R,TEXT("Both native motion flags required"));
+     TArray<UEdGraph*> Graphs;BP->GetAllGraphs(Graphs);TArray<TSharedPtr<FJsonValue>> Rows;int32 Players=0,Banks=0,Winds=0;
+-    for(auto* G:Graphs)for(auto* N:G->Nodes)
++    for(auto* G:Graphs)for(UEdGraphNode* N:G->Nodes)
+     {
+         if(N->GetClass()->GetName().Contains(TEXT("KawaiiPhysics")))
+         {auto* Pin=N->FindPin(TEXT("SimpleExternalForce"));if(!Pin||Pin->LinkedTo.Num()!=1)return Finish(R,TEXT("Secondary wind pin not linked"));++Winds;}

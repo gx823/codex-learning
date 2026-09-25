@@ -1,0 +1,1820 @@
+{
+  "repository": "gx823/codex-learning",
+  "branch_target": "main",
+  "base_commit": "02c7170af48a1653d49171e59044c07d3bf9b290",
+  "release_tag": "harborcity-m5-vs2-p0-20260925-154446",
+  "release_url": "https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs2-p0-20260925-154446",
+  "files": [
+    {
+      "path": "docs/HarborCity_M5_VS2/M5_VS2_CONTROLS.md",
+      "sha256": "a558fd2c892337bf460a036a591d888dcf8f0d0e08e01684c0ce4d7dc97e37be",
+      "bytes": 2226
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/PERFORMANCE_BASELINE_R5.json",
+      "sha256": "1de5b088b4bfb6f21a89f7736568441e53fd96e326ac48723331cbc5be86bcc2",
+      "bytes": 8579
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/PERFORMANCE_BASELINE_R5.md",
+      "sha256": "6effd97c783d4bbdb0c9dcbb649a0444c274a73c2dcbe25074a373f5d388bf15",
+      "bytes": 3106
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/PURCHASE_CANDIDATES.md",
+      "sha256": "d2e94066b490bc1059afc2b0e3ca40171a4ed6f183a451895e35999d30b9cb1f",
+      "bytes": 13717
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/01037647b7c0_GAS_CLOCK_SOLE_356579ca_REVIEW.md",
+      "sha256": "01037647b7c01b95da86cc93b5004ae28f54584dd60d6208a019dff3be4900ae",
+      "bytes": 4439
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/037d4c8a32ba_corner_v2_review.json",
+      "sha256": "037d4c8a32ba4b023f9c43a4eafd9aa2ab0bb15743006536bbbe77d09e349eb2",
+      "bytes": 447137
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/05ed8d75a039_launch.json",
+      "sha256": "05ed8d75a0397e8eba74f5dd2a05f38c8908b203f82cf5bea7862565b946e4b1",
+      "bytes": 1989
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/071e9d8302d0_author_result.json",
+      "sha256": "071e9d8302d0f194ccc85810292925dc8e41ca4e7d6de8ebdc9fff3dbfa56c8b",
+      "bytes": 39902
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/1de5b088b4bf_PERFORMANCE_BASELINE_R5.json",
+      "sha256": "1de5b088b4bfb6f21a89f7736568441e53fd96e326ac48723331cbc5be86bcc2",
+      "bytes": 8579
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/23a807036a19_corner_v2_review.json",
+      "sha256": "23a807036a19518f8bbcbecf3f7701ed1800cf2abf7f7095f4bcfc5e0bad03ff",
+      "bytes": 297956
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/395b8dfc33ae_classification.json",
+      "sha256": "395b8dfc33ae14802a8541c0ab27cb3e881e622a09743e1b7a69c88a9b1b92f0",
+      "bytes": 8529
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/3b0ab8af09c2_run_m5_vs2_gate_baseline.ps1",
+      "sha256": "3b0ab8af09c210a9191856f86ceed78bd027089d517d7f69c4198d05d177f34a",
+      "bytes": 4358
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/3d90adb0ae64_launch.json",
+      "sha256": "3d90adb0ae64a7b0a17511ca79a336616446bcab80ce7b261e955def1326b97c",
+      "bytes": 2116
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/460f0b50d819_ue_m5_vs2_scene_idle_author.py",
+      "sha256": "460f0b50d8198fe8077f4459705ac96127a003b9369989270ecde5ed9b8b89aa",
+      "bytes": 7269
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/48b82beac486_corner_v2_capture_plan.json",
+      "sha256": "48b82beac486066bc9fa61116d8f9fc2263cbd4973b5d2b23f9300e6493527d0",
+      "bytes": 52080
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/58ab3bc58a15_gate_baseline.json",
+      "sha256": "58ab3bc58a15392c72eae7987f51bf1f8a964773f6c2f2d87e045f18fb121dcc",
+      "bytes": 9815
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/60f6a977bf57_results.json",
+      "sha256": "60f6a977bf570476f26f363944fb8106b5e04268d18798f625aa8a1ab9fde322",
+      "bytes": 14834602
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/64e1d697e4fc_results.json",
+      "sha256": "64e1d697e4fcecb68cb8480c3df3578d6e55f02d300e62a7660790349c67b76e",
+      "bytes": 36592
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/758dd88c017b_ue_m5_vs2_hero_polish_review_author.py",
+      "sha256": "758dd88c017bcc4231bf0e7a6a195e95c50837062270d4eb5906d5f4216195d9",
+      "bytes": 4744
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/779fade18e99_results.json",
+      "sha256": "779fade18e99ec8f1fa8fd5591248643e4f5f074d18f85ffbd1316a2e23ff275",
+      "bytes": 669622
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/7d4de5a6b63b_flight_demo.json",
+      "sha256": "7d4de5a6b63bef26402f4f38a2f64cd7ae96278fe8e529ba7a51dc84a938cbc9",
+      "bytes": 2258638
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/8034d1f506d7_npc_review.json",
+      "sha256": "8034d1f506d7b51ff0472f7bdf0c2685879fc82ea90d1d96e885430e037351ac",
+      "bytes": 42873
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/81713faf9e02_FLIGHT_e578baa7_POSE_READBACK.json",
+      "sha256": "81713faf9e02adeade1ba59b634c41c762f6c65a43c15a5fdef97e60dca2aa23",
+      "bytes": 9653
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/8323d7558d2c_classification.json",
+      "sha256": "8323d7558d2c4fd42a9d5d21c469a5fab8157c1e677c3dc2a56e414f9c092edc",
+      "bytes": 8338
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/83ac7c49f035_npc_review.json",
+      "sha256": "83ac7c49f0359c326bac38bb2c47ccde2d6a2d258573a407718a2812f44c766b",
+      "bytes": 2691045
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/8c51eb198208_corner_v2_capture_plan.json",
+      "sha256": "8c51eb198208c279f84119926a8a2aa7d3be3bbb019765e93e38df9e9741bccb",
+      "bytes": 52080
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/914c2666e193_FOOTPLACEMENT_SOLE_b44ef459_ANALYSIS.json",
+      "sha256": "914c2666e193b080a3619f53b90aebfa39f553aa76d071e3bdd390223fccd1a5",
+      "bytes": 116114
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/9af3de58fb6a_npc_review.json",
+      "sha256": "9af3de58fb6ad9357b020f55294c12ed37ef1c92da77ee53a31e61f5fff508df",
+      "bytes": 378298
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/9b9c6440935f_corner_v2_review.json",
+      "sha256": "9b9c6440935ffb67819ff8b852967e93e900dcb79c4863ed3cc1a8075e9d27af",
+      "bytes": 297957
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/a01da459f88f_launch.json",
+      "sha256": "a01da459f88f626e6a7c7ee0641f8ebc4976a9a821a7ac16f9f1f1faa27e0f1d",
+      "bytes": 2278
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/a51eb7503e4e_SCENE_IDLE_997d29a7_READBACK.json",
+      "sha256": "a51eb7503e4e4fd784a6ae625f2f6dd7f01a8b39e329140660df10207150060b",
+      "bytes": 1498
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/a558fd2c8923_M5_VS2_CONTROLS.md",
+      "sha256": "a558fd2c892337bf460a036a591d888dcf8f0d0e08e01684c0ce4d7dc97e37be",
+      "bytes": 2226
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/ac3dfca997c9_ue_m5_vs2_flight_pose_polish_author.py",
+      "sha256": "ac3dfca997c90a3d6257229e4bdc452bf073fdf5dceca0e94002df1e0bb9dadc",
+      "bytes": 4971
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/af5e7a585781_verification.json",
+      "sha256": "af5e7a585781b1fa3ffbc60efb58e02db5bd879cb931cab134aa7615588613ce",
+      "bytes": 30516
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/bcfe65b41330_launch.json",
+      "sha256": "bcfe65b4133057d088f8d587f04a93f7d01becf99fb704a9839725bbe2992fdb",
+      "bytes": 14032
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/BROWSER_CHECK.json",
+      "sha256": "55b124ee06b548646e5b823fbb8c85c00ab0c73ba3c61e0f8eab4f1c666340da",
+      "bytes": 376
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/c45aea803c54_launch.json",
+      "sha256": "c45aea803c546ade8015346263998808c0ffc2e0230e8816f0ed3b07d075270d",
+      "bytes": 2778
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/cb2900a28911_J_GARMENT_SOURCE_GEOMETRY.json",
+      "sha256": "cb2900a28911fec1aaed761b5265715af3cb04e569bb5eb90f6835bea8c019fa",
+      "bytes": 3622
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/cdee5442916a_results.json",
+      "sha256": "cdee5442916a8cdcbcbd4e9ce048b94d60fea45bcecbb380b53fb71c79b03f2b",
+      "bytes": 562739
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/d2e94066b490_PURCHASE_CANDIDATES.md",
+      "sha256": "d2e94066b490bc1059afc2b0e3ca40171a4ed6f183a451895e35999d30b9cb1f",
+      "bytes": 13717
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/d2fa1c9f7df5_HCM5VS2NPCIdleEditor.cpp",
+      "sha256": "d2fa1c9f7df55338f631ea14d359f4cca7b1fb1aea07a8ecc1dce000304d3a76",
+      "bytes": 17989
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/d3376d078b4d_HCM5VS2NPCClothDiagnostics.cpp",
+      "sha256": "d3376d078b4d9ed1693890c3800e77aa4abc014a45edf530fe5a857ac83272fa",
+      "bytes": 26449
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/d453cb15d18c_HCM5VS2NPCIdleEditor.h",
+      "sha256": "d453cb15d18cd25cb4f6349161f728f3856bc16a3fa3dab728ee774ac6e52be3",
+      "bytes": 1030
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/daedbdf29b6b_WORKFLOW_OVERRIDE_20260925.md",
+      "sha256": "daedbdf29b6bb02ae008a05158149a3d7b451d672168bd6e82c24af92dbae12b",
+      "bytes": 812
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/de6cc5eee752_HERO_FILL_DRAWCOMMAND_LIFETIME_REVIEW_20260925.md",
+      "sha256": "de6cc5eee752071d5049f4f121fd763770fdcdae8675f9886ee53ee84831a777",
+      "bytes": 6365
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/e351925d6ba5_launch.json",
+      "sha256": "e351925d6ba52455dc41645ccca27720c89e7b2503a9c7e58173d01bc73aefc0",
+      "bytes": 2311
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/ed1cd46e95b8_launch.json",
+      "sha256": "ed1cd46e95b82e45c717c74cb45878b5c964a84c32cb8ffb76b10a0245110729",
+      "bytes": 2311
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/f7c2ab781c75_INTEGRATION_20260925_AFTER_RESUME.json",
+      "sha256": "f7c2ab781c7542744b64cfca80088d5a27117eea5580cf737cf5c9ddb761d294",
+      "bytes": 2752
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/fcb4df72406d_RESUME_VISUAL_FIXES_20260925.json",
+      "sha256": "fcb4df72406d4c183f7292cf6638053760f1416226b905473bc5f63801291df1",
+      "bytes": 8261
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/HCM4R1PhysicalReactionGetUp.cpp.diff",
+      "sha256": "eeae5e9602d2d8d820fb6cb3a02c338740db2db68857aec5af86e3a4db4f985f",
+      "bytes": 3926
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/HCM5VS2DrivingHandsComponent.cpp.diff",
+      "sha256": "545bd615385fb370daba52023e95e332df95a0d4343393d8da79863139546e48",
+      "bytes": 4137
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/HCM5VS2FlightPoseEditor.cpp.diff",
+      "sha256": "656229873a4a3ff15a2156ebb2a6a36b9240416d9e7c681f65a9e8cf2aa82276",
+      "bytes": 5234
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/appendix/LOCAL_LINK_CHECK.json",
+      "sha256": "91bc0fe750eabf5a5c74dfebb2eef3926a4095a558bd0fac8e452c45b5c4e279",
+      "bytes": 23329
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/GATE2_EVIDENCE.json",
+      "sha256": "6455cbf38f9053e96afcdd0adf529dd3dd69ef6339270b88d56d0ae79f21b661",
+      "bytes": 84150
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/index.html",
+      "sha256": "f9cb02b7e9528d298786b90792d4c74f9e5ad33ccc2675eb85e696e904fd207f",
+      "bytes": 19185
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/001bbf4eb5_00_Afternoon_SouthStreet.png",
+      "sha256": "001bbf4eb5a56745134ea837528dd09ca2c2a7456d596fda5c48ffd94bd74a76",
+      "bytes": 2980036
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/02a4ba9973_01_Q_Harbor_WarmSkinCandidate.png",
+      "sha256": "02a4ba9973a8d4e2eda8de9cc17381f5b34d4562fc92f52c13e2d6919ddf9cf5",
+      "bytes": 3023098
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/0a8988e61b_06_T_Face_Neutral.png",
+      "sha256": "0a8988e61b18dcf34305a0dfe48cdf7125208feb480df1a7715464ac152b6d78",
+      "bytes": 1689207
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/0e42ca19a5_04_J_Face_Neutral.png",
+      "sha256": "0e42ca19a541d09df09c2dc530a3864c340eaa81ad54c03e5b75a8a18c7304db",
+      "bytes": 1850111
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/15dce38806_15_X_FullBody.png",
+      "sha256": "15dce38806ac673127c94e9a50728c8f051c6d98afa0899ebd8f2481ceca3d47",
+      "bytes": 1856700
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/27663f32db_01_Q_FullBody.png",
+      "sha256": "27663f32db1161ff3d733199bf8518f619906cd8bebd1b7f3c2d9214e804fa67",
+      "bytes": 2019834
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/2f8f88fc21_00_Q_Vendor_Context_0.png",
+      "sha256": "2f8f88fc210d338ce1fc5c989dfba9bd3238c104b476a783eb9fd2f48a76a767",
+      "bytes": 2867712
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/31b2002c6e_01_ActualParkLeft.png",
+      "sha256": "31b2002c6ea27d16fbdd4969f02da64a07c17bdb8bb83490b18a83f4b5eb27a9",
+      "bytes": 1907741
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/3293bd57ca_00_M5VS2_J_LivingDown_Stable.png",
+      "sha256": "3293bd57ca229a6ba61901c5663572506364f093a45b1f3f0cea92af4bd24da5",
+      "bytes": 1514934
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/35488bf7f3_00_Q_Harbor_Original.png",
+      "sha256": "35488bf7f305409798a80875154addb8d968464521b6f4aeda1bba00ab958454",
+      "bytes": 3019173
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/3c86816b0d_C_JapanCountryside_media2_browser.png",
+      "sha256": "3c86816b0d5df7534854d68592a9c3f984d7d4d340a7777bc2e6a546f87e70b0",
+      "bytes": 119538
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/3eb4baa756_B_JapanVillage_media1_browser.png",
+      "sha256": "3eb4baa7569c54fe3de83f9147b40efc34a01c50c915cc640ac05ced65a8077b",
+      "bytes": 138376
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/45ef653eed_02_Dusk_SouthStreet.png",
+      "sha256": "45ef653eedd3c46c731a6e21f2e6aee017cf976db7d1ec3af5af030a819d1a34",
+      "bytes": 2618710
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/4b1750c48b_00_Afternoon_HeroFullBody.png",
+      "sha256": "4b1750c48b9c981d804864ee7d237e5cb64d0fecd6ae696f3412f1f525660052",
+      "bytes": 3069067
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/4e3641adb0_05_Night_Promenade.png",
+      "sha256": "4e3641adb024dc9e3f2fe6a73cb6aba1b04bb5bb08b167383f44eae8df79b25e",
+      "bytes": 1944493
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/59e3cbd514_06_Afternoon_Air50m.png",
+      "sha256": "59e3cbd5140e3fbfd142f22868144d942f00c76331f1093ca26af762e8964848",
+      "bytes": 3455690
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/5a8572e8a6_03_R_FullBody.png",
+      "sha256": "5a8572e8a660a6a1b06cafa5e373b1416dc43fee0af65a2a4e945f8de15ecb88",
+      "bytes": 1879476
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/60231fdf1d_01_ActualParkLeft.png",
+      "sha256": "60231fdf1dda6369fba21810497e88a63f71384d99d9061c35152cf4898eeeb5",
+      "bytes": 2669096
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/67f0cf4f9c_09_U_FullBody.png",
+      "sha256": "67f0cf4f9ced30d0125221ce81a00535624be3e7ff3a884f57e6f87e5d8b6eb0",
+      "bytes": 1846126
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/6b7fa84a2b_00_Afternoon_HeroPortrait.png",
+      "sha256": "6b7fa84a2b64e64466375873652b0d4561eeaa0088dae389109b915190b8e0f2",
+      "bytes": 2897052
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/6ca5509ca0_01_Dusk_HeroPortrait.png",
+      "sha256": "6ca5509ca061b801e167ceabf047b90372095088a4cd3334bde35df415e6fb01",
+      "bytes": 2600712
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/6ffdee3c03_14_X_Face_Neutral.png",
+      "sha256": "6ffdee3c035368d8d28166d65804f848da73b6b3bb9310157b8a9bbf81eb6d4d",
+      "bytes": 1774258
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/7362f998e4_00_Q_Face_Neutral.png",
+      "sha256": "7362f998e4d69e30e24dfe877db49db97f5630d2dd4c2dabcd1c921f21628f21",
+      "bytes": 1889244
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/88ae92a4e0_03_Dusk_Promenade.png",
+      "sha256": "88ae92a4e07f5273e93e764e15db104e72acf6447cadde764d06541b0592eb6b",
+      "bytes": 2618725
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/8c69924ac5_11_V_FullBody.png",
+      "sha256": "8c69924ac50306747addd254eb4f8b50a3e4ac155cf466a10b4f454e92b87d78",
+      "bytes": 1864419
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/8df94920ec_02_R_SeaGaze_Context_0.png",
+      "sha256": "8df94920ec864e44b767ee99bff379c352ce898edabd89aaa34d7f0bd3f43128",
+      "bytes": 3098539
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/8f9f0f6f8a_07_T_FullBody.png",
+      "sha256": "8f9f0f6f8a6381983c081935ce5be7b0b4a95dbbd6a00491cb89ff64054055f7",
+      "bytes": 1849723
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/9d850e3d84_08_U_Face_Neutral.png",
+      "sha256": "9d850e3d841c53fa0ab124d0e56a03237779104d107b5d3f5bdd46bd8f2cb047",
+      "bytes": 1914422
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/a1c73da0d6_02_Night_HeroPortrait.png",
+      "sha256": "a1c73da0d63dd040d5bcc9ba213b3f3e87380bef4ad1a49a2e784cbfdb8227a5",
+      "bytes": 2441098
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/a94576e8f0_12_W_Face_Neutral.png",
+      "sha256": "a94576e8f05a115efd61f391c9b91d3cf5c4ce3a032a30599725f1510d26b1ba",
+      "bytes": 1886347
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/ab3c08da14_07_FootUnarmedLow.png",
+      "sha256": "ab3c08da1440377b7e524246902d7e5d1bf47455faaff80cebe2be454b5089f3",
+      "bytes": 2953999
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/ac31748e22_03_Interior_HeroPortrait.png",
+      "sha256": "ac31748e227eba69fbc51d2ff8c4bf38f72a2bd9390adbbd60a304b0bff45d7e",
+      "bytes": 2711676
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/ae21a888e5_01_Afternoon_Promenade.png",
+      "sha256": "ae21a888e5b35e69cf7fc4ed7faa8da823c0516c934c531be43db5ef3d9236d0",
+      "bytes": 3094162
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/b18e34451b_04_M5VS2_J_Death_After5Seconds.png",
+      "sha256": "b18e34451be118ea8f0ce588dbb5dcfab3697eb113a6cf52312c40251e6c998f",
+      "bytes": 1738367
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/bdae5203a0_04_T_Chat_Context_0.png",
+      "sha256": "bdae5203a008fa2cabe6330c3997bff7ebdeca9a734513bcf48cdc75a406398b",
+      "bytes": 3093184
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/ccb84a44fd_08_FootPistolLow.png",
+      "sha256": "ccb84a44fdb956c64cf28882a5e060bc2119f6d57a65f73f241c99b10c9f175c",
+      "bytes": 3136777
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/d20e689708_04_Night_SouthStreet.png",
+      "sha256": "d20e6897083a73908c3847fdf93d928f3edfbd3bb1fc45d7276059afa1c6b172",
+      "bytes": 2314035
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/da7c1a61d4_10_V_Face_Neutral.png",
+      "sha256": "da7c1a61d4380112bcf2e1bd18d1778a5d18d0c109ccf95b80436536979ac564",
+      "bytes": 1760391
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/ec04ef32e2_13_W_FullBody.png",
+      "sha256": "ec04ef32e2cea2b93d00d71cb9f18d1e550f3402cdfa64591ddd9cde00c514fc",
+      "bytes": 1988634
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/faf6df40e3_02_R_Face_Neutral.png",
+      "sha256": "faf6df40e362898667aad088eadb07deb1d79c23ac3ed0baa533db56a3fa9221",
+      "bytes": 1820482
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/media/ffad7adf4e_05_J_FullBody.png",
+      "sha256": "ffad7adf4ef544eb7abcb4ac96d11b1931c49a21ea173bc30e27e33fef293dfc",
+      "bytes": 1990850
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/README.md",
+      "sha256": "1b6b14966358ced126b9463fd44f0fef3bb3e70fa7f630bb6d54eb155c958579",
+      "bytes": 461
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/STATUS.md",
+      "sha256": "9a79dd7727e4445ac4e023e167f4eefd8ec08575f52cac366904bc6472ceb2a4",
+      "bytes": 1693
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446_ZIP_INTEGRITY.json",
+      "sha256": "f30d188f5536e568c0dce101aae8c1fcd589204e33c1d6c7b07836fba1959c7e",
+      "bytes": 16309
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/SECOND_GATE_DELIVERY.json",
+      "sha256": "579ce269837661d236da2a5ba76f080b36def77f121dee3b83a9035a76e1f035",
+      "bytes": 687
+    },
+    {
+      "path": "docs/HarborCity_M5_VS2/WORKFLOW_OVERRIDE_20260925.md",
+      "sha256": "daedbdf29b6bb02ae008a05158149a3d7b451d672168bd6e82c24af92dbae12b",
+      "bytes": 812
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/HarborCity.Build.cs",
+      "sha256": "f089561e4eb60ce244b01d7243083e8f2e63fa3f91399f014a9843d4fc946eaf",
+      "bytes": 2528
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4R1/HCM4R1PhysicalReactionGetUp.cpp",
+      "sha256": "51c3850c06c2ef322b4c562fd8250729e847d70973d68f074b36bcd159c9d3ab",
+      "bytes": 16752
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/AnimNode_HCM5VS2PlacementInput.cpp",
+      "sha256": "6f811c98fa3a67162eda82ba24e2efb8bc865c1dbad4da0516e99a4263683e74",
+      "bytes": 6842
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/AnimNode_HCM5VS2PlacementInput.h",
+      "sha256": "7024f668e8357ee09dc1d9ed8c3d0d165a20a6945b9649c79b24ec8d13239936",
+      "bytes": 2190
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerPerformanceDirector.cpp",
+      "sha256": "d2c2a2b6351873d4a658f13e6dc08e38312ec4e045c54b8f1cbe796160eebe1b",
+      "bytes": 29035
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerPerformanceDirector.h",
+      "sha256": "3643c93ae0730375181b1bd4c1ada967f2705e88a63574d472bc9a571c323b39",
+      "bytes": 2973
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerReviewDirector.cpp",
+      "sha256": "0f9b7444be09757d414ff46c237bba371da30bebcf1962391512ab0ad09915ab",
+      "bytes": 53588
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerReviewDirector.h",
+      "sha256": "a32a4ffc2253984251aef6b3654ff395bd386f2c07d9a4d4e68d55c5c6ab82c8",
+      "bytes": 3333
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerRevTwoReviewDirector.cpp",
+      "sha256": "50c3c89789af5608ab3afc5ee5a8693cf6212833fa889c16a8f0213f105e46ff",
+      "bytes": 54355
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerRevTwoReviewDirector.h",
+      "sha256": "1a0ac084e66fae3b25025dc1b36caf36422ea95639f8c88aa9e5ffe8ff6e5453",
+      "bytes": 3444
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.cpp",
+      "sha256": "12148fec7743cf20bb7e640980f88a4f69d410cf929dd8e2882e202120f99cc2",
+      "bytes": 8253
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.h",
+      "sha256": "03356cd8b612a34f30fb90d6b6c87dad3e504cf010b20c0c459524555d4eebd2",
+      "bytes": 1431
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2DrivingHandsComponent.cpp",
+      "sha256": "5a3783c3f882ba84babeaaf7ff63cdf9a30eebd8acabebdcbe31e1dd64e851a3",
+      "bytes": 27996
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2DrivingHandsComponent.h",
+      "sha256": "79ba672abfbce1d91e6a72bc5795690b1578ae11fd2ac4fb58b50ed08101516a",
+      "bytes": 2857
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2DrivingHandsReviewDirector.cpp",
+      "sha256": "22edc92106e5e08150a510662125029348677254ae7a4a604998f11c54f1f7ff",
+      "bytes": 30043
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2DrivingHandsReviewDirector.h",
+      "sha256": "3fc6e2b05561326d6260fca9fd3dcf9c6569f62fc9b8a696d080c869df281fed",
+      "bytes": 3191
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2ExpressionComponent.cpp",
+      "sha256": "062b17b67d466e87c75ef6dda80abe3c071f44b0c01cd178c69811dd97cc2a2b",
+      "bytes": 13702
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2ExpressionComponent.h",
+      "sha256": "4a2345f79f8f6cb8c34f29e79faaa4d45d85137ab1c3674701ec09cd8deb79ec",
+      "bytes": 5443
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2ExpressionEditor.cpp",
+      "sha256": "95cea868f4eb075635cb29bf836946f5b8e68cfcd3eaa3cd7ee6b57d7b2ae739",
+      "bytes": 14317
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2ExpressionEditor.h",
+      "sha256": "af98bed86ea49d8484691ed0f620957e8102de24bb0d6a32ca9b48645a194502",
+      "bytes": 837
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightCollisionR2Director.cpp",
+      "sha256": "5a140369129c608ef95b3f12c811da66496ef49efeb314bf3a13c647ab27b38b",
+      "bytes": 28000
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightCollisionR2Director.h",
+      "sha256": "61415760cb8428e2f38a5c3b97ce1fb483ad43fd83f0c8665c5ee546ff28aed2",
+      "bytes": 3285
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightComponent.cpp",
+      "sha256": "cde54fbe007c1ef986aeb9e1c639add18e4b38125cc8b4fec471739d94120254",
+      "bytes": 20179
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightComponent.h",
+      "sha256": "11076ed946df530a492aba264404de532fa551beea3a33d72746a976a33e9c47",
+      "bytes": 5388
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightDemoDirector.cpp",
+      "sha256": "cdccca57f1217fcff904471b7b379379ec448ec2f11ff5bb1421c3cbbad7c5b7",
+      "bytes": 38876
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightDemoDirector.h",
+      "sha256": "ef84a0fdfb826192a712b50c758c7b06724f6fa8581408298ecf30b3db3cc12a",
+      "bytes": 3678
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightPoseEditor.cpp",
+      "sha256": "fc3d8da62f1d662b2a7bf3515ff0053a5fb0dca07b61a6a94bc9225c5ce9bea4",
+      "bytes": 23114
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightPoseEditor.h",
+      "sha256": "d861a8fdb9de0a6bb1ec8275929c34b726d3997c496420db4560e757595d04eb",
+      "bytes": 1035
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightReviewDirector.cpp",
+      "sha256": "fc54e1bf9ad2d71b1c8d5eccf5e3e56178a84371e316238ed8e73266f0185bda",
+      "bytes": 45568
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightReviewDirector.h",
+      "sha256": "7baf8d29a7985f811b06e6e20b1fb049a2a3b327ffe7117df7447934103c3601",
+      "bytes": 3119
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightVisualComponent.cpp",
+      "sha256": "6267ad2aac8b42f58ddd0ad9e32e6ee98a0ad0deb86c1a7fe9edd5091f9206e1",
+      "bytes": 11753
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2FlightVisualComponent.h",
+      "sha256": "31d98c44efe0efa534ccd06ffa7dd41444ec9cfae4396114b09c40e5186aa102",
+      "bytes": 3071
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASAnimationEditor.cpp",
+      "sha256": "6da04045ec2b38fad12101a06549bd3ecaacaa0ab73a2aeed6f74fec1e0df379",
+      "bytes": 39682
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASAnimationEditor.h",
+      "sha256": "0e5bd0965a05461269b92ad98ad4a87bc4497e98f0a6a5ff0c089119aa27886b",
+      "bytes": 1737
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASClockEditor.cpp",
+      "sha256": "f8b1cfb9eca72e418517bb9655d4c53ce1aa7191602106a7f0b6e220135e45ed",
+      "bytes": 10729
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASClockEditor.h",
+      "sha256": "7ab81b87054be4fe63bbffad2d25d527adaa4dcb2756e2ce3840bcec6505d2a1",
+      "bytes": 627
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASLocomotionEditor.cpp",
+      "sha256": "b3361454a289eb07b8d14edd587b28fada486c956074efc9382d4c83c2571f96",
+      "bytes": 11810
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASLocomotionEditor.h",
+      "sha256": "fc75120e59578bab6279c5637dacca1aa6a5c665a06066f34d45a9e453d55a3c",
+      "bytes": 952
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASMotionEditor.cpp",
+      "sha256": "ad29658b81027e2290f0bf46eaaba868eeeb86c3b96d04a11bcf2ee3dd5d50e2",
+      "bytes": 29513
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASMotionEditor.h",
+      "sha256": "11e551172824454155279d748f2363e12d4fbf9b5b13fdd8572d5327e6c94901",
+      "bytes": 1519
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASNormalizedEditor.cpp",
+      "sha256": "b19255631ec88d3636096e41645e55ffbd5ed446cc17c4d26406e074c82f1317",
+      "bytes": 9816
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASNormalizedEditor.h",
+      "sha256": "bdfaa08c754af3254b6f54e6954a3c631bba80b3120739b17b51b75f9dcd39c6",
+      "bytes": 715
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASTransitionAssetsEditor.cpp",
+      "sha256": "99c635d1e41f74b26e694fbb79c02e4080f41835b83d371c2e4be3ea34bf125c",
+      "bytes": 62216
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASTransitionAssetsEditor.h",
+      "sha256": "ac0fd2ef1cf733477f473b1e9fb87a2ce89b0e9c6e62535813dd26a3d79e48b8",
+      "bytes": 1199
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASTransitionEditor.cpp",
+      "sha256": "a8e1d91cf630a56f53d03f03cb3f308a4562e334640cffee2f285cb7c859f60f",
+      "bytes": 13491
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2GASTransitionEditor.h",
+      "sha256": "a05ebb493468b4a1688f83097d7ec340e57a419fe42810f05f4948915663e6f1",
+      "bytes": 642
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HairReviewDirector.cpp",
+      "sha256": "5424640feb516717e7d0441b34352058c44ff73e38861be3d7398e8b21ac30ed",
+      "bytes": 61731
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HairReviewDirector.h",
+      "sha256": "77961b8ec77d2187626518da32eb43fd0e8935aafa62643ec9d53382a76d1d7b",
+      "bytes": 4400
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HaloComponent.cpp",
+      "sha256": "df23c8f9701d9d7656f6b14a0b2e907a373b1caa39c9fec4b914f4dbd317ccc8",
+      "bytes": 7098
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HaloComponent.h",
+      "sha256": "7f3c0fb17beefcb7ea79bf8c31321738a71fc7ea94defcec4a8d89b5fddc9418",
+      "bytes": 2027
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroExerciseDirector.cpp",
+      "sha256": "516a2e4fec2463183530158d9b7b8c1654653b8120370ed0ef27ef945baeaa4f",
+      "bytes": 91710
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroExerciseDirector.h",
+      "sha256": "ede2a84c72572ea49680cd24f7152e553ba68ba961c8572b5a33f68e310528f0",
+      "bytes": 7107
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroFillEditor.cpp",
+      "sha256": "56b9c05d8952d90a23fcbc0f48d0eefa6809b6713637ceaf97c0f3817d9a2535",
+      "bytes": 9466
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroFillEditor.h",
+      "sha256": "b6c549161b1417b94eabf043d013d94781f822d3bb11b2393f117cdcc241419b",
+      "bytes": 521
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroIntegrationEditor.cpp",
+      "sha256": "7f8dbb73e38347feed05c5a30adae0fc8bd324903cef38000e6ea6d4cc6cf91e",
+      "bytes": 4978
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroIntegrationEditor.h",
+      "sha256": "bade48da546410a1bf1fa88d33012ff7a8ccf04cf77a67f4b0c5529812c8da44",
+      "bytes": 579
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroModestyComponent.cpp",
+      "sha256": "0e61d6f040c7743f211aaacdeadc545a0429dc3b76d3748d13e14d7df82adc7f",
+      "bytes": 28344
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroModestyComponent.h",
+      "sha256": "4e13f97de35434817110c9c4463101f45dc7518251a5a752fc57b943dd52410d",
+      "bytes": 2192
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroModestyReviewDirector.cpp",
+      "sha256": "e7e7726ebe3beb10b1504c3d978fd4e24686d2c996b80edd671eeb5c4ed07622",
+      "bytes": 24014
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroModestyReviewDirector.h",
+      "sha256": "406e26cfdc7ac97bba6c3e16a112ef72a50e0a9da89491f175789428183dc3d8",
+      "bytes": 3125
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroOutlineComponent.cpp",
+      "sha256": "a58a449b59f0d9eb0c8ad42577e2a04ced39727cd4daaf4b6e95b89b716dfc27",
+      "bytes": 6750
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2HeroOutlineComponent.h",
+      "sha256": "8bc6d06fa21065ac8a2a594eadd4aeafd14ca25209812969de242e6c6a1154da",
+      "bytes": 1565
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2LookAnimInstance.cpp",
+      "sha256": "3d3ee929cbe9f0ae30eb64d76acceb6427b441dd4f6fdfef6f40688b48b4fb89",
+      "bytes": 14138
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2LookAnimInstance.h",
+      "sha256": "afe072a5c2d43ffa75ef7edf46340f2b391caecb5476588e19cd4fdba4003fb0",
+      "bytes": 3943
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2LookdevDirector.cpp",
+      "sha256": "5f232438d2dbeaefd964b7f1ac041a69ce27f3aaa1fcb12de8c47199f5435897",
+      "bytes": 49206
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2LookdevDirector.h",
+      "sha256": "819834ab150cc44fdeefa61eee931922df770a22c24b07f4274c1d33cdba1642",
+      "bytes": 5570
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPC.cpp",
+      "sha256": "21fa446800913622d45a43ea974ea10b17a21be025f22e224ac2d0876750546e",
+      "bytes": 3517
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPC.h",
+      "sha256": "3e0205cde23a64e109df880b5f2da5037da9a231809b5c3edfb89a8622e8779f",
+      "bytes": 1248
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCAnimInstance.cpp",
+      "sha256": "35cf53180c17b19ea91f16b7ce81e3ac557a3ad731f22bd5f51dcec247b80657",
+      "bytes": 2046
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCAnimInstance.h",
+      "sha256": "d4d89e5b40a9901c0a11827f800fa1bc41e2e8a940d5499eb6d6af39219537e5",
+      "bytes": 688
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCClothDiagnostics.cpp",
+      "sha256": "d3376d078b4d9ed1693890c3800e77aa4abc014a45edf530fe5a857ac83272fa",
+      "bytes": 26449
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCClothDiagnostics.h",
+      "sha256": "e51aec3a56972d11c4e59aa79e9b5136eb4aeadde707d21a27aebb69fd8e1d93",
+      "bytes": 887
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCEditor.cpp",
+      "sha256": "52c645d301870736c44ea343a4ed367a908db6a47d45b0a5e78d4e82bb17e449",
+      "bytes": 75563
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCEditor.h",
+      "sha256": "bee621d48a7dd7e5b3dd840825941fdf2efaf0f50fd2b22399f70f2a33f1ef2a",
+      "bytes": 1515
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCFaceComponent.cpp",
+      "sha256": "c694a3e0b5025e84ce54ba30fb9c4b4206cc09ce67a890a7bce34ffc4abee634",
+      "bytes": 9311
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCFaceComponent.h",
+      "sha256": "b927f758da48a79f0e3791510a459d7a527285cc0a6bb46bedbbd6a2a457db59",
+      "bytes": 4333
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCGameplayEditor.cpp",
+      "sha256": "c9c5b105ea7d04da5c86b21eff55802f4b641855d6d0b1d3871b287c2c415fe6",
+      "bytes": 10849
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCGameplayEditor.h",
+      "sha256": "004c711faa2a064c98726aad5a6888ce15374cf93a876dd2b5c58be92a264043",
+      "bytes": 856
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCGameplayReviewDirector.cpp",
+      "sha256": "63779d8b21051cc7924e786f62653cf22840c36d4115ad75cb43ff339ec4fc71",
+      "bytes": 37213
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCGameplayReviewDirector.h",
+      "sha256": "71e43e344628487072f37799047ccf7c51f734550af880ad53da9d2109a6e752",
+      "bytes": 2706
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCIdleEditor.cpp",
+      "sha256": "d2fa1c9f7df55338f631ea14d359f4cca7b1fb1aea07a8ecc1dce000304d3a76",
+      "bytes": 17989
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCIdleEditor.h",
+      "sha256": "d453cb15d18cd25cb4f6349161f728f3856bc16a3fa3dab728ee774ac6e52be3",
+      "bytes": 1030
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCReactionReviewDirector.cpp",
+      "sha256": "e682717b8ed2baddc1347b31e9b64cf2b45a35c2f59c4750cebe4e96cb05c6e9",
+      "bytes": 69855
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCReactionReviewDirector.h",
+      "sha256": "dbfc7f576a192958aea1fe3123140c30ec8b92cacc0153d38ec1f574f8b49538",
+      "bytes": 4126
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCReviewDirector.cpp",
+      "sha256": "5f5f632a230a3e2c8d1a72c1c4aea5210a8f4b2cfaab2b35904729a0e5dee7f4",
+      "bytes": 52823
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2NPCReviewDirector.h",
+      "sha256": "2337945ac15ff7e38d821ed61eec1f7ce2d50a15eb2188b8a1c50fadcad9e037",
+      "bytes": 3408
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2PhysicsEditor.cpp",
+      "sha256": "a6ee6b0bbdc1162fdffa003c6c243b20b1aff90512458d76a2d40a9953832d23",
+      "bytes": 57612
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2PhysicsEditor.h",
+      "sha256": "90fe0e3f80c6b019b5e90ce17c6b496bdc8431a6679bc5c4a136a3526a9c203f",
+      "bytes": 2651
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2SoleDiagnostics.cpp",
+      "sha256": "54b22c13e15f1e5350474517e66df671d254ef5d21d5dbc6c611990186315379",
+      "bytes": 19764
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2SoleDiagnostics.h",
+      "sha256": "0d6299bb0bfc1d60b11659833cdd66b7440ba67b8482b6f5c57108552a83be1a",
+      "bytes": 1541
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2VillageEditor.cpp",
+      "sha256": "80cc33bae92a6e8bf55ae46bfb68388ed9e15687a2b0a7ffa1cd8b7cbec7a279",
+      "bytes": 20629
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2VillageEditor.h",
+      "sha256": "a538393ead1ec4fa5f8f5d457d936073936f0abd3b555712471aa2c068619063",
+      "bytes": 781
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2WingMaterialReviewDirector.cpp",
+      "sha256": "03f2bf37090d0ce611e77aa44786572d2170dafd5945ef2c6df1db3b9052f511",
+      "bytes": 22136
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2WingMaterialReviewDirector.h",
+      "sha256": "719821c51d6417e9d249cb4a988417f02e91815c7c63a979659de52843270e99",
+      "bytes": 3177
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/AnimGraphNode_HCM5VS2PlacementInput.h",
+      "sha256": "a57960c0bb5b8ecd30329c320b6e1a4db6c9d32227d55df2fcae4647e8aaa88a",
+      "bytes": 986
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HarborCityEditor.Build.cs",
+      "sha256": "4f1f49cbfef834674e0cac39461a8538d0f7b2da2ae6d4b27760a08aa652822e",
+      "bytes": 693
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HarborCityEditor.cpp",
+      "sha256": "63f625393d17946117ed2f1ba8c34ea3cbc7be3d88dfd7a37e4c2dd0ee7a4925",
+      "bytes": 90
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HCM5VS2FootPlacementEditor.cpp",
+      "sha256": "dee8b7f062fa6c2b203c676e891a5f833665b77fff603f806b705c4799ef18be",
+      "bytes": 20691
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HCM5VS2FootPlacementEditor.h",
+      "sha256": "225678cd6b7ef93038129ddd7e15d669d36293a9f21dd28df85edfb61904e377",
+      "bytes": 1001
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HCM5VS2NPCJClothingEditor.cpp",
+      "sha256": "b26781bf2dca55f6c52f40f5808367f3fa2621e80860632a81d1677a8474daa2",
+      "bytes": 40630
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HCM5VS2NPCJClothingEditor.h",
+      "sha256": "16db7ca39e318d8d815a2aa3c88da9e1d8716d423b08dcbeee0c4343cd6e6cf9",
+      "bytes": 1656
+    },
+    {
+      "path": "tools/acquire_m5_vs2_plugins.py",
+      "sha256": "794ca97405c4e3766d48fd318bcf8dd8f837378b8b358f80ac7b80b7e81b8db8",
+      "bytes": 3129
+    },
+    {
+      "path": "tools/analyze_m5_vs2_gait_clock_residual.py",
+      "sha256": "43ff6e31354fdf0a4748d8e8666207890867bc5effbdf735c59c7dccebb96ae1",
+      "bytes": 8505
+    },
+    {
+      "path": "tools/analyze_m5_vs2_gait_sole.py",
+      "sha256": "5b72c0f19673e78ac6c13ac34ec6d87c20ac460f1a21fe532f8873d65582630e",
+      "bytes": 10978
+    },
+    {
+      "path": "tools/analyze_m5_vs2_hero_gait_normalization.py",
+      "sha256": "cfc6626e3529483510fff2ad3cf594be55dfe08cbf06b797146bd62feb415efc",
+      "bytes": 15905
+    },
+    {
+      "path": "tools/analyze_m5_vs2_npc_support_9fe51bab.py",
+      "sha256": "e5bfd8597f4a82759cd6a3d9dc12bcb20ac25368205b4b8e0cf18a1eca189954",
+      "bytes": 5313
+    },
+    {
+      "path": "tools/assemble_m5_vs2_p0_review.py",
+      "sha256": "1284d7a0a9ad72db2bfc49b40932b4df8e79b3e53f0c206702da615902eacbdb",
+      "bytes": 27816
+    },
+    {
+      "path": "tools/audit_m5_vs2_npc_joint_pose.py",
+      "sha256": "f001b4a92c2567710d3353ee0c8eb125ec6e7190ea81c73c23dada9737c13bba",
+      "bytes": 16646
+    },
+    {
+      "path": "tools/begin_m5_vs2.py",
+      "sha256": "d738a060dd703f8447c79651980b97d9471ba6379d96e25106672120d15f3c56",
+      "bytes": 4813
+    },
+    {
+      "path": "tools/build_m5_vs2.ps1",
+      "sha256": "44c2ae351f657a756e14257ff7291eef3cf00bc7bd85057c7b7e32b7cf4a7bd8",
+      "bytes": 1137
+    },
+    {
+      "path": "tools/build_m5_vs2_gate2_review.py",
+      "sha256": "0d9c4cdc0a4886e14daec85ae8a3435db3abbc2a6a465db1a461d9a4db5c2d82",
+      "bytes": 18244
+    },
+    {
+      "path": "tools/encode_m5_vs2_flight_demo_r5.py",
+      "sha256": "1282162735d382dadef285139becea29fab03e1742f5724089431546c847d1c8",
+      "bytes": 36321
+    },
+    {
+      "path": "tools/finalize_m5_vs2_gate2_review.py",
+      "sha256": "0818d6047815bad66a3d53c53427c4cdb7facdbc519c59d2018cef5732fd1e6a",
+      "bytes": 6053
+    },
+    {
+      "path": "tools/install_m5_vs2_plugin_sources.py",
+      "sha256": "5aaa6905365c23bfcee89567b58327c38e6d919b2c262584eff954f4b6260dfd",
+      "bytes": 2102
+    },
+    {
+      "path": "tools/launch_m5_vs2_corner_performance.ps1",
+      "sha256": "7425cdb0c7e85d759689f52b29a7c876bbe8201c9a9fda3c3b341e8f3c68b37d",
+      "bytes": 7370
+    },
+    {
+      "path": "tools/launch_m5_vs2_corner_performance_r5.ps1",
+      "sha256": "c08ff5248254626c19ab052c2979876572040a51f3b8c0bcc0a21febe3a2df97",
+      "bytes": 14889
+    },
+    {
+      "path": "tools/launch_m5_vs2_corner_playable_r4.ps1",
+      "sha256": "bd9a9e8dbb5c8b25917ed7a5ee48df8054ec60bb9a3882ef4e9b86104625334d",
+      "bytes": 9207
+    },
+    {
+      "path": "tools/launch_m5_vs2_corner_playable_r5.ps1",
+      "sha256": "a8d0c27a3daffe5f433f245484fb05c0b5ffa5f2256ca7e1385eb768e81918f2",
+      "bytes": 9723
+    },
+    {
+      "path": "tools/launch_m5_vs2_corner_v2_review.ps1",
+      "sha256": "29344d326e3f121eec3c4220de2ecc43911fac37761863dc7c3ba0614ad940c3",
+      "bytes": 6401
+    },
+    {
+      "path": "tools/launch_m5_vs2_driving_hands_review.ps1",
+      "sha256": "b705559a70849e2e6d56cf79cf0abbb4e110a0e4f3106183161756e9bebadb46",
+      "bytes": 11561
+    },
+    {
+      "path": "tools/launch_m5_vs2_flight_collision_r2.ps1",
+      "sha256": "0d608eb869244f1a55e333d7178bd0da9a025401d779141aede5b7d16949d684",
+      "bytes": 12117
+    },
+    {
+      "path": "tools/launch_m5_vs2_flight_demo_r4.ps1",
+      "sha256": "607d9af2cec9c90e0079226a9ec9329bad03b99c86bab1c36eaea9f4e03d9134",
+      "bytes": 10283
+    },
+    {
+      "path": "tools/launch_m5_vs2_flight_demo_r5.ps1",
+      "sha256": "cc1d7ff61966c3fe53bae490bfce49e04a2e5f693333d6e63bc98444b8149b16",
+      "bytes": 10943
+    },
+    {
+      "path": "tools/launch_m5_vs2_flight_review.ps1",
+      "sha256": "f3bd1d569b88e61a20eaaca20fae70644e4108975eb7b366b7b1c80368072437",
+      "bytes": 7423
+    },
+    {
+      "path": "tools/launch_m5_vs2_footplacement_sole.ps1",
+      "sha256": "7cbdd7602632ddee965e2ad5efdae4e169a71f157aaaf0ece67a12aecb6bcd7e",
+      "bytes": 15034
+    },
+    {
+      "path": "tools/launch_m5_vs2_gait_sole.ps1",
+      "sha256": "72a9a696eb63ee2a141dcd3b658fb399c3b0f2d6947581e438373d58b10bc86f",
+      "bytes": 11481
+    },
+    {
+      "path": "tools/launch_m5_vs2_hair_review.ps1",
+      "sha256": "28650483301a6e60e1ba8cd4c4f778f29473da75af6b939c390819e4f4a64e2e",
+      "bytes": 9047
+    },
+    {
+      "path": "tools/launch_m5_vs2_hair_substep.ps1",
+      "sha256": "912a116e4a46577ea7349076278f52c418c7b43ea81701492068310c0ad57a3d",
+      "bytes": 9946
+    },
+    {
+      "path": "tools/launch_m5_vs2_hero_gait_clock.ps1",
+      "sha256": "3b9839d64a620b6d3762cbf1198a3fb817cc843dc974b8e6b0da3fd79021d186",
+      "bytes": 9523
+    },
+    {
+      "path": "tools/launch_m5_vs2_hero_gait_normalized.ps1",
+      "sha256": "60d20484091d7ae48f35c16a63aecf414cd4a18d4bee78fc941c3a711170eab9",
+      "bytes": 9686
+    },
+    {
+      "path": "tools/launch_m5_vs2_hero_gait_r2.ps1",
+      "sha256": "eb096367b2f89805f13e6abee627cd57dfab9ce26559d01ea22bf2f7e41cad3a",
+      "bytes": 7325
+    },
+    {
+      "path": "tools/launch_m5_vs2_hero_modesty_review.ps1",
+      "sha256": "ea9b725f05644f0f9655bcc5576fb7e4f4f89cd53ffc852a7e56c94598e34b8d",
+      "bytes": 10483
+    },
+    {
+      "path": "tools/launch_m5_vs2_lookdev.ps1",
+      "sha256": "923b7e8b048528d0ac7d2e3428c6d544ad972980f855ce136929f035fe3aff9c",
+      "bytes": 14263
+    },
+    {
+      "path": "tools/launch_m5_vs2_npc_cast_review.ps1",
+      "sha256": "e272c87e0487bdfa4cb560057c29df35eca4cfc60578a9ff4dcd6d9f05c3c4b4",
+      "bytes": 17387
+    },
+    {
+      "path": "tools/launch_m5_vs2_npc_j_clothing.ps1",
+      "sha256": "8e7389363258ec3a02ea1821ebc3404ba0009889ad00aec4a9218cbb3e8c62e5",
+      "bytes": 5341
+    },
+    {
+      "path": "tools/launch_m5_vs2_npc_reaction_r2.ps1",
+      "sha256": "ef455019c98f93cd79a34f360f0bbdb4284f24b297f90f8616cf499528bc33eb",
+      "bytes": 15314
+    },
+    {
+      "path": "tools/launch_m5_vs2_polish_flight.ps1",
+      "sha256": "544c0ecb6d952195f02c83b8563caf6d1a341008b4ee49a3a32edbef024f95c4",
+      "bytes": 4610
+    },
+    {
+      "path": "tools/launch_m5_vs2_q_harbor_compare.ps1",
+      "sha256": "2a9effeb54db41c5fc7b932b721812962b56fa494c75b5bea2f71698a759ac93",
+      "bytes": 4267
+    },
+    {
+      "path": "tools/launch_m5_vs2_scene_idle.ps1",
+      "sha256": "1d05544baba55679ffddddee6b743efa97cc22db1ecef5d2267fff0d5dd762f5",
+      "bytes": 3824
+    },
+    {
+      "path": "tools/launch_m5_vs2_wing_material_review.ps1",
+      "sha256": "674d05788686684d3e52fac3029ffd0ed45f214529b71839e25e262a6bd36dd1",
+      "bytes": 12997
+    },
+    {
+      "path": "tools/m5_flight_evaluated_pose_summary.py",
+      "sha256": "829a9f39ce9a8436991701c7ed18495249d6103dd0d52b407ca1e345f98999e4",
+      "bytes": 1746
+    },
+    {
+      "path": "tools/m5_j_cloth_classification_review.py",
+      "sha256": "a51eb71cb373340ebcea441288dd845b0790389b740b8e3f58d8f04e983740ff",
+      "bytes": 1799
+    },
+    {
+      "path": "tools/m5_j_garment_source_geometry.py",
+      "sha256": "da91984aa3af225414f38f13b6daf60b89ab89fb51c559b26d5d6877bcc95851",
+      "bytes": 2328
+    },
+    {
+      "path": "tools/plan_m5_vs2_gas_transition_cuts.py",
+      "sha256": "e1566ce3c6781cd403842b22e0be203b034cba71133b23f994035899112a3735",
+      "bytes": 8129
+    },
+    {
+      "path": "tools/prepare_m5_vs2_selestia_physics.py",
+      "sha256": "1540c068268a23158401272baa4e6d135588a5181f9862cdb9ec93dc1d0f67cd",
+      "bytes": 10696
+    },
+    {
+      "path": "tools/relocate_m5_vs2_cache.ps1",
+      "sha256": "494870d22cc81ceabb01c7a9671e1431afd6eb822dd73649e9af99a8b9f55479",
+      "bytes": 3971
+    },
+    {
+      "path": "tools/run_m5_vs2_gate_baseline.ps1",
+      "sha256": "3b0ab8af09c210a9191856f86ceed78bd027089d517d7f69c4198d05d177f34a",
+      "bytes": 4358
+    },
+    {
+      "path": "tools/run_m5_vs2_npc_reaction_matrix_r2.ps1",
+      "sha256": "298de8506e1481ffbc1adeac0b5920bff2ea793e0ad3d90072f23e74f11ac23e",
+      "bytes": 19647
+    },
+    {
+      "path": "tools/run_m5_vs2_npc_reaction_subset_r2.ps1",
+      "sha256": "a5216095c82bd29f6f69eb53654342f765bb087ec0d355d1723732c2d56a4743",
+      "bytes": 23257
+    },
+    {
+      "path": "tools/ue_m5_vs2_author_run.ps1",
+      "sha256": "bcb57cbc4d6acfcc5c3dfa533b9c1726549ea9c81f9e572f8c69a535c32798d3",
+      "bytes": 8972
+    },
+    {
+      "path": "tools/ue_m5_vs2_cloud_probe.py",
+      "sha256": "d19a6a133be524d935e8d0dbc124e9b526a9ae626b4bb3d0dafff99408d61eee",
+      "bytes": 18278
+    },
+    {
+      "path": "tools/ue_m5_vs2_coast_diagnostic_author.py",
+      "sha256": "b0a0418cdc393723f1b38627d140076e7c206074c1b80be1d65b2d609f3d6c1f",
+      "bytes": 16325
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_performance_author.py",
+      "sha256": "fefca123b274884429f77265200076f1a662e18467d903e866eb1a0fd020286b",
+      "bytes": 13033
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_performance_r5_author.py",
+      "sha256": "9c3553e88d4f74679a4a663471224b1d897e192e28da9b6be5e1b1f0f66c8dad",
+      "bytes": 17144
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_playable_r4_author.py",
+      "sha256": "f09ed9597fe6156e7781cb29c64158d19af6412a4d2731f4bb7f5bd653d0d5b4",
+      "bytes": 27712
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_playable_r5_author.py",
+      "sha256": "3e9d1b7b105817346e895833501a27dec85a5cd993289a834396ac00382af853",
+      "bytes": 34852
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_r4_author.py",
+      "sha256": "dc45cefbee8b6224f478cdd6a1fa8c77075be07ec0e95a020efaa7969f2f61b8",
+      "bytes": 68149
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_r5_author.py",
+      "sha256": "bd16261aa61d7c7edc1ffa0d14bd95d39c2b534256d70dc35a9813860d72be74",
+      "bytes": 79283
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_review_author.py",
+      "sha256": "c2d4d878c7793cfe9693ff02e958883fca1e0d3ef4918c7a22d02b355d7b9aa5",
+      "bytes": 18811
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_style_compare_author.py",
+      "sha256": "95e0319fe366aac9950dccfe92cb58a875a7e298183513f61687cc689d99a6a0",
+      "bytes": 22421
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_v2_author.py",
+      "sha256": "c559124fc454dc8c46575d45b9f270dc903119831514cc3b6bb301a21b4aeb05",
+      "bytes": 61178
+    },
+    {
+      "path": "tools/ue_m5_vs2_corner_v2_review_author.py",
+      "sha256": "787add26f8c48f02d70ed224c0a2197131097595e8fe49f4a4fda8d2486084e2",
+      "bytes": 16120
+    },
+    {
+      "path": "tools/ue_m5_vs2_driving_hands_author.py",
+      "sha256": "8e1ad5073d6b88b1ad52c905aa715a507815d9c45fa80726494dcebacc924620",
+      "bytes": 12140
+    },
+    {
+      "path": "tools/ue_m5_vs2_driving_hands_review_author.py",
+      "sha256": "8ac96e1c27058e86fc14878ee36d418f54ed9c8f146ccb180dc8953b2a0e7e01",
+      "bytes": 19486
+    },
+    {
+      "path": "tools/ue_m5_vs2_environment_probe.py",
+      "sha256": "707ded775ad723e44f54d4b1887e38ca158a1ab76cc47b523204738701794720",
+      "bytes": 14015
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_collision_r2_author.py",
+      "sha256": "ceacc9ede5669a65fcbd0f54a83a542ba2fdeb9038c9d3b05513655444142ee0",
+      "bytes": 15366
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_demo_r4_author.py",
+      "sha256": "4d48d81e4a4805f4d922a26f0384eff8d3e9dc18fd648554b4070ed55bb83e99",
+      "bytes": 19546
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_demo_r5_author.py",
+      "sha256": "5b6bd4ac737804e154289aea9253fa61135c1a6140ee865ee35c27efa5b14755",
+      "bytes": 20441
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_pose_author.py",
+      "sha256": "54a612ac416078882782bc49e902899cfea228609d1aefd8109fdc579124df90",
+      "bytes": 9102
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_pose_polish_author.py",
+      "sha256": "ac3dfca997c90a3d6257229e4bdc452bf073fdf5dceca0e94002df1e0bb9dadc",
+      "bytes": 4971
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_review_author.py",
+      "sha256": "0b2ccb18ad5d31deabdeffe4493832ebf79efa453a7643545eba2d927b202c85",
+      "bytes": 12802
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_schema_probe.py",
+      "sha256": "998374fb2d7453f87c2a7690248afce853bc35f821b95301c7d52e02e0ea4f84",
+      "bytes": 1196
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_visual_author.py",
+      "sha256": "c62905110da97bc39bc6e56c9d34e9527db38cd4ca69893b787e9f2cb68efc0b",
+      "bytes": 13843
+    },
+    {
+      "path": "tools/ue_m5_vs2_flight_wing_material_r2_author.py",
+      "sha256": "7c1bceb901a6c2282be28b6d6f41de509adb0d08ea7f14c6a96e7b549bdda5ee",
+      "bytes": 17551
+    },
+    {
+      "path": "tools/ue_m5_vs2_footplacement_author.py",
+      "sha256": "737d86dfa8ab7ec67c2c0c9d70a63ad641a5b81e2e7a1d960b88b82d0a40621c",
+      "bytes": 10346
+    },
+    {
+      "path": "tools/ue_m5_vs2_footplacement_fixture_author.py",
+      "sha256": "ad3935db6a37ced99ee9afcf9a0f3e65b6897845f34a47197107c121f078d587",
+      "bytes": 22783
+    },
+    {
+      "path": "tools/ue_m5_vs2_gait_marker_probe.py",
+      "sha256": "6de4e5b26d57292057a5ec7c1b83f45a12247b17104006a579f6b66b42e83837",
+      "bytes": 8206
+    },
+    {
+      "path": "tools/ue_m5_vs2_gait_sole_author.py",
+      "sha256": "b3e1d85c1bf1b96c4a3b4abfa93f0c83dea06468d6d512cdbf1381d6bb7e2118",
+      "bytes": 18356
+    },
+    {
+      "path": "tools/ue_m5_vs2_gait_sole_probe.py",
+      "sha256": "b75690a76259d381fade3781deffb583c1bc9385ee3ef6c3abbc6618e06671ca",
+      "bytes": 7577
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_animation_probe.py",
+      "sha256": "3d84243f9dd1bbfefb69140e4fff158c107c69276af005db6ccb7dc2fb933d0f",
+      "bytes": 14800
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_clock_author.py",
+      "sha256": "ae3822d9c746d5eecf59dffe42e5ee2752f4b880a247f29841efff225cfd4ffc",
+      "bytes": 19403
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_getup_sprint_probe.py",
+      "sha256": "34ce89ad85b956ca448c921859dccb6780516b6f58a97ed158f07484b8a3f7d8",
+      "bytes": 17746
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_getup_sprint_probe_run.ps1",
+      "sha256": "1b85098076a2bc8bb62bbfa78cf6282ba807ec13faf40a95e5c91346510c8014",
+      "bytes": 8478
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_locomotion_author.py",
+      "sha256": "b9e039893d4e65cf1e1c568ec3629f66127e15a4faf9677068c68d1d99f12aad",
+      "bytes": 17769
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_locomotion_calibration_probe.py",
+      "sha256": "fb5f55f68b4b41791fbe1fa4e303931ece63aa1419944aa8e9c7c4c0f13f6787",
+      "bytes": 15708
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_locomotion_forward_author.py",
+      "sha256": "9d191ea24dfeb835f7f512777e37068c7ddfc209f8224955b0c16336fb4ec244",
+      "bytes": 18336
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_motion_author.py",
+      "sha256": "9b201e04618213f52d44e7729284827397555d27618bff594d1ecf877af4aa2a",
+      "bytes": 14392
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_nominal_weight_author.py",
+      "sha256": "18dab357449240d31fbf1ec43f673347692f6eec664392ddd67cf1c4d9cda523",
+      "bytes": 25347
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_probe_run.ps1",
+      "sha256": "fb7ff86b28ed4f0f75d2d3107cee64abbfb6ef616e80aa11cfb6c64d94961b25",
+      "bytes": 9420
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_recovery_retarget_author.py",
+      "sha256": "d6914b02db146d05da1515a8344109e5722a7844999d22c672650c0eb2ee00d6",
+      "bytes": 26046
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_recovery_source_author.py",
+      "sha256": "014db9b0b11f408882ed3322c3da7fb9b9f3d6bc941bf812e974d943876e0d54",
+      "bytes": 8224
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_retarget_author.py",
+      "sha256": "f6bdaec1fabbbe79769280f3387bd192f1dfb181fd27cfa8c1d6df0288c6d456",
+      "bytes": 13604
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_source_author.py",
+      "sha256": "0504c32e4f86b165f421f60b9ee71aa2eb7d67ace75cf5e880f31516e9433990",
+      "bytes": 7269
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_transition_assets_author.py",
+      "sha256": "e2dde8979b5dca81d514cb7ef5e19cb18ef1ce9e796c18b3dbc4fff0ff8e461e",
+      "bytes": 10614
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_transition_graph_probe.py",
+      "sha256": "142e16435957e68d5e7dd8817fdfdba2226ae8b5d33b5bd34e187023667c5f6d",
+      "bytes": 6276
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_transition_probe.py",
+      "sha256": "a57780bc0767b2644f6d1abaf829bca02d20de4efebb1466343b072dbd0f675b",
+      "bytes": 11961
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_transition_probe_run.ps1",
+      "sha256": "d246e36d9fce025c95adf9d0730c900592286d16e4c9487b25348c51825b0d98",
+      "bytes": 8517
+    },
+    {
+      "path": "tools/ue_m5_vs2_gas_transition_retarget_author.py",
+      "sha256": "b81289bbceddc5fc43794033fbd328e1f77228d81091ecf3971327c60df0ad7b",
+      "bytes": 16105
+    },
+    {
+      "path": "tools/ue_m5_vs2_ground_textures_author.py",
+      "sha256": "75b0113c95961f797cc5c474e05d7f6804aa3f286dbb40643912e45037827e34",
+      "bytes": 3641
+    },
+    {
+      "path": "tools/ue_m5_vs2_hair_outline_review_author.py",
+      "sha256": "d1b7ee59c85b17187eafd6f6458c338c53c5f80ef0ee306653aadaf6b4857cd3",
+      "bytes": 25322
+    },
+    {
+      "path": "tools/ue_m5_vs2_hair_review_author.py",
+      "sha256": "825d80610efba2fba3faf486e6049d7b0aa4182aee79a0cf47d1533f49bd9527",
+      "bytes": 10816
+    },
+    {
+      "path": "tools/ue_m5_vs2_hair_substep_probe.py",
+      "sha256": "4582081b0f0ddc2f34f0ebb90a94ce01e0e9b6954d210ecd959baf69c4556c96",
+      "bytes": 15330
+    },
+    {
+      "path": "tools/ue_m5_vs2_halo_parts_author.py",
+      "sha256": "2ee67ff6445cb0509106c0afd135f45f5fcdf80f2655695e7101cf2e81eb7ab1",
+      "bytes": 7344
+    },
+    {
+      "path": "tools/ue_m5_vs2_harbor_corner_author.py",
+      "sha256": "aecc85af3b331a96ae059d918929b5e86e764a3ca45b0a66e0b83478a836cdea",
+      "bytes": 87969
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_bound_review_author.py",
+      "sha256": "30bd75eee9b78847c9fcd6841ecceeebe18eef2659516188b67b34d2214a217f",
+      "bytes": 30375
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_bp_author.py",
+      "sha256": "e18f90d10564aff1fed531798d1cc82a55ee8e96e8d954ce12d0ffc3bd4cfa36",
+      "bytes": 2429
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_chroma_binding_author.py",
+      "sha256": "99c60d4096565f5ae6bd53edd23155c4a13a119de12141b2d6780a51d02946e7",
+      "bytes": 28862
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_color_response_author.py",
+      "sha256": "de0038fa74ca2d761cf3775efbb4ed6c2f72af8516f760bfcd5dceb8b4819b12",
+      "bytes": 29618
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_exercise_author.py",
+      "sha256": "bcf602f853fb9211e41c60faa0affb82e3d0be7c495e6526b73eacdf6a5fd220",
+      "bytes": 10990
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_fill_author.py",
+      "sha256": "a790f68e99d6c6ef68c36042f03df9cb514a2d66a02d4534950517928f7cd563",
+      "bytes": 19690
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_gait_r2_author.py",
+      "sha256": "0f6b856af127a3856620a791ba745fd309f491b3373da7629074c7c468d1a744",
+      "bytes": 12848
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_light_chroma_author.py",
+      "sha256": "cca26912c1de66d4289d6fdcff0e2e7df55252bc80d08a8ad30aebe448078f7b",
+      "bytes": 43460
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_light_clamp_author.py",
+      "sha256": "c1dcc680918d7849b4a7ce2c0173100920c9e6236a3d867da68c4e710d27f177",
+      "bytes": 31755
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_limits_compare_author.py",
+      "sha256": "6637efaa904960b969388c0ca29e7fbafae8d8b566675ecc48548834c29a1d93",
+      "bytes": 19190
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_material_author.py",
+      "sha256": "21e82de272a2aaa50fdb7e67b3f83bc884ad9c976cff0343196363f788650683",
+      "bytes": 14425
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_modesty_author.py",
+      "sha256": "6e5c6f4e598425723a5601e7aa457226d786630fc61772daa5975720a323d9ca",
+      "bytes": 13499
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_modesty_review_author.py",
+      "sha256": "5709ebaa5d71c7214fed903ab96cd3c87f300204c61b0aa4fc0ef5669f089a2e",
+      "bytes": 18079
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_outline_author.py",
+      "sha256": "b36681a0575fe4170dfd4018d1f82cecd9ef1ebb05959eafed4235ba0d6fab99",
+      "bytes": 8260
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_polish_author.py",
+      "sha256": "2aa333eb6864162e1a32dfe06f90073eeb0737b692f743c1c632629ead8051ef",
+      "bytes": 4658
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_polish_review_author.py",
+      "sha256": "758dd88c017bcc4231bf0e7a6a195e95c50837062270d4eb5906d5f4216195d9",
+      "bytes": 4744
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_probe.py",
+      "sha256": "a17c6f95ca8f08c5d90f03335978e2acc25bb507cef241b730844a7e06969d03",
+      "bytes": 2848
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_rev2_integration_author.py",
+      "sha256": "88719cdc6f8e9f014d3ba81e9577f50a9495bec67929d8629c33b9a116fcb94c",
+      "bytes": 25506
+    },
+    {
+      "path": "tools/ue_m5_vs2_hero_rev2_probe.py",
+      "sha256": "eb15f26c46d852bd8c93802a946646cda88861e770ceec4f99da43c18e6ae0b5",
+      "bytes": 4400
+    },
+    {
+      "path": "tools/ue_m5_vs2_j_cloth_environment_author.py",
+      "sha256": "ab42d5d6935d55e10a65eee4c5a95d1d14bda466cbc76217714f16d6051a7759",
+      "bytes": 2586
+    },
+    {
+      "path": "tools/ue_m5_vs2_lookdev_author.py",
+      "sha256": "a698568f2c27bd8da91a3316677b4762910c3368435e24e2a3efc82318f199c3",
+      "bytes": 21781
+    },
+    {
+      "path": "tools/ue_m5_vs2_material_probe.py",
+      "sha256": "480b9b020d996d476fd8ab03220b10e7faaeb3b2176a651480b5799201fb68ea",
+      "bytes": 5204
+    },
+    {
+      "path": "tools/ue_m5_vs2_mtoon_graph_probe.py",
+      "sha256": "1ada1765b0c46a7a70089fa43b67ee0d162c0d9dd027f86037642938fb0ca1a0",
+      "bytes": 14032
+    },
+    {
+      "path": "tools/ue_m5_vs2_mtoon_limits_author.py",
+      "sha256": "18fa9de8d7a047c058cadb4734f7b4d003c8c274e9b27fd8d13cfdbe025d00c8",
+      "bytes": 25934
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_cast_r2_getup_binding_author.py",
+      "sha256": "7feac3c4d172c4b2d2d7ed4557405ae3a9d14a99971fdc3631dfcd4f44d73b0d",
+      "bytes": 20865
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_cast_r2_getup_retarget_author.py",
+      "sha256": "948e0a6276106c37c2bd8aeff3d511dccd906c627778e37a0faa5abd32af3b02",
+      "bytes": 26324
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_cast_r2_import_author.py",
+      "sha256": "9217030e087c8555663a62e6f98e65a3a6bdd95df5fbc14c80bbd36233af7d36",
+      "bytes": 27531
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_cast_r2_integration_author.py",
+      "sha256": "5bfb6a2e37b5637410ea484c6deb986c025bd3e18cd191f1aca7ca1ab221037f",
+      "bytes": 27911
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_cast_review_author.py",
+      "sha256": "621a6279c04411f60f5cb6c36c77bd3092c195e31520b6d0ecacdc9cb3f9fcfa",
+      "bytes": 34541
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_gameplay_author.py",
+      "sha256": "72ece4bedd27544fe2e67a406eb32a61fdc0f1585d91850ecaba4615848b5541",
+      "bytes": 23425
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_getup_binding_author.py",
+      "sha256": "4b84672b0502739409e5a0be94935cd2c11e3b4ab9136014b796d4e296969049",
+      "bytes": 20042
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_idle_r2_author.py",
+      "sha256": "33d59ffe4fd77a1305f6246545c9ff398748e4c41a77a89eff673766dd8464eb",
+      "bytes": 26272
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_import_probe.py",
+      "sha256": "3e4de85d8d0b7e403bfd3bb117af869a7b3cd15b381ceba369584c5e8486a6a6",
+      "bytes": 20188
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_integration_author.py",
+      "sha256": "b17d382f598ac1a4356b277c1a3fbf39966a2d0968a71d63b3667aea12829eff",
+      "bytes": 23338
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_j_cloth_probe_author.py",
+      "sha256": "7fea5898c261166840e8873bfa4e120a099beba3e76e19ba13a0e69209b2e27c",
+      "bytes": 5794
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_j_clothing_author.py",
+      "sha256": "0178f0289349f0d5d598208271de33ea5dbdaa4a6695a16dcea35f346e29be39",
+      "bytes": 19451
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_package_repair.py",
+      "sha256": "07ead3c2dd246a8749e8bdb3def28f7a33b80eba31fc9f34f786869b23a62fa8",
+      "bytes": 6256
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_physics_repair.py",
+      "sha256": "a8090efae6200e7ff17c6ca8eaaca8bbfa13ad2f73e2d332e2c33f40e55a4aaf",
+      "bytes": 11539
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_reaction_r2_author.py",
+      "sha256": "dfb1a51bb1c4613029149100113f10d5b5445969640cf8dabe55d644924c0ffa",
+      "bytes": 35072
+    },
+    {
+      "path": "tools/ue_m5_vs2_npc_review_author.py",
+      "sha256": "b54c14d4fe7bee41f45e8fabb9c468b27fd487e687f1b024690570b7f095f418",
+      "bytes": 11304
+    },
+    {
+      "path": "tools/ue_m5_vs2_physics_probe.py",
+      "sha256": "74951e2795a31ea5dcb4de6fdb7ac15b21deba19f859e862b7e5e529bb126d2b",
+      "bytes": 1765
+    },
+    {
+      "path": "tools/ue_m5_vs2_playable_polish_author.py",
+      "sha256": "da64bdd35203e169473b03628fe7529fb5995e83467afeb818e3e01642d3307e",
+      "bytes": 7473
+    },
+    {
+      "path": "tools/ue_m5_vs2_q_harbor_compare_author.py",
+      "sha256": "d30622c0d8e92b07c3f0c3b9470a450ce00439bf882fdca7be789f800a109017",
+      "bytes": 5549
+    },
+    {
+      "path": "tools/ue_m5_vs2_q_skin_candidate_author.py",
+      "sha256": "7034c1bb40c619f32d03457242a720e5d263b9f51b3da9bd0ccdc206a66a21c5",
+      "bytes": 14190
+    },
+    {
+      "path": "tools/ue_m5_vs2_scene_idle_author.py",
+      "sha256": "460f0b50d8198fe8077f4459705ac96127a003b9369989270ecde5ed9b8b89aa",
+      "bytes": 7269
+    },
+    {
+      "path": "tools/ue_m5_vs2_selestia_expression_author.py",
+      "sha256": "f4ead70334f282841216fcf0fc417d08e009bba06d5b0bce6af4e331f1af2a10",
+      "bytes": 8144
+    },
+    {
+      "path": "tools/ue_m5_vs2_selestia_physics_author.py",
+      "sha256": "9f82dc979f75b0f85685e15008202ef503eb6759208c02cf7806732ad01958f9",
+      "bytes": 7181
+    },
+    {
+      "path": "tools/ue_m5_vs2_village_probe.py",
+      "sha256": "3567f426e86c2099190fb3d25130ef676c3fa153c469b5ef20e7c7f31bcd8ddc",
+      "bytes": 14775
+    },
+    {
+      "path": "tools/ue_m5_vs2_village_probe_run.ps1",
+      "sha256": "8b52d0b5e01c38fd9a8e552a442d4b253ecda7b66964e23299cb1af5ea9df1f4",
+      "bytes": 10387
+    },
+    {
+      "path": "tools/ue_m5_vs2_village_selection.py",
+      "sha256": "ef7a8df1d27ea97245a28ccabb2715a67420a6cd79bc2a950a0d1dfb018de5e0",
+      "bytes": 15394
+    },
+    {
+      "path": "tools/ue_m5_vs2_water_candidate_author.py",
+      "sha256": "e484fbe50636bd33ce8715037a8ed5ddcc60274894d755c9ffed29a30f78dcbc",
+      "bytes": 32400
+    },
+    {
+      "path": "tools/ue_m5_vs2_water_probe.py",
+      "sha256": "f1fb9f340908d7a669b0d5e19406532a5c40ae1ebb0d33f7e20fdfd5983a1687",
+      "bytes": 23593
+    },
+    {
+      "path": "tools/ue_m5_vs2_wing_material_review_author.py",
+      "sha256": "6523211cdc7885f0d53ed7a65fb116a1a938c3dfca099205d0377b1d2ba4dc9f",
+      "bytes": 13840
+    }
+  ],
+  "release_assets": [
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446.zip",
+      "name": "P0_SecondGate_20260925_154446.zip",
+      "size": 93927854,
+      "sha256": "77b7a634dc45d1627fa3549f1be8b6287a43d2936b424abe8c08d32a383640b1"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+      "name": "M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+      "size": 39337620,
+      "sha256": "eb86f5f14cb6ccecdf16c79465b58d8361d937f307a260e0fc5fc34a820402d7"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446_ZIP_INTEGRITY.json",
+      "name": "P0_SecondGate_20260925_154446_ZIP_INTEGRITY.json",
+      "size": 16309,
+      "sha256": "f30d188f5536e568c0dce101aae8c1fcd589204e33c1d6c7b07836fba1959c7e"
+    }
+  ],
+  "source_preservation": "Exact source bytes copied; no original artifacts changed."
+}

@@ -1,0 +1,623 @@
+{
+	"status": "COMPLETE",
+	"mode": "core",
+	"map": "L_M1_Playground",
+	"test_suite": "M1",
+	"world_type": "Game",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"recorded_utc": "2026-09-25T07:30:26.265Z",
+	"duration_seconds": 87.954340398311615,
+	"simulation_seconds": 86.590514712035656,
+	"phase_clock": "world DeltaSeconds while running; wall time only while paused",
+	"completed_enter_exit_cycles": 20,
+	"input_method": "B: UEnhancedPlayerInput::InjectInputForAction each frame; normal bound actions. Explicit placements/obstacles are test fixtures, never counted as driving.",
+	"save_slot": "HarborCity_M1_R2_Test_M4_VS2Gate_20260925_152843_e7fc11d2",
+	"m3_escape_stop":
+	{
+		"viewport_hook_bound": true,
+		"user_stop_latched": false,
+		"event_source": "NOT_RUN",
+		"scope": "This revision's explicit isolated test only. Esc is not consumed; normal game pause binding remains. No global keyboard interception, P override, automatic resume or auto-quit after stop.",
+		"queued_input_scope": "UE5.8 exposes no action-scoped removal for private InputsInjectedThisTick. No mappings cleared or private access; pressed keys flushed, gameplay motion cleared, every harness update/injection/new step permanently stopped. Normal Esc pause handles already queued input; same-frame queue clearing is not claimed.",
+		"event_frame": 0,
+		"held_actions_at_event": 0,
+		"held_actions_now": 0,
+		"runner_held_injection_calls_after_event": 0,
+		"game_paused_at_report": false,
+		"pause_menu_at_report": false,
+		"car_input_telemetry_at_report": "{\"available\":true,\"occupied\":false,\"speed_kmh\":0.0,\"signed_speed_cm_s\":0.0,\"gear\":1,\"target_gear\":1,\"rpm\":900.000427,\"throttle\":0.0,\"brake\":1.0,\"steering\":0.0,\"handbrake\":true,\"parking\":true,\"position\":[-2999.986734,-3800.082611,16.651273],\"velocity\":[0.0,0.0,0.0],\"up_z\":0.999981,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.674493,\"spring_force\":162724.234375,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-2864.880207,-3890.081813,0.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.672947,\"spring_force\":163500.875,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-2864.88527,-3710.081811,0.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.618979,\"spring_force\":190488.0,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-3129.085126,-3890.088969,0.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.617433,\"spring_force\":191264.703125,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[-3129.090189,-3710.088966,0.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":0,\"suspension_query_ignored_objects_gt\":1,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+		"character_velocity_at_report": "X=0.000 Y=0.000 Z=0.000",
+		"auto_quit_suppressed": false
+	},
+	"checks": [
+		{
+			"name": "Runtime actors",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "M1 controller, character, car, switch",
+			"actual": "PC=1 character=1 car=1 lamp=1",
+			"elapsed_seconds": 4.1541575975716114
+		},
+		{
+			"name": "Isolated save slot",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "HarborCity_M1_V1_Test_* or HarborCity_M1_R1_Test_* or HarborCity_M1_R2_Test_*",
+			"actual": "HarborCity_M1_R2_Test_M4_VS2Gate_20260925_152843_e7fc11d2",
+			"elapsed_seconds": 4.1548983007669449
+		},
+		{
+			"name": "Initial on-foot ownership",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "one visible character possessed",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 4.1556270010769367
+		},
+		{
+			"name": "Walking movement",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": ">200cm from 1.2s forward action",
+			"actual": "distance=439.2cm velocity=400.0",
+			"elapsed_seconds": 6.6496743001043797
+		},
+		{
+			"name": "Walk release stops",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "horizontal speed <10cm/s",
+			"actual": "X=0.000 Y=0.000 Z=0.000",
+			"elapsed_seconds": 7.2540406994521618
+		},
+		{
+			"name": "Sprinting faster than walking",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": ">1.25x walk distance for same duration",
+			"actual": "sprint 671.2cm walk 439.2cm",
+			"elapsed_seconds": 8.4591444991528988
+		},
+		{
+			"name": "Jump and grounded landing",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "rise >35cm then grounded",
+			"actual": "rise 127.6 grounded=1",
+			"elapsed_seconds": 10.567299898713827
+		},
+		{
+			"name": "Look changes camera rotation",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "yaw change >5 degrees",
+			"actual": "P=10.100001 Y=150.750000 R=0.000000",
+			"elapsed_seconds": 11.472262799739838
+		},
+		{
+			"name": "Chase camera collision",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "wall contracts spring arm >50cm",
+			"actual": "camera distance 172.6 target 400.0",
+			"elapsed_seconds": 12.075380001217127
+		},
+		{
+			"name": "Chaos wheels contact ground",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "four contacts with simulating chassis",
+			"actual": "wheels=4 contacts=4 sim=1",
+			"elapsed_seconds": 13.07938389852643
+		},
+		{
+			"name": "Normal E enters car",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "car possessed, character hidden with collision disabled",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.004 km/h characterCount=1",
+			"elapsed_seconds": 14.14216610044241
+		},
+		{
+			"name": "Physics acceleration",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": ">12km/h and >250cm through Chaos throttle",
+			"actual": "peak 69.20km/h travel 1789.9cm {\"available\":true,\"occupied\":true,\"speed_kmh\":69.199646,\"signed_speed_cm_s\":1921.898071,\"gear\":1,\"target_gear\":1,\"rpm\":4905.812988,\"throttle\":1.0,\"brake\":0.0,\"steering\":0.0,\"handbrake\":false,\"parking\":false,\"position\":[-1210.077541,-3799.185314,16.850246],\"velocity\":[1922.211914,1.519843,0.076336],\"up_z\":0.999836,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.764142,\"spring_force\":117835.390625,\"drive_torque\":0.0,\"brake_torque\":0.0,\"contact_point\":[-1111.507603,-3889.100304,-0.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.765732,\"spring_force\":117041.492188,\"drive_torque\":0.0,\"brake_torque\":0.0,\"contact_point\":[-1111.65485,-3709.100362,0.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.549631,\"spring_force\":225025.953125,\"drive_torque\":3577.292725,\"brake_torque\":0.0,\"contact_point\":[-1375.750948,-3889.317311,0.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.551222,\"spring_force\":224230.875,\"drive_torque\":3577.292725,\"brake_torque\":0.0,\"contact_point\":[-1375.898195,-3709.317369,0.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":0,\"suspension_query_ignored_objects_gt\":1,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+			"elapsed_seconds": 16.55460499972105
+		},
+		{
+			"name": "High-speed exit rejected",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "stays Driving while >1km/h",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=84.333 km/h characterCount=1 请先停车：速度低于 1 km/h 才能下车。",
+			"elapsed_seconds": 17.296360600739717
+		},
+		{
+			"name": "Physics steering",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "yaw change >3deg from steering input",
+			"actual": "P=0.350217 Y=30.275089 R=-2.199728",
+			"elapsed_seconds": 18.30653639882803
+		},
+		{
+			"name": "S brakes before reversing",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "per-frame: no reverse throttle while forward >50cm/s; passes near zero",
+			"actual": "unsafe=0 near_stop=1",
+			"elapsed_seconds": 22.120129100978374
+		},
+		{
+			"name": "S reverses after stop",
+			"status": "FAIL",
+			"evidence_level": "B",
+			"expected": "negative forward speed <-40cm/s after braking",
+			"actual": "{\"available\":true,\"occupied\":true,\"speed_kmh\":2.198472,\"signed_speed_cm_s\":60.241585,\"gear\":-1,\"target_gear\":-1,\"rpm\":2184.285645,\"throttle\":0.0,\"brake\":1.0,\"steering\":0.0,\"handbrake\":false,\"parking\":false,\"position\":[3811.319487,-5492.7908,18.178447],\"velocity\":[-14.902928,58.460636,9.46776],\"up_z\":0.999953,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.696267,\"spring_force\":98475.851562,\"drive_torque\":0.0,\"brake_torque\":4500.0,\"contact_point\":[3870.827011,-5342.974532,0.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.624665,\"spring_force\":148529.921875,\"drive_torque\":0.0,\"brake_torque\":4500.0,\"contact_point\":[3694.99063,-5381.492307,0.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.796091,\"spring_force\":55635.179688,\"drive_torque\":0.0,\"brake_torque\":1946.862061,\"contact_point\":[3927.373296,-5601.056702,0.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.724489,\"spring_force\":106004.40625,\"drive_torque\":0.0,\"brake_torque\":1946.862061,\"contact_point\":[3751.536915,-5639.574478,-0.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":0,\"suspension_query_ignored_objects_gt\":1,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+			"elapsed_seconds": 22.120986297726631
+		},
+		{
+			"name": "Handbrake stops car",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "speed <1km/h",
+			"actual": "{\"available\":true,\"occupied\":true,\"speed_kmh\":0.0,\"signed_speed_cm_s\":0.0,\"gear\":-1,\"target_gear\":-1,\"rpm\":900.047974,\"throttle\":0.0,\"brake\":0.0,\"steering\":0.0,\"handbrake\":true,\"parking\":false,\"position\":[3810.732834,-5491.225969,16.647112],\"velocity\":[0.0,0.0,0.0],\"up_z\":0.999981,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.674504,\"spring_force\":162756.859375,\"drive_torque\":0.0,\"brake_torque\":4500.0,\"contact_point\":[3869.683124,-5339.969083,-0.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.672506,\"spring_force\":163754.671875,\"drive_torque\":0.0,\"brake_torque\":4500.0,\"contact_point\":[3693.867399,-5378.554521,-0.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.619002,\"spring_force\":190514.453125,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[3926.318677,-5598.032371,-0.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.617004,\"spring_force\":191512.25,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[3750.502952,-5636.61781,-0.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":0,\"suspension_query_ignored_objects_gt\":1,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+			"elapsed_seconds": 24.621020700782537
+		},
+		{
+			"name": "Pause action",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "pause menu and paused world",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 25.132037300616503
+		},
+		{
+			"name": "Resume clears residual input",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "unpaused; zero throttle and steering",
+			"actual": "{\"available\":true,\"occupied\":true,\"speed_kmh\":0.0001,\"signed_speed_cm_s\":-0.000017,\"gear\":-1,\"target_gear\":-1,\"rpm\":900.004028,\"throttle\":0.0,\"brake\":1.0,\"steering\":0.0,\"handbrake\":true,\"parking\":true,\"position\":[3810.73284,-5491.225881,16.647328],\"velocity\":[0.0,0.0,-0.002785],\"up_z\":0.999981,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.67454,\"spring_force\":162776.671875,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[3869.683136,-5339.968958,0.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.672536,\"spring_force\":163770.765625,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[3693.867409,-5378.554398,0.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.619009,\"spring_force\":190539.015625,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[3926.318691,-5598.032251,0.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.617006,\"spring_force\":191532.9375,\"drive_torque\":0.0,\"brake_torque\":6000.0,\"contact_point\":[3750.502965,-5636.617692,-0.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":0,\"suspension_query_ignored_objects_gt\":1,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+			"elapsed_seconds": 25.945623800158501
+		},
+		{
+			"name": "R safe upright reset preserves possession",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "Driving upright, speed<2km/h",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.024 km/h characterCount=1 P=0.384844 Y=0.040163 R=0.010224",
+			"elapsed_seconds": 28.376079000532627
+		},
+		{
+			"name": "Can drive after reset",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": ">3km/h after throttle",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=22.253 km/h characterCount=1",
+			"elapsed_seconds": 29.588107999414206
+		},
+		{
+			"name": "Exit restores foot character",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "visible colliding possessed character and empty seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 32.35506109893322
+		},
+		{
+			"name": "Physics drives up actual 6 degree ramp",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "advances uphill >40cm and rises >3cm",
+			"actual": "delta=X=75.493 Y=0.008 Z=9.240 speed=6.53",
+			"elapsed_seconds": 35.835362400859594
+		},
+		{
+			"name": "Slope handbrake holds for four seconds",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "on slope >3deg, speed<1km/h, 4s drift<15cm",
+			"actual": "drift=0.0cm pitch=6.41 speed=0.00km/h",
+			"elapsed_seconds": 41.839224699884653
+		},
+		{
+			"name": "Cycle 01 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 43.514563098549843
+		},
+		{
+			"name": "Cycle 01 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 44.075367897748947
+		},
+		{
+			"name": "Cycle 02 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 45.04563819989562
+		},
+		{
+			"name": "Cycle 02 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 45.610266197472811
+		},
+		{
+			"name": "Cycle 03 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 46.584234397858381
+		},
+		{
+			"name": "Cycle 03 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 47.148716598749161
+		},
+		{
+			"name": "Cycle 04 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 48.120513398200274
+		},
+		{
+			"name": "Cycle 04 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 48.698090597987175
+		},
+		{
+			"name": "Cycle 05 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.001 km/h characterCount=1",
+			"elapsed_seconds": 49.663863498717546
+		},
+		{
+			"name": "Cycle 05 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 50.235038001090288
+		},
+		{
+			"name": "Cycle 06 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 51.205134000629187
+		},
+		{
+			"name": "Cycle 06 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 51.772055197507143
+		},
+		{
+			"name": "Cycle 07 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 52.732679400593042
+		},
+		{
+			"name": "Cycle 07 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 53.303155697882175
+		},
+		{
+			"name": "Cycle 08 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 54.265738997608423
+		},
+		{
+			"name": "Cycle 08 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 54.836461398750544
+		},
+		{
+			"name": "Cycle 09 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 55.80770830065012
+		},
+		{
+			"name": "Cycle 09 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 56.366935897618532
+		},
+		{
+			"name": "Cycle 10 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.001 km/h characterCount=1",
+			"elapsed_seconds": 57.327455598860979
+		},
+		{
+			"name": "Cycle 10 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 57.898001100867987
+		},
+		{
+			"name": "Cycle 11 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.001 km/h characterCount=1",
+			"elapsed_seconds": 58.857944000512362
+		},
+		{
+			"name": "Cycle 11 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 59.428324099630117
+		},
+		{
+			"name": "Cycle 12 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 60.390838000923395
+		},
+		{
+			"name": "Cycle 12 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 60.962031800299883
+		},
+		{
+			"name": "Cycle 13 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.001 km/h characterCount=1",
+			"elapsed_seconds": 61.930392399430275
+		},
+		{
+			"name": "Cycle 13 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.007 km/h characterCount=1",
+			"elapsed_seconds": 62.519110500812531
+		},
+		{
+			"name": "Cycle 14 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 63.484831899404526
+		},
+		{
+			"name": "Cycle 14 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 64.053984500467777
+		},
+		{
+			"name": "Cycle 15 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 65.01820420101285
+		},
+		{
+			"name": "Cycle 15 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 65.580380897969007
+		},
+		{
+			"name": "Cycle 16 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.001 km/h characterCount=1",
+			"elapsed_seconds": 66.542646199464798
+		},
+		{
+			"name": "Cycle 16 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 67.117703400552273
+		},
+		{
+			"name": "Cycle 17 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 68.078331898897886
+		},
+		{
+			"name": "Cycle 17 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 68.647616699337959
+		},
+		{
+			"name": "Cycle 18 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 69.614441398531199
+		},
+		{
+			"name": "Cycle 18 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 70.185739699751139
+		},
+		{
+			"name": "Cycle 19 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 71.156066700816154
+		},
+		{
+			"name": "Cycle 19 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 71.7200777977705
+		},
+		{
+			"name": "Cycle 20 enter",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "normal Interact drives same car, exactly one original character",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 72.674905598163605
+		},
+		{
+			"name": "Cycle 20 exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "successful paired entry then exit returns original character and clears seat",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 73.24659850075841
+		},
+		{
+			"name": "Blocked driver side uses passenger side",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "on foot on positive Y side",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1 side=190.0",
+			"elapsed_seconds": 75.711888398975134
+		},
+		{
+			"name": "All-exits-blocked precondition",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "driving ownership but stopped before obstacles",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 77.187156397849321
+		},
+		{
+			"name": "All exits blocked rejects exit",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "stays Driving with rejection prompt",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.001 km/h characterCount=1 出口受阻或地面不安全，请换个位置停车。",
+			"elapsed_seconds": 78.347034201025963
+		},
+		{
+			"name": "Rapid E transitions settle without duplicate actors",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "stable mode and exactly original character after 6 taps",
+			"actual": "mode=0 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 80.891985699534416
+		},
+		{
+			"name": "Pause available during transition",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "pause accepted while transitioning",
+			"actual": "mode=1 pawn=HCM1Character_0 speed=0.000 km/h characterCount=1",
+			"elapsed_seconds": 82.511222500354052
+		},
+		{
+			"name": "Paused transition resumes correctly",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "Driving after resume",
+			"actual": "mode=2 pawn=HCM1Vehicle_0 speed=0.001 km/h characterCount=1",
+			"elapsed_seconds": 83.323968298733234
+		},
+		{
+			"name": "Driving save is explicitly refused",
+			"status": "PASS",
+			"evidence_level": "A",
+			"expected": "false with gameplay message",
+			"actual": "已上车。直接移动鼠标环视，停车后按 E 下车。",
+			"elapsed_seconds": 83.531246598809958
+		},
+		{
+			"name": "E changes physical point light",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "bool, visibility and intensity all change",
+			"actual": "enabled=0 intensity=0.0",
+			"elapsed_seconds": 85.781584598124027
+		},
+		{
+			"name": "F5 saves current versioned player vehicle light",
+			"status": "PASS",
+			"evidence_level": "B",
+			"expected": "version1 stable IDs and exact current light, both current transforms within30cm; isolated per-run slot",
+			"actual": "保存成功。退出并重新启动后，可按 F9 读取。",
+			"elapsed_seconds": 87.550080697983503
+		}
+	],
+	"failures": 1,
+	"render_loop_mean_fps": 98.846776580164445,
+	"p99_frame_ms": 11.858697980642319,
+	"frames_over_100ms": 5,
+	"performance_scope": "Wall-clock actor ticks during scripted functional tests, includes pause and fixture overhead; not a standardized gameplay benchmark."
+}

@@ -1,0 +1,1807 @@
+{
+  "status": "USER_REVIEW_NOT_ALL_REQUIREMENTS_PASS",
+  "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\index.html",
+  "built_at": "2026-09-25T15:44:48.085717",
+  "results": {
+    "Portrait": {
+      "result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\CornerRevTwoReview_20260925_154045_F5C8567A\\corner_v2_review.json",
+      "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\launch.json",
+      "status": "PASS",
+      "scope": "EDITOR_GAME_NOT_PACKAGE",
+      "visual": "USER_REVIEW"
+    },
+    "FullBody": {
+      "result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154238_425_42beb681_corner_v2_game\\CornerRevTwoReview_20260925_154256_E7491583\\corner_v2_review.json",
+      "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154238_425_42beb681_corner_v2_game\\launch.json",
+      "status": "PASS",
+      "scope": "EDITOR_GAME_NOT_PACKAGE",
+      "visual": "USER_REVIEW"
+    },
+    "NPC": {
+      "result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\npc_review.json",
+      "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\launch.json",
+      "status": "PASS",
+      "scope": "EDITOR_GAME_NOT_PACKAGE",
+      "visual": "USER_REVIEW"
+    },
+    "Environment": {
+      "result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\corner_v2_review.json",
+      "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\launch.json",
+      "status": "PASS",
+      "scope": "EDITOR_GAME_NOT_PACKAGE",
+      "visual": "USER_REVIEW"
+    },
+    "QSkin": {
+      "result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144135_820_a0ddc81e_q_harbor_compare_game\\NPCReview_20260925_144156_BFB2C811\\npc_review.json",
+      "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144135_820_a0ddc81e_q_harbor_compare_game\\launch.json",
+      "status": "PASS",
+      "scope": "EDITOR_GAME_NOT_PACKAGE",
+      "visual": "USER_REVIEW"
+    },
+    "SceneIdle": {
+      "result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\NPCReview_20260925_152625_E87FB002\\npc_review.json",
+      "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\launch.json",
+      "status": "PASS",
+      "scope": "EDITOR_GAME_NOT_PACKAGE",
+      "visual": "USER_REVIEW"
+    },
+    "Flight": {
+      "result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\FlightDemo_20260925_145139_8F40677B\\flight_demo.json",
+      "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\launch.json",
+      "status": "PASS_ENGINE_INPUT_ONLY",
+      "scope": "EDITOR_GAME_NOT_PACKAGE",
+      "visual": "USER_REVIEW"
+    }
+  },
+  "remaining": [
+    {
+      "area": "NPC 倒地衣物",
+      "status": "FAIL",
+      "conclusion": "J 衣物穿地未修好；原生布料和环境更新候选都未通过画面检查，未替换正式街角角色。",
+      "next": "按真实衣物轮廓重做固定区域与碰撞体贴合，必要时回到 DCC 修衣裙；不继续堆碰撞参数。"
+    },
+    {
+      "area": "NPC 起身",
+      "status": "FAIL",
+      "conclusion": "四种起身方向已有运行样本，窄处与坡面已有专项；J 的一次颤动超时仍未关闭。拳击、枪击、实际车撞加四种起身的完整录像尚未完成。",
+      "next": "保留失败样本，区分身体稳定性和衣裙问题后再录完整受击演示。"
+    },
+    {
+      "area": "跑步滑步",
+      "status": "FAIL",
+      "conclusion": "当前步幅／朝向修正仍未达到肉眼无滑步；Foot Placement 候选反而变差，未采用。",
+      "next": "重新核对触地相位与动画速度匹配，保留当前可用步态。"
+    },
+    {
+      "area": "补光 Renderer 崩溃",
+      "status": "FAIL",
+      "conclusion": "历史两次崩溃根因仍未完全确定。当前补光保留；后续运行未重现不能关闭问题。",
+      "next": "已有内存生命周期线索，下一次自然复现采完整崩溃证据，避免无依据刷新渲染资源。"
+    },
+    {
+      "area": "飞行外观与录音",
+      "status": "USER_REVIEW",
+      "conclusion": "新姿态、风动和羽翼已运行；已审角度有安全衣层覆盖。录像是引擎输入，原生音轨静音；真实键鼠手感、所有极端角度及正式带声视频仍待验证。",
+      "next": "用户审姿态与羽翼方向；后续补键鼠手感及最终有声视频。"
+    },
+    {
+      "area": "新港町玩法与独立包",
+      "status": "NOT_RUN",
+      "conclusion": "本门仍为街角样板。保留地图基线回归与新港町全流程、独立包验收分开；尚无 VS2 新 EXE。",
+      "next": "环境方向选定且关键问题修妥后，按原阶段流程推进。"
+    },
+    {
+      "area": "门前保留地图检查 · core",
+      "status": "FAIL",
+      "conclusion": "本轮检查未全部通过：S reverses after stop。原因尚未确定，旧通过记录不被擦除。",
+      "next": "保留原运行证据，做针对性诊断；不修改冻结车辆参数来凑通过。"
+    }
+  ],
+  "retained_map_gate_baseline": {
+    "status": "FAIL",
+    "started_at": "2026-09-25T15:28:43.5550796+08:00",
+    "module_sha256": "65C2D18302FE1E9A4E04ED7A6CB6013F43403B242C11E16EA75C4D25F0374CE3",
+    "scope": "One serial preserved-map baseline batch; logic/engine inputs and explicit fixtures; NOT new harbor gameplay, OS input, or package acceptance.",
+    "runs": [
+      {
+        "mode": "core",
+        "map": "L_M1_Playground",
+        "save_slot": "HarborCity_M1_R2_Test_M4_VS2Gate_20260925_152843_e7fc11d2",
+        "arguments": [
+          "\"D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject\"",
+          "/Game/HarborCity/Maps/L_M1_Playground",
+          "-game",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-M1Test=core",
+          "-HCM1SaveSlot=HarborCity_M1_R2_Test_M4_VS2Gate_20260925_152843_e7fc11d2",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\gate_regression\\20260925_152843_e7fc11d2\\core\\game.log\"",
+          "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen"
+        ],
+        "started_utc": "2026-09-25T07:28:43.5792167Z",
+        "status": "FAIL",
+        "process_id": 48968,
+        "exit_code": 0,
+        "ended_utc": "2026-09-25T07:30:28.0109526Z",
+        "result": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M1Tests\\20260925_152858_core\\results.json",
+        "runtime_status": "COMPLETE",
+        "failures": 1,
+        "check_count": 73,
+        "failed_checks": [
+          {
+            "name": "S reverses after stop",
+            "status": "FAIL",
+            "evidence_level": "B",
+            "expected": "negative forward speed <-40cm/s after braking",
+            "actual": "{\"available\":true,\"occupied\":true,\"speed_kmh\":2.198472,\"signed_speed_cm_s\":60.241585,\"gear\":-1,\"target_gear\":-1,\"rpm\":2184.285645,\"throttle\":0.0,\"brake\":1.0,\"steering\":0.0,\"handbrake\":false,\"parking\":false,\"position\":[3811.319487,-5492.7908,18.178447],\"velocity\":[-14.902928,58.460636,9.46776],\"up_z\":0.999953,\"wheels\":[{\"index\":0,\"valid\":true,\"contact\":true,\"suspension\":0.696267,\"spring_force\":98475.851562,\"drive_torque\":0.0,\"brake_torque\":4500.0,\"contact_point\":[3870.827011,-5342.974532,0.0]},{\"index\":1,\"valid\":true,\"contact\":true,\"suspension\":0.624665,\"spring_force\":148529.921875,\"drive_torque\":0.0,\"brake_torque\":4500.0,\"contact_point\":[3694.99063,-5381.492307,0.0]},{\"index\":2,\"valid\":true,\"contact\":true,\"suspension\":0.796091,\"spring_force\":55635.179688,\"drive_torque\":0.0,\"brake_torque\":1946.862061,\"contact_point\":[3927.373296,-5601.056702,0.0]},{\"index\":3,\"valid\":true,\"contact\":true,\"suspension\":0.724489,\"spring_force\":106004.40625,\"drive_torque\":0.0,\"brake_torque\":1946.862061,\"contact_point\":[3751.536915,-5639.574478,-0.0]}],\"steering_diagnostics\":{\"enabled\":false,\"suspension_diagnostics\":false,\"legacy_npc_suspension\":false,\"suspension_ignored_npc_count\":0,\"suspension_query_ignored_objects_gt\":1,\"suspension_ignore_count_scope\":\"most recently prepared GT query packet; PT hit identity is separately timestamped, not asserted to be the same GT frame\",\"p.Vehicle.BatchQueries\":0,\"p.Vehicle.CacheTraceOverlap\":0,\"suspension_ignored_npc_ids\":[],\"suspension_filter_scope\":\"GT original Update then AddIgnoredActor for actual AHCM3NPC only in suspension TraceParams. Covers live capsule and ragdoll; no global Pawn/PhysicsBody response or vehicle/body/Visibility change. Legacy requires isolated impact test+safe slot+diagnostics.\",\"wheel_trace_pawn_response_gt\":2,\"wheel_trace_physicsbody_response_gt\":2,\"suspension_trace_channel\":1,\"gain\":2,\"front_grip_trial\":false,\"legacy_front_grip_control\":false,\"effective_front_friction_multiplier\":3.4500000476837158,\"front_grip_mode\":\"production_front3.45\",\"front_grip_scope\":\"native production front3.45/rear4; only guarded baseline or diagnostics+LegacyFrontGrip override front to3 for historical comparison; legacy FrontGripTrial flag adds no multiplier\",\"movement_class\":\"/Script/HarborCity.HCM4R1SteeringMovement\",\"gain_stage\":\"Physics ProcessSteering after original MPH curve and Ackermann\",\"raw_input_gt\":0,\"rate_filtered_input_gt\":0,\"after_input_curve_gt\":0,\"rise_per_second\":2.5,\"fall_per_second\":5,\"input_curve_function\":1,\"steering_type\":2,\"torque_control_enabled\":false,\"target_rotation_control_enabled\":false,\"stabilize_control_enabled\":false}}",
+            "elapsed_seconds": 22.12098629772663
+          }
+        ]
+      },
+      {
+        "mode": "r2_views",
+        "map": "L_M2_SeafrontStreet",
+        "save_slot": "HarborCity_M2_V1_Test_M4_R2_VS2GateViews_20260925_152843_e7fc11d2",
+        "arguments": [
+          "\"D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject\"",
+          "/Game/HarborCity/Maps/L_M2_SeafrontStreet",
+          "-game",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-M4Test=r2_views",
+          "-HCM1SaveSlot=HarborCity_M2_V1_Test_M4_R2_VS2GateViews_20260925_152843_e7fc11d2",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\gate_regression\\20260925_152843_e7fc11d2\\r2_views\\game.log\"",
+          "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen"
+        ],
+        "started_utc": "2026-09-25T07:30:28.1019805Z",
+        "status": "PASS",
+        "process_id": 22256,
+        "exit_code": 0,
+        "ended_utc": "2026-09-25T07:32:38.0550196Z",
+        "result": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M4Tests\\20260925_153045_r2_views\\results.json",
+        "runtime_status": "COMPLETE",
+        "failures": 0,
+        "check_count": 198,
+        "failed_checks": []
+      },
+      {
+        "mode": "r2_combat",
+        "map": "L_M2_SeafrontStreet",
+        "save_slot": "HarborCity_M2_V1_Test_M4_R2_VS2GateCombat_20260925_152843_e7fc11d2",
+        "arguments": [
+          "\"D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject\"",
+          "/Game/HarborCity/Maps/L_M2_SeafrontStreet",
+          "-game",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-M4Test=r2_combat",
+          "-HCM1SaveSlot=HarborCity_M2_V1_Test_M4_R2_VS2GateCombat_20260925_152843_e7fc11d2",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\gate_regression\\20260925_152843_e7fc11d2\\r2_combat\\game.log\"",
+          "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen"
+        ],
+        "started_utc": "2026-09-25T07:32:38.1125516Z",
+        "status": "PASS",
+        "process_id": 29968,
+        "exit_code": 0,
+        "ended_utc": "2026-09-25T07:36:01.8355952Z",
+        "result": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M4Tests\\20260925_153333_r2_combat\\results.json",
+        "runtime_status": "COMPLETE",
+        "failures": 0,
+        "check_count": 252,
+        "failed_checks": []
+      },
+      {
+        "mode": "m5_story",
+        "map": "L_M5_CyberHarbor",
+        "save_slot": "HarborCity_M5_VS1_Test_VS2Gate_20260925_152843_e7fc11d2",
+        "arguments": [
+          "\"D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject\"",
+          "/Game/HarborCity/Maps/L_M5_CyberHarbor",
+          "-game",
+          "-unattended",
+          "-windowed",
+          "-ResX=1920",
+          "-ResY=1080",
+          "-ForceRes",
+          "-language=en",
+          "-nosplash",
+          "-M1AutoQuit",
+          "-M5Test=m5_story",
+          "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS2Gate_20260925_152843_e7fc11d2",
+          "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\gate_regression\\20260925_152843_e7fc11d2\\m5_story\\game.log\"",
+          "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+          "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+          "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen"
+        ],
+        "started_utc": "2026-09-25T07:36:02.5516837Z",
+        "status": "PASS",
+        "process_id": 34076,
+        "exit_code": 0,
+        "ended_utc": "2026-09-25T07:37:46.4918862Z",
+        "result": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M5Tests\\20260925_153622_m5_story\\results.json",
+        "runtime_status": "COMPLETE",
+        "failures": 0,
+        "check_count": 120,
+        "failed_checks": []
+      }
+    ],
+    "ended_at": "2026-09-25T15:37:46.5234967+08:00"
+  },
+  "video": {
+    "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+    "evidence": {
+      "schema": "HarborCity.M5VS2.FlightVideoEncodingR5.v1",
+      "milestone": "M5_VS2",
+      "status": "DIAGNOSTIC_ENCODED_SOURCE_STATUS_RETAINED",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\capture.json",
+      "output": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+      "encoding": "PASS_TECHNICAL_ONLY",
+      "input_scope": "ENGINE_INPUT_NOT_OS",
+      "os_input": "NOT_RUN",
+      "packaged_runtime": "NOT_RUN_EDITOR_GAME",
+      "visual_acceptance": "USER_REVIEW",
+      "listening": "NOT_RUN",
+      "normal_speed_viewing": "NOT_RUN",
+      "mode": "DIAGNOSTIC_DRAFT",
+      "runtime_acceptance": "NOT_UPGRADED_BY_ENCODING",
+      "known_visual_failures": [],
+      "commands": [
+        {
+          "name": "encode",
+          "argv": [
+            "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+            "-hide_banner",
+            "-loglevel",
+            "warning",
+            "-nostdin",
+            "-n",
+            "-f",
+            "concat",
+            "-safe",
+            "0",
+            "-i",
+            "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\realtime.ffconcat",
+            "-i",
+            "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+            "-map",
+            "0:v:0",
+            "-map",
+            "1:a:0",
+            "-fps_mode:v",
+            "vfr",
+            "-enc_time_base:v",
+            "1:1000",
+            "-c:v",
+            "libx264",
+            "-preset",
+            "ultrafast",
+            "-crf",
+            "22",
+            "-threads",
+            "2",
+            "-pix_fmt",
+            "yuv420p",
+            "-af",
+            "atrim=start_sample=0:end_sample=1906773,asetpts=PTS-STARTPTS,adelay=624S:all=1",
+            "-c:a",
+            "aac",
+            "-b:a",
+            "192k",
+            "-ar",
+            "48000",
+            "-t",
+            "39.737441",
+            "-movflags",
+            "+faststart",
+            "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+          ],
+          "timeout_seconds": 1200,
+          "exit_code": 0
+        },
+        {
+          "name": "ffprobe",
+          "argv": [
+            "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffprobe.exe",
+            "-v",
+            "error",
+            "-show_streams",
+            "-show_format",
+            "-of",
+            "json",
+            "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+          ],
+          "timeout_seconds": 120,
+          "exit_code": 0
+        },
+        {
+          "name": "frame_probe",
+          "argv": [
+            "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffprobe.exe",
+            "-v",
+            "error",
+            "-select_streams",
+            "v:0",
+            "-count_frames",
+            "-show_frames",
+            "-show_entries",
+            "frame=pts_time,duration_time:stream=nb_read_frames",
+            "-of",
+            "json",
+            "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+          ],
+          "timeout_seconds": 600,
+          "exit_code": 0
+        },
+        {
+          "name": "decoded_audio",
+          "argv": [
+            "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-nostdin",
+            "-n",
+            "-i",
+            "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+            "-map",
+            "0:a:0",
+            "-c:a",
+            "pcm_s16le",
+            "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\decoded_game_audio.wav"
+          ],
+          "timeout_seconds": 300,
+          "exit_code": 0
+        }
+      ],
+      "reusable_encoder": {
+        "path": "D:\\科研学习\\codex学习\\tools\\encode_m4_r2_playthrough.py",
+        "sha256": "4ec810ca1782a4ab5359ec76edfe2b0e417626580402eabc7d2d9820b65dbd8b"
+      },
+      "encoder_self": {
+        "path": "D:\\科研学习\\codex学习\\tools\\encode_m5_vs2_flight_demo_r5.py",
+        "sha256": "1282162735d382dadef285139becea29fab03e1742f5724089431546c847d1c8"
+      },
+      "polish_author_binding": {
+        "author": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_144955_324_cb37bf54_PlayablePolishAuthor\\author_result.json",
+        "hero": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/BP_FlightPosePolish",
+        "vehicle": "/Game/HarborCity/M5VS2/DrivingHands/Review_dd896fb5dc52/BP_VehicleDrivingHands",
+        "scope": "Native saved assets, then actual separate game load. No invented Reload phase; art remains USER_REVIEW."
+      },
+      "source_run": {
+        "status": "PASS_ENGINE_INPUT_ONLY",
+        "reason": "Normal input completed one measured orbit, dive, pullup and dry landing",
+        "exit_code": 0,
+        "stop_latched": false,
+        "capture_status": "CAPTURED_PENDING_REVIEW",
+        "capture_stop_reason": "vs2_gameplay_sequence_finished",
+        "formal_disqualifiers": []
+      },
+      "evidence_binding": {
+        "status": "BOUND_ACTUAL_NATIVE_LOG_AND_JSON",
+        "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\launch.json",
+        "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\FlightDemo_20260925_145139_8F40677B\\flight_demo.json",
+        "capture_events": [
+          {
+            "event": "STARTED",
+            "line": 2032,
+            "utc": "2026-09-25T06:51:52.584000+00:00"
+          },
+          {
+            "event": "FINISHED",
+            "line": 2038,
+            "utc": "2026-09-25T06:52:32.390000+00:00"
+          }
+        ],
+        "map": "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5",
+        "private_save_slot": "HarborCity_VS2_FlightDemo_R5_20260925_145119_800_9128ee67",
+        "module_sha256": "76799773f2e39ed52702faa37a6b44678849b4a669d66e2f5b2a78c22d42e4db",
+        "hash_scope": "Recorded manifest/module identity; later working-tree/DLL changes do not rewrite historical evidence. No current binary compatibility claim."
+      },
+      "native_audio_policy": {
+        "classification": "NATIVE_SILENT_MIX",
+        "allow_native_silent_mix": true,
+        "original_wav_required": true,
+        "synthetic_audio": false,
+        "audio_track_policy": "ENCODE_ORIGINAL_NATIVE_WAV_TO_ONE_AAC_TRACK",
+        "native_silent_rendering": true,
+        "native_submix_restored": true,
+        "measured_nonzero_samples": 0,
+        "measured_rms_dbfs": null,
+        "measured_peak_normalized": 0.0,
+        "silence_scope": "Zero or below the existing 1e-5 RMS signal threshold; actual PCM statistics retained, not a no-audio-track fallback.",
+        "auditory_quality": "NOT_ASSESSED"
+      },
+      "source_audio": {
+        "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+        "bytes": 7634988,
+        "sha256": "3629e9f6581dd8245d3b537f4425c365cc77a749c48f87f60cae01c6aa8363fa",
+        "riff_complete": true,
+        "chunks": [
+          {
+            "id": "fmt ",
+            "bytes": 16,
+            "offset": 20
+          },
+          {
+            "id": "data",
+            "bytes": 7634944,
+            "offset": 44
+          }
+        ],
+        "sample_rate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "sample_frames": 1908736,
+        "duration_seconds": 39.76533333333333,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0,
+        "nonzero_samples": 0,
+        "clipped_samples": 0,
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 1.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 2.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 3.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 4.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 5.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 6.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 7.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 8.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 9.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 10.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 11.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 12.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 13.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 14.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 15.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 16.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 17.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 18.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 19.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 20.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 21.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 22.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 23.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 24.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 25.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 26.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 27.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 28.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 29.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 30.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 31.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 32.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 33.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 34.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 35.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 36.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 37.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 38.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 39.0,
+            "sample_frames": 36736,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          }
+        ],
+        "signal_present": false,
+        "listening_status": "NOT_RUN",
+        "sound_effect_quality": "USER_REVIEW",
+        "meaning": "PCM structure and measured signal only; neither proves every effect was heard or sounds appropriate"
+      },
+      "timeline": {
+        "duration_seconds": 39.737441,
+        "last_frame_to_reported_stop_seconds": 0.07966919988393784,
+        "final_sample_tail_seconds": 0.001,
+        "tail_scope": "Only the final1ms encoding packet is appended; later drain/unobserved time is not fabricated as footage",
+        "audio_trim_start_sample": 0,
+        "audio_trim_end_sample": 1906773,
+        "audio_delay_samples": 624,
+        "audio_relative_start_seconds": 0.013005200773477554,
+        "audio_source_end_capture_seconds": 39.77833853410681,
+        "audio_expected_output_seconds": 39.7374375,
+        "synchronization_scope": "Recorded game-thread audio-start offset minus first captured-frame timestamp; native mixer/presentation latency remains unmeasured"
+      },
+      "timestamp_scope": "Game-thread CaptureThisFrame request wall times; not precise presentation timestamps. Default latency zero uses synchronous GPU readback.",
+      "source_evidence_hashes": [
+        {
+          "path": "D:\\科研学习\\codex学习\\tools\\encode_m4_r2_playthrough.py",
+          "sha256": "4ec810ca1782a4ab5359ec76edfe2b0e417626580402eabc7d2d9820b65dbd8b"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\tools\\encode_m5_vs2_flight_demo_r5.py",
+          "sha256": "1282162735d382dadef285139becea29fab03e1742f5724089431546c847d1c8"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\capture.json",
+          "sha256": "e91ede0fb1420fe06f357602d8963708272a7ee4097a6514a5426dc7266b7fad"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\launch.json",
+          "sha256": "c45aea803c546ade8015346263998808c0ffc2e0230e8816f0ed3b07d075270d"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\FlightDemo_20260925_145139_8F40677B\\flight_demo.json",
+          "sha256": "7d4de5a6b63bef26402f4f38a2f64cd7ae96278fe8e529ba7a51dc84a938cbc9"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_144955_324_cb37bf54_PlayablePolishAuthor\\author_result.json",
+          "sha256": "2cf6e024ab9512155590acfa9fcda890380608c9df7b75f0e648dd5dd938c559"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_144955_324_cb37bf54_PlayablePolishAuthor\\commandlet.json",
+          "sha256": "1192e2ccc5a998e239ade6039b2398f8e43af1a6b85ec836e6e6f6a0e9552d5a"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\game.log",
+          "sha256": "41ef10698fd5240f9a58ae7b59174a01913b6001a1e0ae69cb9e16eb922812b9"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+          "sha256": "3629e9f6581dd8245d3b537f4425c365cc77a749c48f87f60cae01c6aa8363fa"
+        }
+      ],
+      "frames": {
+        "count": 1190,
+        "width": 1920,
+        "height": 1080,
+        "requested_fps": 30,
+        "actual_mean_capture_fps": 29.922156038938333,
+        "dropped": 0,
+        "max_observed_gap_seconds": 0.07681389898061752,
+        "scope": "All native frames exactly once at measured request-time PTS. Holds across real capture gaps remain visible; no interpolation, 30fps resampling, speed change or artificial terminal footage."
+      },
+      "tools": [
+        {
+          "path": "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+          "sha256": "a6622bf3350ea09a1c750959b4d61f2aee035ef7d7ce6e33a33c8ec1bf39108b"
+        },
+        {
+          "path": "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffprobe.exe",
+          "sha256": "19c0eda729a0bb5988e52d985c76d4952abe1a0ad420a235a63ef22415d4378d"
+        }
+      ],
+      "planned_encode_command": [
+        "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-loglevel",
+        "warning",
+        "-nostdin",
+        "-n",
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\realtime.ffconcat",
+        "-i",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+        "-map",
+        "0:v:0",
+        "-map",
+        "1:a:0",
+        "-fps_mode:v",
+        "vfr",
+        "-enc_time_base:v",
+        "1:1000",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "ultrafast",
+        "-crf",
+        "22",
+        "-threads",
+        "2",
+        "-pix_fmt",
+        "yuv420p",
+        "-af",
+        "atrim=start_sample=0:end_sample=1906773,asetpts=PTS-STARTPTS,adelay=624S:all=1",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "192k",
+        "-ar",
+        "48000",
+        "-t",
+        "39.737441",
+        "-movflags",
+        "+faststart",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+      ],
+      "ffprobe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "Constrained Baseline",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.42c03d",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 0,
+            "pix_fmt": "yuv420p",
+            "level": 61,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "2000/1",
+            "avg_frame_rate": "1190000/39737",
+            "time_base": "1/16000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 635792,
+            "duration": "39.737000",
+            "bit_rate": "7908487",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1190",
+            "extradata_size": 39,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "encoder": "Lavc63.8.101 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1907397,
+            "duration": "39.737437",
+            "bit_rate": "2274",
+            "nb_frames": "1864",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "39.737438",
+          "size": "39337620",
+          "bit_rate": "7919508",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.6.100"
+          }
+        }
+      },
+      "decoded_audio": {
+        "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\decoded_game_audio.wav",
+        "bytes": 7629666,
+        "sha256": "6e1af819325715cbfaf9331acda1861ac0c7312898690b02b18183173e133535",
+        "riff_complete": true,
+        "chunks": [
+          {
+            "id": "fmt ",
+            "bytes": 16,
+            "offset": 20
+          },
+          {
+            "id": "LIST",
+            "bytes": 26,
+            "offset": 44
+          },
+          {
+            "id": "data",
+            "bytes": 7629588,
+            "offset": 78
+          }
+        ],
+        "sample_rate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "sample_frames": 1907397,
+        "duration_seconds": 39.7374375,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0,
+        "nonzero_samples": 0,
+        "clipped_samples": 0,
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 1.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 2.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 3.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 4.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 5.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 6.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 7.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 8.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 9.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 10.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 11.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 12.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 13.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 14.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 15.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 16.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 17.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 18.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 19.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 20.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 21.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 22.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 23.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 24.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 25.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 26.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 27.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 28.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 29.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 30.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 31.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 32.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 33.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 34.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 35.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 36.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 37.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 38.0,
+            "sample_frames": 48000,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          },
+          {
+            "start_seconds": 39.0,
+            "sample_frames": 35397,
+            "rms_dbfs": null,
+            "peak_normalized": 0.0
+          }
+        ],
+        "signal_present": false,
+        "listening_status": "NOT_RUN",
+        "sound_effect_quality": "USER_REVIEW",
+        "meaning": "PCM structure and measured signal only; neither proves every effect was heard or sounds appropriate"
+      },
+      "audio_encoding": "PASS_TECHNICAL_ORIGINAL_NATIVE_WAV",
+      "audio_content": "NATIVE_SILENT_MIX",
+      "output_sha256": "eb86f5f14cb6ccecdf16c79465b58d8361d937f307a260e0fc5fc34a820402d7",
+      "output_bytes": 39337620,
+      "encoded_duration_seconds": 39.737438,
+      "frame_pts_max_error_seconds": 0.0005001977384093692,
+      "frame_count_matches": true,
+      "normal_speed_pts_matches": true
+    },
+    "zip_included": false
+  },
+  "sources": [
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_153905_515_d0d6280f_HeroPolishReviewAuthor\\author_result.json",
+      "sha256": "071e9d8302d0f194ccc85810292925dc8e41ca4e7d6de8ebdc9fff3dbfa56c8b",
+      "bytes": 39902,
+      "review_file": "appendix/071e9d8302d0_author_result.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_153905_515_d0d6280f_HeroPolishReviewAuthor\\Portrait\\corner_v2_capture_plan.json",
+      "sha256": "8c51eb198208c279f84119926a8a2aa7d3be3bbb019765e93e38df9e9741bccb",
+      "bytes": 52080,
+      "review_file": "appendix/8c51eb198208_corner_v2_capture_plan.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\launch.json",
+      "sha256": "ed1cd46e95b82e45c717c74cb45878b5c964a84c32cb8ffb76b10a0245110729",
+      "bytes": 2311,
+      "review_file": "appendix/ed1cd46e95b8_launch.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\CornerRevTwoReview_20260925_154045_F5C8567A\\corner_v2_review.json",
+      "sha256": "23a807036a19518f8bbcbecf3f7701ed1800cf2abf7f7095f4bcfc5e0bad03ff",
+      "bytes": 297956,
+      "review_file": "appendix/23a807036a19_corner_v2_review.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_153905_515_d0d6280f_HeroPolishReviewAuthor\\FullBody\\corner_v2_capture_plan.json",
+      "sha256": "48b82beac486066bc9fa61116d8f9fc2263cbd4973b5d2b23f9300e6493527d0",
+      "bytes": 52080,
+      "review_file": "appendix/48b82beac486_corner_v2_capture_plan.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154238_425_42beb681_corner_v2_game\\launch.json",
+      "sha256": "e351925d6ba52455dc41645ccca27720c89e7b2503a9c7e58173d01bc73aefc0",
+      "bytes": 2311,
+      "review_file": "appendix/e351925d6ba5_launch.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154238_425_42beb681_corner_v2_game\\CornerRevTwoReview_20260925_154256_E7491583\\corner_v2_review.json",
+      "sha256": "9b9c6440935ffb67819ff8b852967e93e900dcb79c4863ed3cc1a8075e9d27af",
+      "bytes": 297957,
+      "review_file": "appendix/9b9c6440935f_corner_v2_review.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\launch.json",
+      "sha256": "bcfe65b4133057d088f8d587f04a93f7d01becf99fb704a9839725bbe2992fdb",
+      "bytes": 14032,
+      "review_file": "appendix/bcfe65b41330_launch.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\npc_review.json",
+      "sha256": "83ac7c49f0359c326bac38bb2c47ccde2d6a2d258573a407718a2812f44c766b",
+      "bytes": 2691045,
+      "review_file": "appendix/83ac7c49f035_npc_review.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\launch.json",
+      "sha256": "a01da459f88f626e6a7c7ee0641f8ebc4976a9a821a7ac16f9f1f1faa27e0f1d",
+      "bytes": 2278,
+      "review_file": "appendix/a01da459f88f_launch.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\corner_v2_review.json",
+      "sha256": "037d4c8a32ba4b023f9c43a4eafd9aa2ab0bb15743006536bbbe77d09e349eb2",
+      "bytes": 447137,
+      "review_file": "appendix/037d4c8a32ba_corner_v2_review.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144135_820_a0ddc81e_q_harbor_compare_game\\launch.json",
+      "sha256": "3d90adb0ae64a7b0a17511ca79a336616446bcab80ce7b261e955def1326b97c",
+      "bytes": 2116,
+      "review_file": "appendix/3d90adb0ae64_launch.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144135_820_a0ddc81e_q_harbor_compare_game\\NPCReview_20260925_144156_BFB2C811\\npc_review.json",
+      "sha256": "8034d1f506d7b51ff0472f7bdf0c2685879fc82ea90d1d96e885430e037351ac",
+      "bytes": 42873,
+      "review_file": "appendix/8034d1f506d7_npc_review.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\launch.json",
+      "sha256": "05ed8d75a0397e8eba74f5dd2a05f38c8908b203f82cf5bea7862565b946e4b1",
+      "bytes": 1989,
+      "review_file": "appendix/05ed8d75a039_launch.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\NPCReview_20260925_152625_E87FB002\\npc_review.json",
+      "sha256": "9af3de58fb6ad9357b020f55294c12ed37ef1c92da77ee53a31e61f5fff508df",
+      "bytes": 378298,
+      "review_file": "appendix/9af3de58fb6a_npc_review.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\launch.json",
+      "sha256": "c45aea803c546ade8015346263998808c0ffc2e0230e8816f0ed3b07d075270d",
+      "bytes": 2778,
+      "review_file": "appendix/c45aea803c54_launch.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\FlightDemo_20260925_145139_8F40677B\\flight_demo.json",
+      "sha256": "7d4de5a6b63bef26402f4f38a2f64cd7ae96278fe8e529ba7a51dc84a938cbc9",
+      "bytes": 2258638,
+      "review_file": "appendix/7d4de5a6b63b_flight_demo.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\verification.json",
+      "sha256": "af5e7a585781b1fa3ffbc60efb58e02db5bd879cb931cab134aa7615588613ce",
+      "bytes": 30516,
+      "review_file": "appendix/af5e7a585781_verification.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+      "sha256": "eb86f5f14cb6ccecdf16c79465b58d8361d937f307a260e0fc5fc34a820402d7",
+      "bytes": 39337620
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\PERFORMANCE_BASELINE_R5.json",
+      "sha256": "1de5b088b4bfb6f21a89f7736568441e53fd96e326ac48723331cbc5be86bcc2",
+      "bytes": 8579,
+      "review_file": "appendix/1de5b088b4bf_PERFORMANCE_BASELINE_R5.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\gate_regression\\20260925_152843_e7fc11d2\\gate_baseline.json",
+      "sha256": "58ab3bc58a15392c72eae7987f51bf1f8a964773f6c2f2d87e045f18fb121dcc",
+      "bytes": 9815,
+      "review_file": "appendix/58ab3bc58a15_gate_baseline.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M1Tests\\20260925_152858_core\\results.json",
+      "sha256": "64e1d697e4fcecb68cb8480c3df3578d6e55f02d300e62a7660790349c67b76e",
+      "bytes": 36592,
+      "review_file": "appendix/64e1d697e4fc_results.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M4Tests\\20260925_153045_r2_views\\results.json",
+      "sha256": "779fade18e99ec8f1fa8fd5591248643e4f5f074d18f85ffbd1316a2e23ff275",
+      "bytes": 669622,
+      "review_file": "appendix/779fade18e99_results.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M4Tests\\20260925_153333_r2_combat\\results.json",
+      "sha256": "60f6a977bf570476f26f363944fb8106b5e04268d18798f625aa8a1ab9fde322",
+      "bytes": 14834602,
+      "review_file": "appendix/60f6a977bf57_results.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\HarborCity\\Saved\\M5Tests\\20260925_153622_m5_story\\results.json",
+      "sha256": "cdee5442916a8cdcbcbd4e9ce048b94d60fea45bcecbb380b53fb71c79b03f2b",
+      "bytes": 562739,
+      "review_file": "appendix/cdee5442916a_results.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\M5_VS2_CONTROLS.md",
+      "sha256": "a558fd2c892337bf460a036a591d888dcf8f0d0e08e01684c0ce4d7dc97e37be",
+      "bytes": 2226,
+      "review_file": "appendix/a558fd2c8923_M5_VS2_CONTROLS.md"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\PURCHASE_CANDIDATES.md",
+      "sha256": "d2e94066b490bc1059afc2b0e3ca40171a4ed6f183a451895e35999d30b9cb1f",
+      "bytes": 13717,
+      "review_file": "appendix/d2e94066b490_PURCHASE_CANDIDATES.md"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\WORKFLOW_OVERRIDE_20260925.md",
+      "sha256": "daedbdf29b6bb02ae008a05158149a3d7b451d672168bd6e82c24af92dbae12b",
+      "bytes": 812,
+      "review_file": "appendix/daedbdf29b6b_WORKFLOW_OVERRIDE_20260925.md"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\RESUME_VISUAL_FIXES_20260925.json",
+      "sha256": "fcb4df72406d4c183f7292cf6638053760f1416226b905473bc5f63801291df1",
+      "bytes": 8261,
+      "review_file": "appendix/fcb4df72406d_RESUME_VISUAL_FIXES_20260925.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\INTEGRATION_20260925_AFTER_RESUME.json",
+      "sha256": "f7c2ab781c7542744b64cfca80088d5a27117eea5580cf737cf5c9ddb761d294",
+      "bytes": 2752,
+      "review_file": "appendix/f7c2ab781c75_INTEGRATION_20260925_AFTER_RESUME.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\FLIGHT_e578baa7_POSE_READBACK.json",
+      "sha256": "81713faf9e02adeade1ba59b634c41c762f6c65a43c15a5fdef97e60dca2aa23",
+      "bytes": 9653,
+      "review_file": "appendix/81713faf9e02_FLIGHT_e578baa7_POSE_READBACK.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\J_GARMENT_SOURCE_GEOMETRY.json",
+      "sha256": "cb2900a28911fec1aaed761b5265715af3cb04e569bb5eb90f6835bea8c019fa",
+      "bytes": 3622,
+      "review_file": "appendix/cb2900a28911_J_GARMENT_SOURCE_GEOMETRY.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\SCENE_IDLE_997d29a7_READBACK.json",
+      "sha256": "a51eb7503e4e4fd784a6ae625f2f6dd7f01a8b39e329140660df10207150060b",
+      "bytes": 1498,
+      "review_file": "appendix/a51eb7503e4e_SCENE_IDLE_997d29a7_READBACK.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\J_CLOTH_12cc066f_CLASSIFIED\\classification.json",
+      "sha256": "8323d7558d2c4fd42a9d5d21c469a5fab8157c1e677c3dc2a56e414f9c092edc",
+      "bytes": 8338,
+      "review_file": "appendix/8323d7558d2c_classification.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\J_CLOTH_f8d97c35_FORCE_UPDATE\\classification.json",
+      "sha256": "395b8dfc33ae14802a8541c0ab27cb3e881e622a09743e1b7a69c88a9b1b92f0",
+      "bytes": 8529,
+      "review_file": "appendix/395b8dfc33ae_classification.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\HERO_FILL_DRAWCOMMAND_LIFETIME_REVIEW_20260925.md",
+      "sha256": "de6cc5eee752071d5049f4f121fd763770fdcdae8675f9886ee53ee84831a777",
+      "bytes": 6365,
+      "review_file": "appendix/de6cc5eee752_HERO_FILL_DRAWCOMMAND_LIFETIME_REVIEW_20260925.md"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\GAS_CLOCK_SOLE_356579ca_REVIEW.md",
+      "sha256": "01037647b7c01b95da86cc93b5004ae28f54584dd60d6208a019dff3be4900ae",
+      "bytes": 4439,
+      "review_file": "appendix/01037647b7c0_GAS_CLOCK_SOLE_356579ca_REVIEW.md"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\FOOTPLACEMENT_SOLE_b44ef459_ANALYSIS.json",
+      "sha256": "914c2666e193b080a3619f53b90aebfa39f553aa76d071e3bdd390223fccd1a5",
+      "bytes": 116114,
+      "review_file": "appendix/914c2666e193_FOOTPLACEMENT_SOLE_b44ef459_ANALYSIS.json"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\tools\\ue_m5_vs2_scene_idle_author.py",
+      "sha256": "460f0b50d8198fe8077f4459705ac96127a003b9369989270ecde5ed9b8b89aa",
+      "bytes": 7269,
+      "review_file": "appendix/460f0b50d819_ue_m5_vs2_scene_idle_author.py"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\tools\\ue_m5_vs2_hero_polish_review_author.py",
+      "sha256": "758dd88c017bcc4231bf0e7a6a195e95c50837062270d4eb5906d5f4216195d9",
+      "bytes": 4744,
+      "review_file": "appendix/758dd88c017b_ue_m5_vs2_hero_polish_review_author.py"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\tools\\run_m5_vs2_gate_baseline.ps1",
+      "sha256": "3b0ab8af09c210a9191856f86ceed78bd027089d517d7f69c4198d05d177f34a",
+      "bytes": 4358,
+      "review_file": "appendix/3b0ab8af09c2_run_m5_vs2_gate_baseline.ps1"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\tools\\ue_m5_vs2_flight_pose_polish_author.py",
+      "sha256": "ac3dfca997c90a3d6257229e4bdc452bf073fdf5dceca0e94002df1e0bb9dadc",
+      "bytes": 4971,
+      "review_file": "appendix/ac3dfca997c9_ue_m5_vs2_flight_pose_polish_author.py"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2NPCIdleEditor.cpp",
+      "sha256": "d2fa1c9f7df55338f631ea14d359f4cca7b1fb1aea07a8ecc1dce000304d3a76",
+      "bytes": 17989,
+      "review_file": "appendix/d2fa1c9f7df5_HCM5VS2NPCIdleEditor.cpp"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2NPCIdleEditor.h",
+      "sha256": "d453cb15d18cd25cb4f6349161f728f3856bc16a3fa3dab728ee774ac6e52be3",
+      "bytes": 1030,
+      "review_file": "appendix/d453cb15d18c_HCM5VS2NPCIdleEditor.h"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2NPCClothDiagnostics.cpp",
+      "sha256": "d3376d078b4d9ed1693890c3800e77aa4abc014a45edf530fe5a857ac83272fa",
+      "bytes": 26449,
+      "review_file": "appendix/d3376d078b4d_HCM5VS2NPCClothDiagnostics.cpp"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\CornerRevTwoReview_20260925_154045_F5C8567A\\00_Afternoon_HeroPortrait.png",
+      "sha256": "6b7fa84a2b64e64466375873652b0d4561eeaa0088dae389109b915190b8e0f2",
+      "bytes": 2897052,
+      "review_file": "media/6b7fa84a2b_00_Afternoon_HeroPortrait.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\CornerRevTwoReview_20260925_154045_F5C8567A\\01_Dusk_HeroPortrait.png",
+      "sha256": "6ca5509ca061b801e167ceabf047b90372095088a4cd3334bde35df415e6fb01",
+      "bytes": 2600712,
+      "review_file": "media/6ca5509ca0_01_Dusk_HeroPortrait.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\CornerRevTwoReview_20260925_154045_F5C8567A\\02_Night_HeroPortrait.png",
+      "sha256": "a1c73da0d63dd040d5bcc9ba213b3f3e87380bef4ad1a49a2e784cbfdb8227a5",
+      "bytes": 2441098,
+      "review_file": "media/a1c73da0d6_02_Night_HeroPortrait.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154027_718_aed04303_corner_v2_game\\CornerRevTwoReview_20260925_154045_F5C8567A\\03_Interior_HeroPortrait.png",
+      "sha256": "ac31748e227eba69fbc51d2ff8c4bf38f72a2bd9390adbbd60a304b0bff45d7e",
+      "bytes": 2711676,
+      "review_file": "media/ac31748e22_03_Interior_HeroPortrait.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_154238_425_42beb681_corner_v2_game\\CornerRevTwoReview_20260925_154256_E7491583\\00_Afternoon_HeroFullBody.png",
+      "sha256": "4b1750c48b9c981d804864ee7d237e5cb64d0fecd6ae696f3412f1f525660052",
+      "bytes": 3069067,
+      "review_file": "media/4b1750c48b_00_Afternoon_HeroFullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_122558_970_6bd2fcb5_driving_hands_game\\DrivingHandsReview_20260925_122617_FAEE9230\\01_ActualParkLeft.png",
+      "sha256": "60231fdf1dda6369fba21810497e88a63f71384d99d9061c35152cf4898eeeb5",
+      "bytes": 2669096,
+      "review_file": "media/60231fdf1d_01_ActualParkLeft.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_122837_030_7746a982_driving_hands_game\\DrivingHandsReview_20260925_122858_AEB435BC\\01_ActualParkLeft.png",
+      "sha256": "31b2002c6ea27d16fbdd4969f02da64a07c17bdb8bb83490b18a83f4b5eb27a9",
+      "bytes": 1907741,
+      "review_file": "media/31b2002c6e_01_ActualParkLeft.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_122558_970_6bd2fcb5_driving_hands_game\\DrivingHandsReview_20260925_122617_FAEE9230\\07_FootUnarmedLow.png",
+      "sha256": "ab3c08da1440377b7e524246902d7e5d1bf47455faaff80cebe2be454b5089f3",
+      "bytes": 2953999,
+      "review_file": "media/ab3c08da14_07_FootUnarmedLow.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_122558_970_6bd2fcb5_driving_hands_game\\DrivingHandsReview_20260925_122617_FAEE9230\\08_FootPistolLow.png",
+      "sha256": "ccb84a44fdb956c64cf28882a5e060bc2119f6d57a65f73f241c99b10c9f175c",
+      "bytes": 3136777,
+      "review_file": "media/ccb84a44fd_08_FootPistolLow.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\00_Q_Face_Neutral.png",
+      "sha256": "7362f998e4d69e30e24dfe877db49db97f5630d2dd4c2dabcd1c921f21628f21",
+      "bytes": 1889244,
+      "review_file": "media/7362f998e4_00_Q_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\01_Q_FullBody.png",
+      "sha256": "27663f32db1161ff3d733199bf8518f619906cd8bebd1b7f3c2d9214e804fa67",
+      "bytes": 2019834,
+      "review_file": "media/27663f32db_01_Q_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\02_R_Face_Neutral.png",
+      "sha256": "faf6df40e362898667aad088eadb07deb1d79c23ac3ed0baa533db56a3fa9221",
+      "bytes": 1820482,
+      "review_file": "media/faf6df40e3_02_R_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\03_R_FullBody.png",
+      "sha256": "5a8572e8a660a6a1b06cafa5e373b1416dc43fee0af65a2a4e945f8de15ecb88",
+      "bytes": 1879476,
+      "review_file": "media/5a8572e8a6_03_R_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\04_J_Face_Neutral.png",
+      "sha256": "0e42ca19a541d09df09c2dc530a3864c340eaa81ad54c03e5b75a8a18c7304db",
+      "bytes": 1850111,
+      "review_file": "media/0e42ca19a5_04_J_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\05_J_FullBody.png",
+      "sha256": "ffad7adf4ef544eb7abcb4ac96d11b1931c49a21ea173bc30e27e33fef293dfc",
+      "bytes": 1990850,
+      "review_file": "media/ffad7adf4e_05_J_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\06_T_Face_Neutral.png",
+      "sha256": "0a8988e61b18dcf34305a0dfe48cdf7125208feb480df1a7715464ac152b6d78",
+      "bytes": 1689207,
+      "review_file": "media/0a8988e61b_06_T_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\07_T_FullBody.png",
+      "sha256": "8f9f0f6f8a6381983c081935ce5be7b0b4a95dbbd6a00491cb89ff64054055f7",
+      "bytes": 1849723,
+      "review_file": "media/8f9f0f6f8a_07_T_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\08_U_Face_Neutral.png",
+      "sha256": "9d850e3d841c53fa0ab124d0e56a03237779104d107b5d3f5bdd46bd8f2cb047",
+      "bytes": 1914422,
+      "review_file": "media/9d850e3d84_08_U_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\09_U_FullBody.png",
+      "sha256": "67f0cf4f9ced30d0125221ce81a00535624be3e7ff3a884f57e6f87e5d8b6eb0",
+      "bytes": 1846126,
+      "review_file": "media/67f0cf4f9c_09_U_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\10_V_Face_Neutral.png",
+      "sha256": "da7c1a61d4380112bcf2e1bd18d1778a5d18d0c109ccf95b80436536979ac564",
+      "bytes": 1760391,
+      "review_file": "media/da7c1a61d4_10_V_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\11_V_FullBody.png",
+      "sha256": "8c69924ac50306747addd254eb4f8b50a3e4ac155cf466a10b4f454e92b87d78",
+      "bytes": 1864419,
+      "review_file": "media/8c69924ac5_11_V_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\12_W_Face_Neutral.png",
+      "sha256": "a94576e8f05a115efd61f391c9b91d3cf5c4ce3a032a30599725f1510d26b1ba",
+      "bytes": 1886347,
+      "review_file": "media/a94576e8f0_12_W_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\13_W_FullBody.png",
+      "sha256": "ec04ef32e2cea2b93d00d71cb9f18d1e550f3402cdfa64591ddd9cde00c514fc",
+      "bytes": 1988634,
+      "review_file": "media/ec04ef32e2_13_W_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\14_X_Face_Neutral.png",
+      "sha256": "6ffdee3c035368d8d28166d65804f848da73b6b3bb9310157b8a9bbf81eb6d4d",
+      "bytes": 1774258,
+      "review_file": "media/6ffdee3c03_14_X_Face_Neutral.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\15_X_FullBody.png",
+      "sha256": "15dce38806ac673127c94e9a50728c8f051c6d98afa0899ebd8f2481ceca3d47",
+      "bytes": 1856700,
+      "review_file": "media/15dce38806_15_X_FullBody.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144135_820_a0ddc81e_q_harbor_compare_game\\NPCReview_20260925_144156_BFB2C811\\00_Q_Harbor_Original.png",
+      "sha256": "35488bf7f305409798a80875154addb8d968464521b6f4aeda1bba00ab958454",
+      "bytes": 3019173,
+      "review_file": "media/35488bf7f3_00_Q_Harbor_Original.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144135_820_a0ddc81e_q_harbor_compare_game\\NPCReview_20260925_144156_BFB2C811\\01_Q_Harbor_WarmSkinCandidate.png",
+      "sha256": "02a4ba9973a8d4e2eda8de9cc17381f5b34d4562fc92f52c13e2d6919ddf9cf5",
+      "bytes": 3023098,
+      "review_file": "media/02a4ba9973_01_Q_Harbor_WarmSkinCandidate.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\NPCReview_20260925_152625_E87FB002\\00_Q_Vendor_Context_0.png",
+      "sha256": "2f8f88fc210d338ce1fc5c989dfba9bd3238c104b476a783eb9fd2f48a76a767",
+      "bytes": 2867712,
+      "review_file": "media/2f8f88fc21_00_Q_Vendor_Context_0.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\NPCReview_20260925_152625_E87FB002\\02_R_SeaGaze_Context_0.png",
+      "sha256": "8df94920ec864e44b767ee99bff379c352ce898edabd89aaa34d7f0bd3f43128",
+      "bytes": 3098539,
+      "review_file": "media/8df94920ec_02_R_SeaGaze_Context_0.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\NPCReview_20260925_152625_E87FB002\\04_T_Chat_Context_0.png",
+      "sha256": "bdae5203a008fa2cabe6330c3997bff7ebdeca9a734513bcf48cdc75a406398b",
+      "bytes": 3093184,
+      "review_file": "media/bdae5203a0_04_T_Chat_Context_0.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\00_M5VS2_J_LivingDown_Stable.png",
+      "sha256": "3293bd57ca229a6ba61901c5663572506364f093a45b1f3f0cea92af4bd24da5",
+      "bytes": 1514934,
+      "review_file": "media/3293bd57ca_00_M5VS2_J_LivingDown_Stable.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\04_M5VS2_J_Death_After5Seconds.png",
+      "sha256": "b18e34451be118ea8f0ce588dbb5dcfab3697eb113a6cf52312c40251e6c998f",
+      "bytes": 1738367,
+      "review_file": "media/b18e34451b_04_M5VS2_J_Death_After5Seconds.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\00_Afternoon_SouthStreet.png",
+      "sha256": "001bbf4eb5a56745134ea837528dd09ca2c2a7456d596fda5c48ffd94bd74a76",
+      "bytes": 2980036,
+      "review_file": "media/001bbf4eb5_00_Afternoon_SouthStreet.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\01_Afternoon_Promenade.png",
+      "sha256": "ae21a888e5b35e69cf7fc4ed7faa8da823c0516c934c531be43db5ef3d9236d0",
+      "bytes": 3094162,
+      "review_file": "media/ae21a888e5_01_Afternoon_Promenade.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\02_Dusk_SouthStreet.png",
+      "sha256": "45ef653eedd3c46c731a6e21f2e6aee017cf976db7d1ec3af5af030a819d1a34",
+      "bytes": 2618710,
+      "review_file": "media/45ef653eed_02_Dusk_SouthStreet.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\03_Dusk_Promenade.png",
+      "sha256": "88ae92a4e07f5273e93e764e15db104e72acf6447cadde764d06541b0592eb6b",
+      "bytes": 2618725,
+      "review_file": "media/88ae92a4e0_03_Dusk_Promenade.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\04_Night_SouthStreet.png",
+      "sha256": "d20e6897083a73908c3847fdf93d928f3edfbd3bb1fc45d7276059afa1c6b172",
+      "bytes": 2314035,
+      "review_file": "media/d20e689708_04_Night_SouthStreet.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\05_Night_Promenade.png",
+      "sha256": "4e3641adb024dc9e3f2fe6a73cb6aba1b04bb5bb08b167383f44eae8df79b25e",
+      "bytes": 1944493,
+      "review_file": "media/4e3641adb0_05_Night_Promenade.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_090835_598_39cbd5a0_corner_v2_game\\CornerRevTwoReview_20260925_090853_0AA00352\\06_Afternoon_Air50m.png",
+      "sha256": "59e3cbd5140e3fbfd142f22868144d942f00c76331f1093ca26af762e8964848",
+      "bytes": 3455690,
+      "review_file": "media/59e3cbd514_06_Afternoon_Air50m.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\store_review_20260925_0552\\B_JapanVillage_media1_browser.png",
+      "sha256": "3eb4baa7569c54fe3de83f9147b40efc34a01c50c915cc640ac05ced65a8077b",
+      "bytes": 138376,
+      "review_file": "media/3eb4baa756_B_JapanVillage_media1_browser.png"
+    },
+    {
+      "original": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\store_review_20260925_0552\\C_JapanCountryside_media2_browser.png",
+      "sha256": "3c86816b0d5df7534854d68592a9c3f984d7d4d340a7777bc2e6a546f87e70b0",
+      "bytes": 119538,
+      "review_file": "media/3c86816b0d_C_JapanCountryside_media2_browser.png"
+    }
+  ],
+  "related_differences": [
+    {
+      "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\source_snapshots\\getup_local_yaw_20260925\\HCM4R1PhysicalReactionGetUp.cpp",
+      "before_sha256": "bac3932751116119410fe38f905ab3d7d49501a8b0b4c3968d4ba82ed7e3b823",
+      "after": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M4R1\\HCM4R1PhysicalReactionGetUp.cpp",
+      "after_sha256": "51c3850c06c2ef322b4c562fd8250729e847d70973d68f074b36bcd159c9d3ab",
+      "diff": "appendix/HCM4R1PhysicalReactionGetUp.cpp.diff",
+      "scope": "Compared with named preserved snapshot; not a complete project-history patch"
+    },
+    {
+      "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\source_snapshots\\resume_20260925_121107\\HCM5VS2DrivingHandsComponent.cpp",
+      "before_sha256": "ef7ab1fa042b9da7730e1c9b0fcf04c4d2fbfd5d0c05f91650c06ee2ad0105e0",
+      "after": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2DrivingHandsComponent.cpp",
+      "after_sha256": "5a3783c3f882ba84babeaaf7ff63cdf9a30eebd8acabebdcbe31e1dd64e851a3",
+      "diff": "appendix/HCM5VS2DrivingHandsComponent.cpp.diff",
+      "scope": "Compared with named preserved snapshot; not a complete project-history patch"
+    },
+    {
+      "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\source_snapshots\\flight_graph_node_deduction_20260925_042823\\HCM5VS2FlightPoseEditor.cpp",
+      "before_sha256": "177db96c4f0df7f17f08e6315f80621876a8c82d51d2e9cac419d1e5c183a4d5",
+      "after": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2FlightPoseEditor.cpp",
+      "after_sha256": "fc3d8da62f1d662b2a7bf3515ff0053a5fb0dca07b61a6a94bc9225c5ce9bea4",
+      "diff": "appendix/HCM5VS2FlightPoseEditor.cpp.diff",
+      "scope": "Compared with named preserved snapshot; not a complete project-history patch"
+    }
+  ],
+  "browser_check": {
+    "status": "BLOCKED_BROWSER_URL_POLICY",
+    "render_test": "NOT_RUN",
+    "reason": "Browser use URL policy rejected navigation to this new local file. No alternate browser/server/CDP route attempted.",
+    "attempted_url": "file:///D:/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/codex%E5%AD%A6%E4%B9%A0/docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/index.html"
+  },
+  "zip_verification": "See adjacent ZIP_INTEGRITY.json created after archiving",
+  "local_link_check": {
+    "status": "PASS_LOCAL_LINK_AND_SOURCE_BYTES_ONLY",
+    "file": "appendix/LOCAL_LINK_CHECK.json"
+  }
+}

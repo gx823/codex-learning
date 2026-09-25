@@ -1,0 +1,86 @@
+{
+  "scope": "Editor-game only; image contact sheets inspected; neither packaged runtime nor OS mouse evidence",
+  "tests": {
+    "hair": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_122501_311_646865ed_hair_substep_On\\HairReview_20260925_122522_CCAAA177\\hair_review.json",
+      "sha256": "9e911222c895a02302e0c75dd3f235a061ab1161821c76d55505fc62642b2ac2",
+      "status": "PASS",
+      "images": [
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122501_311_646865ed_hair_substep_On/HairReview_20260925_122522_CCAAA177/00_Idle_PhysicsOn.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122501_311_646865ed_hair_substep_On/HairReview_20260925_122522_CCAAA177/01_Idle_PhysicsOff.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122501_311_646865ed_hair_substep_On/HairReview_20260925_122522_CCAAA177/02_Idle_PhysicsResetOn.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122501_311_646865ed_hair_substep_On/HairReview_20260925_122522_CCAAA177/03_LookLeft.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122501_311_646865ed_hair_substep_On/HairReview_20260925_122522_CCAAA177/04_Walk.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122501_311_646865ed_hair_substep_On/HairReview_20260925_122522_CCAAA177/05_Stop.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122501_311_646865ed_hair_substep_On/HairReview_20260925_122522_CCAAA177/06_Rear_Idle.png"
+      ],
+      "stop_latched": false,
+      "anchor_enabled": true,
+      "first_segment_measurements": 15408,
+      "max_length_ratio": 1.0000007939661932,
+      "extension_over_1_00001": 0,
+      "fixed_step": true,
+      "original_num_steps": "NOT_EXPOSED_NOT_MEASURED"
+    },
+    "hands_day": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_122558_970_6bd2fcb5_driving_hands_game\\DrivingHandsReview_20260925_122617_FAEE9230\\driving_hands_review.json",
+      "sha256": "e10eb49cb839eab1d018254df5c1f5d043e2e4062a026f9ed2fde57202fb472c",
+      "status": "PASS_CAPTURE_ONLY",
+      "images": [
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/00_DriverCenter.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/01_ActualParkLeft.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/02_ActualParkRight.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/03_ActualWheelReturn.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/04_ActualSlowWA.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/05_ActualSlowWD.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/06_DriverThirdPersonHidden.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/07_FootUnarmedLow.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122558_970_6bd2fcb5_driving_hands_game/DrivingHandsReview_20260925_122617_FAEE9230/08_FootPistolLow.png"
+      ],
+      "stop_latched": false,
+      "actual_park_left_degrees": 220,
+      "actual_park_right_degrees": -220,
+      "active_samples": 110,
+      "max_palm_proxy_error_cm": 9.33708309445092e-13,
+      "max_arm_length_error_mesh_cm": 1.7763568394002505e-14,
+      "max_regripping_hands": 1,
+      "natural_finger_contact": "USER_REVIEW_proxy_is_not_skin_distance"
+    },
+    "hands_night": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_122837_030_7746a982_driving_hands_game\\DrivingHandsReview_20260925_122858_AEB435BC\\driving_hands_review.json",
+      "sha256": "dad06070c479a33b58494f3396666744adb8320e61e5b382305e253ad38f33b0",
+      "status": "PASS_CAPTURE_ONLY",
+      "images": [
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/00_DriverCenter.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/01_ActualParkLeft.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/02_ActualParkRight.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/03_ActualWheelReturn.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/04_ActualSlowWA.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/05_ActualSlowWD.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/06_DriverThirdPersonHidden.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/07_FootUnarmedLow.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_122837_030_7746a982_driving_hands_game/DrivingHandsReview_20260925_122858_AEB435BC/08_FootPistolLow.png"
+      ],
+      "stop_latched": false,
+      "actual_park_left_degrees": 220,
+      "actual_park_right_degrees": -220,
+      "active_samples": 105,
+      "max_palm_proxy_error_cm": 9.19322587244316e-13,
+      "max_arm_length_error_mesh_cm": 1.0658141036401503e-14,
+      "max_regripping_hands": 1,
+      "natural_finger_contact": "USER_REVIEW_proxy_is_not_skin_distance"
+    },
+    "wing": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_121254_624_d99c128f_wing_material_review_game\\WingMaterialReview_3ED91155477463AC63EB10B110E92F3D\\wing_material_review.json",
+      "sha256": "59b7637414d9d5fdb782cdc174d2cc9d954344116fb2bf39973be3fa5905a5d2",
+      "status": "PASS",
+      "images": [
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_121254_624_d99c128f_wing_material_review_game/WingMaterialReview_3ED91155477463AC63EB10B110E92F3D/00_DefaultGain_A_Additive.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_121254_624_d99c128f_wing_material_review_game/WingMaterialReview_3ED91155477463AC63EB10B110E92F3D/01_DefaultGain_B_SoftLayers.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_121254_624_d99c128f_wing_material_review_game/WingMaterialReview_3ED91155477463AC63EB10B110E92F3D/02_BoostGain_A_Additive.png",
+        "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_121254_624_d99c128f_wing_material_review_game/WingMaterialReview_3ED91155477463AC63EB10B110E92F3D/03_BoostGain_B_SoftLayers.png"
+      ],
+      "stop_latched": false
+    }
+  }
+}

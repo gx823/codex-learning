@@ -1,0 +1,995 @@
+{
+  "schema": "HarborCity.M5VS2.FlightVideoEncodingR5.v1",
+  "milestone": "M5_VS2",
+  "status": "DIAGNOSTIC_ENCODED_SOURCE_STATUS_RETAINED",
+  "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\capture.json",
+  "output": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+  "encoding": "PASS_TECHNICAL_ONLY",
+  "input_scope": "ENGINE_INPUT_NOT_OS",
+  "os_input": "NOT_RUN",
+  "packaged_runtime": "NOT_RUN_EDITOR_GAME",
+  "visual_acceptance": "USER_REVIEW",
+  "listening": "NOT_RUN",
+  "normal_speed_viewing": "NOT_RUN",
+  "mode": "DIAGNOSTIC_DRAFT",
+  "runtime_acceptance": "NOT_UPGRADED_BY_ENCODING",
+  "known_visual_failures": [],
+  "commands": [
+    {
+      "name": "encode",
+      "argv": [
+        "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-loglevel",
+        "warning",
+        "-nostdin",
+        "-n",
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\realtime.ffconcat",
+        "-i",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+        "-map",
+        "0:v:0",
+        "-map",
+        "1:a:0",
+        "-fps_mode:v",
+        "vfr",
+        "-enc_time_base:v",
+        "1:1000",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "ultrafast",
+        "-crf",
+        "22",
+        "-threads",
+        "2",
+        "-pix_fmt",
+        "yuv420p",
+        "-af",
+        "atrim=start_sample=0:end_sample=1906773,asetpts=PTS-STARTPTS,adelay=624S:all=1",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "192k",
+        "-ar",
+        "48000",
+        "-t",
+        "39.737441",
+        "-movflags",
+        "+faststart",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+      ],
+      "timeout_seconds": 1200,
+      "exit_code": 0
+    },
+    {
+      "name": "ffprobe",
+      "argv": [
+        "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffprobe.exe",
+        "-v",
+        "error",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+      ],
+      "timeout_seconds": 120,
+      "exit_code": 0
+    },
+    {
+      "name": "frame_probe",
+      "argv": [
+        "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffprobe.exe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-count_frames",
+        "-show_frames",
+        "-show_entries",
+        "frame=pts_time,duration_time:stream=nb_read_frames",
+        "-of",
+        "json",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+      ],
+      "timeout_seconds": 600,
+      "exit_code": 0
+    },
+    {
+      "name": "decoded_audio",
+      "argv": [
+        "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-nostdin",
+        "-n",
+        "-i",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+        "-map",
+        "0:a:0",
+        "-c:a",
+        "pcm_s16le",
+        "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\decoded_game_audio.wav"
+      ],
+      "timeout_seconds": 300,
+      "exit_code": 0
+    }
+  ],
+  "reusable_encoder": {
+    "path": "D:\\科研学习\\codex学习\\tools\\encode_m4_r2_playthrough.py",
+    "sha256": "4ec810ca1782a4ab5359ec76edfe2b0e417626580402eabc7d2d9820b65dbd8b"
+  },
+  "encoder_self": {
+    "path": "D:\\科研学习\\codex学习\\tools\\encode_m5_vs2_flight_demo_r5.py",
+    "sha256": "1282162735d382dadef285139becea29fab03e1742f5724089431546c847d1c8"
+  },
+  "polish_author_binding": {
+    "author": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_144955_324_cb37bf54_PlayablePolishAuthor\\author_result.json",
+    "hero": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/BP_FlightPosePolish",
+    "vehicle": "/Game/HarborCity/M5VS2/DrivingHands/Review_dd896fb5dc52/BP_VehicleDrivingHands",
+    "scope": "Native saved assets, then actual separate game load. No invented Reload phase; art remains USER_REVIEW."
+  },
+  "source_run": {
+    "status": "PASS_ENGINE_INPUT_ONLY",
+    "reason": "Normal input completed one measured orbit, dive, pullup and dry landing",
+    "exit_code": 0,
+    "stop_latched": false,
+    "capture_status": "CAPTURED_PENDING_REVIEW",
+    "capture_stop_reason": "vs2_gameplay_sequence_finished",
+    "formal_disqualifiers": []
+  },
+  "evidence_binding": {
+    "status": "BOUND_ACTUAL_NATIVE_LOG_AND_JSON",
+    "launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\launch.json",
+    "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\FlightDemo_20260925_145139_8F40677B\\flight_demo.json",
+    "capture_events": [
+      {
+        "event": "STARTED",
+        "line": 2032,
+        "utc": "2026-09-25T06:51:52.584000+00:00"
+      },
+      {
+        "event": "FINISHED",
+        "line": 2038,
+        "utc": "2026-09-25T06:52:32.390000+00:00"
+      }
+    ],
+    "map": "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5",
+    "private_save_slot": "HarborCity_VS2_FlightDemo_R5_20260925_145119_800_9128ee67",
+    "module_sha256": "76799773f2e39ed52702faa37a6b44678849b4a669d66e2f5b2a78c22d42e4db",
+    "hash_scope": "Recorded manifest/module identity; later working-tree/DLL changes do not rewrite historical evidence. No current binary compatibility claim."
+  },
+  "native_audio_policy": {
+    "classification": "NATIVE_SILENT_MIX",
+    "allow_native_silent_mix": true,
+    "original_wav_required": true,
+    "synthetic_audio": false,
+    "audio_track_policy": "ENCODE_ORIGINAL_NATIVE_WAV_TO_ONE_AAC_TRACK",
+    "native_silent_rendering": true,
+    "native_submix_restored": true,
+    "measured_nonzero_samples": 0,
+    "measured_rms_dbfs": null,
+    "measured_peak_normalized": 0.0,
+    "silence_scope": "Zero or below the existing 1e-5 RMS signal threshold; actual PCM statistics retained, not a no-audio-track fallback.",
+    "auditory_quality": "NOT_ASSESSED"
+  },
+  "source_audio": {
+    "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+    "bytes": 7634988,
+    "sha256": "3629e9f6581dd8245d3b537f4425c365cc77a749c48f87f60cae01c6aa8363fa",
+    "riff_complete": true,
+    "chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16,
+        "offset": 20
+      },
+      {
+        "id": "data",
+        "bytes": 7634944,
+        "offset": 44
+      }
+    ],
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "sample_frames": 1908736,
+    "duration_seconds": 39.76533333333333,
+    "rms_dbfs": null,
+    "peak_normalized": 0.0,
+    "nonzero_samples": 0,
+    "clipped_samples": 0,
+    "windows": [
+      {
+        "start_seconds": 0.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 1.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 2.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 3.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 4.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 5.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 6.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 7.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 8.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 9.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 10.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 11.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 12.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 13.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 14.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 15.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 16.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 17.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 18.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 19.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 20.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 21.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 22.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 23.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 24.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 25.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 26.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 27.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 28.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 29.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 30.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 31.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 32.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 33.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 34.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 35.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 36.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 37.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 38.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 39.0,
+        "sample_frames": 36736,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      }
+    ],
+    "signal_present": false,
+    "listening_status": "NOT_RUN",
+    "sound_effect_quality": "USER_REVIEW",
+    "meaning": "PCM structure and measured signal only; neither proves every effect was heard or sounds appropriate"
+  },
+  "timeline": {
+    "duration_seconds": 39.737441,
+    "last_frame_to_reported_stop_seconds": 0.07966919988393784,
+    "final_sample_tail_seconds": 0.001,
+    "tail_scope": "Only the final1ms encoding packet is appended; later drain/unobserved time is not fabricated as footage",
+    "audio_trim_start_sample": 0,
+    "audio_trim_end_sample": 1906773,
+    "audio_delay_samples": 624,
+    "audio_relative_start_seconds": 0.013005200773477554,
+    "audio_source_end_capture_seconds": 39.77833853410681,
+    "audio_expected_output_seconds": 39.7374375,
+    "synchronization_scope": "Recorded game-thread audio-start offset minus first captured-frame timestamp; native mixer/presentation latency remains unmeasured"
+  },
+  "timestamp_scope": "Game-thread CaptureThisFrame request wall times; not precise presentation timestamps. Default latency zero uses synchronous GPU readback.",
+  "source_evidence_hashes": [
+    {
+      "path": "D:\\科研学习\\codex学习\\tools\\encode_m4_r2_playthrough.py",
+      "sha256": "4ec810ca1782a4ab5359ec76edfe2b0e417626580402eabc7d2d9820b65dbd8b"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\tools\\encode_m5_vs2_flight_demo_r5.py",
+      "sha256": "1282162735d382dadef285139becea29fab03e1742f5724089431546c847d1c8"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\capture.json",
+      "sha256": "e91ede0fb1420fe06f357602d8963708272a7ee4097a6514a5426dc7266b7fad"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\launch.json",
+      "sha256": "c45aea803c546ade8015346263998808c0ffc2e0230e8816f0ed3b07d075270d"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\FlightDemo_20260925_145139_8F40677B\\flight_demo.json",
+      "sha256": "7d4de5a6b63bef26402f4f38a2f64cd7ae96278fe8e529ba7a51dc84a938cbc9"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_144955_324_cb37bf54_PlayablePolishAuthor\\author_result.json",
+      "sha256": "2cf6e024ab9512155590acfa9fcda890380608c9df7b75f0e648dd5dd938c559"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_144955_324_cb37bf54_PlayablePolishAuthor\\commandlet.json",
+      "sha256": "1192e2ccc5a998e239ade6039b2398f8e43af1a6b85ec836e6e6f6a0e9552d5a"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145119_800_9128ee67_flight_demo_r5_game\\game.log",
+      "sha256": "41ef10698fd5240f9a58ae7b59174a01913b6001a1e0ae69cb9e16eb922812b9"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+      "sha256": "3629e9f6581dd8245d3b537f4425c365cc77a749c48f87f60cae01c6aa8363fa"
+    }
+  ],
+  "frames": {
+    "count": 1190,
+    "width": 1920,
+    "height": 1080,
+    "requested_fps": 30,
+    "actual_mean_capture_fps": 29.922156038938333,
+    "dropped": 0,
+    "max_observed_gap_seconds": 0.07681389898061752,
+    "scope": "All native frames exactly once at measured request-time PTS. Holds across real capture gaps remain visible; no interpolation, 30fps resampling, speed change or artificial terminal footage."
+  },
+  "tools": [
+    {
+      "path": "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+      "sha256": "a6622bf3350ea09a1c750959b4d61f2aee035ef7d7ce6e33a33c8ec1bf39108b"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffprobe.exe",
+      "sha256": "19c0eda729a0bb5988e52d985c76d4952abe1a0ad420a235a63ef22415d4378d"
+    }
+  ],
+  "planned_encode_command": [
+    "D:\\科研学习\\codex学习\\video_build\\manga_mad_project_20260827\\qa_tools\\ffmpeg-master-latest-win64-gpl-shared\\bin\\ffmpeg.exe",
+    "-hide_banner",
+    "-loglevel",
+    "warning",
+    "-nostdin",
+    "-n",
+    "-f",
+    "concat",
+    "-safe",
+    "0",
+    "-i",
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\realtime.ffconcat",
+    "-i",
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\recordings\\20260925_145139_60F4E9B549320E72610EED875B53CF97\\game_audio.wav",
+    "-map",
+    "0:v:0",
+    "-map",
+    "1:a:0",
+    "-fps_mode:v",
+    "vfr",
+    "-enc_time_base:v",
+    "1:1000",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "ultrafast",
+    "-crf",
+    "22",
+    "-threads",
+    "2",
+    "-pix_fmt",
+    "yuv420p",
+    "-af",
+    "atrim=start_sample=0:end_sample=1906773,asetpts=PTS-STARTPTS,adelay=624S:all=1",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "192k",
+    "-ar",
+    "48000",
+    "-t",
+    "39.737441",
+    "-movflags",
+    "+faststart",
+    "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4"
+  ],
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "Constrained Baseline",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.42c03d",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 0,
+        "pix_fmt": "yuv420p",
+        "level": 61,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "2000/1",
+        "avg_frame_rate": "1190000/39737",
+        "time_base": "1/16000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 635792,
+        "duration": "39.737000",
+        "bit_rate": "7908487",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1190",
+        "extradata_size": 39,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.8.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 1907397,
+        "duration": "39.737437",
+        "bit_rate": "2274",
+        "nb_frames": "1864",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "39.737438",
+      "size": "39337620",
+      "bit_rate": "7919508",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.6.100"
+      }
+    }
+  },
+  "decoded_audio": {
+    "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\decoded_game_audio.wav",
+    "bytes": 7629666,
+    "sha256": "6e1af819325715cbfaf9331acda1861ac0c7312898690b02b18183173e133535",
+    "riff_complete": true,
+    "chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16,
+        "offset": 20
+      },
+      {
+        "id": "LIST",
+        "bytes": 26,
+        "offset": 44
+      },
+      {
+        "id": "data",
+        "bytes": 7629588,
+        "offset": 78
+      }
+    ],
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "sample_frames": 1907397,
+    "duration_seconds": 39.7374375,
+    "rms_dbfs": null,
+    "peak_normalized": 0.0,
+    "nonzero_samples": 0,
+    "clipped_samples": 0,
+    "windows": [
+      {
+        "start_seconds": 0.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 1.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 2.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 3.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 4.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 5.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 6.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 7.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 8.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 9.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 10.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 11.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 12.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 13.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 14.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 15.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 16.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 17.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 18.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 19.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 20.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 21.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 22.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 23.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 24.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 25.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 26.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 27.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 28.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 29.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 30.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 31.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 32.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 33.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 34.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 35.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 36.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 37.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 38.0,
+        "sample_frames": 48000,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      },
+      {
+        "start_seconds": 39.0,
+        "sample_frames": 35397,
+        "rms_dbfs": null,
+        "peak_normalized": 0.0
+      }
+    ],
+    "signal_present": false,
+    "listening_status": "NOT_RUN",
+    "sound_effect_quality": "USER_REVIEW",
+    "meaning": "PCM structure and measured signal only; neither proves every effect was heard or sounds appropriate"
+  },
+  "audio_encoding": "PASS_TECHNICAL_ORIGINAL_NATIVE_WAV",
+  "audio_content": "NATIVE_SILENT_MIX",
+  "output_sha256": "eb86f5f14cb6ccecdf16c79465b58d8361d937f307a260e0fc5fc34a820402d7",
+  "output_bytes": 39337620,
+  "encoded_duration_seconds": 39.737438,
+  "frame_pts_max_error_seconds": 0.0005001977384093692,
+  "frame_count_matches": true,
+  "normal_speed_pts_matches": true
+}

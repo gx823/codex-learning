@@ -1,0 +1,26 @@
+{
+  "status": "IN_PROGRESS_NOT_GATE_ACCEPTANCE",
+  "input_scope": "ENGINE_INPUT_OR_GAMEPLAY_FUNCTION_NOT_OS",
+  "packaged_runtime": "NOT_RUN",
+  "polish_author": "editor_runtime/author_20260925_132335_738_fbf698ae_PlayablePolishAuthor/author_result.json",
+  "flight_launch": "20260925_132449_343_6592eb5c_flight_demo_r5_game/launch.json",
+  "flight_encoding": "video_encoding/20260925_132750_952451_4253e21d/verification.json",
+  "flight_originals": "research/FLIGHT_6592eb5c_FRAMES/provenance.json",
+  "flight_duration_s": 39.670188,
+  "npc_runs": [
+    {"directory": "editor_runtime/20260925_132110_285_90bc36d1_npcreaction_Open_JT_Backward_game", "status": "FAIL", "reason": "J not settled and no ordinary recovery within 35 seconds", "screenshots": 0},
+    {"directory": "editor_runtime/20260925_133036_173_9f1275a1_npcreaction_Narrow_UV_Left_game", "status": "FAIL", "reason": "U recovered; V no matching safe/aligned getup", "screenshots": 6},
+    {"directory": "editor_runtime/20260925_133420_432_24fb5381_npcreaction_Narrow_WX_Right_game", "status": "PASS", "actual_getups": {"W": "RIGHT", "X": "SUPINE"}, "screenshots": 10},
+    {"directory": "editor_runtime/20260925_133809_315_afd0c48c_npcreaction_Narrow_UV_Left_game", "status": "PASS", "actual_getups": {"U": "SUPINE", "V": "SUPINE"}, "hips_alignment_error_cm": {"U": 1.8033393621444702, "V": 5.760152339935303}, "screenshots": 10},
+    {"directory": "editor_runtime/20260925_134132_544_2c290a7b_npcreaction_Slope_JT_Backward_game", "status": "PASS", "actual_getups": {"J": "SUPINE", "T": "SUPINE"}, "ramp_status": "PASS_SURFACE_QUERIES_ONLY", "ramp_samples": 8, "screenshots": 10}
+  ],
+  "all_native_user_stop_latches": false,
+  "npc_real_vehicle_contact": false,
+  "npc_visual": "USER_REVIEW_WITH_OPEN_CLOTHING_AND_OCCLUSION",
+  "getup_source": "D:/科研学习/codex学习/HarborCity/Source/HarborCity/M4R1/HCM4R1PhysicalReactionGetUp.cpp",
+  "getup_source_backup": "source_snapshots/getup_local_yaw_20260925/HCM4R1PhysicalReactionGetUp.cpp",
+  "getup_change": "Try best-fit yaw and +/-15, +/-30 degrees with unchanged navigation/capsule/hips limits; all failure candidates collected in diagnostic result",
+  "build_logs": ["builds/source_layout_rebuild_console.txt", "builds/source_layout_relink_console.txt", "builds/getup_local_yaw_console.txt"],
+  "preserved_failures": ["research/NPC_LAYOUT_1d73b02c/evidence.json", "research/NPC_J_CLOTHING_RESUME_BLOCKER.json", "research/npc_narrow_subset_console.txt"],
+  "notes": ["Subset wrapper stopped at stale reviewed script hash before any test; direct current native author and individual launcher records are used instead", "Random rigid-body outcomes are not claimed deterministic", "Old scene, assets, saves and packages retained"]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "BLOCKED_BROWSER_URL_POLICY",
+  "render_test": "NOT_RUN",
+  "reason": "Browser use URL policy rejected navigation to this new local file. No alternate browser/server/CDP route attempted.",
+  "attempted_url": "file:///D:/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/codex%E5%AD%A6%E4%B9%A0/docs/HarborCity_M5_VS2/reviews/P0_SecondGate_20260925_154446/index.html"
+}

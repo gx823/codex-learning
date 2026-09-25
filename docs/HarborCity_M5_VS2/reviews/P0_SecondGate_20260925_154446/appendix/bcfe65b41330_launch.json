@@ -1,0 +1,269 @@
+{
+  "milestone": "M5_VS2",
+  "phase": "NPCCastReviewIdleR2",
+  "kind": "EDITOR_BINARY_GAME_RUNTIME_NOT_PACKAGED",
+  "status": "PASS",
+  "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+  "arguments": [
+    "\"D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject\"",
+    "/Game/HarborCity/M5VS2/NPC/CastReview/Run_000b6910e5db/L_NPCCast",
+    "-game",
+    "-nosplash",
+    "-windowed",
+    "-ResX=1920",
+    "-ResY=1080",
+    "-ForceRes",
+    "-language=en",
+    "-M5VS2NPCReview",
+    "-M5VS2NPCCastReview",
+    "-M5VS2AutoQuit",
+    "-M5VS2EvidenceDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\"",
+    "-HCM1SaveSlot=HarborCity_M1_R2_Test_NPCCast_20260925_080151_029_4c87eb31",
+    "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\game.log\"",
+    "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+    "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+    "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen"
+  ],
+  "map": "/Game/HarborCity/M5VS2/NPC/CastReview/Run_000b6910e5db/L_NPCCast",
+  "roster": [
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/SK_AvatarSample_Q_Studio2140",
+      "sample": "Q",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/IdleR2/Batch_a9378a845460/BP_NPCIdleR2_Q",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Runtime_2c36ed20bf/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Runtime_2c36ed20bf/PHYS_NPC_Humanoid"
+    },
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Source_1533ddde8635/SK_AvatarSample_R_Studio2140",
+      "sample": "R",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_R/IdleR2/Batch_94ce1ef586b8/BP_NPCIdleR2_R",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid"
+    },
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_J/Source_8b6562a56a4a/SK_AvatarSample_J_Studio2140",
+      "sample": "J",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_J/IdleR2/Batch_2f0eb447b4db/BP_NPCIdleR2_J",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_J/Runtime_0f9dd6fb5a/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_J/Runtime_0f9dd6fb5a/PHYS_NPC_Humanoid"
+    },
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_T/Source_f59c0df1be42/SK_AvatarSample_T_Studio2140",
+      "sample": "T",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_T/IdleR2/Batch_32a1a0909bab/BP_NPCIdleR2_T",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_T/Runtime_f7eb4d6a62/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_T/Runtime_f7eb4d6a62/PHYS_NPC_Humanoid"
+    },
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_U/Source_3126492b4c29_Retry_6ff1db5586/SK_AvatarSample_U_Studio2140",
+      "sample": "U",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_U/IdleR2/Batch_16f652e9589d/BP_NPCIdleR2_U",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_U/Runtime_2d8ef3ef30/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_U/Runtime_2d8ef3ef30/PHYS_NPC_Humanoid"
+    },
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Source_e063d6d6b02f/SK_AvatarSample_V_Studio2140",
+      "sample": "V",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_V/IdleR2/Batch_5683ebbd5516/BP_NPCIdleR2_V",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid"
+    },
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_W/Source_19c5ea0e7f96/SK_AvatarSample_W_Studio2140_FullBody",
+      "sample": "W",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_W/IdleR2/Batch_66491b06d1c9/BP_NPCIdleR2_W",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_W/Runtime_2ea115ebad/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_W/Runtime_2ea115ebad/PHYS_NPC_Humanoid"
+    },
+    {
+      "mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_X/Source_f505a11ca0bf/SK_AvatarSample_X_Studio2140_FullBody",
+      "sample": "X",
+      "blueprint": "/Game/HarborCity/M5VS2/NPC/AvatarSample_X/IdleR2/Batch_0df0504d8dac/BP_NPCIdleR2_X",
+      "profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_X/Runtime_66104c468b/DA_NPCProfile",
+      "physics": "/Game/HarborCity/M5VS2/NPC/AvatarSample_X/Runtime_66104c468b/PHYS_NPC_Humanoid"
+    }
+  ],
+  "started_at": "2026-09-25T08:01:51.0445160+08:00",
+  "author_report": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_075932_193_9ecab865_NPCCastReviewIdleR2\\author_result.json",
+  "author_sha256": "2F4FA9D9BCB03F46E6997F36FC3C547A0DC059BA0B31559654318DB104AD7881",
+  "author_script_sha256": "621A6279C04411F60F5CB6C36C77BD3092C195E31520B6D0ECACDC9CB3F9FCFA",
+  "module_sha256": "EDB92518F2ECE2C23616F6BED858D1EF0D286348394D72D152855DE6D6B8A3C5",
+  "launcher_sha256": "E272C87E0487BDFA4CB560057C29DF35ECA4CFC60578A9FF4DCD6D9F05C3C4B4",
+  "os_input_used": false,
+  "packaged_runtime": "NOT_RUN",
+  "visual_acceptance": "USER_REVIEW",
+  "expected_pngs": 16,
+  "coverage": "Eight final private IdleR2 sources, neutral proxy face/full-body views; three SetEmotion function probes and automatic blink. Not harbor, dialogue, navigation, combat, physical recovery or OS input acceptance.",
+  "stop_policy": "Native viewport Esc latches permanently and cancels auto-exit; wrapper never sends input, kills, resumes or restarts. P is the real pause control.",
+  "focus_policy": "Existing Director has no explicit focus-loss auto-pause; use P before changing focus. Original 240-second wall-clock bound remains.",
+  "material_readiness": "Per-material render-thread fallback NOT_RUN; existing global shader-idle and reference checks only.",
+  "process_id": 41540,
+  "exit_code": 0,
+  "runtime_status": "PASS",
+  "stop_latched": false,
+  "runtime_report": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\npc_review.json",
+  "runtime_report_sha256": "83AC7C49F0359C326BAC38BB2C47CCDE2D6A2D258573A407718A2812F44C766B",
+  "captures": [
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "Q",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\00_Q_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "7362F998E4D69E30E24DFE877DB49DB97F5630D2DD4C2DABCD1C921F21628F21",
+      "bytes": 1889244,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "Q",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\01_Q_FullBody.png",
+      "width": 1920,
+      "sha256": "27663F32DB1161FF3D733199BF8518F619906CD8BEBD1B7F3C2D9214E804FA67",
+      "bytes": 2019834,
+      "framing": "FULL_BODY"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "R",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\02_R_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "FAF6DF40E362898667AAD088EADB07DEB1D79C23AC3ED0BAA533DB56A3FA9221",
+      "bytes": 1820482,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "R",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\03_R_FullBody.png",
+      "width": 1920,
+      "sha256": "5A8572E8A660A6A1B06CAFA5E373B1416DC43FEE0AF65A2A4E945F8DE15ECB88",
+      "bytes": 1879476,
+      "framing": "FULL_BODY"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "J",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\04_J_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "0E42CA19A541D09DF09C2DC530A3864C340EAA81AD54C03E5B75A8A18C7304DB",
+      "bytes": 1850111,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "J",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\05_J_FullBody.png",
+      "width": 1920,
+      "sha256": "FFAD7ADF4EF544EB7ABCB4AC96D11B1931C49A21EA173BC30E27E33FEF293DFC",
+      "bytes": 1990850,
+      "framing": "FULL_BODY"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "T",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\06_T_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "0A8988E61B18DCF34305A0DFE48CDF7125208FEB480DF1A7715464AC152B6D78",
+      "bytes": 1689207,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "T",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\07_T_FullBody.png",
+      "width": 1920,
+      "sha256": "8F9F0F6F8A6381983C081935CE5BE7B0B4A95DBBD6A00491CB89FF64054055F7",
+      "bytes": 1849723,
+      "framing": "FULL_BODY"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "U",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\08_U_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "9D850E3D841C53FA0AB124D0E56A03237779104D107B5D3F5BDD46BD8F2CB047",
+      "bytes": 1914422,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "U",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\09_U_FullBody.png",
+      "width": 1920,
+      "sha256": "67F0CF4F9CED30D0125221CE81A00535624BE3E7FF3A884F57E6F87E5D8B6EB0",
+      "bytes": 1846126,
+      "framing": "FULL_BODY"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "V",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\10_V_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "DA7C1A61D4380112BCF2E1BD18D1778A5D18D0C109CCF95B80436536979AC564",
+      "bytes": 1760391,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "V",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\11_V_FullBody.png",
+      "width": 1920,
+      "sha256": "8C69924AC50306747ADDD254EB4F8B50A3E4AC155CF466A10B4F454E92B87D78",
+      "bytes": 1864419,
+      "framing": "FULL_BODY"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "W",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\12_W_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "A94576E8F05A115EFD61F391C9B91D3CF5C4CE3A032A30599725F1510D26B1BA",
+      "bytes": 1886347,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "W",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\13_W_FullBody.png",
+      "width": 1920,
+      "sha256": "EC04EF32E2CEA2B93D00D71CB9F18D1E550F3402CDFA64591DDD9CDE00C514FC",
+      "bytes": 1988634,
+      "framing": "FULL_BODY"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "X",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\14_X_Face_Neutral.png",
+      "width": 1920,
+      "sha256": "6FFDEE3C035368D8D28166D65804F848DA73B6B3BB9310157B8A9BBF81EB6D4D",
+      "bytes": 1774258,
+      "framing": "FACE"
+    },
+    {
+      "height": 1080,
+      "status": "PASS",
+      "subject": "X",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_080151_029_4c87eb31_npccast_idle_r2_game\\NPCReview_20260925_080209_5093B895\\15_X_FullBody.png",
+      "width": 1920,
+      "sha256": "15DCE38806AC673127C94E9A50728C8F051C6D98AFA0899EBD8F2481CECA3D47",
+      "bytes": 1856700,
+      "framing": "FULL_BODY"
+    }
+  ],
+  "ended_at": "2026-09-25T08:03:04.3564893+08:00"
+}

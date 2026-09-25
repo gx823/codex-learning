@@ -1,0 +1,1266 @@
+{
+	"status": "PASS",
+	"detail": "Two native harbor Q skin captures; same actor, warmed pose, camera and lighting; art approval remains USER_REVIEW",
+	"map": "L_QHarborCompare",
+	"visual_acceptance": "USER_REVIEW",
+	"os_input_used": false,
+	"user_stop_latched": false,
+	"stop_frame": 0,
+	"physics_only_progression": false,
+	"cast_portraits": false,
+	"q_skin_harbor_comparison": true,
+	"actual_preview_fps_cap": 0,
+	"test_disables_postprocess_during_physics": false,
+	"eye_sample_frame": 753,
+	"elapsed_wall_seconds": 15.315863002091646,
+	"test_scope": "Native viewport and component function tests. No claim of mouse/keyboard navigation, vehicle contacts, gameplay recovery or street integration.",
+	"captures": [
+		{
+			"label": "Q_Harbor_Original",
+			"file": "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_144135_820_a0ddc81e_q_harbor_compare_game/NPCReview_20260925_144156_BFB2C811/00_Q_Harbor_Original.png",
+			"request_frame": 948,
+			"eye_sample_frame": 753,
+			"camera_location_cm": [
+				-495.05577298210903,
+				-1546.238642635185,
+				158.10929418065501
+			],
+			"camera_pitch_yaw_roll": [
+				0,
+				180,
+				-0
+			],
+			"fov": 40,
+			"specimens": [
+				{
+					"actor": "/Game/HarborCity/M5VS2/WorldRev2/QSkinReview_c1cc39c54997/L_QHarborCompare.L_QHarborCompare:PersistentLevel.BP_NPCIdleR2_Q_C_0",
+					"blueprint_class": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/IdleR2/Batch_a9378a845460/BP_NPCIdleR2_Q.BP_NPCIdleR2_Q_C",
+					"profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Runtime_2c36ed20bf/DA_NPCProfile.DA_NPCProfile",
+					"source_sha256": "36c131cef1f25e9a75825dfac26f14cfdb757123f6d83331b7ebfe0c146f0f90",
+					"metadata": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/VM_AvatarSample_Q_Studio2140_VrmMeta.VM_AvatarSample_Q_Studio2140_VrmMeta",
+					"mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/SK_AvatarSample_Q_Studio2140.SK_AvatarSample_Q_Studio2140",
+					"anim_instance": "/Game/HarborCity/M5VS2/WorldRev2/QSkinReview_c1cc39c54997/L_QHarborCompare.L_QHarborCompare:PersistentLevel.BP_NPCIdleR2_Q_C_0.CharacterMesh0.ABP_NPCIdleR2_Q_C_0",
+					"postprocess_instance": "/Game/HarborCity/M5VS2/WorldRev2/QSkinReview_c1cc39c54997/L_QHarborCompare.L_QHarborCompare:PersistentLevel.BP_NPCIdleR2_Q_C_0.CharacterMesh0.ABP_Post_AvatarSample_Q_Studio2140_C_0",
+					"postprocess_disabled": false,
+					"physics_asset": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Runtime_2c36ed20bf/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid",
+					"visual_profile_ready": true,
+					"face_ready": true,
+					"emotion": "Neutral",
+					"blink_weight": 0,
+					"actor_location_cm": [
+						-650,
+						-1550,
+						88.031735897064209
+					],
+					"velocity_cm_s": [
+						0,
+						0,
+						0
+					],
+					"physics_simulating": false,
+					"component_collision_filter":
+					{
+						"profile": "Custom",
+						"collision_enabled": 0,
+						"object_channel": 2,
+						"physics_body_channel": 5,
+						"response_to_physics_body": 2,
+						"blocks_physics_body": true
+					},
+					"animation_ground_speed": 0,
+					"humanoid_bones":
+					{
+						"hips": "J_Bip_C_Hips",
+						"spine": "J_Bip_C_Spine",
+						"chest": "J_Bip_C_Chest",
+						"upperChest": "J_Bip_C_UpperChest",
+						"neck": "J_Bip_C_Neck",
+						"head": "J_Bip_C_Head",
+						"leftEye": "J_Adj_L_FaceEye",
+						"rightEye": "J_Adj_R_FaceEye",
+						"leftShoulder": "J_Bip_L_Shoulder",
+						"leftUpperArm": "J_Bip_L_UpperArm",
+						"leftLowerArm": "J_Bip_L_LowerArm",
+						"leftHand": "J_Bip_L_Hand",
+						"leftIndexProximal": "J_Bip_L_Index1",
+						"leftIndexIntermediate": "J_Bip_L_Index2",
+						"leftIndexDistal": "J_Bip_L_Index3",
+						"leftLittleProximal": "J_Bip_L_Little1",
+						"leftLittleIntermediate": "J_Bip_L_Little2",
+						"leftLittleDistal": "J_Bip_L_Little3",
+						"leftMiddleProximal": "J_Bip_L_Middle1",
+						"leftMiddleIntermediate": "J_Bip_L_Middle2",
+						"leftMiddleDistal": "J_Bip_L_Middle3",
+						"leftRingProximal": "J_Bip_L_Ring1",
+						"leftRingIntermediate": "J_Bip_L_Ring2",
+						"leftRingDistal": "J_Bip_L_Ring3",
+						"leftThumbProximal": "J_Bip_L_Thumb1",
+						"leftThumbIntermediate": "J_Bip_L_Thumb2",
+						"leftThumbDistal": "J_Bip_L_Thumb3",
+						"rightShoulder": "J_Bip_R_Shoulder",
+						"rightUpperArm": "J_Bip_R_UpperArm",
+						"rightLowerArm": "J_Bip_R_LowerArm",
+						"rightHand": "J_Bip_R_Hand",
+						"rightIndexProximal": "J_Bip_R_Index1",
+						"rightIndexIntermediate": "J_Bip_R_Index2",
+						"rightIndexDistal": "J_Bip_R_Index3",
+						"rightLittleProximal": "J_Bip_R_Little1",
+						"rightLittleIntermediate": "J_Bip_R_Little2",
+						"rightLittleDistal": "J_Bip_R_Little3",
+						"rightMiddleProximal": "J_Bip_R_Middle1",
+						"rightMiddleIntermediate": "J_Bip_R_Middle2",
+						"rightMiddleDistal": "J_Bip_R_Middle3",
+						"rightRingProximal": "J_Bip_R_Ring1",
+						"rightRingIntermediate": "J_Bip_R_Ring2",
+						"rightRingDistal": "J_Bip_R_Ring3",
+						"rightThumbProximal": "J_Bip_R_Thumb1",
+						"rightThumbIntermediate": "J_Bip_R_Thumb2",
+						"rightThumbDistal": "J_Bip_R_Thumb3",
+						"leftUpperLeg": "J_Bip_L_UpperLeg",
+						"leftLowerLeg": "J_Bip_L_LowerLeg",
+						"leftFoot": "J_Bip_L_Foot",
+						"leftToes": "J_Bip_L_ToeBase",
+						"rightUpperLeg": "J_Bip_R_UpperLeg",
+						"rightLowerLeg": "J_Bip_R_LowerLeg",
+						"rightFoot": "J_Bip_R_Foot",
+						"rightToes": "J_Bip_R_ToeBase"
+					},
+					"bone_world_positions_cm":
+					{
+						"hips": [
+							-649.75397479534149,
+							-1547.6433887481689,
+							100.10500379187351
+						],
+						"spine": [
+							-648.94906463961468,
+							-1547.3660650776728,
+							105.88408738586141
+						],
+						"chest": [
+							-648.60439187404666,
+							-1547.5764268539617,
+							117.97582705257814
+						],
+						"upperChest": [
+							-649.37958731645972,
+							-1547.8405784918941,
+							129.56116986626273
+						],
+						"neck": [
+							-649.52838107068419,
+							-1546.937111519168,
+							144.17208564628197
+						],
+						"head": [
+							-647.80946076587725,
+							-1546.5981246645895,
+							151.83364894923014
+						],
+						"leftEye": [
+							-645.02508061406888,
+							-1547.8581312373265,
+							158.18859438961724
+						],
+						"rightEye": [
+							-645.08646535014918,
+							-1544.6191540330437,
+							158.02999397169279
+						],
+						"leftShoulder": [
+							-648.99168086679094,
+							-1549.4320698727117,
+							141.36216382503713
+						],
+						"leftUpperArm": [
+							-648.09209843079225,
+							-1558.308148423193,
+							139.68298909192998
+						],
+						"leftLowerArm": [
+							-649.4731351876967,
+							-1564.3425844080082,
+							117.14796469051728
+						],
+						"leftHand": [
+							-645.56381887509463,
+							-1568.1505368944622,
+							95.088861801423064
+						],
+						"leftIndexProximal": [
+							-640.74422277191866,
+							-1570.2429833448343,
+							90.049695282431301
+						],
+						"leftIndexIntermediate": [
+							-639.92740673377102,
+							-1570.1588353249429,
+							86.625344596484979
+						],
+						"leftIndexDistal": [
+							-639.99948728590164,
+							-1569.3993788950277,
+							84.595931734105193
+						],
+						"leftLittleProximal": [
+							-645.23462250933028,
+							-1572.8530952768208,
+							89.62866298230891
+						],
+						"leftLittleIntermediate": [
+							-645.05008141099859,
+							-1572.6534565219101,
+							86.311605077004941
+						],
+						"leftLittleDistal": [
+							-645.64858795824603,
+							-1571.4380053392376,
+							84.953710297590746
+						],
+						"leftMiddleProximal": [
+							-642.25824986904593,
+							-1571.2837007876337,
+							89.679896480133564
+						],
+						"leftMiddleIntermediate": [
+							-641.33903659458974,
+							-1571.4223878248558,
+							85.869215328103479
+						],
+						"leftMiddleDistal": [
+							-641.92626100753819,
+							-1570.308642493173,
+							83.802727802952944
+						],
+						"leftRingProximal": [
+							-643.66842296874961,
+							-1572.1454287166091,
+							89.488047117921866
+						],
+						"leftRingIntermediate": [
+							-642.88703104446006,
+							-1572.2471500200688,
+							85.935849417439542
+						],
+						"leftRingDistal": [
+							-643.32573484597833,
+							-1571.0986381051534,
+							84.233587700711979
+						],
+						"leftThumbProximal": [
+							-644.41197725893653,
+							-1566.5949897901814,
+							94.4876064653604
+						],
+						"leftThumbIntermediate": [
+							-642.49918761797483,
+							-1564.8993504796806,
+							90.259364903998517
+						],
+						"leftThumbDistal": [
+							-641.04249227151627,
+							-1563.5066313659293,
+							87.985312472162434
+						],
+						"rightShoulder": [
+							-649.86956394921276,
+							-1544.7824480978961,
+							141.06571401353796
+						],
+						"rightUpperArm": [
+							-650.68162752408614,
+							-1535.9573616748407,
+							139.09796170347926
+						],
+						"rightLowerArm": [
+							-653.13247086069953,
+							-1531.0638870736996,
+							116.37800839766493
+						],
+						"rightHand": [
+							-651.07297620689644,
+							-1526.4556863522691,
+							94.221513992532238
+						],
+						"rightIndexProximal": [
+							-647.89728267890007,
+							-1523.5673213574321,
+							88.341687785543357
+						],
+						"rightIndexIntermediate": [
+							-647.99796155838214,
+							-1524.8782860712568,
+							85.074933703568334
+						],
+						"rightIndexDistal": [
+							-648.67550873854714,
+							-1526.8923289669488,
+							84.64476248894411
+						],
+						"rightLittleProximal": [
+							-653.00450127266231,
+							-1522.5419517895386,
+							88.477988122146797
+						],
+						"rightLittleIntermediate": [
+							-653.47760673702885,
+							-1524.1555555207667,
+							85.605839376916308
+						],
+						"rightLittleDistal": [
+							-653.74506379453396,
+							-1525.9041819257784,
+							86.347582131922664
+						],
+						"rightMiddleProximal": [
+							-649.70125439844833,
+							-1523.0961047933349,
+							88.152576745267766
+						],
+						"rightMiddleIntermediate": [
+							-649.84214407413094,
+							-1524.449251794935,
+							84.473633789469972
+						],
+						"rightMiddleDistal": [
+							-650.7000652307056,
+							-1526.7100166661962,
+							84.566074865745392
+						],
+						"rightRingProximal": [
+							-651.32658584270905,
+							-1522.741257194527,
+							88.133861767239907
+						],
+						"rightRingIntermediate": [
+							-651.43665155736687,
+							-1524.003456392066,
+							84.723030814169491
+						],
+						"rightRingDistal": [
+							-651.91803528541459,
+							-1526.024962480421,
+							85.024723435093662
+						],
+						"rightThumbProximal": [
+							-649.5698890146989,
+							-1527.6364886361132,
+							93.547415527459066
+						],
+						"rightThumbIntermediate": [
+							-648.14607781514712,
+							-1529.3725991645065,
+							89.146203707477312
+						],
+						"rightThumbDistal": [
+							-646.81827593466812,
+							-1530.7294057703584,
+							86.773660699341306
+						],
+						"leftUpperLeg": [
+							-648.50193133851167,
+							-1555.8232856672246,
+							96.074884519020131
+						],
+						"leftLowerLeg": [
+							-643.04895226991141,
+							-1561.904291467624,
+							58.95435026120218
+						],
+						"leftFoot": [
+							-648.09181546926186,
+							-1566.2557061586624,
+							14.906643924817345
+						],
+						"leftToes": [
+							-636.58362337218591,
+							-1567.5052070169056,
+							8.0610652078206613
+						],
+						"rightUpperLeg": [
+							-650.99307888451585,
+							-1539.6862993211078,
+							95.64747794410431
+						],
+						"rightLowerLeg": [
+							-649.18457607404878,
+							-1535.2104298277866,
+							57.946767264911365
+						],
+						"rightFoot": [
+							-658.72885789328825,
+							-1534.2266673563013,
+							14.443840828730337
+						],
+						"rightToes": [
+							-647.56892055130356,
+							-1530.7119981142348,
+							7.8132613404503086
+						]
+					},
+					"actual_morph_weights":
+					{
+						"Fcl_MTH_A": 0,
+						"Fcl_MTH_I": 0,
+						"Fcl_MTH_U": 0,
+						"Fcl_MTH_E": 0,
+						"Fcl_MTH_O": 0,
+						"Fcl_EYE_Close": 0,
+						"Fcl_EYE_Close_L": 0,
+						"Fcl_EYE_Close_R": 0,
+						"Fcl_ALL_Angry": 0,
+						"Fcl_ALL_Fun": 0,
+						"Fcl_ALL_Joy": 0,
+						"Fcl_ALL_Sorrow": 0,
+						"Fcl_ALL_Surprised": 0
+					},
+					"actual_rigid_bodies":
+					{
+					},
+					"live_constraints": [],
+					"world_capsules": [],
+					"capsule_near_or_overlap_pairs_not_contact_manifolds": [],
+					"actual_body_shape_filters": [
+						{
+							"physics_asset_body_index": 0,
+							"bone": "J_Bip_C_Hips",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 1,
+							"bone": "J_Bip_C_Spine",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 2,
+							"bone": "J_Bip_C_Chest",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 3,
+							"bone": "J_Bip_C_UpperChest",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 4,
+							"bone": "J_Bip_C_Neck",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 5,
+							"bone": "J_Bip_C_Head",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 6,
+							"bone": "J_Bip_L_UpperArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 7,
+							"bone": "J_Bip_L_LowerArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 8,
+							"bone": "J_Bip_L_Hand",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 9,
+							"bone": "J_Bip_R_UpperArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 10,
+							"bone": "J_Bip_R_LowerArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 11,
+							"bone": "J_Bip_R_Hand",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 12,
+							"bone": "J_Bip_L_UpperLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 13,
+							"bone": "J_Bip_L_LowerLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 14,
+							"bone": "J_Bip_L_Foot",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 15,
+							"bone": "J_Bip_R_UpperLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 16,
+							"bone": "J_Bip_R_LowerLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 17,
+							"bone": "J_Bip_R_Foot",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						}
+					],
+					"actual_body_shape_filter_scope": "Scene-read-locked native actor shape filters; block-channel bits alone do not prove a contact or bypass disabled constraint/asset pairs",
+					"spring_hair_world_positions_cm":
+					{
+						"J_Sec_Hair1_01": [
+							-634.74822454733373,
+							-1545.2327161014787,
+							163.36206027786125
+						],
+						"J_Sec_Hair1_02": [
+							-636.02435456348474,
+							-1550.2261548651802,
+							162.65923822641554
+						],
+						"J_Sec_Hair1_03": [
+							-638.53979081708019,
+							-1540.848696386493,
+							161.92385878824371
+						]
+					},
+					"materials": [
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_FaceMouth_00_FACE__Instance_.MI_N00_000_00_FaceMouth_00_FACE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_EyeIris_00_EYE__Instance_.MI_N00_000_00_EyeIris_00_EYE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_EyeHighlight_00_EYE__Instance_.MI_N00_000_00_EyeHighlight_00_EYE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_Face_00_SKIN__Instance_.MI_N00_000_00_Face_00_SKIN__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_EyeWhite_00_EYE__Instance_.MI_N00_000_00_EyeWhite_00_EYE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_FaceBrow_00_FACE__Instance_.MI_N00_000_00_FaceBrow_00_FACE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_FaceEyeline_00_FACE__Instance_.MI_N00_000_00_FaceEyeline_00_FACE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_Body_00_SKIN__Instance_.MI_N00_000_00_Body_00_SKIN__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_01__Instance_.MI_N00_002_03_Tops_01_CLOTH_01__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_010_01_Onepiece_00_CLOTH_01__Instance_.MI_N00_010_01_Onepiece_00_CLOTH_01__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_02__Instance_.MI_N00_002_03_Tops_01_CLOTH_02__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_HairBack_00_HAIR__Instance_.MI_N00_000_00_HairBack_00_HAIR__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_03__Instance_.MI_N00_002_03_Tops_01_CLOTH_03__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_04__Instance_.MI_N00_002_03_Tops_01_CLOTH_04__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_008_01_Shoes_01_CLOTH__Instance_.MI_N00_008_01_Shoes_01_CLOTH__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_010_01_Onepiece_00_CLOTH_02__Instance_.MI_N00_010_01_Onepiece_00_CLOTH_02__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_Hair_00_HAIR_01__Instance_.MI_N00_000_Hair_00_HAIR_01__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_Hair_00_HAIR_02__Instance_.MI_N00_000_Hair_00_HAIR_02__Instance_"
+					]
+				}
+			],
+			"light_forward": [
+				-0.63022255441460406,
+				0.56745493680262427,
+				-0.52991926423320501
+			],
+			"light_linear_color": "(R=1.000000,G=0.973445,B=0.913099,A=1.000000)",
+			"light_intensity": 6,
+			"status": "PASS",
+			"width": 1920,
+			"height": 1080,
+			"file_bytes": 3019173
+		},
+		{
+			"label": "Q_Harbor_WarmSkinCandidate",
+			"file": "D:/科研学习/codex学习/docs/HarborCity_M5_VS2/editor_runtime/20260925_144135_820_a0ddc81e_q_harbor_compare_game/NPCReview_20260925_144156_BFB2C811/01_Q_Harbor_WarmSkinCandidate.png",
+			"request_frame": 1150,
+			"eye_sample_frame": 753,
+			"camera_location_cm": [
+				-495.05577298210903,
+				-1546.238642635185,
+				158.10929418065501
+			],
+			"camera_pitch_yaw_roll": [
+				0,
+				180,
+				-0
+			],
+			"fov": 40,
+			"specimens": [
+				{
+					"actor": "/Game/HarborCity/M5VS2/WorldRev2/QSkinReview_c1cc39c54997/L_QHarborCompare.L_QHarborCompare:PersistentLevel.BP_NPCIdleR2_Q_C_0",
+					"blueprint_class": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/IdleR2/Batch_a9378a845460/BP_NPCIdleR2_Q.BP_NPCIdleR2_Q_C",
+					"profile": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Runtime_2c36ed20bf/DA_NPCProfile.DA_NPCProfile",
+					"source_sha256": "36c131cef1f25e9a75825dfac26f14cfdb757123f6d83331b7ebfe0c146f0f90",
+					"metadata": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/VM_AvatarSample_Q_Studio2140_VrmMeta.VM_AvatarSample_Q_Studio2140_VrmMeta",
+					"mesh": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/SK_AvatarSample_Q_Studio2140.SK_AvatarSample_Q_Studio2140",
+					"anim_instance": "/Game/HarborCity/M5VS2/WorldRev2/QSkinReview_c1cc39c54997/L_QHarborCompare.L_QHarborCompare:PersistentLevel.BP_NPCIdleR2_Q_C_0.CharacterMesh0.ABP_NPCIdleR2_Q_C_0",
+					"postprocess_instance": "/Game/HarborCity/M5VS2/WorldRev2/QSkinReview_c1cc39c54997/L_QHarborCompare.L_QHarborCompare:PersistentLevel.BP_NPCIdleR2_Q_C_0.CharacterMesh0.ABP_Post_AvatarSample_Q_Studio2140_C_0",
+					"postprocess_disabled": false,
+					"physics_asset": "/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Runtime_2c36ed20bf/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid",
+					"visual_profile_ready": true,
+					"face_ready": true,
+					"emotion": "Neutral",
+					"blink_weight": 0,
+					"actor_location_cm": [
+						-650,
+						-1550,
+						88.031735897064209
+					],
+					"velocity_cm_s": [
+						0,
+						0,
+						0
+					],
+					"physics_simulating": false,
+					"component_collision_filter":
+					{
+						"profile": "Custom",
+						"collision_enabled": 0,
+						"object_channel": 2,
+						"physics_body_channel": 5,
+						"response_to_physics_body": 2,
+						"blocks_physics_body": true
+					},
+					"animation_ground_speed": 0,
+					"humanoid_bones":
+					{
+						"hips": "J_Bip_C_Hips",
+						"spine": "J_Bip_C_Spine",
+						"chest": "J_Bip_C_Chest",
+						"upperChest": "J_Bip_C_UpperChest",
+						"neck": "J_Bip_C_Neck",
+						"head": "J_Bip_C_Head",
+						"leftEye": "J_Adj_L_FaceEye",
+						"rightEye": "J_Adj_R_FaceEye",
+						"leftShoulder": "J_Bip_L_Shoulder",
+						"leftUpperArm": "J_Bip_L_UpperArm",
+						"leftLowerArm": "J_Bip_L_LowerArm",
+						"leftHand": "J_Bip_L_Hand",
+						"leftIndexProximal": "J_Bip_L_Index1",
+						"leftIndexIntermediate": "J_Bip_L_Index2",
+						"leftIndexDistal": "J_Bip_L_Index3",
+						"leftLittleProximal": "J_Bip_L_Little1",
+						"leftLittleIntermediate": "J_Bip_L_Little2",
+						"leftLittleDistal": "J_Bip_L_Little3",
+						"leftMiddleProximal": "J_Bip_L_Middle1",
+						"leftMiddleIntermediate": "J_Bip_L_Middle2",
+						"leftMiddleDistal": "J_Bip_L_Middle3",
+						"leftRingProximal": "J_Bip_L_Ring1",
+						"leftRingIntermediate": "J_Bip_L_Ring2",
+						"leftRingDistal": "J_Bip_L_Ring3",
+						"leftThumbProximal": "J_Bip_L_Thumb1",
+						"leftThumbIntermediate": "J_Bip_L_Thumb2",
+						"leftThumbDistal": "J_Bip_L_Thumb3",
+						"rightShoulder": "J_Bip_R_Shoulder",
+						"rightUpperArm": "J_Bip_R_UpperArm",
+						"rightLowerArm": "J_Bip_R_LowerArm",
+						"rightHand": "J_Bip_R_Hand",
+						"rightIndexProximal": "J_Bip_R_Index1",
+						"rightIndexIntermediate": "J_Bip_R_Index2",
+						"rightIndexDistal": "J_Bip_R_Index3",
+						"rightLittleProximal": "J_Bip_R_Little1",
+						"rightLittleIntermediate": "J_Bip_R_Little2",
+						"rightLittleDistal": "J_Bip_R_Little3",
+						"rightMiddleProximal": "J_Bip_R_Middle1",
+						"rightMiddleIntermediate": "J_Bip_R_Middle2",
+						"rightMiddleDistal": "J_Bip_R_Middle3",
+						"rightRingProximal": "J_Bip_R_Ring1",
+						"rightRingIntermediate": "J_Bip_R_Ring2",
+						"rightRingDistal": "J_Bip_R_Ring3",
+						"rightThumbProximal": "J_Bip_R_Thumb1",
+						"rightThumbIntermediate": "J_Bip_R_Thumb2",
+						"rightThumbDistal": "J_Bip_R_Thumb3",
+						"leftUpperLeg": "J_Bip_L_UpperLeg",
+						"leftLowerLeg": "J_Bip_L_LowerLeg",
+						"leftFoot": "J_Bip_L_Foot",
+						"leftToes": "J_Bip_L_ToeBase",
+						"rightUpperLeg": "J_Bip_R_UpperLeg",
+						"rightLowerLeg": "J_Bip_R_LowerLeg",
+						"rightFoot": "J_Bip_R_Foot",
+						"rightToes": "J_Bip_R_ToeBase"
+					},
+					"bone_world_positions_cm":
+					{
+						"hips": [
+							-649.75397479534149,
+							-1547.6433887481689,
+							100.10500379187351
+						],
+						"spine": [
+							-648.94906463961468,
+							-1547.3660650776728,
+							105.88408738586141
+						],
+						"chest": [
+							-648.60439187404666,
+							-1547.5764268539617,
+							117.97582705257814
+						],
+						"upperChest": [
+							-649.37958731645972,
+							-1547.8405784918941,
+							129.56116986626273
+						],
+						"neck": [
+							-649.52838107068419,
+							-1546.937111519168,
+							144.17208564628197
+						],
+						"head": [
+							-647.80946076587725,
+							-1546.5981246645895,
+							151.83364894923014
+						],
+						"leftEye": [
+							-645.02508061406888,
+							-1547.8581312373265,
+							158.18859438961724
+						],
+						"rightEye": [
+							-645.08646535014918,
+							-1544.6191540330437,
+							158.02999397169279
+						],
+						"leftShoulder": [
+							-648.99168086679094,
+							-1549.4320698727117,
+							141.36216382503713
+						],
+						"leftUpperArm": [
+							-648.09209843079225,
+							-1558.308148423193,
+							139.68298909192998
+						],
+						"leftLowerArm": [
+							-649.4731351876967,
+							-1564.3425844080082,
+							117.14796469051728
+						],
+						"leftHand": [
+							-645.56381887509463,
+							-1568.1505368944622,
+							95.088861801423064
+						],
+						"leftIndexProximal": [
+							-640.74422277191866,
+							-1570.2429833448343,
+							90.049695282431301
+						],
+						"leftIndexIntermediate": [
+							-639.92740673377102,
+							-1570.1588353249429,
+							86.625344596484979
+						],
+						"leftIndexDistal": [
+							-639.99948728590164,
+							-1569.3993788950277,
+							84.595931734105193
+						],
+						"leftLittleProximal": [
+							-645.23462250933028,
+							-1572.8530952768208,
+							89.62866298230891
+						],
+						"leftLittleIntermediate": [
+							-645.05008141099859,
+							-1572.6534565219101,
+							86.311605077004941
+						],
+						"leftLittleDistal": [
+							-645.64858795824603,
+							-1571.4380053392376,
+							84.953710297590746
+						],
+						"leftMiddleProximal": [
+							-642.25824986904593,
+							-1571.2837007876337,
+							89.679896480133564
+						],
+						"leftMiddleIntermediate": [
+							-641.33903659458974,
+							-1571.4223878248558,
+							85.869215328103479
+						],
+						"leftMiddleDistal": [
+							-641.92626100753819,
+							-1570.308642493173,
+							83.802727802952944
+						],
+						"leftRingProximal": [
+							-643.66842296874961,
+							-1572.1454287166091,
+							89.488047117921866
+						],
+						"leftRingIntermediate": [
+							-642.88703104446006,
+							-1572.2471500200688,
+							85.935849417439542
+						],
+						"leftRingDistal": [
+							-643.32573484597833,
+							-1571.0986381051534,
+							84.233587700711979
+						],
+						"leftThumbProximal": [
+							-644.41197725893653,
+							-1566.5949897901814,
+							94.4876064653604
+						],
+						"leftThumbIntermediate": [
+							-642.49918761797483,
+							-1564.8993504796806,
+							90.259364903998517
+						],
+						"leftThumbDistal": [
+							-641.04249227151627,
+							-1563.5066313659293,
+							87.985312472162434
+						],
+						"rightShoulder": [
+							-649.86956394921276,
+							-1544.7824480978961,
+							141.06571401353796
+						],
+						"rightUpperArm": [
+							-650.68162752408614,
+							-1535.9573616748407,
+							139.09796170347926
+						],
+						"rightLowerArm": [
+							-653.13247086069953,
+							-1531.0638870736996,
+							116.37800839766493
+						],
+						"rightHand": [
+							-651.07297620689644,
+							-1526.4556863522691,
+							94.221513992532238
+						],
+						"rightIndexProximal": [
+							-647.89728267890007,
+							-1523.5673213574321,
+							88.341687785543357
+						],
+						"rightIndexIntermediate": [
+							-647.99796155838214,
+							-1524.8782860712568,
+							85.074933703568334
+						],
+						"rightIndexDistal": [
+							-648.67550873854714,
+							-1526.8923289669488,
+							84.64476248894411
+						],
+						"rightLittleProximal": [
+							-653.00450127266231,
+							-1522.5419517895386,
+							88.477988122146797
+						],
+						"rightLittleIntermediate": [
+							-653.47760673702885,
+							-1524.1555555207667,
+							85.605839376916308
+						],
+						"rightLittleDistal": [
+							-653.74506379453396,
+							-1525.9041819257784,
+							86.347582131922664
+						],
+						"rightMiddleProximal": [
+							-649.70125439844833,
+							-1523.0961047933349,
+							88.152576745267766
+						],
+						"rightMiddleIntermediate": [
+							-649.84214407413094,
+							-1524.449251794935,
+							84.473633789469972
+						],
+						"rightMiddleDistal": [
+							-650.7000652307056,
+							-1526.7100166661962,
+							84.566074865745392
+						],
+						"rightRingProximal": [
+							-651.32658584270905,
+							-1522.741257194527,
+							88.133861767239907
+						],
+						"rightRingIntermediate": [
+							-651.43665155736687,
+							-1524.003456392066,
+							84.723030814169491
+						],
+						"rightRingDistal": [
+							-651.91803528541459,
+							-1526.024962480421,
+							85.024723435093662
+						],
+						"rightThumbProximal": [
+							-649.5698890146989,
+							-1527.6364886361132,
+							93.547415527459066
+						],
+						"rightThumbIntermediate": [
+							-648.14607781514712,
+							-1529.3725991645065,
+							89.146203707477312
+						],
+						"rightThumbDistal": [
+							-646.81827593466812,
+							-1530.7294057703584,
+							86.773660699341306
+						],
+						"leftUpperLeg": [
+							-648.50193133851167,
+							-1555.8232856672246,
+							96.074884519020131
+						],
+						"leftLowerLeg": [
+							-643.04895226991141,
+							-1561.904291467624,
+							58.95435026120218
+						],
+						"leftFoot": [
+							-648.09181546926186,
+							-1566.2557061586624,
+							14.906643924817345
+						],
+						"leftToes": [
+							-636.58362337218591,
+							-1567.5052070169056,
+							8.0610652078206613
+						],
+						"rightUpperLeg": [
+							-650.99307888451585,
+							-1539.6862993211078,
+							95.64747794410431
+						],
+						"rightLowerLeg": [
+							-649.18457607404878,
+							-1535.2104298277866,
+							57.946767264911365
+						],
+						"rightFoot": [
+							-658.72885789328825,
+							-1534.2266673563013,
+							14.443840828730337
+						],
+						"rightToes": [
+							-647.56892055130356,
+							-1530.7119981142348,
+							7.8132613404503086
+						]
+					},
+					"actual_morph_weights":
+					{
+						"Fcl_MTH_A": 0,
+						"Fcl_MTH_I": 0,
+						"Fcl_MTH_U": 0,
+						"Fcl_MTH_E": 0,
+						"Fcl_MTH_O": 0,
+						"Fcl_EYE_Close": 0,
+						"Fcl_EYE_Close_L": 0,
+						"Fcl_EYE_Close_R": 0,
+						"Fcl_ALL_Angry": 0,
+						"Fcl_ALL_Fun": 0,
+						"Fcl_ALL_Joy": 0,
+						"Fcl_ALL_Sorrow": 0,
+						"Fcl_ALL_Surprised": 0
+					},
+					"actual_rigid_bodies":
+					{
+					},
+					"live_constraints": [],
+					"world_capsules": [],
+					"capsule_near_or_overlap_pairs_not_contact_manifolds": [],
+					"actual_body_shape_filters": [
+						{
+							"physics_asset_body_index": 0,
+							"bone": "J_Bip_C_Hips",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 1,
+							"bone": "J_Bip_C_Spine",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 2,
+							"bone": "J_Bip_C_Chest",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 3,
+							"bone": "J_Bip_C_UpperChest",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 4,
+							"bone": "J_Bip_C_Neck",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 5,
+							"bone": "J_Bip_C_Head",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 6,
+							"bone": "J_Bip_L_UpperArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 7,
+							"bone": "J_Bip_L_LowerArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 8,
+							"bone": "J_Bip_L_Hand",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 9,
+							"bone": "J_Bip_R_UpperArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 10,
+							"bone": "J_Bip_R_LowerArm",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 11,
+							"bone": "J_Bip_R_Hand",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 12,
+							"bone": "J_Bip_L_UpperLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 13,
+							"bone": "J_Bip_L_LowerLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 14,
+							"bone": "J_Bip_L_Foot",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 15,
+							"bone": "J_Bip_R_UpperLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 16,
+							"bone": "J_Bip_R_LowerLeg",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						},
+						{
+							"physics_asset_body_index": 17,
+							"bone": "J_Bip_R_Foot",
+							"body_instance_present": false,
+							"scene_read_executed": false,
+							"owned_simulation_shape_count": 0,
+							"owned_simulation_shapes_blocking_physics_body": 0,
+							"shapes": []
+						}
+					],
+					"actual_body_shape_filter_scope": "Scene-read-locked native actor shape filters; block-channel bits alone do not prove a contact or bypass disabled constraint/asset pairs",
+					"spring_hair_world_positions_cm":
+					{
+						"J_Sec_Hair1_01": [
+							-634.74822454733373,
+							-1545.2327161014787,
+							163.36206027786125
+						],
+						"J_Sec_Hair1_02": [
+							-636.02435456348474,
+							-1550.2261548651802,
+							162.65923822641554
+						],
+						"J_Sec_Hair1_03": [
+							-638.53979081708019,
+							-1540.848696386493,
+							161.92385878824371
+						]
+					},
+					"materials": [
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_FaceMouth_00_FACE__Instance_.MI_N00_000_00_FaceMouth_00_FACE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_EyeIris_00_EYE__Instance_.MI_N00_000_00_EyeIris_00_EYE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_EyeHighlight_00_EYE__Instance_.MI_N00_000_00_EyeHighlight_00_EYE__Instance_",
+						"/Game/HarborCity/M5VS2/NPCSkinCandidates/Q_c1cc39c54997/MI_Q_Face_WarmY.MI_Q_Face_WarmY",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_EyeWhite_00_EYE__Instance_.MI_N00_000_00_EyeWhite_00_EYE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_FaceBrow_00_FACE__Instance_.MI_N00_000_00_FaceBrow_00_FACE__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_FaceEyeline_00_FACE__Instance_.MI_N00_000_00_FaceEyeline_00_FACE__Instance_",
+						"/Game/HarborCity/M5VS2/NPCSkinCandidates/Q_c1cc39c54997/MI_Q_Body_WarmY.MI_Q_Body_WarmY",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_01__Instance_.MI_N00_002_03_Tops_01_CLOTH_01__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_010_01_Onepiece_00_CLOTH_01__Instance_.MI_N00_010_01_Onepiece_00_CLOTH_01__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_02__Instance_.MI_N00_002_03_Tops_01_CLOTH_02__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_00_HairBack_00_HAIR__Instance_.MI_N00_000_00_HairBack_00_HAIR__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_03__Instance_.MI_N00_002_03_Tops_01_CLOTH_03__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_002_03_Tops_01_CLOTH_04__Instance_.MI_N00_002_03_Tops_01_CLOTH_04__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_008_01_Shoes_01_CLOTH__Instance_.MI_N00_008_01_Shoes_01_CLOTH__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_010_01_Onepiece_00_CLOTH_02__Instance_.MI_N00_010_01_Onepiece_00_CLOTH_02__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_Hair_00_HAIR_01__Instance_.MI_N00_000_Hair_00_HAIR_01__Instance_",
+						"/Game/HarborCity/M5VS2/NPC/AvatarSample_Q/Source_36c131cef1f2/MI_N00_000_Hair_00_HAIR_02__Instance_.MI_N00_000_Hair_00_HAIR_02__Instance_"
+					]
+				}
+			],
+			"light_forward": [
+				-0.63022255441460406,
+				0.56745493680262427,
+				-0.52991926423320501
+			],
+			"light_linear_color": "(R=1.000000,G=0.973445,B=0.913099,A=1.000000)",
+			"light_intensity": 6,
+			"status": "PASS",
+			"width": 1920,
+			"height": 1080,
+			"file_bytes": 3023098
+		}
+	],
+	"component_exercises":
+	{
+	}
+}

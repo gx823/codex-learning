@@ -1,0 +1,26 @@
+{
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_152606_206_997d29a7_scene_idle_game\\launch.json",
+  "status": "PASS_CAPTURE_READBACK_ONLY",
+  "rows": [
+    {
+      "subject": "Q_Vendor",
+      "actual_animation_instance": "/Game/HarborCity/M5VS2/WorldRev2/SceneIdleReview_6863124d0ce0/L_SceneIdleReview.L_SceneIdleReview:PersistentLevel.BP_NPCIdleR2_Q_C_1.CharacterMesh0.ABP_NPCIdleR2_Q_C_0",
+      "right_hand_sample_displacement_cm": 0.9929446191590979,
+      "scope": "Evaluated saved animation positions, not visual quality or gameplay pass"
+    },
+    {
+      "subject": "R_SeaGaze",
+      "actual_animation_instance": "/Game/HarborCity/M5VS2/WorldRev2/SceneIdleReview_6863124d0ce0/L_SceneIdleReview.L_SceneIdleReview:PersistentLevel.BP_NPCIdleR2_R_C_1.CharacterMesh0.ABP_NPCIdleR2_R_C_0",
+      "right_hand_sample_displacement_cm": 2.518303541264476,
+      "scope": "Evaluated saved animation positions, not visual quality or gameplay pass"
+    },
+    {
+      "subject": "T_Chat",
+      "actual_animation_instance": "/Game/HarborCity/M5VS2/WorldRev2/SceneIdleReview_6863124d0ce0/L_SceneIdleReview.L_SceneIdleReview:PersistentLevel.BP_NPCIdleR2_T_C_1.CharacterMesh0.ABP_NPCIdleR2_T_C_0",
+      "right_hand_sample_displacement_cm": 1.809343280044273,
+      "scope": "Evaluated saved animation positions, not visual quality or gameplay pass"
+    }
+  ],
+  "visual": "USER_REVIEW",
+  "adoption": "PRIVATE_REVIEW_MAP_ONLY"
+}

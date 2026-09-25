@@ -1,0 +1,3091 @@
+{
+  "schema": "HarborCity.M5VS2.GaitSoleCPU.Analysis.v1",
+  "status": "ANALYZED_NOT_VISUALLY_ACCEPTED",
+  "runtime_status": "PASS",
+  "runtime_report": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_114909_981_b44ef459_footplacementsole_game\\HeroExercise_20260925_114926_496B9184\\hero_exercise_results.json",
+  "runtime_sha256": "4fe5412b9185576ec9fe239361eb78de54a3595e398d9d0e338c93aa6257b19b",
+  "selection": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\GAS_FOOTPLACEMENT_SOLE_SELECTION_0110190f8274.json",
+  "selection_sha256": "1106b1cdeef85fe0259f0e16f9a843a01f39af46cc395ed933b87a18db85c478",
+  "input_level": "NATIVE_FUNCTION_CALLS_NOT_ACTION_OR_OS_INPUT",
+  "source_surface_scope": "Independent private shoe-view recording of unchanged CMC movement phases. Fixed native LOD0 points; CPU LBS before morph/cloth/WPO, not final GPU surface or visible contact approval.",
+  "raw_cpu_sample_count": 364,
+  "all_original_gait_frame_count": 1042,
+  "original_toe_summaries_unmodified": [
+    {
+      "target_speed_cm_s": 400,
+      "side": "L",
+      "steady_frames": 178,
+      "eligible_intervals": 31,
+      "eligible_duration_seconds": 0.40711650624871254,
+      "duration_weighted_mean_horizontal_toe_speed_cm_s": 16.304936744165342,
+      "duration_weighted_rms_horizontal_toe_speed_cm_s": 17.393676629179804,
+      "interval_count_p95_horizontal_toe_speed_cm_s": 27.279275133021034,
+      "max_horizontal_toe_speed_cm_s": 35.70805356261005
+    },
+    {
+      "target_speed_cm_s": 400,
+      "side": "R",
+      "steady_frames": 178,
+      "eligible_intervals": 32,
+      "eligible_duration_seconds": 0.4574721045792103,
+      "duration_weighted_mean_horizontal_toe_speed_cm_s": 16.334208892810093,
+      "duration_weighted_rms_horizontal_toe_speed_cm_s": 18.02754399822053,
+      "interval_count_p95_horizontal_toe_speed_cm_s": 31.545278930294383,
+      "max_horizontal_toe_speed_cm_s": 34.15407218922552
+    },
+    {
+      "target_speed_cm_s": 650,
+      "side": "L",
+      "steady_frames": 138,
+      "eligible_intervals": 21,
+      "eligible_duration_seconds": 0.26910579577088356,
+      "duration_weighted_mean_horizontal_toe_speed_cm_s": 21.381659022759262,
+      "duration_weighted_rms_horizontal_toe_speed_cm_s": 27.185345522090458,
+      "interval_count_p95_horizontal_toe_speed_cm_s": 49.116149768106716,
+      "max_horizontal_toe_speed_cm_s": 55.695756205959704
+    },
+    {
+      "target_speed_cm_s": 650,
+      "side": "R",
+      "steady_frames": 138,
+      "eligible_intervals": 16,
+      "eligible_duration_seconds": 0.22113870456814766,
+      "duration_weighted_mean_horizontal_toe_speed_cm_s": 33.12582123703413,
+      "duration_weighted_rms_horizontal_toe_speed_cm_s": 40.48962272231783,
+      "interval_count_p95_horizontal_toe_speed_cm_s": 122.79395720870819,
+      "max_horizontal_toe_speed_cm_s": 122.79395720870819
+    }
+  ],
+  "qualification": "CPU samples at no more than 30Hz. Qualify each sole interval only after checking ALL original gait frames between both endpoints for the same side; latest_gait_sample_index alone is not sufficient. Additionally CPU endpoint dt<=75ms; exclusions explicitly counted.",
+  "excluded_interval_reasons": {
+    "no_complete_native_gait_bracket": 1,
+    "outside_native_400_650_target": 242,
+    "phase_boundary": 1,
+    "cpu_interval_outside_0_to_75ms": 9,
+    "original_eligibility_rejected_L": 97,
+    "original_eligibility_rejected_R": 100
+  },
+  "summaries": [
+    {
+      "target_cm_s": 400,
+      "side": "L",
+      "region": "Heel",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.30506451055407524,
+        "duration_weighted_mean": 15.904512863614842,
+        "interval_count_p95": 28.76560444946853,
+        "maximum": 28.76560444946853
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.30506451055407524,
+        "duration_weighted_mean": 8.604571247622824,
+        "interval_count_p95": 14.33182309272418,
+        "maximum": 14.33182309272418
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.30506451055407524,
+        "duration_weighted_mean": 14.212649563046373,
+        "interval_count_p95": 19.85393644405959,
+        "maximum": 19.85393644405959
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    },
+    {
+      "target_cm_s": 400,
+      "side": "L",
+      "region": "Forefoot",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.30506451055407524,
+        "duration_weighted_mean": 34.8953533804766,
+        "interval_count_p95": 72.09386452836564,
+        "maximum": 72.09386452836564
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.30506451055407524,
+        "duration_weighted_mean": 24.02476443305074,
+        "interval_count_p95": 35.10894616963847,
+        "maximum": 35.10894616963847
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.30506451055407524,
+        "duration_weighted_mean": 14.212649563046373,
+        "interval_count_p95": 19.85393644405959,
+        "maximum": 19.85393644405959
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    },
+    {
+      "target_cm_s": 400,
+      "side": "R",
+      "region": "Heel",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.3333713971078396,
+        "duration_weighted_mean": 23.06639173490613,
+        "interval_count_p95": 33.53144632682394,
+        "maximum": 33.53144632682394
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.3333713971078396,
+        "duration_weighted_mean": 9.135565934693085,
+        "interval_count_p95": 12.504127589099843,
+        "maximum": 12.504127589099843
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.3333713971078396,
+        "duration_weighted_mean": 16.066987338066976,
+        "interval_count_p95": 23.39896045645944,
+        "maximum": 23.39896045645944
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    },
+    {
+      "target_cm_s": 400,
+      "side": "R",
+      "region": "Forefoot",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.3333713971078396,
+        "duration_weighted_mean": 38.46115367236359,
+        "interval_count_p95": 70.33508578154114,
+        "maximum": 70.33508578154114
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.3333713971078396,
+        "duration_weighted_mean": 25.600792314533823,
+        "interval_count_p95": 40.4934868542462,
+        "maximum": 40.4934868542462
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 8,
+        "qualified_duration_seconds": 0.3333713971078396,
+        "duration_weighted_mean": 16.066987338066976,
+        "interval_count_p95": 23.39896045645944,
+        "maximum": 23.39896045645944
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    },
+    {
+      "target_cm_s": 650,
+      "side": "L",
+      "region": "Heel",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 5,
+        "qualified_duration_seconds": 0.18488389253616333,
+        "duration_weighted_mean": 35.06193952684339,
+        "interval_count_p95": 59.23521753155495,
+        "maximum": 59.23521753155495
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 5,
+        "qualified_duration_seconds": 0.18488389253616333,
+        "duration_weighted_mean": 17.348398169643694,
+        "interval_count_p95": 37.675294056466534,
+        "maximum": 37.675294056466534
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 5,
+        "qualified_duration_seconds": 0.18488389253616333,
+        "duration_weighted_mean": 19.487514803333717,
+        "interval_count_p95": 43.89523118296053,
+        "maximum": 43.89523118296053
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    },
+    {
+      "target_cm_s": 650,
+      "side": "L",
+      "region": "Forefoot",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 5,
+        "qualified_duration_seconds": 0.18488389253616333,
+        "duration_weighted_mean": 47.05233650459589,
+        "interval_count_p95": 90.2621311059625,
+        "maximum": 90.2621311059625
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 5,
+        "qualified_duration_seconds": 0.18488389253616333,
+        "duration_weighted_mean": 27.467452217293644,
+        "interval_count_p95": 64.94462710290948,
+        "maximum": 64.94462710290948
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 5,
+        "qualified_duration_seconds": 0.18488389253616333,
+        "duration_weighted_mean": 19.487514803333717,
+        "interval_count_p95": 43.89523118296053,
+        "maximum": 43.89523118296053
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    },
+    {
+      "target_cm_s": 650,
+      "side": "R",
+      "region": "Heel",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 2,
+        "qualified_duration_seconds": 0.0962912030518055,
+        "duration_weighted_mean": 25.804163623439923,
+        "interval_count_p95": 31.67909054310913,
+        "maximum": 31.67909054310913
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 2,
+        "qualified_duration_seconds": 0.0962912030518055,
+        "duration_weighted_mean": 19.773308594320746,
+        "interval_count_p95": 24.664308758823985,
+        "maximum": 24.664308758823985
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 2,
+        "qualified_duration_seconds": 0.0962912030518055,
+        "duration_weighted_mean": 27.77604429455326,
+        "interval_count_p95": 33.09453896859074,
+        "maximum": 33.09453896859074
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    },
+    {
+      "target_cm_s": 650,
+      "side": "R",
+      "region": "Forefoot",
+      "all_original_qualified_centroid_horizontal_cm_s": {
+        "interval_count": 2,
+        "qualified_duration_seconds": 0.0962912030518055,
+        "duration_weighted_mean": 71.30824939400713,
+        "interval_count_p95": 84.27825067666224,
+        "maximum": 84.27825067666224
+      },
+      "all_original_qualified_absolute_lateral_cm_s": {
+        "interval_count": 2,
+        "qualified_duration_seconds": 0.0962912030518055,
+        "duration_weighted_mean": 53.71864646149774,
+        "interval_count_p95": 64.1126187603866,
+        "maximum": 64.1126187603866
+      },
+      "same_interval_native_toe_horizontal_cm_s": {
+        "interval_count": 2,
+        "qualified_duration_seconds": 0.0962912030518055,
+        "duration_weighted_mean": 27.77604429455326,
+        "interval_count_p95": 33.09453896859074,
+        "maximum": 33.09453896859074
+      },
+      "descriptive_one_cm_patch_subset_horizontal_cm_s": {
+        "interval_count": 0,
+        "qualified_duration_seconds": 0,
+        "measurement": "NOT_RUN"
+      },
+      "descriptive_subset_warning": "1cm is a disclosed exploratory surface-proximity band, not a new gait acceptance criterion. Do not replace the full original-qualified series with it."
+    }
+  ],
+  "qualified_sparse_intervals": [
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1601,
+      "to_frame": 1604,
+      "from_gait_index": 264,
+      "to_gait_index": 267,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03470710292458534,
+      "from_world_seconds": 18.17164409061661,
+      "to_world_seconds": 18.206351193541195,
+      "from_centroid_world_cm": [
+        5.865114629268646,
+        293.9718186145708,
+        1.7467016279697418
+      ],
+      "to_centroid_world_cm": [
+        5.367698570092519,
+        293.1061850275283,
+        6.4662821888923645
+      ],
+      "centroid_velocity_cm_s": [
+        -14.331823092724187,
+        -24.941107557246557,
+        135.98313207465756
+      ],
+      "horizontal_speed_cm_s": 28.76560444946853,
+      "signed_forward_cm_s": -24.94110755724656,
+      "absolute_lateral_cm_s": 14.33182309272418,
+      "signed_vertical_cm_s": 135.98313207465756,
+      "same_interval_toe_horizontal_speed_cm_s": 19.85393644405959,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 1.640095293521881,
+        "signed_gap_mean_cm": 1.7467016279697418,
+        "signed_gap_max_cm": 1.9595063030719757,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 6.039773404598236,
+        "signed_gap_mean_cm": 6.4662821888923645,
+        "signed_gap_max_cm": 6.773715496063232,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -9.291394957484533,
+        -19.33721154194439
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -10.045816584459859
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1601,
+      "to_frame": 1604,
+      "from_gait_index": 264,
+      "to_gait_index": 267,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03470710292458534,
+      "from_world_seconds": 18.17164409061661,
+      "to_world_seconds": 18.206351193541195,
+      "from_centroid_world_cm": [
+        6.534929424524307,
+        308.31448428687304,
+        -0.6023455858230591
+      ],
+      "to_centroid_world_cm": [
+        5.469917245209217,
+        307.2099799201573,
+        1.5167878866195679
+      ],
+      "centroid_velocity_cm_s": [
+        -30.685712421150296,
+        -31.82358288779374,
+        61.05763068289702
+      ],
+      "horizontal_speed_cm_s": 44.20806911198245,
+      "signed_forward_cm_s": -31.823582887793748,
+      "absolute_lateral_cm_s": 30.685712421150285,
+      "signed_vertical_cm_s": 61.05763068289702,
+      "same_interval_toe_horizontal_speed_cm_s": 19.85393644405959,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.315568208694458,
+        "signed_gap_mean_cm": -0.6023455858230591,
+        "signed_gap_max_cm": -0.09824883937835693,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 1.1569021940231323,
+        "signed_gap_mean_cm": 1.5167878866195679,
+        "signed_gap_max_cm": 2.02124360203743,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -9.291394957484533,
+        -19.33721154194439
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -10.045816584459859
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1604,
+      "to_frame": 1607,
+      "from_gait_index": 267,
+      "to_gait_index": 270,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03626609966158867,
+      "from_world_seconds": 18.206351193541195,
+      "to_world_seconds": 18.242617293202784,
+      "from_centroid_world_cm": [
+        5.367698570092519,
+        293.1061850275283,
+        6.4662821888923645
+      ],
+      "to_centroid_world_cm": [
+        5.073600014050801,
+        293.23275082167834,
+        14.674913962682089
+      ],
+      "centroid_velocity_cm_s": [
+        -8.109461970988095,
+        3.4899202100882665,
+        226.34448838963286
+      ],
+      "horizontal_speed_cm_s": 8.828528559827207,
+      "signed_forward_cm_s": 3.4899202100882643,
+      "absolute_lateral_cm_s": 8.109461970988097,
+      "signed_vertical_cm_s": 226.34448838963286,
+      "same_interval_toe_horizontal_speed_cm_s": 15.785431234539827,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 6.039773404598236,
+        "signed_gap_mean_cm": 6.4662821888923645,
+        "signed_gap_max_cm": 6.773715496063232,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 13.681766271591187,
+        "signed_gap_mean_cm": 14.674913962682089,
+        "signed_gap_max_cm": 15.196657657623291,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -19.33721154194439,
+        -39.99490097257584
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -20.65768943063145
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1604,
+      "to_frame": 1607,
+      "from_gait_index": 267,
+      "to_gait_index": 270,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03626609966158867,
+      "from_world_seconds": 18.206351193541195,
+      "to_world_seconds": 18.242617293202784,
+      "from_centroid_world_cm": [
+        5.469917245209217,
+        307.2099799201573,
+        1.5167878866195679
+      ],
+      "to_centroid_world_cm": [
+        4.229247520367305,
+        304.90852825698107,
+        4.853964005907376
+      ],
+      "centroid_velocity_cm_s": [
+        -34.210178001467604,
+        -63.46013728114871,
+        92.01916253548454
+      ],
+      "horizontal_speed_cm_s": 72.09386452836564,
+      "signed_forward_cm_s": -63.46013728114872,
+      "absolute_lateral_cm_s": 34.21017800146758,
+      "signed_vertical_cm_s": 92.01916253548454,
+      "same_interval_toe_horizontal_speed_cm_s": 15.785431234539827,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 1.1569021940231323,
+        "signed_gap_mean_cm": 1.5167878866195679,
+        "signed_gap_max_cm": 2.02124360203743,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 3.9170127660036087,
+        "signed_gap_mean_cm": 4.853964005907376,
+        "signed_gap_max_cm": 5.526229918003082,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -19.33721154194439,
+        -39.99490097257584
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -20.65768943063145
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1621,
+      "to_frame": 1623,
+      "from_gait_index": 284,
+      "to_gait_index": 286,
+      "intervening_original_intervals": 2,
+      "seconds": 0.033895500004291534,
+      "from_world_seconds": 18.445689792686608,
+      "to_world_seconds": 18.4795852926909,
+      "from_centroid_world_cm": [
+        -6.992992560068767,
+        419.42199948287856,
+        -4.049544056256612
+      ],
+      "to_centroid_world_cm": [
+        -6.778897047042847,
+        418.85195834295797,
+        -1.7551736235618591
+      ],
+      "centroid_velocity_cm_s": [
+        6.316340310625691,
+        -16.81760528236542,
+        67.68952906445578
+      ],
+      "horizontal_speed_cm_s": 17.96463198490524,
+      "signed_forward_cm_s": -16.817605282365417,
+      "absolute_lateral_cm_s": 6.316340310625695,
+      "signed_vertical_cm_s": 67.68952906445578,
+      "same_interval_toe_horizontal_speed_cm_s": 8.270789902340184,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.340536713600159,
+        "signed_gap_mean_cm": -4.049544056256612,
+        "signed_gap_max_cm": -3.8884408473968506,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.9936121702194214,
+        "signed_gap_mean_cm": -1.7551736235618591,
+        "signed_gap_max_cm": -1.5757877826690674,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -0.8924573075299909,
+        -4.737696186028547
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -3.845238878498556
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1621,
+      "to_frame": 1623,
+      "from_gait_index": 284,
+      "to_gait_index": 286,
+      "intervening_original_intervals": 2,
+      "seconds": 0.033895500004291534,
+      "from_world_seconds": 18.445689792686608,
+      "to_world_seconds": 18.4795852926909,
+      "from_centroid_world_cm": [
+        -7.741664350032806,
+        433.66447282688665,
+        -4.271713614463806
+      ],
+      "to_centroid_world_cm": [
+        -7.4851468205451965,
+        433.1663952554946,
+        -2.9429595867792764
+      ],
+      "centroid_velocity_cm_s": [
+        7.567893362102107,
+        -14.694504324438268,
+        39.20148773484077
+      ],
+      "horizontal_speed_cm_s": 16.52880719474591,
+      "signed_forward_cm_s": -14.694504324438267,
+      "absolute_lateral_cm_s": 7.567893362102112,
+      "signed_vertical_cm_s": 39.20148773484077,
+      "same_interval_toe_horizontal_speed_cm_s": 8.270789902340184,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -5.266587257385254,
+        "signed_gap_mean_cm": -4.271713614463806,
+        "signed_gap_max_cm": -3.7707157135009766,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.9097423553466797,
+        "signed_gap_mean_cm": -2.9429595867792764,
+        "signed_gap_max_cm": -2.3807324171066284,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -0.8924573075299909,
+        -4.737696186028547
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -3.845238878498556
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1623,
+      "to_frame": 1626,
+      "from_gait_index": 286,
+      "to_gait_index": 289,
+      "intervening_original_intervals": 3,
+      "seconds": 0.057028498500585556,
+      "from_world_seconds": 18.4795852926909,
+      "to_world_seconds": 18.536613791191485,
+      "from_centroid_world_cm": [
+        -6.778897047042847,
+        418.85195834295797,
+        -1.7551736235618591
+      ],
+      "to_centroid_world_cm": [
+        -6.084631979465485,
+        417.2735646650876,
+        7.685975611209869
+      ],
+      "centroid_velocity_cm_s": [
+        12.17400222399742,
+        -27.677279244064053,
+        165.5514257433025
+      ],
+      "horizontal_speed_cm_s": 30.23637075615711,
+      "signed_forward_cm_s": -27.67727924406405,
+      "absolute_lateral_cm_s": 12.174002223997427,
+      "signed_vertical_cm_s": 165.5514257433025,
+      "same_interval_toe_horizontal_speed_cm_s": 20.301632818677785,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.9936121702194214,
+        "signed_gap_mean_cm": -1.7551736235618591,
+        "signed_gap_max_cm": -1.5757877826690674,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 7.103400707244873,
+        "signed_gap_mean_cm": 7.685975611209869,
+        "signed_gap_max_cm": 8.046482682228088,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -4.737696186028547,
+        -24.6519329175711
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -19.91423673154255
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1623,
+      "to_frame": 1626,
+      "from_gait_index": 286,
+      "to_gait_index": 289,
+      "intervening_original_intervals": 3,
+      "seconds": 0.057028498500585556,
+      "from_world_seconds": 18.4795852926909,
+      "to_world_seconds": 18.536613791191485,
+      "from_centroid_world_cm": [
+        -7.4851468205451965,
+        433.1663952554946,
+        -2.9429595867792764
+      ],
+      "to_centroid_world_cm": [
+        -5.544382060567538,
+        431.0719032372718,
+        1.3486163367827733
+      ],
+      "centroid_velocity_cm_s": [
+        34.031489711371776,
+        -36.7271114143274,
+        75.25318106556821
+      ],
+      "horizontal_speed_cm_s": 50.07018079471674,
+      "signed_forward_cm_s": -36.727111414327396,
+      "absolute_lateral_cm_s": 34.03148971137178,
+      "signed_vertical_cm_s": 75.25318106556821,
+      "same_interval_toe_horizontal_speed_cm_s": 20.301632818677785,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.9097423553466797,
+        "signed_gap_mean_cm": -2.9429595867792764,
+        "signed_gap_max_cm": -2.3807324171066284,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 1.0390724539756775,
+        "signed_gap_mean_cm": 1.3486163367827733,
+        "signed_gap_max_cm": 1.8802767544984818,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -4.737696186028547,
+        -24.6519329175711
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -19.91423673154255
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1642,
+      "to_frame": 1645,
+      "from_gait_index": 305,
+      "to_gait_index": 308,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03580160066485405,
+      "from_world_seconds": 18.77216599037638,
+      "to_world_seconds": 18.807967591041233,
+      "from_centroid_world_cm": [
+        7.062762180964152,
+        545.5407441939598,
+        -3.333118279774984
+      ],
+      "to_centroid_world_cm": [
+        6.886642177899678,
+        545.459339448381,
+        -0.8870993256568909
+      ],
+      "centroid_velocity_cm_s": [
+        -4.919333208399498,
+        -2.2737739114184303,
+        68.32149704745791
+      ],
+      "horizontal_speed_cm_s": 5.419399137866592,
+      "signed_forward_cm_s": -2.2737739114184317,
+      "absolute_lateral_cm_s": 4.919333208399497,
+      "signed_vertical_cm_s": 68.32149704745791,
+      "same_interval_toe_horizontal_speed_cm_s": 9.056407232964514,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.552811861038208,
+        "signed_gap_mean_cm": -3.333118279774984,
+        "signed_gap_max_cm": -3.188408136367798,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.060276746749878,
+        "signed_gap_mean_cm": -0.8870993256568909,
+        "signed_gap_max_cm": -0.6992001533508301,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.101915498095982,
+        -6.331151096673424
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -3.229235598577442
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1642,
+      "to_frame": 1645,
+      "from_gait_index": 305,
+      "to_gait_index": 308,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03580160066485405,
+      "from_world_seconds": 18.77216599037638,
+      "to_world_seconds": 18.807967591041233,
+      "from_centroid_world_cm": [
+        8.109062612056732,
+        559.8774525853555,
+        -4.11211363474528
+      ],
+      "to_centroid_world_cm": [
+        7.827007472515106,
+        559.9397526468521,
+        -2.4971053202946982
+      ],
+      "centroid_velocity_cm_s": [
+        -7.878282934386108,
+        1.7401473772013993,
+        45.10994716602194
+      ],
+      "horizontal_speed_cm_s": 8.06817543739725,
+      "signed_forward_cm_s": 1.7401473772013971,
+      "absolute_lateral_cm_s": 7.8782829343861085,
+      "signed_vertical_cm_s": 45.10994716602194,
+      "same_interval_toe_horizontal_speed_cm_s": 9.056407232964514,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.959665060043335,
+        "signed_gap_mean_cm": -4.11211363474528,
+        "signed_gap_max_cm": -3.674504280090332,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.3172072172164917,
+        "signed_gap_mean_cm": -2.4971053202946982,
+        "signed_gap_max_cm": -2.0280916690826416,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.101915498095982,
+        -6.331151096673424
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -3.229235598577442
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1645,
+      "to_frame": 1648,
+      "from_gait_index": 308,
+      "to_gait_index": 311,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03881680220365524,
+      "from_world_seconds": 18.807967591041233,
+      "to_world_seconds": 18.84678439324489,
+      "from_centroid_world_cm": [
+        6.886642177899678,
+        545.459339448381,
+        -0.8870993256568909
+      ],
+      "to_centroid_world_cm": [
+        6.417741576830546,
+        544.5490853275543,
+        4.795162657896678
+      ],
+      "centroid_velocity_cm_s": [
+        -12.079835907373564,
+        -23.450002811952544,
+        146.38665889428907
+      ],
+      "horizontal_speed_cm_s": 26.378496307213076,
+      "signed_forward_cm_s": -23.450002811952547,
+      "absolute_lateral_cm_s": 12.079835907373557,
+      "signed_vertical_cm_s": 146.38665889428907,
+      "same_interval_toe_horizontal_speed_cm_s": 17.941481122856217,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.060276746749878,
+        "signed_gap_mean_cm": -0.8870993256568909,
+        "signed_gap_max_cm": -0.6992001533508301,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 4.382765173912048,
+        "signed_gap_mean_cm": 4.795162657896678,
+        "signed_gap_max_cm": 5.092509567737579,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.331151096673424,
+        -18.454663360628004
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -12.12351226395458
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1645,
+      "to_frame": 1648,
+      "from_gait_index": 308,
+      "to_gait_index": 311,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03881680220365524,
+      "from_world_seconds": 18.807967591041233,
+      "to_world_seconds": 18.84678439324489,
+      "from_centroid_world_cm": [
+        7.827007472515106,
+        559.9397526468521,
+        -2.4971053202946982
+      ],
+      "to_centroid_world_cm": [
+        6.5081386268138885,
+        558.8246298120107,
+        0.031093935171763103
+      ],
+      "centroid_velocity_cm_s": [
+        -33.97675158251507,
+        -28.727838758865232,
+        65.13156962807177
+      ],
+      "horizontal_speed_cm_s": 44.49391382936884,
+      "signed_forward_cm_s": -28.727838758865243,
+      "absolute_lateral_cm_s": 33.976751582515064,
+      "signed_vertical_cm_s": 65.13156962807177,
+      "same_interval_toe_horizontal_speed_cm_s": 17.941481122856217,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.3172072172164917,
+        "signed_gap_mean_cm": -2.4971053202946982,
+        "signed_gap_max_cm": -2.0280916690826416,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.3126381039619446,
+        "signed_gap_mean_cm": 0.031093935171763103,
+        "signed_gap_max_cm": 0.4772834777832031,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.331151096673424,
+        -18.454663360628004
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -12.12351226395458
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1665,
+      "to_frame": 1668,
+      "from_gait_index": 328,
+      "to_gait_index": 331,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03446480259299278,
+      "from_world_seconds": 19.105970690899994,
+      "to_world_seconds": 19.140435493492987,
+      "from_centroid_world_cm": [
+        -8.159172932306925,
+        676.416932372817,
+        -3.4052738746007285
+      ],
+      "to_centroid_world_cm": [
+        -7.777821620305379,
+        675.783532588252,
+        -0.39905331532160443
+      ],
+      "centroid_velocity_cm_s": [
+        11.064949841873762,
+        -18.378163718069626,
+        87.22581686541662
+      ],
+      "horizontal_speed_cm_s": 21.45203991818384,
+      "signed_forward_cm_s": -18.378163718069622,
+      "absolute_lateral_cm_s": 11.064949841873768,
+      "signed_vertical_cm_s": 87.22581686541662,
+      "same_interval_toe_horizontal_speed_cm_s": 14.50173968576608,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.6553878784179688,
+        "signed_gap_mean_cm": -3.4052738746007285,
+        "signed_gap_max_cm": -3.258872151374817,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.5404708981513977,
+        "signed_gap_mean_cm": -0.39905331532160443,
+        "signed_gap_max_cm": -0.21749091148376465,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -2.7487784521950127,
+        -6.973439959595954
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -4.224661507400941
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1665,
+      "to_frame": 1668,
+      "from_gait_index": 328,
+      "to_gait_index": 331,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03446480259299278,
+      "from_world_seconds": 19.105970690899994,
+      "to_world_seconds": 19.140435493492987,
+      "from_centroid_world_cm": [
+        -9.819834530353546,
+        690.5409838046318,
+        -4.088070114453633
+      ],
+      "to_centroid_world_cm": [
+        -9.096081654230753,
+        689.9719434266971,
+        -2.141969621181488
+      ],
+      "centroid_velocity_cm_s": [
+        20.99976850788471,
+        -16.51076852679819,
+        56.46631771707339
+      ],
+      "horizontal_speed_cm_s": 26.713213111309845,
+      "signed_forward_cm_s": -16.510768526798184,
+      "absolute_lateral_cm_s": 20.999768507884713,
+      "signed_vertical_cm_s": 56.46631771707339,
+      "same_interval_toe_horizontal_speed_cm_s": 14.50173968576608,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -5.017992377281189,
+        "signed_gap_mean_cm": -4.088070114453633,
+        "signed_gap_max_cm": -3.5732067823410034,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.872231125831604,
+        "signed_gap_mean_cm": -2.141969621181488,
+        "signed_gap_max_cm": -1.651828110218048,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -2.7487784521950127,
+        -6.973439959595954
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -4.224661507400941
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1668,
+      "to_frame": 1671,
+      "from_gait_index": 331,
+      "to_gait_index": 334,
+      "intervening_original_intervals": 3,
+      "seconds": 0.040279097855091095,
+      "from_world_seconds": 19.140435493492987,
+      "to_world_seconds": 19.180714591348078,
+      "from_centroid_world_cm": [
+        -7.777821620305379,
+        675.783532588252,
+        -0.39905331532160443
+      ],
+      "to_centroid_world_cm": [
+        -7.312080264091492,
+        674.5157590792264,
+        7.215115904808044
+      ],
+      "centroid_velocity_cm_s": [
+        11.56285470666319,
+        -31.47472452304025,
+        189.03524720247063
+      ],
+      "horizontal_speed_cm_s": 33.53144632682394,
+      "signed_forward_cm_s": -31.474724523040248,
+      "absolute_lateral_cm_s": 11.562854706663199,
+      "signed_vertical_cm_s": 189.03524720247063,
+      "same_interval_toe_horizontal_speed_cm_s": 22.402850968838322,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.5404708981513977,
+        "signed_gap_mean_cm": -0.39905331532160443,
+        "signed_gap_max_cm": -0.21749091148376465,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 6.602792024612427,
+        "signed_gap_mean_cm": 7.215115904808044,
+        "signed_gap_max_cm": 7.569544494152069,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.973439959595954,
+        -25.284380511450557
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -18.310940551854603
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1668,
+      "to_frame": 1671,
+      "from_gait_index": 331,
+      "to_gait_index": 334,
+      "intervening_original_intervals": 3,
+      "seconds": 0.040279097855091095,
+      "from_world_seconds": 19.140435493492987,
+      "to_world_seconds": 19.180714591348078,
+      "from_centroid_world_cm": [
+        -9.096081654230753,
+        689.9719434266971,
+        -2.141969621181488
+      ],
+      "to_centroid_world_cm": [
+        -7.465040534734726,
+        688.1623132313972,
+        0.7685652673244476
+      ],
+      "centroid_velocity_cm_s": [
+        40.493486854246186,
+        -44.92727721485279,
+        72.25918760586286
+      ],
+      "horizontal_speed_cm_s": 60.482912591534806,
+      "signed_forward_cm_s": -44.92727721485278,
+      "absolute_lateral_cm_s": 40.4934868542462,
+      "signed_vertical_cm_s": 72.25918760586286,
+      "same_interval_toe_horizontal_speed_cm_s": 22.402850968838322,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.872231125831604,
+        "signed_gap_mean_cm": -2.141969621181488,
+        "signed_gap_max_cm": -1.651828110218048,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 0.37977921962738037,
+        "signed_gap_mean_cm": 0.7685652673244476,
+        "signed_gap_max_cm": 1.2778836786746979,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.973439959595954,
+        -25.284380511450557
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -18.310940551854603
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1686,
+      "to_frame": 1689,
+      "from_gait_index": 349,
+      "to_gait_index": 352,
+      "intervening_original_intervals": 3,
+      "seconds": 0.036571700125932693,
+      "from_world_seconds": 19.401477190607693,
+      "to_world_seconds": 19.438048890733626,
+      "from_centroid_world_cm": [
+        3.456775347391764,
+        796.6883582160558,
+        -3.4139445622762046
+      ],
+      "to_centroid_world_cm": [
+        3.3648217717806497,
+        796.5418463235782,
+        -0.7265867988268534
+      ],
+      "centroid_velocity_cm_s": [
+        -2.5143369133640845,
+        -4.006154812959954,
+        73.48189321785912
+      ],
+      "horizontal_speed_cm_s": 4.729816751133963,
+      "signed_forward_cm_s": -4.006154812959955,
+      "absolute_lateral_cm_s": 2.514336913364083,
+      "signed_vertical_cm_s": 73.48189321785912,
+      "same_interval_toe_horizontal_speed_cm_s": 5.569669296524411,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.6014862060546875,
+        "signed_gap_mean_cm": -3.4139445622762046,
+        "signed_gap_max_cm": -3.2683171033859253,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.8833782076835632,
+        "signed_gap_mean_cm": -0.7265867988268534,
+        "signed_gap_max_cm": -0.5418850183486938,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.89609909639104,
+        -6.565882093823473
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -2.6697829974324327
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1686,
+      "to_frame": 1689,
+      "from_gait_index": 349,
+      "to_gait_index": 352,
+      "intervening_original_intervals": 3,
+      "seconds": 0.036571700125932693,
+      "from_world_seconds": 19.401477190607693,
+      "to_world_seconds": 19.438048890733626,
+      "from_centroid_world_cm": [
+        4.308377330501874,
+        810.978988834787,
+        -4.388931115468343
+      ],
+      "to_centroid_world_cm": [
+        4.127203697959582,
+        810.9725679244285,
+        -2.3898870944976807
+      ],
+      "centroid_velocity_cm_s": [
+        -4.953929730322352,
+        -0.17557046394668263,
+        54.66095407342456
+      ],
+      "horizontal_speed_cm_s": 4.957039919224188,
+      "signed_forward_cm_s": -0.17557046394668405,
+      "absolute_lateral_cm_s": 4.953929730322352,
+      "signed_vertical_cm_s": 54.66095407342456,
+      "same_interval_toe_horizontal_speed_cm_s": 5.569669296524411,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -5.162345290184021,
+        "signed_gap_mean_cm": -4.388931115468343,
+        "signed_gap_max_cm": -3.9620168209075928,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.1660236120224,
+        "signed_gap_mean_cm": -2.3898870944976807,
+        "signed_gap_max_cm": -1.9282008409500122,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.89609909639104,
+        -6.565882093823473
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -2.6697829974324327
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1689,
+      "to_frame": 1691,
+      "from_gait_index": 352,
+      "to_gait_index": 354,
+      "intervening_original_intervals": 2,
+      "seconds": 0.033482301980257034,
+      "from_world_seconds": 19.438048890733626,
+      "to_world_seconds": 19.471531192713883,
+      "from_centroid_world_cm": [
+        3.3648217717806497,
+        796.5418463235782,
+        -0.7265867988268534
+      ],
+      "to_centroid_world_cm": [
+        2.994940479596456,
+        795.8566761300649,
+        4.132741197943687
+      ],
+      "centroid_velocity_cm_s": [
+        -11.047068758960943,
+        -20.463652526558224,
+        145.13123977066638
+      ],
+      "horizontal_speed_cm_s": 23.255081227398964,
+      "signed_forward_cm_s": -20.463652526558228,
+      "absolute_lateral_cm_s": 11.047068758960938,
+      "signed_vertical_cm_s": 145.13123977066638,
+      "same_interval_toe_horizontal_speed_cm_s": 16.170275253798167,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.8833782076835632,
+        "signed_gap_mean_cm": -0.7265867988268534,
+        "signed_gap_max_cm": -0.5418850183486938,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 3.7906266301870346,
+        "signed_gap_mean_cm": 4.132741197943687,
+        "signed_gap_max_cm": 4.396544128656387,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.565882093823473,
+        -15.86873932944112
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -9.302857235617648
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1689,
+      "to_frame": 1691,
+      "from_gait_index": 352,
+      "to_gait_index": 354,
+      "intervening_original_intervals": 2,
+      "seconds": 0.033482301980257034,
+      "from_world_seconds": 19.438048890733626,
+      "to_world_seconds": 19.471531192713883,
+      "from_centroid_world_cm": [
+        4.127203697959582,
+        810.9725679244285,
+        -2.3898870944976807
+      ],
+      "to_centroid_world_cm": [
+        3.032631576061249,
+        810.1658662444041,
+        0.06508636474609375
+      ],
+      "centroid_velocity_cm_s": [
+        -32.69106534382708,
+        -24.093375673514437,
+        73.321525523883
+      ],
+      "horizontal_speed_cm_s": 40.610300474872986,
+      "signed_forward_cm_s": -24.093375673514448,
+      "absolute_lateral_cm_s": 32.69106534382707,
+      "signed_vertical_cm_s": 73.321525523883,
+      "same_interval_toe_horizontal_speed_cm_s": 16.170275253798167,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.1660236120224,
+        "signed_gap_mean_cm": -2.3898870944976807,
+        "signed_gap_max_cm": -1.9282008409500122,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.2987487316131592,
+        "signed_gap_mean_cm": 0.06508636474609375,
+        "signed_gap_max_cm": 0.4821227788925171,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.565882093823473,
+        -15.86873932944112
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -9.302857235617648
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1708,
+      "to_frame": 1710,
+      "from_gait_index": 371,
+      "to_gait_index": 373,
+      "intervening_original_intervals": 2,
+      "seconds": 0.03926679864525795,
+      "from_world_seconds": 19.708029593282845,
+      "to_world_seconds": 19.747296391928103,
+      "from_centroid_world_cm": [
+        -7.464190721511841,
+        932.3448393529342,
+        -3.945537527402242
+      ],
+      "to_centroid_world_cm": [
+        -7.459644675254822,
+        932.1165672228421,
+        -2.1164726416269937
+      ],
+      "centroid_velocity_cm_s": [
+        0.11577328465426212,
+        -5.8133623816463125,
+        46.58044324670545
+      ],
+      "horizontal_speed_cm_s": 5.814515081567862,
+      "signed_forward_cm_s": -5.8133623816463125,
+      "absolute_lateral_cm_s": 0.11577328465426377,
+      "signed_vertical_cm_s": 46.58044324670545,
+      "same_interval_toe_horizontal_speed_cm_s": 6.362760912035515,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.234699726104736,
+        "signed_gap_mean_cm": -3.945537527402242,
+        "signed_gap_max_cm": -3.73095166683197,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.3645741939544678,
+        "signed_gap_mean_cm": -2.1164726416269937,
+        "signed_gap_max_cm": -1.9845457077026367,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        2.1376683885168517,
+        -1.9385268273603438
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -4.0761952158771955
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1708,
+      "to_frame": 1710,
+      "from_gait_index": 371,
+      "to_gait_index": 373,
+      "intervening_original_intervals": 2,
+      "seconds": 0.03926679864525795,
+      "from_world_seconds": 19.708029593282845,
+      "to_world_seconds": 19.747296391928103,
+      "from_centroid_world_cm": [
+        -8.329717914263407,
+        946.449050136972,
+        -3.418083906173706
+      ],
+      "to_centroid_world_cm": [
+        -8.23818931976954,
+        946.3358156170135,
+        -2.5984665950139365
+      ],
+      "centroid_velocity_cm_s": [
+        2.3309410914994317,
+        -2.8837217156782615,
+        20.873036240216912
+      ],
+      "horizontal_speed_cm_s": 3.7079829160225293,
+      "signed_forward_cm_s": -2.883721715678261,
+      "absolute_lateral_cm_s": 2.3309410914994326,
+      "signed_vertical_cm_s": 20.873036240216912,
+      "same_interval_toe_horizontal_speed_cm_s": 6.362760912035515,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.302749156951904,
+        "signed_gap_mean_cm": -3.418083906173706,
+        "signed_gap_max_cm": -2.901523232460022,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.4934664964675903,
+        "signed_gap_mean_cm": -2.5984665950139365,
+        "signed_gap_max_cm": -2.1312237977981567,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        2.1376683885168517,
+        -1.9385268273603438
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -4.0761952158771955
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1710,
+      "to_frame": 1713,
+      "from_gait_index": 373,
+      "to_gait_index": 376,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03493709862232208,
+      "from_world_seconds": 19.747296391928103,
+      "to_world_seconds": 19.782233490550425,
+      "from_centroid_world_cm": [
+        -7.459644675254822,
+        932.1165672228421,
+        -2.1164726416269937
+      ],
+      "to_centroid_world_cm": [
+        -7.022786736488342,
+        931.4320666875129,
+        1.875722512602806
+      ],
+      "centroid_velocity_cm_s": [
+        12.504127589099838,
+        -19.592369209842698,
+        114.26807925255414
+      ],
+      "horizontal_speed_cm_s": 23.242507137124427,
+      "signed_forward_cm_s": -19.592369209842694,
+      "absolute_lateral_cm_s": 12.504127589099843,
+      "signed_vertical_cm_s": 114.26807925255414,
+      "same_interval_toe_horizontal_speed_cm_s": 12.53243181545504,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.3645741939544678,
+        "signed_gap_mean_cm": -2.1164726416269937,
+        "signed_gap_max_cm": -1.9845457077026367,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 1.7567885220050812,
+        "signed_gap_mean_cm": 1.875722512602806,
+        "signed_gap_max_cm": 2.0667222440242767,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -1.9385268273603438,
+        -8.78252025837626
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -6.843993431015917
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_Forward400",
+      "from_frame": 1710,
+      "to_frame": 1713,
+      "from_gait_index": 373,
+      "to_gait_index": 376,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03493709862232208,
+      "from_world_seconds": 19.747296391928103,
+      "to_world_seconds": 19.782233490550425,
+      "from_centroid_world_cm": [
+        -8.23818931976954,
+        946.3358156170135,
+        -2.5984665950139365
+      ],
+      "to_centroid_world_cm": [
+        -7.368751714626948,
+        945.7807512368446,
+        -0.3417333165804545
+      ],
+      "centroid_velocity_cm_s": [
+        24.885798747669607,
+        -15.887535086106777,
+        64.59418118342562
+      ],
+      "horizontal_speed_cm_s": 29.524849710401373,
+      "signed_forward_cm_s": -15.88753508610677,
+      "absolute_lateral_cm_s": 24.88579874766961,
+      "signed_vertical_cm_s": 64.59418118342562,
+      "same_interval_toe_horizontal_speed_cm_s": 12.53243181545504,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.4934664964675903,
+        "signed_gap_mean_cm": -2.5984665950139365,
+        "signed_gap_max_cm": -2.1312237977981567,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.9236292243003845,
+        "signed_gap_mean_cm": -0.3417333165804545,
+        "signed_gap_max_cm": 0.07324624061584473,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -1.9385268273603438,
+        -8.78252025837626
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -6.843993431015917
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1845,
+      "to_frame": 1848,
+      "from_gait_index": 508,
+      "to_gait_index": 511,
+      "intervening_original_intervals": 3,
+      "seconds": 0.05363669991493225,
+      "from_world_seconds": 22.018724898749497,
+      "to_world_seconds": 22.07236159866443,
+      "from_centroid_world_cm": [
+        4.702487091223397,
+        617.2092647282398,
+        -1.8352558414141338
+      ],
+      "to_centroid_world_cm": [
+        3.850535253683716,
+        617.9568644293265,
+        6.477585415045421
+      ],
+      "centroid_velocity_cm_s": [
+        -15.883748233781645,
+        13.938212124766219,
+        154.98420427885594
+      ],
+      "horizontal_speed_cm_s": 21.132137023716783,
+      "signed_forward_cm_s": -13.938212124766217,
+      "absolute_lateral_cm_s": 15.883748233781647,
+      "signed_vertical_cm_s": 154.98420427885594,
+      "same_interval_toe_horizontal_speed_cm_s": 23.546519582612145,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.0022566318511963,
+        "signed_gap_mean_cm": -1.8352558414141338,
+        "signed_gap_max_cm": -1.656582772731781,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 5.711105048656464,
+        "signed_gap_mean_cm": 6.477585415045421,
+        "signed_gap_max_cm": 6.8916245102882385,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.397931030407889,
+        -32.03340701769753
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -25.635475987289638
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1845,
+      "to_frame": 1848,
+      "from_gait_index": 508,
+      "to_gait_index": 511,
+      "intervening_original_intervals": 3,
+      "seconds": 0.05363669991493225,
+      "from_world_seconds": 22.018724898749497,
+      "to_world_seconds": 22.07236159866443,
+      "from_centroid_world_cm": [
+        7.0575364430745475,
+        603.1956733195102,
+        -3.428654591242472
+      ],
+      "to_centroid_world_cm": [
+        4.619595247010385,
+        605.3772373922781,
+        -1.407935341199239
+      ],
+      "centroid_velocity_cm_s": [
+        -45.452855972323704,
+        40.67297347204086,
+        37.67419049360031
+      ],
+      "horizontal_speed_cm_s": 60.9938758163321,
+      "signed_forward_cm_s": -40.67297347204085,
+      "absolute_lateral_cm_s": 45.45285597232371,
+      "signed_vertical_cm_s": 37.67419049360031,
+      "same_interval_toe_horizontal_speed_cm_s": 23.546519582612145,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.180280089378357,
+        "signed_gap_mean_cm": -3.428654591242472,
+        "signed_gap_max_cm": -2.925794839859009,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.10076105594635,
+        "signed_gap_mean_cm": -1.407935341199239,
+        "signed_gap_max_cm": -0.7491759657859802,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.397931030407889,
+        -32.03340701769753
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -25.635475987289638
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1860,
+      "to_frame": 1863,
+      "from_gait_index": 523,
+      "to_gait_index": 526,
+      "intervening_original_intervals": 3,
+      "seconds": 0.036387696862220764,
+      "from_world_seconds": 22.237465101236012,
+      "to_world_seconds": 22.273852798098233,
+      "from_centroid_world_cm": [
+        -7.997488776842762,
+        465.5927083073175,
+        -1.164975682894389
+      ],
+      "to_centroid_world_cm": [
+        -8.094294865926122,
+        466.80875417372744,
+        -0.10362319151560466
+      ],
+      "centroid_velocity_cm_s": [
+        -2.6604071549212955,
+        33.41914908806736,
+        29.16789417581207
+      ],
+      "horizontal_speed_cm_s": 33.52487571938828,
+      "signed_forward_cm_s": -33.41914908806736,
+      "absolute_lateral_cm_s": 2.660407154921301,
+      "signed_vertical_cm_s": 29.16789417581207,
+      "same_interval_toe_horizontal_speed_cm_s": 5.366540575535816,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.2187994718551636,
+        "signed_gap_mean_cm": -1.164975682894389,
+        "signed_gap_max_cm": -1.0823593735694885,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.3082544803619385,
+        "signed_gap_mean_cm": -0.10362319151560466,
+        "signed_gap_max_cm": 0.18650251626968384,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.127965153371469,
+        -13.858543135088896
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -10.730577981717428
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1860,
+      "to_frame": 1863,
+      "from_gait_index": 523,
+      "to_gait_index": 526,
+      "intervening_original_intervals": 3,
+      "seconds": 0.036387696862220764,
+      "from_world_seconds": 22.237465101236012,
+      "to_world_seconds": 22.273852798098233,
+      "from_centroid_world_cm": [
+        -13.197142879168204,
+        452.24422441702245,
+        -1.947826862335205
+      ],
+      "to_centroid_world_cm": [
+        -13.50866079330446,
+        453.37691820443825,
+        -3.676448186238607
+      ],
+      "centroid_velocity_cm_s": [
+        -8.56107808405115,
+        31.12848256663954,
+        -47.505653640259084
+      ],
+      "horizontal_speed_cm_s": 32.284276124187805,
+      "signed_forward_cm_s": -31.12848256663954,
+      "absolute_lateral_cm_s": 8.561078084051156,
+      "signed_vertical_cm_s": -47.505653640259084,
+      "same_interval_toe_horizontal_speed_cm_s": 5.366540575535816,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.2325010299682617,
+        "signed_gap_mean_cm": -1.947826862335205,
+        "signed_gap_max_cm": -1.773445725440979,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.46317982673645,
+        "signed_gap_mean_cm": -3.676448186238607,
+        "signed_gap_max_cm": -3.0679203271865845,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.127965153371469,
+        -13.858543135088896
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -10.730577981717428
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1878,
+      "to_frame": 1881,
+      "from_gait_index": 541,
+      "to_gait_index": 544,
+      "intervening_original_intervals": 3,
+      "seconds": 0.042654503136873245,
+      "from_world_seconds": 22.500469597929623,
+      "to_world_seconds": 22.543124101066496,
+      "from_centroid_world_cm": [
+        7.068637013435361,
+        316.8125988719975,
+        -0.31116368373235065
+      ],
+      "to_centroid_world_cm": [
+        6.016593178113293,
+        317.66059426497577,
+        6.764550785223643
+      ],
+      "centroid_velocity_cm_s": [
+        -24.66430875882398,
+        19.880559627130847,
+        165.88434862905012
+      ],
+      "horizontal_speed_cm_s": 31.67909054310913,
+      "signed_forward_cm_s": -19.880559627130843,
+      "absolute_lateral_cm_s": 24.664308758823985,
+      "signed_vertical_cm_s": 165.88434862905012,
+      "same_interval_toe_horizontal_speed_cm_s": 33.09453896859074,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -0.4390908479690552,
+        "signed_gap_mean_cm": -0.31116368373235065,
+        "signed_gap_max_cm": -0.0721503496170044,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 5.957647442817688,
+        "signed_gap_mean_cm": 6.764550785223643,
+        "signed_gap_max_cm": 7.218311309814453,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -10.310465470170575,
+        -33.96819112998676
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -23.65772565981618
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1878,
+      "to_frame": 1881,
+      "from_gait_index": 541,
+      "to_gait_index": 544,
+      "intervening_original_intervals": 3,
+      "seconds": 0.042654503136873245,
+      "from_world_seconds": 22.500469597929623,
+      "to_world_seconds": 22.543124101066496,
+      "from_centroid_world_cm": [
+        12.129741907119758,
+        303.0601149477676,
+        -2.977048476537069
+      ],
+      "to_centroid_world_cm": [
+        9.39505000909169,
+        305.39343543878357,
+        -1.8075416684150696
+      ],
+      "centroid_velocity_cm_s": [
+        -64.11261876038658,
+        54.7027938299649,
+        27.418132251340275
+      ],
+      "horizontal_speed_cm_s": 84.27825067666224,
+      "signed_forward_cm_s": -54.70279382996489,
+      "absolute_lateral_cm_s": 64.1126187603866,
+      "signed_vertical_cm_s": 27.418132251340275,
+      "same_interval_toe_horizontal_speed_cm_s": 33.09453896859074,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.7040276527404785,
+        "signed_gap_mean_cm": -2.977048476537069,
+        "signed_gap_max_cm": -2.5069559812545776,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.415663719177246,
+        "signed_gap_mean_cm": -1.8075416684150696,
+        "signed_gap_max_cm": -1.096478819847107,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -10.310465470170575,
+        -33.96819112998676
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -23.65772565981618
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1892,
+      "to_frame": 1895,
+      "from_gait_index": 555,
+      "to_gait_index": 558,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03833399713039398,
+      "from_world_seconds": 22.704330800974276,
+      "to_world_seconds": 22.74266479810467,
+      "from_centroid_world_cm": [
+        -2.9938787221908627,
+        163.63278598120962,
+        -1.457073708375295
+      ],
+      "to_centroid_world_cm": [
+        -2.546622157096874,
+        164.86472473076142,
+        0.2747391959031423
+      ],
+      "centroid_velocity_cm_s": [
+        11.667360530461648,
+        32.136976098822494,
+        45.1769456336013
+      ],
+      "horizontal_speed_cm_s": 34.18936288561199,
+      "signed_forward_cm_s": -32.136976098822494,
+      "absolute_lateral_cm_s": 11.667360530461643,
+      "signed_vertical_cm_s": 45.1769456336013,
+      "same_interval_toe_horizontal_speed_cm_s": 8.237623138591626,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.6597269177436829,
+        "signed_gap_mean_cm": -1.457073708375295,
+        "signed_gap_max_cm": -1.3418562412261963,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 0.11014866828918457,
+        "signed_gap_mean_cm": 0.2747391959031423,
+        "signed_gap_max_cm": 0.5366111099720001,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -0.34501042168535206,
+        -11.786375923743796
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -11.441365502058444
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1892,
+      "to_frame": 1895,
+      "from_gait_index": 555,
+      "to_gait_index": 558,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03833399713039398,
+      "from_world_seconds": 22.704330800974276,
+      "to_world_seconds": 22.74266479810467,
+      "from_centroid_world_cm": [
+        -8.447417616844183,
+        150.48120656888838,
+        -1.5428065458933513
+      ],
+      "to_centroid_world_cm": [
+        -8.49975625673931,
+        151.47571032773612,
+        -2.782760977745056
+      ],
+      "centroid_velocity_cm_s": [
+        -1.3653321806514638,
+        25.94312707503249,
+        -32.346077233583834
+      ],
+      "horizontal_speed_cm_s": 25.979029512181672,
+      "signed_forward_cm_s": -25.94312707503249,
+      "absolute_lateral_cm_s": 1.365332180651468,
+      "signed_vertical_cm_s": -32.346077233583834,
+      "same_interval_toe_horizontal_speed_cm_s": 8.237623138591626,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.231764316558838,
+        "signed_gap_mean_cm": -1.5428065458933513,
+        "signed_gap_max_cm": -1.1519305109977722,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.5569335222244263,
+        "signed_gap_mean_cm": -2.782760977745056,
+        "signed_gap_max_cm": -2.259772539138794,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -0.34501042168535206,
+        -11.786375923743796
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -11.441365502058444
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1895,
+      "to_frame": 1898,
+      "from_gait_index": 558,
+      "to_gait_index": 561,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03725050017237663,
+      "from_world_seconds": 22.74266479810467,
+      "to_world_seconds": 22.779915298277047,
+      "from_centroid_world_cm": [
+        -2.546622157096874,
+        164.86472473076142,
+        0.2747391959031423
+      ],
+      "to_centroid_world_cm": [
+        -1.143198609352127,
+        165.22541566969116,
+        9.001596053441366
+      ],
+      "centroid_velocity_cm_s": [
+        37.675294056466534,
+        9.682848210376745,
+        234.2748907304521
+      ],
+      "horizontal_speed_cm_s": 38.89968292552548,
+      "signed_forward_cm_s": -9.68284821037675,
+      "absolute_lateral_cm_s": 37.675294056466534,
+      "signed_vertical_cm_s": 234.2748907304521,
+      "same_interval_toe_horizontal_speed_cm_s": 37.557321621291315,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 0.11014866828918457,
+        "signed_gap_mean_cm": 0.2747391959031423,
+        "signed_gap_max_cm": 0.5366111099720001,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 8.155644416809082,
+        "signed_gap_mean_cm": 9.001596053441366,
+        "signed_gap_max_cm": 9.567608118057251,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -11.786375923743796,
+        -38.29342378688508
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -26.50704786314128
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1895,
+      "to_frame": 1898,
+      "from_gait_index": 558,
+      "to_gait_index": 561,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03725050017237663,
+      "from_world_seconds": 22.74266479810467,
+      "to_world_seconds": 22.779915298277047,
+      "from_centroid_world_cm": [
+        -8.49975625673931,
+        151.47571032773612,
+        -2.782760977745056
+      ],
+      "to_centroid_world_cm": [
+        -6.110677172740317,
+        153.34324085991742,
+        -1.1670193274815877
+      ],
+      "centroid_velocity_cm_s": [
+        64.13549007244288,
+        50.134374667166796,
+        43.37503235625365
+      ],
+      "horizontal_speed_cm_s": 81.40526156275327,
+      "signed_forward_cm_s": -50.1343746671668,
+      "absolute_lateral_cm_s": 64.13549007244286,
+      "signed_vertical_cm_s": 43.37503235625365,
+      "same_interval_toe_horizontal_speed_cm_s": 37.557321621291315,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.5569335222244263,
+        "signed_gap_mean_cm": -2.782760977745056,
+        "signed_gap_max_cm": -2.259772539138794,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.6054786443710327,
+        "signed_gap_mean_cm": -1.1670193274815877,
+        "signed_gap_max_cm": -0.30921411514282227,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -11.786375923743796,
+        -38.29342378688508
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -26.50704786314128
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1927,
+      "to_frame": 1930,
+      "from_gait_index": 590,
+      "to_gait_index": 593,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03930779919028282,
+      "from_world_seconds": 23.199431999528315,
+      "to_world_seconds": 23.238739798718598,
+      "from_centroid_world_cm": [
+        -4.207018415133162,
+        -167.78070166179384,
+        -1.9916255474090576
+      ],
+      "to_centroid_world_cm": [
+        -4.170406262079884,
+        -167.26969858724715,
+        -1.8839859167734783
+      ],
+      "centroid_velocity_cm_s": [
+        0.9314221047086543,
+        13.000042868668583,
+        2.738378460582669
+      ],
+      "horizontal_speed_cm_s": 13.03336724428345,
+      "signed_forward_cm_s": -13.000042868668583,
+      "absolute_lateral_cm_s": 0.9314221047086522,
+      "signed_vertical_cm_s": 2.738378460582669,
+      "same_interval_toe_horizontal_speed_cm_s": 5.540645496400508,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.064716935157776,
+        "signed_gap_mean_cm": -1.9916255474090576,
+        "signed_gap_max_cm": -1.9351727962493896,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.014757513999939,
+        "signed_gap_mean_cm": -1.8839859167734783,
+        "signed_gap_max_cm": -1.7140327095985413,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -1.5343737365075407,
+        -8.546407333456875
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -7.012033596949334
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1927,
+      "to_frame": 1930,
+      "from_gait_index": 590,
+      "to_gait_index": 593,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03930779919028282,
+      "from_world_seconds": 23.199431999528315,
+      "to_world_seconds": 23.238739798718598,
+      "from_centroid_world_cm": [
+        -7.95663138230642,
+        -181.35395342577343,
+        -2.3688204288482666
+      ],
+      "to_centroid_world_cm": [
+        -8.099592526753753,
+        -180.91353278079475,
+        -4.017699678738912
+      ],
+      "centroid_velocity_cm_s": [
+        -3.6369663881531666,
+        11.204408642841239,
+        -41.94789033872596
+      ],
+      "horizontal_speed_cm_s": 11.779910761305933,
+      "signed_forward_cm_s": -11.204408642841239,
+      "absolute_lateral_cm_s": 3.6369663881531684,
+      "signed_vertical_cm_s": -41.94789033872596,
+      "same_interval_toe_horizontal_speed_cm_s": 5.540645496400508,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.645238161087036,
+        "signed_gap_mean_cm": -2.3688204288482666,
+        "signed_gap_max_cm": -2.213404893875122,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.431613802909851,
+        "signed_gap_mean_cm": -4.017699678738912,
+        "signed_gap_max_cm": -3.6698938608169556,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -1.5343737365075407,
+        -8.546407333456875
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -7.012033596949334
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1930,
+      "to_frame": 1933,
+      "from_gait_index": 593,
+      "to_gait_index": 596,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03360389918088913,
+      "from_world_seconds": 23.238739798718598,
+      "to_world_seconds": 23.272343697899487,
+      "from_centroid_world_cm": [
+        -4.170406262079884,
+        -167.26969858724715,
+        -1.8839859167734783
+      ],
+      "to_centroid_world_cm": [
+        -2.9470652341842793,
+        -165.6994554720207,
+        4.272001961867015
+      ],
+      "centroid_velocity_cm_s": [
+        36.404734501504834,
+        46.72800340144632,
+        183.19266599101883
+      ],
+      "horizontal_speed_cm_s": 59.23521753155495,
+      "signed_forward_cm_s": -46.72800340144633,
+      "absolute_lateral_cm_s": 36.40473450150483,
+      "signed_vertical_cm_s": 183.19266599101883,
+      "same_interval_toe_horizontal_speed_cm_s": 43.89523118296053,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.014757513999939,
+        "signed_gap_mean_cm": -1.8839859167734783,
+        "signed_gap_max_cm": -1.7140327095985413,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 3.5898064374923706,
+        "signed_gap_mean_cm": 4.272001961867015,
+        "signed_gap_max_cm": 4.6450729966163635,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -8.546407333456875,
+        -27.675449236851517
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -19.129041903394643
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 650,
+      "phase": "Gait_Forward650",
+      "from_frame": 1930,
+      "to_frame": 1933,
+      "from_gait_index": 593,
+      "to_gait_index": 596,
+      "intervening_original_intervals": 3,
+      "seconds": 0.03360389918088913,
+      "from_world_seconds": 23.238739798718598,
+      "to_world_seconds": 23.272343697899487,
+      "from_centroid_world_cm": [
+        -8.099592526753753,
+        -180.91353278079475,
+        -4.017699678738912
+      ],
+      "to_centroid_world_cm": [
+        -5.917199825247143,
+        -178.80706204194666,
+        -2.7767613728841147
+      ],
+      "centroid_velocity_cm_s": [
+        64.9446271029095,
+        62.6853070683553,
+        36.928402242098464
+      ],
+      "horizontal_speed_cm_s": 90.2621311059625,
+      "signed_forward_cm_s": -62.68530706835531,
+      "absolute_lateral_cm_s": 64.94462710290948,
+      "signed_vertical_cm_s": 36.928402242098464,
+      "same_interval_toe_horizontal_speed_cm_s": 43.89523118296053,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.431613802909851,
+        "signed_gap_mean_cm": -4.017699678738912,
+        "signed_gap_max_cm": -3.6698938608169556,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.2947142124176025,
+        "signed_gap_mean_cm": -2.7767613728841147,
+        "signed_gap_max_cm": -2.3039157390594482,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -8.546407333456875,
+        -27.675449236851517
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -19.129041903394643
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2056,
+      "to_frame": 2059,
+      "from_gait_index": 719,
+      "to_gait_index": 722,
+      "intervening_original_intervals": 3,
+      "seconds": 0.036031000316143036,
+      "from_world_seconds": 25.575520901882555,
+      "to_world_seconds": 25.6115519021987,
+      "from_centroid_world_cm": [
+        7.078806559244792,
+        -293.48570684057637,
+        -3.3338728745778403
+      ],
+      "to_centroid_world_cm": [
+        6.907915075620015,
+        -293.5583106623308,
+        -0.9052786429723104
+      ],
+      "centroid_velocity_cm_s": [
+        -4.742901449455789,
+        -2.015037637518122,
+        67.4029088922475
+      ],
+      "horizontal_speed_cm_s": 5.153201998744512,
+      "signed_forward_cm_s": -2.015037637518123,
+      "absolute_lateral_cm_s": 4.742901449455788,
+      "signed_vertical_cm_s": 67.4029088922475,
+      "same_interval_toe_horizontal_speed_cm_s": 9.044843995545126,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.552026867866516,
+        "signed_gap_mean_cm": -3.3338728745778403,
+        "signed_gap_max_cm": -3.1893171072006226,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.0788403153419495,
+        "signed_gap_mean_cm": -0.9052786429723104,
+        "signed_gap_max_cm": -0.7175369262695312,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.1314825140875495,
+        -6.318408995441882
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -3.186926481354332
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2056,
+      "to_frame": 2059,
+      "from_gait_index": 719,
+      "to_gait_index": 722,
+      "intervening_original_intervals": 3,
+      "seconds": 0.036031000316143036,
+      "from_world_seconds": 25.575520901882555,
+      "to_world_seconds": 25.6115519021987,
+      "from_centroid_world_cm": [
+        8.121886948744455,
+        -279.1539554368671,
+        -4.120024959246318
+      ],
+      "to_centroid_world_cm": [
+        7.849528590838115,
+        -279.08080418370326,
+        -2.511705676714579
+      ],
+      "centroid_velocity_cm_s": [
+        -7.55900073593892,
+        2.030230982264471,
+        44.63709773306406
+      ],
+      "horizontal_speed_cm_s": 7.826897850826449,
+      "signed_forward_cm_s": 2.030230982264469,
+      "absolute_lateral_cm_s": 7.559000735938921,
+      "signed_vertical_cm_s": 44.63709773306406,
+      "same_interval_toe_horizontal_speed_cm_s": 9.044843995545126,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -4.963799238204956,
+        "signed_gap_mean_cm": -4.120024959246318,
+        "signed_gap_max_cm": -3.6827189922332764,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.3323962688446045,
+        "signed_gap_mean_cm": -2.511705676714579,
+        "signed_gap_max_cm": -2.0419628620147705,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -3.1314825140875495,
+        -6.318408995441882
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -3.186926481354332
+    },
+    {
+      "side": "L",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2059,
+      "to_frame": 2062,
+      "from_gait_index": 722,
+      "to_gait_index": 725,
+      "intervening_original_intervals": 3,
+      "seconds": 0.053387902677059174,
+      "from_world_seconds": 25.6115519021987,
+      "to_world_seconds": 25.664939804875758,
+      "from_centroid_world_cm": [
+        6.907915075620015,
+        -293.5583106623308,
+        -0.9052786429723104
+      ],
+      "to_centroid_world_cm": [
+        6.352227330207825,
+        -294.5971423334098,
+        7.974641700585683
+      ],
+      "centroid_velocity_cm_s": [
+        -10.40849551205483,
+        -19.45818470080803,
+        166.32832342697932
+      ],
+      "horizontal_speed_cm_s": 22.067118766962423,
+      "signed_forward_cm_s": -19.458184700808033,
+      "absolute_lateral_cm_s": 10.408495512054825,
+      "signed_vertical_cm_s": 166.32832342697932,
+      "same_interval_toe_horizontal_speed_cm_s": 18.404102893283184,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -1.0788403153419495,
+        "signed_gap_mean_cm": -0.9052786429723104,
+        "signed_gap_max_cm": -0.7175369262695312,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 7.316642582416534,
+        "signed_gap_mean_cm": 7.974641700585683,
+        "signed_gap_max_cm": 8.352903008460999,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.318408995441882,
+        -26.991807771966066
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -20.673398776524184
+    },
+    {
+      "side": "L",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2059,
+      "to_frame": 2062,
+      "from_gait_index": 722,
+      "to_gait_index": 725,
+      "intervening_original_intervals": 3,
+      "seconds": 0.053387902677059174,
+      "from_world_seconds": 25.6115519021987,
+      "to_world_seconds": 25.664939804875758,
+      "from_centroid_world_cm": [
+        7.849528590838115,
+        -279.08080418370326,
+        -2.511705676714579
+      ],
+      "to_centroid_world_cm": [
+        5.975135589639346,
+        -280.9645968622184,
+        1.028311977783839
+      ],
+      "centroid_velocity_cm_s": [
+        -35.10894616963848,
+        -35.28500997520179,
+        66.30748684607096
+      ],
+      "horizontal_speed_cm_s": 49.77619943399317,
+      "signed_forward_cm_s": -35.285009975201795,
+      "absolute_lateral_cm_s": 35.10894616963847,
+      "signed_vertical_cm_s": 66.30748684607096,
+      "same_interval_toe_horizontal_speed_cm_s": 18.404102893283184,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.3323962688446045,
+        "signed_gap_mean_cm": -2.511705676714579,
+        "signed_gap_max_cm": -2.0419628620147705,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 0.628358006477356,
+        "signed_gap_mean_cm": 1.028311977783839,
+        "signed_gap_max_cm": 1.5458794236183167,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -6.318408995441882,
+        -26.991807771966066
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -20.673398776524184
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2080,
+      "to_frame": 2083,
+      "from_gait_index": 743,
+      "to_gait_index": 746,
+      "intervening_original_intervals": 3,
+      "seconds": 0.04035940021276474,
+      "from_world_seconds": 25.908611102902796,
+      "to_world_seconds": 25.94897050311556,
+      "from_centroid_world_cm": [
+        -8.148187200228373,
+        -162.6391388919171,
+        -3.525812347730001
+      ],
+      "to_centroid_world_cm": [
+        -7.692584991455078,
+        -163.4321304108914,
+        0.18809803326924643
+      ],
+      "centroid_velocity_cm_s": [
+        11.288626847065931,
+        -19.6482483583465,
+        92.02095079263898
+      ],
+      "horizontal_speed_cm_s": 22.660246239693947,
+      "signed_forward_cm_s": -19.648248358346496,
+      "absolute_lateral_cm_s": 11.288626847065936,
+      "signed_vertical_cm_s": 92.02095079263898,
+      "same_interval_toe_horizontal_speed_cm_s": 14.491694206404786,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -3.778212785720825,
+        "signed_gap_mean_cm": -3.525812347730001,
+        "signed_gap_max_cm": -3.3811540603637695,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 0.08000123500823975,
+        "signed_gap_mean_cm": 0.18809803326924643,
+        "signed_gap_max_cm": 0.38409578800201416,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -2.60537562418865,
+        -8.451410246887525
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -5.846034622698875
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2080,
+      "to_frame": 2083,
+      "from_gait_index": 743,
+      "to_gait_index": 746,
+      "intervening_original_intervals": 3,
+      "seconds": 0.04035940021276474,
+      "from_world_seconds": 25.908611102902796,
+      "to_world_seconds": 25.94897050311556,
+      "from_centroid_world_cm": [
+        -9.81718252102534,
+        -148.52019917927348,
+        -4.172750234603882
+      ],
+      "to_centroid_world_cm": [
+        -8.92807404200236,
+        -149.22499775352242,
+        -1.9308232466379802
+      ],
+      "centroid_velocity_cm_s": [
+        22.029774335986673,
+        -17.46305868108587,
+        55.54906604525882
+      ],
+      "horizontal_speed_cm_s": 28.11173021700275,
+      "signed_forward_cm_s": -17.46305868108586,
+      "absolute_lateral_cm_s": 22.029774335986676,
+      "signed_vertical_cm_s": 55.54906604525882,
+      "same_interval_toe_horizontal_speed_cm_s": 14.491694206404786,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -5.105069398880005,
+        "signed_gap_mean_cm": -4.172750234603882,
+        "signed_gap_max_cm": -3.659272313117981,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.6093931198120117,
+        "signed_gap_mean_cm": -1.9308232466379802,
+        "signed_gap_max_cm": -1.44256991147995,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -2.60537562418865,
+        -8.451410246887525
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -5.846034622698875
+    },
+    {
+      "side": "R",
+      "region": "Heel",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2083,
+      "to_frame": 2086,
+      "from_gait_index": 746,
+      "to_gait_index": 749,
+      "intervening_original_intervals": 3,
+      "seconds": 0.053140200674533844,
+      "from_world_seconds": 25.94897050311556,
+      "to_world_seconds": 26.002110703790095,
+      "from_centroid_world_cm": [
+        -7.692584991455078,
+        -163.4321304108914,
+        0.18809803326924643
+      ],
+      "to_centroid_world_cm": [
+        -7.2995080550511675,
+        -164.68340853315752,
+        11.94855539004008
+      ],
+      "centroid_velocity_cm_s": [
+        7.39697877340315,
+        -23.546733101927472,
+        221.30999144696017
+      ],
+      "horizontal_speed_cm_s": 24.681246620614278,
+      "signed_forward_cm_s": -23.54673310192747,
+      "absolute_lateral_cm_s": 7.396978773403157,
+      "signed_vertical_cm_s": 221.30999144696017,
+      "same_interval_toe_horizontal_speed_cm_s": 23.39896045645944,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 0.08000123500823975,
+        "signed_gap_mean_cm": 0.18809803326924643,
+        "signed_gap_max_cm": 0.38409578800201416,
+        "all_three_within_one_cm_descriptive": true,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 11.018355369567871,
+        "signed_gap_mean_cm": 11.94855539004008,
+        "signed_gap_max_cm": 12.427964687347412,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -8.451410246887525,
+        -36.83189285805962
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -28.38048261117209
+    },
+    {
+      "side": "R",
+      "region": "Forefoot",
+      "target_cm_s": 400,
+      "phase": "Gait_WalkReturn",
+      "from_frame": 2083,
+      "to_frame": 2086,
+      "from_gait_index": 746,
+      "to_gait_index": 749,
+      "intervening_original_intervals": 3,
+      "seconds": 0.053140200674533844,
+      "from_world_seconds": 25.94897050311556,
+      "to_world_seconds": 26.002110703790095,
+      "from_centroid_world_cm": [
+        -8.92807404200236,
+        -149.22499775352242,
+        -1.9308232466379802
+      ],
+      "to_centroid_world_cm": [
+        -6.7956531047821045,
+        -152.29462126356523,
+        2.6621278611322245
+      ],
+      "centroid_velocity_cm_s": [
+        40.12820633253961,
+        -57.76462021367299,
+        86.43081978369844
+      ],
+      "horizontal_speed_cm_s": 70.33508578154114,
+      "signed_forward_cm_s": -57.76462021367298,
+      "absolute_lateral_cm_s": 40.12820633253963,
+      "signed_vertical_cm_s": 86.43081978369844,
+      "same_interval_toe_horizontal_speed_cm_s": 23.39896045645944,
+      "ground_before": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": -2.6093931198120117,
+        "signed_gap_mean_cm": -1.9308232466379802,
+        "signed_gap_max_cm": -1.44256991147995,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "ground_after": {
+        "flat_ground_trace_valid": true,
+        "signed_gap_min_cm": 1.872062787413597,
+        "signed_gap_mean_cm": 2.6621278611322245,
+        "signed_gap_max_cm": 3.245159137994051,
+        "all_three_within_one_cm_descriptive": false,
+        "ground_actors": [
+          "/Game/HarborCity/M5VS2/HeroGaitR2/Run_0110190f8274/L_HeroGaitR2.L_HeroGaitR2:PersistentLevel.StaticMeshActor_0"
+        ]
+      },
+      "known_active_morph_clear": true,
+      "heel_to_forefoot_line_elevation_degrees": [
+        -8.451410246887525,
+        -36.83189285805962
+      ],
+      "heel_to_forefoot_elevation_change_degrees": -28.38048261117209
+    }
+  ],
+  "video_observation": "NOT_RUN_BY_THIS_SCRIPT",
+  "visible_sliding_acceptance": "USER_REVIEW",
+  "limitation": "Sparse CPU LBS excludes morph/cloth/WPO/GPU. Patch centroid motion includes normal rolling; consider heel/forefoot ground gaps and line elevation together, not a requirement that every point must have zero velocity."
+}

@@ -1,0 +1,58 @@
+--- D:\科研学习\codex学习\docs\HarborCity_M5_VS2\source_snapshots\getup_local_yaw_20260925\HCM4R1PhysicalReactionGetUp.cpp
++++ D:\科研学习\codex学习\HarborCity\Source\HarborCity\M4R1\HCM4R1PhysicalReactionGetUp.cpp
+@@ -68,6 +68,7 @@
+     if (Hips.ContainsNaN() || !GetUpUnitAxes(ActualForward,ActualRight))
+     { GetUpLastResult=TEXT("ACTUAL_PHYSICAL_AXES_INVALID"); return false; }
+     int32 Best=INDEX_NONE; double BestScore=-2; FTransform BestStand; float BestError=0;
++    int32 MatchingPoses=0, SafeStands=0; float SmallestSafeError=MAX_flt;
+     for (int32 I=0; I<GetUpClips.Num(); ++I)
+     {
+         const FHCM4R1GetUpClip& Clip=GetUpClips[I];
+@@ -80,19 +81,34 @@
+         const double S=LocalForward.X*ActualForward.Y-LocalForward.Y*ActualForward.X+
+             LocalRight.X*ActualRight.Y-LocalRight.Y*ActualRight.X;
+         if (FMath::Square(C)+FMath::Square(S)<.01) continue;
+-        const FQuat Yaw(FVector::UpVector,FMath::Atan2(S,C));
+-        const double Score=.5*(FVector::DotProduct(Yaw.RotateVector(LocalForward),ActualForward)+
+-            FVector::DotProduct(Yaw.RotateVector(LocalRight),ActualRight));
+-        if (Score<.5 || Score<=BestScore) continue;
+-        const FVector CandidateCenter=Hips-Yaw.RotateVector(InitialMeshRelative.TransformPosition(Clip.FirstHipsComponent));
+-        FTransform Stand;
+-        if (!OwnerNPC->ResolvePhysicalGetUpStand(FTransform(Yaw,CandidateCenter),Stand)) continue;
+-        const FVector ExpectedHips=(InitialMeshRelative*Stand).TransformPosition(Clip.FirstHipsComponent);
+-        const float Error=FVector::Dist(ExpectedHips,Hips);
+-        if (Error>FMath::Clamp(GetUpMaximumAlignmentErrorCm,1.f,30.f)) continue;
+-        Best=I; BestScore=Score; BestStand=Stand; BestError=Error;
+-    }
+-    if (Best==INDEX_NONE) { GetUpLastResult=TEXT("NO_MATCHING_POSE_WITH_SAFE_CAPSULE_AND_HIPS_ALIGNMENT"); return false; }
++        // The unconstrained best yaw can put the standing capsule in a nearby
++        // wall. Try bounded alternatives around that same fallen pose. Every
++        // alternative keeps the existing navigation, capsule and hips checks;
++        // no physical body or obstacle is moved to make a candidate fit.
++        for (const double OffsetDegrees : {0., 15., -15., 30., -30.})
++        {
++            const FQuat Yaw(FVector::UpVector,FMath::Atan2(S,C)+FMath::DegreesToRadians(OffsetDegrees));
++            const double Score=.5*(FVector::DotProduct(Yaw.RotateVector(LocalForward),ActualForward)+
++                FVector::DotProduct(Yaw.RotateVector(LocalRight),ActualRight));
++            if (Score<.5 || Score<=BestScore) continue;
++            ++MatchingPoses;
++            const FVector CandidateCenter=Hips-Yaw.RotateVector(InitialMeshRelative.TransformPosition(Clip.FirstHipsComponent));
++            FTransform Stand;
++            if (!OwnerNPC->ResolvePhysicalGetUpStand(FTransform(Yaw,CandidateCenter),Stand)) continue;
++            ++SafeStands;
++            const FVector ExpectedHips=(InitialMeshRelative*Stand).TransformPosition(Clip.FirstHipsComponent);
++            const float Error=FVector::Dist(ExpectedHips,Hips);
++            SmallestSafeError=FMath::Min(SmallestSafeError,Error);
++            if (Error>FMath::Clamp(GetUpMaximumAlignmentErrorCm,1.f,30.f)) continue;
++            Best=I; BestScore=Score; BestStand=Stand; BestError=Error;
++        }
++    }
++    if (Best==INDEX_NONE)
++    {
++        GetUpLastResult=FString::Printf(TEXT("NO_MATCHING_POSE_WITH_SAFE_CAPSULE_AND_HIPS_ALIGNMENT poses=%d safe=%d min_hips_cm=%.3f"),
++            MatchingPoses,SafeStands,SafeStands?SmallestSafeError:-1.f);
++        return false;
++    }
+     UAnimInstance* Anim=Mesh->GetAnimInstance();
+     SavedRootMotionMode=uint8(Anim->RootMotionMode.GetValue()); bSavedRootMotionMode=true;
+     Anim->SetRootMotionMode(ERootMotionMode::IgnoreRootMotion);

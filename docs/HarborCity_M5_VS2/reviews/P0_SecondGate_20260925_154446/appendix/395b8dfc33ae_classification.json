@@ -1,0 +1,215 @@
+{
+  "status": "FAIL_VISUAL_OPEN",
+  "source_launch": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\launch.json",
+  "source_result": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\npc_reaction_review.json",
+  "original_images": [
+    "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\00_M5VS2_J_LivingDown_Stable.png",
+    "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\01_M5VS2_J_AuthoredGetUp_FirstHalf.png",
+    "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\02_M5VS2_J_AuthoredGetUp_SecondHalf.png",
+    "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\03_M5VS2_J_AutomaticRecovery.png",
+    "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS2\\editor_runtime\\20260925_144456_306_f8d97c35_j_chaos_clothing_game\\NPCReactionR2_20260925_144513_DC40E0BD\\04_M5VS2_J_Death_After5Seconds.png"
+  ],
+  "captures": [
+    {
+      "phase": "LivingDown_Stable",
+      "static_components": 1,
+      "collide_with_environment": true,
+      "force_collision_update": true,
+      "simulation": [
+        {
+          "kinematic_particles": 438,
+          "dynamic_particles": 518,
+          "iterations": 1,
+          "substeps": 1
+        }
+      ],
+      "cloth": [
+        {
+          "asset_index": 0,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 70,
+          "moving_particles_below_ground": 17,
+          "fixed_minimum_gap_cm": -5.666823867566638,
+          "moving_minimum_gap_cm": -5.24636833143888
+        },
+        {
+          "asset_index": 1,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 14,
+          "moving_particles_below_ground": 16,
+          "fixed_minimum_gap_cm": -4.0824965543167515,
+          "moving_minimum_gap_cm": -4.890967633296178
+        },
+        {
+          "asset_index": 2,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 10,
+          "moving_particles_below_ground": 20,
+          "fixed_minimum_gap_cm": -3.7774961011973787,
+          "moving_minimum_gap_cm": -5.224818700079965
+        }
+      ]
+    },
+    {
+      "phase": "AuthoredGetUp_FirstHalf",
+      "static_components": 0,
+      "collide_with_environment": true,
+      "force_collision_update": true,
+      "simulation": [
+        {
+          "kinematic_particles": 438,
+          "dynamic_particles": 518,
+          "iterations": 1,
+          "substeps": 1
+        }
+      ],
+      "cloth": [
+        {
+          "asset_index": 0,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 25.588996434949888,
+          "moving_minimum_gap_cm": 2.9316984312213563
+        },
+        {
+          "asset_index": 1,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 25.845111662811,
+          "moving_minimum_gap_cm": 7.886306424150536
+        },
+        {
+          "asset_index": 2,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 26.04674507307779,
+          "moving_minimum_gap_cm": 6.816240502640035
+        }
+      ]
+    },
+    {
+      "phase": "AuthoredGetUp_SecondHalf",
+      "static_components": 0,
+      "collide_with_environment": true,
+      "force_collision_update": true,
+      "simulation": [
+        {
+          "kinematic_particles": 438,
+          "dynamic_particles": 518,
+          "iterations": 1,
+          "substeps": 1
+        }
+      ],
+      "cloth": [
+        {
+          "asset_index": 0,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 96.90100647648514,
+          "moving_minimum_gap_cm": 49.5929002492651
+        },
+        {
+          "asset_index": 1,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 96.71603912665142,
+          "moving_minimum_gap_cm": 57.46705357429776
+        },
+        {
+          "asset_index": 2,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 96.57042472229408,
+          "moving_minimum_gap_cm": 50.72252536965075
+        }
+      ]
+    },
+    {
+      "phase": "AutomaticRecovery",
+      "static_components": 1,
+      "collide_with_environment": true,
+      "force_collision_update": true,
+      "simulation": [
+        {
+          "kinematic_particles": 438,
+          "dynamic_particles": 518,
+          "iterations": 1,
+          "substeps": 1
+        }
+      ],
+      "cloth": [
+        {
+          "asset_index": 0,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 90.18444608476827,
+          "moving_minimum_gap_cm": 42.57855078702699
+        },
+        {
+          "asset_index": 1,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 90.12133552876824,
+          "moving_minimum_gap_cm": 52.19177701471128
+        },
+        {
+          "asset_index": 2,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 0,
+          "moving_particles_below_ground": 0,
+          "fixed_minimum_gap_cm": 90.07165284574764,
+          "moving_minimum_gap_cm": 45.46450305351846
+        }
+      ]
+    },
+    {
+      "phase": "Death_After5Seconds",
+      "static_components": 1,
+      "collide_with_environment": true,
+      "force_collision_update": true,
+      "simulation": [
+        {
+          "kinematic_particles": 438,
+          "dynamic_particles": 518,
+          "iterations": 1,
+          "substeps": 1
+        }
+      ],
+      "cloth": [
+        {
+          "asset_index": 0,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 92,
+          "moving_particles_below_ground": 19,
+          "fixed_minimum_gap_cm": -6.371767419249942,
+          "moving_minimum_gap_cm": -12.267831647592434
+        },
+        {
+          "asset_index": 1,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 21,
+          "moving_particles_below_ground": 18,
+          "fixed_minimum_gap_cm": -6.174738445066254,
+          "moving_minimum_gap_cm": -7.3471983912949845
+        },
+        {
+          "asset_index": 2,
+          "actual_max_distance_map_matches_particle_count": true,
+          "fixed_particles_below_ground": 15,
+          "moving_particles_below_ground": 4,
+          "fixed_minimum_gap_cm": -6.0196252952566045,
+          "moving_minimum_gap_cm": -6.932688237044859
+        }
+      ]
+    }
+  ],
+  "conclusion": "Fixed and dynamic particles both penetrate the floor; zero-MaxDistance pins cannot be displaced by cloth collision. Nearby WorldStatic availability is not solver-ingestion proof."
+}

@@ -1,0 +1,132 @@
+{
+  "source": "E:\\GameDev\\Assets\\HarborCity\\M5_VS2\\NPC\\Models\\AvatarSample_J\\AvatarSample_J_Studio2140.vrm",
+  "scope": "Reference VRM coordinates in cm; not final UE pose, no runtime contact claim",
+  "garments": [
+    {
+      "material": "N00_002_03_Tops_01_CLOTH_01 (Instance)",
+      "vertices": 499,
+      "reference_xyz_min_cm": [
+        -32.384132385253906,
+        49.64216232299805,
+        -27.940216064453125
+      ],
+      "reference_xyz_max_cm": [
+        32.384124755859375,
+        126.51437377929688,
+        36.51010513305664
+      ],
+      "fixed_zero_skirt_vertices": 312,
+      "fixed_y_height_percentiles_cm": [
+        96.85308837890625,
+        101.08502197265625,
+        103.86492156982422,
+        109.81306457519531,
+        116.01927185058594,
+        120.36367568969726,
+        126.51437377929688
+      ],
+      "moving_y_height_percentiles_cm": [
+        49.64216232299805,
+        72.15204620361328,
+        84.18131256103516,
+        93.25999450683594,
+        101.02913665771484
+      ],
+      "zero_skirt_skin_bones": [
+        "J_Bip_C_Chest",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Neck",
+        "J_Bip_C_Spine",
+        "J_Bip_C_UpperChest",
+        "J_Bip_L_Shoulder",
+        "J_Bip_L_UpperArm",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_R_Shoulder",
+        "J_Bip_R_UpperArm",
+        "J_Bip_R_UpperLeg",
+        "J_Sec_L_Bust1",
+        "J_Sec_L_Bust2",
+        "J_Sec_R_Bust1",
+        "J_Sec_R_Bust2"
+      ]
+    },
+    {
+      "material": "N00_002_03_Tops_01_CLOTH_02 (Instance)",
+      "vertices": 261,
+      "reference_xyz_min_cm": [
+        -30.751800537109375,
+        58.02265548706055,
+        -24.244876861572266
+      ],
+      "reference_xyz_max_cm": [
+        30.751789093017578,
+        103.9688720703125,
+        31.408599853515625
+      ],
+      "fixed_zero_skirt_vertices": 79,
+      "fixed_y_height_percentiles_cm": [
+        96.634521484375,
+        98.80922393798828,
+        100.6435546875,
+        102.55144500732422,
+        103.55913925170898,
+        103.89024353027344,
+        103.9688720703125
+      ],
+      "moving_y_height_percentiles_cm": [
+        58.02265548706055,
+        72.57088279724121,
+        83.95217895507812,
+        92.99141502380371,
+        100.96875762939453
+      ],
+      "zero_skirt_skin_bones": [
+        "J_Bip_C_Chest",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_UpperChest",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_R_UpperLeg"
+      ]
+    },
+    {
+      "material": "N00_002_03_Tops_01_CLOTH_03 (Instance)",
+      "vertices": 261,
+      "reference_xyz_min_cm": [
+        -33.55141830444336,
+        50.27787780761719,
+        -25.70948028564453
+      ],
+      "reference_xyz_max_cm": [
+        33.55140686035156,
+        103.08393096923828,
+        34.294246673583984
+      ],
+      "fixed_zero_skirt_vertices": 56,
+      "fixed_y_height_percentiles_cm": [
+        96.46245574951172,
+        98.42585372924805,
+        99.5029125213623,
+        100.89671325683594,
+        102.75256729125977,
+        103.07002639770508,
+        103.08393096923828
+      ],
+      "moving_y_height_percentiles_cm": [
+        50.27787780761719,
+        66.08853149414062,
+        80.02061462402344,
+        91.85577392578125,
+        100.92123413085938
+      ],
+      "zero_skirt_skin_bones": [
+        "J_Bip_C_Chest",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_UpperChest",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_R_UpperLeg"
+      ]
+    }
+  ]
+}

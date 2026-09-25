@@ -1,0 +1,962 @@
+{
+  "schema_version": 2,
+  "plan_type": "HARBOR_CORNER_REV2_NATIVE_VIEWPORT",
+  "profile": "HeroFullBody",
+  "status": "READY_FOR_RUNTIME_NOT_CAPTURED",
+  "map": "/Game/HarborCity/M5VS2/WorldRev2/Review_5d4c169f36e7/L_CornerRevTwoReview",
+  "owner": "HarborCity_M5VS2_HarborCorner_Rev2",
+  "expected_screenshots": 4,
+  "expected_resolution": [
+    1920,
+    1080
+  ],
+  "source_bindings": [
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_072631_409_78941ab7_CornerVTwo\\author_result.json",
+      "sha256": "831d51f263d4aec822c1c6c6f328697d6bb9a6bd3690e6f58f2b7fcc4324d4c7",
+      "bytes": 2446403,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_072631_409_78941ab7_CornerVTwo\\commandlet.json",
+      "sha256": "99417c5b25d90bb2253087821d2ec929f3efeacf846c48747688c2313fc75c2a",
+      "bytes": 1344,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\HARBOR_CORNER_P0_REV2_LAYOUT_R4.json",
+      "sha256": "9c9db0939581c8c16e4051619c5d3501601e1dad5e63d44da1dc99cbc6ed51f2",
+      "bytes": 61253,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\tools\\ue_m5_vs2_corner_v2_review_author.py",
+      "sha256": "787add26f8c48f02d70ed224c0a2197131097595e8fe49f4a4fda8d2486084e2",
+      "bytes": 16120,
+      "kind": "script"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_Rev2_GardenGround.uasset",
+      "sha256": "655a2b7f91750d705672fb66a25f693b811adef0689d241c210b8cc0fa72c91d",
+      "bytes": 18167,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/M_Rev2_GardenGround"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_Rev2_StoneRoad.uasset",
+      "sha256": "593a58fe394abd7934bb3bb232757aeabb78ebcbfe6728acd51a24702a8108a4",
+      "bytes": 9502,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/M_Rev2_StoneRoad"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_Rev2_Footway.uasset",
+      "sha256": "a51887a77d56016e1aecd4beac97c7cb63ec86e3a1e1a9947e6bde8f6cf7ee46",
+      "bytes": 9492,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/M_Rev2_Footway"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_R4_WeatheredQuay.uasset",
+      "sha256": "76383160d7d9bbb29b21196b2be15c3b83641ba5e7396424e2ab49144d136636",
+      "bytes": 11226,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/M_R4_WeatheredQuay"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ClosedShoreFoundation.uasset",
+      "sha256": "91c24d5bfdfc96056c00ac2514b2f14a292fcdf649314cfce499cc1ec0debbd5",
+      "bytes": 39553,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/ClosedShoreFoundation"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ClosedLandSurface.uasset",
+      "sha256": "260d05f127b7ed7f6a5317e4e696a0a145585862d90765939ba994edde48c28a",
+      "bytes": 13889,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/ClosedLandSurface"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ContinuousCurvedStoneRoad6m.uasset",
+      "sha256": "0035281c6e3c1378f12c24e17e3bcbe27a200f34b640cd30f2de516929e2155b",
+      "bytes": 24166,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/ContinuousCurvedStoneRoad6m"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\WestFootway2m.uasset",
+      "sha256": "e58d10b37f51c2afdb48e409880e12b8efe49960970e2cd98a4e1f0f50ea9e27",
+      "bytes": 20193,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/WestFootway2m"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\EastFootway2m.uasset",
+      "sha256": "097e2a316e650b1196290c8ff167cd200d784ae045db492a912eafe11d9c987d",
+      "bytes": 20362,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/EastFootway2m"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\SouthRoundedWalkEnd.uasset",
+      "sha256": "b79a5a6d893d69b88bcf7692411691cffced5bd0763e120e8100eeb0363b6871",
+      "bytes": 15737,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/SouthRoundedWalkEnd"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\NorthRoundedWalkEnd.uasset",
+      "sha256": "70a3318b29736946bb90986af7b723028537c4f7fa5c3adc732898fc18c40b92",
+      "bytes": 15688,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/NorthRoundedWalkEnd"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\WestCurb.uasset",
+      "sha256": "a32b386f80b64ac285ff1903619bfd0326c48807beaacd5d48808fb7202e5dd0",
+      "bytes": 20000,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/WestCurb"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\EastCurb.uasset",
+      "sha256": "8b0a71ed288379d6938aaf9f8c20ef0aac0a95faf248e12162c41ff971c0914d",
+      "bytes": 20230,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/EastCurb"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CafeForecourt.uasset",
+      "sha256": "6247af82401ae67bcb9561a3a324ff67831e127b6b0eb5fc7244d0e9c7ead65e",
+      "bytes": 11448,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CafeForecourt"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ShopMarketCourt.uasset",
+      "sha256": "c697b2b0a6ab7953a5a1b829d46a1f9ebd952837ff484e0580a3c1e45b0e5532",
+      "bytes": 11456,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/ShopMarketCourt"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\InnDoorPath.uasset",
+      "sha256": "d61affb69d8c35d0bf4598b04db4e266aab2a38ae897cab226380685a98fd527",
+      "bytes": 11440,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/InnDoorPath"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\GuildApproach.uasset",
+      "sha256": "6b8873da38258ae76a7007726bcdb1c40e1cfa0ecb7c37c1120f2ebd194ad2c9",
+      "bytes": 11449,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/GuildApproach"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\PublicWellCourt.uasset",
+      "sha256": "273a0bd2ac28fa19d3133f311c56c7eb5db697b1c4ff87808522d7f654dee853",
+      "bytes": 11463,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/PublicWellCourt"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\EastShopApproach.uasset",
+      "sha256": "ad0a12144116571e6e068258ee624d19d5f31f4a78e806efa75edc4bf811146d",
+      "bytes": 11502,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/EastShopApproach"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ProvisionerDoorPath.uasset",
+      "sha256": "c3e20a6bfaf04c72d70899cc4b88d323d066f6552a3d53fd1188567bb3e5859b",
+      "bytes": 11418,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/ProvisionerDoorPath"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\SM_InnBodyOpenRoom.uasset",
+      "sha256": "d70fc5f06efa512b924c89044ce57ba9fafc424606752238626ade3e31c5c5e8",
+      "bytes": 132794,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/SM_InnBodyOpenRoom"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\SM_InnOpenDoorFrame.uasset",
+      "sha256": "c9b36e9cf4d5291eb344c942d161ae819e7c6a20e679bdbd31d15cd2245ecd23",
+      "bytes": 24542,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/SM_InnOpenDoorFrame"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_R4_CoastalStrata.uasset",
+      "sha256": "6e627f8890f45f72a5820e50c856dfa5727c44ecc36373f6a065527ff93cc1f9",
+      "bytes": 11226,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/M_R4_CoastalStrata"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_00.uasset",
+      "sha256": "2376d3a4a71ba33238cf0de6dbe38780e2624fed1bec61ac4711171ea8aee247",
+      "bytes": 17545,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_00"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_01.uasset",
+      "sha256": "fc55af49cbaa0f896aca2a9934c378268a0dbecf7ff6482ce337a1e79bae45d4",
+      "bytes": 17511,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_01"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_02.uasset",
+      "sha256": "3731783bc7e0ae9fb2a2a477a0b18afba53e79959a59982b983ffc4e18bd24c2",
+      "bytes": 17587,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_02"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_03.uasset",
+      "sha256": "4fa57797e2dd324bc290d18dd0f114f68648a53b3e623c86827edb9b66dd47cb",
+      "bytes": 17426,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_03"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_04.uasset",
+      "sha256": "beb3c93a6ff02fb48f250e82d238bf05776914fe51fcf817d89c3069c8a8360c",
+      "bytes": 17972,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_04"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_05.uasset",
+      "sha256": "ab10ff3d833870c7637201cefd484681e155422f8e6b0d462b36d9e6d520186a",
+      "bytes": 17863,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_05"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_06.uasset",
+      "sha256": "8204c5dbc0b028d1fadba438e40c80f30a1d064c52c85c33b060bf05711280f3",
+      "bytes": 17718,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_06"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_07.uasset",
+      "sha256": "b7ffa474a112e6a65ea5f4f379a3037040ef0b83e9c423e2878e9d4a07a1db3d",
+      "bytes": 17805,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_07"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_08.uasset",
+      "sha256": "6fa9f232c3c7d9c0d45477c90cb93193145360e27b77af7217a304ddd749ca8a",
+      "bytes": 17648,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_08"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_09.uasset",
+      "sha256": "fdb21c81f7068e3ed8c2faf437c34aefea4b1bd0054b782712737d79ac718781",
+      "bytes": 17576,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_09"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_10.uasset",
+      "sha256": "dc9cf120f4be68ca6b48118b1928f79d94c7c7de03c87a7dbadb6d2ff6d00d52",
+      "bytes": 17981,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_10"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_11.uasset",
+      "sha256": "bb114cc986f97fdbb2e75ff5a8d8b3d26bd4d414813cb346df8fd8a75a2906dd",
+      "bytes": 17835,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_11"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_12.uasset",
+      "sha256": "24404f441542821646e67e2c54578eb85e62fba0f19e7e2d76c5e2119bbb3124",
+      "bytes": 17514,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_12"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_13.uasset",
+      "sha256": "70d07c5e538813429a6cba705270fc3706e90368f775abdf3bfb0128cfe16065",
+      "bytes": 17994,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_13"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_14.uasset",
+      "sha256": "6b055e662c93754e33e68a47798be7f7d3bef9883df3e3d81d6f952393a8bbc3",
+      "bytes": 17948,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/CoastRock_14"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantIsland_0.uasset",
+      "sha256": "6403a1daea0eb2f3096f235552634e17c21d065ef169f1e7745ccf8097731d86",
+      "bytes": 212929,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/DistantIsland_0"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantIsland_1.uasset",
+      "sha256": "3498b07829c97d59d642a1865bf966b2fa54f1185b0ddc3978754e7120eb2a75",
+      "bytes": 214610,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/DistantIsland_1"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantIsland_2.uasset",
+      "sha256": "bcdba0f3ff8da61dd2b151f5cc77a1563c492a7bf0df8c0007db2780a8cbf8ef",
+      "bytes": 212768,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/DistantIsland_2"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_OriginalSail.uasset",
+      "sha256": "873ad97ab417511cc6f0fa68c510aef0b3c8bb9bb3c38a58c9c14b97bec970d6",
+      "bytes": 5357,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/M_OriginalSail"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantCurvedSail.uasset",
+      "sha256": "781bd99834024292356a4475d3b15aaadc76c91bd4533b70eb1c420e9e60960f",
+      "bytes": 22000,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Geometry/DistantCurvedSail"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\MI_WaterBoundedShallow.uasset",
+      "sha256": "54d57f97d4964d10ef9939f2c700bc7d3b411ba951ed39efd4317f293355e1ff",
+      "bytes": 10589,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/MI_WaterBoundedShallow"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_AnimeCloudDome.uasset",
+      "sha256": "153a828a56b42862a7182d8e04572c7cceee27aeff802b0366656314f023fabb",
+      "bytes": 13080,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/Materials/M_AnimeCloudDome"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\L_AnimeHarbor_Corner_P0_Rev2.umap",
+      "sha256": "5cc507a14ceddcbcff897c8acca1421fe141e468d2a4aff07cafec697644e9df",
+      "bytes": 792362,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/L_AnimeHarbor_Corner_P0_Rev2"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260924_033209_787_b7a74f1a_VillageSelectionCopy\\author_result.json",
+      "sha256": "02eeb57a35375b610f83077cebd2ddb09438878a60ddb2ce1d112a827563d955",
+      "bytes": 385061,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2CornerTimeDirector.h",
+      "sha256": "03356cd8b612a34f30fb90d6b6c87dad3e504cf010b20c0c459524555d4eebd2",
+      "bytes": 1431,
+      "kind": "cpp"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2CornerTimeDirector.cpp",
+      "sha256": "12148fec7743cf20bb7e640980f88a4f69d410cf929dd8e2882e202120f99cc2",
+      "bytes": 8253,
+      "kind": "cpp"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2CornerRevTwoReviewDirector.h",
+      "sha256": "1a0ac084e66fae3b25025dc1b36caf36422ea95639f8c88aa9e5ffe8ff6e5453",
+      "bytes": 3444,
+      "kind": "cpp"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M5VS2\\HCM5VS2CornerRevTwoReviewDirector.cpp",
+      "sha256": "50c3c89789af5608ab3afc5ee5a8693cf6212833fa889c16a8f0213f105e46ff",
+      "bytes": 54355,
+      "kind": "cpp"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Binaries\\Win64\\UnrealEditor-HarborCity.dll",
+      "sha256": "65c2d18302fe1e9a4e04ed7a6cb6013f43403b242c11e16ea75c4d25f0374ce3",
+      "bytes": 9359360,
+      "kind": "module"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\research\\CORNER_REV2_HERO_REVIEW_SELECTION.json",
+      "sha256": "89b9a276585dcab2f8a75a0fcef306dce1e5b12e99b01f517db73688621f026a",
+      "bytes": 2313,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_045552_760_655ac9fa_HeroRev2IntegrationReload\\author_result.json",
+      "sha256": "9cb4bd7fb2cafdf6ad2588ae2ae4b19b58cb73188d31dbedbce287a7523b247e",
+      "bytes": 196984,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_045552_760_655ac9fa_HeroRev2IntegrationReload\\commandlet.json",
+      "sha256": "867bea059091e41f327e81519b334a5c1e6870d92627a2ef8b03ff8099f28bed",
+      "bytes": 1427,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_045510_188_2225a5ac_HeroRev2Integration\\author_result.json",
+      "sha256": "08524b29ff27e26ab2c561bb2cb4c11a9a251f2de9f14db1530e036da792ad95",
+      "bytes": 205178,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_045510_188_2225a5ac_HeroRev2Integration\\commandlet.json",
+      "sha256": "2f580cf755765f8a6ba58d945fab5561fbd08756dd8a54cdd53724630f6ed455",
+      "bytes": 1404,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_041228_864_4dd2547e_HeroSourceOutline\\author_result.json",
+      "sha256": "6029ed7154cfcbb2217e0b1ba6a34457f631acefcb4343b071f95dadd9f2815d",
+      "bytes": 20942,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_041228_864_4dd2547e_HeroSourceOutline\\commandlet.json",
+      "sha256": "65df1da7f477c0b74b58fd9821a73043b8bbb5cf7db342e3eb9b5fc435ede060",
+      "bytes": 1378,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_040901_507_e80eb56a_GASMotionReload\\author_result.json",
+      "sha256": "a1c1a0c464ead1742e68920039d18448e761c627c838485cf2d67519d39174bc",
+      "bytes": 93302,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_040901_507_e80eb56a_GASMotionReload\\commandlet.json",
+      "sha256": "844f50e5038f31b162018e88ea4183e3ba485025a3c07553ab4411a0ceb2383b",
+      "bytes": 1366,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_043500_479_e52d281e_FlightPoseReload\\author_result.json",
+      "sha256": "76981b695ffe6d4bb1bd08b3de8e87d7a77cbfcd633fcf6f508daad29792e315",
+      "bytes": 65442,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_043500_479_e52d281e_FlightPoseReload\\commandlet.json",
+      "sha256": "0bda0fefdf0d05120cd362683b0261350d120d119db61b7145b79c60f14d13ea",
+      "bytes": 1371,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_042259_731_c7e6c52b_FlightVisualReload\\author_result.json",
+      "sha256": "1e1e87424aad69d89d891bd6056be85c694307fc957fd0c10c94f699179f7d57",
+      "bytes": 6901,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_042259_731_c7e6c52b_FlightVisualReload\\commandlet.json",
+      "sha256": "cab112524029a8edd01b54c4cd65bd1a49f3c4240ebae8254c05688f77cbe548",
+      "bytes": 1384,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_034631_710_7df27246_HaloParts\\author_result.json",
+      "sha256": "235ed98883696a8f287e1a9e5d1b6566deacdb77cb7dbc8ce39918fb1cf4bddf",
+      "bytes": 20205,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_034631_710_7df27246_HaloParts\\commandlet.json",
+      "sha256": "c5786a5a7e40627c7381fe707b329ff80ba3fbf36671c9b83c1e7b681457bd63",
+      "bytes": 1341,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_c528d00085b7\\SKM_HeroRev2_FirstPersonArms.uasset",
+      "sha256": "b0ad8e9d839801b7a5f4b6610ec33114a378a0ad03d9f8d12254a3d2a7df1bfa",
+      "bytes": 3272360,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_c528d00085b7/SKM_HeroRev2_FirstPersonArms"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_c528d00085b7\\BP_HeroRev2_Integrated_c528d00085b7.uasset",
+      "sha256": "d20d711b69b5d056ed17832f302951a2d0aa0e9f5235286dbf831a8b7d2b85af",
+      "bytes": 39117,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_c528d00085b7/BP_HeroRev2_Integrated_c528d00085b7"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_hair.uasset",
+      "sha256": "9f02544918b75ceeffee854785412a6b229be471d78bc22feef838cc18b87649",
+      "bytes": 10999700,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Textures/T_Selestia_hair"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_hair.uasset",
+      "sha256": "b49f5ac67921de8b7ac0f341b6042eb66ad812af424adfa54dec2ca7e3d65fda",
+      "bytes": 10315,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Materials/M_SourceOutline_hair"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_body.uasset",
+      "sha256": "f527243c510e4a6ef5468d9af70907301429e0fdb4a01ccd2d447f7aa850b572",
+      "bytes": 4394636,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Textures/T_Selestia_body"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_body_mask_SourceWidth.uasset",
+      "sha256": "ccca0f035180f192419718e05b8d97c816214064576189018cd0a43c23c7aad3",
+      "bytes": 399789,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Textures/T_Selestia_body_mask_SourceWidth"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_body.uasset",
+      "sha256": "9cf77e35f8cf75fd8f2b4f72abedab13396bad7cd180e70c051e2d6511dc277c",
+      "bytes": 12122,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Materials/M_SourceOutline_body"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_face_mask_1_SourceWidth.uasset",
+      "sha256": "6fdc205c95884fa7ea5f86fdb79c59529c04df06aef251a883f6f69af0ce185a",
+      "bytes": 623477,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Textures/T_Selestia_face_mask_1_SourceWidth"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_face.uasset",
+      "sha256": "17b461ba9f9df59af323e9c3d3e2f8ac1e9b8eb6187b3bfc8bdb17c668f317d8",
+      "bytes": 11252,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Materials/M_SourceOutline_face"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_option.uasset",
+      "sha256": "c6787f525c53bcef277af61235de52d6fe99260b8b753f8d859a1bf62dd3b4a5",
+      "bytes": 9204,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Materials/M_SourceOutline_option"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_costume.uasset",
+      "sha256": "fcecacaaf4d3a97965f4200e7d0c24929be7053ab99966ab0b28762b7121c9c7",
+      "bytes": 7126616,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Textures/T_Selestia_costume"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_costume.uasset",
+      "sha256": "2a079299f31beba77fb26b6675a0c465a203f24b8285879ac8eab266ee5510ce",
+      "bytes": 10336,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/Materials/M_SourceOutline_costume"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\BP_HeroSourceOutline_f3ca1eb14d12.uasset",
+      "sha256": "7cc98ff6da86c89c1df170eacfad1680fe99f2c96683f54e46dfbd46573a0b20",
+      "bytes": 33834,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroRev2/Review_f3ca1eb14d12/BP_HeroSourceOutline_f3ca1eb14d12"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\SK_Selestia_Warp.uasset",
+      "sha256": "9a9d8cdfd8b839596a3bacfc4fda69e6c30f30d763ab550cdded4c21d010245c",
+      "bytes": 57234,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SK_Selestia_Warp"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\SKM_Selestia_Warp.uasset",
+      "sha256": "bf1ca6f9a245cd6a1abcaf2fe309930e7ecbd9684d62764d3a63eb0a213a1432",
+      "bytes": 32431647,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\Loops\\Run_WarpLoop.uasset",
+      "sha256": "8b4967e97337c65947a3f4232fa65f0372034dc21cb45c5e351e03a9227455d9",
+      "bytes": 1157592,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/Loops/Run_WarpLoop"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\Loops\\Sprint_WarpLoop.uasset",
+      "sha256": "3c64909bd3896b96cd6b67a16a482fefa5b7ffed783268bc1b64ce33b7258030",
+      "bytes": 1055681,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/Loops/Sprint_WarpLoop"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\Loops\\Walk_WarpLoop.uasset",
+      "sha256": "eb8473c52321d42a1a0106fadd4b78e8a1ab0481dea9257bb42becb178e729c3",
+      "bytes": 1355238,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/Loops/Walk_WarpLoop"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\BS_Selestia_GASMotion.uasset",
+      "sha256": "1d90d87d3c1f3297edfc7f0056308f409f028311b2a4e34e66da7bd2193e9ab8",
+      "bytes": 59933,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/BS_Selestia_GASMotion"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\ABP_Selestia_GASMotion.uasset",
+      "sha256": "f3fea3494971587ea4b6462be2ed450b9091058abec587d3932a57261883b92b",
+      "bytes": 1717019,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/ABP_Selestia_GASMotion"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Hover.uasset",
+      "sha256": "b946281ce054afa1d042f14094d913a9ebacc199cfba71a005a6c52fdfac9691",
+      "bytes": 4999799,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_0cab55de7f13/FlightPoses/A_Flight_Hover"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Forward.uasset",
+      "sha256": "6d95d80a207a78fd11b550b092e3eb87134b638c3e1e95c77c8c3f46a6cbd3c6",
+      "bytes": 4999807,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_0cab55de7f13/FlightPoses/A_Flight_Forward"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Boost.uasset",
+      "sha256": "ac431a63e2e104c0c55874b9c3091eb75a07b85f7178c1ad1ba1208b7f4b7943",
+      "bytes": 4999799,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_0cab55de7f13/FlightPoses/A_Flight_Boost"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Ascending.uasset",
+      "sha256": "8922dbc6f69ce38b3f7847ee20f2cf2cc6b32c76272f5b5ff2a08174d63e7133",
+      "bytes": 4999815,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_0cab55de7f13/FlightPoses/A_Flight_Ascending"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Descending.uasset",
+      "sha256": "9ba86765afaab0a7b2acc5b454f6d96459229ab0319e52ff51909099fe128cfa",
+      "bytes": 4999819,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_0cab55de7f13/FlightPoses/A_Flight_Descending"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\ABP_Selestia_GASFlight.uasset",
+      "sha256": "a52442e39e00f233284591040f55c6bf2b712b5f91d574dec00657fb87c8c7f4",
+      "bytes": 1904866,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_0cab55de7f13/ABP_Selestia_GASFlight"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\M_OriginalFlightLight.uasset",
+      "sha256": "7084e746a88fb9614e9ba25e420cda2a595f603ac8f054fa22ac76bce6eb2db6",
+      "bytes": 11401,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/FlightVisual/Batch_ddf92889af43/M_OriginalFlightLight"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\SM_OriginalLightFeather.uasset",
+      "sha256": "15bf7ea9c1447f8b19d95bf042dbd11d675ebb7da2994f5a7d3ba628bfeebf1f",
+      "bytes": 29334,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/FlightVisual/Batch_ddf92889af43/SM_OriginalLightFeather"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\SM_OriginalLightRibbon.uasset",
+      "sha256": "2a09348c6ab9e2fdd639c541b615697a40f10f547ba69dfa2828c83dd9af9d4d",
+      "bytes": 14349,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/FlightVisual/Batch_ddf92889af43/SM_OriginalLightRibbon"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\SM_OriginalLightRune.uasset",
+      "sha256": "1647b84bfabc66b598466522f454d1374d0e826f35ff6777482aad5e76700ee0",
+      "bytes": 23873,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/FlightVisual/Batch_ddf92889af43/SM_OriginalLightRune"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\M_OriginalHaloGlow.uasset",
+      "sha256": "0a6505f1ad5cc7daf459d7be21f70bc1fb86a18582fc406bb154eda2cc602156",
+      "bytes": 7226,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/M_OriginalHaloGlow"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main.uasset",
+      "sha256": "db814be193078846dc17341328257136d70bfd76ecdd45b6e4f5a7b0122410e8",
+      "bytes": 45830,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/SM_HaloSource_Halo_main"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_sub1.uasset",
+      "sha256": "a8c79e0255a8afcaafcb034bba8ef28734196f99e598280507622cf9691651a5",
+      "bytes": 46023,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/SM_HaloSource_Halo_sub1"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_sub2.uasset",
+      "sha256": "13afb06d370e04c96eeb41a36be53f2ce2b80a72489feb1bcf7c403f8a599656",
+      "bytes": 39489,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/SM_HaloSource_Halo_sub2"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_rhombus.uasset",
+      "sha256": "778c953c852bd995776289ddf86023de10dab44df3fffbdc122267c7e774bc90",
+      "bytes": 14250,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/SM_HaloSource_Halo_main_rhombus"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_ring.uasset",
+      "sha256": "e0d54dace114109e39e00cd70cfe14b10620391d0519c3cf28b03d2d1cecf646",
+      "bytes": 75298,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/SM_HaloSource_Halo_main_ring"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_sphere.uasset",
+      "sha256": "c2095a7e4567f418efa1846bfe45f0610987d5cde9f47e6d6dc3e90ebb7b2017",
+      "bytes": 26566,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/SM_HaloSource_Halo_main_sphere"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_rhombus_sub.uasset",
+      "sha256": "91770872e8f704f9c7d1ce91afb078fbde99710613baabf6aa37b71abb7b23e4",
+      "bytes": 15918,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HaloRev2/Batch_021165c5e9cf/SM_HaloSource_Halo_main_rhombus_sub"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\BP_M5VS2_SelestiaGameMode.uasset",
+      "sha256": "6399e69ddbec0babb2c1d01470541ef0b21f7535f21ff0da9841ffe9a7d7eac7",
+      "bytes": 20547,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/BP_M5VS2_SelestiaGameMode"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_cea410ab0131\\L_CornerRevTwoReview.umap",
+      "sha256": "2facd1ebc943f0477a77e44002f0bb385a01bcf28287f95c21d38e03b4e9cf4d",
+      "bytes": 788593,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Review_cea410ab0131/L_CornerRevTwoReview"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_cea410ab0131\\BP_ReviewGameMode.uasset",
+      "sha256": "9488ae5633d75d3c247d19cfa112ed5d7d7c64a9a3508f7e32e09cd3b5e94a52",
+      "bytes": 20466,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Review_cea410ab0131/BP_ReviewGameMode"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_144821_572_41d5d175_FlightPosePolishAuthor\\author_result.json",
+      "sha256": "008dca7e5bd96b4ba77cadd017c30fe0f5081ffc589289e3a7e8e14c7b61c002",
+      "bytes": 16713,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Hover.uasset",
+      "sha256": "44c4903ba949cdee2424e34c031322fc92c3477840aa81f350e85bc19fea8318",
+      "bytes": 4999689,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/FlightPoses/A_Flight_Hover"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Forward.uasset",
+      "sha256": "341a320f17c3255a0189fcaf942f6b6682962f17edcfcc15d2459f08392203b4",
+      "bytes": 4999697,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/FlightPoses/A_Flight_Forward"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Boost.uasset",
+      "sha256": "886b9a281c6b66751b92a75b29159c41b34180011455ed66c1ccf6e9a814e4ca",
+      "bytes": 4999689,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/FlightPoses/A_Flight_Boost"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Ascending.uasset",
+      "sha256": "e031e1bab25a3042bcaebfb8b8bf4ae9e56b1200b56b93a752c6ccf43874b3eb",
+      "bytes": 4999705,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/FlightPoses/A_Flight_Ascending"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Descending.uasset",
+      "sha256": "9e18f05dd7de51ad5b81682971028f7291e95ffd35d5c4809955e1c52d0c6dd6",
+      "bytes": 4999709,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/FlightPoses/A_Flight_Descending"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\ABP_FlightPosePolish.uasset",
+      "sha256": "ff969dfd3fe39cca9981c55edc9816abc649f2d9158518a976a61ad4442762b4",
+      "bytes": 1912732,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/ABP_FlightPosePolish"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\BP_FlightPosePolish.uasset",
+      "sha256": "144dd2a928af60c073401c37e4e3ae518b90698702e758ff20b023dfd0343d37",
+      "bytes": 40644,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/BP_FlightPosePolish"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_074202_375_2c48b7b0_CornerVTwoHeroFullBody\\corner_v2_capture_plan.json",
+      "sha256": "d90cc659feaa3e7c197775256d10f242380800034598fa49329883ed338f4e52",
+      "bytes": 47251,
+      "kind": "evidence"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\tools\\ue_m5_vs2_hero_polish_review_author.py",
+      "sha256": "758dd88c017bcc4231bf0e7a6a195e95c50837062270d4eb5906d5f4216195d9",
+      "bytes": 4744,
+      "kind": "script"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_5d4c169f36e7\\L_CornerRevTwoReview.umap",
+      "sha256": "7112a4e8e11a324a229ce5543f16574cf4ddbd531ac8a018b1cf859512cd7ec0",
+      "bytes": 788484,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Review_5d4c169f36e7/L_CornerRevTwoReview"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_5d4c169f36e7\\BP_ReviewGameMode.uasset",
+      "sha256": "fa893d085154fb00d2059c63e00978f4a3e25f7ce5d11558650b8ce94af68852",
+      "bytes": 20457,
+      "kind": "package",
+      "package": "/Game/HarborCity/M5VS2/WorldRev2/Review_5d4c169f36e7/BP_ReviewGameMode"
+    }
+  ],
+  "shots": [
+    {
+      "index": 0,
+      "label": "00_Afternoon_HeroFullBody",
+      "expected_png": "00_Afternoon_HeroFullBody.png",
+      "capture_status": "NOT_RUN",
+      "camera_name": "HeroFullBody",
+      "camera_fov_degrees": 65,
+      "light_preset": "Afternoon",
+      "hero_feet_cm": [
+        1000,
+        0,
+        2
+      ],
+      "hero_yaw": -155,
+      "minimum_settle_seconds": 10,
+      "minimum_settle_rendered_frames": 30
+    },
+    {
+      "index": 1,
+      "label": "01_Dusk_HeroFullBody",
+      "expected_png": "01_Dusk_HeroFullBody.png",
+      "capture_status": "NOT_RUN",
+      "camera_name": "HeroFullBody",
+      "camera_fov_degrees": 65,
+      "light_preset": "Dusk",
+      "hero_feet_cm": [
+        1000,
+        0,
+        2
+      ],
+      "hero_yaw": -155,
+      "minimum_settle_seconds": 10,
+      "minimum_settle_rendered_frames": 30
+    },
+    {
+      "index": 2,
+      "label": "02_Night_HeroFullBody",
+      "expected_png": "02_Night_HeroFullBody.png",
+      "capture_status": "NOT_RUN",
+      "camera_name": "HeroFullBody",
+      "camera_fov_degrees": 65,
+      "light_preset": "Night",
+      "hero_feet_cm": [
+        1000,
+        0,
+        2
+      ],
+      "hero_yaw": -155,
+      "minimum_settle_seconds": 10,
+      "minimum_settle_rendered_frames": 30
+    },
+    {
+      "index": 3,
+      "label": "03_Interior_HeroFullBody",
+      "expected_png": "03_Interior_HeroFullBody.png",
+      "capture_status": "NOT_RUN",
+      "camera_name": "HeroFullBody",
+      "camera_fov_degrees": 65,
+      "light_preset": "Afternoon",
+      "hero_feet_cm": [
+        1286.99999811743,
+        -1344.6688251247574,
+        28.0
+      ],
+      "hero_yaw": -180,
+      "minimum_settle_seconds": 10,
+      "minimum_settle_rendered_frames": 30
+    }
+  ],
+  "source_corner_map": "/Game/HarborCity/M5VS2/WorldRev2/Corner_f32c5d1608fd/L_AnimeHarbor_Corner_P0_Rev2",
+  "selected_hero": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/BP_FlightPosePolish",
+  "camera_policy": "Actual animated eyes sampled after readiness; one locked outside camera reused for afternoon/dusk/night, one indoor camera. Full-body framing fits the actual body/imported extent and visible moving halo with a 12 percent margin at the recorded viewport aspect and FOV. No guessed CDO eye height or gameplay camera change.",
+  "lighting_policy": "Permanent HCM5VS2CornerTimeDirector.SetTimeOfDay public API; record actual full readback. No review-only lighting, exposure or materials.",
+  "runtime_contract": {
+    "opt_in": "M5VS2CornerRevTwoReview",
+    "plan_argument": "M5VS2CornerRevTwoPlan",
+    "maximum_duration_seconds": 300,
+    "startup_deadline_seconds": 10,
+    "observe_esc_without_consuming": true,
+    "esc_latches_and_cancels_all_capture_restore_autoquit": true,
+    "preserve_p_pause": true,
+    "screenshot": "Native FScreenshotRequest / processed delegate / EndDraw camera and lights / raw 1920x1080 PNG",
+    "character_material_animation_overrides": false,
+    "character_position_staging": true,
+    "os_input": false,
+    "art_acceptance": "USER_REVIEW"
+  },
+  "hero": {
+    "blueprint_class": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/BP_FlightPosePolish.BP_FlightPosePolish_C",
+    "left_eye_bone": "LeftEye",
+    "right_eye_bone": "RightEye",
+    "selected_blueprint": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/BP_FlightPosePolish",
+    "interior_feet_cm": [
+      1286.99999811743,
+      -1344.6688251247574,
+      28.0
+    ],
+    "interior_yaw": -180,
+    "outdoor_feet_cm": [
+      1000,
+      0,
+      2
+    ],
+    "outdoor_yaw": -155,
+    "material_policy": "Exact selected saved candidate only; no per-shot material, extra light or animation override."
+  }
+}

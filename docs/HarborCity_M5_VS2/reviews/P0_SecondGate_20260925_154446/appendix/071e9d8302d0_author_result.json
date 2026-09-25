@@ -1,0 +1,913 @@
+{
+  "status": "PASS",
+  "phase": "HeroPolishReviewAuthor",
+  "assets": [
+    {
+      "path": "/Game/HarborCity/M5VS2/WorldRev2/Review_a9940497527d/L_CornerRevTwoReview",
+      "sha256": "55959efd91e747bfe9c8768dd9d1b4742f1353a0fde9ea0d816964f5a333a13d"
+    },
+    {
+      "path": "/Game/HarborCity/M5VS2/WorldRev2/Review_a9940497527d/BP_ReviewGameMode",
+      "sha256": "2d48ed14ec6b92899f4aa4c467be8f431c43ec2cd7aebb35acd88e332fcc4a70"
+    },
+    {
+      "path": "/Game/HarborCity/M5VS2/WorldRev2/Review_5d4c169f36e7/L_CornerRevTwoReview",
+      "sha256": "7112a4e8e11a324a229ce5543f16574cf4ddbd531ac8a018b1cf859512cd7ec0"
+    },
+    {
+      "path": "/Game/HarborCity/M5VS2/WorldRev2/Review_5d4c169f36e7/BP_ReviewGameMode",
+      "sha256": "fa893d085154fb00d2059c63e00978f4a3e25f7ce5d11558650b8ce94af68852"
+    }
+  ],
+  "plans": {
+    "Portrait": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_153905_515_d0d6280f_HeroPolishReviewAuthor\\Portrait\\corner_v2_capture_plan.json",
+    "FullBody": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\editor_runtime\\author_20260925_153905_515_d0d6280f_HeroPolishReviewAuthor\\FullBody\\corner_v2_capture_plan.json"
+  },
+  "checks": [
+    {
+      "name": "saved selected hero",
+      "status": "PASS"
+    },
+    {
+      "name": "actual selected hero source unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "actual selected hero source unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "actual selected hero source unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "actual selected hero source unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "actual selected hero source unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "actual selected hero source unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "actual selected hero source unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "unique review map",
+      "status": "PASS"
+    },
+    {
+      "name": "native fixture copy",
+      "status": "PASS"
+    },
+    {
+      "name": "load new fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "private mode copy",
+      "status": "PASS"
+    },
+    {
+      "name": "compile actual hero binding",
+      "status": "PASS"
+    },
+    {
+      "name": "save private mode",
+      "status": "PASS"
+    },
+    {
+      "name": "save new fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "original fixture asset unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "unique review map",
+      "status": "PASS"
+    },
+    {
+      "name": "native fixture copy",
+      "status": "PASS"
+    },
+    {
+      "name": "load new fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "private mode copy",
+      "status": "PASS"
+    },
+    {
+      "name": "compile actual hero binding",
+      "status": "PASS"
+    },
+    {
+      "name": "save private mode",
+      "status": "PASS"
+    },
+    {
+      "name": "save new fixture",
+      "status": "PASS"
+    }
+  ],
+  "protected": {
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Hover.uasset": "44c4903ba949cdee2424e34c031322fc92c3477840aa81f350e85bc19fea8318",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Forward.uasset": "341a320f17c3255a0189fcaf942f6b6682962f17edcfcc15d2459f08392203b4",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Boost.uasset": "886b9a281c6b66751b92a75b29159c41b34180011455ed66c1ccf6e9a814e4ca",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Ascending.uasset": "e031e1bab25a3042bcaebfb8b8bf4ae9e56b1200b56b93a752c6ccf43874b3eb",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\FlightPoses\\A_Flight_Descending.uasset": "9e18f05dd7de51ad5b81682971028f7291e95ffd35d5c4809955e1c52d0c6dd6",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\ABP_FlightPosePolish.uasset": "ff969dfd3fe39cca9981c55edc9816abc649f2d9158518a976a61ad4442762b4",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_02d1d3e6d567\\BP_FlightPosePolish.uasset": "144dd2a928af60c073401c37e4e3ae518b90698702e758ff20b023dfd0343d37",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_Rev2_GardenGround.uasset": "655a2b7f91750d705672fb66a25f693b811adef0689d241c210b8cc0fa72c91d",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_Rev2_StoneRoad.uasset": "593a58fe394abd7934bb3bb232757aeabb78ebcbfe6728acd51a24702a8108a4",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_Rev2_Footway.uasset": "a51887a77d56016e1aecd4beac97c7cb63ec86e3a1e1a9947e6bde8f6cf7ee46",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_R4_WeatheredQuay.uasset": "76383160d7d9bbb29b21196b2be15c3b83641ba5e7396424e2ab49144d136636",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ClosedShoreFoundation.uasset": "91c24d5bfdfc96056c00ac2514b2f14a292fcdf649314cfce499cc1ec0debbd5",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ClosedLandSurface.uasset": "260d05f127b7ed7f6a5317e4e696a0a145585862d90765939ba994edde48c28a",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ContinuousCurvedStoneRoad6m.uasset": "0035281c6e3c1378f12c24e17e3bcbe27a200f34b640cd30f2de516929e2155b",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\WestFootway2m.uasset": "e58d10b37f51c2afdb48e409880e12b8efe49960970e2cd98a4e1f0f50ea9e27",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\EastFootway2m.uasset": "097e2a316e650b1196290c8ff167cd200d784ae045db492a912eafe11d9c987d",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\SouthRoundedWalkEnd.uasset": "b79a5a6d893d69b88bcf7692411691cffced5bd0763e120e8100eeb0363b6871",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\NorthRoundedWalkEnd.uasset": "70a3318b29736946bb90986af7b723028537c4f7fa5c3adc732898fc18c40b92",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\WestCurb.uasset": "a32b386f80b64ac285ff1903619bfd0326c48807beaacd5d48808fb7202e5dd0",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\EastCurb.uasset": "8b0a71ed288379d6938aaf9f8c20ef0aac0a95faf248e12162c41ff971c0914d",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CafeForecourt.uasset": "6247af82401ae67bcb9561a3a324ff67831e127b6b0eb5fc7244d0e9c7ead65e",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ShopMarketCourt.uasset": "c697b2b0a6ab7953a5a1b829d46a1f9ebd952837ff484e0580a3c1e45b0e5532",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\InnDoorPath.uasset": "d61affb69d8c35d0bf4598b04db4e266aab2a38ae897cab226380685a98fd527",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\GuildApproach.uasset": "6b8873da38258ae76a7007726bcdb1c40e1cfa0ecb7c37c1120f2ebd194ad2c9",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\PublicWellCourt.uasset": "273a0bd2ac28fa19d3133f311c56c7eb5db697b1c4ff87808522d7f654dee853",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\EastShopApproach.uasset": "ad0a12144116571e6e068258ee624d19d5f31f4a78e806efa75edc4bf811146d",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\ProvisionerDoorPath.uasset": "c3e20a6bfaf04c72d70899cc4b88d323d066f6552a3d53fd1188567bb3e5859b",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\SM_InnBodyOpenRoom.uasset": "d70fc5f06efa512b924c89044ce57ba9fafc424606752238626ade3e31c5c5e8",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\SM_InnOpenDoorFrame.uasset": "c9b36e9cf4d5291eb344c942d161ae819e7c6a20e679bdbd31d15cd2245ecd23",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_R4_CoastalStrata.uasset": "6e627f8890f45f72a5820e50c856dfa5727c44ecc36373f6a065527ff93cc1f9",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_00.uasset": "2376d3a4a71ba33238cf0de6dbe38780e2624fed1bec61ac4711171ea8aee247",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_01.uasset": "fc55af49cbaa0f896aca2a9934c378268a0dbecf7ff6482ce337a1e79bae45d4",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_02.uasset": "3731783bc7e0ae9fb2a2a477a0b18afba53e79959a59982b983ffc4e18bd24c2",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_03.uasset": "4fa57797e2dd324bc290d18dd0f114f68648a53b3e623c86827edb9b66dd47cb",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_04.uasset": "beb3c93a6ff02fb48f250e82d238bf05776914fe51fcf817d89c3069c8a8360c",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_05.uasset": "ab10ff3d833870c7637201cefd484681e155422f8e6b0d462b36d9e6d520186a",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_06.uasset": "8204c5dbc0b028d1fadba438e40c80f30a1d064c52c85c33b060bf05711280f3",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_07.uasset": "b7ffa474a112e6a65ea5f4f379a3037040ef0b83e9c423e2878e9d4a07a1db3d",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_08.uasset": "6fa9f232c3c7d9c0d45477c90cb93193145360e27b77af7217a304ddd749ca8a",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_09.uasset": "fdb21c81f7068e3ed8c2faf437c34aefea4b1bd0054b782712737d79ac718781",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_10.uasset": "dc9cf120f4be68ca6b48118b1928f79d94c7c7de03c87a7dbadb6d2ff6d00d52",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_11.uasset": "bb114cc986f97fdbb2e75ff5a8d8b3d26bd4d414813cb346df8fd8a75a2906dd",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_12.uasset": "24404f441542821646e67e2c54578eb85e62fba0f19e7e2d76c5e2119bbb3124",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_13.uasset": "70d07c5e538813429a6cba705270fc3706e90368f775abdf3bfb0128cfe16065",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\CoastRock_14.uasset": "6b055e662c93754e33e68a47798be7f7d3bef9883df3e3d81d6f952393a8bbc3",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantIsland_0.uasset": "6403a1daea0eb2f3096f235552634e17c21d065ef169f1e7745ccf8097731d86",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantIsland_1.uasset": "3498b07829c97d59d642a1865bf966b2fa54f1185b0ddc3978754e7120eb2a75",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantIsland_2.uasset": "bcdba0f3ff8da61dd2b151f5cc77a1563c492a7bf0df8c0007db2780a8cbf8ef",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_OriginalSail.uasset": "873ad97ab417511cc6f0fa68c510aef0b3c8bb9bb3c38a58c9c14b97bec970d6",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Geometry\\DistantCurvedSail.uasset": "781bd99834024292356a4475d3b15aaadc76c91bd4533b70eb1c420e9e60960f",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\MI_WaterBoundedShallow.uasset": "54d57f97d4964d10ef9939f2c700bc7d3b411ba951ed39efd4317f293355e1ff",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\Materials\\M_AnimeCloudDome.uasset": "153a828a56b42862a7182d8e04572c7cceee27aeff802b0366656314f023fabb",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Corner_f32c5d1608fd\\L_AnimeHarbor_Corner_P0_Rev2.umap": "5cc507a14ceddcbcff897c8acca1421fe141e468d2a4aff07cafec697644e9df",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_c528d00085b7\\SKM_HeroRev2_FirstPersonArms.uasset": "b0ad8e9d839801b7a5f4b6610ec33114a378a0ad03d9f8d12254a3d2a7df1bfa",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_c528d00085b7\\BP_HeroRev2_Integrated_c528d00085b7.uasset": "d20d711b69b5d056ed17832f302951a2d0aa0e9f5235286dbf831a8b7d2b85af",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_hair.uasset": "9f02544918b75ceeffee854785412a6b229be471d78bc22feef838cc18b87649",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_hair.uasset": "b49f5ac67921de8b7ac0f341b6042eb66ad812af424adfa54dec2ca7e3d65fda",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_body.uasset": "f527243c510e4a6ef5468d9af70907301429e0fdb4a01ccd2d447f7aa850b572",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_body_mask_SourceWidth.uasset": "ccca0f035180f192419718e05b8d97c816214064576189018cd0a43c23c7aad3",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_body.uasset": "9cf77e35f8cf75fd8f2b4f72abedab13396bad7cd180e70c051e2d6511dc277c",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_face_mask_1_SourceWidth.uasset": "6fdc205c95884fa7ea5f86fdb79c59529c04df06aef251a883f6f69af0ce185a",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_face.uasset": "17b461ba9f9df59af323e9c3d3e2f8ac1e9b8eb6187b3bfc8bdb17c668f317d8",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_option.uasset": "c6787f525c53bcef277af61235de52d6fe99260b8b753f8d859a1bf62dd3b4a5",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Textures\\T_Selestia_costume.uasset": "fcecacaaf4d3a97965f4200e7d0c24929be7053ab99966ab0b28762b7121c9c7",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\Materials\\M_SourceOutline_costume.uasset": "2a079299f31beba77fb26b6675a0c465a203f24b8285879ac8eab266ee5510ce",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroRev2\\Review_f3ca1eb14d12\\BP_HeroSourceOutline_f3ca1eb14d12.uasset": "7cc98ff6da86c89c1df170eacfad1680fe99f2c96683f54e46dfbd46573a0b20",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\SK_Selestia_Warp.uasset": "9a9d8cdfd8b839596a3bacfc4fda69e6c30f30d763ab550cdded4c21d010245c",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\SKM_Selestia_Warp.uasset": "bf1ca6f9a245cd6a1abcaf2fe309930e7ecbd9684d62764d3a63eb0a213a1432",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\Loops\\Run_WarpLoop.uasset": "8b4967e97337c65947a3f4232fa65f0372034dc21cb45c5e351e03a9227455d9",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\Loops\\Sprint_WarpLoop.uasset": "3c64909bd3896b96cd6b67a16a482fefa5b7ffed783268bc1b64ce33b7258030",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\Loops\\Walk_WarpLoop.uasset": "eb8473c52321d42a1a0106fadd4b78e8a1ab0481dea9257bb42becb178e729c3",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\BS_Selestia_GASMotion.uasset": "1d90d87d3c1f3297edfc7f0056308f409f028311b2a4e34e66da7bd2193e9ab8",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_1d6685a10359\\ABP_Selestia_GASMotion.uasset": "f3fea3494971587ea4b6462be2ed450b9091058abec587d3932a57261883b92b",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Hover.uasset": "b946281ce054afa1d042f14094d913a9ebacc199cfba71a005a6c52fdfac9691",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Forward.uasset": "6d95d80a207a78fd11b550b092e3eb87134b638c3e1e95c77c8c3f46a6cbd3c6",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Boost.uasset": "ac431a63e2e104c0c55874b9c3091eb75a07b85f7178c1ad1ba1208b7f4b7943",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Ascending.uasset": "8922dbc6f69ce38b3f7847ee20f2cf2cc6b32c76272f5b5ff2a08174d63e7133",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\FlightPoses\\A_Flight_Descending.uasset": "9ba86765afaab0a7b2acc5b454f6d96459229ab0319e52ff51909099fe128cfa",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\Animation\\GASMotion\\Batch_0cab55de7f13\\ABP_Selestia_GASFlight.uasset": "a52442e39e00f233284591040f55c6bf2b712b5f91d574dec00657fb87c8c7f4",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\M_OriginalFlightLight.uasset": "7084e746a88fb9614e9ba25e420cda2a595f603ac8f054fa22ac76bce6eb2db6",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\SM_OriginalLightFeather.uasset": "15bf7ea9c1447f8b19d95bf042dbd11d675ebb7da2994f5a7d3ba628bfeebf1f",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\SM_OriginalLightRibbon.uasset": "2a09348c6ab9e2fdd639c541b615697a40f10f547ba69dfa2828c83dd9af9d4d",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\FlightVisual\\Batch_ddf92889af43\\SM_OriginalLightRune.uasset": "1647b84bfabc66b598466522f454d1374d0e826f35ff6777482aad5e76700ee0",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\M_OriginalHaloGlow.uasset": "0a6505f1ad5cc7daf459d7be21f70bc1fb86a18582fc406bb154eda2cc602156",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main.uasset": "db814be193078846dc17341328257136d70bfd76ecdd45b6e4f5a7b0122410e8",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_sub1.uasset": "a8c79e0255a8afcaafcb034bba8ef28734196f99e598280507622cf9691651a5",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_sub2.uasset": "13afb06d370e04c96eeb41a36be53f2ce2b80a72489feb1bcf7c403f8a599656",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_rhombus.uasset": "778c953c852bd995776289ddf86023de10dab44df3fffbdc122267c7e774bc90",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_ring.uasset": "e0d54dace114109e39e00cd70cfe14b10620391d0519c3cf28b03d2d1cecf646",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_sphere.uasset": "c2095a7e4567f418efa1846bfe45f0610987d5cde9f47e6d6dc3e90ebb7b2017",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HaloRev2\\Batch_021165c5e9cf\\SM_HaloSource_Halo_main_rhombus_sub.uasset": "91770872e8f704f9c7d1ce91afb078fbde99710613baabf6aa37b71abb7b23e4",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\HeroSelestia\\BP_M5VS2_SelestiaGameMode.uasset": "6399e69ddbec0babb2c1d01470541ef0b21f7535f21ff0da9841ffe9a7d7eac7",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_0c82df2352d6\\L_CornerRevTwoReview.umap": "3271311731efa2a604936c24c6ab20cf61672f2341b207b142924711910722a5",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_0c82df2352d6\\BP_ReviewGameMode.uasset": "727af92c822cfa1a49dfffa6cf57391c995bdaf5197538654615292faf2499ff",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_cea410ab0131\\L_CornerRevTwoReview.umap": "2facd1ebc943f0477a77e44002f0bb385a01bcf28287f95c21d38e03b4e9cf4d",
+    "D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS2\\WorldRev2\\Review_cea410ab0131\\BP_ReviewGameMode.uasset": "9488ae5633d75d3c247d19cfa112ed5d7d7c64a9a3508f7e32e09cd3b5e94a52"
+  },
+  "blueprint": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_02d1d3e6d567/BP_FlightPosePolish",
+  "scope": "Existing four-time rendered review fixtures, selected saved hair/cloth/halo/flight-pose hero. No material/time/camera policy changes. Runtime NOT_RUN.",
+  "changed_sources": []
+}

@@ -1,0 +1,266 @@
+{
+  "source_launch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145820_069_e578baa7_flight_demo_r5_game\\launch.json",
+  "source_result": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\20260925_145820_069_e578baa7_flight_demo_r5_game\\FlightDemo_20260925_145850_D565D04C\\flight_demo.json",
+  "runtime": "PASS_ENGINE_INPUT_ONLY",
+  "stop_latched": false,
+  "stages": {
+    "GroundHold": {
+      "samples": 13,
+      "eligible_third_person_samples": 0,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1
+      ],
+      "median_degrees": {}
+    },
+    "NormalFKeyTakeoff": {
+      "samples": 1,
+      "eligible_third_person_samples": 0,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1
+      ],
+      "median_degrees": {}
+    },
+    "SpaceAscend30m": {
+      "samples": 47,
+      "eligible_third_person_samples": 47,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        0,
+        4
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 22.168541816093477,
+        "knee_bend_deg_R": 48.07164192335638,
+        "elbow_bend_deg_L": 33.961690875691104,
+        "elbow_bend_deg_R": 32.94166329012291
+      }
+    },
+    "Hover": {
+      "samples": 20,
+      "eligible_third_person_samples": 20,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        4
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 22.148271119950728,
+        "knee_bend_deg_R": 47.216769663754704,
+        "elbow_bend_deg_L": 29.951459941881268,
+        "elbow_bend_deg_R": 28.273286892957415
+      }
+    },
+    "VFirstPerson": {
+      "samples": 16,
+      "eligible_third_person_samples": 1,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 20.598280543829343,
+        "knee_bend_deg_R": 48.55387506056643,
+        "elbow_bend_deg_L": 29.634060462899868,
+        "elbow_bend_deg_R": 27.903978189209344
+      }
+    },
+    "VThirdPerson": {
+      "samples": 7,
+      "eligible_third_person_samples": 6,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 22.72566506858823,
+        "knee_bend_deg_R": 46.37674386972608,
+        "elbow_bend_deg_L": 30.068344339133333,
+        "elbow_bend_deg_R": 28.411439616077548
+      }
+    },
+    "MouseTangentAlign": {
+      "samples": 4,
+      "eligible_third_person_samples": 4,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 23.076625535557934,
+        "knee_bend_deg_R": 46.40729547754161,
+        "elbow_bend_deg_L": 30.13852742431785,
+        "elbow_bend_deg_R": 28.49487088436539
+      }
+    },
+    "WMouseWindmillOrbit": {
+      "samples": 85,
+      "eligible_third_person_samples": 85,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        2
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 21.68591525094874,
+        "knee_bend_deg_R": 47.61857174700433,
+        "elbow_bend_deg_L": 29.063890140270633,
+        "elbow_bend_deg_R": 26.24468923568267
+      }
+    },
+    "DiveAlign": {
+      "samples": 11,
+      "eligible_third_person_samples": 11,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        2
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 22.578894096727954,
+        "knee_bend_deg_R": 46.84220584999903,
+        "elbow_bend_deg_L": 30.035795960389482,
+        "elbow_bend_deg_R": 28.375333882395175
+      }
+    },
+    "ShiftDive": {
+      "samples": 11,
+      "eligible_third_person_samples": 11,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        3
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 15.534119756120102,
+        "knee_bend_deg_R": 25.48371894755614,
+        "elbow_bend_deg_L": 27.57936933171068,
+        "elbow_bend_deg_R": 23.846380244958144
+      }
+    },
+    "ShiftPullUp": {
+      "samples": 12,
+      "eligible_third_person_samples": 12,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        3
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 12.708094422635783,
+        "knee_bend_deg_R": 27.70451294179277,
+        "elbow_bend_deg_L": 27.340269892831927,
+        "elbow_bend_deg_R": 23.490849988122683
+      }
+    },
+    "ReleaseAirBrake": {
+      "samples": 12,
+      "eligible_third_person_samples": 12,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        3,
+        4
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 22.832591339588163,
+        "knee_bend_deg_R": 46.293526773682316,
+        "elbow_bend_deg_L": 32.0955415906121,
+        "elbow_bend_deg_R": 30.55388963671006
+      }
+    },
+    "ReturnAlign": {
+      "samples": 22,
+      "eligible_third_person_samples": 22,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 21.965953847302195,
+        "knee_bend_deg_R": 47.37576978967103,
+        "elbow_bend_deg_L": 29.91427583297149,
+        "elbow_bend_deg_R": 28.22986419949382
+      }
+    },
+    "ReturnGroundXY": {
+      "samples": 52,
+      "eligible_third_person_samples": 52,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        2
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 21.8656047701268,
+        "knee_bend_deg_R": 47.46453667220036,
+        "elbow_bend_deg_L": 29.067251122775613,
+        "elbow_bend_deg_R": 26.25063703214824
+      }
+    },
+    "NormalFKeyLand": {
+      "samples": 58,
+      "eligible_third_person_samples": 58,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        5
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 21.419482228458854,
+        "knee_bend_deg_R": 47.85250855207474,
+        "elbow_bend_deg_L": 29.82566428626657,
+        "elbow_bend_deg_R": 28.644541609013338
+      }
+    },
+    "GroundedHold": {
+      "samples": 13,
+      "eligible_third_person_samples": 6,
+      "actual_instances": [
+        "/Game/HarborCity/M5VS2/FlightDemoR5/Run_ecda03921645/L_FlightDemoR5.L_FlightDemoR5:PersistentLevel.BP_FlightPosePolish_C_0.CharacterMesh0.ABP_FlightPosePolish_C_0"
+      ],
+      "pose_indices": [
+        1,
+        6
+      ],
+      "median_degrees": {
+        "knee_bend_deg_L": 79.79999383053575,
+        "knee_bend_deg_R": 74.71114667072887,
+        "elbow_bend_deg_L": 30.98722537116175,
+        "elbow_bend_deg_R": 30.263976492068807
+      }
+    }
+  },
+  "status": "PASS_EVALUATED_HOVER_JOINTS_ONLY",
+  "scope": "Read actual evaluated sockets and actual anim-instance flags. This is not art, cloth-coverage, OS-input or packaged acceptance."
+}

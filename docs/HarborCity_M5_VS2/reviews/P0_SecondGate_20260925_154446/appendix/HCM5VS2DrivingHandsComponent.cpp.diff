@@ -1,0 +1,54 @@
+--- D:\科研学习\codex学习\docs\HarborCity_M5_VS2\source_snapshots\resume_20260925_121107\HCM5VS2DrivingHandsComponent.cpp
++++ D:\科研学习\codex学习\HarborCity\Source\HarborCity\M5VS2\HCM5VS2DrivingHandsComponent.cpp
+@@ -171,13 +171,15 @@
+         if(T>=1)Regripping=INDEX_NONE;
+     }
+     FQuat WristTargetWorld[2];
+-    for(int32 Side=0;Side<2;++Side)
+-    {
+-        const double Theta=FMath::DegreesToRadians(WheelLocalAngle[Side]);const FVector Radial(0,FMath::Sin(Theta),FMath::Cos(Theta));
++    auto GripTarget=[&](int32 Side,double Seat,double LiftAmount,FQuat& Rotation,FVector& Contact)
++    {
++        const double LocalAngle=WheelAngle+Seat;
++        const double Theta=FMath::DegreesToRadians(LocalAngle);const FVector Radial(0,FMath::Sin(Theta),FMath::Cos(Theta));
+         const FVector Axis=WheelWorld.GetUnitAxis(EAxis::X);const FVector Tangent=WheelWorld.TransformVectorNoScale(FVector::CrossProduct(FVector::ForwardVector,Radial)).GetSafeNormal();
+-        const FVector ThumbDirection=Tangent*(Side==0?-1.f:1.f);WristTargetWorld[Side]=(FRotationMatrix::MakeFromXY(Axis,ThumbDirection).ToQuat()*PalmFrame[Side].Inverse()).GetNormalized();
+-        TargetContactWorld[Side]=WheelWorld.TransformPosition(RimPoint(WheelLocalAngle[Side],Lift[Side]));
+-    }
++        const FVector ThumbDirection=Tangent*(Side==0?-1.f:1.f);Rotation=(FRotationMatrix::MakeFromXY(Axis,ThumbDirection).ToQuat()*PalmFrame[Side].Inverse()).GetNormalized();
++        Contact=WheelWorld.TransformPosition(RimPoint(LocalAngle,LiftAmount));
++    };
++    for(int32 Side=0;Side<2;++Side)GripTarget(Side,SeatAngle[Side],Lift[Side],WristTargetWorld[Side],TargetContactWorld[Side]);
+     // Fit one fixed modest seated shoulder lean from actual limb reach. Never
+     // stretch bones or animate the camera/seat. 15cm is a rejection bound, not
+     // permission to invent a body proportion when the fit fails.
+@@ -198,6 +200,29 @@
+         if(!Found)return Fail(TEXT("Original arms cannot reach measured wheel within bounded seated shoulder fit; no stretching fallback"));bFitted=true;
+     }
+     const FTransform Mount=MountFor(FittedShoulderForwardCm);Display->SetWorldTransform(Mount);
++    // The rim sector is limited by this frame's real arm reach, not a fixed
++    // angular limit that can send the wrist beyond an unstretched arm. Keep the
++    // supporting hand on the rim; release/regrip before running out of reach.
++    for(int32 Side=0;Side<2;++Side)
++    {
++        const FVector Shoulder=Display->GetSocketTransform(Upper[Side],RTS_Component).GetLocation();
++        const FVector Elbow=Display->GetSocketTransform(Lower[Side],RTS_Component).GetLocation();
++        const FVector Wrist=Display->GetSocketTransform(Hand[Side],RTS_Component).GetLocation();
++        const double Reach=(FVector::Distance(Shoulder,Elbow)+FVector::Distance(Elbow,Wrist))*.985;
++        auto Reachable=[&](double Seat)
++        {
++            FQuat Rotation;FVector Contact;GripTarget(Side,Seat,Lift[Side],Rotation,Contact);
++            const FVector Target=Mount.InverseTransformPosition(Contact-Rotation.RotateVector(PalmContact[Side]*Scale));
++            return FVector::Distance(Shoulder,Target)<=Reach;
++        };
++        if(Reachable(SeatAngle[Side]))continue;
++        if(!Reachable(Home[Side]))return Fail(TEXT("Seated home grip outside actual unstretched arm reach"));
++        double Inside=Home[Side],Outside=SeatAngle[Side];
++        for(int32 I=0;I<10;++I){const double Mid=(Inside+Outside)*.5;if(Reachable(Mid))Inside=Mid;else Outside=Mid;}
++        SeatAngle[Side]=Inside;WheelLocalAngle[Side]=WheelAngle+Inside;Sliding[Side]=true;
++        GripTarget(Side,Inside,Lift[Side],WristTargetWorld[Side],TargetContactWorld[Side]);
++        if(Regripping==INDEX_NONE){Regripping=Side;RegripAge=0;RegripFrom=float(Inside);++RegripCount;}
++    }
+     for(int32 Side=0;Side<2;++Side)
+     {
+         const int32 UI=Display->GetBoneIndex(Upper[Side]),LI=Display->GetBoneIndex(Lower[Side]),HI=Display->GetBoneIndex(Hand[Side]);const FName Parent=Display->GetParentBone(Upper[Side]);

@@ -1,0 +1,515 @@
+{
+  "status": "PASS_LOCAL_LINK_AND_SOURCE_BYTES_ONLY",
+  "local_links": [
+    {
+      "tag": "a",
+      "url": "media/6b7fa84a2b_00_Afternoon_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\6b7fa84a2b_00_Afternoon_HeroPortrait.png",
+      "bytes": 2897052
+    },
+    {
+      "tag": "img",
+      "url": "media/6b7fa84a2b_00_Afternoon_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\6b7fa84a2b_00_Afternoon_HeroPortrait.png",
+      "bytes": 2897052
+    },
+    {
+      "tag": "a",
+      "url": "media/6ca5509ca0_01_Dusk_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\6ca5509ca0_01_Dusk_HeroPortrait.png",
+      "bytes": 2600712
+    },
+    {
+      "tag": "img",
+      "url": "media/6ca5509ca0_01_Dusk_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\6ca5509ca0_01_Dusk_HeroPortrait.png",
+      "bytes": 2600712
+    },
+    {
+      "tag": "a",
+      "url": "media/a1c73da0d6_02_Night_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\a1c73da0d6_02_Night_HeroPortrait.png",
+      "bytes": 2441098
+    },
+    {
+      "tag": "img",
+      "url": "media/a1c73da0d6_02_Night_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\a1c73da0d6_02_Night_HeroPortrait.png",
+      "bytes": 2441098
+    },
+    {
+      "tag": "a",
+      "url": "media/ac31748e22_03_Interior_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ac31748e22_03_Interior_HeroPortrait.png",
+      "bytes": 2711676
+    },
+    {
+      "tag": "img",
+      "url": "media/ac31748e22_03_Interior_HeroPortrait.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ac31748e22_03_Interior_HeroPortrait.png",
+      "bytes": 2711676
+    },
+    {
+      "tag": "a",
+      "url": "media/4b1750c48b_00_Afternoon_HeroFullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\4b1750c48b_00_Afternoon_HeroFullBody.png",
+      "bytes": 3069067
+    },
+    {
+      "tag": "img",
+      "url": "media/4b1750c48b_00_Afternoon_HeroFullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\4b1750c48b_00_Afternoon_HeroFullBody.png",
+      "bytes": 3069067
+    },
+    {
+      "tag": "a",
+      "url": "media/60231fdf1d_01_ActualParkLeft.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\60231fdf1d_01_ActualParkLeft.png",
+      "bytes": 2669096
+    },
+    {
+      "tag": "img",
+      "url": "media/60231fdf1d_01_ActualParkLeft.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\60231fdf1d_01_ActualParkLeft.png",
+      "bytes": 2669096
+    },
+    {
+      "tag": "a",
+      "url": "media/31b2002c6e_01_ActualParkLeft.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\31b2002c6e_01_ActualParkLeft.png",
+      "bytes": 1907741
+    },
+    {
+      "tag": "img",
+      "url": "media/31b2002c6e_01_ActualParkLeft.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\31b2002c6e_01_ActualParkLeft.png",
+      "bytes": 1907741
+    },
+    {
+      "tag": "a",
+      "url": "media/ab3c08da14_07_FootUnarmedLow.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ab3c08da14_07_FootUnarmedLow.png",
+      "bytes": 2953999
+    },
+    {
+      "tag": "img",
+      "url": "media/ab3c08da14_07_FootUnarmedLow.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ab3c08da14_07_FootUnarmedLow.png",
+      "bytes": 2953999
+    },
+    {
+      "tag": "a",
+      "url": "media/ccb84a44fd_08_FootPistolLow.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ccb84a44fd_08_FootPistolLow.png",
+      "bytes": 3136777
+    },
+    {
+      "tag": "img",
+      "url": "media/ccb84a44fd_08_FootPistolLow.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ccb84a44fd_08_FootPistolLow.png",
+      "bytes": 3136777
+    },
+    {
+      "tag": "a",
+      "url": "media/7362f998e4_00_Q_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\7362f998e4_00_Q_Face_Neutral.png",
+      "bytes": 1889244
+    },
+    {
+      "tag": "img",
+      "url": "media/7362f998e4_00_Q_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\7362f998e4_00_Q_Face_Neutral.png",
+      "bytes": 1889244
+    },
+    {
+      "tag": "a",
+      "url": "media/27663f32db_01_Q_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\27663f32db_01_Q_FullBody.png",
+      "bytes": 2019834
+    },
+    {
+      "tag": "img",
+      "url": "media/27663f32db_01_Q_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\27663f32db_01_Q_FullBody.png",
+      "bytes": 2019834
+    },
+    {
+      "tag": "a",
+      "url": "media/faf6df40e3_02_R_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\faf6df40e3_02_R_Face_Neutral.png",
+      "bytes": 1820482
+    },
+    {
+      "tag": "img",
+      "url": "media/faf6df40e3_02_R_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\faf6df40e3_02_R_Face_Neutral.png",
+      "bytes": 1820482
+    },
+    {
+      "tag": "a",
+      "url": "media/5a8572e8a6_03_R_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\5a8572e8a6_03_R_FullBody.png",
+      "bytes": 1879476
+    },
+    {
+      "tag": "img",
+      "url": "media/5a8572e8a6_03_R_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\5a8572e8a6_03_R_FullBody.png",
+      "bytes": 1879476
+    },
+    {
+      "tag": "a",
+      "url": "media/0e42ca19a5_04_J_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\0e42ca19a5_04_J_Face_Neutral.png",
+      "bytes": 1850111
+    },
+    {
+      "tag": "img",
+      "url": "media/0e42ca19a5_04_J_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\0e42ca19a5_04_J_Face_Neutral.png",
+      "bytes": 1850111
+    },
+    {
+      "tag": "a",
+      "url": "media/ffad7adf4e_05_J_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ffad7adf4e_05_J_FullBody.png",
+      "bytes": 1990850
+    },
+    {
+      "tag": "img",
+      "url": "media/ffad7adf4e_05_J_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ffad7adf4e_05_J_FullBody.png",
+      "bytes": 1990850
+    },
+    {
+      "tag": "a",
+      "url": "media/0a8988e61b_06_T_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\0a8988e61b_06_T_Face_Neutral.png",
+      "bytes": 1689207
+    },
+    {
+      "tag": "img",
+      "url": "media/0a8988e61b_06_T_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\0a8988e61b_06_T_Face_Neutral.png",
+      "bytes": 1689207
+    },
+    {
+      "tag": "a",
+      "url": "media/8f9f0f6f8a_07_T_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\8f9f0f6f8a_07_T_FullBody.png",
+      "bytes": 1849723
+    },
+    {
+      "tag": "img",
+      "url": "media/8f9f0f6f8a_07_T_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\8f9f0f6f8a_07_T_FullBody.png",
+      "bytes": 1849723
+    },
+    {
+      "tag": "a",
+      "url": "media/9d850e3d84_08_U_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\9d850e3d84_08_U_Face_Neutral.png",
+      "bytes": 1914422
+    },
+    {
+      "tag": "img",
+      "url": "media/9d850e3d84_08_U_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\9d850e3d84_08_U_Face_Neutral.png",
+      "bytes": 1914422
+    },
+    {
+      "tag": "a",
+      "url": "media/67f0cf4f9c_09_U_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\67f0cf4f9c_09_U_FullBody.png",
+      "bytes": 1846126
+    },
+    {
+      "tag": "img",
+      "url": "media/67f0cf4f9c_09_U_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\67f0cf4f9c_09_U_FullBody.png",
+      "bytes": 1846126
+    },
+    {
+      "tag": "a",
+      "url": "media/da7c1a61d4_10_V_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\da7c1a61d4_10_V_Face_Neutral.png",
+      "bytes": 1760391
+    },
+    {
+      "tag": "img",
+      "url": "media/da7c1a61d4_10_V_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\da7c1a61d4_10_V_Face_Neutral.png",
+      "bytes": 1760391
+    },
+    {
+      "tag": "a",
+      "url": "media/8c69924ac5_11_V_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\8c69924ac5_11_V_FullBody.png",
+      "bytes": 1864419
+    },
+    {
+      "tag": "img",
+      "url": "media/8c69924ac5_11_V_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\8c69924ac5_11_V_FullBody.png",
+      "bytes": 1864419
+    },
+    {
+      "tag": "a",
+      "url": "media/a94576e8f0_12_W_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\a94576e8f0_12_W_Face_Neutral.png",
+      "bytes": 1886347
+    },
+    {
+      "tag": "img",
+      "url": "media/a94576e8f0_12_W_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\a94576e8f0_12_W_Face_Neutral.png",
+      "bytes": 1886347
+    },
+    {
+      "tag": "a",
+      "url": "media/ec04ef32e2_13_W_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ec04ef32e2_13_W_FullBody.png",
+      "bytes": 1988634
+    },
+    {
+      "tag": "img",
+      "url": "media/ec04ef32e2_13_W_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ec04ef32e2_13_W_FullBody.png",
+      "bytes": 1988634
+    },
+    {
+      "tag": "a",
+      "url": "media/6ffdee3c03_14_X_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\6ffdee3c03_14_X_Face_Neutral.png",
+      "bytes": 1774258
+    },
+    {
+      "tag": "img",
+      "url": "media/6ffdee3c03_14_X_Face_Neutral.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\6ffdee3c03_14_X_Face_Neutral.png",
+      "bytes": 1774258
+    },
+    {
+      "tag": "a",
+      "url": "media/15dce38806_15_X_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\15dce38806_15_X_FullBody.png",
+      "bytes": 1856700
+    },
+    {
+      "tag": "img",
+      "url": "media/15dce38806_15_X_FullBody.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\15dce38806_15_X_FullBody.png",
+      "bytes": 1856700
+    },
+    {
+      "tag": "a",
+      "url": "media/35488bf7f3_00_Q_Harbor_Original.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\35488bf7f3_00_Q_Harbor_Original.png",
+      "bytes": 3019173
+    },
+    {
+      "tag": "img",
+      "url": "media/35488bf7f3_00_Q_Harbor_Original.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\35488bf7f3_00_Q_Harbor_Original.png",
+      "bytes": 3019173
+    },
+    {
+      "tag": "a",
+      "url": "media/02a4ba9973_01_Q_Harbor_WarmSkinCandidate.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\02a4ba9973_01_Q_Harbor_WarmSkinCandidate.png",
+      "bytes": 3023098
+    },
+    {
+      "tag": "img",
+      "url": "media/02a4ba9973_01_Q_Harbor_WarmSkinCandidate.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\02a4ba9973_01_Q_Harbor_WarmSkinCandidate.png",
+      "bytes": 3023098
+    },
+    {
+      "tag": "a",
+      "url": "media/2f8f88fc21_00_Q_Vendor_Context_0.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\2f8f88fc21_00_Q_Vendor_Context_0.png",
+      "bytes": 2867712
+    },
+    {
+      "tag": "img",
+      "url": "media/2f8f88fc21_00_Q_Vendor_Context_0.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\2f8f88fc21_00_Q_Vendor_Context_0.png",
+      "bytes": 2867712
+    },
+    {
+      "tag": "a",
+      "url": "media/8df94920ec_02_R_SeaGaze_Context_0.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\8df94920ec_02_R_SeaGaze_Context_0.png",
+      "bytes": 3098539
+    },
+    {
+      "tag": "img",
+      "url": "media/8df94920ec_02_R_SeaGaze_Context_0.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\8df94920ec_02_R_SeaGaze_Context_0.png",
+      "bytes": 3098539
+    },
+    {
+      "tag": "a",
+      "url": "media/bdae5203a0_04_T_Chat_Context_0.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\bdae5203a0_04_T_Chat_Context_0.png",
+      "bytes": 3093184
+    },
+    {
+      "tag": "img",
+      "url": "media/bdae5203a0_04_T_Chat_Context_0.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\bdae5203a0_04_T_Chat_Context_0.png",
+      "bytes": 3093184
+    },
+    {
+      "tag": "a",
+      "url": "media/3293bd57ca_00_M5VS2_J_LivingDown_Stable.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\3293bd57ca_00_M5VS2_J_LivingDown_Stable.png",
+      "bytes": 1514934
+    },
+    {
+      "tag": "img",
+      "url": "media/3293bd57ca_00_M5VS2_J_LivingDown_Stable.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\3293bd57ca_00_M5VS2_J_LivingDown_Stable.png",
+      "bytes": 1514934
+    },
+    {
+      "tag": "a",
+      "url": "media/b18e34451b_04_M5VS2_J_Death_After5Seconds.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\b18e34451b_04_M5VS2_J_Death_After5Seconds.png",
+      "bytes": 1738367
+    },
+    {
+      "tag": "img",
+      "url": "media/b18e34451b_04_M5VS2_J_Death_After5Seconds.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\b18e34451b_04_M5VS2_J_Death_After5Seconds.png",
+      "bytes": 1738367
+    },
+    {
+      "tag": "a",
+      "url": "media/001bbf4eb5_00_Afternoon_SouthStreet.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\001bbf4eb5_00_Afternoon_SouthStreet.png",
+      "bytes": 2980036
+    },
+    {
+      "tag": "img",
+      "url": "media/001bbf4eb5_00_Afternoon_SouthStreet.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\001bbf4eb5_00_Afternoon_SouthStreet.png",
+      "bytes": 2980036
+    },
+    {
+      "tag": "a",
+      "url": "media/ae21a888e5_01_Afternoon_Promenade.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ae21a888e5_01_Afternoon_Promenade.png",
+      "bytes": 3094162
+    },
+    {
+      "tag": "img",
+      "url": "media/ae21a888e5_01_Afternoon_Promenade.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\ae21a888e5_01_Afternoon_Promenade.png",
+      "bytes": 3094162
+    },
+    {
+      "tag": "a",
+      "url": "media/45ef653eed_02_Dusk_SouthStreet.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\45ef653eed_02_Dusk_SouthStreet.png",
+      "bytes": 2618710
+    },
+    {
+      "tag": "img",
+      "url": "media/45ef653eed_02_Dusk_SouthStreet.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\45ef653eed_02_Dusk_SouthStreet.png",
+      "bytes": 2618710
+    },
+    {
+      "tag": "a",
+      "url": "media/88ae92a4e0_03_Dusk_Promenade.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\88ae92a4e0_03_Dusk_Promenade.png",
+      "bytes": 2618725
+    },
+    {
+      "tag": "img",
+      "url": "media/88ae92a4e0_03_Dusk_Promenade.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\88ae92a4e0_03_Dusk_Promenade.png",
+      "bytes": 2618725
+    },
+    {
+      "tag": "a",
+      "url": "media/d20e689708_04_Night_SouthStreet.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\d20e689708_04_Night_SouthStreet.png",
+      "bytes": 2314035
+    },
+    {
+      "tag": "img",
+      "url": "media/d20e689708_04_Night_SouthStreet.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\d20e689708_04_Night_SouthStreet.png",
+      "bytes": 2314035
+    },
+    {
+      "tag": "a",
+      "url": "media/4e3641adb0_05_Night_Promenade.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\4e3641adb0_05_Night_Promenade.png",
+      "bytes": 1944493
+    },
+    {
+      "tag": "img",
+      "url": "media/4e3641adb0_05_Night_Promenade.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\4e3641adb0_05_Night_Promenade.png",
+      "bytes": 1944493
+    },
+    {
+      "tag": "a",
+      "url": "media/59e3cbd514_06_Afternoon_Air50m.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\59e3cbd514_06_Afternoon_Air50m.png",
+      "bytes": 3455690
+    },
+    {
+      "tag": "img",
+      "url": "media/59e3cbd514_06_Afternoon_Air50m.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\59e3cbd514_06_Afternoon_Air50m.png",
+      "bytes": 3455690
+    },
+    {
+      "tag": "a",
+      "url": "media/3eb4baa756_B_JapanVillage_media1_browser.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\3eb4baa756_B_JapanVillage_media1_browser.png",
+      "bytes": 138376
+    },
+    {
+      "tag": "img",
+      "url": "media/3eb4baa756_B_JapanVillage_media1_browser.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\3eb4baa756_B_JapanVillage_media1_browser.png",
+      "bytes": 138376
+    },
+    {
+      "tag": "a",
+      "url": "media/3c86816b0d_C_JapanCountryside_media2_browser.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\3c86816b0d_C_JapanCountryside_media2_browser.png",
+      "bytes": 119538
+    },
+    {
+      "tag": "img",
+      "url": "media/3c86816b0d_C_JapanCountryside_media2_browser.png",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\media\\3c86816b0d_C_JapanCountryside_media2_browser.png",
+      "bytes": 119538
+    },
+    {
+      "tag": "video",
+      "url": "../../video_encoding/20260925_145345_740249_d54629dc/M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\video_encoding\\20260925_145345_740249_d54629dc\\M5_VS2_R5_FLIGHT_DIAGNOSTIC.mp4",
+      "bytes": 39337620
+    },
+    {
+      "tag": "a",
+      "url": "GATE2_EVIDENCE.json",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS2\\reviews\\P0_SecondGate_20260925_154446\\GATE2_EVIDENCE.json",
+      "bytes": 83640
+    }
+  ],
+  "external_links_not_refetched": [
+    "https://www.fab.com/listings/107824af-f138-4caf-b805-1b9bc6b4eabf",
+    "https://www.fab.com/listings/bbbf727f-b4c7-4f9f-b4ea-4e2b849904f6"
+  ],
+  "browser_visual": "NOT_RUN",
+  "original_media_bytes_retained": true
+}
