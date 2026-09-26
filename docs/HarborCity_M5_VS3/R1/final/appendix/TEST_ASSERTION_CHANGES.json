@@ -1,0 +1,41 @@
+{
+  "scope": "Updated stale assertions retain the original checks; not evidence that the updated run passed.",
+  "changes": [
+    {
+      "file": "Source/HarborCity/M1/HCM1TestM5.cpp",
+      "check": "Music activation after reopen",
+      "before": "legacy mode integer including combat mode=3",
+      "after": "when private playlist enabled, 1..2 active channels must actually reference its two private assets; otherwise retain legacy mode check",
+      "reason": "private playlist intentionally no longer switches to the three legacy synthesized tracks"
+    },
+    {
+      "file": "Source/HarborCity/M1/HCM1TestM5.cpp",
+      "check": "Completed encounter actors",
+      "before": "expects actors removed after completed battle to exist",
+      "after": "retain completed-victory count and reject any enabled living encounter actor; absence allowed only in completed encounter",
+      "reason": "completed encounter removal is authored world behavior"
+    },
+    {
+      "file": "Source/HarborCity/M1/HCM1TestM5.cpp",
+      "check": "reopened town NPC identity",
+      "before": "M5_Citizen01",
+      "after": "VS2_Citizen00 only in VS3 town; original map retains original stable ID",
+      "reason": "replacement town uses its existing stable ID"
+    },
+    {
+      "file": "Source/HarborCity/M1/HCM1TestM5VS3.cpp",
+      "check": "magic cost",
+      "before": "expects Spell1/2 selection key to spend mana immediately",
+      "after": "perform Attack hold/release before cost/cooldown measurement; full-health healing must reject without spending",
+      "reason": "approved R1 input contract moved offensive spell release to mouse completion"
+    },
+    {
+      "file": "Source/HarborCity/M1/HCM1TestM5VS3.cpp",
+      "check": "three side NPC reachability",
+      "before": "first collision-clear point at 180cm, without checking furniture occlusion",
+      "after": "outside-range clear-sight fixture at 285cm then actual Move input; report actual line hit, position and distance",
+      "reason": "distinguish obstructed fixture from true interaction failure; does not relax gameplay reach/occlusion"
+    }
+  ],
+  "passenger": "Old three failed approaches preserved in PASSENGER_PRIOR_ATTEMPTS.json. Safe-door/nav mismatch and teleport restoration remain unresolved. No new boarding animation claimed."
+}

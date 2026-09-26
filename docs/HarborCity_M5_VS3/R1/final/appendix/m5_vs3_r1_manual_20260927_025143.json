@@ -1,0 +1,103 @@
+{
+  "status": "COMPLETE",
+  "mode": "m5_vs3_r1_manual",
+  "duration_seconds": 158.24229280278087,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.2237191013991833
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_manual_20260927_025143",
+      "elapsed_seconds": 3.224524199962616
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.2340104021131992
+    }
+  ],
+  "failures": 0,
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_manual_20260927_025143\\User\\Saved\\M5Tests\\20260927_025147_m5_vs3_r1_manual\\results.json",
+  "launch": {
+    "status": "RUNNING",
+    "pid": 9660,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_023821_974_74846d4f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_manual_20260927_025143\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs3_r1_manual",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_manual_20260927_025143",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_manual_20260927_025143\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=2",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+    ],
+    "started": "2026-09-27T02:51:44.0203588+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+  },
+  "exit": {
+    "status": "EXITED",
+    "pid": 9660,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_023821_974_74846d4f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_manual_20260927_025143\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs3_r1_manual",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_manual_20260927_025143",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_manual_20260927_025143\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=2",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+    ],
+    "started": "2026-09-27T02:51:44.0203588+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+    "exit_code": 0,
+    "ended": "2026-09-27T02:54:27.1968023+08:00"
+  },
+  "memory": {
+    "private_bytes": 4777377792,
+    "working_set_bytes": 1845964800,
+    "process_peak_working_set_bytes": 1864871936,
+    "scope": "process sample every 3 seconds; not machine-wide committed memory"
+  }
+}

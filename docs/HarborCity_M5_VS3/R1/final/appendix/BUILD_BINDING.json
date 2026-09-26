@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "candidate_directory": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f",
+  "actual_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "actual_executable_sha256": "EA481A6B6922B3EEFE1E325412D233B362C608A63DFD9025E083E03707CC9D04",
+  "crypto_configuration": {
+    "status": "PASS_CONFIGURATION_ONLY",
+    "private_config_sha256": "8DCA674C1BEA1A75C80D72AA5DFCC66C5F1C6D70A0BD1A27E9DE5B5BD244F6D3",
+    "key_bytes": 32,
+    "full_asset_encryption_requested": true,
+    "pak_index_encryption_requested": true,
+    "signing_requested": false,
+    "actual_container_encryption": "NOT_RUN",
+    "no_key_extraction_test": "NOT_RUN"
+  }
+}

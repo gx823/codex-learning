@@ -1,0 +1,7 @@
+{
+  "process_id": 27488,
+  "sample_time": "2026-09-27T03:16:13.1988273+08:00",
+  "tcp_listeners": [],
+  "udp_endpoints": [],
+  "scope": "One packaged Shipping runtime sample; no OS firewall rule changed; prompt absence is not guaranteed on other machines"
+}

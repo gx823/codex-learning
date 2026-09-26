@@ -1,0 +1,162 @@
+{
+  "status": "PARTIAL_USER_REVIEW",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "full": {
+    "run": "m5_full_20260927_034351",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 5,
+    "failed": [
+      "Pickup fixture has legal curb and NPC-walkable door",
+      "Real passenger boarding on current town curb",
+      "Ride completed by normal parking/dropoff condition",
+      "Magic gun uses existing firearm damage",
+      "Spell 4 MP cost once"
+    ],
+    "data": "m5_full_20260927_034351.json",
+    "memory": {
+      "private_bytes": 5125066752,
+      "working_set_bytes": 1867444224,
+      "process_peak_working_set_bytes": 1903943680,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  "reopen": {
+    "run": "m5_reopen_20260927_035115",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 1,
+    "failed": [
+      "Both side quests survive fresh-process Load"
+    ],
+    "data": "m5_reopen_20260927_035115.json",
+    "memory": {
+      "private_bytes": 4785369088,
+      "working_set_bytes": 1865273344,
+      "process_peak_working_set_bytes": 1883987968,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  "visual": {
+    "run": "m5_vs3_r1_visual_20260927_033743",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 1,
+    "failed": [
+      "Sword hit through Attack and blade sweep"
+    ],
+    "data": "m5_vs3_r1_visual_20260927_033743.json",
+    "memory": {
+      "private_bytes": 5113761792,
+      "working_set_bytes": 1944662016,
+      "process_peak_working_set_bytes": 2026020864,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  "falls": {
+    "run": "m5_vs3_r1_falls_20260927_032019",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 12,
+    "failed": [
+      "Fall fixture starts on actual permitted stand",
+      "Heavy living knockdown via input",
+      "Heavy living recovery finishes",
+      "Fall fixture starts on actual permitted stand",
+      "Gun living knockdown via input",
+      "Gun living recovery finishes",
+      "Fall fixture starts on actual permitted stand",
+      "Magic living knockdown via input",
+      "Magic living recovery finishes",
+      "Fall fixture starts on actual permitted stand",
+      "Vehicle living knockdown via input",
+      "Vehicle living recovery finishes"
+    ],
+    "data": "m5_vs3_r1_falls_20260927_032019.json",
+    "memory": {
+      "private_bytes": 4946595840,
+      "working_set_bytes": 1893449728,
+      "process_peak_working_set_bytes": 1898610688,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  "user_acceptance": {
+    "sword": "PENDING",
+    "magic": "PENDING",
+    "wings": "PENDING",
+    "BGM": "PENDING"
+  },
+  "planned_release": "https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs3-r1-final-20260927",
+  "publication_status": "PENDING_SEPARATE_PUBLICATION_RESULT",
+  "os_input": {
+    "status": "PARTIAL",
+    "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_manual_20260927_025143",
+    "executable": "E:/GameDev/Builds/HarborCity/M5_VS3/Candidate_20260927_023821_974_74846d4f/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe",
+    "input_layer": "C @oai/sky OS keyboard, click and drag; no Action/Key injection during 150-second manual step",
+    "menu": {
+      "damage_numbers": "PASS actual button changed on to off; game readback 0 after P resume",
+      "impact_shake": "PASS actual button changed on to off; game readback 0 after P resume"
+    },
+    "mouse": {
+      "look": "PASS observed callback count 316 -> 318 -> 320 across two drags, actual control yaw/pitch changed",
+      "target_hold_switch_release": "NOT_RUN_VALID_SEQUENCE: first aim 65.128..73.031s, second 119.029..126.931s; drags arrived after 8-second automatic cancellation. No mana spent and no target selected. Not claimed as successful spell test.",
+      "manual_retest": "按1后立即按住左键，移动鼠标在两名NPC间切换，再松开，确认消耗15魔力并命中。"
+    },
+    "desktop_capture_note": "Initial two snapshots exposed an occluding app; refreshed returned game window before any input. No unrelated app was controlled. Tool screenshots are not included in public artifacts."
+  },
+  "failed_checks": [
+    {
+      "name": "Pickup fixture has legal curb and NPC-walkable door",
+      "status": "FAIL",
+      "evidence_level": "A-fixture",
+      "expected": "read-only safety queries choose A parking fixture; no condition override",
+      "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+      "elapsed_seconds": 93.7057612016797
+    },
+    {
+      "name": "Real passenger boarding on current town curb",
+      "status": "FAIL",
+      "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+      "expected": "driving, passenger attached through normal Tick",
+      "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.985 Y=-6360.924 Z=22.623 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_fade_seconds\": 1,\r\n\t\"named_post_removal_cooldown_seconds\": 60,\r\n\t\"coffee_stage\": 2,\r\n\t\"ride_stage\": 1,\r\n\t\"pickup_curb_y\": -6500,\r\n\t\"pickup_max_body_gap_cm\": 65,\r\n\t\"pickup_parallel_tolerance_degrees\": 15,\r\n\t\"actual_pickup_body_gap_cm\": 24.995580925493414,\r\n\t\"actual_body_world_min\": \"X=-5904.045 Y=-6475.004 Z=18.844\",\r\n\t\"actual_body_world_max\": \"X=-5432.459 Y=-6246.833 Z=145.079\",\r\n\t\"can_pickup_at_curb\": true,\r\n\t\"named_respawn_seconds\":\r\n\t{\r\n\t\t\"M5_Contact\": 0,\r\n\t\t\"M5_Harbor\": 0,\r\n\t\t\"M3_LinXia\": 0,\r\n\t\t\"M3_ChenBo\": 0,\r\n\t\t\"M3_ANing\": 0,\r\n\t\t\"VS2_Citizen00\": 0,\r\n\t\t\"VS2_Citizen01\": 0,\r\n\t\t\"VS2_Citizen02\": 0,\r\n\t\t\"VS2_Citizen03\": 0,\r\n\t\t\"VS2_Citizen04\": 0,\r\n\t\t\"VS2_Citizen05\": 0,\r\n\t\t\"VS2_Citizen06\": 0,\r\n\t\t\"VS2_Citizen07\": 0,\r\n\t\t\"VS2_Citizen08\": 0,\r\n\t\t\"VS2_Citizen09\": 0,\r\n\t\t\"VS2_Citizen10\": 0,\r\n\t\t\"VS2_Citizen11\": 0\r\n\t}\r\n}",
+      "elapsed_seconds": 108.27428580075502
+    },
+    {
+      "name": "Ride completed by normal parking/dropoff condition",
+      "status": "FAIL",
+      "evidence_level": "B-Action + A travel placement; not continuous route proof",
+      "expected": "Complete; no direct quest mutation",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+      "elapsed_seconds": 117.10167330130935
+    },
+    {
+      "name": "Magic gun uses existing firearm damage",
+      "status": "FAIL",
+      "evidence_level": "B-Action",
+      "expected": "Pistol damage authority",
+      "actual": "星潮剑  |  生命 100\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器",
+      "elapsed_seconds": 156.4661663994193
+    },
+    {
+      "name": "Spell 4 MP cost once",
+      "status": "FAIL",
+      "evidence_level": "B-Action",
+      "expected": "R1 bolt/wave spend on release; full-health heal rejects without charge",
+      "actual": "before 100.00 after 100.00 health 100.00 cooldown 0.00 expectedCost 25.00",
+      "elapsed_seconds": 190.51438910141587
+    },
+    {
+      "name": "Both side quests survive fresh-process Load",
+      "status": "FAIL",
+      "evidence_level": "B-Action Load + A readback",
+      "expected": "both Complete",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+      "elapsed_seconds": 8.92641520127654
+    }
+  ],
+  "recording_audio": "Latest f475d32f capture FAIL_SILENT_NATIVE_CAPTURE; review movie uses the a3893aa6 post-gate Shipping build, identical content and gameplay, recorder-only subsequent change."
+}

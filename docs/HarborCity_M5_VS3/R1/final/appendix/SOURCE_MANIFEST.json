@@ -1,0 +1,94 @@
+[
+  {
+    "path": "Source/HarborCity/M1/HCM1HUD.cpp",
+    "sha256": "d4a0c3aa4fbc7fee9a0df2bd979685b3471ef28ec8f0009356457a292a367c24"
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestM5.cpp",
+    "sha256": "fc6f95d766a117ac9a4d1d482584d42aaff4dd29ee1ee99887dd66aede093ded"
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestM5VS2.cpp",
+    "sha256": "11a99994806585bd9920e95bcb34dd2af1497483dfac007f04cf9b9ba0b86c9a"
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestM5VS3.cpp",
+    "sha256": "13eb5da0a7946f56f5c9eaac1439ce32b8aa7818673551b0b673cb9e546c30b9"
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestM5VS3R1.cpp",
+    "sha256": "3ed67a3ce7aff85bc67f5309210066ddd7ace66925518d057ae756148d147f75"
+  },
+  {
+    "path": "Source/HarborCity/M3/HCM3NPC.cpp",
+    "sha256": "88d948ee4845bf8fcc033ed78db54c8e9ab5bf395d3b7414646590d8eb01c941"
+  },
+  {
+    "path": "Source/HarborCity/M3/HCM3Recording.cpp",
+    "sha256": "d9fab38040c341ce65f2072b1ad82b8dbfb19aaf6d454cc5e47b036d8dfd185b"
+  },
+  {
+    "path": "Source/HarborCity/M4R1/HCM4R1PhysicalReactionComponent.cpp",
+    "sha256": "defac132a0ca1447068ee54396b357e21389921b14a7c4888905c266c6048ec8"
+  },
+  {
+    "path": "Source/HarborCity/M4R1/HCM4R1PhysicalReactionComponent.h",
+    "sha256": "7cc8278f43520f50407683933a22ed4839e2a88841fb8877260944a16b69cb34"
+  },
+  {
+    "path": "Source/HarborCity/M4R2/HCM4R2PresentationComponent.cpp",
+    "sha256": "67e56982836fec8f8afc3ec61e56dc4702e3555711200b349c2744fee1dee410"
+  },
+  {
+    "path": "Source/HarborCity/M5/HCM5MusicComponent.cpp",
+    "sha256": "771e2ace24382d37e0ec79b7f408b046511a0487497e9c8ceaa40b8e889ad6bb"
+  },
+  {
+    "path": "Source/HarborCity/M5VS2/HCM5VS2FlightVisualComponent.cpp",
+    "sha256": "dc5b2cfd0497653857a98c7ee1a7c39cca9e42bbcdbbfeec35ff9a5791878f2b"
+  },
+  {
+    "path": "Source/HarborCity/M5VS2/HCM5VS2FlightVisualComponent.h",
+    "sha256": "350c32f5472703d77f4b9463467efd2e9e8a65545b6dcb73ac5781b346c0cb50"
+  },
+  {
+    "path": "Source/HarborCity/M5VS2/HCM5VS2LookAnimInstance.cpp",
+    "sha256": "edadf6c9668581f7394c5e153a6332a95c385a75fff4a53cb8b75b0b77e51f48"
+  },
+  {
+    "path": "Source/HarborCity/M5VS2/HCM5VS2LookAnimInstance.h",
+    "sha256": "dca8fb6edbe22424db8e0df31527a8cf4fbe84c1e58075637dc99aaad03bbf24"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp",
+    "sha256": "b4ca03a097b480dc687e382d380489647433b3dc1463536f986bf16725d394a3"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3Abilities.h",
+    "sha256": "8ca6095ae721c7b66bd931d7b650d0dc8448e1ddf7069ba6fabf1bfbf7a0e604"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3R1Authoring.cpp",
+    "sha256": "31a6ea0e081d79de0cbf1c44ad61286f5be830475b45ce3aa1ec96f17ff8c468"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3R1PolishEditor.cpp",
+    "sha256": "a2f14d8d87dcd1620ff0adf8b7ceb7430cab9d6d6bc8958be7a6155e973c24cc"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3R1PolishEditor.h",
+    "sha256": "32a880e3266be372f540464b481a04f8c18b4a1f6b3cae73ecaa4bf1856ac296"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3TargetVisual.cpp",
+    "sha256": "c16b6b3abd78478cef744d4a9019451473c7404ae933b9e6dbf60f45ecd12c19"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3TargetVisual.h",
+    "sha256": "d088f8aa3b1f58529026b5daf70824df2ceb8125698a0d7414ab7f39230460b3"
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/SHCM5VS3SpellBar.h",
+    "sha256": "2433d536c2c0b09619bc31516f22769684a9bb356c180e1aa49fdf1b9c302288"
+  }
+]

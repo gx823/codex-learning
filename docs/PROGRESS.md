@@ -1,3 +1,5 @@
+2026-09-27 M5-VS3 R1 门后 Shipping 候选 PARTIAL：剑/魔法/羽翼已进入新包；完整回归与重开各执行一次。接送、魔导枪/护盾断言、短片剑命中和倒地仍有失败；真实鼠标完整选目标手势 NOT_RUN。公开视频有游戏音效，取自门后前一 Shipping（最终仅改录制器）；最终 EXE 新录制静音 FAIL 保留。录像改为 JPG 临时帧→验证 MP4→清理，D/E 各30GiB保护；本轮图片/视频不进Git。用户对剑、魔法、翅膀、BGM验收 PENDING，M0 PASS，无扩图、无进入VS4。见 [最终状态](HarborCity_M5_VS3/R1/final/STATUS.md)、[录像政策](HarborCity_M5_VS3/R1/final/RECORDING_POLICY.md)。
+
 2026-09-26 M5-VS3 R1 门前第一版已交 USER_REVIEW/PARTIAL：真实 Mixamo 剑术/施法、身前攻击阵、选目标后松开发射、治疗与六秒护盾已接入。独立包、完整回归与方案 1 羽翼打磨等待本次阶段门答复。剑的气质/步幅、特效层次仍需审阅；旧 FAIL/NOT_RUN 保留，真实 OS 鼠标 NOT_RUN，M0 PASS。见 [R1 状态](HarborCity_M5_VS3/R1/STATUS.md) 与 [审阅页](HarborCity_M5_VS3/R1/review/index.html)。
 
 2026-09-26 M5-VS3 已生成 PARTIAL 独立候选并停止桌面操作。原创复杂魔法阵、剑与魔法、飞行体力与三种翅膀排列已进入新包；主线四章、咖啡支线及真实 F9 重开恢复有证据，接送上车仍未解决。重开旧 NPC／音乐断言 FAIL、倒地与第一人称姿态缺口保留。1080p High/Epic 性能达本次目标；五分钟有声公开录像关闭私人 BGM。详见 [本轮状态](HarborCity_M5_VS3/STATUS.md)。战斗、魔法、翅膀、BGM 用户验收 PENDING；M0 PASS，旧候选、旧 FAIL/NOT_RUN 与存档保留。本轮没有扩图。

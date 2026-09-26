@@ -1,0 +1,454 @@
+{
+  "status": "COMPLETE",
+  "mode": "m5_vs3_r1_visual",
+  "engine": "5.8.2-56702186+++UE5+Release-5.8",
+  "duration_seconds": 150.41135209798813,
+  "failures": 0,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.2244517989456654
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_visual_20260927_022517",
+      "elapsed_seconds": 3.225475698709488
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.2362667992711067
+    },
+    {
+      "name": "Six adult R/V fixture participants",
+      "status": "PASS",
+      "evidence_level": "A fixture; no new NPC designs",
+      "expected": "existing adult street cast",
+      "actual": "6",
+      "elapsed_seconds": 6.236453898251057
+    },
+    {
+      "name": "R1_05_SwordRun actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_05_SwordRun.png bytes=3287378 pending=0",
+      "elapsed_seconds": 15.032839499413967
+    },
+    {
+      "name": "R1_01_SwordCombo actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_01_SwordCombo.png bytes=3362414 pending=0",
+      "elapsed_seconds": 18.479865297675133
+    },
+    {
+      "name": "R1_02_SwordCombo actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_02_SwordCombo.png bytes=3369254 pending=0",
+      "elapsed_seconds": 19.892492298036814
+    },
+    {
+      "name": "R1_03_SwordCombo actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_03_SwordCombo.png bytes=3439969 pending=0",
+      "elapsed_seconds": 21.307710397988558
+    },
+    {
+      "name": "R1_04_SwordHeavy actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_04_SwordHeavy.png bytes=3315227 pending=0",
+      "elapsed_seconds": 29.256370898336172
+    },
+    {
+      "name": "Sword hit through Attack and blade sweep",
+      "status": "PASS",
+      "evidence_level": "B Action, A placement",
+      "expected": "less than 100",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen00\",\r\n\t\"health\": 76,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": true,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 1,\\r\\n\\t\\\"counter_path_failures\\\": 1,\\r\\n\\t\\\"threat_refreshes\\\": 5,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"BP_TownHero_C_2147482313\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 11.93767049908638\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 1,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_C_Head\",\r\n\t\"last_damage\": 24\r\n}",
+      "elapsed_seconds": 33.736631598323584
+    },
+    {
+      "name": "Select first target via Look Action",
+      "status": "PASS",
+      "evidence_level": "B Action; upstream OS mouse NOT_RUN",
+      "expected": "first adult target",
+      "actual": "BP_NPCIdleR2_V_C_4",
+      "elapsed_seconds": 36.17582959681749
+    },
+    {
+      "name": "R1_06_BoltTarget actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_06_BoltTarget.png bytes=3017939 pending=0",
+      "elapsed_seconds": 37.96065469831228
+    },
+    {
+      "name": "R1_07_BoltImpact actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_07_BoltImpact.png bytes=3094717 pending=0",
+      "elapsed_seconds": 39.324310798197985
+    },
+    {
+      "name": "Released bolt hits selected second target",
+      "status": "PASS",
+      "evidence_level": "B Look + Attack completed",
+      "expected": "damage after release",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen02\",\r\n\t\"health\": 70,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 1,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 12,\r\n\t\"panic_path_failures\": 12,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"BP_TownHero_C_2147482313\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 10.989730197936296\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 10.989730197936296,\r\n\t\"damage_events\": 1,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_C_Spine\",\r\n\t\"last_damage\": 30\r\n}",
+      "elapsed_seconds": 39.53212609887123
+    },
+    {
+      "name": "R1_08_WaveImpact actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_08_WaveImpact.png bytes=2974774 pending=0",
+      "elapsed_seconds": 43.66410329937935
+    },
+    {
+      "name": "Wave damages two actual NPCs",
+      "status": "PASS",
+      "evidence_level": "B Action; separate A group fixture",
+      "expected": "both damaged through release Action",
+      "actual": "72.0 / 72.0",
+      "elapsed_seconds": 45.167085099965334
+    },
+    {
+      "name": "Player actually wounded before heal",
+      "status": "PASS",
+      "evidence_level": "B player punch -> real NPC counter",
+      "expected": "NPC counter damage",
+      "actual": "health=40.0 hero=X=0.000 Y=-6800.000 Z=98.150 npc=X=0.000 Y=-6706.000 Z=98.096 reaction={\r\n\t\"stable_id\": \"VS2_Citizen03\",\r\n\t\"health\": 75,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 4,\\r\\n\\t\\\"counter_hits\\\": 4,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 4,\\r\\n\\t\\\"counter_sweeps\\\": 4,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 20,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"BP_TownHero_C_2147482313\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 11.982794798910618\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 1,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_C_Spine\",\r\n\t\"last_damage\": 25\r\n}",
+      "elapsed_seconds": 52.28513369709253
+    },
+    {
+      "name": "R1_09_Healing actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_09_Healing.png bytes=3311516 pending=0",
+      "elapsed_seconds": 54.755035899579525
+    },
+    {
+      "name": "Healing restores actual forty health",
+      "status": "PASS",
+      "evidence_level": "B Spell3; natural regeneration ticks",
+      "expected": "up to 40 actual health",
+      "actual": "40.000008",
+      "elapsed_seconds": 58.75750259682536
+    },
+    {
+      "name": "R1_10_Shield actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_10_Shield.png bytes=3307986 pending=0",
+      "elapsed_seconds": 62.55135879665613
+    },
+    {
+      "name": "Shield really activated",
+      "status": "PASS",
+      "evidence_level": "B Spell4 Action",
+      "expected": "positive duration",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.6   4 护盾 10.3  生效中",
+      "elapsed_seconds": 62.65254819765687
+    },
+    {
+      "name": "Actual NPC hits are halved by shield",
+      "status": "PASS",
+      "evidence_level": "B trigger attack; actual NPC counter events and player health",
+      "expected": "each accepted counter hit = original damage times 0.5",
+      "actual": "hits=1 recorded=7.50 healthDelta=7.50",
+      "elapsed_seconds": 64.25874039903283
+    },
+    {
+      "name": "Shield expires after six seconds",
+      "status": "PASS",
+      "evidence_level": "B activation; natural game time",
+      "expected": "zero remaining",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 3.2",
+      "elapsed_seconds": 69.77309979870915
+    },
+    {
+      "name": "R1_FP_SwordReady actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_SwordReady.png bytes=3068977 pending=0",
+      "elapsed_seconds": 78.1715507991612
+    },
+    {
+      "name": "R1_FP_Sword0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Sword0.png bytes=2720998 pending=0",
+      "elapsed_seconds": 79.75980649888515
+    },
+    {
+      "name": "R1_FP_Sword1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Sword1.png bytes=2787577 pending=0",
+      "elapsed_seconds": 82.36983659863472
+    },
+    {
+      "name": "R1_FP_Sword2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Sword2.png bytes=2584941 pending=0",
+      "elapsed_seconds": 84.94797219708562
+    },
+    {
+      "name": "R1_FP_Rune actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Rune.png bytes=3252419 pending=0",
+      "elapsed_seconds": 88.62432459741831
+    },
+    {
+      "name": "R1_FP_MagicGun actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_MagicGun.png bytes=2971768 pending=0",
+      "elapsed_seconds": 91.87311029806733
+    },
+    {
+      "name": "R1_Wings_Afternoon_Hover actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Afternoon_Hover.png bytes=2992152 pending=0",
+      "elapsed_seconds": 102.14091399684548
+    },
+    {
+      "name": "R1_Wings_Afternoon_Boost actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Afternoon_Boost.png bytes=2837184 pending=0",
+      "elapsed_seconds": 105.0805493965745
+    },
+    {
+      "name": "Wing sequence returns to ground",
+      "status": "PASS",
+      "evidence_level": "B Action",
+      "expected": "grounded after real F input",
+      "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_y\": 0,\r\n\t\"height_above_sea_cm\": 158.14999389648438,\r\n\t\"cruise_cm_s\": 1000,\r\n\t\"boost_cm_s\": 2500,\r\n\t\"vertical_cm_s\": 600,\r\n\t\"takeoffs\": 1,\r\n\t\"visual_bank_degrees\": 0,\r\n\t\"landings\": 1,\r\n\t\"rejected\": 0,\r\n\t\"last_reason\": \"已落地，保持空手；Q 切换武器。\",\r\n\t\"requested_velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position\": \"X=0.000 Y=-1237.678 Z=98.150\",\r\n\t\"velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position_x\": 1.6551626536970415e-05,\r\n\t\"velocity_x\": 0,\r\n\t\"requested_velocity_x\": 0,\r\n\t\"position_y\": -1237.6781937987337,\r\n\t\"velocity_y\": 0,\r\n\t\"requested_velocity_y\": 0,\r\n\t\"position_z\": 98.149999258294073,\r\n\t\"velocity_z\": 0,\r\n\t\"requested_velocity_z\": 0,\r\n\t\"movement_mode\": 1,\r\n\t\"physics_interaction\": true,\r\n\t\"look_yaw\": 1.5000000596046448,\r\n\t\"look_pitch\": 1.5000000596046448\r\n}",
+      "elapsed_seconds": 113.80324249714613
+    },
+    {
+      "name": "R1_Wings_Night_Hover actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Night_Hover.png bytes=2379524 pending=0",
+      "elapsed_seconds": 130.05292429775
+    },
+    {
+      "name": "R1_Wings_Night_Boost actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Night_Boost.png bytes=2328969 pending=0",
+      "elapsed_seconds": 133.00429189950228
+    },
+    {
+      "name": "Wing sequence returns to ground",
+      "status": "PASS",
+      "evidence_level": "B Action",
+      "expected": "grounded after real F input",
+      "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_y\": 0,\r\n\t\"height_above_sea_cm\": 158.14999389648438,\r\n\t\"cruise_cm_s\": 1000,\r\n\t\"boost_cm_s\": 2500,\r\n\t\"vertical_cm_s\": 600,\r\n\t\"takeoffs\": 2,\r\n\t\"visual_bank_degrees\": 0,\r\n\t\"landings\": 2,\r\n\t\"rejected\": 0,\r\n\t\"last_reason\": \"已落地，保持空手；Q 切换武器。\",\r\n\t\"requested_velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position\": \"X=0.000 Y=-1203.116 Z=98.150\",\r\n\t\"velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position_x\": 1.6500695883172854e-05,\r\n\t\"velocity_x\": 0,\r\n\t\"requested_velocity_x\": 0,\r\n\t\"position_y\": -1203.1156711589274,\r\n\t\"velocity_y\": 0,\r\n\t\"requested_velocity_y\": 0,\r\n\t\"position_z\": 98.149997889564503,\r\n\t\"velocity_z\": 0,\r\n\t\"requested_velocity_z\": 0,\r\n\t\"movement_mode\": 1,\r\n\t\"physics_interaction\": true,\r\n\t\"look_yaw\": 1.5000000596046448,\r\n\t\"look_pitch\": 1.5000000596046448\r\n}",
+      "elapsed_seconds": 141.71714939922094
+    },
+    {
+      "name": "M3 final screenshot file R1_05_SwordRun.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_05_SwordRun.png bytes=3287378 pending=0",
+      "elapsed_seconds": 149.71860629692674
+    },
+    {
+      "name": "M3 final screenshot file R1_01_SwordCombo.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_01_SwordCombo.png bytes=3362414 pending=0",
+      "elapsed_seconds": 149.75500789657235
+    },
+    {
+      "name": "M3 final screenshot file R1_02_SwordCombo.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_02_SwordCombo.png bytes=3369254 pending=0",
+      "elapsed_seconds": 149.7895882986486
+    },
+    {
+      "name": "M3 final screenshot file R1_03_SwordCombo.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_03_SwordCombo.png bytes=3439969 pending=0",
+      "elapsed_seconds": 149.82306229695678
+    },
+    {
+      "name": "M3 final screenshot file R1_04_SwordHeavy.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_04_SwordHeavy.png bytes=3315227 pending=0",
+      "elapsed_seconds": 149.857442997396
+    },
+    {
+      "name": "M3 final screenshot file R1_06_BoltTarget.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_06_BoltTarget.png bytes=3017939 pending=0",
+      "elapsed_seconds": 149.89200880005956
+    },
+    {
+      "name": "M3 final screenshot file R1_07_BoltImpact.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_07_BoltImpact.png bytes=3094717 pending=0",
+      "elapsed_seconds": 149.92771819978952
+    },
+    {
+      "name": "M3 final screenshot file R1_08_WaveImpact.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_08_WaveImpact.png bytes=2974774 pending=0",
+      "elapsed_seconds": 149.96173329651356
+    },
+    {
+      "name": "M3 final screenshot file R1_09_Healing.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_09_Healing.png bytes=3311516 pending=0",
+      "elapsed_seconds": 149.9981243982911
+    },
+    {
+      "name": "M3 final screenshot file R1_10_Shield.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_10_Shield.png bytes=3307986 pending=0",
+      "elapsed_seconds": 150.0322990976274
+    },
+    {
+      "name": "M3 final screenshot file R1_FP_SwordReady.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_SwordReady.png bytes=3068977 pending=0",
+      "elapsed_seconds": 150.06680629774928
+    },
+    {
+      "name": "M3 final screenshot file R1_FP_Sword0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Sword0.png bytes=2720998 pending=0",
+      "elapsed_seconds": 150.10150180011988
+    },
+    {
+      "name": "M3 final screenshot file R1_FP_Sword1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Sword1.png bytes=2787577 pending=0",
+      "elapsed_seconds": 150.13577849790454
+    },
+    {
+      "name": "M3 final screenshot file R1_FP_Sword2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Sword2.png bytes=2584941 pending=0",
+      "elapsed_seconds": 150.16976709663868
+    },
+    {
+      "name": "M3 final screenshot file R1_FP_Rune.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_Rune.png bytes=3252419 pending=0",
+      "elapsed_seconds": 150.20387579873204
+    },
+    {
+      "name": "M3 final screenshot file R1_FP_MagicGun.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_FP_MagicGun.png bytes=2971768 pending=0",
+      "elapsed_seconds": 150.2375821992755
+    },
+    {
+      "name": "M3 final screenshot file R1_Wings_Afternoon_Hover.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Afternoon_Hover.png bytes=2992152 pending=0",
+      "elapsed_seconds": 150.2732418999076
+    },
+    {
+      "name": "M3 final screenshot file R1_Wings_Afternoon_Boost.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Afternoon_Boost.png bytes=2837184 pending=0",
+      "elapsed_seconds": 150.3077157996595
+    },
+    {
+      "name": "M3 final screenshot file R1_Wings_Night_Hover.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Night_Hover.png bytes=2379524 pending=0",
+      "elapsed_seconds": 150.3427753970027
+    },
+    {
+      "name": "M3 final screenshot file R1_Wings_Night_Boost.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_visual_20260927_022517/User/Saved/M5Tests/20260927_022524_m5_vs3_r1_visual/R1_Wings_Night_Boost.png bytes=2328969 pending=0",
+      "elapsed_seconds": 150.37727699801326
+    }
+  ],
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_194511_587_6fee2bf6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "exit_code": 0,
+  "kind": "STANDALONE_PACKAGE",
+  "input_layer": "ENGINE_ACTION_NOT_OS",
+  "visual_review": "PARTIAL: FP charge obscures aperture; capture framing hides bolt; new fixes pending next package"
+}

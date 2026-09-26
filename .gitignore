@@ -81,3 +81,15 @@ env/
 .private/
 HarborCity/Content/HarborCity/Private/Music/
 docs/HarborCity_M5_VS3/private/
+
+# HarborCity compressed recording policy 2026-09-27
+*.ppm
+*.bmp
+**/Saved/M*Recording/
+/docs/**/recordings/
+/docs/**/recording_tmp/
+/docs/HarborCity*/**/*.mp4
+/docs/HarborCity*/**/*.png
+/docs/HarborCity*/**/*.jpg
+/docs/HarborCity*/**/*.jpeg
+/docs/HarborCity*/**/*.ffconcat

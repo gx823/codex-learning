@@ -1,0 +1,194 @@
+{
+  "status": "COMPLETE",
+  "mode": "m5_vs3_r1_falls",
+  "engine": "5.8.2-56702186+++UE5+Release-5.8",
+  "duration_seconds": 76.98053719848394,
+  "failures": 5,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.228022798895836
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_falls_20260927_024811",
+      "elapsed_seconds": 3.2287559993565083
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.239581499248743
+    },
+    {
+      "name": "Punch living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=-0.04, Y=-6300.79, Z=113.03)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 9.44558109715581
+    },
+    {
+      "name": "R1_Fall_Punch actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Punch.png bytes=3131266 pending=0",
+      "elapsed_seconds": 10.5832239985466
+    },
+    {
+      "name": "Punch living recovery finishes",
+      "status": "PASS",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=-0.36, Y=-6300.30, Z=112.92)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 18.688535500317812
+    },
+    {
+      "name": "Heavy living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=19.64, Y=-6300.34, Z=111.33)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 23.345207199454308
+    },
+    {
+      "name": "R1_Fall_Heavy actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Heavy.png bytes=3126911 pending=0",
+      "elapsed_seconds": 24.4785829000175
+    },
+    {
+      "name": "Heavy living recovery finishes",
+      "status": "PASS",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=20.47, Y=-6300.23, Z=111.33)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 32.581145100295544
+    },
+    {
+      "name": "Gun living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=0.27, Y=-6299.33, Z=112.05)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 36.2792621999979
+    },
+    {
+      "name": "R1_Fall_Gun actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Gun.png bytes=2976809 pending=0",
+      "elapsed_seconds": 37.41859879717231
+    },
+    {
+      "name": "Gun living recovery finishes",
+      "status": "PASS",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=0.27, Y=-6299.82, Z=111.95)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 45.52201109752059
+    },
+    {
+      "name": "Magic living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2.41, Y=-6300.42, Z=111.29)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 51.47522899881005
+    },
+    {
+      "name": "R1_Fall_Magic actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Magic.png bytes=3212073 pending=0",
+      "elapsed_seconds": 52.620760798454285
+    },
+    {
+      "name": "Magic living recovery finishes",
+      "status": "PASS",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=1.46, Y=-6300.88, Z=111.39)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 60.723202500492334
+    },
+    {
+      "name": "Vehicle living knockdown via input",
+      "status": "PASS",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"living_physics_active\": true,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0.2208452969789505,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": 1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/GetUp/Batch_b1fd11ec41b0/Animations/M_ragdoll_getup_stand_F_NPCRGetUp.M_ragdoll_getup_stand_F_NPCRGetUp\",\r\n\t\"physical_location_cm\": \"V(X=-18.74, Y=-5836.17, Z=19.80)\",\r\n\t\"impact_events\": 1,\r\n\t\"whole_person_impulse_events\": 1,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 1,\r\n\t\"source\": \"PhysicsAssetSweep\",\r\n\t\"closing_speed_cm_s\": 636.4315185546875,\r\n\t\"damage\": 40.514522552490234,\r\n\t\"simulated_mass_kg\": 65,\r\n\t\"distributed_body_count\": 20,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(X=-1633.80, Y=26839.55, Z=9195.21)\",\r\n\t\"delta_v_cm_s\": \"V(X=-25.14, Y=412.92, Z=141.46)\",\r\n\t\"max_body_speed_cm_s\": 108.668701171875,\r\n\t\"max_body_angular_rad_s\": 6.6811051368713379,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"physical_root_bone\": \"J_Bip_C_Hips\",\r\n\t\"physics_transform_update_mode\": 0,\r\n\t\"mesh_attach_parent\": \"None\",\r\n\t\"last_recovery_attach_succeeded\": false,\r\n\t\"recovery_expected_mesh_world\": \"0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000\",\r\n\t\"recovery_reference_body_drift_cm\": 0,\r\n\t\"recovery_body_before_reference_cm\": \"V(0)\",\r\n\t\"recovery_body_after_reference_cm\": \"V(0)\",\r\n\t\"pelvis_body_simulating\": true,\r\n\t\"visible_pelvis_socket_cm\": \"V(X=-18.74, Y=-5836.17, Z=19.80)\",\r\n\t\"actual_pelvis_body_cm\": \"V(X=-18.74, Y=-5836.17, Z=19.80)\",\r\n\t\"mesh_world_transform\": \"-92.634078,-5899.531864,36.173287|73.810738,95.331178,-126.099866|1.000000,1.000000,1.000000\",\r\n\t\"mesh_relative_transform\": \"-92.634078,-5899.531864,36.173287|73.810738,95.331178,-126.099866|1.000000,1.000000,1.000000\",\r\n\t\"root_body_awake\": true,\r\n\t\"pelvis_body_awake\": true,\r\n\t\"pelvis_physics_blend_weight\": 1,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 5,\r\n\t\"awake_living_bodies\": 100,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 67.34353049844503
+    },
+    {
+      "name": "R1_Fall_Vehicle actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Vehicle.png bytes=3051298 pending=0",
+      "elapsed_seconds": 68.51752879843116
+    },
+    {
+      "name": "Vehicle living recovery finishes",
+      "status": "FAIL",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": true,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0.2208452969789505,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": 1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/GetUp/Batch_b1fd11ec41b0/Animations/M_ragdoll_getup_stand_F_NPCRGetUp.M_ragdoll_getup_stand_F_NPCRGetUp\",\r\n\t\"physical_location_cm\": \"V(X=-13.09, Y=-5840.34, Z=20.06)\",\r\n\t\"impact_events\": 1,\r\n\t\"whole_person_impulse_events\": 1,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 1,\r\n\t\"source\": \"PhysicsAssetSweep\",\r\n\t\"closing_speed_cm_s\": 636.4315185546875,\r\n\t\"damage\": 40.514522552490234,\r\n\t\"simulated_mass_kg\": 65,\r\n\t\"distributed_body_count\": 20,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(X=-1633.80, Y=26839.55, Z=9195.21)\",\r\n\t\"delta_v_cm_s\": \"V(X=-25.14, Y=412.92, Z=141.46)\",\r\n\t\"max_body_speed_cm_s\": 21.868747711181641,\r\n\t\"max_body_angular_rad_s\": 1.8621604442596436,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"physical_root_bone\": \"J_Bip_C_Hips\",\r\n\t\"physics_transform_update_mode\": 0,\r\n\t\"mesh_attach_parent\": \"None\",\r\n\t\"last_recovery_attach_succeeded\": false,\r\n\t\"recovery_expected_mesh_world\": \"0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000\",\r\n\t\"recovery_reference_body_drift_cm\": 0,\r\n\t\"recovery_body_before_reference_cm\": \"V(0)\",\r\n\t\"recovery_body_after_reference_cm\": \"V(0)\",\r\n\t\"pelvis_body_simulating\": true,\r\n\t\"visible_pelvis_socket_cm\": \"V(X=-13.09, Y=-5840.34, Z=20.06)\",\r\n\t\"actual_pelvis_body_cm\": \"V(X=-13.09, Y=-5840.34, Z=20.06)\",\r\n\t\"mesh_world_transform\": \"-100.845877,-5875.697717,48.191835|61.335493,-35.173308,126.679586|1.000000,1.000000,1.000000\",\r\n\t\"mesh_relative_transform\": \"-100.845877,-5875.697717,48.191835|61.335493,-35.173308,126.679586|1.000000,1.000000,1.000000\",\r\n\t\"root_body_awake\": true,\r\n\t\"pelvis_body_awake\": true,\r\n\t\"pelvis_physics_blend_weight\": 1,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 5,\r\n\t\"awake_living_bodies\": 100,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 76.62071649730206
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Punch.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Punch.png bytes=3131266 pending=0",
+      "elapsed_seconds": 76.88997599855065
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Heavy.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Heavy.png bytes=3126911 pending=0",
+      "elapsed_seconds": 76.90642049908638
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Gun.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Gun.png bytes=2976809 pending=0",
+      "elapsed_seconds": 76.92166009917855
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Magic.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Magic.png bytes=3212073 pending=0",
+      "elapsed_seconds": 76.93599839881063
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Vehicle.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_024811/User/Saved/M5Tests/20260927_024818_m5_vs3_r1_falls/R1_Fall_Vehicle.png bytes=3051298 pending=0",
+      "elapsed_seconds": 76.95735109969974
+    }
+  ],
+  "diagnostic_limitation": "A fixture stacked successive NPCs on one road point; four attack-down checks failed, vehicle impact succeeded but recovery not observed in 8 seconds. Not a natural-fall acceptance result."
+}

@@ -1,0 +1,41 @@
+{
+  "status": "RUNNING",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "runs": [
+    {
+      "exit_status": "EXITED",
+      "label": "WARMUP",
+      "exit_code": 0,
+      "mode": "m5_vs3_r1_visual",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_031457"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "VISUAL_RECORDING",
+      "exit_code": 0,
+      "mode": "m5_vs3_r1_visual",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_031740"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "FALLS_ATTEMPT_3_RECORDING",
+      "exit_code": 0,
+      "mode": "m5_vs3_r1_falls",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_falls_20260927_032019"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "PERFORMANCE_HIGH",
+      "exit_code": 0,
+      "mode": "perf",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032143"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "PERFORMANCE_EPIC",
+      "exit_code": 0,
+      "mode": "perf",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323"
+    }
+  ]
+}

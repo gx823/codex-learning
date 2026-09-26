@@ -1,0 +1,258 @@
+{
+  "acquisition": [
+    {
+      "name": "Sword and Shield Pack",
+      "source": "https://www.mixamo.com/",
+      "license": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+      "condition": "royalty-free personal/commercial game use; raw downloaded source stays local",
+      "login_and_terms": "user handled",
+      "archive": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R1\\Mixamo\\Sword and Shield Pack.zip",
+      "bytes": 4629064,
+      "sha256": "12df4393a1ff912f447d828fcbb2c98173108007bfd9bb1e7c5bc9bc61804d93",
+      "files": [
+        "X Bot.fbx",
+        "sword and shield walk.fbx",
+        "sword and shield run.fbx",
+        "sword and shield jump.fbx",
+        "sword and shield jump (2).fbx",
+        "sword and shield strafe.fbx",
+        "sword and shield strafe (2).fbx",
+        "sword and shield walk (2).fbx",
+        "sword and shield 180 turn.fbx",
+        "sword and shield strafe (3).fbx",
+        "sword and shield strafe (4).fbx",
+        "sword and shield 180 turn (2).fbx",
+        "sword and shield run (2).fbx",
+        "sword and shield slash.fbx",
+        "sword and shield slash (2).fbx",
+        "sword and shield slash (3).fbx",
+        "sword and shield slash (4).fbx",
+        "sword and shield block.fbx",
+        "sword and shield block idle.fbx",
+        "sword and shield block (2).fbx",
+        "sword and shield impact.fbx",
+        "sword and shield impact (2).fbx",
+        "sword and shield impact (3).fbx",
+        "sword and shield crouch.fbx",
+        "sword and shield crouching.fbx",
+        "sword and shield crouch idle.fbx",
+        "sword and shield slash (5).fbx",
+        "sword and shield crouch block.fbx",
+        "sword and shield crouch block idle.fbx",
+        "sword and shield crouching (2).fbx",
+        "sword and shield crouch block (2).fbx",
+        "sword and shield crouching (3).fbx",
+        "sword and shield attack.fbx",
+        "sword and shield attack (2).fbx",
+        "sword and shield attack (3).fbx",
+        "sword and shield idle.fbx",
+        "sword and shield idle (2).fbx",
+        "sword and shield idle (3).fbx",
+        "sword and shield kick.fbx",
+        "sword and shield casting.fbx",
+        "sword and shield attack (4).fbx",
+        "sword and shield power up.fbx",
+        "sword and shield death.fbx",
+        "sword and shield death (2).fbx",
+        "sword and shield turn.fbx",
+        "sword and shield turn (2).fbx",
+        "sword and shield idle (4).fbx",
+        "sword and shield casting (2).fbx",
+        "sheath sword 1.fbx",
+        "sheath sword 2.fbx"
+      ]
+    },
+    {
+      "name": "Magic Spell Pack",
+      "source": "https://www.mixamo.com/",
+      "license": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+      "condition": "royalty-free personal/commercial game use; raw downloaded source stays local",
+      "login_and_terms": "user handled",
+      "archive": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R1\\Mixamo\\Magic Spell Pack.zip",
+      "bytes": 2897337,
+      "sha256": "32753963e0a993327d1d94e3087459a9049abb4cabf820e7dc9cea08656f9c21",
+      "files": [
+        "X Bot.fbx",
+        "standing 1H cast spell 01.fbx",
+        "standing idle.fbx",
+        "Standing 1H Magic Attack 01.fbx",
+        "Standing 1H Magic Attack 02.fbx",
+        "Standing 1H Magic Attack 03.fbx",
+        "Standing 2H Cast Spell 01.fbx",
+        "Standing 2H Magic Area Attack 01.fbx",
+        "Standing 2H Magic Area Attack 02.fbx",
+        "Standing 2H Magic Attack 01.fbx",
+        "Standing 2H Magic Attack 02.fbx",
+        "Standing 2H Magic Attack 03.fbx",
+        "Standing 2H Magic Attack 04.fbx",
+        "Standing 2H Magic Attack 05.fbx"
+      ]
+    }
+  ],
+  "retarget": {
+    "status": "PASS",
+    "assets": [
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_standing_1H_cast_spell_01_Selestia.A_Mixamo_standing_1H_cast_spell_01_Selestia",
+        "duration": 2.2666666507720947,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_1H_Magic_Attack_01_Selestia.A_Mixamo_Standing_1H_Magic_Attack_01_Selestia",
+        "duration": 2.299999952316284,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_1H_Magic_Attack_02_Selestia.A_Mixamo_Standing_1H_Magic_Attack_02_Selestia",
+        "duration": 2.200000047683716,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_1H_Magic_Attack_03_Selestia.A_Mixamo_Standing_1H_Magic_Attack_03_Selestia",
+        "duration": 2.299999952316284,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Cast_Spell_01_Selestia.A_Mixamo_Standing_2H_Cast_Spell_01_Selestia",
+        "duration": 2.1666667461395264,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Magic_Area_Attack_01_Selestia.A_Mixamo_Standing_2H_Magic_Area_Attack_01_Selestia",
+        "duration": 2.9666666984558105,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia.A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia",
+        "duration": 3.2666666507720947,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Magic_Attack_01_Selestia.A_Mixamo_Standing_2H_Magic_Attack_01_Selestia",
+        "duration": 2.700000047683716,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Magic_Attack_02_Selestia.A_Mixamo_Standing_2H_Magic_Attack_02_Selestia",
+        "duration": 2.633333444595337,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Magic_Attack_03_Selestia.A_Mixamo_Standing_2H_Magic_Attack_03_Selestia",
+        "duration": 4.300000190734863,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Magic_Attack_04_Selestia.A_Mixamo_Standing_2H_Magic_Attack_04_Selestia",
+        "duration": 3.3333332538604736,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_Standing_2H_Magic_Attack_05_Selestia.A_Mixamo_Standing_2H_Magic_Attack_05_Selestia",
+        "duration": 3.5333333015441895,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_standing_idle_Selestia.A_Mixamo_standing_idle_Selestia",
+        "duration": 1.8666666746139526,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_180_turn_Selestia.A_Mixamo_sword_and_shield_180_turn_Selestia",
+        "duration": 0.800000011920929,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_180_turn_2_Selestia.A_Mixamo_sword_and_shield_180_turn_2_Selestia",
+        "duration": 0.8333333134651184,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_casting_Selestia.A_Mixamo_sword_and_shield_casting_Selestia",
+        "duration": 2.9666666984558105,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_casting_2_Selestia.A_Mixamo_sword_and_shield_casting_2_Selestia",
+        "duration": 1.0333333015441895,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_idle_Selestia.A_Mixamo_sword_and_shield_idle_Selestia",
+        "duration": 3.6666667461395264,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_idle_2_Selestia.A_Mixamo_sword_and_shield_idle_2_Selestia",
+        "duration": 7.5333333015441895,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_idle_3_Selestia.A_Mixamo_sword_and_shield_idle_3_Selestia",
+        "duration": 8.666666984558105,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_idle_4_Selestia.A_Mixamo_sword_and_shield_idle_4_Selestia",
+        "duration": 2.5333333015441895,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_power_up_Selestia.A_Mixamo_sword_and_shield_power_up_Selestia",
+        "duration": 2.366666555404663,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_run_Selestia.A_Mixamo_sword_and_shield_run_Selestia",
+        "duration": 0.699999988079071,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_run_2_Selestia.A_Mixamo_sword_and_shield_run_2_Selestia",
+        "duration": 0.5333333611488342,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_slash_Selestia.A_Mixamo_sword_and_shield_slash_Selestia",
+        "duration": 1.5,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_slash_2_Selestia.A_Mixamo_sword_and_shield_slash_2_Selestia",
+        "duration": 3.5333333015441895,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_slash_3_Selestia.A_Mixamo_sword_and_shield_slash_3_Selestia",
+        "duration": 1.6666666269302368,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_slash_4_Selestia.A_Mixamo_sword_and_shield_slash_4_Selestia",
+        "duration": 2.433333396911621,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_slash_5_Selestia.A_Mixamo_sword_and_shield_slash_5_Selestia",
+        "duration": 1.3666666746139526,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_walk_Selestia.A_Mixamo_sword_and_shield_walk_Selestia",
+        "duration": 1.100000023841858,
+        "root_motion": true
+      },
+      {
+        "path": "/Game/HarborCity/M5VS3/R1/Retargeted/A_Mixamo_sword_and_shield_walk_2_Selestia.A_Mixamo_sword_and_shield_walk_2_Selestia",
+        "duration": 1.2666666507720947,
+        "root_motion": true
+      }
+    ],
+    "visual": "NOT_RUN_RETARGET_ONLY",
+    "source_mesh": "/Game/HarborCity/M5VS3/R1/MotionSource/SKM_Mixamo_XBot_Persisted.SKM_Mixamo_XBot_Persisted",
+    "target_mesh": "/Game/HarborCity/M5VS1/HeroSelestia/SKM_Selestia.SKM_Selestia",
+    "source_root": "Hips",
+    "target_root": "Hips"
+  },
+  "visual_acceptance": "NOT_RUN"
+}

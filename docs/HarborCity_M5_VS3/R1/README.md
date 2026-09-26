@@ -1,3 +1,5 @@
+门后最新候选见 [final/STATUS.md](final/STATUS.md) 和 [审阅页](final/review/index.html)；下文为阶段门历史记录，旧失败不删除。
+
 # 剑与魔法 · 第一版审阅
 
 [本地审阅页](review/index.html) · [状态](STATUS.md) · [操作说明](CONTROLS.md)

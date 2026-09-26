@@ -1,0 +1,191 @@
+{
+  "status": "COMPLETE",
+  "mode": "m5_vs2_perf",
+  "duration_seconds": 93.8555428981781,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.1728629991412163
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_perf_20260927_032323",
+      "elapsed_seconds": 3.1739840991795063
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.1904941983520985
+    },
+    {
+      "name": "Standard fill and world audio runtime",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "readback; audible recording verified separately",
+      "actual": "{\"ordinary_point_light\":true,\"ambience_playing\":true,\"footsteps\":0,\"audible_shots\":0}",
+      "elapsed_seconds": 5.196587696671486
+    },
+    {
+      "name": "Town navigation asset",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "current town map data",
+      "actual": "DA_HarborTown",
+      "elapsed_seconds": 5.1984600983560085
+    },
+    {
+      "name": "Rejected young appearances excluded",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "19 adult-base NPCs; diversity is separate art review",
+      "actual": "adult_base=19 excluded=0",
+      "elapsed_seconds": 5.199652098119259
+    },
+    {
+      "name": "Town actor unique",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "one runtime actor",
+      "actual": "1",
+      "elapsed_seconds": 5.207292400300503
+    },
+    {
+      "name": "Help panel starts closed",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "closed",
+      "actual": "0",
+      "elapsed_seconds": 5.2191548980772495
+    },
+    {
+      "name": "South approach walk",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=774 mean_fps=64.465 p99_ms=17.982 wall_seconds=12.007",
+      "elapsed_seconds": 32.31524629890919
+    },
+    {
+      "name": "Market approach walk",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=798 mean_fps=66.485 p99_ms=17.735 wall_seconds=12.003",
+      "elapsed_seconds": 44.31798919662833
+    },
+    {
+      "name": "High aerial hover",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=282 mean_fps=70.275 p99_ms=16.319 wall_seconds=4.013",
+      "elapsed_seconds": 58.452114798128605
+    },
+    {
+      "name": "Town aerial traversal",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=356 mean_fps=71.099 p99_ms=16.439 wall_seconds=5.007",
+      "elapsed_seconds": 63.559512097388506
+    },
+    {
+      "name": "Spell stress has six existing adult NPCs",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "six live authored adults, A placement only",
+      "actual": "6",
+      "elapsed_seconds": 80.56891479715705
+    },
+    {
+      "name": "Multiple spells and six NPC AI performance",
+      "status": "PASS",
+      "evidence_level": "B-Action spells + A crowd placement and wall-frame readback",
+      "expected": "uncapped; at least two real damage recipients; mean>=60 p99<=25; ordinary NPC reactions, not forced six attackers",
+      "actual": "frames=784 mean_fps=66.177 p99_ms=17.314 wall_seconds=11.847 npcs=6 damaged=6",
+      "elapsed_seconds": 93.83894569799304
+    }
+  ],
+  "failures": 0,
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323\\User\\Saved\\M5Tests\\20260927_032326_m5_vs2_perf\\results.json",
+  "launch": {
+    "status": "RUNNING",
+    "pid": 29352,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs2_perf",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_perf_20260927_032323",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=3",
+      "-ExecCmds=\"sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 3,sg.ReflectionQuality 3,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,sg.ShadingQuality 3,sg.LandscapeQuality 3,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality\""
+    ],
+    "started": "2026-09-27T03:23:23.1992873+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+  },
+  "exit": {
+    "status": "EXITED",
+    "pid": 29352,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs2_perf",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_perf_20260927_032323",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=3",
+      "-ExecCmds=\"sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 3,sg.ReflectionQuality 3,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,sg.ShadingQuality 3,sg.LandscapeQuality 3,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality\""
+    ],
+    "started": "2026-09-27T03:23:23.1992873+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+    "exit_code": 0,
+    "ended": "2026-09-27T03:25:01.3201923+08:00"
+  },
+  "memory": {
+    "private_bytes": 5686505472,
+    "working_set_bytes": 1857032192,
+    "process_peak_working_set_bytes": 1862443008,
+    "scope": "process sample every 3 seconds; not machine-wide committed memory"
+  }
+}

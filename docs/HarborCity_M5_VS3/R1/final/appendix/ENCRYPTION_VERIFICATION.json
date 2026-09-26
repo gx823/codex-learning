@@ -1,0 +1,7 @@
+{
+  "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+  "candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f",
+  "exe_sha256": "EA481A6B6922B3EEFE1E325412D233B362C608A63DFD9025E083E03707CC9D04",
+  "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim.",
+  "game_loading": "NOT_RUN"
+}

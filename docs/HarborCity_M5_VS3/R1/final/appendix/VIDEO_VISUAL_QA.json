@@ -1,0 +1,1047 @@
+{
+  "status": "ENCODED",
+  "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_031754_DF4B1CDB\\capture.mp4",
+  "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_031754_DF4B1CDB\\capture.json",
+  "duration_seconds": 142.506105,
+  "actual_capture_fps": 28.714559281512887,
+  "audio": {
+    "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_031754_DF4B1CDB\\game_audio.wav",
+    "bytes": 27369516,
+    "sha256": "18c83d8fd2bab59da4c124b524ebe1f7aef64e2f750bedf721e3a386295e156d",
+    "riff_complete": true,
+    "chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16,
+        "offset": 20
+      },
+      {
+        "id": "data",
+        "bytes": 27369472,
+        "offset": 44
+      }
+    ],
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "sample_frames": 6842368,
+    "duration_seconds": 142.54933333333332,
+    "rms_dbfs": -36.05158168577858,
+    "peak_normalized": 0.543670654296875,
+    "nonzero_samples": 13639913,
+    "clipped_samples": 0,
+    "windows": [
+      {
+        "start_seconds": 0.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.307828262909425,
+        "peak_normalized": 0.165008544921875
+      },
+      {
+        "start_seconds": 1.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.8551238966139,
+        "peak_normalized": 0.130035400390625
+      },
+      {
+        "start_seconds": 2.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -37.83726395032032,
+        "peak_normalized": 0.13037109375
+      },
+      {
+        "start_seconds": 3.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.671009715323784,
+        "peak_normalized": 0.25372314453125
+      },
+      {
+        "start_seconds": 4.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.58434136577077,
+        "peak_normalized": 0.150726318359375
+      },
+      {
+        "start_seconds": 5.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 6.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.64479607216802,
+        "peak_normalized": 0.184906005859375
+      },
+      {
+        "start_seconds": 7.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 8.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.677755876845985,
+        "peak_normalized": 0.153411865234375
+      },
+      {
+        "start_seconds": 9.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.99423187486893,
+        "peak_normalized": 0.137725830078125
+      },
+      {
+        "start_seconds": 10.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -44.47679834255382,
+        "peak_normalized": 0.063385009765625
+      },
+      {
+        "start_seconds": 11.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -36.153110389118645,
+        "peak_normalized": 0.161773681640625
+      },
+      {
+        "start_seconds": 12.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 13.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 14.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.99221036403127,
+        "peak_normalized": 0.143463134765625
+      },
+      {
+        "start_seconds": 15.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -37.73101642609771,
+        "peak_normalized": 0.076171875
+      },
+      {
+        "start_seconds": 16.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.72465962509016,
+        "peak_normalized": 0.16412353515625
+      },
+      {
+        "start_seconds": 17.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.76256402479569,
+        "peak_normalized": 0.167083740234375
+      },
+      {
+        "start_seconds": 18.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 19.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 20.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.75006904990273,
+        "peak_normalized": 0.15667724609375
+      },
+      {
+        "start_seconds": 21.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -37.363140539124444,
+        "peak_normalized": 0.14093017578125
+      },
+      {
+        "start_seconds": 22.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.30740646823042,
+        "peak_normalized": 0.15557861328125
+      },
+      {
+        "start_seconds": 23.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 24.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 25.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -32.4522766905928,
+        "peak_normalized": 0.175872802734375
+      },
+      {
+        "start_seconds": 26.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 27.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -31.259007499878805,
+        "peak_normalized": 0.17022705078125
+      },
+      {
+        "start_seconds": 28.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.519873369117064,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 29.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 30.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.30811897433446,
+        "peak_normalized": 0.17889404296875
+      },
+      {
+        "start_seconds": 31.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.102894489843045,
+        "peak_normalized": 0.166015625
+      },
+      {
+        "start_seconds": 32.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -31.637997275527788,
+        "peak_normalized": 0.16790771484375
+      },
+      {
+        "start_seconds": 33.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -37.25674646199639,
+        "peak_normalized": 0.08099365234375
+      },
+      {
+        "start_seconds": 34.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 35.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.80069334905093,
+        "peak_normalized": 0.163848876953125
+      },
+      {
+        "start_seconds": 36.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 37.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 38.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -30.78416470692865,
+        "peak_normalized": 0.1673583984375
+      },
+      {
+        "start_seconds": 39.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.090479767281366,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 40.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -32.85857427971867,
+        "peak_normalized": 0.175506591796875
+      },
+      {
+        "start_seconds": 41.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 42.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 43.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 44.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 45.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -30.78718087117437,
+        "peak_normalized": 0.174346923828125
+      },
+      {
+        "start_seconds": 46.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.09649384224299,
+        "peak_normalized": 0.173614501953125
+      },
+      {
+        "start_seconds": 47.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 48.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 49.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 50.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 51.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 52.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.534234390898185,
+        "peak_normalized": 0.16314697265625
+      },
+      {
+        "start_seconds": 53.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -30.07237781574848,
+        "peak_normalized": 0.170166015625
+      },
+      {
+        "start_seconds": 54.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -32.525820866419785,
+        "peak_normalized": 0.165679931640625
+      },
+      {
+        "start_seconds": 55.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.094056578792966,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 56.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.43848392364903,
+        "peak_normalized": 0.171478271484375
+      },
+      {
+        "start_seconds": 57.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 58.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 59.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.170618080760896,
+        "peak_normalized": 0.149810791015625
+      },
+      {
+        "start_seconds": 60.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.252132001843634,
+        "peak_normalized": 0.12921142578125
+      },
+      {
+        "start_seconds": 61.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 62.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 63.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 64.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 65.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 66.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 67.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 68.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.048576418184034,
+        "peak_normalized": 0.16754150390625
+      },
+      {
+        "start_seconds": 69.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.241446080110606,
+        "peak_normalized": 0.0404052734375
+      },
+      {
+        "start_seconds": 70.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 71.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.193867201400046,
+        "peak_normalized": 0.15673828125
+      },
+      {
+        "start_seconds": 72.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 73.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.56627867052437,
+        "peak_normalized": 0.15869140625
+      },
+      {
+        "start_seconds": 74.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -41.38759903108549,
+        "peak_normalized": 0.135955810546875
+      },
+      {
+        "start_seconds": 75.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 76.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.68601029899336,
+        "peak_normalized": 0.1558837890625
+      },
+      {
+        "start_seconds": 77.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 78.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -31.270499747973567,
+        "peak_normalized": 0.180511474609375
+      },
+      {
+        "start_seconds": 79.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.623453216323156,
+        "peak_normalized": 0.096923828125
+      },
+      {
+        "start_seconds": 80.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 81.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -32.23469152248193,
+        "peak_normalized": 0.16619873046875
+      },
+      {
+        "start_seconds": 82.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.99348589103584,
+        "peak_normalized": 0.170196533203125
+      },
+      {
+        "start_seconds": 83.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 84.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -21.345203812736525,
+        "peak_normalized": 0.543670654296875
+      },
+      {
+        "start_seconds": 85.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -24.369288423005308,
+        "peak_normalized": 0.452178955078125
+      },
+      {
+        "start_seconds": 86.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.26865519887789,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 87.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 88.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 89.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 90.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 91.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 92.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 93.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 94.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 95.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 96.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 97.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 98.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 99.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 100.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 101.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 102.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 103.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 104.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 105.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 106.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 107.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 108.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 109.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 110.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 111.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 112.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 113.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 114.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 115.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 116.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 117.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 118.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 119.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 120.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 121.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 122.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 123.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 124.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 125.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 126.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 127.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 128.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 129.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 130.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 131.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 132.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 133.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 134.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.27086132730258,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 135.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.096112389438204,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 136.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.449992388609274,
+        "peak_normalized": 0.052734375
+      },
+      {
+        "start_seconds": 137.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.42155748330365,
+        "peak_normalized": 0.032928466796875
+      },
+      {
+        "start_seconds": 138.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.568856718871984,
+        "peak_normalized": 0.022491455078125
+      },
+      {
+        "start_seconds": 139.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.269666136144565,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 140.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.712193514127804,
+        "peak_normalized": 0.027008056640625
+      },
+      {
+        "start_seconds": 141.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.419327924348984,
+        "peak_normalized": 0.039337158203125
+      },
+      {
+        "start_seconds": 142.0,
+        "sample_frames": 26368,
+        "rms_dbfs": -38.52435316525761,
+        "peak_normalized": 0.0474853515625
+      }
+    ],
+    "signal_present": true,
+    "listening_status": "NOT_RUN",
+    "sound_effect_quality": "USER_REVIEW",
+    "meaning": "PCM structure and measured signal only; neither proves every effect was heard or sounds appropriate"
+  },
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64003d",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuvj420p",
+        "level": 61,
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "2000/1",
+        "avg_frame_rate": "4092000/142519",
+        "time_base": "1/16000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 2280096,
+        "duration": "142.506000",
+        "bit_rate": "3890167",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "4092",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.8.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 6840293,
+        "duration": "142.506104",
+        "bit_rate": "191953",
+        "nb_frames": "6681",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_031754_DF4B1CDB\\capture.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "142.506104",
+      "size": "72903674",
+      "bit_rate": "4092662",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.6.100"
+      }
+    }
+  },
+  "timing": "native wall timestamps, VFR; no interpolation, synthetic replacement, speed change or extra terminal freeze",
+  "visual": "USER_REVIEW",
+  "listening": "NOT_RUN",
+  "leading_trim": {
+    "count": 0,
+    "reason": "explicitly inspected initial frames only; native source retained"
+  },
+  "capture_metadata_note": "Native viewport frame timestamps and submix sound. Consult attached launch/results for executable binding. Setup is A fixture; gameplay is B input; this video is not OS mouse proof.",
+  "decode_validation": "PASS_FULL_VIDEO_AND_AUDIO_DECODE",
+  "decode_command_note": "ffmpeg -xerror -fps_mode passthrough -enc_time_base:v 1:1000; exit0, no errors. First null-muxer validation used an unsuitable coarse timebase; original MP4 was not re-encoded.",
+  "output_bytes": 72903674
+}

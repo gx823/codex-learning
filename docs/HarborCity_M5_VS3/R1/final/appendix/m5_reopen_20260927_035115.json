@@ -1,0 +1,247 @@
+{
+  "status": "COMPLETE",
+  "mode": "m5_reopen",
+  "duration_seconds": 10.104265000671148,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.175712998956442
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_full_20260927_034351",
+      "elapsed_seconds": 3.1764384992420673
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.188627500087023
+    },
+    {
+      "name": "M5 scene prerequisites",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual M5 director, six authored targets, combat and real application focus",
+      "actual": "mode=0 pawn=BP_TownHero_C_2147482313 speed=0.001 km/h characterCount=1",
+      "elapsed_seconds": 3.1951977014541626
+    },
+    {
+      "name": "M5 actual purchased Selestia player mesh",
+      "status": "PASS",
+      "evidence_level": "A-runtime asset identity; not visual approval",
+      "expected": "private Selestia mesh in the real possessed character; rejected procedural heroes excluded",
+      "actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp.SKM_Selestia_Warp",
+      "elapsed_seconds": 3.196196600794792
+    },
+    {
+      "name": "M5 active animation matches combat configured class",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "Selestia AnimBP active without old combat class override",
+      "actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/ABP_TownFlight.ABP_TownFlight_C",
+      "elapsed_seconds": 3.203338999301195
+    },
+    {
+      "name": "M5 original proportions and normalized bind units",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "247 original bones; town adds 3 virtual IK bones; unit bind scales; uniform mesh scale 1.25",
+      "actual": "scale=X=1.250 Y=1.250 Z=1.250 bones=250 unit_binds=1",
+      "elapsed_seconds": 3.2038190998136997
+    },
+    {
+      "name": "M5 first-person camera uses original eye height",
+      "status": "PASS",
+      "evidence_level": "A-runtime; no head-animation camera inheritance",
+      "expected": "original eye reference 117.164879cm * 1.25 - mesh offset 89cm",
+      "actual": "57.4561",
+      "elapsed_seconds": 3.204194601625204
+    },
+    {
+      "name": "M5 restart restores the actual saved view preference",
+      "status": "PASS",
+      "evidence_level": "A-disk and runtime",
+      "expected": "compare live perspective to the previous process isolated _Views file; never reset it",
+      "actual": "file_present=1 live_first_person=0 saved_on_foot=0",
+      "elapsed_seconds": 3.210623800754547
+    },
+    {
+      "name": "M5 fresh isolated initial state",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "fresh Contact and unarmed; persisted view preference retained before Load",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Contact\",\r\n\t\"chapter\": \"01 · 寄给明天的包裹\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_Contact\",\r\n\t\"target_location\": \"X=-4650.000 Y=-4450.000 Z=94.952\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 3.0153582096099854,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\"\r\n\t]\r\n}",
+      "elapsed_seconds": 3.217551600188017
+    },
+    {
+      "name": "M5 unchanged base look gains",
+      "status": "PASS",
+      "evidence_level": "A-readback",
+      "expected": "on-foot1.5; driving1.125=0.75 base",
+      "actual": "X=1.500 Y=1.500 / X=1.125 Y=1.125",
+      "elapsed_seconds": 3.2241781018674374
+    },
+    {
+      "name": "M5 disk checkpoint exists before Load",
+      "status": "PASS",
+      "evidence_level": "A-disk prerequisite",
+      "expected": "actual previous-process checkpoint; route mode requires both actors outside legacy bounds; never synthesized",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_full_20260927_034351",
+      "elapsed_seconds": 4.1910188011825085
+    },
+    {
+      "name": "Fresh-process restored checkpoint stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Complete",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": false,\r\n\t\"target_id\": \"None\",\r\n\t\"target_location\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 6.3394041061401367,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"4.156 save_imported stage=M5.Signal.Complete\"\r\n\t]\r\n} status=读取成功：玩家、车辆、照明、任务和路人状态已恢复。 vehicle=safe; ",
+      "elapsed_seconds": 6.509249400347471
+    },
+    {
+      "name": "Fresh-process restored checkpoint story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "completed story has no target",
+      "actual": "None X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 6.5107555985450745
+    },
+    {
+      "name": "M5 restart restored playable checkpoint",
+      "status": "PASS",
+      "evidence_level": "B-Action + A-readback",
+      "expected": "one live player; expected completion flag restored through Load Action",
+      "actual": "mode=0 pawn=BP_TownHero_C_2147482313 speed=0.000 km/h characterCount=1",
+      "elapsed_seconds": 6.815168000757694
+    },
+    {
+      "name": "M5 restart retains expected victories",
+      "status": "PASS",
+      "evidence_level": "B-Action + A-readback",
+      "expected": "route has zero victories; completed checkpoint has two and no repeat enemies",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": false,\r\n\t\"target_id\": \"None\",\r\n\t\"target_location\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 6.6448225975036621,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"4.156 save_imported stage=M5.Signal.Complete\"\r\n\t]\r\n}",
+      "elapsed_seconds": 6.81755879893899
+    },
+    {
+      "name": "M5 corrected citizen remains restorable after restart",
+      "status": "PASS",
+      "evidence_level": "A-runtime validation",
+      "expected": "unmodified production NPC stand/save validation passes after disk restore",
+      "actual": "X=-950.000 Y=-9950.000 Z=91.802",
+      "elapsed_seconds": 6.826834298670292
+    },
+    {
+      "name": "Restored checkpoint ambience music mode and bounded players",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio state",
+      "expected": "private playlist: all playing channels resolve only to the two private tracks; no legacy scene-mode music",
+      "actual": "{\r\n\t\"requested_mode\": 1,\r\n\t\"current_mode\": 1,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 8.652155876159668,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 8.822509501129389
+    },
+    {
+      "name": "Both side quests survive fresh-process Load",
+      "status": "FAIL",
+      "evidence_level": "B-Action Load + A readback",
+      "expected": "both Complete",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+      "elapsed_seconds": 8.92641520127654
+    },
+    {
+      "name": "m5_reopened_completion actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_full_20260927_034351/User/Saved/M5Tests/20260927_035118_m5_reopen/m5_reopened_completion.png bytes=2674396 pending=0",
+      "elapsed_seconds": 10.089043699204922
+    },
+    {
+      "name": "M3 final screenshot file m5_reopened_completion.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_full_20260927_034351/User/Saved/M5Tests/20260927_035118_m5_reopen/m5_reopened_completion.png bytes=2674396 pending=0",
+      "elapsed_seconds": 10.0918428003788
+    }
+  ],
+  "failures": 1,
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_full_20260927_034351\\User\\Saved\\M5Tests\\20260927_035118_m5_reopen\\results.json",
+  "launch": {
+    "status": "RUNNING",
+    "pid": 24856,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_full_20260927_034351\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_reopen",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_full_20260927_034351",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_reopen_20260927_035115\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=2",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+    ],
+    "started": "2026-09-27T03:51:15.5890220+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+  },
+  "exit": {
+    "status": "EXITED",
+    "pid": 24856,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_full_20260927_034351\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_reopen",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_full_20260927_034351",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_reopen_20260927_035115\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=2",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+    ],
+    "started": "2026-09-27T03:51:15.5890220+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+    "exit_code": 0,
+    "ended": "2026-09-27T03:51:30.6006229+08:00"
+  },
+  "memory": {
+    "private_bytes": 4785369088,
+    "working_set_bytes": 1865273344,
+    "process_peak_working_set_bytes": 1883987968,
+    "scope": "process sample every 3 seconds; not machine-wide committed memory"
+  }
+}

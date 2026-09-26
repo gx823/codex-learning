@@ -1,0 +1,311 @@
+{
+  "status": "COMPLETE",
+  "mode": "m5_vs3_r1_falls",
+  "duration_seconds": 78.97794810310006,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.2171465009450912
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_falls_20260927_032019",
+      "elapsed_seconds": 3.2180051021277905
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.2292165011167526
+    },
+    {
+      "name": "Fall fixture starts on actual permitted stand",
+      "status": "PASS",
+      "evidence_level": "A read-only fixture precondition",
+      "expected": "authored adult post passes unchanged get-up stand query",
+      "actual": "id=VS2_Citizen06 point=X=2150.000 Y=-9950.000 Z=92.000 primary=1 clips=4",
+      "elapsed_seconds": 6.228419903665781
+    },
+    {
+      "name": "Punch living knockdown via input",
+      "status": "PASS",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen06\",\r\n\t\"health\": 50,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": true,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 1,\\r\\n\\t\\\"counter_hits\\\": 1,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 1,\\r\\n\\t\\\"counter_sweeps\\\": 1,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 4,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 2,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_C_Spine\",\r\n\t\"last_damage\": 25\r\n}\nPHYSICAL={\r\n\t\"living_physics_active\": true,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": 0,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/GetUp/Batch_b1fd11ec41b0/Animations/M_ragdoll_getup_stand_B_NPCRGetUp.M_ragdoll_getup_stand_B_NPCRGetUp\",\r\n\t\"physical_location_cm\": \"V(X=2149.40, Y=-9952.32, Z=97.90)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(X=2150.00, Y=-9950.00, Z=91.80)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"physical_root_bone\": \"J_Bip_C_Hips\",\r\n\t\"physics_transform_update_mode\": 0,\r\n\t\"mesh_attach_parent\": \"/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown.L_HarborTown:PersistentLevel.BP_NPCIdleR2_R_C_7.CollisionCylinder\",\r\n\t\"last_recovery_attach_succeeded\": false,\r\n\t\"recovery_expected_mesh_world\": \"0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000\",\r\n\t\"recovery_reference_body_drift_cm\": 0,\r\n\t\"recovery_body_before_reference_cm\": \"V(0)\",\r\n\t\"recovery_body_after_reference_cm\": \"V(0)\",\r\n\t\"pelvis_body_simulating\": false,\r\n\t\"visible_pelvis_socket_cm\": \"V(X=2149.40, Y=-9952.32, Z=97.90)\",\r\n\t\"actual_pelvis_body_cm\": \"V(X=2149.40, Y=-9952.32, Z=97.90)\",\r\n\t\"mesh_world_transform\": \"2148.541091,-9951.605266,-0.801952|-0.000000,-180.000000,0.000000|1.000000,1.000000,1.000000\",\r\n\t\"mesh_relative_transform\": \"0.000000,0.000000,-92.801952|0.000000,-90.000000,0.000000|1.000000,1.000000,1.000000\",\r\n\t\"root_body_awake\": false,\r\n\t\"pelvis_body_awake\": false,\r\n\t\"pelvis_physics_blend_weight\": 0,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 1,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 9.429725900292397
+    },
+    {
+      "name": "R1_Fall_Punch actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Punch.png bytes=3187806 pending=0",
+      "elapsed_seconds": 10.567897100001574
+    },
+    {
+      "name": "Punch living recovery finishes",
+      "status": "PASS",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": 0,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/GetUp/Batch_b1fd11ec41b0/Animations/M_ragdoll_getup_stand_B_NPCRGetUp.M_ragdoll_getup_stand_B_NPCRGetUp\",\r\n\t\"physical_location_cm\": \"V(X=2381.68, Y=-9955.56, Z=103.83)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 1,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"LANDED_GROUND_CAPSULE_NAV_VALID\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(X=2192.95, Y=-9989.58, Z=92.00)\",\r\n\t\"last_stand_center_cm\": \"V(X=2192.95, Y=-9989.58, Z=91.80)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"physical_root_bone\": \"J_Bip_C_Hips\",\r\n\t\"physics_transform_update_mode\": 0,\r\n\t\"mesh_attach_parent\": \"/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown.L_HarborTown:PersistentLevel.BP_NPCIdleR2_R_C_7.CollisionCylinder\",\r\n\t\"last_recovery_attach_succeeded\": true,\r\n\t\"recovery_expected_mesh_world\": \"0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000\",\r\n\t\"recovery_reference_body_drift_cm\": 0,\r\n\t\"recovery_body_before_reference_cm\": \"V(0)\",\r\n\t\"recovery_body_after_reference_cm\": \"V(0)\",\r\n\t\"pelvis_body_simulating\": false,\r\n\t\"visible_pelvis_socket_cm\": \"V(X=2381.68, Y=-9955.56, Z=103.83)\",\r\n\t\"actual_pelvis_body_cm\": \"V(X=2381.68, Y=-9955.56, Z=103.83)\",\r\n\t\"mesh_world_transform\": \"2381.130724,-9955.655712,-0.801952|-0.000000,-79.779676,0.000000|1.000000,1.000000,1.000000\",\r\n\t\"mesh_relative_transform\": \"0.000000,0.000000,-92.801952|0.000000,-90.000000,0.000000|1.000000,1.000000,1.000000\",\r\n\t\"root_body_awake\": false,\r\n\t\"pelvis_body_awake\": false,\r\n\t\"pelvis_physics_blend_weight\": 0,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 18.67387270182371
+    },
+    {
+      "name": "Fall fixture starts on actual permitted stand",
+      "status": "FAIL",
+      "evidence_level": "A read-only fixture precondition",
+      "expected": "authored adult post passes unchanged get-up stand query",
+      "actual": "id=VS2_Citizen07 point=X=2150.000 Y=-9950.000 Z=92.000 primary=1 clips=4",
+      "elapsed_seconds": 19.598966002464294
+    },
+    {
+      "name": "Heavy living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen07\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n}\nPHYSICAL={\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2130.24, Y=-9949.76, Z=100.41)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 23.334933001548052
+    },
+    {
+      "name": "R1_Fall_Heavy actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Heavy.png bytes=2777729 pending=0",
+      "elapsed_seconds": 24.496523201465607
+    },
+    {
+      "name": "Heavy living recovery finishes",
+      "status": "FAIL",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2129.32, Y=-9949.76, Z=100.43)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 32.604031801223755
+    },
+    {
+      "name": "Fall fixture starts on actual permitted stand",
+      "status": "FAIL",
+      "evidence_level": "A read-only fixture precondition",
+      "expected": "authored adult post passes unchanged get-up stand query",
+      "actual": "id=VS2_Citizen08 point=X=2150.000 Y=-9950.000 Z=92.000 primary=1 clips=4",
+      "elapsed_seconds": 33.507988803088665
+    },
+    {
+      "name": "Gun living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen08\",\r\n\t\"health\": 66,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 1,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 12,\r\n\t\"panic_path_failures\": 10,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"BP_TownHero_C_2147482313\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 9.8775440007448196\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 11.14301709830761,\r\n\t\"damage_events\": 1,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_R_UpperLeg\",\r\n\t\"last_damage\": 34\r\n}\nPHYSICAL={\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2380.67, Y=-9950.85, Z=102.49)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 37.29444910213351
+    },
+    {
+      "name": "R1_Fall_Gun actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Gun.png bytes=2943331 pending=0",
+      "elapsed_seconds": 38.42756840214133
+    },
+    {
+      "name": "Gun living recovery finishes",
+      "status": "FAIL",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=1918.69, Y=-9949.72, Z=103.89)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 46.53518230095506
+    },
+    {
+      "name": "Fall fixture starts on actual permitted stand",
+      "status": "FAIL",
+      "evidence_level": "A read-only fixture precondition",
+      "expected": "authored adult post passes unchanged get-up stand query",
+      "actual": "id=VS2_Citizen09 point=X=2150.000 Y=-9950.000 Z=92.000 primary=1 clips=4",
+      "elapsed_seconds": 47.44776310026646
+    },
+    {
+      "name": "Magic living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen09\",\r\n\t\"health\": 70,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 1,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 15,\r\n\t\"panic_path_failures\": 15,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"BP_TownHero_C_2147482313\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 8.5418007001280785\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 8.5418007001280785,\r\n\t\"damage_events\": 1,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Back\",\r\n\t\"last_hit_bone\": \"J_Bip_L_LowerArm\",\r\n\t\"last_damage\": 30\r\n}\nPHYSICAL={\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2150.29, Y=-9947.55, Z=100.40)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 53.49772620201111
+    },
+    {
+      "name": "R1_Fall_Magic actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Magic.png bytes=2961762 pending=0",
+      "elapsed_seconds": 54.65897450223565
+    },
+    {
+      "name": "Magic living recovery finishes",
+      "status": "FAIL",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2150.54, Y=-9947.75, Z=100.41)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 62.774418503046036
+    },
+    {
+      "name": "Fall fixture starts on actual permitted stand",
+      "status": "FAIL",
+      "evidence_level": "A read-only fixture precondition",
+      "expected": "authored adult post passes unchanged get-up stand query",
+      "actual": "id=VS2_Citizen10 point=X=2150.000 Y=-9950.000 Z=92.000 primary=1 clips=4",
+      "elapsed_seconds": 62.794939301908016
+    },
+    {
+      "name": "Vehicle living knockdown via input",
+      "status": "FAIL",
+      "evidence_level": "B Action plus A fixture; naturalness requires video",
+      "expected": "surviving actual damage/contact followed by active fall",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen10\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n}\nPHYSICAL={\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2150.34, Y=-9729.11, Z=104.03)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 69.36346600204706
+    },
+    {
+      "name": "R1_Fall_Vehicle actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Vehicle.png bytes=2941425 pending=0",
+      "elapsed_seconds": 70.5331509001553
+    },
+    {
+      "name": "Vehicle living recovery finishes",
+      "status": "FAIL",
+      "evidence_level": "A readback of B input consequence",
+      "expected": "alive and out of fall after natural clip duration",
+      "actual": "{\r\n\t\"living_physics_active\": false,\r\n\t\"recovering\": false,\r\n\t\"pre_impact_reaction_pending\": false,\r\n\t\"pre_impact_reaction_seconds_at_handover\": 0,\r\n\t\"authored_getup_enabled\": true,\r\n\t\"authored_getup_pose_data_verified\": true,\r\n\t\"getup_stage\": 0,\r\n\t\"getup_clip_index\": -1,\r\n\t\"getup_result\": \"\",\r\n\t\"getup_alignment_error_cm\": 0,\r\n\t\"getup_end_hips_error_cm\": 0,\r\n\t\"getup_direction_score\": 0,\r\n\t\"getup_montage_position_s\": 0,\r\n\t\"authored_getup_completions\": 0,\r\n\t\"getup_montage_end_observed\": false,\r\n\t\"getup_clip\": \"\",\r\n\t\"physical_location_cm\": \"V(X=2150.21, Y=-9729.55, Z=103.93)\",\r\n\t\"impact_events\": 0,\r\n\t\"whole_person_impulse_events\": 0,\r\n\t\"recovery_events\": 0,\r\n\t\"blocked_recovery_checks\": 0,\r\n\t\"emergency_recoveries\": 0,\r\n\t\"recovery_interruptions\": 0,\r\n\t\"last_contact_serial\": 0,\r\n\t\"source\": \"None\",\r\n\t\"closing_speed_cm_s\": 0,\r\n\t\"damage\": 0,\r\n\t\"simulated_mass_kg\": 0,\r\n\t\"distributed_body_count\": 0,\r\n\t\"whole_person_impulse_kg_cm_s\": \"V(0)\",\r\n\t\"delta_v_cm_s\": \"V(0)\",\r\n\t\"max_body_speed_cm_s\": 0,\r\n\t\"max_body_angular_rad_s\": 0,\r\n\t\"last_recovery_reason\": \"\",\r\n\t\"last_emergency_source\": \"\",\r\n\t\"last_landing_pelvis_cm\": \"V(0)\",\r\n\t\"last_stand_center_cm\": \"V(0)\",\r\n\t\"recovery_animation\": \"direction_selected_authored_root_motion_getup\",\r\n\t\"damage_threshold_cm_s\": 180,\r\n\t\"knockdown_threshold_cm_s\": 360,\r\n\t\"horizontal_delta_v_limit_cm_s\": 1250,\r\n\t\"minimum_down_seconds\": 1.25,\r\n\t\"stable_seconds\": 0.55000001192092896,\r\n\t\"recovery_blend_seconds\": 0.64999997615814209,\r\n\t\"emergency_recovery_seconds\": 30,\r\n\t\"scene_npc_population_bound\": 19,\r\n\t\"living_simulators\": 0,\r\n\t\"awake_living_bodies\": 0,\r\n\t\"recovery_check_interval_seconds\": 0.40000000000000002,\r\n\t\"living_ragdoll_uses_corpse_ttl_or_cap\": false\r\n}",
+      "elapsed_seconds": 78.64059340208769
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Punch.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Punch.png bytes=3187806 pending=0",
+      "elapsed_seconds": 78.89155580103397
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Heavy.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Heavy.png bytes=2777729 pending=0",
+      "elapsed_seconds": 78.91209660097957
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Gun.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Gun.png bytes=2943331 pending=0",
+      "elapsed_seconds": 78.92875170335174
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Magic.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Magic.png bytes=2961762 pending=0",
+      "elapsed_seconds": 78.9452501013875
+    },
+    {
+      "name": "M3 final screenshot file R1_Fall_Vehicle.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_falls_20260927_032019/User/Saved/M5Tests/20260927_032022_m5_vs3_r1_falls/R1_Fall_Vehicle.png bytes=2941425 pending=0",
+      "elapsed_seconds": 78.96363190189004
+    }
+  ],
+  "failures": 12,
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_falls_20260927_032019\\User\\Saved\\M5Tests\\20260927_032022_m5_vs3_r1_falls\\results.json",
+  "launch": {
+    "status": "RUNNING",
+    "pid": 12992,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_falls_20260927_032019\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs3_r1_falls",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_falls_20260927_032019",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_falls_20260927_032019\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=2",
+      "-M5PublicCapture",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+      "-R1GateCapture",
+      "-HCM4RecordSeconds=180",
+      "-HCM3RecordDelay=6"
+    ],
+    "started": "2026-09-27T03:20:19.5524575+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+  },
+  "exit": {
+    "status": "EXITED",
+    "pid": 12992,
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "kind": "STANDALONE_PACKAGE",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_falls_20260927_032019\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs3_r1_falls",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_falls_20260927_032019",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_falls_20260927_032019\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-R1Trace",
+      "-M5Quality=2",
+      "-M5PublicCapture",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+      "-R1GateCapture",
+      "-HCM4RecordSeconds=180",
+      "-HCM3RecordDelay=6"
+    ],
+    "started": "2026-09-27T03:20:19.5524575+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+    "exit_code": 0,
+    "ended": "2026-09-27T03:21:43.7036093+08:00"
+  },
+  "memory": {
+    "private_bytes": 4946595840,
+    "working_set_bytes": 1893449728,
+    "process_peak_working_set_bytes": 1898610688,
+    "scope": "process sample every 3 seconds; not machine-wide committed memory"
+  }
+}

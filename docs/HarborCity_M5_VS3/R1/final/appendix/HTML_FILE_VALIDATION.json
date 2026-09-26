@@ -1,0 +1,6 @@
+{
+  "status": "PASS_LOCAL_LINKS",
+  "links": 58,
+  "browser_render": "NOT_RUN_LOCAL_FILE_POLICY",
+  "video": "separate Release asset; place MP4 in final directory after extracting ZIP"
+}

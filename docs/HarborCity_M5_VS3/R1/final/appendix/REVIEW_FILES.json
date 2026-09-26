@@ -1,0 +1,477 @@
+[
+  {
+    "path": "final/CONTROLS.md",
+    "size": 1415,
+    "sha256": "3376d6da3699cb84e73d1f33256883754513ab5cce9c9b8685b296cb990fd588"
+  },
+  {
+    "path": "final/PERFORMANCE.md",
+    "size": 1164,
+    "sha256": "2f9e4be445dca6f0ed5e99d62aec95f063206f146b3b5f9ae328be7ee3a0c207"
+  },
+  {
+    "path": "final/README.md",
+    "size": 338,
+    "sha256": "d655cb7f1f3a0ea92e4704fc2efa2ace46c54b2e580f3333da38e1d3e6929305"
+  },
+  {
+    "path": "final/RECORDING_POLICY.md",
+    "size": 2067,
+    "sha256": "434f313e3302276ccdfb800fbc39fc24137e22fa46552457c4fa1fb53aeb53ec"
+  },
+  {
+    "path": "final/STATUS.md",
+    "size": 5418,
+    "sha256": "a9fad009073158b768316da7505e41dac1147b26fbe41ca2158ba294507945dd"
+  },
+  {
+    "path": "final/appendix/BUILD_BINDING.json",
+    "size": 828,
+    "sha256": "418352e49639e1a22e704f34d04f4a7ad52f372db19a6cc61640ec537e37bfc4"
+  },
+  {
+    "path": "final/appendix/BUILD_BINDING_PRE_MEDIA_POLICY.json",
+    "size": 865,
+    "sha256": "7c7f82b57ffdbecff7cafc711bece68a3938a464cf4561d29b06d3910a5d4ef6"
+  },
+  {
+    "path": "final/appendix/BUILD_SUMMARY.json",
+    "size": 3049,
+    "sha256": "0ed135aac10593f86c65107f942140711e6774046caf2e89c65466a6c13761f6"
+  },
+  {
+    "path": "final/appendix/COMPARISON_SOURCES.json",
+    "size": 3921,
+    "sha256": "bb35bd25bc3f1ad0c62d73a98d8667c700ec8cb95c381bfc887239f8602da1f2"
+  },
+  {
+    "path": "final/appendix/ENCRYPTION_VERIFICATION.json",
+    "size": 428,
+    "sha256": "752ed860805f6e6f27260bfb508fe04e86742f049359713a2e8f9a1ad1d5df56"
+  },
+  {
+    "path": "final/appendix/falls_03_sequence.jpg",
+    "size": 169791,
+    "sha256": "f1f986eee31cca26d38ec39b4f15e37e2b6501849b786b914c7c846da0f0af8e"
+  },
+  {
+    "path": "final/appendix/FALLS_ATTEMPT_01.json",
+    "size": 31260,
+    "sha256": "2801fd5d1f9c65090a8b8f9b9a5a7b4f65b37d5cac3248efa44be8887be96d4b"
+  },
+  {
+    "path": "final/appendix/FINAL_IMAGE_SOURCES.json",
+    "size": 8435,
+    "sha256": "915789d4b14ca2f0ca0e36e4204c6244685f57c6794baa2835292ff6f0ab427c"
+  },
+  {
+    "path": "final/appendix/FINAL_RESULTS.json",
+    "size": 11506,
+    "sha256": "daf48b13c2aa443101ae091729e0618effcfef583ccdee47445a578d875c4633"
+  },
+  {
+    "path": "final/appendix/FINAL_SUITE.json",
+    "size": 2744,
+    "sha256": "a20403e616c4c6cc6a1bbbeb6b7c69d0bd348452e16f4da18ba06a44ae062d8d"
+  },
+  {
+    "path": "final/appendix/final_video_contact.jpg",
+    "size": 175421,
+    "sha256": "72ba5530bcb703e15483b2cf30c3f971ecf8e52788274a793e7f3a2a7d6ced09"
+  },
+  {
+    "path": "final/appendix/FINAL_VIDEO_QA.json",
+    "size": 5604,
+    "sha256": "e815cf939e1c51d8c4d39b947477238db0077087f608546b32997d65b7ea2a41"
+  },
+  {
+    "path": "final/appendix/final_visual_details.jpg",
+    "size": 104347,
+    "sha256": "993d0805c110a25f23c7cbbde31ecf49fbe5eedba9f568096a006aa6f2516c11"
+  },
+  {
+    "path": "final/appendix/GROUND_MASK_PROVENANCE.json",
+    "size": 3039,
+    "sha256": "53ad26d97635768a1970d001ea3e1c2ff927fd933daefd161cf2625f7a3327d1"
+  },
+  {
+    "path": "final/appendix/HTML_FILE_VALIDATION.json",
+    "size": 193,
+    "sha256": "41e77d3efe6f9fa060bf208530c95ace976b311e4f4f316c43ecfb64d043902d"
+  },
+  {
+    "path": "final/appendix/m5_full_20260927_034351.json",
+    "size": 145004,
+    "sha256": "14f8626d9c9859135fb7d872cbbbbb69c65952fabcc6eeca907642fdb7dd7bf7"
+  },
+  {
+    "path": "final/appendix/m5_reopen_20260927_035115.json",
+    "size": 16738,
+    "sha256": "f2b8ea10b492e795a0acec0fe619559b3679a1a83471148685be6c68837f188a"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_falls_20260927_024811.json",
+    "size": 34906,
+    "sha256": "afb859fac58efe6d4e3ba34946aae86d51fcfbee3e34bbbcb48202e41760b63a"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_falls_20260927_025822.json",
+    "size": 48365,
+    "sha256": "cf16b42425b6b24b4313de8577bdf2f61821aa73bef34b0cce0be6350b749d22"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_falls_20260927_032019.json",
+    "size": 48770,
+    "sha256": "fed05a6574e5fdb9418aef3b06e94e19b9f65a8f3ef94bccf366323903985c51"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_gate_20260926_155235.json",
+    "size": 20764,
+    "sha256": "6c176c52cc554835c3715d7de849db8274e8b04ac58f0616c27cde972ee827af"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_gate_20260926_160116.json",
+    "size": 23360,
+    "sha256": "bbf4cfe78d493fedd5251643b9a824a1448a304f4a0dbc157863caa2a2892b17"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_gate_20260926_160503.json",
+    "size": 17861,
+    "sha256": "3c7202efeb0a4d8f259254362b74f1d5ce6d8d94f8f79c5c73f3d68c7a942335"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_gate_20260926_161938.json",
+    "size": 23712,
+    "sha256": "fba4cf7c9c1d77457e861239647860535d6540878c681cf91661399dbf9e354b"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_gate_20260926_162544.json",
+    "size": 24358,
+    "sha256": "1a54c261986365c4c838052b091bf8f8a3925a973cefed9f55ec0b53b43702f3"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_logic_20260926_153726.json",
+    "size": 6128,
+    "sha256": "4671ebf10b02d87bfe72bc822ceb873e1584d60e3064979f5cac4c41a4809fb7"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_logic_20260926_155002.json",
+    "size": 7075,
+    "sha256": "324ec43bef3b916cc1939535bb84096a0b78983d79244edb9fcce71caf781d62"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_manual_20260927_025143.json",
+    "size": 4680,
+    "sha256": "5c101eaad1da334a7336d25b18ed17ab1b0405d88e29443c7cf567e287c8aa58"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_motion_20260926_152527.json",
+    "size": 36327,
+    "sha256": "014059feaa84d67fe21acb1adcb8dec716b8db170b8ca438efffa71fe47d344a"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_motion_20260926_153516.json",
+    "size": 36358,
+    "sha256": "aef47eb963d9435db96824770b6b406f4997626188a07fb7a2adf5f1fe44eb19"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_visual_20260927_022517.json",
+    "size": 36767,
+    "sha256": "f23c539a3d01d96e80893792a36e2f9ffd9d9f1096c31170489dbe7ca27f8424"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_visual_20260927_031457.json",
+    "size": 36779,
+    "sha256": "1c39ec3cfe624f67e34ca964eefed5861b746f9b3cd48c9bb84698cbef54ee2f"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_visual_20260927_031740.json",
+    "size": 37023,
+    "sha256": "a2b7e4e9c769de9a429bc4f99530d8872e61eddf3bc11cf57f75635e5f8e3f03"
+  },
+  {
+    "path": "final/appendix/m5_vs3_r1_visual_20260927_033743.json",
+    "size": 36981,
+    "sha256": "7c107a001fd54a52bbc96cf22e291511d14e7203bdf322ea54b9dde942147170"
+  },
+  {
+    "path": "final/appendix/MEDIA_ONLY_BUILD_DELTA.json",
+    "size": 548,
+    "sha256": "d7dacab43c9248427ce477f7557f2fc149d897f7b9e3bdc7d596784cc12b699f"
+  },
+  {
+    "path": "final/appendix/MOTION_SOURCE_INDEX.json",
+    "size": 11400,
+    "sha256": "47842b96c2c3a29befde0deaa0adb188256c2aec547dad694960571132ebd079"
+  },
+  {
+    "path": "final/appendix/NETWORK_RUNTIME.json",
+    "size": 265,
+    "sha256": "4a60b77a5769e571436913c9a2103522e6f8cb498b9b13ea5b5243fd62779911"
+  },
+  {
+    "path": "final/appendix/OS_INPUT_RESULTS.json",
+    "size": 1347,
+    "sha256": "84904022874ccfd807bca2316896feac2d0185175f9829cc89dadf2e48c2900b"
+  },
+  {
+    "path": "final/appendix/OS_MOUSE_READBACK.csv",
+    "size": 77959,
+    "sha256": "d45fe5ce312cc147223c48317e43c8eaf41d2e3f7d8fb22a21781ae1a2469e6c"
+  },
+  {
+    "path": "final/appendix/PASSENGER_PRIOR_ATTEMPTS.json",
+    "size": 3831,
+    "sha256": "d3a6306c20fda6fd3400d754b3033b1ee106d1fe50e6a6f8294ed223b44d3570"
+  },
+  {
+    "path": "final/appendix/PERFORMANCE.json",
+    "size": 4425,
+    "sha256": "2785340dbb10be68e1e1f9986cb5056cf2487b0f2485dcf8700285b8015e18f5"
+  },
+  {
+    "path": "final/appendix/perf_20260927_032143.json",
+    "size": 8189,
+    "sha256": "a4eda7edae2b19c11ff008faba2e81ccfe1d0871a048abe32cb17471681a6348"
+  },
+  {
+    "path": "final/appendix/perf_20260927_032323.json",
+    "size": 8185,
+    "sha256": "7e53557ee2270a4aca902a2ce89e0335cbb758dc244be69a4d1829e628eb87e1"
+  },
+  {
+    "path": "final/appendix/POST_GATE_ITEMS.json",
+    "size": 4351,
+    "sha256": "c3bb24b8668893f70a0e52010d1c03616f2a76543743642c1cf3b8efd2518b74"
+  },
+  {
+    "path": "final/appendix/PRE_MEDIA_POLICY_SUITE.json",
+    "size": 1429,
+    "sha256": "ced77b515e82af504a04ef11625e58143958c68d4ed002dcf2bbe708ce442380"
+  },
+  {
+    "path": "final/appendix/RECORDING_CHANGED_FILES.json",
+    "size": 1538,
+    "sha256": "4b9b07e209c51da7d6b1904c19ce054671870495a5de9489418c372756fd20ea"
+  },
+  {
+    "path": "final/appendix/RECORDING_CLEANUP_INVENTORY.json",
+    "size": 1882,
+    "sha256": "742874ec4de695002f0251a8ffb34ea85e2cc2f89ca7241d37c6181220b0e3a5"
+  },
+  {
+    "path": "final/appendix/RECORDING_STORAGE_RESULTS.json",
+    "size": 3001,
+    "sha256": "a2e1fd6c4138a29a625b1187bd32140ee1ad54fc0cc56bbc926e3cd4389313b6"
+  },
+  {
+    "path": "final/appendix/RUN_INDEX.json",
+    "size": 13585,
+    "sha256": "2c02dda2a1c914b499648d216b6fd26158bd289339e70ffc1a5ea2c8c16fcae5"
+  },
+  {
+    "path": "final/appendix/SFX_PROVENANCE.json",
+    "size": 6571,
+    "sha256": "a819b8cdeb0a5a1301b797d838df0f0fbe86353be80af8e8c776bbe938de05d8"
+  },
+  {
+    "path": "final/appendix/SOURCE_CHANGES.patch",
+    "size": 120982,
+    "sha256": "d0772c353cb000dbe974e79fc9731524201e419d2b28372c5f0c7df926d33f7d"
+  },
+  {
+    "path": "final/appendix/SOURCE_MANIFEST.json",
+    "size": 3571,
+    "sha256": "7d10d106203df2812c67c573878b5843b720ccabd03048a355a8dcd4b0d1c8e7"
+  },
+  {
+    "path": "final/appendix/TEST_ASSERTION_CHANGES.json",
+    "size": 2351,
+    "sha256": "eba23f839baa66e6a3b2541991511a17de2b53d945fffc37523d1b15ee0eefee"
+  },
+  {
+    "path": "final/appendix/VIDEO_VISUAL_QA.json",
+    "size": 30707,
+    "sha256": "9f104836b3e710722e8d0472c0323703462fb1232b02ae81c1f4d6cb92360450"
+  },
+  {
+    "path": "final/appendix/VISUAL_PREFLIGHT_01.json",
+    "size": 33539,
+    "sha256": "a7a1dda9c34b735e695a9055c0ea2f295fb05f43bad796939020bf65adcd9ef6"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_01_SwordCombo.png",
+    "size": 3379787,
+    "sha256": "79272ddf78d93a97c8d76614f4d1b2a6806f956a2a82be8f6f99a9d1f2e32203"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_02_SwordCombo.png",
+    "size": 3395989,
+    "sha256": "7e569a2763236a2c8398d6bcc44358e0fd1a56dc4802a973f6f32f59488b98e7"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_03_SwordCombo.png",
+    "size": 3435774,
+    "sha256": "6f32631bd602920438f5e561f0ccdc1556db57e7696d93c405dc900dbee536fb"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_04_SwordHeavy.png",
+    "size": 3449965,
+    "sha256": "627199f498d065e6b8d11e352f7c2cd018c70c710e31c4c92d655787d6a68d4c"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_05_SwordRun.png",
+    "size": 3489213,
+    "sha256": "0a81d9780884551cec7f8c49815ba999317a27c86b1f727d92366ce62bee5896"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_06_BoltTarget.png",
+    "size": 2995631,
+    "sha256": "1e2092cdcf2fecc6e36ed12f25d67bf6c94c9cc73649d4638c206fd9f96ae6a0"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_07_BoltImpact.png",
+    "size": 3064549,
+    "sha256": "62caed4132ec8202bdb43ccaa52b0aeb4c0250b61e69e4e3cb2260e374e83fb1"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_08_WaveImpact.png",
+    "size": 2924267,
+    "sha256": "cec6691388ceffd2158cb2be5cb1c70380c08e778044b26de6ccc8874b1f8b47"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_09_Healing.png",
+    "size": 3362575,
+    "sha256": "293552fc7db416eee6014dd00ca0def729ba6cd0c50a595cd5c183998d89225a"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_10_Shield.png",
+    "size": 3345445,
+    "sha256": "ec2052e054c81e0f43aa1916878101ccb11e5dc14c8417e860e3e59c4e202a36"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_Wings_Afternoon_Boost.png",
+    "size": 2826723,
+    "sha256": "c55b78860b2265c6d872eadef4e8830b45384b2fe075572ea5528f1ef1074a5b"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_Wings_Afternoon_Hover.png",
+    "size": 2939067,
+    "sha256": "69ac7ff9fab34afec5ad1b648bcb1d408fa00a5ab46b7be2244de7093c989d17"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_Wings_Night_Boost.png",
+    "size": 2288340,
+    "sha256": "17c0cce685dfffec470eb5a705519f5c1db9db2882da6a3956797dc53739ad18"
+  },
+  {
+    "path": "final/BEAUTY_SHOTS/R1_Wings_Night_Hover.png",
+    "size": 2362294,
+    "sha256": "bf73e578e6e0df1c3597fadc5904ea868df83bce689362463c79a16121f47252"
+  },
+  {
+    "path": "final/review/index.html",
+    "size": 7872,
+    "sha256": "4c15caffd89bbbb6ffa8c3e5e9b6218e1fb6a25f08839cfa5f181aa052f77375"
+  },
+  {
+    "path": "final/review/comparisons/01_R1_05_SwordRun.jpg",
+    "size": 393080,
+    "sha256": "f11a35462810dbd7fd179dc9577c7e082e686604abf3d652fd7d61ef6719d8ed"
+  },
+  {
+    "path": "final/review/comparisons/02_R1_04_SwordHeavy.jpg",
+    "size": 402562,
+    "sha256": "c92b0c262661dad3f5c1a82cc7754339eccf28f3fed5b2fc849258a3c5c1acab"
+  },
+  {
+    "path": "final/review/comparisons/03_R1_06_BoltTarget.jpg",
+    "size": 341183,
+    "sha256": "e556cfb94479bf8ad948a03d32f3e84a5af29b94a8818a0d0f78311b8893fb93"
+  },
+  {
+    "path": "final/review/comparisons/04_R1_07_BoltImpact.jpg",
+    "size": 340376,
+    "sha256": "94c7a37ba5d979b76e08f30ec2d5d0c86245ca4c82ef957587e4fe197f2060f6"
+  },
+  {
+    "path": "final/review/comparisons/05_R1_08_WaveImpact.jpg",
+    "size": 336377,
+    "sha256": "270f1b448f5b34db44ab962533f6d3e8e6d3e326e4d9e7a7cb42efe2a47c505b"
+  },
+  {
+    "path": "final/review/comparisons/06_R1_09_Healing.jpg",
+    "size": 371311,
+    "sha256": "ab4ab2e5b216ad3447dd71fef4f94710b79c2bede2e86dac801d8dc979116143"
+  },
+  {
+    "path": "final/review/images/R1_FP_MagicGun.png",
+    "size": 2953235,
+    "sha256": "1d01783805c58af79ec66b2cc6e34250fb935e44e2a0de0c7c20426ca916d5c1"
+  },
+  {
+    "path": "final/review/images/R1_FP_Rune.png",
+    "size": 3241009,
+    "sha256": "6238c50ee02fd3f92c4311b3522e07234a8b401aa79130622167c1f031210d00"
+  },
+  {
+    "path": "final/review/images/R1_FP_Sword0.png",
+    "size": 2554207,
+    "sha256": "b33c6b313fff65b35707a980846b6e3c91d18eb78c529be30af3a7011dcf2796"
+  },
+  {
+    "path": "final/review/images/R1_FP_Sword1.png",
+    "size": 2611305,
+    "sha256": "448968a5fb3967df2eff6ec17409a451cb1acc41ae0059237fb2a9bd64acc36e"
+  },
+  {
+    "path": "final/review/images/R1_FP_Sword2.png",
+    "size": 2733399,
+    "sha256": "6777c70404be96e1c67bb9aaa4c2993e42717819bc39fe0769663f7072a0e0a4"
+  },
+  {
+    "path": "final/review/images/R1_FP_SwordReady.png",
+    "size": 3005112,
+    "sha256": "9eefd46cc110f000ec78e851dbcc53e34ccb82c1b9b5d28f32210f28579dea39"
+  },
+  {
+    "path": "final/appendix/recording_scripts/build_m5_vs3.ps1",
+    "size": 1378,
+    "sha256": "d002e4a477b62917d06c7f84b03881eeaf1e9b28c16fc4df4e6dee5a3becce43"
+  },
+  {
+    "path": "final/appendix/recording_scripts/cleanup_m5_vs3_recording_frames.ps1",
+    "size": 1960,
+    "sha256": "2500877f0e485c0436b37c068984faba41c063533d2529c2be368dbfd04a56e1"
+  },
+  {
+    "path": "final/appendix/recording_scripts/complete_m5_vs3_capture.ps1",
+    "size": 1871,
+    "sha256": "489048812291724494cf25763662878cd978921971cc9b7e285892061cf93c02"
+  },
+  {
+    "path": "final/appendix/recording_scripts/encode_m4_r2_playthrough.py",
+    "size": 23745,
+    "sha256": "4ec810ca1782a4ab5359ec76edfe2b0e417626580402eabc7d2d9820b65dbd8b"
+  },
+  {
+    "path": "final/appendix/recording_scripts/encode_m5_vs3_r1_final.py",
+    "size": 6686,
+    "sha256": "338b36f6da090d130de4daff02c069769f2a2b98e541d58ae4dbed0bda3bfa2f"
+  },
+  {
+    "path": "final/appendix/recording_scripts/package_m5_vs3.ps1",
+    "size": 36909,
+    "sha256": "764f019426e5b257dcc7572aeb9b1350f75770215008562fe4a4927877e42126"
+  },
+  {
+    "path": "final/appendix/recording_scripts/run_m5_vs3.ps1",
+    "size": 5476,
+    "sha256": "15ca977b820aee9ac4e3689cf91c640bbe16efd92dbb8dc55ea24ceafab037f2"
+  },
+  {
+    "path": "final/appendix/recording_scripts/run_m5_vs3_r1.ps1",
+    "size": 7520,
+    "sha256": "4d1dcc60346a279d3d17eeb7a6d25b7680977e55ebb4b3ec8186ed6e0d92bee5"
+  }
+]

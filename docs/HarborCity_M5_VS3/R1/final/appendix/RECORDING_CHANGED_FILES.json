@@ -1,0 +1,38 @@
+[
+  {
+    "path": "D:\\科研学习\\codex学习\\HarborCity\\Source\\HarborCity\\M3\\HCM3Recording.cpp",
+    "sha256": "d9fab38040c341ce65f2072b1ad82b8dbfb19aaf6d454cc5e47b036d8dfd185b"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\tools\\run_m5_vs3.ps1",
+    "sha256": "15ca977b820aee9ac4e3689cf91c640bbe16efd92dbb8dc55ea24ceafab037f2"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\tools\\run_m5_vs3_r1.ps1",
+    "sha256": "4d1dcc60346a279d3d17eeb7a6d25b7680977e55ebb4b3ec8186ed6e0d92bee5"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\tools\\complete_m5_vs3_capture.ps1",
+    "sha256": "489048812291724494cf25763662878cd978921971cc9b7e285892061cf93c02"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\tools\\encode_m5_vs3_r1_final.py",
+    "sha256": "338b36f6da090d130de4daff02c069769f2a2b98e541d58ae4dbed0bda3bfa2f"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\tools\\cleanup_m5_vs3_recording_frames.ps1",
+    "sha256": "2500877f0e485c0436b37c068984faba41c063533d2529c2be368dbfd04a56e1"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\tools\\package_m5_vs3.ps1",
+    "sha256": "764f019426e5b257dcc7572aeb9b1350f75770215008562fe4a4927877e42126"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\tools\\build_m5_vs3.ps1",
+    "sha256": "d002e4a477b62917d06c7f84b03881eeaf1e9b28c16fc4df4e6dee5a3becce43"
+  },
+  {
+    "path": "D:\\科研学习\\codex学习\\.gitignore",
+    "sha256": "9d58b6f6ca95e1337562df1353938902389b845951c472904bae742861506d85"
+  }
+]

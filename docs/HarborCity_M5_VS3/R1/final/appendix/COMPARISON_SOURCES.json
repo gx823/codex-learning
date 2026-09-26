@@ -1,0 +1,44 @@
+[
+  {
+    "issue": "左臂与持剑跑动",
+    "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\review\\images\\R1_05_SwordRun.png",
+    "after": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_022517\\User\\Saved\\M5Tests\\20260927_022524_m5_vs3_r1_visual\\R1_05_SwordRun.png",
+    "comparison": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\comparisons\\01_R1_05_SwordRun.jpg",
+    "note": "Same scripted scene/camera setup in the initial post-gate preflight; animation/effect moments are not identical. Final framing screenshots provided separately."
+  },
+  {
+    "issue": "重击步幅",
+    "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\review\\images\\R1_04_SwordHeavy.png",
+    "after": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_022517\\User\\Saved\\M5Tests\\20260927_022524_m5_vs3_r1_visual\\R1_04_SwordHeavy.png",
+    "comparison": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\comparisons\\02_R1_04_SwordHeavy.jpg",
+    "note": "Same scripted scene/camera setup in the initial post-gate preflight; animation/effect moments are not identical. Final framing screenshots provided separately."
+  },
+  {
+    "issue": "目标高亮",
+    "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\review\\images\\R1_06_BoltTarget.png",
+    "after": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_022517\\User\\Saved\\M5Tests\\20260927_022524_m5_vs3_r1_visual\\R1_06_BoltTarget.png",
+    "comparison": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\comparisons\\03_R1_06_BoltTarget.jpg",
+    "note": "Same scripted scene/camera setup in the initial post-gate preflight; animation/effect moments are not identical. Final framing screenshots provided separately."
+  },
+  {
+    "issue": "魔力弹",
+    "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\review\\images\\R1_07_BoltImpact.png",
+    "after": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_022517\\User\\Saved\\M5Tests\\20260927_022524_m5_vs3_r1_visual\\R1_07_BoltImpact.png",
+    "comparison": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\comparisons\\04_R1_07_BoltImpact.jpg",
+    "note": "Same scripted scene/camera setup in the initial post-gate preflight; animation/effect moments are not identical. Final framing screenshots provided separately."
+  },
+  {
+    "issue": "冲击落点",
+    "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\review\\images\\R1_08_WaveImpact.png",
+    "after": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_022517\\User\\Saved\\M5Tests\\20260927_022524_m5_vs3_r1_visual\\R1_08_WaveImpact.png",
+    "comparison": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\comparisons\\05_R1_08_WaveImpact.jpg",
+    "note": "Same scripted scene/camera setup in the initial post-gate preflight; animation/effect moments are not identical. Final framing screenshots provided separately."
+  },
+  {
+    "issue": "治疗时腿部染色",
+    "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\review\\images\\R1_09_Healing.png",
+    "after": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_022517\\User\\Saved\\M5Tests\\20260927_022524_m5_vs3_r1_visual\\R1_09_Healing.png",
+    "comparison": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\comparisons\\06_R1_09_Healing.jpg",
+    "note": "Same scripted scene/camera setup in the initial post-gate preflight; animation/effect moments are not identical. Final framing screenshots provided separately."
+  }
+]

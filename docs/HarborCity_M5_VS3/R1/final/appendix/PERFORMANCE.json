@@ -1,0 +1,136 @@
+{
+  "hardware": "Intel i7-14650HX / RTX4060 Laptop 8GiB / 15.71GiB RAM / driver592.82",
+  "conditions": "Shipping, 1920x1080 High/Epic, r.ScreenPercentage100, VSync off, t.MaxFPS0, no recording/encoding; scripted movement and flight; six authored adults with real Attack release. See launch files.",
+  "runs": [
+    {
+      "quality": "HIGH",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032143",
+      "measurements": [
+        {
+          "name": "South approach walk",
+          "status": "PASS",
+          "frames": 1213.0,
+          "mean_fps": 101.025,
+          "p99_ms": 11.678,
+          "wall_seconds": 12.007
+        },
+        {
+          "name": "Market approach walk",
+          "status": "PASS",
+          "frames": 1222.0,
+          "mean_fps": 101.735,
+          "p99_ms": 11.547,
+          "wall_seconds": 12.012
+        },
+        {
+          "name": "High aerial hover",
+          "status": "PASS",
+          "frames": 404.0,
+          "mean_fps": 100.849,
+          "p99_ms": 11.363,
+          "wall_seconds": 4.006
+        },
+        {
+          "name": "Town aerial traversal",
+          "status": "PASS",
+          "frames": 513.0,
+          "mean_fps": 102.595,
+          "p99_ms": 11.192,
+          "wall_seconds": 5.0
+        },
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "PASS",
+          "frames": 1167.0,
+          "mean_fps": 98.975,
+          "p99_ms": 11.711,
+          "wall_seconds": 11.791,
+          "npcs": 6.0,
+          "damaged": 6.0
+        }
+      ],
+      "adapter_peak_MiB": 4185.0,
+      "private_peak_GiB": 4.446262359619141,
+      "working_set_peak_GiB": 1.7379379272460938,
+      "gpu_sample_scope": "whole adapter every 3s, includes other processes; not exact game-only allocation peak"
+    },
+    {
+      "quality": "EPIC",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323",
+      "measurements": [
+        {
+          "name": "South approach walk",
+          "status": "PASS",
+          "frames": 774.0,
+          "mean_fps": 64.465,
+          "p99_ms": 17.982,
+          "wall_seconds": 12.007
+        },
+        {
+          "name": "Market approach walk",
+          "status": "PASS",
+          "frames": 798.0,
+          "mean_fps": 66.485,
+          "p99_ms": 17.735,
+          "wall_seconds": 12.003
+        },
+        {
+          "name": "High aerial hover",
+          "status": "PASS",
+          "frames": 282.0,
+          "mean_fps": 70.275,
+          "p99_ms": 16.319,
+          "wall_seconds": 4.013
+        },
+        {
+          "name": "Town aerial traversal",
+          "status": "PASS",
+          "frames": 356.0,
+          "mean_fps": 71.099,
+          "p99_ms": 16.439,
+          "wall_seconds": 5.007
+        },
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "PASS",
+          "frames": 784.0,
+          "mean_fps": 66.177,
+          "p99_ms": 17.314,
+          "wall_seconds": 11.847,
+          "npcs": 6.0,
+          "damaged": 6.0
+        }
+      ],
+      "adapter_peak_MiB": 5043.0,
+      "private_peak_GiB": 5.295970916748047,
+      "working_set_peak_GiB": 1.7345352172851562,
+      "gpu_sample_scope": "whole adapter every 3s, includes other processes; not exact game-only allocation peak"
+    }
+  ],
+  "effect_budget": {
+    "spell_and_number_actors_max": 24,
+    "spell_point_lights_max": 4,
+    "point_light_shadows": false,
+    "spawn_bursts": "wave1, shards48, other36 particles per authored spawn entry",
+    "continuous_rates_per_second": {
+      "blade": 14,
+      "halo": 12,
+      "trail": 110,
+      "heal": 18,
+      "charge": 65,
+      "other": 30
+    },
+    "lifetime_seconds": {
+      "blade": 0.16,
+      "halo": 0.12,
+      "trail": 0.32,
+      "heal": 2.3,
+      "shards": 0.45,
+      "wave": 0.45,
+      "other": 0.6
+    },
+    "global_niagara_particle_hard_cap": "NOT_IMPLEMENTED",
+    "translucent_overdraw_measured": "NOT_RUN; material layers exist but screen overlap depends on view, cannot claim a fixed maximum"
+  },
+  "prior_oom": "Shader-worker and first-use/audio-allocation OOM retained in old gate evidence. This package limits build concurrency to2; no claim that 16GiB RAM can never exhaust."
+}

@@ -1,0 +1,366 @@
+[
+  {
+    "run": "m5_full_20260927_034351",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 5,
+    "failed": [
+      "Pickup fixture has legal curb and NPC-walkable door",
+      "Real passenger boarding on current town curb",
+      "Ride completed by normal parking/dropoff condition",
+      "Magic gun uses existing firearm damage",
+      "Spell 4 MP cost once"
+    ],
+    "data": "m5_full_20260927_034351.json",
+    "memory": {
+      "private_bytes": 5125066752,
+      "working_set_bytes": 1867444224,
+      "process_peak_working_set_bytes": 1903943680,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_reopen_20260927_035115",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 1,
+    "failed": [
+      "Both side quests survive fresh-process Load"
+    ],
+    "data": "m5_reopen_20260927_035115.json",
+    "memory": {
+      "private_bytes": 4785369088,
+      "working_set_bytes": 1865273344,
+      "process_peak_working_set_bytes": 1883987968,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_falls_20260927_024811",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_023821_974_74846d4f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 5,
+    "failed": [
+      "Punch living knockdown via input",
+      "Heavy living knockdown via input",
+      "Gun living knockdown via input",
+      "Magic living knockdown via input",
+      "Vehicle living recovery finishes"
+    ],
+    "data": "m5_vs3_r1_falls_20260927_024811.json",
+    "memory": {
+      "private_bytes": 4942426112,
+      "working_set_bytes": 1918263296,
+      "process_peak_working_set_bytes": 1965101056,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_falls_20260927_025822",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 4,
+    "failed": [
+      "Heavy living knockdown via input",
+      "Gun living knockdown via input",
+      "Magic living knockdown via input",
+      "Vehicle living knockdown via input"
+    ],
+    "data": "m5_vs3_r1_falls_20260927_025822.json",
+    "memory": {
+      "private_bytes": 7620509696,
+      "working_set_bytes": 4607156224,
+      "process_peak_working_set_bytes": 4611387392,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_falls_20260927_032019",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 12,
+    "failed": [
+      "Fall fixture starts on actual permitted stand",
+      "Heavy living knockdown via input",
+      "Heavy living recovery finishes",
+      "Fall fixture starts on actual permitted stand",
+      "Gun living knockdown via input",
+      "Gun living recovery finishes",
+      "Fall fixture starts on actual permitted stand",
+      "Magic living knockdown via input",
+      "Magic living recovery finishes",
+      "Fall fixture starts on actual permitted stand",
+      "Vehicle living knockdown via input",
+      "Vehicle living recovery finishes"
+    ],
+    "data": "m5_vs3_r1_falls_20260927_032019.json",
+    "memory": {
+      "private_bytes": 4946595840,
+      "working_set_bytes": 1893449728,
+      "process_peak_working_set_bytes": 1898610688,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_gate_20260926_155235",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 4,
+    "failed": [
+      "Sword hit through Attack and blade sweep",
+      "Released bolt hits selected second target",
+      "Wave damages two actual NPCs",
+      "Player actually wounded before heal"
+    ],
+    "data": "m5_vs3_r1_gate_20260926_155235.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_gate_20260926_160116",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 4,
+    "failed": [
+      "Sword hit through Attack and blade sweep",
+      "Released bolt hits selected second target",
+      "Wave damages two actual NPCs",
+      "Player actually wounded before heal"
+    ],
+    "data": "m5_vs3_r1_gate_20260926_160116.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_gate_20260926_160503",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "RUNNING",
+    "failures": 2,
+    "failed": [
+      "Sword hit through Attack and blade sweep",
+      "Wave damages two actual NPCs"
+    ],
+    "data": "m5_vs3_r1_gate_20260926_160503.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_gate_20260926_161938",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_gate_20260926_161938.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_gate_20260926_162544",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_gate_20260926_162544.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_logic_20260926_153726",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "RUNNING",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_logic_20260926_153726.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_logic_20260926_155002",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_logic_20260926_155002.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_manual_20260927_025143",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_023821_974_74846d4f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_manual_20260927_025143.json",
+    "memory": {
+      "private_bytes": 4777377792,
+      "working_set_bytes": 1845964800,
+      "process_peak_working_set_bytes": 1864871936,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_motion_20260926_152527",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_motion_20260926_152527.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_motion_20260926_153516",
+    "kind": "EDITOR_GAME",
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_motion_20260926_153516.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_visual_20260927_022517",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260926_194511_587_6fee2bf6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_visual_20260927_022517.json",
+    "memory": {
+      "private_bytes": 0,
+      "working_set_bytes": 0,
+      "process_peak_working_set_bytes": 0,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_visual_20260927_031457",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 1,
+    "failed": [
+      "Select first target via Look Action"
+    ],
+    "data": "m5_vs3_r1_visual_20260927_031457.json",
+    "memory": {
+      "private_bytes": 5006057472,
+      "working_set_bytes": 1850544128,
+      "process_peak_working_set_bytes": 1881124864,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_visual_20260927_031740",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "m5_vs3_r1_visual_20260927_031740.json",
+    "memory": {
+      "private_bytes": 5080928256,
+      "working_set_bytes": 1899954176,
+      "process_peak_working_set_bytes": 1978044416,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "m5_vs3_r1_visual_20260927_033743",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 1,
+    "failed": [
+      "Sword hit through Attack and blade sweep"
+    ],
+    "data": "m5_vs3_r1_visual_20260927_033743.json",
+    "memory": {
+      "private_bytes": 5113761792,
+      "working_set_bytes": 1944662016,
+      "process_peak_working_set_bytes": 2026020864,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "perf_20260927_032143",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "perf_20260927_032143.json",
+    "memory": {
+      "private_bytes": 4774137856,
+      "working_set_bytes": 1848446976,
+      "process_peak_working_set_bytes": 1866096640,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  },
+  {
+    "run": "perf_20260927_032323",
+    "kind": "STANDALONE_PACKAGE",
+    "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+    "status": "COMPLETE",
+    "failures": 0,
+    "failed": [],
+    "data": "perf_20260927_032323.json",
+    "memory": {
+      "private_bytes": 5686505472,
+      "working_set_bytes": 1857032192,
+      "process_peak_working_set_bytes": 1862443008,
+      "scope": "process sample every 3 seconds; not machine-wide committed memory"
+    }
+  }
+]

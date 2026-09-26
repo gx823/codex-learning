@@ -1,3 +1,5 @@
+门后最新候选见 [final/STATUS.md](final/STATUS.md) 和 [审阅页](final/review/index.html)；下文为阶段门历史记录，旧失败不删除。
+
 # M5-VS3 R1 · 阶段门
 
 PARTIAL / USER_REVIEW：剑与魔法第一版已接入，等待用户审阅；没有制作 R1 独立包。

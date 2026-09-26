@@ -1,0 +1,174 @@
+{
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "run": {
+    "label": "VISUAL_RECORDING_FINAL",
+    "mode": "m5_vs3_r1_visual",
+    "exit_status": "EXITED",
+    "exit_code": 0,
+    "audio": "FAIL_SILENT_NATIVE_CAPTURE; offline encoding resumes without another gameplay run",
+    "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743"
+  },
+  "images": [
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_01_SwordCombo.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_01_SwordCombo.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_02_SwordCombo.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_02_SwordCombo.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_03_SwordCombo.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_03_SwordCombo.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_04_SwordHeavy.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_04_SwordHeavy.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_05_SwordRun.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_05_SwordRun.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_06_BoltTarget.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_06_BoltTarget.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_07_BoltImpact.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_07_BoltImpact.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_08_WaveImpact.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_08_WaveImpact.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_09_Healing.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_09_Healing.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_10_Shield.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_10_Shield.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_FP_MagicGun.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\images\\R1_FP_MagicGun.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_FP_Rune.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\images\\R1_FP_Rune.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_FP_Sword0.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\images\\R1_FP_Sword0.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_FP_Sword1.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\images\\R1_FP_Sword1.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_FP_Sword2.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\images\\R1_FP_Sword2.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_FP_SwordReady.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\review\\images\\R1_FP_SwordReady.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_Wings_Afternoon_Boost.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_Wings_Afternoon_Boost.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_Wings_Afternoon_Hover.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_Wings_Afternoon_Hover.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_Wings_Night_Boost.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_Wings_Night_Boost.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743\\User\\Saved\\M5Tests\\20260927_033749_m5_vs3_r1_visual\\R1_Wings_Night_Hover.png",
+      "review": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\final\\BEAUTY_SHOTS\\R1_Wings_Night_Hover.png",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "scope": "Actual native 1080p PNG; no UI; screenshot completion alone is not aesthetic approval"
+}

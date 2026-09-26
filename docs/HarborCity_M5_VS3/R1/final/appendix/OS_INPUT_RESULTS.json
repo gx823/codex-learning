@@ -1,0 +1,16 @@
+{
+  "status": "PARTIAL",
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_manual_20260927_025143",
+  "executable": "E:/GameDev/Builds/HarborCity/M5_VS3/Candidate_20260927_023821_974_74846d4f/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe",
+  "input_layer": "C @oai/sky OS keyboard, click and drag; no Action/Key injection during 150-second manual step",
+  "menu": {
+    "damage_numbers": "PASS actual button changed on to off; game readback 0 after P resume",
+    "impact_shake": "PASS actual button changed on to off; game readback 0 after P resume"
+  },
+  "mouse": {
+    "look": "PASS observed callback count 316 -> 318 -> 320 across two drags, actual control yaw/pitch changed",
+    "target_hold_switch_release": "NOT_RUN_VALID_SEQUENCE: first aim 65.128..73.031s, second 119.029..126.931s; drags arrived after 8-second automatic cancellation. No mana spent and no target selected. Not claimed as successful spell test.",
+    "manual_retest": "按1后立即按住左键，移动鼠标在两名NPC间切换，再松开，确认消耗15魔力并命中。"
+  },
+  "desktop_capture_note": "Initial two snapshots exposed an occluding app; refreshed returned game window before any input. No unrelated app was controlled. Tool screenshots are not included in public artifacts."
+}

@@ -1,0 +1,65 @@
+{
+  "status": "EXECUTION_COMPLETE_RESULTS_REQUIRE_REVIEW",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "runs": [
+    {
+      "exit_status": "EXITED",
+      "label": "WARMUP",
+      "exit_code": 0,
+      "mode": "m5_vs3_r1_visual",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_031457"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "VISUAL_RECORDING",
+      "exit_code": 0,
+      "mode": "m5_vs3_r1_visual",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_031740"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "FALLS_ATTEMPT_3_RECORDING",
+      "exit_code": 0,
+      "mode": "m5_vs3_r1_falls",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_falls_20260927_032019"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "PERFORMANCE_HIGH",
+      "exit_code": 0,
+      "mode": "perf",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032143"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "PERFORMANCE_EPIC",
+      "exit_code": 0,
+      "mode": "perf",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\perf_20260927_032323"
+    },
+    {
+      "label": "VISUAL_RECORDING_FINAL",
+      "mode": "m5_vs3_r1_visual",
+      "exit_status": "EXITED",
+      "exit_code": 0,
+      "audio": "FAIL_SILENT_NATIVE_CAPTURE; offline encoding resumes without another gameplay run",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_visual_20260927_033743"
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "FULL_REGRESSION_ONCE",
+      "mode": "m5_full",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_full_20260927_034351",
+      "exit_code": 0
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "FRESH_PROCESS_REOPEN",
+      "mode": "m5_reopen",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_reopen_20260927_035115",
+      "exit_code": 0
+    }
+  ],
+  "prior_gameplay_build": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "media_policy_note": "Only recording output/storage and launch/encode guards changed after the measured High/Epic runs. Gameplay/content unchanged; no second full regression. New EXE gets recording workflow verification and the single full regression."
+}

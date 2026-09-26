@@ -1,0 +1,153 @@
+{
+  "status": "RUNNING",
+  "mode": "m5_vs3_r1_logic",
+  "duration_seconds": 13.595219198614359,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 5.2895434983074665
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_logic_20260926_153726",
+      "elapsed_seconds": 5.290506199002266
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 5.302460398525
+    },
+    {
+      "name": "Aim does not spend MP",
+      "status": "PASS",
+      "evidence_level": "B Spell1 Action",
+      "expected": "unchanged",
+      "actual": "100.0",
+      "elapsed_seconds": 9.225480899214745
+    },
+    {
+      "name": "Cancel clears aiming without cost",
+      "status": "PASS",
+      "evidence_level": "B right-mouse Aim Action",
+      "expected": "no MP/CD",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 0.0",
+      "elapsed_seconds": 9.64302010089159
+    },
+    {
+      "name": "Held attack does not spend",
+      "status": "PASS",
+      "evidence_level": "B Attack started, still held",
+      "expected": "unchanged",
+      "actual": "100.0",
+      "elapsed_seconds": 10.457738898694515
+    },
+    {
+      "name": "Release spends exactly 15 MP",
+      "status": "PASS",
+      "evidence_level": "B Attack Completed",
+      "expected": "15 once",
+      "actual": "85.0",
+      "elapsed_seconds": 10.583201199769974
+    },
+    {
+      "name": "Full-health heal has no cooldown",
+      "status": "PASS",
+      "evidence_level": "B Spell3 Action",
+      "expected": "no cast",
+      "actual": "生命已满",
+      "elapsed_seconds": 11.906206298619509
+    },
+    {
+      "name": "Q during punch executes at finish",
+      "status": "PASS",
+      "evidence_level": "B Attack + Q during action",
+      "expected": "Sword",
+      "actual": "星潮剑  |  生命 100\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器",
+      "elapsed_seconds": 13.595184199512005
+    }
+  ],
+  "failures": 0,
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_logic_20260926_153726\\User\\Saved\\M5Tests\\20260926_153746_m5_vs3_r1_logic\\results.json",
+  "launch": {
+    "status": "RUNNING",
+    "pid": 47100,
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "kind": "EDITOR_GAME",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "\"D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject\"",
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_logic_20260926_153726\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs3_r1_logic",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-game",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_logic_20260926_153726",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_logic_20260926_153726\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-M5Quality=2",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+    ],
+    "started": "2026-09-26T15:37:26.4820928+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+  },
+  "exit": {
+    "status": "EXITED",
+    "pid": 47100,
+    "executable": "E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe",
+    "kind": "EDITOR_GAME",
+    "input_layer": "ENGINE_ACTION_NOT_OS",
+    "arguments": [
+      "\"D:\\科研学习\\codex学习\\HarborCity\\HarborCity.uproject\"",
+      "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_logic_20260926_153726\\User\"",
+      "-M5PublicCapture",
+      "-M5Test=m5_vs3_r1_logic",
+      "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "-game",
+      "-unattended",
+      "-windowed",
+      "-ResX=1920",
+      "-ResY=1080",
+      "-ForceRes",
+      "-language=en",
+      "-nosplash",
+      "-M1AutoQuit",
+      "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_logic_20260926_153726",
+      "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\m5_vs3_r1_logic_20260926_153726\\game.log\"",
+      "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+      "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+      "-HCM5VS3QA",
+      "-M5Quality=2",
+      "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+    ],
+    "started": "2026-09-26T15:37:26.4820928+08:00",
+    "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+    "exit_code": 3,
+    "ended": "2026-09-26T15:38:02.5913189+08:00"
+  },
+  "memory": {
+    "private_bytes": 0,
+    "working_set_bytes": 0,
+    "process_peak_working_set_bytes": 0,
+    "scope": "process sample every 3 seconds; not machine-wide committed memory"
+  }
+}

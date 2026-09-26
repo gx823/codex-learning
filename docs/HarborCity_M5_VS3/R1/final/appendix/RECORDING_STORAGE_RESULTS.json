@@ -1,0 +1,82 @@
+{
+  "status": "NEW_WORKFLOW_VERIFIED",
+  "space_GiB": {
+    "C": 90.81,
+    "D": 155.14,
+    "E": 203.08
+  },
+  "new_recordings": [
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_024826_8916D0E0",
+      "seconds": 68.574809,
+      "mp4_bytes": 23804268,
+      "removed_frame_bytes": 1271090111,
+      "removed_frame_count": 2015,
+      "audio": "FAIL_SILENT_NATIVE_CAPTURE",
+      "keys": 8
+    },
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_031754_DF4B1CDB",
+      "seconds": 142.506105,
+      "mp4_bytes": 72903674,
+      "removed_frame_bytes": 2522320189,
+      "removed_frame_count": 4092,
+      "audio": "PASS",
+      "keys": 8
+    },
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_032030_A2C57592",
+      "seconds": 70.570211,
+      "mp4_bytes": 26222945,
+      "removed_frame_bytes": 1241497004,
+      "removed_frame_count": 2072,
+      "audio": "PASS",
+      "keys": 8
+    },
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_033800_529D1686",
+      "seconds": 142.704506,
+      "mp4_bytes": 82566304,
+      "removed_frame_bytes": 1400374788,
+      "removed_frame_count": 4088,
+      "audio": "FAIL_SILENT_NATIVE_CAPTURE",
+      "keys": 8
+    }
+  ],
+  "removed_bytes": 6435282092,
+  "ppm_found": 0,
+  "ppm_deleted": 0,
+  "older": [
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_053048_4DADC048",
+      "frames": 8808,
+      "bytes": 4663741022,
+      "status": "HISTORICAL_COMPRESSED_EVIDENCE_RETAINED_NOT_USED_FOR_NEW_CAPTURE"
+    },
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_155305_75A5E11B",
+      "frames": 1706,
+      "bytes": 1089075554,
+      "status": "HISTORICAL_COMPRESSED_EVIDENCE_RETAINED_NOT_USED_FOR_NEW_CAPTURE"
+    },
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_160532_1855C20A",
+      "frames": 1339,
+      "bytes": 877747642,
+      "status": "HISTORICAL_COMPRESSED_EVIDENCE_RETAINED_NOT_USED_FOR_NEW_CAPTURE"
+    },
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_162025_9E6BFC25",
+      "frames": 1655,
+      "bytes": 1068954003,
+      "status": "HISTORICAL_COMPRESSED_EVIDENCE_RETAINED_NOT_USED_FOR_NEW_CAPTURE"
+    },
+    {
+      "directory": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_162634_BFAADAC0",
+      "frames": 1761,
+      "bytes": 1136991073,
+      "status": "HISTORICAL_COMPRESSED_EVIDENCE_RETAINED_NOT_USED_FOR_NEW_CAPTURE"
+    }
+  ],
+  "old_raw_ppm_rule": "List directories and sizes and obtain user confirmation before any existing PPM deletion. No PPM found in VS3 recording root."
+}

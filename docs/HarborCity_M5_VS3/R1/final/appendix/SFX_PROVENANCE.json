@@ -1,0 +1,194 @@
+[
+  {
+    "file": "SW_R1_Charge_0.wav",
+    "role": "Charge",
+    "kind": 0,
+    "seconds": 0.7,
+    "sha256": "9b9accf627a3bebc310215d30083208a3b0359e14832e83916e0b6dc433df24d",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Release_0.wav",
+    "role": "Release",
+    "kind": 0,
+    "seconds": 0.42,
+    "sha256": "05aba4e007d43116cbffbf50960adff5d2c7de5104757dc62bef440bcaed27b1",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Impact_0.wav",
+    "role": "Impact",
+    "kind": 0,
+    "seconds": 0.38,
+    "sha256": "c9d84df629153c2c377d69932ef4438361d9af4b7994f8a04da2b94adadc9c65",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Break_0.wav",
+    "role": "Break",
+    "kind": 0,
+    "seconds": 0.8,
+    "sha256": "e6034c33893b5df31a7280f5c9bb3b0fe726c3c5edf1374bf3cbd113db30b662",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Summon_0.wav",
+    "role": "Summon",
+    "kind": 0,
+    "seconds": 0.55,
+    "sha256": "e6361471306d17ec93b55b8070c437d4bc33bf8fecbef0ba02c6ad4358368e98",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Whoosh_0.wav",
+    "role": "Whoosh",
+    "kind": 0,
+    "seconds": 0.32,
+    "sha256": "25a2e6df6c9b5df20817fc728788615514da0aa1cf1e68d4ce06f4f7e5de68f2",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Charge_1.wav",
+    "role": "Charge",
+    "kind": 1,
+    "seconds": 0.7,
+    "sha256": "082fdda7de2e8d3d4f3e18c2f6d1e5e76d62e8c8696ceabb5a06b0f4b642df08",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Release_1.wav",
+    "role": "Release",
+    "kind": 1,
+    "seconds": 0.42,
+    "sha256": "5b262ae28c937c97db7bbbf0a88d23b9ab1893ef1f7075e0bdc067460f7891de",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Impact_1.wav",
+    "role": "Impact",
+    "kind": 1,
+    "seconds": 0.38,
+    "sha256": "7de1fb9fef5833c378962eb1780830514e836980e3efa4aacc87da33b79c479e",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Break_1.wav",
+    "role": "Break",
+    "kind": 1,
+    "seconds": 0.8,
+    "sha256": "53ef3a90aeea812ed262344edc5a7414525b51fb39d307e53a46eda690147bf9",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Summon_1.wav",
+    "role": "Summon",
+    "kind": 1,
+    "seconds": 0.55,
+    "sha256": "18554e056923bed294a366e263100ca54a35387ac39976e94a1be653e3c253b2",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Whoosh_1.wav",
+    "role": "Whoosh",
+    "kind": 1,
+    "seconds": 0.32,
+    "sha256": "8b385c259bb43ce11d5aafb057ff30df9d52ae8e07e5a93be2f5ae6f1072a3e7",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Charge_2.wav",
+    "role": "Charge",
+    "kind": 2,
+    "seconds": 0.7,
+    "sha256": "9776f3258f8de1c24d56340bd28e231a8f5542ef877364747e9ac283d0363b5d",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Release_2.wav",
+    "role": "Release",
+    "kind": 2,
+    "seconds": 0.42,
+    "sha256": "a8665806d0e03ec2ed11fbfd798ad2df05bb4d69c9ba6eeacbe7a0f78eb9deb5",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Impact_2.wav",
+    "role": "Impact",
+    "kind": 2,
+    "seconds": 0.38,
+    "sha256": "cd8fa85ef550755116671268093bd988edc092871a24d1a439bfd13a00a81b33",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Break_2.wav",
+    "role": "Break",
+    "kind": 2,
+    "seconds": 0.8,
+    "sha256": "fb9fc57fec666a53a3cbf6e1fd97a582b2c0cb376047327b15291437e0e97103",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Summon_2.wav",
+    "role": "Summon",
+    "kind": 2,
+    "seconds": 0.55,
+    "sha256": "f0c83d82c06abd201f42dcdc833e658decfc67b87b18d15ca9c64be81c36c9d3",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Whoosh_2.wav",
+    "role": "Whoosh",
+    "kind": 2,
+    "seconds": 0.32,
+    "sha256": "7cc2d8f8a6e41373603e5fa068aa72801cb8c1bcc5de6568a1a8c22e2ceff528",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Charge_3.wav",
+    "role": "Charge",
+    "kind": 3,
+    "seconds": 0.7,
+    "sha256": "f2100df7d1ab8c6c36e8b7e57757353fab51097a46b7826f2419b8afe00a8922",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Release_3.wav",
+    "role": "Release",
+    "kind": 3,
+    "seconds": 0.42,
+    "sha256": "78cfa23b9c0bb8ff59dc877deb17397b9707132fbefe3707382e5093d4d956ea",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Impact_3.wav",
+    "role": "Impact",
+    "kind": 3,
+    "seconds": 0.38,
+    "sha256": "644f1f793b8e4a30f394897b0a501cd344236e0b680abf4e277e519821149722",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Break_3.wav",
+    "role": "Break",
+    "kind": 3,
+    "seconds": 0.8,
+    "sha256": "0ad56a9aa7f20cf1dbe841370a4c27f3e733156e1bb14478ea54f4bb6fdd1b2b",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Summon_3.wav",
+    "role": "Summon",
+    "kind": 3,
+    "seconds": 0.55,
+    "sha256": "2742e82e5f82d557472cd8ed9629cd63675aa672c1cd6b956118e613108a2ec1",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  },
+  {
+    "file": "SW_R1_Whoosh_3.wav",
+    "role": "Whoosh",
+    "kind": 3,
+    "seconds": 0.32,
+    "sha256": "f67f1cdd5f08d47c22938feefedbb7a078dc8e5726fb3e5078a843072cc4df6c",
+    "source": "HarborCity original mathematical synthesis; no third-party samples"
+  }
+]

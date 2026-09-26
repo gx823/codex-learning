@@ -1,0 +1,36 @@
+[
+  {
+    "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\m5_vs3_ride_probe_20260926_044425",
+    "started": "2026-09-26T04:44:25.0448806+08:00",
+    "selected_log": [
+      "[2026.09.25-20.45.07:401][572]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_LinXia",
+      "[2026.09.25-20.45.12:074][ 20]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_ChenBo",
+      "[2026.09.25-20.45.16:820][515]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_ANing",
+      "[2026.09.25-20.45.35:548][557]LogTemp: Display: M1_TEST_FAIL [B-Action Interact + A parking fixture; A-read-only clearance query] Real passenger boarding on current town curb : driving=1 npc=X=-6000.000 Y=-5900.000 Z=89.096 car=X=-6000.002 Y=-6360.922 Z=22.649 safeDoor=1 door=X=-5985.002 Y=-6550.922 Z=102.946 safeNPCStand=0 npcState={",
+      "[2026.09.25-20.45.44:375][490]LogTemp: Display: M1_TEST_FAIL [B-Action + A travel placement; not continuous route proof] Ride completed by normal parking/dropoff condition : 一杯海风 · 已完成"
+    ]
+  },
+  {
+    "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\m5_vs3_ride_probe_20260926_045035",
+    "started": "2026-09-26T04:50:35.3314274+08:00",
+    "selected_log": [
+      "[2026.09.25-20.51.00:903][579]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_LinXia",
+      "[2026.09.25-20.51.05:565][ 30]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_ChenBo",
+      "[2026.09.25-20.51.10:315][528]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_ANing",
+      "[2026.09.25-20.51.29:040][574]LogTemp: Display: M1_TEST_FAIL [B-Action Interact + A parking fixture; A-read-only clearance query] Real passenger boarding on current town curb : driving=1 npc=X=-6000.000 Y=-5900.000 Z=89.096 car=X=-5999.883 Y=-6360.910 Z=22.651 safeDoor=1 door=X=-5984.883 Y=-6550.910 Z=102.946 safeNPCStand=0 npcState={",
+      "[2026.09.25-20.51.37:866][508]LogTemp: Display: M1_TEST_FAIL [B-Action + A travel placement; not continuous route proof] Ride completed by normal parking/dropoff condition : 一杯海风 · 已完成"
+    ]
+  },
+  {
+    "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\m5_vs3_ride_probe_20260926_050215",
+    "started": "2026-09-26T05:02:15.8953980+08:00",
+    "selected_log": [
+      "[2026.09.25-21.02.47:683][586]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_LinXia",
+      "[2026.09.25-21.02.52:346][ 37]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_ChenBo",
+      "[2026.09.25-21.02.57:093][536]LogTemp: Display: M1_TEST_PASS [A-runtime] Side-quest NPC reachable after camera settles : M3_ANing",
+      "[2026.09.25-21.03.01:212][ 18]LogTemp: Display: M1_TEST_FAIL [A-fixture] Pickup fixture has legal curb and NPC-walkable door : xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0;",
+      "[2026.09.25-21.03.15:813][599]LogTemp: Display: M1_TEST_FAIL [B-Action Interact + A parking fixture; A-read-only clearance query] Real passenger boarding on current town curb : driving=1 npc=X=-6000.000 Y=-5900.000 Z=89.096 car=X=-5679.984 Y=-6360.922 Z=22.647 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={",
+      "[2026.09.25-21.03.24:632][537]LogTemp: Display: M1_TEST_FAIL [B-Action + A travel placement; not continuous route proof] Ride completed by normal parking/dropoff condition : 一杯海风 · 已完成"
+    ]
+  }
+]

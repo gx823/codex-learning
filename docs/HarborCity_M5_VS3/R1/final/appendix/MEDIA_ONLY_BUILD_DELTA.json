@@ -1,0 +1,9 @@
+{
+  "gameplay_performance_candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_030811_947_a3893aa6",
+  "final_media_policy_candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_032901_667_f475d32f",
+  "changed_source_inputs": [
+    "Source/HarborCity/M3/HCM3Recording.cpp"
+  ],
+  "same_content_inventory": true,
+  "conclusion": "Performance measurements bind to the earlier Shipping executable; only recorder code changed afterward. No assertion that an unmeasured executable was directly profiled."
+}
