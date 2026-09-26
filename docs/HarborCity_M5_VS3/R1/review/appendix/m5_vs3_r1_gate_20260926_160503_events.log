@@ -1,0 +1,55 @@
+[2026.09.26-08.05.28:111][292]LogTemp: Display: M1_TEST_PASS [A] Runtime actors : PC=1 character=1 car=1 lamp=1
+[2026.09.26-08.05.28:114][292]LogTemp: Display: M1_TEST_PASS [A] Isolated save slot : HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_gate_20260926_160503
+[2026.09.26-08.05.28:127][293]LogTemp: Display: M1_TEST_PASS [A-runtime prerequisite] R2 initial real application focus : focused=1
+[2026.09.26-08.05.31:122][612]LogTemp: Display: M1_TEST_PASS [A fixture; no new NPC designs] Six adult R/V fixture participants : 6
+[2026.09.26-08.05.40:449][217]LogTemp: Display: M1_TEST_PASS [A] R1_05_SwordRun actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_05_SwordRun.png bytes=3247477 pending=0
+[2026.09.26-08.05.42:642][361]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=0.179 Y=-6800.000 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.42:769][368]LogTemp: Display: R1_TRACE blade start base=X=-16.929 Y=-6767.981 Z=149.699 tip=X=58.064 Y=-6765.547 Z=182.776
+[2026.09.26-08.05.43:918][422]LogTemp: Display: M1_TEST_PASS [A] R1_01_SwordCombo actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_01_SwordCombo.png bytes=3347048 pending=0
+[2026.09.26-08.05.44:048][431]LogTemp: Display: R1_TRACE swing combo=1 heavy=0 hero=X=18.094 Y=-6790.674 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.44:183][439]LogTemp: Display: R1_TRACE blade start base=X=52.440 Y=-6756.368 Z=137.855 tip=X=25.019 Y=-6793.321 Z=205.727
+[2026.09.26-08.05.45:371][494]LogTemp: Display: M1_TEST_PASS [A] R1_02_SwordCombo actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_02_SwordCombo.png bytes=3354902 pending=0
+[2026.09.26-08.05.45:505][503]LogTemp: Display: R1_TRACE swing combo=2 heavy=0 hero=X=26.076 Y=-6783.657 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.45:990][512]LogTemp: Display: R1_TRACE blade start base=X=40.897 Y=-6711.510 Z=124.047 tip=X=105.859 Y=-6661.900 Z=130.583
+[2026.09.26-08.05.46:811][566]LogTemp: Display: M1_TEST_PASS [A] R1_03_SwordCombo actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_03_SwordCombo.png bytes=3374469 pending=0
+[2026.09.26-08.05.48:251][661]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=38.405 Y=-6780.019 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.48:387][670]LogTemp: Display: R1_TRACE blade start base=X=20.264 Y=-6750.965 Z=154.557 tip=X=99.219 Y=-6746.267 Z=176.189
+[2026.09.26-08.05.49:283][727]LogTemp: Display: R1_TRACE swing combo=1 heavy=0 hero=X=59.054 Y=-6768.716 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.49:415][735]LogTemp: Display: R1_TRACE blade start base=X=96.996 Y=-6734.730 Z=137.815 tip=X=64.677 Y=-6767.465 Z=205.697
+[2026.09.26-08.05.50:317][794]LogTemp: Display: R1_TRACE swing combo=2 heavy=0 hero=X=62.888 Y=-6764.881 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.50:482][804]LogTemp: Display: R1_TRACE blade start base=X=24.922 Y=-6744.055 Z=129.154 tip=X=56.627 Y=-6674.887 Z=159.725
+[2026.09.26-08.05.53:382][993]LogTemp: Display: R1_TRACE swing combo=2 heavy=1 hero=X=74.079 Y=-6761.789 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.53:587][  6]LogTemp: Display: R1_TRACE blade start base=X=94.141 Y=-6712.156 Z=105.323 tip=X=144.357 Y=-6734.835 Z=166.051
+[2026.09.26-08.05.54:844][ 66]LogTemp: Display: M1_TEST_PASS [A] R1_04_SwordHeavy actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_04_SwordHeavy.png bytes=3343250 pending=0
+[2026.09.26-08.05.55:537][111]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=149.366 Y=-6416.660 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.55:677][120]LogTemp: Display: R1_TRACE blade start base=X=135.719 Y=-6385.552 Z=155.655 tip=X=215.698 Y=-6382.914 Z=173.552
+[2026.09.26-08.05.57:017][207]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_4 before=X=-950.000 Y=-9950.000 Z=91.952 intended=X=0.000 Y=-6705.000 Z=100.000
+[2026.09.26-08.05.57:982][268]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=0.000 Y=-6800.000 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.05.58:113][276]LogTemp: Display: R1_TRACE blade start base=X=-19.739 Y=-6770.228 Z=151.360 tip=X=56.570 Y=-6766.492 Z=181.141
+[2026.09.26-08.05.59:376][356]LogTemp: Display: R1_FIXTURE sword final hero=X=20.745 Y=-6788.611 Z=98.150 npc=X=0.000 Y=-6705.000 Z=100.952
+[2026.09.26-08.05.59:376][356]LogTemp: Display: M1_TEST_FAIL [B Action, A placement] Sword hit through Attack and blade sweep : {
+[2026.09.26-08.05.59:386][356]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_4 before=X=0.000 Y=-6705.000 Z=100.952 intended=X=-700.000 Y=-6000.000 Z=100.000
+[2026.09.26-08.05.59:386][356]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_4 before=X=-950.000 Y=-7850.000 Z=89.096 intended=X=-140.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.05.59:386][356]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_5 before=X=-950.000 Y=-5250.000 Z=91.952 intended=X=140.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.06.01:844][512]LogTemp: Display: M1_TEST_PASS [B Action; upstream OS mouse NOT_RUN] Select first target via Look Action : BP_NPCIdleR2_V_C_4
+[2026.09.26-08.06.03:636][607]LogTemp: Display: M1_TEST_PASS [A] R1_06_BoltTarget actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_06_BoltTarget.png bytes=2981130 pending=0
+[2026.09.26-08.06.03:670][609]LogTemp: Display: R1_TRACE release kind=0 rune=X=17.079 Y=-6711.636 Z=133.520 ground=X=134.316 Y=-6105.055 Z=8.000 selected=BP_NPCIdleR2_R_C_5 hero=X=0.000 Y=-6800.000 Z=98.150 chesthit=None/None
+[2026.09.26-08.06.03:693][609]LogTemp: Display: R1_SPELL_RELEASE kind=0 mp=85.00
+[2026.09.26-08.06.03:865][619]LogTemp: Display: R1_TRACE bolt hit=BP_NPCIdleR2_R_C_5/CharacterMesh0 where=X=136.941 Y=-6106.510 Z=123.766 target=BP_NPCIdleR2_R_C_5
+[2026.09.26-08.06.05:037][672]LogTemp: Display: M1_TEST_PASS [A] R1_07_BoltImpact actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_07_BoltImpact.png bytes=3097441 pending=0
+[2026.09.26-08.06.05:243][686]LogTemp: Display: M1_TEST_PASS [B Look + Attack completed] Released bolt hits selected second target : {
+[2026.09.26-08.06.05:251][686]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_4 before=X=-140.000 Y=-6100.000 Z=98.096 intended=X=-850.000 Y=-6000.000 Z=100.000
+[2026.09.26-08.06.05:251][686]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_5 before=X=140.000 Y=-6100.000 Z=100.952 intended=X=-1000.000 Y=-6000.000 Z=100.000
+[2026.09.26-08.06.05:251][686]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_6 before=X=-950.000 Y=6750.000 Z=204.017 intended=X=-100.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.06.05:251][686]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_6 before=X=-950.000 Y=8950.000 Z=341.962 intended=X=100.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.06.08:108][873]LogTemp: Display: R1_TRACE release kind=1 rune=X=-12.224 Y=-6710.835 Z=133.514 ground=X=-95.690 Y=-6102.038 Z=8.000 selected=None hero=X=0.000 Y=-6800.000 Z=98.150 chesthit=None/None
+[2026.09.26-08.06.08:159][873]LogTemp: Display: R1_SPELL_RELEASE kind=1 mp=50.00
+[2026.09.26-08.06.09:440][935]LogTemp: Display: M1_TEST_PASS [A] R1_08_WaveImpact actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_08_WaveImpact.png bytes=3097084 pending=0
+[2026.09.26-08.06.10:944][ 32]LogTemp: Display: M1_TEST_FAIL [B Action; separate A group fixture] Wave damages two actual NPCs : 72.0 / 100.0
+[2026.09.26-08.06.12:184][109]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_5 before=X=-950.000 Y=3350.000 Z=89.096 intended=X=0.000 Y=-6706.000 Z=100.000
+[2026.09.26-08.06.18:111][494]LogTemp: Display: M1_TEST_PASS [B player punch -> real NPC counter] Player actually wounded before heal : health=40.0 hero=X=0.000 Y=-6800.000 Z=98.150 npc=X=0.000 Y=-6706.000 Z=98.096 reaction={
+[2026.09.26-08.06.19:011][550]LogTemp: Display: R1_TRACE release kind=2 rune=X=-0.000 Y=-6726.061 Z=115.161 ground=X=-95.690 Y=-6102.038 Z=8.000 selected=None hero=X=0.000 Y=-6800.000 Z=98.150 chesthit=None/None
+[2026.09.26-08.06.19:013][550]LogTemp: Display: R1_SPELL_RELEASE kind=2 mp=58.62
+Ran out of memory allocating 25084992 (23.9 MiB) bytes with alignment 16. Last error msg: 页面文件太小，无法完成操作。.
+[2026.09.26-08.06.21:906][627]LogTemp: Display: M1_TEST_PASS [A] R1_09_Healing actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160503/User/Saved/M5Tests/20260926_160522_m5_vs3_r1_gate/R1_09_Healing.png bytes=3310304 pending=0
+[2026.09.26-08.06.21:906][627]LogWindows: Error: Ran out of memory allocating 25084992 (23.9 MiB) bytes with alignment 16. Last error msg: 页面文件太小，无法完成操作。.

@@ -1,0 +1,16 @@
+{
+  "status": "FAIL",
+  "scope": "A authored clip inspection; not input-driven combat",
+  "run": "m5_vs3_r1_motion_20260926_152527",
+  "observed": "Hero visibly elevated above pavement in sword and spell samples. Reject this retarget, regardless of asset-existence assertions.",
+  "finding": "Source and target both start with Hips. Ground-root generator used Hips as both target root and pelvis.",
+  "next": "Use a separate pelvis/FK-only retarget, preserve rejected assets and recheck actual image.",
+  "images": [
+    "appendix/motion_first_contact.jpg",
+    "appendix/motion_pose_crop.jpg"
+  ],
+  "source_root": "Hips",
+  "target_root": "Hips",
+  "root_generator_removed_in": "Retargeted_Pelvis",
+  "os_input": "NOT_RUN"
+}

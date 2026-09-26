@@ -1,3 +1,5 @@
+2026-09-26 M5-VS3 R1 门前第一版已交 USER_REVIEW/PARTIAL：真实 Mixamo 剑术/施法、身前攻击阵、选目标后松开发射、治疗与六秒护盾已接入。独立包、完整回归与方案 1 羽翼打磨等待本次阶段门答复。剑的气质/步幅、特效层次仍需审阅；旧 FAIL/NOT_RUN 保留，真实 OS 鼠标 NOT_RUN，M0 PASS。见 [R1 状态](HarborCity_M5_VS3/R1/STATUS.md) 与 [审阅页](HarborCity_M5_VS3/R1/review/index.html)。
+
 2026-09-26 M5-VS3 已生成 PARTIAL 独立候选并停止桌面操作。原创复杂魔法阵、剑与魔法、飞行体力与三种翅膀排列已进入新包；主线四章、咖啡支线及真实 F9 重开恢复有证据，接送上车仍未解决。重开旧 NPC／音乐断言 FAIL、倒地与第一人称姿态缺口保留。1080p High/Epic 性能达本次目标；五分钟有声公开录像关闭私人 BGM。详见 [本轮状态](HarborCity_M5_VS3/STATUS.md)。战斗、魔法、翅膀、BGM 用户验收 PENDING；M0 PASS，旧候选、旧 FAIL/NOT_RUN 与存档保留。本轮没有扩图。
 
 2026-09-25 M5-VS2 第三段已按 PARTIAL 交付并停止桌面操作。GitHub 提交 3dfc77dddc78f154e390d1c6ed9558ff0fa2f5fb；Release：https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs2-town-20260925-205256-675-f65e250e。审阅 ZIP 与 4分29秒有声独立包录像已上传并核对服务器校验值。主线存档检查仍 FAIL，四章主线/完整支线/存读档未通过；OS 键鼠 NOT_RUN，美术和手感验收 PENDING。M0 PASS，旧候选、旧 FAIL/NOT_RUN 和存档保留。

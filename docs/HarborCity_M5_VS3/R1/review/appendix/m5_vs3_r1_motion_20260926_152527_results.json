@@ -1,0 +1,536 @@
+{
+  "mode": "m5_vs3_r1_motion",
+  "status": "COMPLETE",
+  "failures": 0,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 37.09693729877472
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_motion_20260926_152527",
+      "elapsed_seconds": 37.09976179897785
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 37.294362500309944
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "1.5",
+      "elapsed_seconds": 40.29073829948902
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_Selestia_0.png bytes=3118203 pending=0",
+      "elapsed_seconds": 42.25583679974079
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_Selestia_1.png bytes=3207520 pending=0",
+      "elapsed_seconds": 43.643153198063374
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_Selestia_2.png bytes=3215319 pending=0",
+      "elapsed_seconds": 44.96755399927497
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_2_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "3.533333",
+      "elapsed_seconds": 45.12125999853015
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_2_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_2_Selestia_0.png bytes=3125843 pending=0",
+      "elapsed_seconds": 46.572358798235655
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_2_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_2_Selestia_1.png bytes=3214096 pending=0",
+      "elapsed_seconds": 47.89232799783349
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_2_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_2_Selestia_2.png bytes=3216244 pending=0",
+      "elapsed_seconds": 49.22256699949503
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_3_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "1.666667",
+      "elapsed_seconds": 49.377655398100615
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_3_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_3_Selestia_0.png bytes=3114702 pending=0",
+      "elapsed_seconds": 50.80373889952898
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_3_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_3_Selestia_1.png bytes=3208627 pending=0",
+      "elapsed_seconds": 52.11869530007243
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_3_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_3_Selestia_2.png bytes=3226531 pending=0",
+      "elapsed_seconds": 53.44455260038376
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_4_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "2.433333",
+      "elapsed_seconds": 53.596134800463915
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_4_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_4_Selestia_0.png bytes=3122898 pending=0",
+      "elapsed_seconds": 55.01748989894986
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_4_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_4_Selestia_1.png bytes=3230085 pending=0",
+      "elapsed_seconds": 56.342510398477316
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_4_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_4_Selestia_2.png bytes=3185007 pending=0",
+      "elapsed_seconds": 57.65726539865136
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_5_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "1.366667",
+      "elapsed_seconds": 57.81734370067716
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_5_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_5_Selestia_0.png bytes=3092366 pending=0",
+      "elapsed_seconds": 59.238198798149824
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_5_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_5_Selestia_1.png bytes=3191386 pending=0",
+      "elapsed_seconds": 60.554637499153614
+    },
+    {
+      "name": "A_Mixamo_sword_and_shield_slash_5_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_5_Selestia_2.png bytes=3193968 pending=0",
+      "elapsed_seconds": 61.870187398046255
+    },
+    {
+      "name": "A_Mixamo_Standing_1H_Magic_Attack_01_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "2.3",
+      "elapsed_seconds": 62.024193201214075
+    },
+    {
+      "name": "A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_0.png bytes=3145933 pending=0",
+      "elapsed_seconds": 63.455297000706196
+    },
+    {
+      "name": "A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_1.png bytes=3210147 pending=0",
+      "elapsed_seconds": 64.7740322984755
+    },
+    {
+      "name": "A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_2.png bytes=3225805 pending=0",
+      "elapsed_seconds": 66.09896519780159
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "3.266667",
+      "elapsed_seconds": 66.25255209952593
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_0.png bytes=3125857 pending=0",
+      "elapsed_seconds": 67.68489719927311
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_1.png bytes=3206297 pending=0",
+      "elapsed_seconds": 68.99497669935226
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_2.png bytes=3229251 pending=0",
+      "elapsed_seconds": 70.31856659799814
+    },
+    {
+      "name": "A_Mixamo_standing_1H_cast_spell_01_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "2.266667",
+      "elapsed_seconds": 70.47310499846935
+    },
+    {
+      "name": "A_Mixamo_standing_1H_cast_spell_01_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_standing_1H_cast_spell_01_Selestia_0.png bytes=3140120 pending=0",
+      "elapsed_seconds": 71.88951059803367
+    },
+    {
+      "name": "A_Mixamo_standing_1H_cast_spell_01_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_standing_1H_cast_spell_01_Selestia_1.png bytes=3227552 pending=0",
+      "elapsed_seconds": 73.21611719951034
+    },
+    {
+      "name": "A_Mixamo_standing_1H_cast_spell_01_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_standing_1H_cast_spell_01_Selestia_2.png bytes=3235700 pending=0",
+      "elapsed_seconds": 74.53057439997792
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Attack_05_Selestia actual licensed sequence",
+      "status": "PASS",
+      "evidence_level": "A asset/playback; not input evidence",
+      "expected": "native retargeted mocap",
+      "actual": "3.533333",
+      "elapsed_seconds": 74.68320110067725
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_0 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_0.png bytes=3124982 pending=0",
+      "elapsed_seconds": 76.11913399770856
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_1 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_1.png bytes=3223842 pending=0",
+      "elapsed_seconds": 77.43591449782252
+    },
+    {
+      "name": "A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_2 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_2.png bytes=3230126 pending=0",
+      "elapsed_seconds": 78.75355659797788
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_Selestia_0.png bytes=3118203 pending=0",
+      "elapsed_seconds": 78.9079456999898
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_Selestia_1.png bytes=3207520 pending=0",
+      "elapsed_seconds": 78.91765199974179
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_Selestia_2.png bytes=3215319 pending=0",
+      "elapsed_seconds": 78.9269057996571
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_2_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_2_Selestia_0.png bytes=3125843 pending=0",
+      "elapsed_seconds": 78.93530869856477
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_2_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_2_Selestia_1.png bytes=3214096 pending=0",
+      "elapsed_seconds": 78.95372200012207
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_2_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_2_Selestia_2.png bytes=3216244 pending=0",
+      "elapsed_seconds": 78.96309189870954
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_3_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_3_Selestia_0.png bytes=3114702 pending=0",
+      "elapsed_seconds": 78.9825330004096
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_3_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_3_Selestia_1.png bytes=3208627 pending=0",
+      "elapsed_seconds": 79.0071749985218
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_3_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_3_Selestia_2.png bytes=3226531 pending=0",
+      "elapsed_seconds": 79.02895839884877
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_4_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_4_Selestia_0.png bytes=3122898 pending=0",
+      "elapsed_seconds": 79.05280249938369
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_4_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_4_Selestia_1.png bytes=3230085 pending=0",
+      "elapsed_seconds": 79.07145009934902
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_4_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_4_Selestia_2.png bytes=3185007 pending=0",
+      "elapsed_seconds": 79.09150459989905
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_5_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_5_Selestia_0.png bytes=3092366 pending=0",
+      "elapsed_seconds": 79.11737129837275
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_5_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_5_Selestia_1.png bytes=3191386 pending=0",
+      "elapsed_seconds": 79.13854400068521
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_sword_and_shield_slash_5_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_sword_and_shield_slash_5_Selestia_2.png bytes=3193968 pending=0",
+      "elapsed_seconds": 79.16211809962988
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_0.png bytes=3145933 pending=0",
+      "elapsed_seconds": 79.18199630081654
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_1.png bytes=3210147 pending=0",
+      "elapsed_seconds": 79.2042762003839
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_1H_Magic_Attack_01_Selestia_2.png bytes=3225805 pending=0",
+      "elapsed_seconds": 79.22839239984751
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_0.png bytes=3125857 pending=0",
+      "elapsed_seconds": 79.25220400094986
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_1.png bytes=3206297 pending=0",
+      "elapsed_seconds": 79.27455439791083
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Area_Attack_02_Selestia_2.png bytes=3229251 pending=0",
+      "elapsed_seconds": 79.29616459831595
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_standing_1H_cast_spell_01_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_standing_1H_cast_spell_01_Selestia_0.png bytes=3140120 pending=0",
+      "elapsed_seconds": 79.3166247010231
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_standing_1H_cast_spell_01_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_standing_1H_cast_spell_01_Selestia_1.png bytes=3227552 pending=0",
+      "elapsed_seconds": 79.34138530120254
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_standing_1H_cast_spell_01_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_standing_1H_cast_spell_01_Selestia_2.png bytes=3235700 pending=0",
+      "elapsed_seconds": 79.36342079937458
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_0.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_0.png bytes=3124982 pending=0",
+      "elapsed_seconds": 79.3908662982285
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_1.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_1.png bytes=3223842 pending=0",
+      "elapsed_seconds": 79.41344749927521
+    },
+    {
+      "name": "M3 final screenshot file A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_2.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_motion_20260926_152527/User/Saved/M5Tests/20260926_152720_m5_vs3_r1_motion/A_Mixamo_Standing_2H_Magic_Attack_05_Selestia_2.png bytes=3230126 pending=0",
+      "elapsed_seconds": 79.43620039895177
+    }
+  ],
+  "excerpt_scope": "Only native assertion results. Unrelated per-frame vehicle/legacy telemetry omitted; original full result remains in the local run directory."
+}

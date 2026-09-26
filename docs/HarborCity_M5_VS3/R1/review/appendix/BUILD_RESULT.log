@@ -1,0 +1,12 @@
+[1/4] Compile [x64] HCM1TestM5VS3R1.cpp [NoUba]
+[2/4] Link [x64] UnrealEditor-HarborCity.dll [NoUba]
+[3/4] Link [x64] UnrealEditor-HarborCity.lib [NoUba]
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ D:/﾿ￆ￑￐￑ﾧￏﾰ/codex￑ﾧￏﾰ/HarborCity/Intermediate/Build/Win64/x64/UnrealEditor/Development/HarborCity/UnrealEditor-HarborCity.lib ﾺￍﾶￔￏ￳ D:/﾿ￆ￑￐￑ﾧￏﾰ/codex￑ﾧￏﾰ/HarborCity/Intermediate/Build/Win64/x64/UnrealEditor/Development/HarborCity/UnrealEditor-HarborCity.exp
+[4/4] WriteMetadata HarborCityEditor.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 9.06 seconds
+Output binary: E:\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Total execution time: 10.27 seconds
+Trace written to file C:\Users\HP\AppData\Local\UnrealBuildTool\Trace.uba with size 4.2kb

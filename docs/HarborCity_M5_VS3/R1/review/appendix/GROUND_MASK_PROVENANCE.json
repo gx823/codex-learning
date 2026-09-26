@@ -1,0 +1,59 @@
+[
+  {
+    "kind": 1,
+    "texture": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R1\\OriginalGroundMasks\\T_R1_Ground1.png",
+    "source_geometry": [
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneWave_Outer.obj",
+        "sha256": "298d2c0a280a69cf54ed9eee103948346467e23dd65d0df86b4763adf93de43b"
+      },
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneWave_Inner.obj",
+        "sha256": "077f7388f16a58ce925d1556b9e1f8aa83b7b740f00bf70d6fa13b8ab6f99ad6"
+      },
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneWave_Core.obj",
+        "sha256": "befcfd8067c08d212cf861878f156de0d378e8f9aa1e90ddbd27f574c1f752ac"
+      }
+    ],
+    "method": "Exact triangle rasterization of project-original approved pattern; no external art"
+  },
+  {
+    "kind": 2,
+    "texture": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R1\\OriginalGroundMasks\\T_R1_Ground2.png",
+    "source_geometry": [
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneHeal_Outer.obj",
+        "sha256": "f69fc330fd47764d781c561ff806faa4a8e929cde625f28197417bf7a8e00bc3"
+      },
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneHeal_Inner.obj",
+        "sha256": "c83eed48d6490ed74bd9f978616ccb1675b2967484bd08e41137b58d296fb37b"
+      },
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneHeal_Core.obj",
+        "sha256": "86ad832318e03dc855c8d3354442bba4c7bed4d59e2aa08aec3bb0c131a85284"
+      }
+    ],
+    "method": "Exact triangle rasterization of project-original approved pattern; no external art"
+  },
+  {
+    "kind": 3,
+    "texture": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R1\\OriginalGroundMasks\\T_R1_Ground3.png",
+    "source_geometry": [
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneShield_Outer.obj",
+        "sha256": "55b591be42bc50de7ababea4de6c57ef242dc0a1a50ac437c9a54d1677cb6e6d"
+      },
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneShield_Inner.obj",
+        "sha256": "2c8b73b1b7f7debc3d6ec3bf6cc2293be3d0b20c3a4e4b03ed37c1ff48ec132d"
+      },
+      {
+        "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_023846_039_ArcaneFiligree3\\SM_ArcaneShield_Core.obj",
+        "sha256": "1d0ca8363baf3765dbe2e2fcd50c9d5ead809c6e144a79e2d65b141703adc2f4"
+      }
+    ],
+    "method": "Exact triangle rasterization of project-original approved pattern; no external art"
+  }
+]

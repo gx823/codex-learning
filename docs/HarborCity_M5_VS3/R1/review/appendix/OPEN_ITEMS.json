@@ -1,0 +1,41 @@
+{
+  "scope": "First A1-A5/B1-B6 iteration, not final acceptance",
+  "items": [
+    {
+      "item": "Light/heavy feminine posture, small feet sliding, root-motion approach 0.3-0.8m, fine finger grip",
+      "status": "PARTIAL_USER_REVIEW",
+      "next": "Review native normal-speed footage; exact step range and fine grip not passed"
+    },
+    {
+      "item": "Magic visual hierarchy, stronger bolt/wave explosion, taller healing-symbol distribution, local shield ripple",
+      "status": "PARTIAL_USER_REVIEW",
+      "next": "Particles and broad shield pulse exist; local ripple and polish remain"
+    },
+    {
+      "item": "Target selection raw Mouse X/Y relative OS input",
+      "status": "NOT_RUN",
+      "next": "Real mouse hold/select/release after stage gate"
+    },
+    {
+      "item": "New P-menu buttons actual pointer click and slow-walk casting transitions",
+      "status": "NOT_RUN",
+      "next": "Targeted UI/locomotion check after gate; source compiled"
+    },
+    {
+      "item": "First-person sword/cast/hands",
+      "status": "NOT_RUN",
+      "next": "A6 and later final acceptance after gate"
+    },
+    {
+      "item": "Wing option1 final, NPC natural falls, passenger quest, NPC access, reopen legacy assertions, magic gun appearance",
+      "status": "DEFERRED_AFTER_GATE",
+      "next": "Preserve old FAIL; continue only after explicit user gate reply"
+    },
+    {
+      "item": "Packaged R1, performance, full regression",
+      "status": "NOT_RUN",
+      "next": "Per request, only after gate"
+    }
+  ],
+  "memory": "Two OOM runs retained (shader-worker and later audio allocation at texture first use); latest two updated runs exited 0. No assertion that all low-memory failures are permanently fixed."
+}

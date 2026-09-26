@@ -1,0 +1,256 @@
+{
+  "mode": "m5_vs3_r1_gate",
+  "status": "COMPLETE",
+  "failures": 4,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 8.061589498072863
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_gate_20260926_160116",
+      "elapsed_seconds": 8.064430300146341
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 8.075144801288843
+    },
+    {
+      "name": "Six adult R/V fixture participants",
+      "status": "PASS",
+      "evidence_level": "A fixture; no new NPC designs",
+      "expected": "existing adult street cast",
+      "actual": "6",
+      "elapsed_seconds": 11.085822198539972
+    },
+    {
+      "name": "R1_05_SwordRun actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_05_SwordRun.png bytes=2987219 pending=0",
+      "elapsed_seconds": 20.432590700685978
+    },
+    {
+      "name": "R1_01_SwordCombo actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_01_SwordCombo.png bytes=3253011 pending=0",
+      "elapsed_seconds": 23.902276799082756
+    },
+    {
+      "name": "R1_02_SwordCombo actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_02_SwordCombo.png bytes=3129378 pending=0",
+      "elapsed_seconds": 25.324187099933624
+    },
+    {
+      "name": "R1_03_SwordCombo actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_03_SwordCombo.png bytes=3433706 pending=0",
+      "elapsed_seconds": 26.757954001426697
+    },
+    {
+      "name": "R1_04_SwordHeavy actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_04_SwordHeavy.png bytes=3735347 pending=0",
+      "elapsed_seconds": 34.71559429913759
+    },
+    {
+      "name": "Sword hit through Attack and blade sweep",
+      "status": "FAIL",
+      "evidence_level": "B Action, A placement",
+      "expected": "less than 100",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen00\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n}",
+      "elapsed_seconds": 39.21092930063605
+    },
+    {
+      "name": "Select first target via Look Action",
+      "status": "PASS",
+      "evidence_level": "B Action; upstream OS mouse NOT_RUN",
+      "expected": "first adult target",
+      "actual": "BP_NPCIdleR2_V_C_4",
+      "elapsed_seconds": 41.656098898500204
+    },
+    {
+      "name": "R1_06_BoltTarget actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_06_BoltTarget.png bytes=3011267 pending=0",
+      "elapsed_seconds": 43.419553399086
+    },
+    {
+      "name": "R1_07_BoltImpact actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_07_BoltImpact.png bytes=3114367 pending=0",
+      "elapsed_seconds": 44.8054631985724
+    },
+    {
+      "name": "Released bolt hits selected second target",
+      "status": "FAIL",
+      "evidence_level": "B Look + Attack completed",
+      "expected": "damage after release",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen02\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n}",
+      "elapsed_seconds": 45.013749700039625
+    },
+    {
+      "name": "R1_08_WaveImpact actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_08_WaveImpact.png bytes=3241409 pending=0",
+      "elapsed_seconds": 49.21063819900155
+    },
+    {
+      "name": "Wave damages two actual NPCs",
+      "status": "FAIL",
+      "evidence_level": "B Action; separate A group fixture",
+      "expected": "both damaged through release Action",
+      "actual": "100.0 / 100.0",
+      "elapsed_seconds": 50.71132680028677
+    },
+    {
+      "name": "Player actually wounded before heal",
+      "status": "FAIL",
+      "evidence_level": "B player punch -> real NPC counter",
+      "expected": "NPC counter damage",
+      "actual": "health=100.0 hero=X=0.000 Y=-6800.000 Z=98.150 npc=X=0.000 Y=-6680.000 Z=100.000 reaction={\r\n\t\"stable_id\": \"VS2_Citizen03\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n}",
+      "elapsed_seconds": 56.85134309902787
+    },
+    {
+      "name": "R1_09_Healing actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_09_Healing.png bytes=3246056 pending=0",
+      "elapsed_seconds": 59.228225998580456
+    },
+    {
+      "name": "R1_10_Shield actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_10_Shield.png bytes=3241641 pending=0",
+      "elapsed_seconds": 67.04284229874611
+    },
+    {
+      "name": "Shield really activated",
+      "status": "PASS",
+      "evidence_level": "B Spell4 Action",
+      "expected": "positive duration",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 10.3  生效中",
+      "elapsed_seconds": 67.14868399873376
+    },
+    {
+      "name": "Shield expires after six seconds",
+      "status": "PASS",
+      "evidence_level": "B activation; natural game time",
+      "expected": "zero remaining",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 3.5",
+      "elapsed_seconds": 73.95573079958558
+    },
+    {
+      "name": "M3 final screenshot file R1_05_SwordRun.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_05_SwordRun.png bytes=2987219 pending=0",
+      "elapsed_seconds": 73.97189259901643
+    },
+    {
+      "name": "M3 final screenshot file R1_01_SwordCombo.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_01_SwordCombo.png bytes=3253011 pending=0",
+      "elapsed_seconds": 73.98600310087204
+    },
+    {
+      "name": "M3 final screenshot file R1_02_SwordCombo.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_02_SwordCombo.png bytes=3129378 pending=0",
+      "elapsed_seconds": 73.99992780014873
+    },
+    {
+      "name": "M3 final screenshot file R1_03_SwordCombo.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_03_SwordCombo.png bytes=3433706 pending=0",
+      "elapsed_seconds": 74.01381250098348
+    },
+    {
+      "name": "M3 final screenshot file R1_04_SwordHeavy.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_04_SwordHeavy.png bytes=3735347 pending=0",
+      "elapsed_seconds": 74.02776949852705
+    },
+    {
+      "name": "M3 final screenshot file R1_06_BoltTarget.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_06_BoltTarget.png bytes=3011267 pending=0",
+      "elapsed_seconds": 74.04226659983397
+    },
+    {
+      "name": "M3 final screenshot file R1_07_BoltImpact.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_07_BoltImpact.png bytes=3114367 pending=0",
+      "elapsed_seconds": 74.05685289949179
+    },
+    {
+      "name": "M3 final screenshot file R1_08_WaveImpact.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_08_WaveImpact.png bytes=3241409 pending=0",
+      "elapsed_seconds": 74.07129750028253
+    },
+    {
+      "name": "M3 final screenshot file R1_09_Healing.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_09_Healing.png bytes=3246056 pending=0",
+      "elapsed_seconds": 74.08562359958887
+    },
+    {
+      "name": "M3 final screenshot file R1_10_Shield.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_10_Shield.png bytes=3241641 pending=0",
+      "elapsed_seconds": 74.09984729811549
+    }
+  ],
+  "excerpt_scope": "Only native assertion results. Unrelated per-frame vehicle/legacy telemetry omitted; original full result remains in the local run directory."
+}

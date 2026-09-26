@@ -1,0 +1,54 @@
+[2026.09.26-08.01.46:537][302]LogTemp: Display: M1_TEST_PASS [A] Runtime actors : PC=1 character=1 car=1 lamp=1
+[2026.09.26-08.01.46:539][302]LogTemp: Display: M1_TEST_PASS [A] Isolated save slot : HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_gate_20260926_160116
+[2026.09.26-08.01.46:550][303]LogTemp: Display: M1_TEST_PASS [A-runtime prerequisite] R2 initial real application focus : focused=1
+[2026.09.26-08.01.49:561][622]LogTemp: Display: M1_TEST_PASS [A fixture; no new NPC designs] Six adult R/V fixture participants : 6
+[2026.09.26-08.01.58:908][498]LogTemp: Display: M1_TEST_PASS [A] R1_05_SwordRun actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_05_SwordRun.png bytes=2987219 pending=0
+[2026.09.26-08.02.01:055][724]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=0.195 Y=-6800.000 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.02.02:377][823]LogTemp: Display: M1_TEST_PASS [A] R1_01_SwordCombo actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_01_SwordCombo.png bytes=3253011 pending=0
+[2026.09.26-08.02.02:501][836]LogTemp: Display: R1_TRACE swing combo=1 heavy=0 hero=X=18.981 Y=-6789.969 Z=98.150 rot=P=0.000000 Y=89.071625 R=-0.000000
+[2026.09.26-08.02.03:800][934]LogTemp: Display: M1_TEST_PASS [A] R1_02_SwordCombo actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_02_SwordCombo.png bytes=3129378 pending=0
+[2026.09.26-08.02.03:925][947]LogTemp: Display: R1_TRACE swing combo=2 heavy=0 hero=X=24.072 Y=-6785.599 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.02.05:234][ 45]LogTemp: Display: M1_TEST_PASS [A] R1_03_SwordCombo actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_03_SwordCombo.png bytes=3433706 pending=0
+[2026.09.26-08.02.06:663][192]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=36.287 Y=-6782.013 Z=98.150 rot=P=0.000000 Y=90.010345 R=-0.000000
+[2026.09.26-08.02.07:685][297]LogTemp: Display: R1_TRACE swing combo=1 heavy=0 hero=X=54.887 Y=-6772.109 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.02.08:699][402]LogTemp: Display: R1_TRACE swing combo=2 heavy=0 hero=X=59.997 Y=-6767.686 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.02.11:715][712]LogTemp: Display: R1_TRACE swing combo=2 heavy=1 hero=X=72.576 Y=-6763.991 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.02.13:191][823]LogTemp: Display: M1_TEST_PASS [A] R1_04_SwordHeavy actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_04_SwordHeavy.png bytes=3735347 pending=0
+[2026.09.26-08.02.13:871][892]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=147.444 Y=-6418.530 Z=98.150 rot=P=0.000000 Y=90.000000 R=-0.000000
+[2026.09.26-08.02.15:367][ 47]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_4 before=X=-950.000 Y=-9950.000 Z=91.952 intended=X=0.000 Y=-6665.000 Z=100.000
+[2026.09.26-08.02.16:294][141]LogTemp: Display: R1_TRACE swing combo=0 heavy=0 hero=X=0.000 Y=-6800.000 Z=98.150 rot=P=0.000000 Y=126.753944 R=-0.000000
+[2026.09.26-08.02.17:687][284]LogTemp: Display: M1_TEST_FAIL [B Action, A placement] Sword hit through Attack and blade sweep : {
+[2026.09.26-08.02.17:696][284]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_4 before=X=-950.000 Y=-7850.000 Z=89.096 intended=X=-140.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.02.17:696][284]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_5 before=X=-950.000 Y=-5250.000 Z=91.952 intended=X=140.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.02.20:132][530]LogTemp: Display: M1_TEST_PASS [B Action; upstream OS mouse NOT_RUN] Select first target via Look Action : BP_NPCIdleR2_V_C_4
+[2026.09.26-08.02.21:895][679]LogTemp: Display: M1_TEST_PASS [A] R1_06_BoltTarget actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_06_BoltTarget.png bytes=3011267 pending=0
+[2026.09.26-08.02.21:916][681]LogTemp: Display: R1_TRACE release kind=0 rune=X=17.079 Y=-6711.636 Z=133.520 ground=X=134.325 Y=-6105.009 Z=8.000 selected=BP_NPCIdleR2_R_C_5 hero=X=0.000 Y=-6800.000 Z=98.150 chesthit=None/None
+[2026.09.26-08.02.21:939][681]LogTemp: Display: R1_SPELL_RELEASE kind=0 mp=85.00
+[2026.09.26-08.02.21:947][682]LogTemp: Display: R1_TRACE bolt hit=BP_NPCIdleR2_R_C_4/CharacterMesh0 where=X=21.789 Y=-6665.952 Z=135.124 target=BP_NPCIdleR2_R_C_5
+[2026.09.26-08.02.23:282][783]LogTemp: Display: M1_TEST_PASS [A] R1_07_BoltImpact actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_07_BoltImpact.png bytes=3114367 pending=0
+[2026.09.26-08.02.23:490][804]LogTemp: Display: M1_TEST_FAIL [B Look + Attack completed] Released bolt hits selected second target : {
+[2026.09.26-08.02.23:500][804]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_R_C_6 before=X=-950.000 Y=6750.000 Z=204.017 intended=X=-100.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.02.23:500][804]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_6 before=X=-950.000 Y=8950.000 Z=341.962 intended=X=100.000 Y=-6100.000 Z=100.000
+[2026.09.26-08.02.26:296][ 91]LogTemp: Display: R1_TRACE release kind=1 rune=X=-9.195 Y=-6710.906 Z=141.964 ground=X=-13.548 Y=-6668.724 Z=8.000 selected=None hero=X=0.000 Y=-6800.000 Z=98.150 chesthit=None/None
+[2026.09.26-08.02.26:371][ 91]LogTemp: Display: R1_SPELL_RELEASE kind=1 mp=50.00
+[2026.09.26-08.02.27:687][186]LogTemp: Display: M1_TEST_PASS [A] R1_08_WaveImpact actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_08_WaveImpact.png bytes=3241409 pending=0
+[2026.09.26-08.02.29:188][337]LogTemp: Display: M1_TEST_FAIL [B Action; separate A group fixture] Wave damages two actual NPCs : 100.0 / 100.0
+[2026.09.26-08.02.30:419][457]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_5 before=X=-950.000 Y=3350.000 Z=89.096 intended=X=0.000 Y=-6680.000 Z=100.000
+[2026.09.26-08.02.35:328][958]LogTemp: Display: M1_TEST_FAIL [B player punch -> real NPC counter] Player actually wounded before heal : health=100.0 hero=X=0.000 Y=-6800.000 Z=98.150 npc=X=0.000 Y=-6680.000 Z=100.000 reaction={
+[2026.09.26-08.02.37:705][167]LogTemp: Display: M1_TEST_PASS [A] R1_09_Healing actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_09_Healing.png bytes=3246056 pending=0
+[2026.09.26-08.02.41:715][578]LogTemp: Display: R1_FIXTURE npc=BP_NPCIdleR2_V_C_5 before=X=0.000 Y=-6680.000 Z=100.000 intended=X=0.000 Y=-6680.000 Z=88.150
+[2026.09.26-08.02.43:950][799]LogTemp: Display: R1_TRACE release kind=3 rune=X=0.000 Y=-6727.637 Z=118.790 ground=X=-13.548 Y=-6668.724 Z=8.000 selected=None hero=X=-0.000 Y=-6803.125 Z=98.150 chesthit=None/None
+[2026.09.26-08.02.43:952][799]LogTemp: Display: R1_SPELL_RELEASE kind=3 mp=75.00
+[2026.09.26-08.02.45:519][921]LogTemp: Display: M1_TEST_PASS [A] R1_10_Shield actual screenshot after settle : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_10_Shield.png bytes=3241641 pending=0
+[2026.09.26-08.02.45:626][931]LogTemp: Display: M1_TEST_PASS [B Spell4 Action] Shield really activated : 1 魔力弹 0.0   2 冲击 0.0
+[2026.09.26-08.02.52:434][630]LogTemp: Display: M1_TEST_PASS [B activation; natural game time] Shield expires after six seconds : 1 魔力弹 0.0   2 冲击 0.0
+[2026.09.26-08.02.52:449][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_05_SwordRun.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_05_SwordRun.png bytes=2987219 pending=0
+[2026.09.26-08.02.52:463][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_01_SwordCombo.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_01_SwordCombo.png bytes=3253011 pending=0
+[2026.09.26-08.02.52:478][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_02_SwordCombo.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_02_SwordCombo.png bytes=3129378 pending=0
+[2026.09.26-08.02.52:492][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_03_SwordCombo.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_03_SwordCombo.png bytes=3433706 pending=0
+[2026.09.26-08.02.52:506][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_04_SwordHeavy.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_04_SwordHeavy.png bytes=3735347 pending=0
+[2026.09.26-08.02.52:520][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_06_BoltTarget.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_06_BoltTarget.png bytes=3011267 pending=0
+[2026.09.26-08.02.52:534][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_07_BoltImpact.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_07_BoltImpact.png bytes=3114367 pending=0
+[2026.09.26-08.02.52:549][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_08_WaveImpact.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_08_WaveImpact.png bytes=3241409 pending=0
+[2026.09.26-08.02.52:563][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_09_Healing.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_09_Healing.png bytes=3246056 pending=0
+[2026.09.26-08.02.52:578][630]LogTemp: Display: M1_TEST_PASS [A] M3 final screenshot file R1_10_Shield.png : file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_gate_20260926_160116/User/Saved/M5Tests/20260926_160138_m5_vs3_r1_gate/R1_10_Shield.png bytes=3241641 pending=0

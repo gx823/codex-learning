@@ -1,0 +1,58 @@
+{
+  "Sword hit through Attack and blade sweep": {
+    "name": "Sword hit through Attack and blade sweep",
+    "status": "PASS",
+    "evidence_level": "B Action, A placement",
+    "expected": "less than 100",
+    "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen00\",\r\n\t\"health\": 76,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": true,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 5,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"BP_TownHero_C_0\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 11.961412601172924\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 1,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_R_Shoulder\",\r\n\t\"last_damage\": 24\r\n}",
+    "elapsed_seconds": 38.26272350177169
+  },
+  "Released bolt hits selected second target": {
+    "name": "Released bolt hits selected second target",
+    "status": "PASS",
+    "evidence_level": "B Look + Attack completed",
+    "expected": "damage after release",
+    "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen02\",\r\n\t\"health\": 70,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 1,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 12,\r\n\t\"panic_path_failures\": 12,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"BP_TownHero_C_0\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 10.998887401074171\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 10.998887401074171,\r\n\t\"damage_events\": 1,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_C_Spine\",\r\n\t\"last_damage\": 30\r\n}",
+    "elapsed_seconds": 44.09414179995656
+  },
+  "Wave damages two actual NPCs": {
+    "name": "Wave damages two actual NPCs",
+    "status": "PASS",
+    "evidence_level": "B Action; separate A group fixture",
+    "expected": "both damaged through release Action",
+    "actual": "72.0 / 72.0",
+    "elapsed_seconds": 49.803148701786995
+  },
+  "Healing restores actual forty health": {
+    "name": "Healing restores actual forty health",
+    "status": "PASS",
+    "evidence_level": "B Spell3; natural regeneration ticks",
+    "expected": "up to 40 actual health",
+    "actual": "40.000023",
+    "elapsed_seconds": 63.49418320134282
+  },
+  "Shield really activated": {
+    "name": "Shield really activated",
+    "status": "PASS",
+    "evidence_level": "B Spell4 Action",
+    "expected": "positive duration",
+    "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.6   4 护盾 10.3  生效中",
+    "elapsed_seconds": 67.39157310128212
+  },
+  "Actual NPC hits are halved by shield": {
+    "name": "Actual NPC hits are halved by shield",
+    "status": "PASS",
+    "evidence_level": "B trigger attack; actual NPC counter events and player health",
+    "expected": "each accepted counter hit = original damage times 0.5",
+    "actual": "hits=1 recorded=7.50 healthDelta=7.50",
+    "elapsed_seconds": 69.00202010199428
+  },
+  "Shield expires after six seconds": {
+    "name": "Shield expires after six seconds",
+    "status": "PASS",
+    "evidence_level": "B activation; natural game time",
+    "expected": "zero remaining",
+    "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 3.2",
+    "elapsed_seconds": 74.51690829917789
+  }
+}

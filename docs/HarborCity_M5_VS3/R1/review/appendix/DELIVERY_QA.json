@@ -1,0 +1,15 @@
+{
+  "status": "STATIC_LINKS_PASS",
+  "missing": [],
+  "browser_render": "BLOCKED",
+  "browser_reason": "Browser URL policy rejects file protocol; no alternative browser surface or indirect serving used",
+  "video_visual": "contact sheet and relevant source frames inspected; action aesthetics USER_REVIEW",
+  "audio": "native master-submix WAV contains signal, encoded AAC stereo; listening NOT_RUN",
+  "public_bgm": "M5PublicCapture -> bPublicCaptureMute; enabled in actual launch",
+  "leading_frame_trim": {
+    "count": 1,
+    "next_frame_seconds": 0.04259999841451645,
+    "reason": "review camera had not received its first world transform; original capture preserved"
+  },
+  "native_video_sha256": "33577ffa111617358e2d1090cfb5712ee95ad824e7751cdb840206b5a653eceb"
+}

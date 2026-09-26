@@ -1,0 +1,250 @@
+{
+  "scope": "PRE_GATE_A1_A5_B1_B6",
+  "runtime": "UNREAL_EDITOR_GAME; no R1 package produced",
+  "evidence_layers": {
+    "A": "Asset authoring, fixture placement, controlled review framing; sampled motion poses are not input tests",
+    "B": "EnhancedInput Actions, including Look and Attack Started/Completed; upstream Mouse X/Y not covered",
+    "C": "NOT_RUN: real operating-system relative mouse and keyboard"
+  },
+  "runs": [
+    {
+      "run": "m5_vs3_r1_gate_20260926_155235",
+      "status": "COMPLETE",
+      "failures": 4,
+      "checks": 30,
+      "failed": [
+        {
+          "name": "Sword hit through Attack and blade sweep",
+          "evidence_level": "B Action, A placement"
+        },
+        {
+          "name": "Released bolt hits selected second target",
+          "evidence_level": "B Look + Attack completed"
+        },
+        {
+          "name": "Wave damages two actual NPCs",
+          "evidence_level": "B Action; separate A group fixture"
+        },
+        {
+          "name": "Player actually wounded before heal",
+          "evidence_level": "B player punch -> real NPC counter"
+        }
+      ],
+      "checks_excerpt": "m5_vs3_r1_gate_20260926_155235_results.json",
+      "process_exit_code": 0,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "FAIL"
+    },
+    {
+      "run": "m5_vs3_r1_gate_20260926_160116",
+      "status": "COMPLETE",
+      "failures": 4,
+      "checks": 31,
+      "failed": [
+        {
+          "name": "Sword hit through Attack and blade sweep",
+          "evidence_level": "B Action, A placement"
+        },
+        {
+          "name": "Released bolt hits selected second target",
+          "evidence_level": "B Look + Attack completed"
+        },
+        {
+          "name": "Wave damages two actual NPCs",
+          "evidence_level": "B Action; separate A group fixture"
+        },
+        {
+          "name": "Player actually wounded before heal",
+          "evidence_level": "B player punch -> real NPC counter"
+        }
+      ],
+      "checks_excerpt": "m5_vs3_r1_gate_20260926_160116_results.json",
+      "process_exit_code": 0,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "FAIL"
+    },
+    {
+      "run": "m5_vs3_r1_gate_20260926_160503",
+      "status": "RUNNING",
+      "failures": 2,
+      "checks": 18,
+      "failed": [
+        {
+          "name": "Sword hit through Attack and blade sweep",
+          "evidence_level": "B Action, A placement"
+        },
+        {
+          "name": "Wave damages two actual NPCs",
+          "evidence_level": "B Action; separate A group fixture"
+        }
+      ],
+      "checks_excerpt": "m5_vs3_r1_gate_20260926_160503_results.json",
+      "process_exit_code": 3,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": true,
+      "runtime_result": "FAIL"
+    },
+    {
+      "run": "m5_vs3_r1_gate_20260926_161938",
+      "status": "COMPLETE",
+      "failures": 0,
+      "checks": 31,
+      "failed": [],
+      "checks_excerpt": "m5_vs3_r1_gate_20260926_161938_results.json",
+      "process_exit_code": 0,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "COMPLETE"
+    },
+    {
+      "run": "m5_vs3_r1_gate_20260926_162544",
+      "status": "COMPLETE",
+      "failures": 0,
+      "checks": 33,
+      "failed": [],
+      "checks_excerpt": "m5_vs3_r1_gate_20260926_162544_results.json",
+      "process_exit_code": 0,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "COMPLETE"
+    },
+    {
+      "run": "m5_vs3_r1_logic_20260926_153726",
+      "status": "RUNNING",
+      "failures": 0,
+      "checks": 9,
+      "failed": [],
+      "checks_excerpt": "m5_vs3_r1_logic_20260926_153726_results.json",
+      "process_exit_code": 3,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "FAIL"
+    },
+    {
+      "run": "m5_vs3_r1_logic_20260926_155002",
+      "status": "COMPLETE",
+      "failures": 0,
+      "checks": 11,
+      "failed": [],
+      "checks_excerpt": "m5_vs3_r1_logic_20260926_155002_results.json",
+      "process_exit_code": 0,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "COMPLETE"
+    },
+    {
+      "run": "m5_vs3_r1_motion_20260926_152216",
+      "status": "NO_FINAL_RESULT",
+      "failures": null,
+      "process_exit_code": 1,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "FAIL"
+    },
+    {
+      "run": "m5_vs3_r1_motion_20260926_152527",
+      "status": "COMPLETE",
+      "failures": 0,
+      "checks": 66,
+      "failed": [],
+      "checks_excerpt": "m5_vs3_r1_motion_20260926_152527_results.json",
+      "process_exit_code": 0,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "COMPLETE"
+    },
+    {
+      "run": "m5_vs3_r1_motion_20260926_153516",
+      "status": "COMPLETE",
+      "failures": 0,
+      "checks": 66,
+      "failed": [],
+      "checks_excerpt": "m5_vs3_r1_motion_20260926_153516_results.json",
+      "process_exit_code": 0,
+      "process_status": "EXITED",
+      "memory_exhaustion_recorded": false,
+      "runtime_result": "COMPLETE"
+    }
+  ],
+  "source_changes": [
+    {
+      "path": "Source/HarborCity/HarborCity.Build.cs",
+      "sha256": "988a45361d92a674f655cc6d2a31924447314e4ecdad803cb379d49b30b6279c",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M1/HCM1HUD.cpp",
+      "sha256": "fa1ba8f4fc8af58021b6d9620d8546758ac727183c7fcdc924d338f1ad9b2f94",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M1/HCM1PlayerController.cpp",
+      "sha256": "04be62e22d6a0e386d42d39ac879fc3e811be28b28ded117f76b93e27decd220",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M1/HCM1TestM5VS3.cpp",
+      "sha256": "e98f9b9ac95061e41d299e6c9174d559a7622087c9175e555aafb3eff692da66",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M1/HCM1TestM5VS3R1.cpp",
+      "sha256": "f1d58251bdbb37c0443b61c81b4d92f95dac84ab762b4d0537b57184ea5c8169",
+      "new": true
+    },
+    {
+      "path": "Source/HarborCity/M1/HCM1TestRunner.cpp",
+      "sha256": "99a1d38df558a7f16909736f7601dccb6b205611214e2f2d458cd0ef4a43e687",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M1/HCM1TestRunner.h",
+      "sha256": "cf18118484563353caaf08eaf1e358563959c39599cd1b22a58a6bd6bb2b7176",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M3/HCM3Recording.cpp",
+      "sha256": "b2b35e4df7181c434cab41a2c8e305f62fc5f59489ada0db73b79484d75b3276",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M4/HCM4CombatComponent.cpp",
+      "sha256": "31d59c6db755156b565fac19b4e5d5f2117386608dc5dff2072a1aac9b049427",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M4/HCM4CombatComponent.h",
+      "sha256": "091d98652bee3fb7f73e4b33a0e1d1da67c2eb34f241806454185c6673bf05a0",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M4R2/HCM4R2PlayerCameraManager.cpp",
+      "sha256": "860c10342dd4b589bd8223cf7d959f7a2d8bbf07daba03beb1acdefb6e0eaf2c",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp",
+      "sha256": "3d0a5a318884d2fca77499d37e768a19c1fc642ce93b42eda107502c01ac0433",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M5VS3/HCM5VS3Abilities.h",
+      "sha256": "0309532cd15c8a58d360cdb4f88eb9387de33fe248f03e4e574b3c7a6dc81abd",
+      "new": false
+    },
+    {
+      "path": "Source/HarborCity/M5VS3/HCM5VS3R1Authoring.cpp",
+      "sha256": "4d986965fbc2c3ca055ca31d68c3f9e4e8273cf4802a279be18753865927e3b6",
+      "new": true
+    },
+    {
+      "path": "Source/HarborCity/M5VS3/HCM5VS3R1Authoring.h",
+      "sha256": "4e32a898a2c201fad7c4d2eef7a8e11c528e53c83963a8e7227e60d2443287c7",
+      "new": true
+    }
+  ],
+  "preserved_history": "Original VS3 full/reopen failures and prior R1 failures remain; successful screenshot writes do not imply visual/gameplay acceptance",
+  "user_approval": "PENDING"
+}

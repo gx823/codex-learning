@@ -1,0 +1,13 @@
+{
+  "animation_roles_report": "docs/HarborCity_M5_VS3/editor/20260926_153206_769_R1RolesPelvis/author_result.json",
+  "retarget_report": "docs/HarborCity_M5_VS3/editor/20260926_153037_644_R1RetargetPelvis/author_result.json",
+  "active_animation_root": "/Game/HarborCity/M5VS3/R1/Animations_Pelvis",
+  "retarget_operations": "native pelvis + FK; no second floor-root generator on Hips-only rig",
+  "outline_report": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\editor\\20260926_161742_893_R1SwordOutline\\author_result.json",
+  "source": "Adobe Mixamo Sword and Shield Pack + Magic Spell Pack",
+  "terms": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+  "first_person_new_sword_and_cast_visual": "NOT_RUN; after stage gate",
+  "foot_and_flight_look_gain": 1.5,
+  "driving_look_gain": 1.125,
+  "new_r1_package": null
+}

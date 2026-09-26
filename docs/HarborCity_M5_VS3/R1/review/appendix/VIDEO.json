@@ -1,0 +1,565 @@
+{
+  "status": "ENCODED",
+  "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\M5_VS3_R1_GATE.mp4",
+  "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_162634_BFAADAC0\\capture.json",
+  "duration_seconds": 62.362953999999995,
+  "actual_capture_fps": 28.221883139147003,
+  "audio": {
+    "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260926_162634_BFAADAC0\\game_audio.wav",
+    "bytes": 11993132,
+    "sha256": "28f2686d429b579a0f2204ad44002b11902170e6dff01466c880980ed051330d",
+    "riff_complete": true,
+    "chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16,
+        "offset": 20
+      },
+      {
+        "id": "data",
+        "bytes": 11993088,
+        "offset": 44
+      }
+    ],
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "sample_frames": 2998272,
+    "duration_seconds": 62.464,
+    "rms_dbfs": -36.19157697497644,
+    "peak_normalized": 0.187042236328125,
+    "nonzero_samples": 5978426,
+    "clipped_samples": 0,
+    "windows": [
+      {
+        "start_seconds": 0.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.48403343452755,
+        "peak_normalized": 0.17401123046875
+      },
+      {
+        "start_seconds": 1.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -40.143157963549704,
+        "peak_normalized": 0.13751220703125
+      },
+      {
+        "start_seconds": 2.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -37.843557255739746,
+        "peak_normalized": 0.1348876953125
+      },
+      {
+        "start_seconds": 3.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.28957448663062,
+        "peak_normalized": 0.134735107421875
+      },
+      {
+        "start_seconds": 4.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.437514269664376,
+        "peak_normalized": 0.13836669921875
+      },
+      {
+        "start_seconds": 5.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.277480428234846,
+        "peak_normalized": 0.1365966796875
+      },
+      {
+        "start_seconds": 6.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.22447477896773,
+        "peak_normalized": 0.15301513671875
+      },
+      {
+        "start_seconds": 7.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -37.05178460911901,
+        "peak_normalized": 0.139404296875
+      },
+      {
+        "start_seconds": 8.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.84879483076412,
+        "peak_normalized": 0.1595458984375
+      },
+      {
+        "start_seconds": 9.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.99731680737417,
+        "peak_normalized": 0.16729736328125
+      },
+      {
+        "start_seconds": 10.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.899356171426724,
+        "peak_normalized": 0.023712158203125
+      },
+      {
+        "start_seconds": 11.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.10815512384107,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 12.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.60877638555989,
+        "peak_normalized": 0.149078369140625
+      },
+      {
+        "start_seconds": 13.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.26564392564418,
+        "peak_normalized": 0.18475341796875
+      },
+      {
+        "start_seconds": 14.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.79933281143826,
+        "peak_normalized": 0.152923583984375
+      },
+      {
+        "start_seconds": 15.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.05134549120075,
+        "peak_normalized": 0.057403564453125
+      },
+      {
+        "start_seconds": 16.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.97331129518122,
+        "peak_normalized": 0.041168212890625
+      },
+      {
+        "start_seconds": 17.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.633445066811966,
+        "peak_normalized": 0.1602783203125
+      },
+      {
+        "start_seconds": 18.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -41.55992920311828,
+        "peak_normalized": 0.119384765625
+      },
+      {
+        "start_seconds": 19.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.57097700518092,
+        "peak_normalized": 0.182769775390625
+      },
+      {
+        "start_seconds": 20.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.94361950370092,
+        "peak_normalized": 0.028106689453125
+      },
+      {
+        "start_seconds": 21.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -36.71891782041257,
+        "peak_normalized": 0.173919677734375
+      },
+      {
+        "start_seconds": 22.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -32.94289592903297,
+        "peak_normalized": 0.17254638671875
+      },
+      {
+        "start_seconds": 23.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.17637153712874,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 24.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -30.828045312938272,
+        "peak_normalized": 0.187042236328125
+      },
+      {
+        "start_seconds": 25.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.03051441256631,
+        "peak_normalized": 0.031341552734375
+      },
+      {
+        "start_seconds": 26.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.96178014120909,
+        "peak_normalized": 0.020294189453125
+      },
+      {
+        "start_seconds": 27.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.702425372605624,
+        "peak_normalized": 0.16265869140625
+      },
+      {
+        "start_seconds": 28.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.3752069930384,
+        "peak_normalized": 0.164825439453125
+      },
+      {
+        "start_seconds": 29.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -31.036822009574085,
+        "peak_normalized": 0.167633056640625
+      },
+      {
+        "start_seconds": 30.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -37.41317793505114,
+        "peak_normalized": 0.057159423828125
+      },
+      {
+        "start_seconds": 31.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.17637153712874,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 32.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.954190155518475,
+        "peak_normalized": 0.16546630859375
+      },
+      {
+        "start_seconds": 33.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.03051441256631,
+        "peak_normalized": 0.031341552734375
+      },
+      {
+        "start_seconds": 34.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.36006142908841,
+        "peak_normalized": 0.16253662109375
+      },
+      {
+        "start_seconds": 35.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.12718863113627,
+        "peak_normalized": 0.165374755859375
+      },
+      {
+        "start_seconds": 36.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.9443340762348,
+        "peak_normalized": 0.028106689453125
+      },
+      {
+        "start_seconds": 37.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -32.942359433042824,
+        "peak_normalized": 0.1854248046875
+      },
+      {
+        "start_seconds": 38.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.109920814220516,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 39.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.17637153712874,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 40.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.97331129518122,
+        "peak_normalized": 0.041168212890625
+      },
+      {
+        "start_seconds": 41.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -43.03051441256631,
+        "peak_normalized": 0.031341552734375
+      },
+      {
+        "start_seconds": 42.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -31.125348626939314,
+        "peak_normalized": 0.173797607421875
+      },
+      {
+        "start_seconds": 43.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -34.492555913254876,
+        "peak_normalized": 0.16619873046875
+      },
+      {
+        "start_seconds": 44.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.94361950370092,
+        "peak_normalized": 0.028106689453125
+      },
+      {
+        "start_seconds": 45.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.928543808795965,
+        "peak_normalized": 0.041473388671875
+      },
+      {
+        "start_seconds": 46.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.109920814220516,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 47.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.17637153712874,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 48.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.973768505324784,
+        "peak_normalized": 0.041168212890625
+      },
+      {
+        "start_seconds": 49.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -33.38724039004632,
+        "peak_normalized": 0.170684814453125
+      },
+      {
+        "start_seconds": 50.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -29.596831590375594,
+        "peak_normalized": 0.174224853515625
+      },
+      {
+        "start_seconds": 51.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.68689234029661,
+        "peak_normalized": 0.164764404296875
+      },
+      {
+        "start_seconds": 52.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.49245658717538,
+        "peak_normalized": 0.17559814453125
+      },
+      {
+        "start_seconds": 53.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.64192978488847,
+        "peak_normalized": 0.041473388671875
+      },
+      {
+        "start_seconds": 54.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.109920814220516,
+        "peak_normalized": 0.050445556640625
+      },
+      {
+        "start_seconds": 55.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -38.17637153712874,
+        "peak_normalized": 0.05328369140625
+      },
+      {
+        "start_seconds": 56.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -35.553383870035034,
+        "peak_normalized": 0.166351318359375
+      },
+      {
+        "start_seconds": 57.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.774392175058296,
+        "peak_normalized": 0.033966064453125
+      },
+      {
+        "start_seconds": 58.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -45.96178014120909,
+        "peak_normalized": 0.020294189453125
+      },
+      {
+        "start_seconds": 59.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -46.10815512384107,
+        "peak_normalized": 0.01898193359375
+      },
+      {
+        "start_seconds": 60.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -42.94361950370092,
+        "peak_normalized": 0.028106689453125
+      },
+      {
+        "start_seconds": 61.0,
+        "sample_frames": 48000,
+        "rms_dbfs": -39.928543808795965,
+        "peak_normalized": 0.041473388671875
+      },
+      {
+        "start_seconds": 62.0,
+        "sample_frames": 22272,
+        "rms_dbfs": -38.254079431108025,
+        "peak_normalized": 0.0474853515625
+      }
+    ],
+    "signal_present": true,
+    "listening_status": "NOT_RUN",
+    "sound_effect_quality": "USER_REVIEW",
+    "meaning": "PCM structure and measured signal only; neither proves every effect was heard or sounds appropriate"
+  },
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64003d",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuvj420p",
+        "level": 61,
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "2000/1",
+        "avg_frame_rate": "1760000/62369",
+        "time_base": "1/16000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 997808,
+        "duration": "62.363000",
+        "bit_rate": "6804848",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1760",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.8.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 2993422,
+        "duration": "62.362958",
+        "bit_rate": "191981",
+        "nb_frames": "2925",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R1\\M5_VS3_R1_GATE.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "62.363000",
+      "size": "54626957",
+      "bit_rate": "7007611",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.6.100"
+      }
+    }
+  },
+  "timing": "native wall timestamps, VFR; no interpolation, synthetic replacement, speed change or extra terminal freeze",
+  "visual": "USER_REVIEW",
+  "listening": "NOT_RUN",
+  "leading_trim": {
+    "count": 1,
+    "next_frame_seconds": 0.04259999841451645,
+    "reason": "review camera had not received its first world transform; original capture preserved"
+  },
+  "capture_metadata_note": "Historical recorder milestone tag is retained. This R1 stage gate is UnrealEditor.exe -game, native viewport capture; not a packaged build. Test fixtures and review camera are A setup; gameplay uses B EnhancedInput Actions; OS mouse NOT_RUN."
+}

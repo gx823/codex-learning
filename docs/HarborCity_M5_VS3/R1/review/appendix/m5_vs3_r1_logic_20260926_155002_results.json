@@ -1,0 +1,96 @@
+{
+  "mode": "m5_vs3_r1_logic",
+  "status": "COMPLETE",
+  "failures": 0,
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 19.912474300712347
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r1_logic_20260926_155002",
+      "elapsed_seconds": 19.91502620279789
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 19.924344699829817
+    },
+    {
+      "name": "Aim does not spend MP",
+      "status": "PASS",
+      "evidence_level": "B Spell1 Action",
+      "expected": "unchanged",
+      "actual": "100.0",
+      "elapsed_seconds": 23.548266801983118
+    },
+    {
+      "name": "Cancel clears aiming without cost",
+      "status": "PASS",
+      "evidence_level": "B right-mouse Aim Action",
+      "expected": "no MP/CD",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 0.0",
+      "elapsed_seconds": 23.971385702490807
+    },
+    {
+      "name": "Held attack does not spend",
+      "status": "PASS",
+      "evidence_level": "B Attack started, still held",
+      "expected": "unchanged",
+      "actual": "100.0",
+      "elapsed_seconds": 24.77754260227084
+    },
+    {
+      "name": "Release spends exactly 15 MP",
+      "status": "PASS",
+      "evidence_level": "B Attack Completed",
+      "expected": "15 once",
+      "actual": "85.0",
+      "elapsed_seconds": 24.89906110242009
+    },
+    {
+      "name": "Full-health heal has no cooldown",
+      "status": "PASS",
+      "evidence_level": "B Spell3 Action",
+      "expected": "no cast",
+      "actual": "生命已满",
+      "elapsed_seconds": 26.21990180015564
+    },
+    {
+      "name": "Q during punch executes at finish",
+      "status": "PASS",
+      "evidence_level": "B Attack + Q during action",
+      "expected": "Sword",
+      "actual": "星潮剑  |  生命 100\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器",
+      "elapsed_seconds": 27.90045190230012
+    },
+    {
+      "name": "R1_Logic_Sword actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_logic_20260926_155002/User/Saved/M5Tests/20260926_155028_m5_vs3_r1_logic/R1_Logic_Sword.png bytes=3344651 pending=0",
+      "elapsed_seconds": 29.5815124027431
+    },
+    {
+      "name": "M3 final screenshot file R1_Logic_Sword.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R1/m5_vs3_r1_logic_20260926_155002/User/Saved/M5Tests/20260926_155028_m5_vs3_r1_logic/R1_Logic_Sword.png bytes=3344651 pending=0",
+      "elapsed_seconds": 29.585269302129745
+    }
+  ],
+  "excerpt_scope": "Only native assertion results. Unrelated per-frame vehicle/legacy telemetry omitted; original full result remains in the local run directory."
+}

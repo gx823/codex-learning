@@ -1,0 +1,1088 @@
+--- a/Source/HarborCity/HarborCity.Build.cs
++++ b/Source/HarborCity/HarborCity.Build.cs
+@@ -30,12 +30,15 @@
+ 		// Runtime calibration uses the existing platform mapper to identify the local mouse device.
+ 		PrivateDependencyModuleNames.AddRange(new string[] { "ApplicationCore", "MovieSceneCapture", "RenderCore", "RHI" });
+ 		PrivateDependencyModuleNames.Add("ImageCore");
++		PrivateDependencyModuleNames.Add("Niagara");
+ 		PrivateDependencyModuleNames.AddRange(new string[] { "AnimGraphRuntime", "AnimationWarpingRuntime", "AudioMixer", "AnimationCore", "Chaos" });
+ 		// Read-only VS2 diagnostics inspect the already-enabled VRM4U spring node.
+ 		PrivateDependencyModuleNames.Add("VRM4U");
+ 		PrivateDependencyModuleNames.AddRange(new string[] { "ClothingSystemRuntimeInterface", "ClothingSystemRuntimeCommon" });
+ 		if (Target.bBuildEditor)
+ 		{
++			PrivateDependencyModuleNames.Add("NiagaraEditor");
++			PrivateIncludePaths.Add(System.IO.Path.Combine(EngineDirectory, "Plugins/FX/Niagara/Source/Niagara/Internal"));
+ 			PrivateDependencyModuleNames.AddRange(new string[] { "AnimGraph", "AnimationWarpingEditor", "BlueprintGraph", "UnrealEd", "AssetRegistry", "AssetTools", "MeshDescription", "SkeletalMeshDescription", "StaticMeshDescription", "IKRig", "AnimationBlueprintLibrary", "PhysicsUtilities" });
+ 		}
+ 
+--- a/Source/HarborCity/M1/HCM1HUD.cpp
++++ b/Source/HarborCity/M1/HCM1HUD.cpp
+@@ -148,6 +148,12 @@
+                             [SNew(SButton).HAlign(HAlign_Center).ContentPadding(10).OnClicked(this, &SHCM1Overlay::TrackingClicked)
+                                 [SNew(STextBlock).Text(this, &SHCM1Overlay::TrackingText).Font(Body)]]
+                             + SVerticalBox::Slot().AutoHeight().Padding(0, 5)
++                            [SNew(SButton).HAlign(HAlign_Center).ContentPadding(10).OnClicked_Lambda([this]{if(auto* A=Abilities())A->ToggleDamageNumbers();return FReply::Handled();})
++                                [SNew(STextBlock).Text_Lambda([this]{auto* A=Abilities();return FText::FromString(A&&A->ShowsDamageNumbers()?TEXT("伤害数字：开"):TEXT("伤害数字：关"));}).Font(Body)]]
++                            + SVerticalBox::Slot().AutoHeight().Padding(0,5)
++                            [SNew(SButton).HAlign(HAlign_Center).ContentPadding(10).OnClicked_Lambda([this]{if(auto* A=Abilities())A->ToggleImpactShake();return FReply::Handled();})
++                                [SNew(STextBlock).Text_Lambda([this]{auto* A=Abilities();return FText::FromString(A&&A->UsesImpactShake()?TEXT("命中镜头震动：开"):TEXT("命中镜头震动：关"));}).Font(Body)]]
++                            + SVerticalBox::Slot().AutoHeight().Padding(0,5)
+                             [SNew(SButton).HAlign(HAlign_Center).ContentPadding(12).OnClicked(this, &SHCM1Overlay::ContinueClicked)
+                                 [SNew(STextBlock).Text(FText::FromString(TEXT("继续游戏"))).Font(Hint)]]
+                             + SVerticalBox::Slot().AutoHeight().Padding(0, 5)
+@@ -281,7 +287,18 @@
+     Super::DrawHUD();
+     const AHCM1PlayerController* PC = Cast<AHCM1PlayerController>(GetOwningPlayerController());
+     const UHCM4CombatComponent* Combat = PC ? PC->GetCombatComponent() : nullptr;
+-    if (!Canvas || !Combat || !Combat->CanUseCombat() || Combat->GetWeaponMode() != EHCM4WeaponMode::Pistol) return;
++    const auto* Hero=PC?Cast<AHCM1Character>(PC->GetPawn()):nullptr;
++    const auto* Abilities=Hero?Hero->GetAbilities():nullptr;
++    if(Canvas&&PC&&PC->IsFirstPersonPerspective()&&Abilities&&Abilities->GetShieldRemaining()>0){
++        const float Fade=Abilities->GetShieldRemaining()<1?.5f+.5f*FMath::Sin(Abilities->GetShieldRemaining()*28):1.f;
++        const FLinearColor Gold(1.f,.7f,.22f,.20f*Fade);
++        // Sparse corner cells leave the aiming area completely clear.
++        for(int32 Side=0;Side<2;++Side)for(int32 Row=0;Row<4;++Row){
++            const FVector2D C(Side?Canvas->SizeX-28.f:28.f,Canvas->SizeY*(.25f+Row*.16f));
++            for(int32 E=0;E<6;++E){const float A=E*PI/3,B=(E+1)*PI/3;DrawLine(C.X+FMath::Cos(A)*24,C.Y+FMath::Sin(A)*24,C.X+FMath::Cos(B)*24,C.Y+FMath::Sin(B)*24,Gold,1.2f);}
++        }
++    }
++    if (!Canvas || !Combat || !Combat->CanUseCombat() || (Combat->GetWeaponMode() != EHCM4WeaponMode::Pistol && !(Abilities&&Abilities->IsCastingAim()))) return;
+     const float X = Canvas->SizeX * .5f, Y = Canvas->SizeY * .5f;
+     const float Gap = FMath::Lerp(15.f, 4.f, Combat->GetAimBlend());
+     const FLinearColor Color = Combat->IsReloading() ? FLinearColor(.65f,.65f,.65f) : FLinearColor(.9f,1.f,.95f);
+--- a/Source/HarborCity/M1/HCM1PlayerController.cpp
++++ b/Source/HarborCity/M1/HCM1PlayerController.cpp
+@@ -561,7 +561,7 @@
+     {
+         const FVector2D Axis = Value.Get<FVector2D>();
+         if (IsFlying()) GetFlightComponent()->SetHorizontalInput(Axis);
+-        else ControlledCharacter->DoMove(Axis.X, Axis.Y);
++        else if(!ControlledCharacter->GetAbilities()->BlocksLocomotion()) ControlledCharacter->DoMove(Axis.X, Axis.Y);
+     }
+ }
+ void AHCM1PlayerController::MoveReleased(const FInputActionValue& Value)
+@@ -619,6 +619,7 @@
+ void AHCM1PlayerController::SprintPressed()
+ {
+     if (IsFlying()) { GetFlightComponent()->SetBoostHeld(true); return; }
++    if(ControlledCharacter&&ControlledCharacter->GetAbilities()->BlocksRunJump())return;
+     if (PlayerMode == EHCPlayerMode::OnFoot && !bPauseMenuOpen && !IsDialogueOpen() && ControlledCharacter) ControlledCharacter->SetSprinting(true);
+ }
+ void AHCM1PlayerController::SprintReleased()
+@@ -629,6 +630,7 @@
+ void AHCM1PlayerController::JumpPressed()
+ {
+     if (IsFlying()) { GetFlightComponent()->SetAscendHeld(true); return; }
++    if(ControlledCharacter&&ControlledCharacter->GetAbilities()->BlocksRunJump())return;
+     if (PlayerMode == EHCPlayerMode::OnFoot && !bPauseMenuOpen && !IsDialogueOpen() && ControlledCharacter) ControlledCharacter->DoJumpStart();
+ }
+ void AHCM1PlayerController::JumpReleased()
+@@ -992,12 +994,12 @@
+ float AHCM1PlayerController::GetCurrentAimLookMultiplier() const
+ { const UHCM4CombatComponent* Combat = GetCombatComponent(); return Combat ? Combat->GetAimLookMultiplier() : 1.f; }
+ void AHCM1PlayerController::AttackPressed() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->RequestAttack(); }
+-void AHCM1PlayerController::AttackReleased(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->ReleaseSword();}
++void AHCM1PlayerController::AttackReleased(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->ReleasePrimary();}
+ void AHCM1PlayerController::SpellOne(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(0);}
+ void AHCM1PlayerController::SpellTwo(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(1);}
+ void AHCM1PlayerController::SpellThree(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(2);}
+ void AHCM1PlayerController::SpellFour(){if(ControlledCharacter)ControlledCharacter->GetAbilities()->CastSpell(3);}
+-void AHCM1PlayerController::AimPressed() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->SetAimHeld(true); }
++void AHCM1PlayerController::AimPressed() { if(ControlledCharacter&&ControlledCharacter->GetAbilities()->CancelSpell())return; if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->SetAimHeld(true); }
+ void AHCM1PlayerController::AimReleased() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->SetAimHeld(false); }
+ void AHCM1PlayerController::ToggleWeaponPressed() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->RequestToggleWeapon(); }
+ void AHCM1PlayerController::ReloadPressed() { if (UHCM4CombatComponent* Combat = GetCombatComponent()) Combat->RequestReload(); }
+--- a/Source/HarborCity/M1/HCM1TestM5VS3.cpp
++++ b/Source/HarborCity/M1/HCM1TestM5VS3.cpp
+@@ -22,6 +22,7 @@
+ 
+ void AHCM1TestRunner::AddM5VS3Tests()
+ {
++    if(Mode.StartsWith(TEXT("m5_vs3_r1_"))){AddM5VS3R1Tests();return;}
+     const bool Demo=Mode==TEXT("m5_vs3_demo");
+     auto Shot=[this](FString Name){
+         AddStep(Name+TEXT(" capture"),.3,[this,Name]{
+--- a/Source/HarborCity/M1/HCM1TestM5VS3R1.cpp
++++ b/Source/HarborCity/M1/HCM1TestM5VS3R1.cpp
+@@ -0,0 +1,138 @@
++#include "HCM1TestRunner.h"
++#include "HCM1Character.h"
++#include "HCM1PlayerController.h"
++#include "M3/HCM3NPC.h"
++#include "M4/HCM4CombatComponent.h"
++#include "M5VS3/HCM5VS3Abilities.h"
++#include "Animation/AnimInstance.h"
++#include "Animation/AnimSequence.h"
++#include "Animation/AnimMontage.h"
++#include "Components/SkeletalMeshComponent.h"
++#include "GameFramework/CharacterMovementComponent.h"
++#include "Engine/GameViewportClient.h"
++#include "EngineUtils.h"
++#include "EnhancedPlayerInput.h"
++#include "M3/HCM3NavRegion.h"
++#include "M4/HCM4R1ReactionComponent.h"
++#include "Camera/PlayerCameraManager.h"
++#include "Camera/CameraActor.h"
++#include "Camera/CameraComponent.h"
++#include "TimerManager.h"
++
++void AHCM1TestRunner::AddM5VS3R1Tests()
++{
++    auto Shot=[this](FString Name){AddStep(Name+TEXT(" native screenshot"),.12,[this,Name]{const FString File=RunDirectory/(Name+TEXT(".png"));M3CaptureFiles.AddUnique(File);M3LastCaptureFrame=GFrameCounter;FScreenshotRequest::RequestScreenshot(File,false,false,false,FIntRect(),true);});AddM3CaptureCompletion(Name);};
++    AddStep(TEXT("A R1 open plaza fixture; not navigation evidence"),3,[this]{CollectGarbage(RF_NoFlags);PlaceCharacter(FVector(0,-6800,110),90);PC->SetControlRotation(FRotator(-8,90,0));});
++    if(Mode==TEXT("m5_vs3_r1_gate")){
++        const auto Targets=MakeShared<TArray<TWeakObjectPtr<AHCM3NPC>>>();
++        const auto SideCamera=MakeShared<TWeakObjectPtr<ACameraActor>>();
++        const auto SideTimer=MakeShared<FTimerHandle>();
++        const auto HealBefore=MakeShared<float>(100);const auto ShieldBefore=MakeShared<float>(100);const auto ShieldSampleTime=MakeShared<double>(0);
++        AddStep(TEXT("A adult R/V review fixture; not traversal evidence"),5,[this,Targets]{
++            for(int32 I=0;I<6;++I)for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It)if(It->StableId==FName(*FString::Printf(TEXT("VS2_Citizen%02d"),I))){
++                Targets->Add(*It);It->bStationary=true;It->PatrolPoints.Reset();break;
++            }
++            Check(TEXT("Six adult R/V fixture participants"),Targets->Num()==6,TEXT("existing adult street cast"),FString::FromInt(Targets->Num()),TEXT("A fixture; no new NPC designs"));
++        });
++        AddStep(TEXT("A side-rear review camera; no mouse claim"),.4,[this,SideCamera,SideTimer]{
++            PC->Tags.AddUnique(TEXT("R1GateRecordingReady"));
++            *SideCamera=GetWorld()->SpawnActor<ACameraActor>();
++            if(!SideCamera->IsValid())return;
++            SideCamera->Get()->GetCameraComponent()->SetFieldOfView(PC->PlayerCameraManager->GetFOVAngle());
++            GetWorld()->GetTimerManager().SetTimer(*SideTimer,[this,SideCamera]{
++                if(!SideCamera->IsValid()||!Character)return;
++                const FVector P=Character->GetActorLocation();const FVector At=P+FVector(290,-290,135);
++                SideCamera->Get()->SetActorLocationAndRotation(At,(P+FVector(0,0,30)-At).Rotation());
++            },.016f,true);
++            PC->SetViewTarget(SideCamera->Get());
++            M5ReviewCameraCleanup=[this,SideCamera,SideTimer]{GetWorld()->GetTimerManager().ClearTimer(*SideTimer);PC->SetViewTarget(Character);if(SideCamera->IsValid())SideCamera->Get()->Destroy();};
++        });
++        auto PlaceNPC=[this,Targets](int32 Index,FVector Position){
++            if(!Targets->IsValidIndex(Index)||!(*Targets)[Index].IsValid())return;
++            auto* N=(*Targets)[Index].Get();if(N->GetController())N->GetController()->StopMovement();UE_LOG(LogTemp,Display,TEXT("R1_FIXTURE npc=%s before=%s intended=%s"),*N->GetName(),*N->GetActorLocation().ToString(),*Position.ToString());const FVector Delta=Position-N->GetActorLocation();
++            if(N->NavigationRegion)N->NavigationRegion->AddActorWorldOffset(Delta,false);
++            N->GetCharacterMovement()->StopMovementImmediately();N->SetActorLocation(Position,false,nullptr,ETeleportType::TeleportPhysics);N->SetActorRotation(FRotator(0,-90,0));
++        };
++        auto AimAt=[this,Targets](int32 Index){
++            for(int32 I=0;I<4;++I)AddStep(TEXT("B one-shot Look Action toward target"),.15,[this,Targets,Index]{
++                if(!Targets->IsValidIndex(Index)||!(*Targets)[Index].IsValid())return;
++                const FRotator Desired=((*Targets)[Index]->GetActorLocation()+FVector(0,0,35)-PC->PlayerCameraManager->GetCameraLocation()).Rotation();
++                const FRotator Current=PC->GetControlRotation();const FVector2D Gain=PC->GetOnFootLookDegreesPerActionUnit();
++                if(auto* Input=Cast<UEnhancedPlayerInput>(PC->PlayerInput))Input->InjectInputForAction(PC->GetM1Action(TEXT("Look")),FInputActionValue(FVector2D(FMath::FindDeltaAngleDegrees(Current.Yaw,Desired.Yaw)/Gain.X,FMath::FindDeltaAngleDegrees(Current.Pitch,Desired.Pitch)/Gain.Y)));
++            });
++        };
++        Tap(TEXT("ToggleWeapon"),.7);
++        AddStep(TEXT("B holding sword walk"),1,[this]{Hold(TEXT("Move"),FInputActionValue(FVector2D(0,1)));},[this]{Release(TEXT("Move"));});
++        AddStep(TEXT("B holding sword run"),.4,[this]{Hold(TEXT("Move"),FInputActionValue(FVector2D(0,1)));Hold(TEXT("Sprint"),FInputActionValue(true));});
++        Shot(TEXT("R1_05_SwordRun"));
++        AddStep(TEXT("B stop from run"),.7,[this]{Release(TEXT("Move"));Release(TEXT("Sprint"));});
++        AddStep(TEXT("B turn through movement"),.5,[this]{Hold(TEXT("Move"),FInputActionValue(FVector2D(-1,0)));},[this]{Release(TEXT("Move"));});
++        AddStep(TEXT("A clear side-rear sword framing"),.8,[this]{PlaceCharacter(FVector(0,-6800,110),90);PC->SetControlRotation(FRotator(-8,90,0));});
++        for(int32 Repeat=0;Repeat<2;++Repeat){
++            for(int32 I=0;I<3;++I){Tap(TEXT("Attack"),.15);if(Repeat==0)Shot(FString::Printf(TEXT("R1_0%d_SwordCombo"),I+1));else AddStep(TEXT("B finish real swing"),.75,[]{});}
++            AddStep(TEXT("Let combo reset naturally"),1.3,[]{});
++        }
++        AddStep(TEXT("B sword heavy charge"),.8,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});
++        AddStep(TEXT("Heavy cut anticipation and release"),.32,[]{});Shot(TEXT("R1_04_SwordHeavy"));
++        AddStep(TEXT("B run into slash"),.55,[this]{Hold(TEXT("Move"),FInputActionValue(FVector2D(0,1)));Hold(TEXT("Sprint"),FInputActionValue(true));});
++        Tap(TEXT("Attack"),.5);AddStep(TEXT("Release locomotion after slash"),1,[this]{Release(TEXT("Move"));Release(TEXT("Sprint"));});
++        AddStep(TEXT("A sword hit fixture"),.8,[this,PlaceNPC]{PlaceCharacter(FVector(0,-6800,110),90);PlaceNPC(0,FVector(0,-6705,100));PC->SetControlRotation(FRotator(-8,90,0));});
++        Tap(TEXT("Attack"),1.2);
++        AddStep(TEXT("B actual sword damage"),.2,[]{},[this,Targets]{if(Targets->Num()>0){UE_LOG(LogTemp,Display,TEXT("R1_FIXTURE sword final hero=%s npc=%s"),*Character->GetActorLocation().ToString(),*(*Targets)[0]->GetActorLocation().ToString());}if(Targets->Num()>0)Check(TEXT("Sword hit through Attack and blade sweep"),(*Targets)[0]->GetHealth()<100,TEXT("less than 100"),(*Targets)[0]->GetCombatDiagnostics(),TEXT("B Action, A placement"));});
++        AddStep(TEXT("A two-target spell fixture; restore normal gameplay camera"),.8,[this,PlaceNPC]{if(M5ReviewCameraCleanup){M5ReviewCameraCleanup();M5ReviewCameraCleanup=nullptr;}PlaceCharacter(FVector(0,-6800,110),90);PlaceNPC(0,FVector(-700,-6000,100));PlaceNPC(1,FVector(-140,-6100,100));PlaceNPC(2,FVector(140,-6100,100));});
++        Tap(TEXT("Spell1"),.5);AddStep(TEXT("B hold left mouse Action to select"),.2,[this]{Hold(TEXT("Attack"),FInputActionValue(true));});
++        AimAt(1);AddStep(TEXT("B first selected target readback"),.2,[]{},[this,Targets]{Check(TEXT("Select first target via Look Action"),Targets->Num()>1&&Character->GetAbilities()->GetSelectedTarget()==(*Targets)[1].Get(),TEXT("first adult target"),GetNameSafe(Character->GetAbilities()->GetSelectedTarget()),TEXT("B Action; upstream OS mouse NOT_RUN"));});
++        AimAt(2);Shot(TEXT("R1_06_BoltTarget"));
++        AddStep(TEXT("B release magic bolt"),.22,[this]{Release(TEXT("Attack"));});Shot(TEXT("R1_07_BoltImpact"));
++        AddStep(TEXT("B bolt damage readback"),.2,[]{},[this,Targets]{if(Targets->Num()>2)Check(TEXT("Released bolt hits selected second target"),(*Targets)[2]->GetHealth()<100,TEXT("damage after release"),(*Targets)[2]->GetCombatDiagnostics(),TEXT("B Look + Attack completed"));});
++        AddStep(TEXT("A fresh group for separate AoE demonstration"),.4,[PlaceNPC]{PlaceNPC(1,FVector(-850,-6000,100));PlaceNPC(2,FVector(-1000,-6000,100));PlaceNPC(4,FVector(-100,-6100,100));PlaceNPC(5,FVector(100,-6100,100));});
++        Tap(TEXT("Spell2"),.45);AimAt(4);AddStep(TEXT("B ground AoE held preview"),1.2,[this]{Hold(TEXT("Attack"),FInputActionValue(true));});
++        AddStep(TEXT("B release ground burst"),.20,[this]{Release(TEXT("Attack"));});Shot(TEXT("R1_08_WaveImpact"));
++        AddStep(TEXT("Spell recovery and multi-target readback"),1.5,[]{},[this,Targets]{if(Targets->Num()>5)Check(TEXT("Wave damages two actual NPCs"),(*Targets)[4]->GetHealth()<100&&(*Targets)[5]->GetHealth()<100,TEXT("both damaged through release Action"),FString::Printf(TEXT("%.1f / %.1f"),(*Targets)[4]->GetHealth(),(*Targets)[5]->GetHealth()),TEXT("B Action; separate A group fixture"));});
++        Tap(TEXT("ToggleWeapon"),.5);Tap(TEXT("ToggleWeapon"),.5);
++        AddStep(TEXT("A adult defender fixture for real healing/shield damage"),.8,[this,PlaceNPC,Targets]{
++            PlaceCharacter(FVector(0,-6800,110),90);PlaceNPC(3,FVector(0,-6706,100));
++            if(Targets->Num()>3)(*Targets)[3]->GetReactionComponent()->ReactionPreference=EHCM4R1ReactionPreference::DefendAgainstMelee;
++        });
++        Tap(TEXT("Attack"),5.);
++        AddStep(TEXT("A stop defender after actual counter; health readback"),.2,[this,Targets]{if(Targets->Num()>3)(*Targets)[3]->GetReactionComponent()->CancelCounter(TEXT("Review strike complete"));Check(TEXT("Player actually wounded before heal"),PC->GetCombatComponent()->GetPlayerHealth()<100,TEXT("NPC counter damage"),FString::Printf(TEXT("health=%.1f hero=%s npc=%s reaction=%s"),PC->GetCombatComponent()->GetPlayerHealth(),*Character->GetActorLocation().ToString(),*(*Targets)[3]->GetActorLocation().ToString(),*(*Targets)[3]->GetCombatDiagnostics()),TEXT("B player punch -> real NPC counter"));});
++        AddStep(TEXT("Read health before healing"),.1,[this,HealBefore]{*HealBefore=PC->GetCombatComponent()->GetPlayerHealth();});
++        Tap(TEXT("Spell3"),.9);Shot(TEXT("R1_09_Healing"));AddStep(TEXT("Complete heal and mana recovery"),4.,[]{},[this,HealBefore]{const float Delta=PC->GetCombatComponent()->GetPlayerHealth()-*HealBefore;Check(TEXT("Healing restores actual forty health"),FMath::IsNearlyEqual(Delta,FMath::Min(40.f,100-*HealBefore),.1f),TEXT("up to 40 actual health"),FString::SanitizeFloat(Delta),TEXT("B Spell3; natural regeneration ticks"));});
++        AddStep(TEXT("A renew defender distance"),.5,[this,PlaceNPC]{PlaceNPC(3,Character->GetActorLocation()+FVector(0,94,-10));PC->SetControlRotation(FRotator(-8,90,0));});
++        Tap(TEXT("Attack"),1.2);Tap(TEXT("Spell4"),.7);Shot(TEXT("R1_10_Shield"));AddStep(TEXT("Read active shield"),.1,[]{},[this]{Check(TEXT("Shield really activated"),Character->GetAbilities()->GetShieldRemaining()>0,TEXT("positive duration"),Character->GetAbilities()->GetHUDText(),TEXT("B Spell4 Action"));});
++        AddStep(TEXT("Observe actual shield hit"),1.6,[this,ShieldBefore,ShieldSampleTime]{*ShieldBefore=PC->GetCombatComponent()->GetPlayerHealth();*ShieldSampleTime=GetWorld()->GetTimeSeconds();},[this,ShieldBefore,ShieldSampleTime,Targets]{
++            const float Delta=*ShieldBefore-PC->GetCombatComponent()->GetPlayerHealth();int32 Hits=0;float Sum=0;bool Half=true;
++            if(Targets->Num()>3){auto* R=(*Targets)[3]->GetReactionComponent();for(const auto& E:R->GetEvents())if(E.Time>=*ShieldSampleTime&&E.Kind==TEXT("CounterDamage")&&E.Value>0){++Hits;Sum+=E.Value;Half&=FMath::IsNearlyEqual(E.Value,R->CounterDamage*.5f,.01f);}}
++            Check(TEXT("Actual NPC hits are halved by shield"),Hits>0&&Half&&FMath::IsNearlyEqual(Sum,Delta,.1f),TEXT("each accepted counter hit = original damage times 0.5"),FString::Printf(TEXT("hits=%d recorded=%.2f healthDelta=%.2f"),Hits,Sum,Delta),TEXT("B trigger attack; actual NPC counter events and player health"));});
++        AddStep(TEXT("A stop defender; show shield natural expiry"),4.5,[this,Targets]{if(Targets->Num()>3)(*Targets)[3]->GetReactionComponent()->CancelCounter(TEXT("Review shield strike complete"));});
++        AddStep(TEXT("B shield expiry readback"),1.,[]{},[this]{Check(TEXT("Shield expires after six seconds"),Character->GetAbilities()->GetShieldRemaining()==0,TEXT("zero remaining"),Character->GetAbilities()->GetHUDText(),TEXT("B activation; natural game time"));});
++        AddStep(TEXT("Observe normal unshielded final idle"),3.,[]{});
++        return;
++    }
++
++    if(Mode==TEXT("m5_vs3_r1_motion")){
++        const TCHAR* Clips[]={TEXT("sword_and_shield_slash"),TEXT("sword_and_shield_slash_2"),TEXT("sword_and_shield_slash_3"),TEXT("sword_and_shield_slash_4"),TEXT("sword_and_shield_slash_5"),TEXT("Standing_1H_Magic_Attack_01"),TEXT("Standing_2H_Magic_Area_Attack_02"),TEXT("standing_1H_cast_spell_01"),TEXT("Standing_2H_Magic_Attack_05")};
++        for(const TCHAR* Clip:Clips){const FString Name=FString::Printf(TEXT("A_Mixamo_%s_Selestia"),Clip);auto* Seq=LoadObject<UAnimSequence>(nullptr,*(FString(TEXT("/Game/HarborCity/M5VS3/R1/Retargeted_Pelvis/"))+Name+TEXT(".")+Name));
++            AddStep(TEXT("A real source motion playback ")+Name,.1,[this,Seq,Name]{PlaceCharacter(FVector(0,-6800,110),90);Check(Name+TEXT(" actual licensed sequence"),Seq!=nullptr,TEXT("native retargeted mocap"),Seq?FString::SanitizeFloat(Seq->GetPlayLength()):TEXT("MISSING"),TEXT("A asset/playback; not input evidence"));if(Seq){auto* A=Character->GetMesh()->GetAnimInstance();A->SetRootMotionMode(ERootMotionMode::RootMotionFromMontagesOnly);A->PlaySlotAnimationAsDynamicMontage(Seq,TEXT("FullBody"),.05f,.12f,1.f);}});
++            const float Duration=Seq?Seq->GetPlayLength():1.f;
++            for(int32 Frame=0;Frame<3;++Frame){AddStep(TEXT("A sampled authored frame; not input evidence"),.15,[this,Duration,Frame]{auto* A=Character->GetMesh()->GetAnimInstance();auto* M=A->GetCurrentActiveMontage();if(M){A->Montage_SetPosition(M,Duration*(.20f+Frame*.25f));A->Montage_Pause(M);}});Shot(Name+FString::Printf(TEXT("_%d"),Frame));}
++            AddStep(TEXT("Finish source inspection"),.15,[this]{Character->GetMesh()->GetAnimInstance()->Montage_Stop(.1f);});
++        }return;
++    }
++    if(Mode==TEXT("m5_vs3_r1_logic")){
++        auto MP=MakeShared<float>();
++        AddStep(TEXT("A initial mana"),.1,[this,MP]{*MP=Character->GetAbilities()->GetMP();});
++        Tap(TEXT("Spell1"),.2);
++        AddStep(TEXT("B aiming keeps mana"),.2,[]{},[this,MP]{Check(TEXT("Aim does not spend MP"),FMath::IsNearlyEqual(Character->GetAbilities()->GetMP(),*MP),TEXT("unchanged"),FString::SanitizeFloat(Character->GetAbilities()->GetMP()),TEXT("B Spell1 Action"));});
++        Tap(TEXT("Aim"),.2);
++        AddStep(TEXT("B cancel no cost or cooldown"),.1,[]{},[this,MP]{auto* A=Character->GetAbilities();Check(TEXT("Cancel clears aiming without cost"),!A->IsCastingAim()&&FMath::IsNearlyEqual(A->GetMP(),*MP)&&A->GetCooldown(0)==0,TEXT("no MP/CD"),A->GetHUDText(),TEXT("B right-mouse Aim Action"));});
++        Tap(TEXT("Spell1"),.2);
++        AddStep(TEXT("B hold attack"),.5,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this,MP]{Check(TEXT("Held attack does not spend"),FMath::IsNearlyEqual(Character->GetAbilities()->GetMP(),*MP),TEXT("unchanged"),FString::SanitizeFloat(Character->GetAbilities()->GetMP()),TEXT("B Attack started, still held"));Release(TEXT("Attack"));});
++        AddStep(TEXT("B release cost readback"),.12,[]{},[this,MP]{auto* A=Character->GetAbilities();Check(TEXT("Release spends exactly 15 MP"),FMath::IsNearlyEqual(A->GetMP(),*MP-15,.1f)&&A->GetCooldown(0)>0,TEXT("15 once"),FString::SanitizeFloat(A->GetMP()),TEXT("B Attack Completed"));});
++        AddStep(TEXT("Wait actual cast recovery"),.8,[]{});
++        Tap(TEXT("Spell3"),.3);AddStep(TEXT("Full health rejects healing"),.1,[]{},[this]{Check(TEXT("Full-health heal has no cooldown"),Character->GetAbilities()->GetCooldown(2)==0,TEXT("no cast"),PC->GetStatusMessage(),TEXT("B Spell3 Action"));});
++        Tap(TEXT("Attack"),.1);Tap(TEXT("ToggleWeapon"),.05);
++        AddStep(TEXT("Wait punched action and queued Q"),1.3,[]{},[this]{Check(TEXT("Q during punch executes at finish"),PC->GetCombatComponent()->GetWeaponMode()==EHCM4WeaponMode::Sword,TEXT("Sword"),PC->GetCombatComponent()->GetHUDText(),TEXT("B Attack + Q during action"));});
++        Shot(TEXT("R1_Logic_Sword"));return;
++    }
++}
+--- a/Source/HarborCity/M1/HCM1TestRunner.cpp
++++ b/Source/HarborCity/M1/HCM1TestRunner.cpp
+@@ -1,6 +1,6 @@
++#include "HCM1TestRunner.h"
+ #include "GameFramework/GameUserSettings.h"
+ #include "M5VS3/HCM5VS3QA.h"
+-#include "HCM1TestRunner.h"
+ #include "HCM1PlayerController.h"
+ #include "HCM1Character.h"
+ #include "HCM1Vehicle.h"
+@@ -29,6 +29,10 @@
+ #include "Misc/FileHelper.h"
+ #include "HAL/FileManager.h"
+ #include "HighResScreenshot.h"
++#if WITH_EDITOR
++#include "ShaderCompiler.h"
++#include "AssetCompilingManager.h"
++#endif
+ #include "UnrealClient.h"
+ #include "Serialization/JsonSerializer.h"
+ #include "Serialization/JsonWriter.h"
+@@ -142,6 +146,12 @@
+         }
+         return;
+     }
++    // The R1 review preloads its effects. Wait responsively before its first
++    // action while the editor builds shaders; Escape above remains live.
++#if WITH_EDITOR
++    if(bRunning&&!bFinished&&StepIndex<0&&Mode.StartsWith(TEXT("m5_vs3_r1_"))&&((GShaderCompilingManager&&GShaderCompilingManager->IsCompiling())||FAssetCompilingManager::Get().GetNumRemainingAssets()>0))
++    { LastFrameAt=FPlatformTime::Seconds();return; }
++#endif
+     if (bM3FinishPending)
+     {
+         const bool bPending = FScreenshotRequest::IsScreenshotRequested();
+--- a/Source/HarborCity/M1/HCM1TestRunner.h
++++ b/Source/HarborCity/M1/HCM1TestRunner.h
+@@ -59,6 +59,7 @@
+     void AddM5Tests();
+     void AddM5VS2Tests();
+     void AddM5VS3Tests();
++    void AddM5VS3R1Tests();
+     void AddM5VS3SideQuests();
+     bool bM3FinishPending = false, bM3SuppressAutoQuit = false, bM3EndingPlay = false;
+     uint64 M3LastCaptureFrame = MAX_uint64;
+--- a/Source/HarborCity/M3/HCM3Recording.cpp
++++ b/Source/HarborCity/M3/HCM3Recording.cpp
+@@ -272,6 +272,7 @@
+     }
+     if (GetWorld()->GetTimeSeconds() < S.Delay) return;
+     AHCM1PlayerController* PC = Cast<AHCM1PlayerController>(UGameplayStatics::GetPlayerController(this, 0));
++    if(FParse::Param(FCommandLine::Get(),TEXT("R1GateCapture"))&&(!PC||!PC->Tags.Contains(TEXT("R1GateRecordingReady"))))return;
+     const double Now = FPlatformTime::Seconds();
+     if (!S.Grabber)
+     {
+--- a/Source/HarborCity/M4/HCM4CombatComponent.cpp
++++ b/Source/HarborCity/M4/HCM4CombatComponent.cpp
+@@ -208,6 +208,7 @@
+ {
+     if (!CanUseCombat() || bReloading) return false;
+     if(Character->GetAbilities()->IsEnabled()) {
++        if(Character->GetAbilities()->IsCastingAim())return Character->GetAbilities()->PressSpell();
+         if(WeaponMode==EHCM4WeaponMode::Sword)return Character->GetAbilities()->PressSword();
+         if(Character->GetAbilities()->IsBusy())return false;
+     }
+@@ -403,9 +404,14 @@
+ }
+ bool UHCM4CombatComponent::RequestToggleWeapon()
+ {
+-    if (!CanUseCombat() || bReloading || bAttacking) return false;
++    if (!CanUseCombat()) return false;
+     const bool VS3=Character->GetAbilities()->IsEnabled();
+-    if(VS3 && Character->GetAbilities()->IsBusy())return false;
++    if(VS3 && Character->GetAbilities()->IsCastingAim())Character->GetAbilities()->CancelSpell();
++    if (bReloading || bAttacking || (VS3 && Character->GetAbilities()->IsBusy())) {
++        if(!VS3)return false;
++        PendingWeaponCycles=FMath::Min(PendingWeaponCycles+1,64);
++        Record(TEXT("WeaponChangeQueued"),PendingWeaponCycles); return true;
++    }
+     SetAimHeld(false); AimBlend = 0;
+     WeaponMode = VS3 ? (WeaponMode==EHCM4WeaponMode::Unarmed?EHCM4WeaponMode::Sword:WeaponMode==EHCM4WeaponMode::Sword?EHCM4WeaponMode::Pistol:EHCM4WeaponMode::Unarmed)
+         : WeaponMode == EHCM4WeaponMode::Unarmed ? EHCM4WeaponMode::Pistol : EHCM4WeaponMode::Unarmed;
+@@ -433,6 +439,7 @@
+ {
+     if (bReloading){Record(TEXT("ReloadInterruptedNoTransfer"));if(WeaponActor)WeaponActor->StopReloadPresentation();}
+     if (bAttacking || bAimHeld || bReloading) Record(FName(Reason));
++    if(!CanUseCombat())PendingWeaponCycles=0;
+     bAttacking = false; bComboQueued = false; bReloading = false; bAimHeld = false; AimBlend = 0;
+     ComboIndex = -1; SwingHits.Reset(); ResetPunchPoseSample();
+     if (Character)
+@@ -472,6 +479,7 @@
+     if (!CanUseCombat())
+     { if (bAttacking || bReloading || bAimHeld || AimBlend > 0) CancelTransient(TEXT("GameplayUnavailable")); return; }
+     EnsureWeapon(); UpdatePresentation();
++    if(PendingWeaponCycles>0&&!bAttacking&&!bReloading&&!Character->GetAbilities()->IsBusy()){--PendingWeaponCycles;RequestToggleWeapon();}
+     AimBlend = FMath::FInterpConstantTo(AimBlend, bAimHeld ? 1.f : 0.f, DeltaTime, 1.f / FMath::Max(.01f, AimTransitionSeconds));
+     if (bAimHeld) Character->FaceBodyYawOnce(GetPC()->GetControlRotation().Yaw, .2f);
+     if (bReloading && Now() >= ReloadEnd)
+@@ -507,7 +515,7 @@
+         return FString::Printf(TEXT("星潮剑  |  生命 %.0f\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器"),PlayerHealth);
+     if (WeaponMode == EHCM4WeaponMode::Unarmed)
+         return FString::Printf(TEXT("空手  |  生命 %.0f\n左键 三段拳击    Q 切换武器"), PlayerHealth);
+-    return FString::Printf(TEXT("手枪  %d / %d  |  生命 %.0f%s\n左键 单发    按住右键 瞄准\nR 装弹    Q 收枪"), MagazineAmmo, ReserveAmmo, PlayerHealth,
++    return FString::Printf(TEXT("魔导枪  %d / %d  |  生命 %.0f%s\n左键 单发    按住右键 瞄准\nR 装弹    Q 收枪"), MagazineAmmo, ReserveAmmo, PlayerHealth,
+         bReloading ? TEXT("  装弹中") : TEXT(""));
+ }
+ void UHCM4CombatComponent::FillSave(UHCM1SaveGame* Save) const
+@@ -552,6 +560,7 @@
+         PlayerHealth <= 0 || !FMath::IsFinite(Damage) || Damage <= 0 || Now() < RecoveryInvulnerableUntil || Now() - LastNPCDamageTime < .45) return 0;
+     const float Applied = FMath::Min(PlayerHealth, FMath::Clamp(Damage, 0.f, 30.f)*Character->GetAbilities()->GetDamageMultiplier());
+     PlayerHealth -= Applied; LastNPCDamageTime = Now();
++    Character->GetAbilities()->ShieldImpact(NPC->GetActorLocation());
+     CancelTransient(TEXT("NPCPunchInterruptedPlayerAction")); PC->EndNPCDialogue();
+     Character->GetAbilities()->ResetTransient();
+     if (UAnimInstance* Anim = Character->GetMesh()->GetAnimInstance())
+--- a/Source/HarborCity/M4/HCM4CombatComponent.h
++++ b/Source/HarborCity/M4/HCM4CombatComponent.h
+@@ -149,6 +149,7 @@
+     FName LastAnimationSlot;
+     EHCM4WeaponMode WeaponMode = EHCM4WeaponMode::Unarmed;
+     int32 MagazineAmmo = 12, ReserveAmmo = 48;
++    int32 PendingWeaponCycles = 0;
+     float PlayerHealth = 100;
+     bool bSeated = false, bAttacking = false, bReloading = false, bAimHeld = false;
+     bool bComboQueued = false, bHasPunchPoseSample = false, bLastMuzzleBlocked = false, bAnimationPlayback = false;
+--- a/Source/HarborCity/M4R2/HCM4R2PlayerCameraManager.cpp
++++ b/Source/HarborCity/M4R2/HCM4R2PlayerCameraManager.cpp
+@@ -1,5 +1,6 @@
+ #include "HCM4R2PlayerCameraManager.h"
+ #include "HCM4R2PresentationComponent.h"
++#include "M5VS3/HCM5VS3Abilities.h"
+ #include "M1/HCM1PlayerController.h"
+ #include "M1/HCM1Character.h"
+ #include "M1/HCM1Vehicle.h"
+@@ -100,6 +101,7 @@
+             OutVT.POV.Location=GetWorld()->SweepSingleByChannel(Hit,Pivot,Desired,FQuat::Identity,
+                 ECC_Camera,FCollisionShape::MakeSphere(12.f),Query)?Hit.Location:Desired;
+         }
++        if(Character->GetAbilities()->IsEnabled())OutVT.POV.Rotation+=Character->GetAbilities()->GetImpactShakeOffset();
+         LastMagnification = Combat ? Combat->GetCurrentADSMagnification() : 1.f;
+         OutVT.POV.FOV = FMath::RadiansToDegrees(2.f * FMath::Atan(
+             FMath::Tan(FMath::DegreesToRadians(LastBaseWorldFOV * .5f)) / LastMagnification));
+--- a/Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp
+@@ -7,14 +7,16 @@
+ #include "M4/HCM4Weapon.h"
+ #include "M4R1/HCM4R1PhysicalReactionComponent.h"
+ #include "M4R2/HCM4R2PresentationComponent.h"
+-#include "M5/HCM5MusicComponent.h"
+ #include "Animation/AnimInstance.h"
+ #include "Animation/AnimSequence.h"
+ #include "Animation/AnimMontage.h"
+ #include "Camera/PlayerCameraManager.h"
+ #include "Components/StaticMeshComponent.h"
++#include "Components/DecalComponent.h"
++#include "Components/TextRenderComponent.h"
+ #include "Components/SkeletalMeshComponent.h"
+ #include "Components/PoseableMeshComponent.h"
++#include "Components/PointLightComponent.h"
+ #include "Engine/StaticMesh.h"
+ #include "Engine/World.h"
+ #include "EngineUtils.h"
+@@ -22,168 +24,326 @@
+ #include "Kismet/GameplayStatics.h"
+ #include "Materials/MaterialInterface.h"
+ #include "Materials/MaterialInstanceDynamic.h"
++#include "NiagaraComponent.h"
++#include "NiagaraFunctionLibrary.h"
++#include "NiagaraSystem.h"
+ #include "Sound/SoundBase.h"
++#include "Misc/CommandLine.h"
++#include "Misc/Parse.h"
+ 
+ namespace {
+-const TCHAR* AssetRoot=TEXT("/Game/HarborCity/M5VS3/Combat/");
+-const TCHAR* RuneNames[]={TEXT("SM_RuneBolt"),TEXT("SM_RuneWave"),TEXT("SM_RuneHeal"),TEXT("SM_RuneShield")};
+-void PlayMagicSound(AHCM1Character* Hero,int32 Kind){const FString N=FString::Printf(TEXT("SW_VS3_Magic%d"),Kind);if(auto* S=LoadObject<USoundBase>(nullptr,*(FString(AssetRoot)+N+TEXT(".")+N)))UGameplayStatics::PlaySoundAtLocation(Hero,S,Hero->GetActorLocation(),.55f);}
+-UStaticMesh* MeshAsset(const TCHAR* Name){return LoadObject<UStaticMesh>(nullptr,*(FString(AssetRoot)+Name+TEXT(".")+Name));}
+-UMaterialInterface* MagicMaterial(int32 Kind){const FString N=FString::Printf(TEXT("M_Magic%d"),FMath::Clamp(Kind,0,3));return LoadObject<UMaterialInterface>(nullptr,*(FString(AssetRoot)+N+TEXT(".")+N));}
+-UStaticMeshComponent* AddMesh(AActor* Owner,const TCHAR* Name){auto* M=NewObject<UStaticMeshComponent>(Owner,FName(Name));Owner->AddInstanceComponent(M);M->SetCollisionEnabled(ECollisionEnabled::NoCollision);M->SetGenerateOverlapEvents(false);M->SetCanEverAffectNavigation(false);M->SetupAttachment(Owner->GetRootComponent());M->RegisterComponent();return M;}
++bool R1Trace(){return FParse::Param(FCommandLine::Get(),TEXT("R1Trace"));}
++const TCHAR* OldRoot=TEXT("/Game/HarborCity/M5VS3/Combat/");
++const TCHAR* R1Root=TEXT("/Game/HarborCity/M5VS3/R1/");
++template<class T>T* Asset(const FString& Root,const FString& Name){return LoadObject<T>(nullptr,*(Root+Name+TEXT(".")+Name));}
++UStaticMeshComponent* AddMesh(AActor* Owner,const TCHAR* Name){auto* M=NewObject<UStaticMeshComponent>(Owner,FName(Name));Owner->AddInstanceComponent(M);M->SetCollisionEnabled(ECollisionEnabled::NoCollision);M->SetGenerateOverlapEvents(false);M->SetCanEverAffectNavigation(false);M->SetCastShadow(false);M->SetupAttachment(Owner->GetRootComponent());M->RegisterComponent();M->SetVisibility(false);return M;}
++UDecalComponent* AddDecal(AActor* Owner,const TCHAR* Name){
++    auto* D=NewObject<UDecalComponent>(Owner,FName(Name));Owner->AddInstanceComponent(D);D->SetupAttachment(Owner->GetRootComponent());D->DecalSize=FVector(80,150,150);D->SetFadeScreenSize(.001f);D->RegisterComponent();D->SetVisibility(false);return D;
++}
+ FName Hand(USkinnedMeshComponent* Mesh){return Mesh->GetBoneIndex(TEXT("Hand_R"))!=INDEX_NONE?TEXT("Hand_R"):TEXT("hand_r");}
++UNiagaraSystem* System(const TCHAR* Role,int32 Kind){return Asset<UNiagaraSystem>(FString(R1Root)+TEXT("FX/"),FString::Printf(TEXT("NS_R1_%s_%d"),Role,Kind));}
++UNiagaraComponent* Particles(AActor* Owner,const TCHAR* Role,int32 Kind,const FVector& At,const FVector& Scale=FVector::OneVector){
++    auto* S=System(Role,Kind);if(!S)return nullptr;
++    return UNiagaraFunctionLibrary::SpawnSystemAtLocation(Owner,S,At,FRotator::ZeroRotator,Scale,true,true,ENCPoolMethod::AutoRelease);
++}
++void StopFX(TObjectPtr<UNiagaraComponent>& C){if(C)C->Deactivate();C=nullptr;}
++void Sound(AActor* Owner,const TCHAR* Role,int32 Kind,const FVector& At){
++    auto* S=Asset<USoundBase>(FString(R1Root)+TEXT("Audio/"),FString::Printf(TEXT("SW_R1_%s_%d"),Role,Kind));
++    if(S)UGameplayStatics::PlaySoundAtLocation(Owner,S,At,.55f);
++}
++// A sword crosses the closed palm, unlike the forward barrel axis of HandGrip_R.
++FTransform SwordGrip(USkinnedMeshComponent* Body){
++    const FName Index=TEXT("IndexProximal_R"),Little=TEXT("LittleProximal_R"),Middle=TEXT("MiddleProximal_R");
++    FTransform Grip=Body->GetSocketTransform(Body->DoesSocketExist(TEXT("HandGrip_R"))?FName(TEXT("HandGrip_R")):Hand(Body));
++    if(Body->GetBoneIndex(Index)!=INDEX_NONE&&Body->GetBoneIndex(Little)!=INDEX_NONE&&Body->GetBoneIndex(Middle)!=INDEX_NONE){
++        const FVector Across=(Body->GetSocketLocation(Index)-Body->GetSocketLocation(Little)).GetSafeNormal();
++        const FVector Long=(Body->GetSocketLocation(Middle)-Body->GetSocketLocation(Hand(Body))).GetSafeNormal();
++        const FVector Normal=FVector::CrossProduct(Long,Across).GetSafeNormal();
++        Grip.SetRotation(FRotationMatrix::MakeFromXZ(Across,Normal).ToQuat());
++    }
++    Grip.SetScale3D(FVector(1));return Grip;
++}
++bool Ground(UWorld* World,AActor* Ignore,const FVector& At,FHitResult& H){FCollisionQueryParams Q(SCENE_QUERY_STAT(R1RuneGround),false,Ignore);for(TActorIterator<APawn> It(World);It;++It)Q.AddIgnoredActor(*It);return World->LineTraceSingleByChannel(H,At+FVector(0,0,100),At-FVector(0,0,600),ECC_Visibility,Q)&&H.ImpactNormal.Z>.5f;}
++bool Hostile(const AHCM3NPC* N){return N->GetBehaviourState()==EHCM3NPCBehaviour::CounterApproach||N->GetBehaviourState()==EHCM3NPCBehaviour::CounterAttack||N->GetClass()->GetName().Contains(TEXT("Opponent"));}
+ }
+ UHCM5VS3Abilities::UHCM5VS3Abilities(){PrimaryComponentTick.bCanEverTick=true;PrimaryComponentTick.TickGroup=TG_PostPhysics;}
++AHCM3NPC* UHCM5VS3Abilities::GetSelectedTarget() const {return SelectedTarget.Get();}
+ void UHCM5VS3Abilities::BeginPlay(){
+-    Super::BeginPlay();Hero=Cast<AHCM1Character>(GetOwner());
+-    bEnabled=Hero&&GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"));
++    Super::BeginPlay();Hero=Cast<AHCM1Character>(GetOwner());bEnabled=Hero&&GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"));
+     if(!bEnabled){SetComponentTickEnabled(false);return;}
+     Combat=Hero->GetCombatComponent();Combat->OnAcceptedShot.AddUObject(this,&ThisClass::AcceptedShot);
++    for(int32 K=0;K<4;++K)for(const TCHAR* Role:{TEXT("Burst"),TEXT("Charge"),TEXT("Trail"),TEXT("Heal")})PreloadedSystems.Add(System(Role,K));
+     AddTickPrerequisiteComponent(Hero->GetMesh());AddTickPrerequisiteComponent(Hero->GetR2PresentationComponent());
+-    Sword=AddMesh(Hero,TEXT("VS3Sword"));Sword->SetStaticMesh(MeshAsset(TEXT("SM_Sword")));
+-    FirstSword=AddMesh(Hero,TEXT("VS3FirstSword"));FirstSword->SetStaticMesh(Sword->GetStaticMesh());FirstSword->SetOnlyOwnerSee(true);FirstSword->SetCastShadow(false);
+-    FirstSword->SetFirstPersonPrimitiveType(EFirstPersonPrimitiveType::FirstPerson);
+-    MagicGun=AddMesh(Hero,TEXT("VS3MagicGun"));MagicGun->SetStaticMesh(MeshAsset(TEXT("SM_MagicGun")));
+-    FirstMagicGun=AddMesh(Hero,TEXT("VS3FirstMagicGun"));FirstMagicGun->SetStaticMesh(MagicGun->GetStaticMesh());FirstMagicGun->SetOnlyOwnerSee(true);FirstMagicGun->SetCastShadow(false);FirstMagicGun->SetFirstPersonPrimitiveType(EFirstPersonPrimitiveType::FirstPerson);
+-    CastCircle=AddMesh(Hero,TEXT("VS3CastingCircle"));CastCircle->SetCastShadow(false);CastCircle->SetVisibility(false);
+-    for(int32 Layer=0;Layer<3;++Layer){auto* M=Layer==2?CastCircle.Get():AddMesh(Hero,*FString::Printf(TEXT("VS3RuneLayer%d"),Layer));M->SetCastShadow(false);M->SetVisibility(false);RuneLayers.Add(M);}
+-    for(const TCHAR* Kind:{TEXT("Bolt"),TEXT("Wave"),TEXT("Heal"),TEXT("Shield")})
+-        for(const TCHAR* Layer:{TEXT("Outer"),TEXT("Inner"),TEXT("Core")})RuneMeshes.Add(MeshAsset(*FString::Printf(TEXT("SM_Arcane%s_%s"),Kind,Layer)));
+-    for(int32 Kind=0;Kind<4;++Kind){const FString N=FString::Printf(TEXT("M_ArcaneFiligree%d"),Kind);RuneSurfaces.Add(LoadObject<UMaterialInterface>(nullptr,*(FString(AssetRoot)+N+TEXT(".")+N)));}
+-}
+-void UHCM5VS3Abilities::EndPlay(const EEndPlayReason::Type Reason){if(Combat)Combat->OnAcceptedShot.RemoveAll(this);Super::EndPlay(Reason);}
+-void UHCM5VS3Abilities::ResetTransient(){bHeld=false;SwingTime=0;CastKind=-1;RuneKind=-1;bBladeSample=false;if(Hero)Hero->SetCombatMovementScale(1);for(const auto& M:RuneLayers)if(M)M->SetVisibility(false);}
+-void UHCM5VS3Abilities::PlayPose(const TCHAR* Name,float Duration){
+-    auto* Seq=LoadObject<UAnimSequence>(nullptr,*(FString(AssetRoot)+Name+TEXT(".")+Name));
+-    if(Seq&&Hero->GetMesh()->GetAnimInstance())SwingMontage=Hero->GetMesh()->GetAnimInstance()->PlaySlotAnimationAsDynamicMontage(Seq,TEXT("FullBody"),.10f,.14f,Seq->GetPlayLength()/Duration);
+-}
+-void UHCM5VS3Abilities::WeaponChanged(){if(!bEnabled)return;ResetTransient();PlayPose(Combat->GetWeaponMode()==EHCM4WeaponMode::Sword?TEXT("A_SwordDraw"):TEXT("A_SwordSheath"),.55f);}
++    Sword=AddMesh(Hero,TEXT("VS3Sword"));Sword->SetStaticMesh(Asset<UStaticMesh>(FString(R1Root)+TEXT("Art/"),TEXT("SM_StarTideSword")));
++    SwordOutline=AddMesh(Hero,TEXT("R1SwordOutline"));SwordOutline->SetStaticMesh(Sword->GetStaticMesh());
++    auto* OutlineMat=UMaterialInstanceDynamic::Create(Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),TEXT("M_R1_SwordOutline")),this);
++    if(OutlineMat){SwordMaterials.Add(OutlineMat);for(int32 I=0;I<SwordOutline->GetNumMaterials();++I)SwordOutline->SetMaterial(I,OutlineMat);}
++    FirstSword=AddMesh(Hero,TEXT("VS3FirstSword"));FirstSword->SetStaticMesh(Sword->GetStaticMesh());FirstSword->SetOnlyOwnerSee(true);FirstSword->SetFirstPersonPrimitiveType(EFirstPersonPrimitiveType::FirstPerson);
++    for(int32 I=0;I<Sword->GetNumMaterials();++I){auto* M=UMaterialInstanceDynamic::Create(Sword->GetMaterial(I),this);SwordMaterials.Add(M);Sword->SetMaterial(I,M);FirstSword->SetMaterial(I,M);}
++    MagicGun=AddMesh(Hero,TEXT("VS3MagicGun"));MagicGun->SetStaticMesh(Asset<UStaticMesh>(OldRoot,TEXT("SM_MagicGun")));
++    FirstMagicGun=AddMesh(Hero,TEXT("VS3FirstMagicGun"));FirstMagicGun->SetStaticMesh(MagicGun->GetStaticMesh());FirstMagicGun->SetOnlyOwnerSee(true);FirstMagicGun->SetFirstPersonPrimitiveType(EFirstPersonPrimitiveType::FirstPerson);
++    for(int32 I=0;I<3;++I)RuneLayers.Add(AddMesh(Hero,*FString::Printf(TEXT("VS3RuneLayer%d"),I)));CastCircle=RuneLayers[2];
++    for(const TCHAR* Kind:{TEXT("Bolt"),TEXT("Wave"),TEXT("Heal"),TEXT("Shield")})for(const TCHAR* Layer:{TEXT("Outer"),TEXT("Inner"),TEXT("Core")})RuneMeshes.Add(Asset<UStaticMesh>(OldRoot,FString::Printf(TEXT("SM_Arcane%s_%s"),Kind,Layer)));
++    for(int32 K=0;K<4;++K)RuneSurfaces.Add(Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),FString::Printf(TEXT("M_R1_Rune%d"),K)));
++    Shield=AddMesh(Hero,TEXT("R1Shield"));Shield->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere")));
++    ShieldMaterial=UMaterialInstanceDynamic::Create(Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),TEXT("M_R1_Shield")),this);Shield->SetMaterial(0,ShieldMaterial);
++    SummonRing=AddMesh(Hero,TEXT("R1SummonRing"));SummonRing->SetStaticMesh(RuneMeshes[0]);SummonRing->SetMaterial(0,RuneSurfaces[0]);
++    TargetRing=AddMesh(Hero,TEXT("R1TargetRing"));TargetRing->SetStaticMesh(RuneMeshes[0]);TargetRing->SetMaterial(0,RuneSurfaces[0]);
++    GroundIndicator=AddDecal(Hero,TEXT("R1GroundIndicator"));GroundIndicator->DecalSize=FVector(80,350,350);GroundIndicator->SetDecalMaterial(Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),TEXT("M_R1_Ground1")));
++    FloorRune=AddDecal(Hero,TEXT("R1FloorRune"));
++    for(int32 K=1;K<4;++K)PreloadedAssets.Add(Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),FString::Printf(TEXT("M_R1_Ground%d"),K)));
++    for(const TCHAR* Role:{TEXT("Charge"),TEXT("Release"),TEXT("Impact"),TEXT("Break"),TEXT("Summon"),TEXT("Whoosh")})for(int32 K=0;K<4;++K)PreloadedAssets.Add(Asset<USoundBase>(FString(R1Root)+TEXT("Audio/"),FString::Printf(TEXT("SW_R1_%s_%d"),Role,K)));
++    TargetMark=AddMesh(Hero,TEXT("R1TargetMark"));TargetMark->SetStaticMesh(Asset<UStaticMesh>(OldRoot,TEXT("SM_MagicBolt")));TargetMark->SetMaterial(0,RuneSurfaces[0]);
++}
++void UHCM5VS3Abilities::EndPlay(const EEndPlayReason::Type Reason){SelectTarget(nullptr);StopFX(ChargeFX);StopFX(HealFX);StopFX(BladeFX);if(Combat)Combat->OnAcceptedShot.RemoveAll(this);Super::EndPlay(Reason);}
++void UHCM5VS3Abilities::ResetTransient(){
++    bCastReleaseFullBody=false;bHeld=false;bSpellHeld=false;bComboBuffered=false;SwingTime=0;CastKind=-1;RuneKind=-1;CastTime=0;HitStop=0;bBladeSample=false;DrawTime=0;
++    if(Hero){Hero->SetCombatMovementScale(1);if(auto* A=Hero->GetMesh()->GetAnimInstance()){if(SwingMontage){A->Montage_Resume(SwingMontage);A->Montage_Stop(.12f,SwingMontage);}if(ReadyMontage)A->Montage_Stop(.12f,ReadyMontage);}}
++    StopFX(ChargeFX);StopFX(BladeFX);SelectTarget(nullptr);for(const auto& M:RuneLayers)if(M)M->SetVisibility(false);if(GroundIndicator)GroundIndicator->SetVisibility(false);if(FloorRune)FloorRune->SetVisibility(false);
++}
++void UHCM5VS3Abilities::PlayPose(const TCHAR* Name,float Duration,bool UpperBody,bool Loop){
++    auto* Seq=Asset<UAnimSequence>(FString(R1Root)+TEXT("Animations_Pelvis/"),Name);auto* A=Hero->GetMesh()->GetAnimInstance();
++    if(!Seq||!A){UE_LOG(LogTemp,Warning,TEXT("R1_ANIMATION_MISSING %s"),Name);return;}
++    A->SetRootMotionMode(ERootMotionMode::RootMotionFromMontagesOnly);
++    auto* M=A->PlaySlotAnimationAsDynamicMontage(Seq,UpperBody?TEXT("UpperBody"):TEXT("FullBody"),.10f,.16f,Duration>0?Seq->GetPlayLength()/Duration:1.f,Loop?10000:1);
++    if(Loop)ReadyMontage=M;else SwingMontage=M;
++}
++void UHCM5VS3Abilities::WeaponChanged(){
++    if(!bEnabled)return;ResetTransient();const bool SwordMode=Combat->GetWeaponMode()==EHCM4WeaponMode::Sword;
++    if(SwordMode){DrawTime=.3f;PlayPose(TEXT("A_SwordSummon"),.45f,true);}
++    Particles(Hero,TEXT("Burst"),0,Hero->GetMesh()->GetSocketLocation(Hand(Hero->GetMesh())));Sound(Hero,TEXT("Summon"),0,Hero->GetActorLocation());
++}
+ bool UHCM5VS3Abilities::PressSword(){
+-    if(!bEnabled||!Combat->CanUseCombat()||IsBusy()||Combat->IsReloading())return false;
+-    bHeld=true;HoldTime=0;IdleMP=0;Hero->SetCombatMovementScale(.4f);Hero->FaceBodyYawOnce(Hero->GetControlRotation().Yaw,1.5f);PlayPose(TEXT("A_SwordCharge"),1.f);return true;
++    if(!bEnabled||!Combat->CanUseCombat()||Combat->IsReloading()||CastKind>=0)return false;
++    if(SwingTime>0||DrawTime>0){bComboBuffered=true;return true;}
++    if(bHeld)return true;bHeld=true;HoldTime=0;IdleMP=0;Hero->SetSprinting(false);Hero->SetCombatMovementScale(.35f);Hero->FaceBodyYawOnce(Hero->GetControlRotation().Yaw,.12f);
++    PlayPose(TEXT("A_SwordCharge"),0,true,true);return true;
+ }
+ void UHCM5VS3Abilities::ReleaseSword(){if(!bHeld)return;bHeld=false;if(Combat->CanUseCombat())StartSwing(HoldTime>=.55f);else ResetTransient();}
+ void UHCM5VS3Abilities::StartSwing(bool Heavy){
+-    PlayMagicSound(Hero,4);
+-    bHeavy=Heavy;Combo=Heavy?2:LastSwingAge<1.2f?(Combo+1)%3:0;SwingDuration=Heavy?1.05f:.72f;SwingTime=SwingDuration;LastSwingAge=0;SwingHits.Reset();bBladeSample=false;bContact=false;
++    if(auto* A=Hero->GetMesh()->GetAnimInstance();A&&ReadyMontage)A->Montage_Stop(.06f,ReadyMontage);ReadyMontage=nullptr;
++    bHeavy=Heavy;Combo=Heavy?2:LastSwingAge<SwingDuration+1.2f?(Combo+1)%3:0;SwingDuration=Heavy?1.15f:Combo==2?.94f:.76f;SwingTime=SwingDuration;LastSwingAge=0;SwingHits.Reset();bBladeSample=false;bContact=false;
++    Hero->SetSprinting(false);Hero->SetCombatMovementScale(0);Hero->GetCharacterMovement()->StopMovementImmediately();
++    float FacingYaw=Hero->GetControlRotation().Yaw,Best=200.f;
++    const FVector Aim=FRotator(0,FacingYaw,0).Vector();
++    for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It){const FVector Delta=It->GetActorLocation()-Hero->GetActorLocation();const float Distance=Delta.Size2D();
++        if(It->IsCombatEnabled()&&!It->IsHidden()&&Distance<Best&&(Delta.GetSafeNormal2D()|Aim)>.65f){
++            FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(R1SwordFacing),false,Hero);
++            if(!GetWorld()->LineTraceSingleByChannel(H,Hero->GetActorLocation(),It->GetActorLocation(),ECC_Visibility,Q)||H.GetActor()==*It){Best=Distance;FacingYaw=Delta.Rotation().Yaw;}
++        }
++    }
++    Hero->FaceBodyYawOnce(FacingYaw,.12f);
++    if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R1_TRACE swing combo=%d heavy=%d hero=%s rot=%s"),Combo,Heavy,*Hero->GetActorLocation().ToString(),*Hero->GetActorRotation().ToString());
+     const FString N=Heavy?TEXT("A_SwordHeavy"):FString::Printf(TEXT("A_Sword%d"),Combo+1);PlayPose(*N,SwingDuration);
++    Sound(Hero,TEXT("Whoosh"),0,Hero->GetActorLocation());
+ }
+ void UHCM5VS3Abilities::SwordTrace(){
+-    if(!Sword||!Sword->GetStaticMesh())return;
+-    const FTransform T=Sword->GetComponentTransform();const FVector Base=T.TransformPosition(FVector(14,0,0)),Tip=T.TransformPosition(FVector(102,0,0));
+-    if(!bBladeSample){PreviousBase=Base;PreviousTip=Tip;bBladeSample=true;return;}
+-    FCollisionQueryParams Q(SCENE_QUERY_STAT(VS3Sword),false,Hero);Q.bReturnPhysicalMaterial=true;
+-    // Six samples cover the whole actual blade and its displacement, never an aim-ray shortcut.
+-    for(int32 I=0;I<=5&&!bContact;++I){const float A=I/5.f;FHitResult H;
+-        if(GetWorld()->SweepSingleByChannel(H,FMath::Lerp(PreviousBase,PreviousTip,A),FMath::Lerp(Base,Tip,A),FQuat::Identity,ECC_Visibility,FCollisionShape::MakeSphere(7),Q)){
+-            bContact=true;
+-            if(auto* NPC=Cast<AHCM3NPC>(H.GetActor());NPC&&!SwingHits.Contains(NPC)){
+-                SwingHits.Add(NPC);UGameplayStatics::ApplyPointDamage(NPC,bHeavy?55.f:Combo==2?35.f:24.f,(Tip-PreviousTip).GetSafeNormal(),H,Hero->GetController(),Hero,UHCM4MeleeDamageType::StaticClass());
+-            }
+-            // Stop the advance at first surface; immediate blend to recovery avoids follow-through through torsos/walls.
+-            if(auto* Anim=Hero->GetMesh()->GetAnimInstance();Anim&&SwingMontage)Anim->Montage_Stop(.10f,SwingMontage);
+-            SwingTime=FMath::Min(SwingTime,.15f);
++    if(!Sword||!Sword->GetStaticMesh())return;const FTransform T=Sword->GetComponentTransform();const FVector Base=T.TransformPosition(FVector(12,0,0)),Tip=T.TransformPosition(FVector(94,0,0));
++    if(!bBladeSample){if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R1_TRACE blade start base=%s tip=%s"),*Base.ToString(),*Tip.ToString());PreviousBase=Base;PreviousTip=Tip;bBladeSample=true;return;}
++    FCollisionQueryParams Q(SCENE_QUERY_STAT(R1Sword),false,Hero);for(const auto& A:SwingHits)if(A.IsValid())Q.AddIgnoredActor(A.Get());
++    for(int32 I=0;I<=6&&!bContact;++I){FHitResult H;const float A=I/6.f;
++        if(!GetWorld()->SweepSingleByChannel(H,FMath::Lerp(PreviousBase,PreviousTip,A),FMath::Lerp(Base,Tip,A),FQuat::Identity,ECC_Visibility,FCollisionShape::MakeSphere(7),Q))continue;
++        if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R1_TRACE blade hit=%s component=%s point=%s base=%s tip=%s"),*GetNameSafe(H.GetActor()),*GetNameSafe(H.GetComponent()),*H.ImpactPoint.ToString(),*Base.ToString(),*Tip.ToString());
++        if(auto* NPC=Cast<AHCM3NPC>(H.GetActor())){
++            if(SwingHits.Contains(NPC))continue;SwingHits.Add(NPC);Q.AddIgnoredActor(NPC);
++            const float Before=NPC->GetHealth();
++            UGameplayStatics::ApplyPointDamage(NPC,bHeavy?55.f:Combo==2?35.f:24.f,(Tip-PreviousTip).GetSafeNormal(),H,Hero->GetController(),Hero,UHCM4MeleeDamageType::StaticClass());
++            AHCM5VS3SpellFX::SpawnNumber(Hero,NPC->GetActorLocation()+FVector(0,0,120),FMath::RoundToInt(Before-NPC->GetHealth()),false);
++            if(bHeavy&&!NPC->IsDead())NPC->GetPhysicalReaction()->TryAnimatedKnockdown(Hero->GetActorLocation());
++            Particles(Hero,TEXT("Burst"),0,H.ImpactPoint);Sound(Hero,TEXT("Impact"),0,H.ImpactPoint);
++            // Local 65ms hit-stop; keep the montage alive and finish its recovery.
++            TriggerImpactShake();HitStop=.065f;if(auto* Anim=Hero->GetMesh()->GetAnimInstance();Anim&&SwingMontage)Anim->Montage_Pause(SwingMontage);
++        }else{
++            bContact=true;Particles(Hero,TEXT("Burst"),0,H.ImpactPoint);Sound(Hero,TEXT("Impact"),0,H.ImpactPoint);
++            if(auto* Anim=Hero->GetMesh()->GetAnimInstance();Anim&&SwingMontage)Anim->Montage_Stop(.10f,SwingMontage);SwingTime=FMath::Min(SwingTime,.2f);
+         }
+     }
+-    if(!bContact)AHCM5VS3SpellFX::Spawn(Hero,Tip,FVector::ZeroVector,0,.12f,0,false);
+     PreviousBase=Base;PreviousTip=Tip;
+ }
++void UHCM5VS3Abilities::SelectTarget(AHCM3NPC* NPC){
++    if(SelectedTarget.Get()==NPC)return;
++    if(SelectedTarget.IsValid()){auto* M=SelectedTarget->GetMesh();M->SetRenderCustomDepth(TargetPreviousDepth);M->SetCustomDepthStencilValue(TargetPreviousStencil);}
++    SelectedTarget=NPC;
++    if(NPC){auto* M=NPC->GetMesh();TargetPreviousDepth=M->bRenderCustomDepth;TargetPreviousStencil=M->CustomDepthStencilValue;M->SetRenderCustomDepth(true);M->SetCustomDepthStencilValue(253);}
++}
++void UHCM5VS3Abilities::OpenRune(int32 Kind,float Duration){
++    RuneKind=Kind;RuneAge=0;RuneCastDuration=Duration;RuneInstances.Reset();
++    if(Kind>=2){FloorMaterial=UMaterialInstanceDynamic::Create(Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),FString::Printf(TEXT("M_R1_Ground%d"),Kind)),this);FloorRune->SetDecalMaterial(FloorMaterial);}
++    FloorRune->SetVisibility(Kind>=2);
++    for(int32 I=0;I<3;++I){RuneLayers[I]->SetStaticMesh(RuneMeshes[Kind*3+I]);auto* M=UMaterialInstanceDynamic::Create(RuneSurfaces[Kind],this);RuneInstances.Add(M);RuneLayers[I]->SetMaterial(0,M);M->SetScalarParameterValue(TEXT("Reveal"),0);RuneLayers[I]->SetVisibility(true);}
++}
+ bool UHCM5VS3Abilities::CastSpell(int32 Kind){
+-    const float Cost[]={15,35,30,25};
+-    if(!bEnabled||Kind<0||Kind>3||!Combat->CanUseCombat()||IsBusy()||Combat->IsAttacking()||Combat->IsReloading())return false;
+-    auto* PC=Cast<AHCM1PlayerController>(Hero->GetController());
+-    if(Cooldown[Kind]>0||MP<Cost[Kind]){if(PC)PC->ShowStatusMessage(TEXT("魔力不足或技能冷却中。"),1.5f);return false;}
+-    MP-=Cost[Kind];IdleMP=0;CastKind=Kind;CastTime=Kind==1?.85f:.7f;Combat->SetAimHeld(false);Hero->SetCombatMovementScale(.4f);
+-    RuneKind=Kind;RuneAge=0;RuneCastDuration=CastTime;RuneInstances.Reset();
+-    for(int32 I=0;I<3;++I){RuneLayers[I]->SetStaticMesh(RuneMeshes[Kind*3+I]);auto* MID=UMaterialInstanceDynamic::Create(RuneSurfaces[Kind],this);RuneInstances.Add(MID);RuneLayers[I]->SetMaterial(0,MID);MID->SetScalarParameterValue(TEXT("Reveal"),0);RuneLayers[I]->SetVisibility(true);}
+-    PlayPose(TEXT("A_Cast"),CastTime+.25f);return true;
++    if(!bEnabled||Kind<0||Kind>3||!Combat->CanUseCombat())return false;
++    if(Kind==CastKind&&IsCastingAim())return CancelSpell();
++    if(IsBusy()||Combat->IsAttacking()||Combat->IsReloading())return false;
++    auto* PC=Cast<AHCM1PlayerController>(Hero->GetController());const float Cost[]={15,35,30,25};
++    if(Kind==2&&Combat->GetPlayerHealth()>=100){PC->ShowStatusMessage(TEXT("生命已满"),1.4f);return false;}
++    if(Cooldown[Kind]>0||MP<Cost[Kind]){PC->ShowStatusMessage(Cooldown[Kind]>0?TEXT("技能冷却中"):TEXT("魔力不足"),1.4f);return false;}
++    Combat->SetAimHeld(false);Hero->SetSprinting(false);CastKind=Kind;CastTime=Kind==2?.65f:.4f;CastIdle=0;bSpellHeld=false;IdleMP=0;LastAim=Hero->GetControlRotation();
++    Hero->SetCombatMovementScale(Kind<2?.35f:0);if(Kind>=2)Hero->GetCharacterMovement()->StopMovementImmediately();
++    if(auto* A=Hero->GetMesh()->GetAnimInstance();A&&ReadyMontage)A->Montage_Stop(.1f,ReadyMontage);ReadyMontage=nullptr;
++    OpenRune(Kind,Kind<2?100000.f:Kind==2?3.65f:1.f);
++    PlayPose(Kind<2?TEXT("A_CastHold"):Kind==2?TEXT("A_CastHeal"):TEXT("A_CastShield"),Kind<2?0:CastTime,Kind<2&&Hero->GetVelocity().Size2D()>10,Kind<2);
++    UpdateAim(0);ChargeFX=Particles(Hero,TEXT("Charge"),Kind,RuneCenter);Sound(Hero,TEXT("Charge"),Kind,RuneCenter);return true;
++}
++bool UHCM5VS3Abilities::PressSpell(){if(!IsCastingAim()||!Combat->CanUseCombat())return false;bSpellHeld=true;CastIdle=0;return true;}
++void UHCM5VS3Abilities::ReleasePrimary(){if(IsCastingAim()){if(bSpellHeld&&Combat->CanUseCombat())ReleaseSpell();return;}ReleaseSword();}
++bool UHCM5VS3Abilities::CancelSpell(){if(!IsCastingAim())return false;CastKind=-1;CastTime=0;bSpellHeld=false;RuneCastDuration=RuneAge;StopFX(ChargeFX);SelectTarget(nullptr);Hero->SetCombatMovementScale(1);if(auto* A=Hero->GetMesh()->GetAnimInstance();A&&ReadyMontage)A->Montage_Stop(.15f,ReadyMontage);ReadyMontage=nullptr;return true;}
++void UHCM5VS3Abilities::UpdateAim(float Dt){
++    auto* PC=Cast<AHCM1PlayerController>(Hero->GetController());if(!PC||!PC->PlayerCameraManager)return;
++    const FVector Eye=PC->PlayerCameraManager->GetCameraLocation();const FRotator Look=PC->PlayerCameraManager->GetCameraRotation();const FVector Dir=Look.Vector();
++    FCollisionQueryParams Q(SCENE_QUERY_STAT(R1SpellAim),false,Hero);FHitResult Ray;const FVector Far=Eye+Dir*10000;
++    GetWorld()->LineTraceSingleByChannel(Ray,Eye,Far,ECC_Visibility,Q);const FVector Aim=Ray.bBlockingHit?Ray.ImpactPoint:Far;
++    const FVector Chest=Hero->GetActorLocation()+FVector(0,0,35);const FVector Facing=(Aim-Chest).GetSafeNormal();RuneCenter=Chest+Facing*90;
++    FHitResult Wall;if(GetWorld()->LineTraceSingleByChannel(Wall,Chest,RuneCenter,ECC_Visibility,Q))RuneCenter=Wall.ImpactPoint-Facing*12;
++    if(!IsCastingAim())return;
++    if(!Look.Equals(LastAim,.025f)||bSpellHeld)CastIdle=0;else CastIdle+=Dt;LastAim=Look;
++    Hero->FaceBodyYawOnce(Facing.Rotation().Yaw,.12f);
++    FVector Wanted=Ray.bBlockingHit?Ray.ImpactPoint:Chest+FRotator(0,Look.Yaw,0).Vector()*1500;
++    FVector Delta=Wanted-Hero->GetActorLocation();if(Delta.Size2D()>1500)Wanted=Hero->GetActorLocation()+Delta.GetSafeNormal2D()*1500;
++    FHitResult Floor;bGroundValid=Ground(GetWorld(),Hero,Wanted,Floor);if(bGroundValid){AimGround=Floor.ImpactPoint+Floor.ImpactNormal*2;GroundNormal=Floor.ImpactNormal;}
++    if(!bSpellHeld||CastKind!=0){SelectTarget(nullptr);return;}
++    AHCM3NPC* Best=nullptr;float BestScore=100.f;
++    for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It){auto* N=*It;if(!N->IsCombatEnabled()||N->IsHidden()||FVector::Dist(N->GetActorLocation(),Hero->GetActorLocation())>2500)continue;
++        const FVector Point=N->GetActorLocation()+FVector(0,0,35);const FVector To=(Point-Eye).GetSafeNormal();const float Dot=To|Dir;const bool Enemy=Hostile(N);
++        if(Dot<(Enemy?.965f:.999f))continue;FHitResult H;if(GetWorld()->LineTraceSingleByChannel(H,Eye,Point,ECC_Visibility,Q)&&H.GetActor()!=N)continue;
++        const float Score=(1-Dot)*100+(Enemy?0:.45f)-(SelectedTarget.Get()==N?.09f:0);if(Score<BestScore){Best=N;BestScore=Score;}
++    }SelectTarget(Best);
+ }
+ void UHCM5VS3Abilities::ReleaseSpell(){
+-    const float CD[]={1,6,10,12};const int32 Kind=CastKind;Cooldown[Kind]=CD[Kind];CastKind=-1;IdleMP=0;Hero->SetCombatMovementScale(1);
++    if(CastKind<0)return;const int32 Kind=CastKind;auto* PC=Cast<AHCM1PlayerController>(Hero->GetController());if(!PC)return;
++    if(Kind==1&&!bGroundValid){PC->ShowStatusMessage(TEXT("请瞄准十五米内的地面"),1.5f);CancelSpell();return;}
++    if(R1Trace()) {FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(R1Diag),false,Hero);GetWorld()->LineTraceSingleByChannel(H,Hero->GetActorLocation()+FVector(0,0,35),RuneCenter,ECC_Visibility,Q);UE_LOG(LogTemp,Display,TEXT("R1_TRACE release kind=%d rune=%s ground=%s selected=%s hero=%s chesthit=%s/%s"),Kind,*RuneCenter.ToString(),*AimGround.ToString(),*GetNameSafe(SelectedTarget.Get()),*Hero->GetActorLocation().ToString(),*GetNameSafe(H.GetActor()),*GetNameSafe(H.GetComponent()));}
++    const float Cost[]={15,35,30,25},CD[]={1,6,10,12};MP-=Cost[Kind];Cooldown[Kind]=CD[Kind];IdleMP=0;CastKind=-1;bSpellHeld=false;StopFX(ChargeFX);
++    if(auto* A=Hero->GetMesh()->GetAnimInstance();A&&ReadyMontage)A->Montage_Stop(.06f,ReadyMontage);ReadyMontage=nullptr;
++    if(Kind<2){bCastReleaseFullBody=Hero->GetVelocity().Size2D()<10;RuneCastDuration=RuneAge;Hero->SetCombatMovementScale(bCastReleaseFullBody?0:.35f);CastTime=.65f;PlayPose(Kind==0?TEXT("A_CastBolt"):TEXT("A_CastWave"),.65f,!bCastReleaseFullBody);}
++    else Hero->SetCombatMovementScale(1);
++    Particles(Hero,TEXT("Burst"),Kind,RuneCenter);Sound(Hero,TEXT("Release"),Kind,RuneCenter);
++    if(Kind==0){const FVector Dir=PC->PlayerCameraManager->GetCameraRotation().Vector();auto* FX=AHCM5VS3SpellFX::Spawn(Hero,RuneCenter,Dir*3000,30,3.5f,0);if(FX)FX->SetHomingTarget(SelectedTarget.Get());}
++    else if(Kind==1){
++        AHCM5VS3SpellFX::Spawn(Hero,AimGround,FVector::ZeroVector,0,2.5f,1,false);Particles(Hero,TEXT("Burst"),1,AimGround,FVector(3));
++        TriggerImpactShake(FMath::Clamp(1-FVector::Dist2D(Hero->GetActorLocation(),AimGround)/1700.f,0.f,1.f));
++        for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It){const float D=FVector::Dist2D(It->GetActorLocation(),AimGround);if(!It->IsCombatEnabled()||D>350||FMath::Abs(It->GetActorLocation().Z-AimGround.Z)>220)continue;
++            FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(R1WaveOcclusion),false,Hero);for(TActorIterator<AHCM3NPC> Other(GetWorld());Other;++Other)Q.AddIgnoredActor(*Other);if(GetWorld()->LineTraceSingleByChannel(H,AimGround+FVector(0,0,60),It->GetActorLocation(),ECC_Visibility,Q)&&H.GetActor()!=*It)continue;
++            const float Before=It->GetHealth();UGameplayStatics::ApplyDamage(*It,28,PC,Hero,UHCM4MeleeDamageType::StaticClass());AHCM5VS3SpellFX::SpawnNumber(Hero,It->GetActorLocation()+FVector(0,0,120),FMath::RoundToInt(Before-It->GetHealth()),false);if(!It->IsDead()){if(D<180)It->GetPhysicalReaction()->TryAnimatedKnockdown(AimGround);else It->LaunchCharacter((It->GetActorLocation()-AimGround).GetSafeNormal2D()*320+FVector(0,0,110),false,false);}
++        }
++    }else if(Kind==2){HealRemaining=3;HealTextAmount=HealTextSeconds=0;StopFX(HealFX);HealFX=Particles(Hero,TEXT("Heal"),2,Hero->GetActorLocation()-FVector(0,0,70));}
++    else{ShieldRemaining=6;ShieldAge=0;ShieldPulse=0;}
++    SelectTarget(nullptr);UE_LOG(LogTemp,Display,TEXT("R1_SPELL_RELEASE kind=%d mp=%.2f"),Kind,MP);
++}
++void UHCM5VS3Abilities::ShieldImpact(const FVector& Origin){if(ShieldRemaining<=0)return;ShieldPulse=1;const FVector Hit=Hero->GetActorLocation()+(Origin-Hero->GetActorLocation()).GetSafeNormal()*110;Particles(Hero,TEXT("Burst"),3,Hit);Sound(Hero,TEXT("Impact"),3,Hit);}
++void UHCM5VS3Abilities::AcceptedShot(const FHCM4AcceptedShot& Shot){IdleMP=0;const FVector D=Shot.AimPoint-Shot.WorldMuzzle;AHCM5VS3SpellFX::Spawn(Hero,Shot.WorldMuzzle,D.GetSafeNormal()*3000,0,FMath::Min(1.f,D.Size()/3000.f),0);}
++void UHCM5VS3Abilities::UpdateVisuals(float Dt){
+     auto* PC=Cast<AHCM1PlayerController>(Hero->GetController());if(!PC)return;
+-    PlayMagicSound(Hero,Kind);
+-    const FVector Eye=PC->PlayerCameraManager->GetCameraLocation(),Dir=PC->PlayerCameraManager->GetCameraRotation().Vector();
+-    if(Kind==0){
+-        FCollisionQueryParams Q(SCENE_QUERY_STAT(VS3MagicAim),false,Hero);FHitResult H;const FVector Far=Eye+Dir*10000;
+-        GetWorld()->LineTraceSingleByChannel(H,Eye,Far,ECC_Visibility,Q);const FVector Start=Hero->GetActorLocation()+FVector(0,0,45)+Hero->GetActorForwardVector()*45;
+-        AHCM5VS3SpellFX::Spawn(Hero,Start,((H.bBlockingHit?H.ImpactPoint:Far)-Start).GetSafeNormal()*1800,30,5,0);
+-    } else if(Kind==1){
+-        const FVector Center=Hero->GetActorLocation()+FRotator(0,Hero->GetControlRotation().Yaw,0).Vector()*150;
+-        AHCM5VS3SpellFX::Spawn(Hero,Center-FVector(0,0,75),FVector::ZeroVector,0,.7f,1,false);
+-        for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It){if(FVector::Dist(It->GetActorLocation(),Center)>230)continue;
+-            FHitResult Hit;FCollisionQueryParams Q(SCENE_QUERY_STAT(VS3AOEOcclusion),false,Hero);
+-            if(GetWorld()->LineTraceSingleByChannel(Hit,Center+FVector(0,0,40),It->GetActorLocation(),ECC_Visibility,Q)&&Hit.GetActor()!=*It)continue;
+-            const FVector Away=(It->GetActorLocation()-Center).GetSafeNormal2D();
+-            UGameplayStatics::ApplyDamage(*It,28,PC,Hero,UHCM4MeleeDamageType::StaticClass());
+-            if(!It->IsDead() && !It->GetPhysicalReaction()->TryAnimatedKnockdown(Center))It->LaunchCharacter(Away*280+FVector(0,0,140),false,false);
++    const bool FP=PC->IsFirstPersonPerspective(),Foot=PC->GetPlayerMode()==EHCPlayerMode::OnFoot&&!PC->IsFlying()&&!PC->IsDialogueOpen();
++    const bool Equipped=Foot&&Combat->GetWeaponMode()==EHCM4WeaponMode::Sword&&CastKind<0&&CastTime<=0;
++    SwordReveal=FMath::FInterpConstantTo(SwordReveal,Equipped?1.f:0.f,Dt,1.f/.3f);
++    auto* Body=Hero->GetMesh();FTransform Mount=SwordGrip(Body);
++    Sword->SetWorldTransform(Mount);Sword->SetVisibility(!FP&&SwordReveal>.005f);
++    SwordOutline->SetWorldTransform(Mount);SwordOutline->SetVisibility(!FP&&SwordReveal>.005f);
++    SummonRing->SetVisibility(!FP&&SwordReveal>.01f&&SwordReveal<.99f);SummonRing->SetWorldLocation(Mount.GetLocation());SummonRing->SetWorldRotation(Mount.Rotator());SummonRing->SetWorldScale3D(FVector(.27f));
++    for(const auto& M:SwordMaterials){M->SetScalarParameterValue(TEXT("Reveal"),SwordReveal);M->SetScalarParameterValue(TEXT("AttackGlow"),bHeld?1+HoldTime*2:SwingTime>0?2.f:0.f);}
++    auto* Arms=Hero->GetR2PresentationComponent()->GetFirstPersonMesh();FirstSword->SetVisibility(FP&&SwordReveal>.005f&&Arms);
++    if(Arms){FTransform FM=SwordGrip(Arms);FirstSword->SetWorldTransform(FM);}
++    const bool Gun=Foot&&CastKind<0&&Combat->GetWeaponMode()==EHCM4WeaponMode::Pistol;MagicGun->SetVisibility(Gun&&!FP);FirstMagicGun->SetVisibility(Gun&&FP);
++    if(auto* W=Combat->GetWeaponActor()){MagicGun->SetWorldTransform(W->GetActorTransform());W->GetWeaponMesh()->SetVisibility(false);if(W->GetArticulatedMesh())W->GetArticulatedMesh()->SetVisibility(false);}
++    if(auto* W=Hero->GetR2PresentationComponent()->GetFirstPersonPistol()){FirstMagicGun->SetWorldTransform(W->GetComponentTransform());W->SetVisibility(false);}
++    const bool ActiveBlade=SwingTime>0&&!bContact&&(1-SwingTime/SwingDuration)>.18f&&(1-SwingTime/SwingDuration)<.8f;
++    if(ActiveBlade&&!BladeFX)BladeFX=Particles(Hero,TEXT("Trail"),0,Sword->GetComponentLocation());
++    if(!ActiveBlade)StopFX(BladeFX);if(BladeFX)BladeFX->SetWorldLocation(Mount.TransformPosition(FVector(65,0,0)));
++    if(ChargeFX)ChargeFX->SetWorldLocation(RuneCenter);
++    if(HealFX)HealFX->SetWorldLocation(Hero->GetActorLocation()-FVector(0,0,65));
++    if(RuneKind>=0){
++        RuneAge+=Dt;const float Fade=1-FMath::SmoothStep(RuneCastDuration,RuneCastDuration+.5f,RuneAge);const bool bFloorRune=RuneKind>=2;
++        FVector Center=RuneCenter,Normal=(RuneCenter-(Hero->GetActorLocation()+FVector(0,0,35))).GetSafeNormal();bool Visible=true;
++        if(bFloorRune){FHitResult H;Visible=Ground(GetWorld(),Hero,Hero->GetActorLocation(),H);if(Visible){Center=H.ImpactPoint+H.ImpactNormal*2;Normal=H.ImpactNormal;}}
++        else if(FP){Normal=PC->PlayerCameraManager->GetCameraRotation().Vector();Center=PC->PlayerCameraManager->GetCameraLocation()+Normal*95;}
++        const FQuat Basis=FRotationMatrix::MakeFromX(Normal).ToQuat();const float Speeds[]={7,-16,23};
++        for(int32 I=0;I<3;++I){const float Reveal=FMath::SmoothStep(I*.045f,I*.045f+.17f,RuneAge)*Fade;
++            RuneLayers[I]->SetWorldLocation(Center+Normal*I*.5f);RuneLayers[I]->SetWorldRotation(Basis*FQuat(FVector::ForwardVector,FMath::DegreesToRadians(RuneAge*Speeds[I]*(bSpellHeld?2.f:1.f))));
++            RuneLayers[I]->SetWorldScale3D(FVector((bFloorRune?150.f:FP?65.f:90.f)/58.f));
++            RuneInstances[I]->SetScalarParameterValue(TEXT("Reveal"),Reveal*(FP&&!bFloorRune?.48f:.85f));RuneInstances[I]->SetScalarParameterValue(TEXT("Glow"),(bSpellHeld?2.f:1.15f)*(FP?.55f:1.f));
++            RuneLayers[I]->SetVisibility(!bFloorRune&&Visible&&Reveal>.005f&&!(FP&&I==2));
+         }
+-    } else if(Kind==2)HealRemaining=3;else ShieldRemaining=5;
+-    UE_LOG(LogTemp,Display,TEXT("VS3_SPELL_RELEASE kind=%d mp=%.2f"),Kind,MP);
+-}
+-void UHCM5VS3Abilities::AcceptedShot(const FHCM4AcceptedShot& Shot){
+-    IdleMP=0;const FVector Delta=Shot.AimPoint-Shot.WorldMuzzle;AHCM5VS3SpellFX::Spawn(Hero,Shot.WorldMuzzle,Delta.GetSafeNormal()*3000,0,FMath::Min(1.f,Delta.Size()/3000.f),0);
+-    AHCM5VS3SpellFX::Spawn(Hero,Shot.WorldMuzzle,FVector::ZeroVector,0,.1f,0,false);
+-}
+-void UHCM5VS3Abilities::UpdateVisuals(float Dt){
+-    auto* PC=Cast<AHCM1PlayerController>(Hero->GetController());if(!PC)return;const bool Equipped=Combat->GetWeaponMode()==EHCM4WeaponMode::Sword;
+-    const bool Foot=PC->GetPlayerMode()==EHCPlayerMode::OnFoot;const bool FP=PC->IsFirstPersonPerspective();
+-    auto* Body=Hero->GetMesh();FTransform Mount;
+-    if(Equipped){Mount=Body->GetSocketTransform(Body->DoesSocketExist(TEXT("HandGrip_R"))?FName(TEXT("HandGrip_R")):Hand(Body));Mount.SetScale3D(FVector(1));Mount=FTransform(FRotator(70,0,0))*Mount;}
+-    else {Mount=FTransform(FRotator(0,Hero->GetActorRotation().Yaw+50,145),Hero->GetActorLocation()-Hero->GetActorForwardVector()*22+FVector(0,0,20));}
+-    Sword->SetWorldTransform(Mount);Sword->SetVisibility(Foot&&!FP);
+-    auto* Arms=Hero->GetR2PresentationComponent()->GetFirstPersonMesh();FirstSword->SetVisibility(Foot&&FP&&Equipped&&Arms);
+-    if(Arms){FTransform FM=FTransform(FRotator(70,0,0))*Arms->GetSocketTransform(Arms->DoesSocketExist(TEXT("HandGrip_R"))?FName(TEXT("HandGrip_R")):Hand(Arms));FM.SetScale3D(FVector(1));FirstSword->SetWorldTransform(FM);}
+-    const bool Gun=Foot&&Combat->GetWeaponMode()==EHCM4WeaponMode::Pistol;
+-    MagicGun->SetVisibility(Gun&&!FP);FirstMagicGun->SetVisibility(Gun&&FP);
+-    if(auto* Weapon=Combat->GetWeaponActor()){
+-        MagicGun->SetWorldTransform(Weapon->GetActorTransform());Weapon->GetWeaponMesh()->SetVisibility(false);
+-        if(Weapon->GetArticulatedMesh())Weapon->GetArticulatedMesh()->SetVisibility(false);
+-    }
+-    if(auto* FPWeapon=Hero->GetR2PresentationComponent()->GetFirstPersonPistol()){
+-        FirstMagicGun->SetWorldTransform(FPWeapon->GetComponentTransform());FPWeapon->SetVisibility(false);
+-    }
+-    if(RuneKind>=0){
+-        RuneAge+=Dt;const FRotator V=PC->PlayerCameraManager->GetCameraRotation();const float Fade=1-FMath::SmoothStep(RuneCastDuration,RuneCastDuration+.38f,RuneAge);
+-        for(int32 I=0;I<3;++I){
+-            const float Reveal=FMath::SmoothStep(I*.045f,I*.045f+.17f,RuneAge)*Fade;
+-            // Eye-space casting ornament: fit the actual FOV, with a clear aiming
+-            // corridor. This does not change the gameplay camera or world traces.
+-            const float Speed[]={7,-16,23};
+-            const float Depth=75+I*1.5f;
+-            const float HalfWidth=Depth*FMath::Tan(FMath::DegreesToRadians(PC->PlayerCameraManager->GetFOVAngle()*.5f));
+-            const FVector Offset(Depth,HalfWidth*.40f,-HalfWidth*.06f);
+-            RuneLayers[I]->SetWorldLocation(PC->PlayerCameraManager->GetCameraLocation()+V.RotateVector(Offset));
+-            RuneLayers[I]->SetWorldRotation(V+FRotator(0,0,RuneAge*Speed[I]));
+-            RuneLayers[I]->SetWorldScale3D(FVector(HalfWidth*.30f/58.f*FMath::Lerp(.65f,1.f,FMath::SmoothStep(0.f,.2f,RuneAge))));
+-            RuneInstances[I]->SetScalarParameterValue(TEXT("Reveal"),Reveal*.92f);
+-            RuneInstances[I]->SetScalarParameterValue(TEXT("Glow"),(I==2?2.f:1.3f)+.35f*FMath::Sin(RuneAge*8));
+-            RuneLayers[I]->SetVisibility(Reveal>.005f);
+-        }
++        this->FloorRune->SetVisibility(bFloorRune&&Visible&&Fade>0);
++        if(bFloorRune&&Visible){this->FloorRune->SetWorldLocation(Center);this->FloorRune->SetWorldRotation(FRotator(-90,RuneAge*4,0));if(FloorMaterial){FloorMaterial->SetScalarParameterValue(TEXT("Reveal"),FMath::SmoothStep(0.f,.2f,RuneAge)*Fade);}}
+         if(Fade<=0)RuneKind=-1;
+     }
++    const bool Target=SelectedTarget.IsValid()&&IsCastingAim()&&bSpellHeld;TargetRing->SetVisibility(Target);TargetMark->SetVisibility(Target);
++    if(Target){FHitResult H;if(Ground(GetWorld(),Hero,SelectedTarget->GetActorLocation(),H)){TargetRing->SetWorldLocation(H.ImpactPoint+H.ImpactNormal*3);TargetRing->SetWorldRotation(FRotationMatrix::MakeFromX(H.ImpactNormal).Rotator());TargetRing->SetWorldScale3D(FVector(.65));}
++        TargetMark->SetWorldLocation(SelectedTarget->GetActorLocation()+FVector(0,0,125));TargetMark->SetWorldRotation(FRotator(-90,0,0));TargetMark->SetWorldScale3D(FVector(.65));}
++    GroundIndicator->SetVisibility(CastKind==1&&bSpellHeld&&bGroundValid);GroundIndicator->SetWorldLocation(AimGround);GroundIndicator->SetWorldRotation(FRotator(-90,0,0));
++    Shield->SetVisibility(Foot&&ShieldRemaining>0&&!FP);Shield->SetWorldLocation(Hero->GetActorLocation());Shield->SetWorldScale3D(FVector(2.4f*FMath::SmoothStep(0.f,.4f,ShieldAge)));
++    if(ShieldMaterial){ShieldMaterial->SetScalarParameterValue(TEXT("Reveal"),ShieldRemaining<1?.5f+.5f*FMath::Sin(ShieldRemaining*28):1.f);ShieldMaterial->SetScalarParameterValue(TEXT("HitPulse"),ShieldPulse);}
+ }
+ void UHCM5VS3Abilities::TickComponent(float Dt,ELevelTick Type,FActorComponentTickFunction* Tick){
+     Super::TickComponent(Dt,Type,Tick);if(!bEnabled||!Hero||!Combat)return;
++    ShakeTime=FMath::Max(0.f,ShakeTime-Dt);
++    for(float& C:Cooldown)C=FMath::Max(0.f,C-Dt);
++    if(ShieldRemaining>0){ShieldAge+=Dt;ShieldRemaining=FMath::Max(0.f,ShieldRemaining-Dt);ShieldPulse=FMath::Max(0.f,ShieldPulse-Dt*4);if(ShieldRemaining==0){Particles(Hero,TEXT("Burst"),3,Hero->GetActorLocation(),FVector(2));Sound(Hero,TEXT("Break"),3,Hero->GetActorLocation());}}
++    if(HealRemaining>0){const float Step=FMath::Min(Dt,HealRemaining),Before=Combat->GetPlayerHealth();Combat->HealPlayer(40.f/3*Step);HealTextAmount+=Combat->GetPlayerHealth()-Before;HealTextSeconds+=Step;HealRemaining-=Step;
++        if(HealTextSeconds>=1||HealRemaining<=0){const int32 Amount=FMath::RoundToInt(HealTextAmount);AHCM5VS3SpellFX::SpawnNumber(Hero,Hero->GetActorLocation()+FVector(0,0,135),Amount,true);HealTextAmount-=Amount;HealTextSeconds=0;}
++        if(HealRemaining<=0)StopFX(HealFX);}
+     if(!Combat->CanUseCombat()){ResetTransient();UpdateVisuals(Dt);return;}
+-    for(float& C:Cooldown)C=FMath::Max(0.f,C-Dt);if(bHeld||SwingTime>0||CastKind>=0)IdleMP=0;else IdleMP+=Dt;if(IdleMP>2)MP=FMath::Min(100.f,MP+5*Dt);
+-    ShieldRemaining=FMath::Max(0.f,ShieldRemaining-Dt);
+-    if(HealRemaining>0){const float HealDt=FMath::Min(Dt,HealRemaining);Combat->HealPlayer(40.f/3*HealDt);HealRemaining-=HealDt;}
+-    if(bHeld)HoldTime=FMath::Min(1.2f,HoldTime+Dt);LastSwingAge+=Dt;
++    if(IsBusy())IdleMP=0;else IdleMP+=Dt;if(IdleMP>2)MP=FMath::Min(100.f,MP+5*Dt);
++    const bool FinishedDraw=DrawTime>0&&DrawTime<=Dt;
++    DrawTime=FMath::Max(0.f,DrawTime-Dt);LastSwingAge+=Dt;
++    if(FinishedDraw&&bComboBuffered){bComboBuffered=false;StartSwing(false);}
++    if(bHeld)HoldTime=FMath::Min(1.2f,HoldTime+Dt);
++    if(IsCastingAim()&&ReadyMontage&&!ReadyMontage->SlotAnimTracks.IsEmpty()){
++        const bool Moving=Hero->GetVelocity().Size2D()>10;
++        const FName Slot=Moving?TEXT("UpperBody"):TEXT("FullBody");
++        if(ReadyMontage->SlotAnimTracks[0].SlotName!=Slot){auto* A=Hero->GetMesh()->GetAnimInstance();const float Position=A->Montage_GetPosition(ReadyMontage);A->Montage_Stop(.1f,ReadyMontage);PlayPose(TEXT("A_CastHold"),0,Moving,true);if(ReadyMontage)A->Montage_SetPosition(ReadyMontage,Position);}
++    }
++    UpdateAim(Dt);if(IsCastingAim()&&CastIdle>=8)CancelSpell();
++    if(HitStop>0){HitStop=FMath::Max(0.f,HitStop-Dt);if(HitStop==0)if(auto* A=Hero->GetMesh()->GetAnimInstance();A&&SwingMontage)A->Montage_Resume(SwingMontage);}
++    else if(SwingTime>0){SwingTime=FMath::Max(0.f,SwingTime-Dt);const float T=1-SwingTime/SwingDuration;if(T>.18f&&T<.8f&&!bContact)SwordTrace();if(SwingTime==0){Hero->SetCombatMovementScale(1);if(bComboBuffered){bComboBuffered=false;StartSwing(false);}}}
++    if(CastKind>=2){CastTime-=Dt;if(CastTime<=0)ReleaseSpell();}
++    else if(CastKind<0&&CastTime>0){CastTime=FMath::Max(0.f,CastTime-Dt);if(CastTime==0)Hero->SetCombatMovementScale(1);}
++    if(!IsBusy()&&CastTime<=0&&Combat->GetWeaponMode()==EHCM4WeaponMode::Sword){auto* A=Hero->GetMesh()->GetAnimInstance();if(A&&(!ReadyMontage||!A->Montage_IsPlaying(ReadyMontage)))PlayPose(TEXT("A_SwordReady"),0,true,true);}
+     UpdateVisuals(Dt);
+-    if(SwingTime>0){SwingTime=FMath::Max(0.f,SwingTime-Dt);const float T=1-SwingTime/SwingDuration;if(T>.22f&&T<.78f&&!bContact)SwordTrace();if(SwingTime==0)Hero->SetCombatMovementScale(1);}
+-    if(CastKind>=0){CastTime-=Dt;if(CastTime<=0)ReleaseSpell();}
+-}
+-FString UHCM5VS3Abilities::GetHUDText() const {return FString::Printf(TEXT("1 ◇ 魔力弹 %.1f   2 ◎ 冲击 %.1f\n3 ✚ 治疗 %.1f   4 ⬡ 护盾 %.1f%s"),Cooldown[0],Cooldown[1],Cooldown[2],Cooldown[3],ShieldRemaining>0?TEXT("  生效中"):TEXT(""));}
++}
++FString UHCM5VS3Abilities::GetHUDText() const{return FString::Printf(TEXT("1 魔力弹 %.1f   2 冲击 %.1f\n3 治疗 %.1f   4 护盾 %.1f%s%s"),Cooldown[0],Cooldown[1],Cooldown[2],Cooldown[3],ShieldRemaining>0?TEXT("  生效中"):TEXT(""),IsCastingAim()?TEXT("\n按住左键选目标，松开发射；右键取消"):TEXT(""));}
+ AHCM5VS3SpellFX::AHCM5VS3SpellFX(){PrimaryActorTick.bCanEverTick=true;Mesh=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Magic"));SetRootComponent(Mesh);Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);Mesh->SetCanEverAffectNavigation(false);Mesh->SetCastShadow(false);}
++void AHCM5VS3SpellFX::SpawnNumber(AHCM1Character* Source,const FVector& Where,int32 Amount,bool Healing){
++    if(!Source||Amount<=0||!Source->GetAbilities()->ShowsDamageNumbers())return;int32 Count=0;for(TActorIterator<AHCM5VS3SpellFX> It(Source->GetWorld());It;++It)if(++Count>=24)return;
++    FActorSpawnParameters P;P.Owner=Source;auto* FX=Source->GetWorld()->SpawnActor<AHCM5VS3SpellFX>(Where,FRotator::ZeroRotator,P);if(!FX)return;
++    FX->Hero=Source;FX->Remaining=1.1f;FX->Mesh->SetVisibility(false);
++    FX->Number=NewObject<UTextRenderComponent>(FX);FX->AddInstanceComponent(FX->Number);FX->Number->SetupAttachment(FX->Mesh);FX->Number->SetCollisionEnabled(ECollisionEnabled::NoCollision);FX->Number->SetCastShadow(false);
++    FX->Number->SetHorizontalAlignment(EHTA_Center);FX->Number->SetVerticalAlignment(EVRTA_TextCenter);FX->Number->SetWorldSize(16);
++    FX->Number->SetText(FText::FromString(Healing?FString::Printf(TEXT("+%d"),Amount):FString::FromInt(Amount)));FX->Number->SetTextRenderColor(Healing?FColor(75,255,140):FColor(205,240,255));FX->Number->RegisterComponent();
++}
+ AHCM5VS3SpellFX* AHCM5VS3SpellFX::Spawn(AHCM1Character* Source,const FVector& Where,const FVector& Velocity,float Damage,float Life,int32 Kind,bool Projectile){
+-    if(!Source)return nullptr;int32 Count=0;for(TActorIterator<AHCM5VS3SpellFX> It(Source->GetWorld());It;++It)if(++Count>=32)return nullptr;
++    if(!Source)return nullptr;int32 Count=0;for(TActorIterator<AHCM5VS3SpellFX> It(Source->GetWorld());It;++It)if(++Count>=24)return nullptr;
+     FActorSpawnParameters P;P.Owner=Source;P.Instigator=Source;auto* FX=Source->GetWorld()->SpawnActor<AHCM5VS3SpellFX>(Where,Velocity.Rotation(),P);if(FX)FX->Initialize(Source,Velocity,Damage,Life,Kind,Projectile);return FX;
+ }
+-void AHCM5VS3SpellFX::Initialize(AHCM1Character* Source,const FVector& Velocity,float Damage,float Life,int32 Kind,bool Projectile){Hero=Source;Travel=Velocity;HitDamage=Damage;Remaining=Life;Style=Kind;bTravel=Projectile;Mesh->SetStaticMesh(MeshAsset(Projectile?TEXT("SM_MagicBolt"):RuneNames[Kind]));Mesh->SetMaterial(0,MagicMaterial(Kind));if(!Projectile)SetActorRotation(FRotator(90,0,0));}
+-void AHCM5VS3SpellFX::Tick(float Dt){Super::Tick(Dt);Remaining-=Dt;Age+=Dt;if(Remaining<=0||!Hero.IsValid()){Destroy();return;}
+-    if(bTravel){const FVector Start=GetActorLocation(),End=Start+Travel*Dt;FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(VS3MagicBolt),false,Hero.Get());
++void AHCM5VS3SpellFX::Initialize(AHCM1Character* Source,const FVector& Velocity,float Damage,float Life,int32 Kind,bool Projectile){
++    Hero=Source;Travel=Velocity;HitDamage=Damage;Remaining=Life;Style=Kind;bTravel=Projectile;
++    Mesh->SetStaticMesh(Projectile?LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere")):Asset<UStaticMesh>(OldRoot,TEXT("SM_ArcaneWave_Outer")));
++    Mesh->SetMaterial(0,Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),Projectile?TEXT("M_R1_Core"):TEXT("M_R1_Rune1")));
++    if(Projectile){SetActorScale3D(FVector(.1));auto* S=System(TEXT("Trail"),Kind);if(S){Trail=UNiagaraFunctionLibrary::SpawnSystemAttached(S,Mesh,NAME_None,FVector::ZeroVector,FRotator::ZeroRotator,EAttachLocation::SnapToTarget,false);if(Trail)Trail->SetAbsolute(false,false,true);}
++        int32 Lights=0;for(TActorIterator<AHCM5VS3SpellFX> It(GetWorld());It;++It)if(It->Light)++Lights;
++        if(Lights<4){Light=NewObject<UPointLightComponent>(this);AddInstanceComponent(Light);Light->SetupAttachment(Mesh);Light->SetCastShadows(false);Light->SetIntensity(100);Light->SetAttenuationRadius(150);Light->SetLightColor(FLinearColor(.3f,.65f,1));Light->RegisterComponent();}
++    }else{
++        SetActorRotation(FRotator(90,0,0));SetActorScale3D(FVector(1));
++        FadeMaterial=UMaterialInstanceDynamic::Create(Mesh->GetMaterial(0),this);Mesh->SetMaterial(0,FadeMaterial);
++        Scorch=AddDecal(this,TEXT("R1Scorch"));Scorch->SetUsingAbsoluteScale(true);Scorch->DecalSize=FVector(60,Style==1?350:100,Style==1?350:100);Scorch->SetWorldRotation(FRotator(-90,0,0));
++        auto* Mat=Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),TEXT("M_R1_Ground1"));Scorch->SetDecalMaterial(Mat);Scorch->SetVisibility(true);Scorch->SetFadeOut(1.5f,1.f,false);
++    }
++}
++void AHCM5VS3SpellFX::Tick(float Dt){
++    Super::Tick(Dt);Remaining-=Dt;Age+=Dt;if(Remaining<=0||!Hero.IsValid()){Destroy();return;}
++    if(Number){SetActorLocation(GetActorLocation()+FVector(0,0,Dt*26));if(auto* PC=Cast<APlayerController>(Hero->GetController());PC&&PC->PlayerCameraManager)SetActorRotation((PC->PlayerCameraManager->GetCameraLocation()-GetActorLocation()).Rotation());return;}
++    if(bTravel){
++        if(HomingTarget.IsValid()){const FVector Desired=(HomingTarget->GetActorLocation()+FVector(0,0,25)-GetActorLocation()).GetSafeNormal()*3000;Travel=FMath::VInterpTo(Travel,Desired,Dt,6).GetSafeNormal()*3000;}
++        const FVector Start=GetActorLocation(),End=Start+Travel*Dt;FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(R1MagicBolt),false,Hero.Get());Q.AddIgnoredActor(this);
+         if(HitDamage>0&&GetWorld()->SweepSingleByChannel(H,Start,End,FQuat::Identity,ECC_Visibility,FCollisionShape::MakeSphere(8),Q)){
+-            UGameplayStatics::ApplyPointDamage(H.GetActor(),HitDamage,Travel.GetSafeNormal(),H,Hero->GetController(),Hero.Get(),UHCM4PistolDamageType::StaticClass());Destroy();return;}
+-        SetActorLocation(End);
+-    } else {const float Scale=Style==1?1+Age*4:.35f;SetActorScale3D(FVector(Scale));AddActorLocalRotation(FRotator(0,0,Dt*100));}
+-}
++            if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R1_TRACE bolt hit=%s/%s where=%s target=%s"),*GetNameSafe(H.GetActor()),*GetNameSafe(H.GetComponent()),*H.ImpactPoint.ToString(),*GetNameSafe(HomingTarget.Get()));
++            auto* Victim=Cast<AHCM3NPC>(H.GetActor());const float Before=Victim?Victim->GetHealth():0;
++            UGameplayStatics::ApplyPointDamage(H.GetActor(),HitDamage,Travel.GetSafeNormal(),H,Hero->GetController(),Hero.Get(),UHCM4PistolDamageType::StaticClass());
++            if(Victim)SpawnNumber(Hero.Get(),Victim->GetActorLocation()+FVector(0,0,120),FMath::RoundToInt(Before-Victim->GetHealth()),false);
++            Particles(Hero.Get(),TEXT("Burst"),Style,H.ImpactPoint);Sound(Hero.Get(),TEXT("Impact"),Style,H.ImpactPoint);AHCM5VS3SpellFX::Spawn(Hero.Get(),H.ImpactPoint+H.ImpactNormal*2,FVector::ZeroVector,0,2.5f,1,false);Destroy();return;
++        }SetActorLocation(End);SetActorRotation(Travel.Rotation());
++        if(Trail){const FRotationMatrix R(Travel.Rotation());Trail->SetWorldLocation(End+(R.GetUnitAxis(EAxis::Y)*FMath::Sin(Age*55)+R.GetUnitAxis(EAxis::Z)*FMath::Cos(Age*55))*12);}
++    }else{const float Scale=FMath::Lerp(.3f,6.f,FMath::SmoothStep(0.f,.45f,Age));SetActorScale3D(FVector(Scale));Mesh->SetVisibility(Age<.7f);if(FadeMaterial)FadeMaterial->SetScalarParameterValue(TEXT("Reveal"),FMath::Clamp(1-Age/.7f,0.f,1.f));}
++}
+--- a/Source/HarborCity/M5VS3/HCM5VS3Abilities.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3Abilities.h
+@@ -3,16 +3,10 @@
+ #include "Components/ActorComponent.h"
+ #include "GameFramework/Actor.h"
+ #include "HCM5VS3Abilities.generated.h"
+-class AHCM1Character;
+-class UHCM4CombatComponent;
+-class UStaticMeshComponent;
+-class UAnimMontage;
+-class UStaticMesh;
+-class UMaterialInterface;
+-class UMaterialInstanceDynamic;
++class AHCM1Character; class AHCM3NPC; class UHCM4CombatComponent;
++class UTextRenderComponent; class UDecalComponent; class UStaticMeshComponent; class UAnimMontage; class UStaticMesh;
++class UMaterialInterface; class UMaterialInstanceDynamic; class UNiagaraComponent; class UNiagaraSystem; class UPointLightComponent;
+ struct FHCM4AcceptedShot;
+-
+-/** Local single-player VS3 abilities. Existing combat remains the damage authority. */
+ UCLASS(ClassGroup=(HarborCity),meta=(BlueprintSpawnableComponent))
+ class HARBORCITY_API UHCM5VS3Abilities : public UActorComponent
+ {
+@@ -23,60 +17,90 @@
+     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
+     virtual void TickComponent(float Dt,ELevelTick Type,FActorComponentTickFunction* Tick) override;
+     bool IsEnabled() const { return bEnabled; }
+-    bool IsBusy() const { return bHeld || SwingTime>0 || CastKind>=0; }
+-    bool PressSword();
+-    void ReleaseSword();
+-    bool CastSpell(int32 Kind);
+-    void WeaponChanged();
+-    void ResetTransient();
++    bool IsBusy() const { return bHeld || SwingTime>0 || CastKind>=0 || DrawTime>0 || CastTime>0; }
++    bool IsCastingAim() const {return CastKind==0 || CastKind==1;}
++    bool BlocksRunJump() const {return CastKind>=0 || SwingTime>0;}
++    bool BlocksLocomotion() const {return bEnabled&&(SwingTime>0||CastKind>=2||(CastTime>0&&bCastReleaseFullBody));}
++    bool PressSword(); void ReleaseSword();
++    bool PressSpell(); void ReleasePrimary(); bool CancelSpell();
++    bool CastSpell(int32 Kind); void WeaponChanged(); void ResetTransient();
++    void ShieldImpact(const FVector& Origin);
+     float GetMP() const { return MP; }
+     float GetDamageMultiplier() const { return ShieldRemaining>0?.5f:1.f; }
+     float GetCooldown(int32 Kind) const { return Kind>=0&&Kind<4?Cooldown[Kind]:0; }
++    float GetShieldRemaining() const {return ShieldRemaining;}
++    int32 GetCastKind() const {return CastKind;}
++    AHCM3NPC* GetSelectedTarget() const;
++    FVector GetAimGround() const {return AimGround;}
++    FVector GetRuneCenter() const {return RuneCenter;}
+     FString GetHUDText() const;
++    bool ShowsDamageNumbers() const {return bDamageNumbers;}
++    bool UsesImpactShake() const {return bImpactShake;}
++    void ToggleDamageNumbers(){bDamageNumbers=!bDamageNumbers;}
++    void ToggleImpactShake(){bImpactShake=!bImpactShake;ShakeTime=0;}
++    void TriggerImpactShake(float Strength=1.f){if(bImpactShake){ShakeTime=.16f;ShakeStrength=FMath::Clamp(Strength,0.f,1.f);}}
++    FRotator GetImpactShakeOffset() const {const float T=.16f-ShakeTime;return bImpactShake&&ShakeTime>0?FRotator(FMath::Sin(T*100)*.28f,FMath::Sin(T*77)*.14f,0)*(ShakeTime/.16f)*ShakeStrength:FRotator::ZeroRotator;}
++
+ private:
+     UPROPERTY() TObjectPtr<AHCM1Character> Hero;
+     UPROPERTY() TObjectPtr<UHCM4CombatComponent> Combat;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> Sword;
++    UPROPERTY() TObjectPtr<UStaticMeshComponent> SwordOutline;
++    UPROPERTY() TObjectPtr<UStaticMeshComponent> SummonRing;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> FirstSword;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> MagicGun;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> FirstMagicGun;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> CastCircle;
++    UPROPERTY() TObjectPtr<UStaticMeshComponent> Shield;
++    UPROPERTY() TObjectPtr<UStaticMeshComponent> TargetRing;
++    UPROPERTY() TObjectPtr<UStaticMeshComponent> TargetMark;
++    UPROPERTY() TObjectPtr<UDecalComponent> GroundIndicator;
++    UPROPERTY() TObjectPtr<UDecalComponent> FloorRune;
++    UPROPERTY() TObjectPtr<UMaterialInstanceDynamic> FloorMaterial;
+     UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> RuneLayers;
+     UPROPERTY() TArray<TObjectPtr<UStaticMesh>> RuneMeshes;
+     UPROPERTY() TArray<TObjectPtr<UMaterialInterface>> RuneSurfaces;
++    UPROPERTY() TArray<TObjectPtr<UNiagaraSystem>> PreloadedSystems;
++    UPROPERTY() TArray<TObjectPtr<UObject>> PreloadedAssets;
+     UPROPERTY() TArray<TObjectPtr<UMaterialInstanceDynamic>> RuneInstances;
+-    float RuneAge=0,RuneCastDuration=.7f;
+-    int32 RuneKind=-1;
++    UPROPERTY() TArray<TObjectPtr<UMaterialInstanceDynamic>> SwordMaterials;
++    UPROPERTY() TObjectPtr<UMaterialInstanceDynamic> ShieldMaterial;
+     UPROPERTY() TObjectPtr<UAnimMontage> SwingMontage;
+-    bool bEnabled=false,bHeld=false,bHeavy=false,bBladeSample=false,bContact=false;
++    UPROPERTY() TObjectPtr<UAnimMontage> ReadyMontage;
++    UPROPERTY() TObjectPtr<UNiagaraComponent> ChargeFX;
++    UPROPERTY() TObjectPtr<UNiagaraComponent> HealFX;
++    UPROPERTY() TObjectPtr<UNiagaraComponent> BladeFX;
++    TWeakObjectPtr<AHCM3NPC> SelectedTarget;
++    bool TargetPreviousDepth=false;int32 TargetPreviousStencil=0;
++    bool bEnabled=false,bHeld=false,bHeavy=false,bBladeSample=false,bContact=false,bComboBuffered=false,bSpellHeld=false,bGroundValid=false;
++    bool bDamageNumbers=true,bImpactShake=true,bCastReleaseFullBody=false;float ShakeTime=0,ShakeStrength=0;
+     float MP=100,IdleMP=0,HoldTime=0,SwingTime=0,SwingDuration=.75f,LastSwingAge=100,HealRemaining=0,ShieldRemaining=0,CastTime=0;
+-    float Cooldown[4]={0,0,0,0};
+-    int32 Combo=-1,CastKind=-1;
+-    FVector PreviousBase,PreviousTip;
++    float RuneAge=0,RuneCastDuration=.7f,DrawTime=0,SwordReveal=0,CastIdle=0,HitStop=0,ShieldPulse=0,ShieldAge=0,TrailAccumulator=0;
++    float HealTextAmount=0,HealTextSeconds=0;
++    float Cooldown[4]={0,0,0,0};int32 Combo=-1,CastKind=-1,RuneKind=-1;
++    FRotator LastAim;FVector PreviousBase,PreviousTip,RuneCenter,AimGround,GroundNormal=FVector::UpVector;
+     TSet<TWeakObjectPtr<AActor>> SwingHits;
+-    void StartSwing(bool Heavy);
+-    void SwordTrace();
+-    void ReleaseSpell();
+-    void UpdateVisuals(float Dt);
+-    void AcceptedShot(const FHCM4AcceptedShot& Shot);
+-    void PlayPose(const TCHAR* Name,float Duration);
++    void StartSwing(bool Heavy);void SwordTrace();void ReleaseSpell();void UpdateVisuals(float Dt);void UpdateAim(float Dt);
++    void SelectTarget(AHCM3NPC* NPC);void OpenRune(int32 Kind,float Duration);void AcceptedShot(const FHCM4AcceptedShot& Shot);
++    void PlayPose(const TCHAR* Name,float Duration,bool UpperBody=false,bool Loop=false);
+ };
+-
+-/** Bounded cosmetic/projectile actor; gun bolts never apply a second hit. */
+ UCLASS()
+ class HARBORCITY_API AHCM5VS3SpellFX : public AActor
+ {
+     GENERATED_BODY()
+ public:
+-    AHCM5VS3SpellFX();
+-    virtual void Tick(float Dt) override;
++    AHCM5VS3SpellFX();virtual void Tick(float Dt) override;
+     void Initialize(AHCM1Character* Source,const FVector& Velocity,float Damage,float Life,int32 Kind,bool bProjectile);
+     static AHCM5VS3SpellFX* Spawn(AHCM1Character* Source,const FVector& Where,const FVector& Velocity,float Damage,float Life,int32 Kind,bool bProjectile=true);
++    void SetHomingTarget(AActor* Target){HomingTarget=Target;}
++    static void SpawnNumber(AHCM1Character* Source,const FVector& Where,int32 Amount,bool Healing);
+ private:
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> Mesh;
+-    TWeakObjectPtr<AHCM1Character> Hero;
+-    FVector Travel;
+-    float HitDamage=0,Remaining=0,Age=0;
+-    int32 Style=0;
+-    bool bTravel=false;
++    UPROPERTY() TObjectPtr<UNiagaraComponent> Trail;
++    UPROPERTY() TObjectPtr<UPointLightComponent> Light;
++    UPROPERTY() TObjectPtr<UMaterialInstanceDynamic> FadeMaterial;
++    UPROPERTY() TObjectPtr<UDecalComponent> Scorch;
++    UPROPERTY() TObjectPtr<UTextRenderComponent> Number;
++    TWeakObjectPtr<AHCM1Character> Hero;TWeakObjectPtr<AActor> HomingTarget;
++    FVector Travel;float HitDamage=0,Remaining=0,Age=0;int32 Style=0;bool bTravel=false;
+ };
+--- a/Source/HarborCity/M5VS3/HCM5VS3R1Authoring.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3R1Authoring.cpp
+@@ -0,0 +1,66 @@
++#include "HCM5VS3R1Authoring.h"
++#include "NiagaraSystem.h"
++#include "NiagaraSpriteRendererProperties.h"
++#include "NiagaraEmitterBase.h"
++#include "UObject/UnrealType.h"
++#if WITH_EDITOR
++#include "Stateless/NiagaraStatelessDistribution.h"
++namespace {
++template<class T>bool Put(UObject* O,const TCHAR* Name,const T& Value){auto* P=FindFProperty<FStructProperty>(O->GetClass(),Name);if(!P||P->Struct!=T::StaticStruct())return false;P->CopyCompleteValue(P->ContainerPtrToValuePtr<void>(O),&Value);return true;}
++TArray<UObject*> Objects(UObject* O,const TCHAR* Name){TArray<UObject*> Out;auto* P=FindFProperty<FArrayProperty>(O->GetClass(),Name);if(!P)return Out;auto* Inner=CastField<FObjectPropertyBase>(P->Inner);if(!Inner)return Out;FScriptArrayHelper A(P,P->ContainerPtrToValuePtr<void>(O));for(int32 I=0;I<A.Num();++I)Out.Add(Inner->GetObjectPropertyValue(A.GetRawPtr(I)));return Out;}
++}
++#endif
++
++FString UHCM5VS3R1Authoring::ConfigureParticles(UNiagaraSystem* System, UMaterialInterface* Material, int32 Style)
++{
++#if WITH_EDITOR
++    if(!System || !Material || !System->GetPathName().StartsWith(TEXT("/Game/HarborCity/M5VS3/R1/FX/")) || Style<0 || Style>4)
++        return TEXT("FAIL: project copy and style required");
++    System->Modify(); int32 Emitters=0,Renderers=0;
++    for(auto& Handle:System->GetEmitterHandles()){
++        auto* E=Handle.GetEmitterBase(); if(!E || Handle.GetEmitterMode()!=ENiagaraEmitterMode::Stateless)return TEXT("FAIL: requires native lightweight template");
++        E->Modify(); ++Emitters;
++        UObject* Init=nullptr;UObject* Velocity=nullptr;UObject* Shape=nullptr;
++        for(auto* M:Objects(E,TEXT("Modules"))){
++            const FString N=M->GetClass()->GetName();
++            if(N==TEXT("NiagaraStatelessModule_InitializeParticle"))Init=M;
++            if(N==TEXT("NiagaraStatelessModule_AddVelocity"))Velocity=M;
++            if(N==TEXT("NiagaraStatelessModule_ShapeLocation"))Shape=M;
++            if(N==TEXT("NiagaraStatelessModule_GravityForce"))if(auto* P=FindFProperty<FBoolProperty>(M->GetClass(),TEXT("bModuleEnabled")))P->SetPropertyValue_InContainer(M,false);
++        }
++        if(!Init)return TEXT("FAIL: InitializeParticle absent");
++        const bool Heal=Style==3,Trail=Style==2,Charge=Style==1;
++        if(Shape){
++            if(auto* P=FindFProperty<FEnumProperty>(Shape->GetClass(),TEXT("ShapePrimitive")))P->GetUnderlyingProperty()->SetIntPropertyValue(P->ContainerPtrToValuePtr<void>(Shape),uint64(4));
++            Put(Shape,TEXT("SphereRadius"),FNiagaraDistributionRangeFloat(Charge?65.f:Heal?50.f:Trail?3.f:6.f));
++        }
++        bool OK=Put(Init,TEXT("LifetimeDistribution"),FNiagaraDistributionRangeFloat(Trail?.18f:Heal?1.25f:.7f));
++        auto* Size=FindFProperty<FStructProperty>(Init->GetClass(),TEXT("SpriteSizeDistribution"));
++        if(!Size||Size->Struct!=FNiagaraDistributionRangeVector2::StaticStruct())return TEXT("FAIL: sprite size type");
++        Size->ContainerPtrToValuePtr<FNiagaraDistributionRangeVector2>(Init)->InitConstant(FVector2f(Trail?7.f:Heal?10.f:6.f));
++        OK&=Put(Init,TEXT("ColorDistribution"),FNiagaraDistributionColor(FLinearColor::White));
++        auto* Spawns=FindFProperty<FArrayProperty>(E->GetClass(),TEXT("SpawnInfos"));auto* SpawnType=Spawns?CastField<FStructProperty>(Spawns->Inner):nullptr;
++        if(!SpawnType)return TEXT("FAIL: native spawn definitions absent");FScriptArrayHelper Arr(Spawns,Spawns->ContainerPtrToValuePtr<void>(E));
++        for(int32 I=0;I<Arr.Num();++I){
++            auto* Count=FindFProperty<FStructProperty>(SpawnType->Struct,TEXT("Amount"));auto* Rate=FindFProperty<FStructProperty>(SpawnType->Struct,TEXT("Rate"));
++            if(!Count||!Rate)return TEXT("FAIL: native spawn parameter mismatch");
++            FNiagaraDistributionRangeInt C(Style==4?48:24);FNiagaraDistributionRangeFloat R(Trail?90.f:30.f);
++            Count->CopyCompleteValue(Count->ContainerPtrToValuePtr<void>(Arr.GetRawPtr(I)),&C);Rate->CopyCompleteValue(Rate->ContainerPtrToValuePtr<void>(Arr.GetRawPtr(I)),&R);
++        }
++        if(Velocity){
++            if(auto* Mode=FindFProperty<FEnumProperty>(Velocity->GetClass(),TEXT("VelocityType")))Mode->GetUnderlyingProperty()->SetIntPropertyValue(Mode->ContainerPtrToValuePtr<void>(Velocity),uint64(Heal||Trail?0:1));
++            Put(Velocity,TEXT("PointVelocityDistribution"),FNiagaraDistributionRangeFloat(Charge?-90.f:180.f));
++            auto* V=FindFProperty<FStructProperty>(Velocity->GetClass(),TEXT("LinearVelocityDistribution"));
++            if(!V||V->Struct!=FNiagaraDistributionRangeVector3::StaticStruct())return TEXT("FAIL: velocity type");
++            V->ContainerPtrToValuePtr<FNiagaraDistributionRangeVector3>(Velocity)->InitConstant(FVector3f(0,0,Heal?65.f:Trail?0.f:90.f));
++        }
++        if(!OK)return TEXT("FAIL: typed particle parameter mismatch");
++        for(auto* R:Objects(E,TEXT("RendererProperties")))if(auto* Sprite=Cast<UNiagaraSpriteRendererProperties>(R)){Sprite->Material=Material;++Renderers;}
++        E->PostEditChange();
++    }
++    System->PostEditChange();System->RequestCompile(false);System->WaitForCompilationComplete();System->MarkPackageDirty();
++    return FString::Printf(TEXT("PASS: emitters=%d renderers=%d style=%d"),Emitters,Renderers,Style);
++#else
++    return TEXT("NOT_RUN: editor only");
++#endif
++}
+--- a/Source/HarborCity/M5VS3/HCM5VS3R1Authoring.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3R1Authoring.h
+@@ -0,0 +1,15 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Kismet/BlueprintFunctionLibrary.h"
++#include "HCM5VS3R1Authoring.generated.h"
++class UNiagaraSystem;
++class UMaterialInterface;
++UCLASS()
++class HARBORCITY_API UHCM5VS3R1Authoring : public UBlueprintFunctionLibrary
++{
++    GENERATED_BODY()
++public:
++    // Configure project-owned copies of native Niagara lightweight templates.
++    // No generated character poses or engine assets are modified.
++    UFUNCTION(BlueprintCallable) static FString ConfigureParticles(UNiagaraSystem* System, UMaterialInterface* Material, int32 Style);
++};
