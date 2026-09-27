@@ -1,0 +1,15 @@
+{
+  "status": "FAIL_PRESERVED",
+  "normal_hits": 8,
+  "normal_attempts": 10,
+  "charged_hits": 10,
+  "charged_attempts": 10,
+  "failed_trials": [
+    4,
+    9
+  ],
+  "hip_spread_degrees": 3,
+  "ADS_spread_degrees": 0.6,
+  "test_ADS_during_20_shots": false,
+  "reason": "Source confirms unchanged ordinary pistol random cone; hip-fire test demanding deterministic20/20 is not equivalent to straight-arrow test. Spread is a plausible cause, individual ray hit telemetry not retained in Shipping so causal attribution remains INFERENCE. No damage/spread change made to force a pass."
+}

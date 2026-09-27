@@ -1,0 +1,249 @@
+{
+  "status": "PASS",
+  "candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260928_025240_832_1eac9805",
+  "exe_sha256": "A5BC97A7C63EEFE4DD9CD214139D94FEE2F7B5EEAF7EE9F1C133FA52857A6797",
+  "purchased_systems_cooked": 31,
+  "purchased_soundwaves_cooked": 27,
+  "assets": [
+    {
+      "name": "NS_Arrow_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Arrow_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Arrow_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Bomb_Explosion",
+      "cooked": true
+    },
+    {
+      "name": "NS_Bomb_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Bomb_Spawn",
+      "cooked": true
+    },
+    {
+      "name": "NS_Buff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Buff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Dash",
+      "cooked": true
+    },
+    {
+      "name": "NS_Debuff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Debuff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Fire_Ground",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Fire_Omni",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Ice_Ground",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Ice_Omni",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fire",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fireball_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fireball_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fireball_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Gunshot_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Gunshot_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Gunshot_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Heal_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Heal_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Muzzle",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Range",
+      "cooked": true
+    },
+    {
+      "name": "NS_Pickup_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Pickup_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Slash",
+      "cooked": true
+    },
+    {
+      "name": "SFX_ArrowShot_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_ArrowShot_Hit",
+      "cooked": true
+    },
+    {
+      "name": "SFX_BasicAttack",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Bounce",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Explosion",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Launch",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Buff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Buff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Dash",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Debuff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Debuff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Explosion",
+      "cooked": true
+    },
+    {
+      "name": "SFX_ExplosionIce",
+      "cooked": true
+    },
+    {
+      "name": "SFX_FireBall_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_FireBall_Hit",
+      "cooked": true
+    },
+    {
+      "name": "SFX_FireBall_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "SFX_GunShot",
+      "cooked": true
+    },
+    {
+      "name": "SFX_GunShot_Impact",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Heal_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Heal_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Lightning_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Lightning_Hit",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Lightning_Launch",
+      "cooked": true
+    },
+    {
+      "name": "SFX_PickUp",
+      "cooked": true
+    },
+    {
+      "name": "SFX_PickUp_Loop",
+      "cooked": true
+    }
+  ],
+  "container": "HarborCity-Windows.utoc",
+  "container_encryption": "Encrypted: 1 verified by native UnrealPak Info in bounded verifier",
+  "pak_index_encryption": "bEncryptedIndex: 1 verified",
+  "no_key_direct_extraction": "PASS for one Selestia mesh with keyed positive control",
+  "scope": "All 58 copied assets located in the same encrypted container; no-key direct extraction sampled one mesh only. No absolute anti-reverse-engineering claim. No private keys, original resources or extracted bytes included.",
+  "private_music_packages": 4,
+  "original_vfx_dependencies": 135,
+  "verification_report_sha256": "ec2c015928bc99a4e238b2574b84ef294137ddd410fd48f90762b07a9e96100c"
+}

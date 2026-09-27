@@ -1,0 +1,152 @@
+[
+  {
+    "quality": "High",
+    "cpu": "Intel(R) Core(TM) i7-14650HX",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "viewport": [
+      1920,
+      1080
+    ],
+    "settings": {
+      "t.MaxFPS": "0",
+      "r.VSync": "0",
+      "r.ScreenPercentage": "100",
+      "sg.ViewDistanceQuality": "2",
+      "sg.ShadowQuality": "2",
+      "sg.GlobalIlluminationQuality": "2",
+      "sg.ReflectionQuality": "2",
+      "sg.PostProcessQuality": "2",
+      "sg.TextureQuality": "2",
+      "sg.EffectsQuality": "2"
+    },
+    "scenes": [
+      {
+        "scene": "South approach walk",
+        "wall_seconds": 12.007693499326706,
+        "average_fps": 118.00767566889127,
+        "p99_frame_ms": 9.872697293758392,
+        "max_frame_ms": 10.974898934364319,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Market approach walk",
+        "wall_seconds": 12.00677840039134,
+        "average_fps": 116.93394790681229,
+        "p99_frame_ms": 10.019700974225998,
+        "max_frame_ms": 12.722700834274292,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "High aerial hover",
+        "wall_seconds": 4.00497329980135,
+        "average_fps": 117.35409073097003,
+        "p99_frame_ms": 9.867902845144272,
+        "max_frame_ms": 10.785400867462158,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Town aerial traversal",
+        "wall_seconds": 5.007465101778507,
+        "average_fps": 119.62140281062618,
+        "p99_frame_ms": 9.99409705400467,
+        "max_frame_ms": 10.91720163822174,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Armory real preview render performance",
+        "wall_seconds": 12.001207500696182,
+        "average_fps": 91.40746878481717,
+        "p99_frame_ms": 12.780901044607162,
+        "max_frame_ms": 31.031597405672073,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "6 NPC + spells/wave + fallback arrows + AoE",
+        "wall_seconds": 24.115,
+        "average_fps": 107.567,
+        "p99_frame_ms": 10.931,
+        "assertion": "FAIL",
+        "npcs": 6,
+        "damaged": 1
+      }
+    ],
+    "adapter_peak_GiB": 3.8896484375,
+    "media_overlap": false,
+    "recording": false
+  },
+  {
+    "quality": "Epic",
+    "cpu": "Intel(R) Core(TM) i7-14650HX",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "viewport": [
+      1920,
+      1080
+    ],
+    "settings": {
+      "t.MaxFPS": "0",
+      "r.VSync": "0",
+      "r.ScreenPercentage": "100",
+      "sg.ViewDistanceQuality": "3",
+      "sg.ShadowQuality": "3",
+      "sg.GlobalIlluminationQuality": "3",
+      "sg.ReflectionQuality": "3",
+      "sg.PostProcessQuality": "3",
+      "sg.TextureQuality": "3",
+      "sg.EffectsQuality": "3"
+    },
+    "scenes": [
+      {
+        "scene": "South approach walk",
+        "wall_seconds": 12.00884209945798,
+        "average_fps": 73.86224189258304,
+        "p99_frame_ms": 16.253899782896042,
+        "max_frame_ms": 17.804499715566635,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Market approach walk",
+        "wall_seconds": 12.004609301686287,
+        "average_fps": 76.05412030125386,
+        "p99_frame_ms": 16.04900136590004,
+        "max_frame_ms": 17.53310114145279,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "High aerial hover",
+        "wall_seconds": 4.009979698807001,
+        "average_fps": 80.29965839871893,
+        "p99_frame_ms": 14.241300523281097,
+        "max_frame_ms": 15.150398015975952,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Town aerial traversal",
+        "wall_seconds": 5.0096242018043995,
+        "average_fps": 81.44323477458526,
+        "p99_frame_ms": 14.900799840688705,
+        "max_frame_ms": 17.123199999332428,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Armory real preview render performance",
+        "wall_seconds": 12.000643201172352,
+        "average_fps": 64.5798718458932,
+        "p99_frame_ms": 18.792200833559036,
+        "max_frame_ms": 25.546498596668243,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "6 NPC + spells/wave + fallback arrows + AoE",
+        "wall_seconds": 24.2,
+        "average_fps": 72.437,
+        "p99_frame_ms": 16.222,
+        "assertion": "PASS",
+        "npcs": 6,
+        "damaged": 3
+      }
+    ],
+    "adapter_peak_GiB": 4.7607421875,
+    "media_overlap": false,
+    "recording": false
+  }
+]

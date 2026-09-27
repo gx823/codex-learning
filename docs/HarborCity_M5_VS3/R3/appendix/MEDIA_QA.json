@@ -1,0 +1,101 @@
+{
+  "status": "TECHNICAL_PASS_VISUAL_PARTIAL",
+  "media": [
+    {
+      "name": "final_showcase",
+      "file": "M5_VS3_R3_PLAYTHROUGH.mp4",
+      "bytes": 114895747,
+      "sha256": "9d3cc1ad950666cb621d21a23eb9da0f9edd39094cee86e6bee9d16939c6a2c0",
+      "duration_seconds": 264.1,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "average_frame_rate": "7881000/264043",
+      "audio_codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "actual_capture_fps": 29.84814769064965,
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260928_032223_94F17D3B\\capture.mp4",
+      "whole_decode": "PASS",
+      "integrated_LUFS": -18.55,
+      "true_peak_dBTP": -1.56,
+      "speed": "unchanged native timestamps",
+      "private_BGM_muted": true,
+      "listening": "NOT_RUN",
+      "capture_timing_limit": "Game-thread frame-request wall time, not exact GPU presentation time"
+    },
+    {
+      "name": "slow_in_game",
+      "file": "M5_VS3_R3_SLOW.mp4",
+      "bytes": 29397842,
+      "sha256": "16cd75b58d3b5e6eec8cbac14c44e1b3b68ab6663c28ab5ef6bff28985dd1fd4",
+      "duration_seconds": 63.2,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "average_frame_rate": "9475/316",
+      "audio_codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "actual_capture_fps": 30.01444050960497,
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260928_033002_AF5D5C7F\\capture.mp4",
+      "whole_decode": "PASS",
+      "integrated_LUFS": -18.32,
+      "true_peak_dBTP": -1.13,
+      "speed": "actual game .25 dilation",
+      "private_BGM_muted": true,
+      "listening": "NOT_RUN",
+      "capture_timing_limit": "Game-thread frame-request wall time, not exact GPU presentation time"
+    },
+    {
+      "name": "hair",
+      "file": "M5_VS3_R3_HAIR_COMPARE.mp4",
+      "bytes": 2516039,
+      "sha256": "71e855792cb3598ebcd80820b49515fa5eb13d4de2c23fc9583b90899ba92a42",
+      "duration_seconds": 9.8,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 636,
+      "average_frame_rate": "168000/3259",
+      "audio_codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "whole_decode": "PASS (hair derivative creation)",
+      "speed": "normal speed; editor -game same-camera comparison",
+      "visual": "USER_REVIEW",
+      "listening": "NOT_RUN",
+      "threshold_scope": "Separate diagnostic; not subject to the final Shipping playthrough FPS claim"
+    }
+  ],
+  "source_frame_cleanup": [
+    {
+      "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4",
+      "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260928_032223_94F17D3B\\capture.mp4",
+      "frames": 7881,
+      "bytes": 2425926561,
+      "ppm_deleted": 0,
+      "audio_intermediate_removed": true,
+      "retained": "capture metadata, 8 keyframes, MP4 and QA",
+      "remaining_frame_files": 0
+    },
+    {
+      "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4",
+      "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260928_033002_AF5D5C7F\\capture.mp4",
+      "frames": 1895,
+      "bytes": 691103844,
+      "ppm_deleted": 0,
+      "audio_intermediate_removed": true,
+      "retained": "capture metadata, 8 keyframes, MP4 and QA",
+      "remaining_frame_files": 0
+    }
+  ],
+  "failed_attempt_preserved": {
+    "file": "M5_VS3_R3_PLAYTHROUGH_AUDIO_ATTEMPT1_FAIL.mp4",
+    "integrated_LUFS": -18.5,
+    "true_peak_dBTP": -0.98,
+    "public": false
+  },
+  "visual_review": "Final 31-cell/contact/armory plus detailed cue strips inspected; see DELIVERY_GAPS. No claim of frame-by-frame all-video visual acceptance.",
+  "no_HUD_stills": 5,
+  "private_source_files_published": false
+}

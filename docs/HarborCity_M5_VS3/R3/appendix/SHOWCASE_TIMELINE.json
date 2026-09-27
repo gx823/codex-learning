@@ -1,0 +1,1036 @@
+{
+  "method": "Runtime per-step wall-frame sum, aligned to recorded first_capture_world_seconds; approximate frame cues, not Shipping UE_LOG timestamps.",
+  "alignment_error_world_seconds": 0.0,
+  "scenes": [
+    {
+      "name": "M4 R2 await initial game focus",
+      "start": -13.53244350105524,
+      "end": -13.524097699671984
+    },
+    {
+      "name": "Isolated flat street fixture; adult subject",
+      "start": -13.524097699671984,
+      "end": -10.518359001725912
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": -10.518359001725912,
+      "end": -10.414718702435493
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": -10.414718702435493,
+      "end": -9.409958500415087
+    },
+    {
+      "name": "Unrecorded actual sword warmup",
+      "start": -9.409958500415087,
+      "end": -1.406290601938963
+    },
+    {
+      "name": "Attack press",
+      "start": -1.406290601938963,
+      "end": -1.302173901349306
+    },
+    {
+      "name": "Attack release",
+      "start": -1.302173901349306,
+      "end": 0.0
+    },
+    {
+      "name": "Start public recording after warmup",
+      "start": 0.0,
+      "end": 3.0035796985030174
+    },
+    {
+      "name": "Attack press",
+      "start": 3.0035796985030174,
+      "end": 3.108874600380659
+    },
+    {
+      "name": "Attack release",
+      "start": 3.108874600380659,
+      "end": 3.980152700096369
+    },
+    {
+      "name": "Attack press",
+      "start": 3.980152700096369,
+      "end": 4.0990196987986565
+    },
+    {
+      "name": "Attack release",
+      "start": 4.0990196987986565,
+      "end": 4.975875198841095
+    },
+    {
+      "name": "Attack press",
+      "start": 4.975875198841095,
+      "end": 5.092852398753166
+    },
+    {
+      "name": "Attack release",
+      "start": 5.092852398753166,
+      "end": 5.966600798070431
+    },
+    {
+      "name": "Read combo damage",
+      "start": 5.966600798070431,
+      "end": 8.968992199748755
+    },
+    {
+      "name": "Two adult targets in wave path",
+      "start": 8.968992199748755,
+      "end": 11.970513500273228
+    },
+    {
+      "name": "Charge then release sword through Action",
+      "start": 11.970513500273228,
+      "end": 12.973239600658417
+    },
+    {
+      "name": "Heavy wave readback",
+      "start": 12.973239600658417,
+      "end": 16.992313500493765
+    },
+    {
+      "name": "R3 CrimsonNight equip and same camera",
+      "start": 16.992313500493765,
+      "end": 18.99252250045538
+    },
+    {
+      "name": "Attack press",
+      "start": 18.99252250045538,
+      "end": 19.102684199810028
+    },
+    {
+      "name": "Attack release",
+      "start": 19.102684199810028,
+      "end": 20.20559659972787
+    },
+    {
+      "name": "Attack press",
+      "start": 20.20559659972787,
+      "end": 20.307528600096703
+    },
+    {
+      "name": "Attack release",
+      "start": 20.307528600096703,
+      "end": 21.40754969790578
+    },
+    {
+      "name": "Attack press",
+      "start": 21.40754969790578,
+      "end": 21.525485698133707
+    },
+    {
+      "name": "Attack release",
+      "start": 21.525485698133707,
+      "end": 22.632336899638176
+    },
+    {
+      "name": "R3 crimson two subjects",
+      "start": 22.632336899638176,
+      "end": 24.633229799568653
+    },
+    {
+      "name": "R3 crimson fire charge",
+      "start": 24.633229799568653,
+      "end": 25.736694399267435
+    },
+    {
+      "name": "R3 crimson wave and ice omni end",
+      "start": 25.736694399267435,
+      "end": 29.737848598510027
+    },
+    {
+      "name": "R3 restore star tide",
+      "start": 29.737848598510027,
+      "end": 30.742829900234938
+    },
+    {
+      "name": "Reset and show pistol",
+      "start": 30.742829900234938,
+      "end": 32.76382640004158
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": 32.76382640004158,
+      "end": 32.867430698126554
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": 32.867430698126554,
+      "end": 34.87233839929104
+    },
+    {
+      "name": "Aim at torso",
+      "start": 34.87233839929104,
+      "end": 35.176196698099375
+    },
+    {
+      "name": "ADS via Action",
+      "start": 35.176196698099375,
+      "end": 37.178296599537134
+    },
+    {
+      "name": "Attack press",
+      "start": 37.178296599537134,
+      "end": 37.29427979886532
+    },
+    {
+      "name": "Attack release",
+      "start": 37.29427979886532,
+      "end": 38.69505089893937
+    },
+    {
+      "name": "Release ADS",
+      "start": 38.69505089893937,
+      "end": 39.30220649763942
+    },
+    {
+      "name": "Reload press",
+      "start": 39.30220649763942,
+      "end": 39.40430320054293
+    },
+    {
+      "name": "Reload release",
+      "start": 39.40430320054293,
+      "end": 42.4115139991045
+    },
+    {
+      "name": "R3 steam equip",
+      "start": 42.4115139991045,
+      "end": 43.43279970064759
+    },
+    {
+      "name": "R3 steam aim",
+      "start": 43.43279970064759,
+      "end": 43.73321079835296
+    },
+    {
+      "name": "Attack press",
+      "start": 43.73321079835296,
+      "end": 43.83474799990654
+    },
+    {
+      "name": "Attack release",
+      "start": 43.83474799990654,
+      "end": 45.03869069740176
+    },
+    {
+      "name": "Attack press",
+      "start": 45.03869069740176,
+      "end": 45.14004350081086
+    },
+    {
+      "name": "Attack release",
+      "start": 45.14004350081086,
+      "end": 46.36003270000219
+    },
+    {
+      "name": "Reload press",
+      "start": 46.36003270000219,
+      "end": 46.46595419943333
+    },
+    {
+      "name": "Reload release",
+      "start": 46.46595419943333,
+      "end": 49.468681298196316
+    },
+    {
+      "name": "R3 fallback light-arrow equip",
+      "start": 49.468681298196316,
+      "end": 50.47129279747605
+    },
+    {
+      "name": "R3 fallback light-arrow target reset",
+      "start": 50.47129279747605,
+      "end": 51.47170950099826
+    },
+    {
+      "name": "R3 fallback light-arrow aim",
+      "start": 51.47170950099826,
+      "end": 51.97883579879999
+    },
+    {
+      "name": "R3 fallback light-arrow draw and release",
+      "start": 51.97883579879999,
+      "end": 52.297507699579
+    },
+    {
+      "name": "R3 arrow impact settle",
+      "start": 52.297507699579,
+      "end": 55.30246200039983
+    },
+    {
+      "name": "R3 fallback light-arrow target reset",
+      "start": 55.30246200039983,
+      "end": 56.303419299423695
+    },
+    {
+      "name": "R3 fallback light-arrow aim",
+      "start": 56.303419299423695,
+      "end": 56.805834997445345
+    },
+    {
+      "name": "R3 fallback light-arrow draw and release",
+      "start": 56.805834997445345,
+      "end": 58.60639249905944
+    },
+    {
+      "name": "R3 arrow impact settle",
+      "start": 58.60639249905944,
+      "end": 61.62657459825277
+    },
+    {
+      "name": "Perspective press",
+      "start": 61.62657459825277,
+      "end": 61.73006469756365
+    },
+    {
+      "name": "Perspective release",
+      "start": 61.73006469756365,
+      "end": 62.73626049980521
+    },
+    {
+      "name": "R3 FP fallback light-arrow aim",
+      "start": 62.73626049980521,
+      "end": 63.142457500100136
+    },
+    {
+      "name": "R3 FP fallback light-arrow charged shot",
+      "start": 63.142457500100136,
+      "end": 64.64372700080276
+    },
+    {
+      "name": "R3 FP fallback light-arrow recovery",
+      "start": 64.64372700080276,
+      "end": 66.64469590038061
+    },
+    {
+      "name": "Perspective press",
+      "start": 66.64469590038061,
+      "end": 66.7620672993362
+    },
+    {
+      "name": "Perspective release",
+      "start": 66.7620672993362,
+      "end": 67.76331260055304
+    },
+    {
+      "name": "R3 restore Arcane",
+      "start": 67.76331260055304,
+      "end": 68.76614639908075
+    },
+    {
+      "name": "Spell target reset",
+      "start": 68.76614639908075,
+      "end": 70.7713514007628
+    },
+    {
+      "name": "Spell aim fixture",
+      "start": 70.7713514007628,
+      "end": 70.97284400090575
+    },
+    {
+      "name": "Spell1 press",
+      "start": 70.97284400090575,
+      "end": 71.09230219945312
+    },
+    {
+      "name": "Spell1 release",
+      "start": 71.09230219945312,
+      "end": 72.10085579752922
+    },
+    {
+      "name": "Actual bolt release",
+      "start": 72.10085579752922,
+      "end": 73.20545639842749
+    },
+    {
+      "name": "Bolt impact",
+      "start": 73.20545639842749,
+      "end": 76.22344410046935
+    },
+    {
+      "name": "Ground group fixture",
+      "start": 76.22344410046935,
+      "end": 78.23008359968662
+    },
+    {
+      "name": "Ground aim",
+      "start": 78.23008359968662,
+      "end": 78.431854698807
+    },
+    {
+      "name": "Spell2 press",
+      "start": 78.431854698807,
+      "end": 78.5331313982606
+    },
+    {
+      "name": "Spell2 release",
+      "start": 78.5331313982606,
+      "end": 79.34117019921541
+    },
+    {
+      "name": "Shock held/released",
+      "start": 79.34117019921541,
+      "end": 80.44255210086703
+    },
+    {
+      "name": "Column ring and residue",
+      "start": 80.44255210086703,
+      "end": 84.46266419813037
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": 84.46266419813037,
+      "end": 84.5673945993185
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": 84.5673945993185,
+      "end": 85.56720209866762
+    },
+    {
+      "name": "Adult defender for real counter",
+      "start": 85.56720209866762,
+      "end": 87.57057319954038
+    },
+    {
+      "name": "Attack press",
+      "start": 87.57057319954038,
+      "end": 87.69163749739528
+    },
+    {
+      "name": "Attack release",
+      "start": 87.69163749739528,
+      "end": 92.19578839838505
+    },
+    {
+      "name": "Stop counter after actual damage",
+      "start": 92.19578839838505,
+      "end": 92.70233549922705
+    },
+    {
+      "name": "Spell3 press",
+      "start": 92.70233549922705,
+      "end": 92.80961269885302
+    },
+    {
+      "name": "Spell3 release",
+      "start": 92.80961269885302,
+      "end": 97.31120869889855
+    },
+    {
+      "name": "Natural mana recovery",
+      "start": 97.31120869889855,
+      "end": 107.3306284993887
+    },
+    {
+      "name": "Defender reset for shield",
+      "start": 107.3306284993887,
+      "end": 108.33716379851103
+    },
+    {
+      "name": "Spell4 press",
+      "start": 108.33716379851103,
+      "end": 108.44157039746642
+    },
+    {
+      "name": "Spell4 release",
+      "start": 108.44157039746642,
+      "end": 109.645103700459
+    },
+    {
+      "name": "Attack press",
+      "start": 109.645103700459,
+      "end": 109.74584740027785
+    },
+    {
+      "name": "Attack release",
+      "start": 109.74584740027785,
+      "end": 113.76633419841528
+    },
+    {
+      "name": "Shield dissipates",
+      "start": 113.76633419841528,
+      "end": 116.76827890053391
+    },
+    {
+      "name": "First person section",
+      "start": 116.76827890053391,
+      "end": 118.76981659978628
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": 118.76981659978628,
+      "end": 118.8701610006392
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": 118.8701610006392,
+      "end": 119.87428249791265
+    },
+    {
+      "name": "Perspective press",
+      "start": 119.87428249791265,
+      "end": 119.99532140046358
+    },
+    {
+      "name": "Perspective release",
+      "start": 119.99532140046358,
+      "end": 121.99785370007157
+    },
+    {
+      "name": "Attack press",
+      "start": 121.99785370007157,
+      "end": 122.09793670102954
+    },
+    {
+      "name": "Attack release",
+      "start": 122.09793670102954,
+      "end": 123.60495439916849
+    },
+    {
+      "name": "First person sword recovery",
+      "start": 123.60495439916849,
+      "end": 125.60997590050101
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": 125.60997590050101,
+      "end": 125.72902410104871
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": 125.72902410104871,
+      "end": 127.23618270084262
+    },
+    {
+      "name": "FP pistol aim",
+      "start": 127.23618270084262,
+      "end": 127.43767400085926
+    },
+    {
+      "name": "Attack press",
+      "start": 127.43767400085926,
+      "end": 127.53810179978609
+    },
+    {
+      "name": "Attack release",
+      "start": 127.53810179978609,
+      "end": 129.5429148003459
+    },
+    {
+      "name": "Spell1 press",
+      "start": 129.5429148003459,
+      "end": 129.64359549805522
+    },
+    {
+      "name": "Spell1 release",
+      "start": 129.64359549805522,
+      "end": 130.66258170083165
+    },
+    {
+      "name": "FP bolt release",
+      "start": 130.66258170083165,
+      "end": 131.66908390074968
+    },
+    {
+      "name": "FP recovery",
+      "start": 131.66908390074968,
+      "end": 134.67598269879818
+    },
+    {
+      "name": "Perspective press",
+      "start": 134.67598269879818,
+      "end": 134.79785829782486
+    },
+    {
+      "name": "Perspective release",
+      "start": 134.79785829782486,
+      "end": 135.80033249780536
+    },
+    {
+      "name": "Flight departure fixture",
+      "start": 135.80033249780536,
+      "end": 137.8041693009436
+    },
+    {
+      "name": "FlightToggle press",
+      "start": 137.8041693009436,
+      "end": 137.90779449790716
+    },
+    {
+      "name": "FlightToggle release",
+      "start": 137.90779449790716,
+      "end": 138.91132429987192
+    },
+    {
+      "name": "Actual ascent",
+      "start": 138.91132429987192,
+      "end": 141.91104310005903
+    },
+    {
+      "name": "Armory press",
+      "start": 141.91104310005903,
+      "end": 142.03216829895973
+    },
+    {
+      "name": "Armory release",
+      "start": 142.03216829895973,
+      "end": 143.03908279910684
+    },
+    {
+      "name": "Armory blocked in flight",
+      "start": 143.03908279910684,
+      "end": 143.1432714983821
+    },
+    {
+      "name": "Flight boost through Action",
+      "start": 143.1432714983821,
+      "end": 145.14497780054808
+    },
+    {
+      "name": "Hover over town",
+      "start": 145.14497780054808,
+      "end": 149.1676198989153
+    },
+    {
+      "name": "Perspective press",
+      "start": 149.1676198989153,
+      "end": 149.26949340105057
+    },
+    {
+      "name": "Perspective release",
+      "start": 149.26949340105057,
+      "end": 152.27396019920707
+    },
+    {
+      "name": "Perspective press",
+      "start": 152.27396019920707,
+      "end": 152.3740526996553
+    },
+    {
+      "name": "Perspective release",
+      "start": 152.3740526996553,
+      "end": 153.3758144006133
+    },
+    {
+      "name": "FlightToggle press",
+      "start": 153.3758144006133,
+      "end": 153.4910717010498
+    },
+    {
+      "name": "FlightToggle release",
+      "start": 153.4910717010498,
+      "end": 161.49744679778814
+    },
+    {
+      "name": "R3 dusk hearths",
+      "start": 161.49744679778814,
+      "end": 163.50636499747634
+    },
+    {
+      "name": "R3 harbor fires",
+      "start": 163.50636499747634,
+      "end": 169.50881629809737
+    },
+    {
+      "name": "R3 cafe stove and pickup glow",
+      "start": 169.50881629809737,
+      "end": 171.5321171991527
+    },
+    {
+      "name": "R3 cafe fire",
+      "start": 171.5321171991527,
+      "end": 176.53517650067806
+    },
+    {
+      "name": "R3 coffee giver clear and reachable approach",
+      "start": 176.53517650067806,
+      "end": 178.53619799762964
+    },
+    {
+      "name": "Interact press",
+      "start": 178.53619799762964,
+      "end": 178.6416735984385
+    },
+    {
+      "name": "Interact release",
+      "start": 178.6416735984385,
+      "end": 179.26606889814138
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 179.26606889814138,
+      "end": 179.36615270003676
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 179.36615270003676,
+      "end": 179.53467410057783
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 179.53467410057783,
+      "end": 179.6422059983015
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 179.6422059983015,
+      "end": 179.80065450072289
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 179.80065450072289,
+      "end": 179.90709909796715
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 179.90709909796715,
+      "end": 180.07252779975533
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 180.07252779975533,
+      "end": 180.17631889879704
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 180.17631889879704,
+      "end": 180.341143399477
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 180.341143399477,
+      "end": 180.44290059804916
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 180.44290059804916,
+      "end": 180.6449095979333
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 180.6449095979333,
+      "end": 180.76861830055714
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 180.76861830055714,
+      "end": 180.93550400063396
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 180.93550400063396,
+      "end": 181.03644639998674
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 181.03644639998674,
+      "end": 181.1973977982998
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 181.1973977982998,
+      "end": 181.30330159887671
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 181.30330159887671,
+      "end": 181.46773529797792
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 181.46773529797792,
+      "end": 181.5685692988336
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 181.5685692988336,
+      "end": 181.72904510051012
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 181.72904510051012,
+      "end": 181.83575350046158
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 181.83575350046158,
+      "end": 181.99852139875293
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 181.99852139875293,
+      "end": 182.1057750992477
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 182.1057750992477,
+      "end": 182.2782074995339
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 182.2782074995339,
+      "end": 182.39530190080404
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 182.39530190080404,
+      "end": 182.56681609898806
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 182.56681609898806,
+      "end": 182.66884789988399
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 182.66884789988399,
+      "end": 182.829311799258
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 182.829311799258,
+      "end": 182.94321409985423
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 182.94321409985423,
+      "end": 183.10942159965634
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 183.10942159965634,
+      "end": 183.2287230975926
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 183.2287230975926,
+      "end": 183.38207060098648
+    },
+    {
+      "name": "R3 actual coffee dialogue advance",
+      "start": 183.38207060098648,
+      "end": 183.49549710005522
+    },
+    {
+      "name": "Coffee dialogue release",
+      "start": 183.49549710005522,
+      "end": 183.66846349835396
+    },
+    {
+      "name": "R3 pickup after dialogue",
+      "start": 183.66846349835396,
+      "end": 186.66992519795895
+    },
+    {
+      "name": "R3 afternoon restore",
+      "start": 186.66992519795895,
+      "end": 187.679976798594
+    },
+    {
+      "name": "Armory calm fixture",
+      "start": 187.679976798594,
+      "end": 189.69416669756174
+    },
+    {
+      "name": "Armory press",
+      "start": 189.69416669756174,
+      "end": 189.797168597579
+    },
+    {
+      "name": "Armory release",
+      "start": 189.797168597579,
+      "end": 191.805609498173
+    },
+    {
+      "name": "Show each real data weapon",
+      "start": 191.805609498173,
+      "end": 199.80699779838324
+    },
+    {
+      "name": "Preview try effect",
+      "start": 199.80699779838324,
+      "end": 201.80965669825673
+    },
+    {
+      "name": "Show each real data weapon",
+      "start": 201.80965669825673,
+      "end": 209.81206769868731
+    },
+    {
+      "name": "Preview try effect",
+      "start": 209.81206769868731,
+      "end": 211.81431099772453
+    },
+    {
+      "name": "Show each real data weapon",
+      "start": 211.81431099772453,
+      "end": 219.81516689807177
+    },
+    {
+      "name": "Preview try effect",
+      "start": 219.81516689807177,
+      "end": 221.8346855007112
+    },
+    {
+      "name": "Show each real data weapon",
+      "start": 221.8346855007112,
+      "end": 229.83774759992957
+    },
+    {
+      "name": "Preview try effect",
+      "start": 229.83774759992957,
+      "end": 231.84328730031848
+    },
+    {
+      "name": "Show eight paints",
+      "start": 231.84328730031848,
+      "end": 232.8521087989211
+    },
+    {
+      "name": "Show eight paints",
+      "start": 232.8521087989211,
+      "end": 233.86622560024261
+    },
+    {
+      "name": "Show eight paints",
+      "start": 233.86622560024261,
+      "end": 234.87009279802442
+    },
+    {
+      "name": "Show eight paints",
+      "start": 234.87009279802442,
+      "end": 235.87771859765053
+    },
+    {
+      "name": "Show eight paints",
+      "start": 235.87771859765053,
+      "end": 236.88088290020823
+    },
+    {
+      "name": "Show eight paints",
+      "start": 236.88088290020823,
+      "end": 237.89884220063686
+    },
+    {
+      "name": "Show eight paints",
+      "start": 237.89884220063686,
+      "end": 238.9099004007876
+    },
+    {
+      "name": "Show eight paints",
+      "start": 238.9099004007876,
+      "end": 239.9127480983734
+    },
+    {
+      "name": "R3 fallback light-arrow catalog preview",
+      "start": 239.9127480983734,
+      "end": 245.91408339887857
+    },
+    {
+      "name": "Equip alternative slots",
+      "start": 245.91408339887857,
+      "end": 247.9295061007142
+    },
+    {
+      "name": "Armory press",
+      "start": 247.9295061007142,
+      "end": 248.03273179754615
+    },
+    {
+      "name": "Armory release",
+      "start": 248.03273179754615,
+      "end": 249.0328876003623
+    },
+    {
+      "name": "Attack press",
+      "start": 249.0328876003623,
+      "end": 249.13568199798465
+    },
+    {
+      "name": "Attack release",
+      "start": 249.13568199798465,
+      "end": 251.13580450043082
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": 251.13580450043082,
+      "end": 251.2392030991614
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": 251.2392030991614,
+      "end": 251.74391769990325
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": 251.74391769990325,
+      "end": 251.86354560032487
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": 251.86354560032487,
+      "end": 252.8699241988361
+    },
+    {
+      "name": "Attack press",
+      "start": 252.8699241988361,
+      "end": 252.9743896983564
+    },
+    {
+      "name": "Attack release",
+      "start": 252.9743896983564,
+      "end": 253.97770480066538
+    },
+    {
+      "name": "Attack press",
+      "start": 253.97770480066538,
+      "end": 254.0993991009891
+    },
+    {
+      "name": "Attack release",
+      "start": 254.0993991009891,
+      "end": 255.09984919801354
+    },
+    {
+      "name": "Attack press",
+      "start": 255.09984919801354,
+      "end": 255.20508969947696
+    },
+    {
+      "name": "Attack release",
+      "start": 255.20508969947696,
+      "end": 256.21321069821715
+    },
+    {
+      "name": "Second sword finish",
+      "start": 256.21321069821715,
+      "end": 259.23048419877887
+    },
+    {
+      "name": "Restore authored scene after combat fixture before save",
+      "start": 259.23048419877887,
+      "end": 262.7736760005355
+    },
+    {
+      "name": "Save press",
+      "start": 262.7736760005355,
+      "end": 262.8748358003795
+    },
+    {
+      "name": "Save release",
+      "start": 262.8748358003795,
+      "end": 263.8956125974655
+    },
+    {
+      "name": "Actual save fields",
+      "start": 263.8956125974655,
+      "end": 264.10302989929914
+    }
+  ]
+}

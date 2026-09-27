@@ -1,0 +1,2545 @@
+{
+  "status": "PARTIAL",
+  "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260928_025240_832_1eac9805\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "runs": [
+    {
+      "name": "full_once",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "m5_full_20260928_030034",
+      "status": "COMPLETE",
+      "checks": 171,
+      "failures": 3,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+          "evidence": ""
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.994 Y=-6360.922 Z=22.640 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"de",
+          "evidence": ""
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "evidence": ""
+        }
+      ],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_full_20260928_030034"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "M5 scene prerequisites",
+          "status": "PASS",
+          "actual": "mode=0 pawn=BP_TownHero_C_2147482308 speed=0.002 km/h characterCount=1"
+        },
+        {
+          "name": "M5 actual purchased Selestia player mesh",
+          "status": "PASS",
+          "actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp.SKM_Selestia_Warp"
+        },
+        {
+          "name": "M5 active animation matches combat configured class",
+          "status": "PASS",
+          "actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/ABP_TownFlight.ABP_TownFlight_C"
+        },
+        {
+          "name": "M5 original proportions and normalized bind units",
+          "status": "PASS",
+          "actual": "scale=X=1.250 Y=1.250 Z=1.250 bones=250 unit_binds=1"
+        },
+        {
+          "name": "M5 first-person camera uses original eye height",
+          "status": "PASS",
+          "actual": "57.4561"
+        },
+        {
+          "name": "M5 fresh isolated initial state",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Contact\",\r\n\t\"chapter\": \"01 · 寄给明天的包裹\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": "
+        },
+        {
+          "name": "M5 unchanged base look gains",
+          "status": "PASS",
+          "actual": "X=1.500 Y=1.500 / X=1.125 Y=1.125"
+        },
+        {
+          "name": "Initial stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Contact\",\r\n\t\"chapter\": \"01 · 寄给明天的包裹\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": "
+        },
+        {
+          "name": "Initial story navigation target",
+          "status": "PASS",
+          "actual": "M5_Contact X=-4650.000 Y=-4450.000 Z=94.952"
+        },
+        {
+          "name": "Initial minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Conta"
+        },
+        {
+          "name": "Street exploration music mode and bounded players",
+          "status": "PASS",
+          "actual": "{\r\n\t\"requested_mode\": 1,\r\n\t\"current_mode\": 1,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"pr"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "BP_NPCIdleR2_R_C_1 immediate_readback_only=frame=687 fp=0 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=-100.000 Y=-2060.000 Z=155.606 target=X=-4650.000 Y=-4450.000 Z=94.952 distance=180.011 hit=BP_NPCIdleR2_R_C_1 reac"
+        },
+        {
+          "name": "m5_chapter1 dialogue approach grounded placement",
+          "status": "PASS",
+          "actual": "frame=687 fp=0 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=-100.000 Y=-2060.000 Z=155.606 target=X=-4650.000 Y=-4450.000 Z=94.952 distance=180.011 hit=BP_NPCIdleR2_R_C_1 reachable=1"
+        },
+        {
+          "name": "m5_chapter1 dialogue approach settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=687 fp=0 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=-100.000 Y=-2060.000 Z=155.606 target=X=-4650.000 Y=-4450.000 Z=94.952 distance=180.011 hit=BP_NPCIdleR2_R_C_1 reachable=1} settled={frame=748 fp=0"
+        },
+        {
+          "name": "M5 E selected actual story NPC",
+          "status": "PASS",
+          "actual": "弦音"
+        },
+        {
+          "name": "m5_chapter1_dialogue actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter1_dialogue.png bytes=2781095 pending=0"
+        },
+        {
+          "name": "M5 E completes and closes dialogue",
+          "status": "PASS",
+          "actual": ""
+        },
+        {
+          "name": "Accepted delivery stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbor\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "Accepted delivery story navigation target",
+          "status": "PASS",
+          "actual": "M5_Harbor X=8400.000 Y=-5400.000 Z=89.097"
+        },
+        {
+          "name": "Accepted delivery minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbo"
+        },
+        {
+          "name": "Contact interior music mode and bounded players",
+          "status": "PASS",
+          "actual": "{\r\n\t\"requested_mode\": 3,\r\n\t\"current_mode\": 3,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"pr"
+        },
+        {
+          "name": "Harbor checkpoint actual save file state",
+          "status": "PASS",
+          "actual": "M5.Signal.Harbor"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "BP_NPCIdleR2_V_C_1 immediate_readback_only=frame=1463 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=151.969 target=X=8400.000 Y=-5400.000 Z=89.097 distance=180.002 hit=BP_NPCIdleR2_V_C_1 reac"
+        },
+        {
+          "name": "m5_chapter2 dialogue approach grounded placement",
+          "status": "PASS",
+          "actual": "frame=1463 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=151.969 target=X=8400.000 Y=-5400.000 Z=89.097 distance=180.002 hit=BP_NPCIdleR2_V_C_1 reachable=1"
+        },
+        {
+          "name": "m5_chapter2 dialogue approach settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=1463 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=151.969 target=X=8400.000 Y=-5400.000 Z=89.097 distance=180.002 hit=BP_NPCIdleR2_V_C_1 reachable=1} settled={frame=1534 fp="
+        },
+        {
+          "name": "M5 E selected actual story NPC",
+          "status": "PASS",
+          "actual": "汐原"
+        },
+        {
+          "name": "m5_chapter2_dialogue actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter2_dialogue.png bytes=2669341 pending=0"
+        },
+        {
+          "name": "M5 E completes and closes dialogue",
+          "status": "PASS",
+          "actual": ""
+        },
+        {
+          "name": "First investigation stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "First investigation story navigation target",
+          "status": "PASS",
+          "actual": "M5_InterceptorA X=-4800.000 Y=7900.000 Z=277.617"
+        },
+        {
+          "name": "First investigation minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambus"
+        },
+        {
+          "name": "Actual earlier checkpoint restored stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbor\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "Actual earlier checkpoint restored story navigation target",
+          "status": "PASS",
+          "actual": "M5_Harbor X=8400.000 Y=-5400.000 Z=88.947"
+        },
+        {
+          "name": "Actual earlier checkpoint restored minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbo"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "BP_NPCIdleR2_V_C_1 immediate_readback_only=frame=2206 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=149.606 target=X=8400.000 Y=-5400.000 Z=88.947 distance=180.003 hit=BP_NPCIdleR2_V_C_1 reac"
+        },
+        {
+          "name": "m5_chapter2_replay dialogue approach grounded placement",
+          "status": "PASS",
+          "actual": "frame=2206 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=149.606 target=X=8400.000 Y=-5400.000 Z=88.947 distance=180.003 hit=BP_NPCIdleR2_V_C_1 reachable=1"
+        },
+        {
+          "name": "m5_chapter2_replay dialogue approach settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=2206 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=149.606 target=X=8400.000 Y=-5400.000 Z=88.947 distance=180.003 hit=BP_NPCIdleR2_V_C_1 reachable=1} settled={frame=2275 fp="
+        },
+        {
+          "name": "M5 E selected actual story NPC",
+          "status": "PASS",
+          "actual": "汐原"
+        },
+        {
+          "name": "m5_chapter2_replay_dialogue actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter2_replay_dialogue.png bytes=2669480 pending=0"
+        },
+        {
+          "name": "M5 E completes and closes dialogue",
+          "status": "PASS",
+          "actual": ""
+        },
+        {
+          "name": "Investigation after load stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "Investigation after load story navigation target",
+          "status": "PASS",
+          "actual": "M5_InterceptorA X=-4800.000 Y=7900.000 Z=277.472"
+        },
+        {
+          "name": "Investigation after load minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambus"
+        },
+        {
+          "name": "M5 ADS1.6 and reciprocal input",
+          "status": "PASS",
+          "actual": "projection=1.60000028 input=0.62500000"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "BP_NPCIdleR2_R_C_2 immediate_readback_only=frame=3127 fp=1 player=X=-4440.000 Y=7900.000 Z=275.600 view=X=8580.000 Y=-5400.000 Z=146.606 target=X=-4800.000 Y=7900.000 Z=277.472 distance=360.005 hit=StaticMeshActor_82 rea"
+        },
+        {
+          "name": "M5 real live interceptor",
+          "status": "PASS",
+          "actual": "M5_InterceptorA"
+        },
+        {
+          "name": "M5 stationary ballistic fixture disclosed",
+          "status": "PASS",
+          "actual": "M5_InterceptorA"
+        },
+        {
+          "name": "Courtyard combat music mode and bounded players",
+          "status": "PASS",
+          "actual": "{\r\n\t\"requested_mode\": 2,\r\n\t\"current_mode\": 2,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"pr"
+        },
+        {
+          "name": "M5 actual shot accepted; ray outcome recorded",
+          "status": "PASS",
+          "actual": "shots 0->1 hits 0->1 hit=BP_NPCIdleR2_R_C_2 hp=66.0 muzzleBlocked=0 muzzle=X=-4504.152 Y=7887.433 Z=328.098 rayTarget=X=-4778.803 Y=7899.436 Z=322.836 view=X=-4440.000 Y=7900.000 Z=332.278"
+        },
+        {
+          "name": "M5 actual shot accepted; ray outcome recorded",
+          "status": "PASS",
+          "actual": "shots 1->2 hits 1->2 hit=BP_NPCIdleR2_R_C_2 hp=32.0 muzzleBlocked=0 muzzle=X=-4504.267 Y=7886.927 Z=328.193 rayTarget=X=-4793.258 Y=7898.789 Z=319.834 view=X=-4440.000 Y=7900.000 Z=332.278"
+        },
+        {
+          "name": "M5 actual shot accepted; ray outcome recorded",
+          "status": "PASS",
+          "actual": "shots 2->3 hits 2->3 hit=BP_NPCIdleR2_R_C_2 hp=0.0 muzzleBlocked=0 muzzle=X=-4504.947 Y=7885.964 Z=326.545 rayTarget=X=-4776.015 Y=7903.948 Z=314.391 view=X=-4440.000 Y=7900.000 Z=332.278"
+        },
+        {
+          "name": "M5 actual interceptor defeated M5_InterceptorA",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 1,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "BP_NPCIdleR2_V_C_2 immediate_readback_only=frame=4157 fp=1 player=X=-4567.042 Y=7180.601 Z=229.558 view=X=-4440.000 Y=7900.000 Z=332.278 target=X=-4927.042 Y=7180.601 Z=228.574 distance=360.001 hit=none reachable=0"
+        },
+        {
+          "name": "M5 real live interceptor",
+          "status": "PASS",
+          "actual": "M5_InterceptorB"
+        },
+        {
+          "name": "M5 stationary ballistic fixture disclosed",
+          "status": "PASS",
+          "actual": "M5_InterceptorB"
+        },
+        {
+          "name": "Courtyard combat music mode and bounded players",
+          "status": "PASS",
+          "actual": "{\r\n\t\"requested_mode\": 2,\r\n\t\"current_mode\": 2,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"pr"
+        },
+        {
+          "name": "M5 actual shot accepted; ray outcome recorded",
+          "status": "PASS",
+          "actual": "shots 3->4 hits 3->4 hit=BP_NPCIdleR2_V_C_2 hp=66.0 muzzleBlocked=0 muzzle=X=-4632.245 Y=7168.759 Z=281.264 rayTarget=X=-4914.530 Y=7182.510 Z=272.050 view=X=-4567.042 Y=7180.601 Z=286.236"
+        },
+        {
+          "name": "M5 actual shot accepted; ray outcome recorded",
+          "status": "PASS",
+          "actual": "shots 4->5 hits 4->5 hit=BP_NPCIdleR2_V_C_2 hp=32.0 muzzleBlocked=0 muzzle=X=-4631.297 Y=7168.321 Z=281.326 rayTarget=X=-4919.762 Y=7177.889 Z=270.523 view=X=-4567.042 Y=7180.601 Z=286.236"
+        },
+        {
+          "name": "M5 actual shot accepted; ray outcome recorded",
+          "status": "PASS",
+          "actual": "shots 5->6 hits 5->6 hit=BP_NPCIdleR2_V_C_2 hp=0.0 muzzleBlocked=0 muzzle=X=-4631.651 Y=7168.020 Z=280.004 rayTarget=X=-4902.256 Y=7179.703 Z=268.747 view=X=-4567.042 Y=7180.601 Z=286.236"
+        },
+        {
+          "name": "M5 actual interceptor defeated M5_InterceptorB",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.RecoverShard\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_second"
+        },
+        {
+          "name": "Battle complete stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.RecoverShard\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_second"
+        },
+        {
+          "name": "Battle complete story navigation target",
+          "status": "PASS",
+          "actual": "M5_RelayCache X=-4800.000 Y=8700.000 Z=365.000"
+        },
+        {
+          "name": "Battle complete minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Recov"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "HCM5StoryTerminal_0 immediate_readback_only=frame=5270 fp=1 player=X=-4620.000 Y=8700.000 Z=326.800 view=X=-4567.042 Y=7180.601 Z=286.236 target=X=-4800.000 Y=8700.000 Z=365.000 distance=184.009 hit=HCM5StoryTerminal_0 r"
+        },
+        {
+          "name": "M5 cache grounded placement",
+          "status": "PASS",
+          "actual": "frame=5270 fp=1 player=X=-4620.000 Y=8700.000 Z=326.800 view=X=-4567.042 Y=7180.601 Z=286.236 target=X=-4800.000 Y=8700.000 Z=365.000 distance=184.009 hit=HCM5StoryTerminal_0 reachable=1"
+        },
+        {
+          "name": "M5 cache settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=5270 fp=1 player=X=-4620.000 Y=8700.000 Z=326.800 view=X=-4567.042 Y=7180.601 Z=286.236 target=X=-4800.000 Y=8700.000 Z=365.000 distance=184.009 hit=HCM5StoryTerminal_0 reachable=1} settled={frame=5338 f"
+        },
+        {
+          "name": "Evidence collected stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "Evidence collected story navigation target",
+          "status": "PASS",
+          "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000"
+        },
+        {
+          "name": "Evidence collected minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower"
+        },
+        {
+          "name": "Evidence checkpoint actual save file state",
+          "status": "PASS",
+          "actual": "M5.Signal.Tower"
+        },
+        {
+          "name": "M5 defeated IDs persist without repeat enemies",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "HCM5StoryTerminal_1 immediate_readback_only=frame=5799 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=-4620.000 Y=8700.000 Z=383.478 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_1450"
+        },
+        {
+          "name": "M5 tower approach grounded placement",
+          "status": "PASS",
+          "actual": "frame=5799 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=-4620.000 Y=8700.000 Z=383.478 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_1450 reachable=0"
+        },
+        {
+          "name": "M5 tower approach settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=5799 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=-4620.000 Y=8700.000 Z=383.478 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_1450 reachable=0} settled={frame=5866"
+        },
+        {
+          "name": "Broadcast started stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Upload\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 1"
+        },
+        {
+          "name": "Broadcast started story navigation target",
+          "status": "PASS",
+          "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000"
+        },
+        {
+          "name": "Broadcast started minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Uploa"
+        },
+        {
+          "name": "Leaving interrupts safely stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "Leaving interrupts safely story navigation target",
+          "status": "PASS",
+          "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000"
+        },
+        {
+          "name": "Leaving interrupts safely minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "HCM5StoryTerminal_1 immediate_readback_only=frame=6138 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=9500.000 Y=9500.000 Z=-277.914 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_736 "
+        },
+        {
+          "name": "M5 tower return grounded placement",
+          "status": "PASS",
+          "actual": "frame=6138 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=9500.000 Y=9500.000 Z=-277.914 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_736 reachable=0"
+        },
+        {
+          "name": "M5 tower return settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=6138 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=9500.000 Y=9500.000 Z=-277.914 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_736 reachable=0} settled={frame=6204 "
+        },
+        {
+          "name": "M5 failure stimulus explicitly A",
+          "status": "PASS",
+          "actual": "production timed recovery is then observed"
+        },
+        {
+          "name": "Defeat safely stops broadcast stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "Defeat safely stops broadcast story navigation target",
+          "status": "PASS",
+          "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000"
+        },
+        {
+          "name": "Defeat safely stops broadcast minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower"
+        },
+        {
+          "name": "M5 production recovery retains evidence",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "HCM5StoryTerminal_1 immediate_readback_only=frame=6860 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=HCM5StoryTerminal_1"
+        },
+        {
+          "name": "M5 tower retry grounded placement",
+          "status": "PASS",
+          "actual": "frame=6860 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=HCM5StoryTerminal_1 reachable=1"
+        },
+        {
+          "name": "M5 tower retry settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=6860 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=HCM5StoryTerminal_1 reachable=1} settled={frame=6929"
+        },
+        {
+          "name": "M5 pause halts music",
+          "status": "PASS",
+          "actual": "{\r\n\t\"requested_mode\": 2,\r\n\t\"current_mode\": 2,\r\n\t\"crossfading\": false,\r\n\t\"paused\": true,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"pri"
+        },
+        {
+          "name": "Tower decoding interior music mode and bounded players",
+          "status": "PASS",
+          "actual": "{\r\n\t\"requested_mode\": 3,\r\n\t\"current_mode\": 3,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"pr"
+        },
+        {
+          "name": "Public evidence broadcast stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Debrief\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6"
+        },
+        {
+          "name": "Public evidence broadcast story navigation target",
+          "status": "PASS",
+          "actual": "M5_Contact X=-4650.000 Y=-4450.000 Z=94.802"
+        },
+        {
+          "name": "Public evidence broadcast minimap receives actual target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Debri"
+        },
+        {
+          "name": "M5 grounded relocation fixture",
+          "status": "PASS",
+          "actual": "BP_NPCIdleR2_R_C_1 immediate_readback_only=frame=8282 fp=1 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=-4650.000 Y=-4450.000 Z=94.802 distance=180.009 hit=StaticMeshActor_1053 "
+        },
+        {
+          "name": "m5_chapter4 dialogue approach grounded placement",
+          "status": "PASS",
+          "actual": "frame=8282 fp=1 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=-4650.000 Y=-4450.000 Z=94.802 distance=180.009 hit=StaticMeshActor_1053 reachable=0"
+        },
+        {
+          "name": "m5_chapter4 dialogue approach settled reachable",
+          "status": "PASS",
+          "actual": "immediate={frame=8282 fp=1 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=-4650.000 Y=-4450.000 Z=94.802 distance=180.009 hit=StaticMeshActor_1053 reachable=0} settled={frame=8332"
+        },
+        {
+          "name": "M5 E selected actual story NPC",
+          "status": "PASS",
+          "actual": "弦音"
+        },
+        {
+          "name": "m5_chapter4_dialogue actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter4_dialogue.png bytes=2781879 pending=0"
+        },
+        {
+          "name": "M5 E completes and closes dialogue",
+          "status": "PASS",
+          "actual": ""
+        },
+        {
+          "name": "First night complete stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6"
+        },
+        {
+          "name": "First night complete story navigation target",
+          "status": "PASS",
+          "actual": "None X=0.000 Y=0.000 Z=0.000"
+        },
+        {
+          "name": "Side-quest placement found clear ground",
+          "status": "PASS",
+          "actual": "M3_LinXia"
+        },
+        {
+          "name": "Side-quest NPC reachable after camera settles",
+          "status": "PASS",
+          "actual": "id=M3_LinXia player=X=5781.510 Y=-4300.723 Z=92.150 npc=X=5608.215 Y=-4300.723 Z=87.882 distance=173.35 fp=1 flying=0 hit=BP_NPCIdleR2_Q_C_1 component=CharacterMesh0"
+        },
+        {
+          "name": "Side-quest placement found clear ground",
+          "status": "PASS",
+          "actual": "M3_ChenBo"
+        },
+        {
+          "name": "Side-quest NPC reachable after camera settles",
+          "status": "PASS",
+          "actual": "id=M3_ChenBo player=X=-326.797 Y=2500.000 Z=98.150 npc=X=-500.000 Y=2500.000 Z=94.531 distance=173.24 fp=1 flying=0 hit=BP_NPCIdleR2_R_C_3 component=CharacterMesh0"
+        },
+        {
+          "name": "Side-quest placement found clear ground",
+          "status": "PASS",
+          "actual": "M3_ANing"
+        },
+        {
+          "name": "Side-quest NPC reachable after camera settles",
+          "status": "PASS",
+          "actual": "id=M3_ANing player=X=-6000.000 Y=-5726.136 Z=89.150 npc=X=-6000.000 Y=-5900.000 Z=88.946 distance=173.86 fp=1 flying=0 hit=None component=None"
+        },
+        {
+          "name": "Coffee delivered through actual dialogue input",
+          "status": "PASS",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  2 m"
+        },
+        {
+          "name": "Ride accepted through actual dialogue input",
+          "status": "PASS",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  2 m"
+        },
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "status": "FAIL",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; "
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "status": "FAIL",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.994 Y=-6360.922 Z=22.640 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"de"
+        },
+        {
+          "name": "Driving reverse signed velocity",
+          "status": "PASS",
+          "actual": "X=-2056.943 Y=-86.471 Z=0.103"
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "status": "FAIL",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m"
+        },
+        {
+          "name": "Complete checkpoint actual save file state",
+          "status": "PASS",
+          "actual": "M5.Signal.Complete"
+        },
+        {
+          "name": "Complete reload stable story stage",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6"
+        },
+        {
+          "name": "Complete reload story navigation target",
+          "status": "PASS",
+          "actual": "None X=0.000 Y=0.000 Z=0.000"
+        },
+        {
+          "name": "M5 duplicate victory rejected",
+          "status": "PASS",
+          "actual": "主线拦截者记录无效。"
+        },
+        {
+          "name": "M5 unknown stage rejected",
+          "status": "PASS",
+          "actual": "主线存档版本或阶段未知。"
+        },
+        {
+          "name": "M5 future version rejected",
+          "status": "PASS",
+          "actual": "主线存档版本或阶段未知。"
+        },
+        {
+          "name": "M5 legacy optional field validates without mutation",
+          "status": "PASS",
+          "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6"
+        },
+        {
+          "name": "m5_story_complete actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_story_complete.png bytes=2630302 pending=0"
+        },
+        {
+          "name": "VS3 abilities enabled on current world",
+          "status": "PASS",
+          "actual": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+        },
+        {
+          "name": "VS3 initial stamina",
+          "status": "PASS",
+          "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_"
+        },
+        {
+          "name": "PunchImpact actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/PunchImpact.png bytes=2925280 pending=0"
+        },
+        {
+          "name": "Actual punch damages target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen00\",\r\n\t\"health\": 25,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_hand"
+        },
+        {
+          "name": "Q selects sword",
+          "status": "PASS",
+          "actual": "星潮剑  |  生命 85\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器    B 武器库"
+        },
+        {
+          "name": "SwordDraw actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/SwordDraw.png bytes=3005387 pending=0"
+        },
+        {
+          "name": "SwordCombo actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/SwordCombo.png bytes=2905742 pending=0"
+        },
+        {
+          "name": "Blade sweep damages adult target",
+          "status": "PASS",
+          "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen01\",\r\n\t\"health\": 0,\r\n\t\"max_health\": 100,\r\n\t\"dead\": true,\r\n\t\"corpse_present\": true,\r\n\t\"ragdoll_simulating\": true,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover"
+        },
+        {
+          "name": "SwordFirstPerson actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/SwordFirstPerson.png bytes=2530381 pending=0"
+        },
+        {
+          "name": "MagicGun actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/MagicGun.png bytes=2690908 pending=0"
+        },
+        {
+          "name": "Magic gun uses existing firearm damage",
+          "status": "PASS",
+          "actual": "魔导枪 4 / 48 | 生命 85\n松开左键单发 · 按住0.8秒蓄力光箭 0%\n右键瞄准  R装弹  Q切换  B武器库"
+        },
+        {
+          "name": "Spell 1 MP cost once",
+          "status": "PASS",
+          "actual": "before 100.00 after 85.00 health 85.00 cooldown 0.97 expectedCost 15.00 regenerated 0.000"
+        },
+        {
+          "name": "Spell1Rune actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell1Rune.png bytes=2479395 pending=0"
+        },
+        {
+          "name": "Spell 2 MP cost once",
+          "status": "PASS",
+          "actual": "before 100.00 after 65.00 health 85.00 cooldown 5.96 expectedCost 35.00 regenerated 0.000"
+        },
+        {
+          "name": "Spell2Rune actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell2Rune.png bytes=2766188 pending=0"
+        },
+        {
+          "name": "Spell 3 MP cost once",
+          "status": "PASS",
+          "actual": "before 96.77 after 100.00 health 100.00 cooldown 0.00 expectedCost 0.00 regenerated 3.234"
+        },
+        {
+          "name": "Spell3Rune actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell3Rune.png bytes=2696795 pending=0"
+        },
+        {
+          "name": "Spell 4 MP cost once",
+          "status": "PASS",
+          "actual": "before 100.00 after 75.00 health 100.00 cooldown 11.44 expectedCost 25.00 regenerated 0.000"
+        },
+        {
+          "name": "Spell4Rune actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell4Rune.png bytes=2721273 pending=0"
+        },
+        {
+          "name": "VS3 abilities enabled on current world",
+          "status": "PASS",
+          "actual": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+        },
+        {
+          "name": "VS3 initial stamina",
+          "status": "PASS",
+          "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_"
+        },
+        {
+          "name": "Normal flight consumes 5 per second",
+          "status": "PASS",
+          "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": true,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 66.680320739746094,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Hover\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0"
+        },
+        {
+          "name": "FlightStamina actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/FlightStamina.png bytes=2933538 pending=0"
+        },
+        {
+          "name": "Flight keeps hands empty and MP full",
+          "status": "PASS",
+          "actual": "空手  |  生命 100\n左键 三段拳击    Q 切换武器"
+        },
+        {
+          "name": "StaminaAutoLanding actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/StaminaAutoLanding.png bytes=2891474 pending=0"
+        },
+        {
+          "name": "Stamina auto landing reaches ground",
+          "status": "PASS",
+          "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 49.762771606445312,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x"
+        },
+        {
+          "name": "Ground stamina recovery",
+          "status": "PASS",
+          "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_"
+        },
+        {
+          "name": "Private BGM naturally alternates back to track one",
+          "status": "PASS",
+          "actual": "{\r\n\t\"requested_mode\": 1,\r\n\t\"current_mode\": 1,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 2,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"pr"
+        },
+        {
+          "name": "M3 final screenshot file m5_chapter1_dialogue.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter1_dialogue.png bytes=2781095 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file m5_chapter2_dialogue.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter2_dialogue.png bytes=2669341 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file m5_chapter2_replay_dialogue.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter2_replay_dialogue.png bytes=2669480 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file m5_chapter4_dialogue.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_chapter4_dialogue.png bytes=2781879 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file m5_story_complete.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/m5_story_complete.png bytes=2630302 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file PunchImpact.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/PunchImpact.png bytes=2925280 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file SwordDraw.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/SwordDraw.png bytes=3005387 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file SwordCombo.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/SwordCombo.png bytes=2905742 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file SwordFirstPerson.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/SwordFirstPerson.png bytes=2530381 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file MagicGun.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/MagicGun.png bytes=2690908 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file Spell1Rune.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell1Rune.png bytes=2479395 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file Spell2Rune.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell2Rune.png bytes=2766188 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file Spell3Rune.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell3Rune.png bytes=2696795 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file Spell4Rune.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/Spell4Rune.png bytes=2721273 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file FlightStamina.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/FlightStamina.png bytes=2933538 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file StaminaAutoLanding.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_full_20260928_030034/User/Saved/M5Tests/20260928_030041_m5_full/StaminaAutoLanding.png bytes=2891474 pending=0"
+        }
+      ]
+    },
+    {
+      "name": "sword_matrix",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "m5_vs3_r2_matrix_20260928_030802",
+      "status": "COMPLETE",
+      "checks": 181,
+      "failures": 0,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_matrix_20260928_030802"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Open flat collision-validated fixture",
+          "status": "PASS",
+          "actual": "X=0.000 Y=-6500.000 Z=6.000"
+        },
+        {
+          "name": "Armory catalog defaults",
+          "status": "PASS",
+          "actual": "4"
+        },
+        {
+          "name": "Adult fixture available",
+          "status": "PASS",
+          "actual": "商人 1"
+        },
+        {
+          "name": "Requested cap active",
+          "status": "PASS",
+          "actual": "20"
+        },
+        {
+          "name": "Sword cap=20 trial=1 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.00 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.061 Y=-6500.217 Z=120.574"
+        },
+        {
+          "name": "Sword cap=20 trial=1 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.08 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.374 Y=-6500.321 Z=117.596"
+        },
+        {
+          "name": "Sword cap=20 trial=1 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.05 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.773 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=1",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=2 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.05 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.250 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=2 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.11 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.973 Y=-6500.223 Z=117.601"
+        },
+        {
+          "name": "Sword cap=20 trial=2 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.07 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.773 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=2",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=3 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.01 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.253 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=3 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.13 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.973 Y=-6500.223 Z=117.601"
+        },
+        {
+          "name": "Sword cap=20 trial=3 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.11 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.773 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=3",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=4 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.09 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.253 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=4 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.16 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.986 Y=-6500.226 Z=117.611"
+        },
+        {
+          "name": "Sword cap=20 trial=4 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.08 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.773 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=4",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=5 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.00 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.253 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=5 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.13 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.974 Y=-6500.223 Z=117.602"
+        },
+        {
+          "name": "Sword cap=20 trial=5 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.14 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.769 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=5",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=6 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.09 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.253 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=6 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.22 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.973 Y=-6500.223 Z=117.601"
+        },
+        {
+          "name": "Sword cap=20 trial=6 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.11 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.773 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=6",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=7 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.00 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.254 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=7 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.19 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.974 Y=-6500.223 Z=117.601"
+        },
+        {
+          "name": "Sword cap=20 trial=7 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.11 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.773 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=7",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=8 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.09 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.241 Y=-6500.323 Z=120.551"
+        },
+        {
+          "name": "Sword cap=20 trial=8 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.25 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.976 Y=-6500.224 Z=117.603"
+        },
+        {
+          "name": "Sword cap=20 trial=8 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.14 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.773 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=8",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=9 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.01 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.253 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=9 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.21 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.138 Y=-6500.223 Z=117.601"
+        },
+        {
+          "name": "Sword cap=20 trial=9 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.27 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.772 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=9",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=20 trial=10 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.10 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=76.254 Y=-6500.323 Z=120.550"
+        },
+        {
+          "name": "Sword cap=20 trial=10 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 20.29 weapon=2 held=0 buffered=0 swing=0.060 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=77.973 Y=-6500.223 Z=117.601"
+        },
+        {
+          "name": "Sword cap=20 trial=10 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 20.24 weapon=2 held=0 buffered=0 swing=0.240 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=93.769 Y=-6498.890 Z=112.670"
+        },
+        {
+          "name": "Heavy cap=20 trial=10",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Requested cap active",
+          "status": "PASS",
+          "actual": "30"
+        },
+        {
+          "name": "Sword cap=30 trial=1 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.993 Y=-6500.260 Z=121.506"
+        },
+        {
+          "name": "Sword cap=30 trial=1 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.41 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.014 Y=-6500.614 Z=120.419"
+        },
+        {
+          "name": "Sword cap=30 trial=1 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.52 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=1",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=2 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=2 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.53 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.016 Y=-6500.615 Z=120.422"
+        },
+        {
+          "name": "Sword cap=30 trial=2 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.50 weapon=2 held=0 buffered=0 swing=0.206 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.325 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=2",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=3 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.994 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=3 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.51 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.014 Y=-6500.614 Z=120.420"
+        },
+        {
+          "name": "Sword cap=30 trial=3 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.80 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=3",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=4 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.01 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=4 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.48 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.014 Y=-6500.614 Z=120.420"
+        },
+        {
+          "name": "Sword cap=30 trial=4 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.50 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=4",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=5 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=5 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.61 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.014 Y=-6500.614 Z=120.420"
+        },
+        {
+          "name": "Sword cap=30 trial=5 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.55 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=5",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=6 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=6 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.61 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.014 Y=-6500.614 Z=120.420"
+        },
+        {
+          "name": "Sword cap=30 trial=6 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.66 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=6",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=7 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=7 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.67 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.014 Y=-6500.614 Z=120.420"
+        },
+        {
+          "name": "Sword cap=30 trial=7 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.65 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=7",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=8 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=8 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.68 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.013 Y=-6500.614 Z=120.420"
+        },
+        {
+          "name": "Sword cap=30 trial=8 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.66 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=8",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=9 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=9 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.62 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.014 Y=-6500.614 Z=120.420"
+        },
+        {
+          "name": "Sword cap=30 trial=9 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.66 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=9",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=30 trial=10 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.00 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=74.995 Y=-6500.260 Z=121.504"
+        },
+        {
+          "name": "Sword cap=30 trial=10 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 30.72 weapon=2 held=0 buffered=0 swing=0.027 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.015 Y=-6500.615 Z=120.421"
+        },
+        {
+          "name": "Sword cap=30 trial=10 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 30.72 weapon=2 held=0 buffered=0 swing=0.207 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=92.329 Y=-6498.905 Z=112.692"
+        },
+        {
+          "name": "Heavy cap=30 trial=10",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Requested cap active",
+          "status": "PASS",
+          "actual": "60"
+        },
+        {
+          "name": "Sword cap=60 trial=1 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 59.99 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.613 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=1 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.88 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.361 Y=-6500.705 Z=121.301"
+        },
+        {
+          "name": "Sword cap=60 trial=1 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.88 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.510 Y=-6498.896 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=1",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=2 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.01 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=2 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.90 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.358 Y=-6500.704 Z=121.300"
+        },
+        {
+          "name": "Sword cap=60 trial=2 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.89 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.510 Y=-6498.896 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=2",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=3 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.01 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=3 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.90 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.371 Y=-6500.708 Z=121.299"
+        },
+        {
+          "name": "Sword cap=60 trial=3 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.89 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.510 Y=-6498.896 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=3",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=4 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.00 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=4 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.89 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.374 Y=-6500.709 Z=121.299"
+        },
+        {
+          "name": "Sword cap=60 trial=4 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.90 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.510 Y=-6498.896 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=4",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=5 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.02 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=5 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.89 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.388 Y=-6500.714 Z=121.297"
+        },
+        {
+          "name": "Sword cap=60 trial=5 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.88 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.505 Y=-6498.895 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=5",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=6 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 59.96 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=6 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.89 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.404 Y=-6500.719 Z=121.296"
+        },
+        {
+          "name": "Sword cap=60 trial=6 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.89 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.510 Y=-6498.896 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=6",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=7 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.00 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=7 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.88 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.384 Y=-6500.717 Z=121.298"
+        },
+        {
+          "name": "Sword cap=60 trial=7 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.88 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.489 Y=-6498.895 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=7",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=8 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.00 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=8 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.87 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.426 Y=-6500.724 Z=121.294"
+        },
+        {
+          "name": "Sword cap=60 trial=8 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.88 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.513 Y=-6498.895 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=8",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=9 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.01 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=9 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.88 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.412 Y=-6500.723 Z=121.295"
+        },
+        {
+          "name": "Sword cap=60 trial=9 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.90 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.506 Y=-6498.896 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=9",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=60 trial=10 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.01 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.618 Y=-6500.157 Z=121.753"
+        },
+        {
+          "name": "Sword cap=60 trial=10 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 60.87 weapon=2 held=0 buffered=0 swing=0.010 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.422 Y=-6500.725 Z=121.294"
+        },
+        {
+          "name": "Sword cap=60 trial=10 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 60.87 weapon=2 held=0 buffered=0 swing=0.190 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.510 Y=-6498.896 Z=112.703"
+        },
+        {
+          "name": "Heavy cap=60 trial=10",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Requested cap active",
+          "status": "PASS",
+          "actual": "0"
+        },
+        {
+          "name": "Sword cap=0 trial=1 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 114.42 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=90.858 Y=-6499.228 Z=121.830"
+        },
+        {
+          "name": "Sword cap=0 trial=1 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 114.91 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.413 Y=-6500.451 Z=121.585"
+        },
+        {
+          "name": "Sword cap=0 trial=1 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.74 weapon=2 held=0 buffered=0 swing=0.186 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=88.045 Y=-6498.889 Z=112.704"
+        },
+        {
+          "name": "Heavy cap=0 trial=1",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=2 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 113.95 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=89.862 Y=-6499.245 Z=121.890"
+        },
+        {
+          "name": "Sword cap=0 trial=2 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 115.44 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=88.679 Y=-6500.421 Z=122.075"
+        },
+        {
+          "name": "Sword cap=0 trial=2 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.21 weapon=2 held=0 buffered=0 swing=0.171 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=91.487 Y=-6498.843 Z=112.706"
+        },
+        {
+          "name": "Heavy cap=0 trial=2",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=3 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 113.83 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=89.713 Y=-6499.233 Z=121.864"
+        },
+        {
+          "name": "Sword cap=0 trial=3 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 115.58 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=88.924 Y=-6500.424 Z=122.076"
+        },
+        {
+          "name": "Sword cap=0 trial=3 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.76 weapon=2 held=0 buffered=0 swing=0.176 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=91.514 Y=-6498.859 Z=112.705"
+        },
+        {
+          "name": "Heavy cap=0 trial=3",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=4 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 113.35 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=71.872 Y=-6500.148 Z=121.823"
+        },
+        {
+          "name": "Sword cap=0 trial=4 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 116.06 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.803 Y=-6500.382 Z=121.009"
+        },
+        {
+          "name": "Sword cap=0 trial=4 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.66 weapon=2 held=0 buffered=0 swing=0.177 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=91.524 Y=-6498.862 Z=112.705"
+        },
+        {
+          "name": "Heavy cap=0 trial=4",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=5 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 114.33 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=90.793 Y=-6499.230 Z=121.844"
+        },
+        {
+          "name": "Sword cap=0 trial=5 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 115.89 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=88.224 Y=-6500.383 Z=122.003"
+        },
+        {
+          "name": "Sword cap=0 trial=5 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.26 weapon=2 held=0 buffered=0 swing=0.172 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=91.502 Y=-6498.846 Z=112.706"
+        },
+        {
+          "name": "Heavy cap=0 trial=5",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=6 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 113.94 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=72.040 Y=-6500.148 Z=121.812"
+        },
+        {
+          "name": "Sword cap=0 trial=6 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 115.61 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=72.872 Y=-6500.786 Z=121.559"
+        },
+        {
+          "name": "Sword cap=0 trial=6 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.70 weapon=2 held=0 buffered=0 swing=0.176 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=88.907 Y=-6498.858 Z=112.706"
+        },
+        {
+          "name": "Heavy cap=0 trial=6",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=7 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 114.00 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=89.726 Y=-6499.220 Z=121.835"
+        },
+        {
+          "name": "Sword cap=0 trial=7 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 116.03 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.788 Y=-6500.383 Z=121.999"
+        },
+        {
+          "name": "Sword cap=0 trial=7 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.73 weapon=2 held=0 buffered=0 swing=0.175 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=91.496 Y=-6498.856 Z=112.706"
+        },
+        {
+          "name": "Heavy cap=0 trial=7",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=8 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 114.21 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=90.345 Y=-6499.225 Z=121.865"
+        },
+        {
+          "name": "Sword cap=0 trial=8 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 115.24 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=70.901 Y=-6500.467 Z=121.576"
+        },
+        {
+          "name": "Sword cap=0 trial=8 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 116.04 weapon=2 held=0 buffered=0 swing=0.179 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=87.411 Y=-6498.867 Z=112.705"
+        },
+        {
+          "name": "Heavy cap=0 trial=8",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=9 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 114.19 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=90.645 Y=-6499.213 Z=121.842"
+        },
+        {
+          "name": "Sword cap=0 trial=9 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 116.04 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=73.175 Y=-6500.473 Z=121.533"
+        },
+        {
+          "name": "Sword cap=0 trial=9 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.33 weapon=2 held=0 buffered=0 swing=0.182 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=90.362 Y=-6498.876 Z=112.705"
+        },
+        {
+          "name": "Heavy cap=0 trial=9",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "Sword cap=0 trial=10 combo=1",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 114.70 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=90.468 Y=-6499.237 Z=121.919"
+        },
+        {
+          "name": "Sword cap=0 trial=10 combo=2",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 76.00 actual_fps 116.57 weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=88.630 Y=-6500.411 Z=122.007"
+        },
+        {
+          "name": "Sword cap=0 trial=10 combo=3",
+          "status": "PASS",
+          "actual": "hp 100.00 -> 65.00 actual_fps 115.92 weapon=2 held=0 buffered=0 swing=0.176 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=91.515 Y=-6498.860 Z=112.705"
+        },
+        {
+          "name": "Heavy cap=0 trial=10",
+          "status": "PASS",
+          "actual": "45.0"
+        },
+        {
+          "name": "No damage outside melee reach",
+          "status": "PASS",
+          "actual": "100.0"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 1",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 2",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 3",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 4",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 5",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 6",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 7",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 8",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 9",
+          "status": "PASS",
+          "actual": "73.599998"
+        },
+        {
+          "name": "CrimsonNight 30 cap trial 10",
+          "status": "PASS",
+          "actual": "73.599998"
+        }
+      ]
+    },
+    {
+      "name": "fallback_20shots",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "m5_vs3_r3_b_20260928_031449",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 2,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [
+        {
+          "name": "Arcane fallback normal shot 4 hit",
+          "actual": "100.0",
+          "evidence": ""
+        },
+        {
+          "name": "Arcane fallback normal shot 9 hit",
+          "actual": "100.0",
+          "evidence": ""
+        }
+      ],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20260928_031449"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Adult close target fixture accepted",
+          "status": "PASS",
+          "actual": "X=150.000 Y=-6500.000 Z=101.802"
+        },
+        {
+          "name": "Arcane fallback catalog and equip",
+          "status": "PASS",
+          "actual": "armory Equip; not real mouse"
+        },
+        {
+          "name": "Arcane fallback normal shot 1 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 2 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 3 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 4 hit",
+          "status": "FAIL",
+          "actual": "100.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 5 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 6 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 7 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 8 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 9 hit",
+          "status": "FAIL",
+          "actual": "100.0"
+        },
+        {
+          "name": "Arcane fallback normal shot 10 hit",
+          "status": "PASS",
+          "actual": "66.0"
+        },
+        {
+          "name": "Arcane fallback charged shot 1 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 2 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 3 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 4 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 5 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 6 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 7 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 8 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 9 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Arcane fallback charged shot 10 hit",
+          "status": "PASS",
+          "actual": "45.599998"
+        },
+        {
+          "name": "Bow ADS frozen 1.6 and .625",
+          "status": "PASS",
+          "actual": "魔导枪 2 / 38 | 生命 100\n松开左键单发 · 按住0.8秒蓄力光箭 0%\n右键瞄准  R装弹  Q切换  B武器库"
+        },
+        {
+          "name": "Fallback gun keeps reload",
+          "status": "PASS",
+          "actual": "魔导枪 2 / 38 | 生命 100 装弹中\n松开左键单发 · 按住0.8秒蓄力光箭 0%\n右键瞄准  R装弹  Q切换  B武器库"
+        },
+        {
+          "name": "ArcaneCharge_TP_Drawn actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_TP_Drawn.png bytes=3001766 pending=0"
+        },
+        {
+          "name": "ArcaneCharge_TP actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_TP.png bytes=2988824 pending=0"
+        },
+        {
+          "name": "ArcaneCharge_FP actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_FP.png bytes=2923162 pending=0"
+        },
+        {
+          "name": "ArcaneCharge_FP_Drawn actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_FP_Drawn.png bytes=2939039 pending=0"
+        },
+        {
+          "name": "ArcaneCharge_Armory actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_Armory.png bytes=1484088 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file ArcaneCharge_TP_Drawn.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_TP_Drawn.png bytes=3001766 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file ArcaneCharge_TP.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_TP.png bytes=2988824 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file ArcaneCharge_FP.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_FP.png bytes=2923162 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file ArcaneCharge_FP_Drawn.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_FP_Drawn.png bytes=2939039 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file ArcaneCharge_Armory.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031449/User/Saved/M5Tests/20260928_031452_m5_vs3_r3_b/ArcaneCharge_Armory.png bytes=1484088 pending=0"
+        }
+      ]
+    },
+    {
+      "name": "weapon_closeups",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "m5_vs3_r3_b_20260928_031646",
+      "status": "COMPLETE",
+      "checks": 14,
+      "failures": 0,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20260928_031646"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Adult close target fixture accepted",
+          "status": "PASS",
+          "actual": "X=150.000 Y=-6500.000 Z=101.802"
+        },
+        {
+          "name": "FP_Close_StarTide actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_StarTide.png bytes=2933439 pending=0"
+        },
+        {
+          "name": "FP_Close_CrimsonNight actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_CrimsonNight.png bytes=2948125 pending=0"
+        },
+        {
+          "name": "FP_Close_Arcane actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_Arcane.png bytes=2943460 pending=0"
+        },
+        {
+          "name": "FP_Close_Steamlock actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_Steamlock.png bytes=2951818 pending=0"
+        },
+        {
+          "name": "FP_Steamlock_Reload actual screenshot after settle",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Steamlock_Reload.png bytes=3072752 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file FP_Close_StarTide.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_StarTide.png bytes=2933439 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file FP_Close_CrimsonNight.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_CrimsonNight.png bytes=2948125 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file FP_Close_Arcane.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_Arcane.png bytes=2943460 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file FP_Close_Steamlock.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Close_Steamlock.png bytes=2951818 pending=0"
+        },
+        {
+          "name": "M3 final screenshot file FP_Steamlock_Reload.png",
+          "status": "PASS",
+          "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R3/m5_vs3_r3_b_20260928_031646/User/Saved/M5Tests/20260928_031649_m5_vs3_r3_b/FP_Steamlock_Reload.png bytes=3072752 pending=0"
+        }
+      ]
+    },
+    {
+      "name": "performance_high",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "perf_20260928_031739",
+      "status": "COMPLETE",
+      "checks": 16,
+      "failures": 1,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "actual": "frames=2594 mean_fps=107.567 p99_ms=10.931 wall_seconds=24.115 npcs=6 damaged=1",
+          "evidence": ""
+        }
+      ],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_perf_20260928_031739"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Standard fill and world audio runtime",
+          "status": "PASS",
+          "actual": "{\"ordinary_point_light\":true,\"ambience_playing\":true,\"footsteps\":0,\"audible_shots\":0}"
+        },
+        {
+          "name": "Town navigation asset",
+          "status": "PASS",
+          "actual": "DA_HarborTown"
+        },
+        {
+          "name": "Rejected young appearances excluded",
+          "status": "PASS",
+          "actual": "adult_base=19 excluded=0"
+        },
+        {
+          "name": "Town actor unique",
+          "status": "PASS",
+          "actual": "1"
+        },
+        {
+          "name": "Help panel starts closed",
+          "status": "PASS",
+          "actual": "0"
+        },
+        {
+          "name": "South approach walk",
+          "status": "PASS",
+          "actual": "frames=1417 mean_fps=118.008 p99_ms=9.873 wall_seconds=12.008"
+        },
+        {
+          "name": "Market approach walk",
+          "status": "PASS",
+          "actual": "frames=1404 mean_fps=116.934 p99_ms=10.020 wall_seconds=12.007"
+        },
+        {
+          "name": "High aerial hover",
+          "status": "PASS",
+          "actual": "frames=470 mean_fps=117.354 p99_ms=9.868 wall_seconds=4.005"
+        },
+        {
+          "name": "Town aerial traversal",
+          "status": "PASS",
+          "actual": "frames=599 mean_fps=119.621 p99_ms=9.994 wall_seconds=5.007"
+        },
+        {
+          "name": "Spell stress has six existing adult NPCs",
+          "status": "PASS",
+          "actual": "6"
+        },
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "FAIL",
+          "actual": "frames=2594 mean_fps=107.567 p99_ms=10.931 wall_seconds=24.115 npcs=6 damaged=1"
+        },
+        {
+          "name": "Armory performance preview active",
+          "status": "PASS",
+          "actual": ""
+        },
+        {
+          "name": "Armory real preview render performance",
+          "status": "PASS",
+          "actual": "frames=1097 mean_fps=91.407 p99_ms=12.781 wall_seconds=12.001"
+        }
+      ]
+    },
+    {
+      "name": "performance_epic",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "perf_20260928_031951",
+      "status": "COMPLETE",
+      "checks": 16,
+      "failures": 0,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_perf_20260928_031951"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Standard fill and world audio runtime",
+          "status": "PASS",
+          "actual": "{\"ordinary_point_light\":true,\"ambience_playing\":true,\"footsteps\":0,\"audible_shots\":0}"
+        },
+        {
+          "name": "Town navigation asset",
+          "status": "PASS",
+          "actual": "DA_HarborTown"
+        },
+        {
+          "name": "Rejected young appearances excluded",
+          "status": "PASS",
+          "actual": "adult_base=19 excluded=0"
+        },
+        {
+          "name": "Town actor unique",
+          "status": "PASS",
+          "actual": "1"
+        },
+        {
+          "name": "Help panel starts closed",
+          "status": "PASS",
+          "actual": "0"
+        },
+        {
+          "name": "South approach walk",
+          "status": "PASS",
+          "actual": "frames=887 mean_fps=73.862 p99_ms=16.254 wall_seconds=12.009"
+        },
+        {
+          "name": "Market approach walk",
+          "status": "PASS",
+          "actual": "frames=913 mean_fps=76.054 p99_ms=16.049 wall_seconds=12.005"
+        },
+        {
+          "name": "High aerial hover",
+          "status": "PASS",
+          "actual": "frames=322 mean_fps=80.300 p99_ms=14.241 wall_seconds=4.010"
+        },
+        {
+          "name": "Town aerial traversal",
+          "status": "PASS",
+          "actual": "frames=408 mean_fps=81.443 p99_ms=14.901 wall_seconds=5.010"
+        },
+        {
+          "name": "Spell stress has six existing adult NPCs",
+          "status": "PASS",
+          "actual": "6"
+        },
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "PASS",
+          "actual": "frames=1753 mean_fps=72.437 p99_ms=16.222 wall_seconds=24.200 npcs=6 damaged=3"
+        },
+        {
+          "name": "Armory performance preview active",
+          "status": "PASS",
+          "actual": ""
+        },
+        {
+          "name": "Armory real preview render performance",
+          "status": "PASS",
+          "actual": "frames=775 mean_fps=64.580 p99_ms=18.792 wall_seconds=12.001"
+        }
+      ]
+    },
+    {
+      "name": "final_showcase",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "m5_vs3_r2_showcase_20260928_032204",
+      "status": "COMPLETE",
+      "checks": 31,
+      "failures": 0,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_showcase_20260928_032204"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Open flat collision-validated fixture",
+          "status": "PASS",
+          "actual": "X=0.000 Y=-6500.000 Z=6.000"
+        },
+        {
+          "name": "Armory catalog defaults",
+          "status": "PASS",
+          "actual": "4"
+        },
+        {
+          "name": "Adult fixture available",
+          "status": "PASS",
+          "actual": "商人 1"
+        },
+        {
+          "name": "Showcase combo hit",
+          "status": "PASS",
+          "actual": "17.0"
+        },
+        {
+          "name": "Heavy wave damages two targets once",
+          "status": "PASS",
+          "actual": "45.0 / 45.0"
+        },
+        {
+          "name": "B refused during flight",
+          "status": "PASS",
+          "actual": "站稳并结束当前动作后，才能打开武器库。"
+        },
+        {
+          "name": "R3 coffee reachable fixture",
+          "status": "PASS",
+          "actual": "X=5608.215 Y=-4300.723 Z=87.882"
+        },
+        {
+          "name": "R3 coffee actual pickup",
+          "status": "PASS",
+          "actual": "一杯海风 · 进行中\n携带咖啡 → 海滨西侧陈伯  92 m\n\n顺路看海 · 未接取\n到商业街人行道与阿宁交谈"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "M3_LinXia"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "M5_Harbor"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "M5_InterceptorB"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "M3_ANing"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen01"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen03"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen05"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen07"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen09"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen11"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "M5_Contact"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "M5_InterceptorA"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "M3_ChenBo"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen00"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen02"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen04"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen06"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen08"
+        },
+        {
+          "name": "Restore original NPC after QA fixture",
+          "status": "PASS",
+          "actual": "VS2_Citizen10"
+        },
+        {
+          "name": "Armory actual F5 save",
+          "status": "PASS",
+          "actual": "保存成功。退出并重新启动后，可按 F9 读取。"
+        }
+      ]
+    },
+    {
+      "name": "slow_in_game",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "m5_vs3_r3_b_20260928_032950",
+      "status": "COMPLETE",
+      "checks": 6,
+      "failures": 0,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20260928_032950"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Adult close target fixture accepted",
+          "status": "PASS",
+          "actual": "X=150.000 Y=-6500.000 Z=101.802"
+        },
+        {
+          "name": "Actual world time dilation",
+          "status": "PASS",
+          "actual": "game simulation, not video retiming"
+        },
+        {
+          "name": "Adult close target fixture accepted",
+          "status": "PASS",
+          "actual": "X=150.000 Y=-6500.000 Z=101.802"
+        }
+      ]
+    },
+    {
+      "name": "armory_fresh_load",
+      "kind": "STANDALONE_PACKAGE",
+      "run": "m5_vs3_r2_reopen_20260928_033226",
+      "status": "COMPLETE",
+      "checks": 5,
+      "failures": 0,
+      "exit_code": 0,
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "failed": [],
+      "checks_brief": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "actual": "PC=1 character=1 car=1 lamp=1"
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_showcase_20260928_032204"
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "actual": "focused=1"
+        },
+        {
+          "name": "Previous process armory save exists",
+          "status": "PASS",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_showcase_20260928_032204"
+        },
+        {
+          "name": "New process Load restores weapons and paint",
+          "status": "PASS",
+          "actual": "读取成功：玩家、车辆、照明、任务和路人状态已恢复。"
+        }
+      ]
+    }
+  ],
+  "full_once_count": 1,
+  "old_ride_failures_preserved": true,
+  "os_mouse": "NOT_RUN",
+  "bow": "NOT_RELEASED_E7_FALLBACK"
+}

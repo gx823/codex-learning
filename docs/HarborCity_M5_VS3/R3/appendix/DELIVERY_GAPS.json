@@ -1,0 +1,75 @@
+{
+  "overall": "PARTIAL",
+  "gaps": [
+    {
+      "id": "E_BOW",
+      "status": "PARTIAL",
+      "detail": "Three pose approaches failed FP/TP grip. E.7 fallback implemented on Arcane; live catalog remains four weapons. Bow feel/equip persistence NOT_RUN."
+    },
+    {
+      "id": "F_FALLS",
+      "status": "FAIL",
+      "detail": "Final bounded editor attempt: 28 checks, 12 FAIL; punch knockdown/recovery passes, heavy/gun/magic/vehicle and four resting poses incomplete. Deferred VS4."
+    },
+    {
+      "id": "OLD_RIDE",
+      "status": "FAIL",
+      "detail": "Full Shipping regression retains three known pickup/boarding/drop-off failures. Deferred VS4; not counted as new."
+    },
+    {
+      "id": "NORMAL_SHOTS",
+      "status": "FAIL",
+      "detail": "New Shipping ordinary shots 4 and 9 miss: 8/10. Charged 10/10. Unchanged 3-degree hip spread is a plausible explanation, not confirmed without per-ray telemetry."
+    },
+    {
+      "id": "HIGH_LOAD",
+      "status": "FAIL",
+      "detail": "High final damaged NPC count 1 fails >=2 condition. Later arrow setup resets health, so cumulative multi-hit cannot be inferred. Six NPC and rendering sample confirmed; full prescribed load not proven."
+    },
+    {
+      "id": "MOUSE",
+      "status": "NOT_RUN",
+      "detail": "Browser/desktop one attempt unavailable. No OS mouse proof. Follow MANUAL_RETEST steps."
+    },
+    {
+      "id": "HAIR",
+      "status": "USER_REVIEW",
+      "detail": "Physics remains on. Same-camera normal-speed comparison delivered; primary-chain inclination 31.03 to 22.16 degrees. One-second natural hang and all ADS directions not fully accepted."
+    },
+    {
+      "id": "FX_VISUAL",
+      "status": "PARTIAL",
+      "detail": "31 systems and 27 sounds have nonzero actual gameplay counts; this does not establish all individual effects are clearly visible. Debuff occluded/weak; Arrow transit brief; some effects coexist in one cell."
+    },
+    {
+      "id": "CHARGE_WAVE_FIRE",
+      "status": "PARTIAL",
+      "detail": "Sword rune/foot-circle charge is weak in 12-13s shots; blue-white wave ends in conspicuous dark smoke around 13.75-14.15s; scene fire has intermittent bursts. Retain for visual correction."
+    },
+    {
+      "id": "FX_BUDGET_VISUAL",
+      "status": "NOT_RUN",
+      "detail": "Source caps documented, but live GPU particle count, per-pixel translucent overdraw, every effect three layers, 1-3-frame strong flash and every FP effect <=1/4 screen are not quantitatively validated."
+    },
+    {
+      "id": "D_COMPARISON",
+      "status": "PARTIAL",
+      "detail": "Matched Blender source/modified gun reference and approximate R2/R3 weapon preview delivered. Store-original sword same-camera comparison missing; full steam reload zero-clipping not verified."
+    },
+    {
+      "id": "BEAUTY",
+      "status": "PARTIAL",
+      "detail": "Five native 1080 no-HUD weapon/steam reload stills delivered. Action/effect/environment no-HUD set incomplete. HUD was not painted out of recorded images."
+    },
+    {
+      "id": "AUDIO_LISTENING",
+      "status": "NOT_RUN",
+      "detail": "Native game audio, 48k stereo, full decode and loudness/true peak measured. Individual sound listening and subjective mix acceptance not performed."
+    },
+    {
+      "id": "ART_ACCEPTANCE",
+      "status": "USER_REVIEW",
+      "detail": "Effects, armory, swords, guns, magic and hair PENDING user approval. Bow unavailable; review fallback release-to-fire feel."
+    }
+  ]
+}

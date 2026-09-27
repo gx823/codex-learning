@@ -1,0 +1,14 @@
+{
+  "status": "NORMAL_SPEED_COMPARISON",
+  "before": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260928_012648_C653A4E7\\capture.mp4",
+  "after": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260928_015451_C50ACBBE\\capture.mp4",
+  "output": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R3\\M5_VS3_R3_HAIR_COMPARE.mp4",
+  "speed": 1,
+  "physics_disabled": false,
+  "diagnostic_primary_chain_degrees_before": 31.03,
+  "primary_chain_degrees_after": 22.16,
+  "head_only": 30.7,
+  "visual_acceptance": "USER_REVIEW",
+  "first_sources": "Editor -game; matching fixed camera; no time warping",
+  "sampling_limit": "Primary long-hair group; not a full per-chain geometric acceptance"
+}

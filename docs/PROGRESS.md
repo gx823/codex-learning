@@ -1,3 +1,15 @@
+# 2026-09-28 · M5-VS3 R3 最终候选 / PARTIAL
+
+5.8.2 新独立 Shipping：Candidate_20260928_025240_832_1eac9805。31/31购买包系统、27/27音效实际玩法触发；无新增下载。剑矩阵181/0；整轮171/3旧接送FAIL（仅运行一次）；光箭普通8/10、蓄力10/10，普通2次miss保留FAIL。High负载107.57FPS/p99 10.93ms但多人受伤检查FAIL；Epic72.44/16.22，武器库64.58/18.79。星弓三次姿态失败后用E.7魔导枪蓄力降级；完整倒地12FAIL留VS4。头发保持物理，正常速度对比已交付。真实鼠标NOT_RUN；所有美术与头发/武器库验收PENDING。
+
+主片264.04秒、29.848FPS、−18.55LUFS/−1.56dBTP，另有实际游戏0.25倍慢放。图审保留蓄力弱、剑气黑烟、敌对提示遮挡和火焰间歇；无HUD套图/原样剑对照不齐。仅文档进Git，审阅ZIP和3个MP4进入R3 Release；付费源资产、独立音效、私人音乐、游戏整包和存档不公开。详情见 docs/HarborCity_M5_VS3/R3/STATUS.md。
+
+---
+
+<!-- HARBORCITY_M5_VS3_R3_CHECKPOINT -->
+2026-09-28 M5-VS3 R3 PARTIAL，按本轮 A.3 等待 Codex 应用重连。JS／临时写入恢复，浏览器无实例、桌面原生管道失败；B 姿态／长发／胸口目标／回蓝断言／预览已编译，部分引擎专项通过，视觉与冲刺补测仍有缺口。两次后备缓冲区尺寸崩溃保留 FAIL，已停止运行；四段专项 MP4 已解码并清理临时 JPG。已购包、星弓、最终 Shipping／回归／Release 未完成；旧候选、旧 FAIL 保留，M0 PASS，无扩图／VS4，用户验收 PENDING。见 [R3 状态](HarborCity_M5_VS3/R3/STATUS.md)。
+<!-- /HARBORCITY_M5_VS3_R3_CHECKPOINT -->
+
 2026-09-27 M5-VS3 R2 门后独立候选 PARTIAL（93c38d0d）：新加密 Shipping 包已实测；四武器／八涂装、剑判定与剑气、换装存读档通过专项。完整回归一次，接送失败及满血治疗断言问题保留；High／Epic 实测见报告。已购特效与音效未接入，星弓 NOT_RUN，默认武器造型仍有缺口。真实 OS 鼠标 NOT_RUN，用户对武器库、剑、枪、魔法、特效验收 PENDING。M0 PASS，无扩图／VS4，旧包和失败记录保留。见 [门后交付](HarborCity_M5_VS3/R2/postgate/STATUS.md)。
 
 2026-09-27 M5-VS3 R2 门后 IN_PROGRESS：收到第二版阶段门答复；A 修复放行，刀光/命中重做，新增武器库。三份购买模型及枪贴图原样导入 PASS；武器库与剑判定实现正在编译，运行验收 NOT_RUN。浏览器/桌面工具临时文件故障未恢复，VFX 与剑贴图接入待续。新 Shipping 包尚未生成；旧 FAIL 和旧候选保留，无扩图、无 VS4。见 HarborCity_M5_VS3/R2/postgate/REQUEST.md。
