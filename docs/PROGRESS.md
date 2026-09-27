@@ -1,4 +1,12 @@
+2026-09-27 M5-VS3 R2 门后独立候选 PARTIAL（93c38d0d）：新加密 Shipping 包已实测；四武器／八涂装、剑判定与剑气、换装存读档通过专项。完整回归一次，接送失败及满血治疗断言问题保留；High／Epic 实测见报告。已购特效与音效未接入，星弓 NOT_RUN，默认武器造型仍有缺口。真实 OS 鼠标 NOT_RUN，用户对武器库、剑、枪、魔法、特效验收 PENDING。M0 PASS，无扩图／VS4，旧包和失败记录保留。见 [门后交付](HarborCity_M5_VS3/R2/postgate/STATUS.md)。
+
+2026-09-27 M5-VS3 R2 门后 IN_PROGRESS：收到第二版阶段门答复；A 修复放行，刀光/命中重做，新增武器库。三份购买模型及枪贴图原样导入 PASS；武器库与剑判定实现正在编译，运行验收 NOT_RUN。浏览器/桌面工具临时文件故障未恢复，VFX 与剑贴图接入待续。新 Shipping 包尚未生成；旧 FAIL 和旧候选保留，无扩图、无 VS4。见 HarborCity_M5_VS3/R2/postgate/REQUEST.md。
+
 2026-09-27 M5-VS3 R2 门前 USER_REVIEW / PARTIAL：刀光与命中样板、持枪头发和阵心调整已有 Editor -game 证据；最新约20 FPS录制中剑击两组均未命中，剑漏击仍 FAIL。枪击当前链路及护盾断言通过，不取消旧 FAIL。Niagara 示例包5.8接入未验证；独立包/完整回归/最终包录音均 NOT_RUN，等待阶段门。见 HarborCity_M5_VS3/R2/STATUS.md。M0 PASS，无扩图、无VS4，用户对特效/武器/剑/魔法验收 PENDING。
+
+2026-09-27 M5-VS3 R2 已按用户“先暂停”停止：当前无 UnrealEditor、UnrealEditor-Cmd 或 ffmpeg 进程。最新门前录像已完成；刀光视觉仍待确认，未生成新独立包、未发布 GitHub。恢复入口见 HarborCity_M5_VS3/R2/PAUSE_CHECKPOINT.md。旧 FAIL/NOT_RUN 保留，等待用户继续。
+
+2026-09-27 M5-VS3 R2 门前 IN_PROGRESS：按新要求修 A 项、研究参考与许可、制作刀光/命中样板；完成后停阶段门，未批准前不打包、不跑完整回归，不动接送/翅膀/地图。旧 R1 失败保留。见 HarborCity_M5_VS3/R2/REQUEST.md。
 
 2026-09-27 M5-VS3 R1 门后 Shipping 候选 PARTIAL：剑/魔法/羽翼已进入新包；完整回归与重开各执行一次。接送、魔导枪/护盾断言、短片剑命中和倒地仍有失败；真实鼠标完整选目标手势 NOT_RUN。公开视频有游戏音效，取自门后前一 Shipping（最终仅改录制器）；最终 EXE 新录制静音 FAIL 保留。录像改为 JPG 临时帧→验证 MP4→清理，D/E 各30GiB保护；本轮图片/视频不进Git。用户对剑、魔法、翅膀、BGM验收 PENDING，M0 PASS，无扩图、无进入VS4。见 [最终状态](HarborCity_M5_VS3/R1/final/STATUS.md)、[录像政策](HarborCity_M5_VS3/R1/final/RECORDING_POLICY.md)。
 

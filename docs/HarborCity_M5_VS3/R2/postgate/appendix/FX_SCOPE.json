@@ -1,0 +1,34 @@
+{
+  "owned_pack_status": "FAIL_NOT_INTEGRATED",
+  "owned_expected_from_user": 31,
+  "owned_actual_inventory": "UNKNOWN_BLOCKED_DOWNLOAD",
+  "owned_systems_integrated": 0,
+  "owned_sounds_integrated": 0,
+  "owned_sounds_expected_from_user": 27,
+  "project_authored_systems": [
+    "NS_Postgate_BladeRibbon",
+    "NS_Postgate_Impact",
+    "NS_Postgate_Slash",
+    "NS_Postgate_SwordWave",
+    "NS_Postgate_Burst",
+    "NS_Postgate_Charge",
+    "NS_Postgate_Trail",
+    "NS_Postgate_Wave",
+    "NS_Postgate_Heal",
+    "NS_Postgate_Shards",
+    "NS_Postgate_Summon"
+  ],
+  "budget": {
+    "sword_waves_hard_cap": 4,
+    "sword_impacts_hard_cap": 12,
+    "aggregate_particle_cap": "NOT_IMPLEMENTED",
+    "translucent_overdraw": "NOT_MEASURED",
+    "spell_lights": "No new dynamic lights authored by fallback systems; existing effects audit incomplete"
+  },
+  "bow": {
+    "status": "NOT_RUN",
+    "mixamo": "BLOCKED browser backend",
+    "blender": "NOT_FOUND in verified toolchain and standard install directories; no install attempted",
+    "fallback": "NOT_ELIGIBLE: no three-method bow-animation trial completed"
+  }
+}

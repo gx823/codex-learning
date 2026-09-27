@@ -1,0 +1,239 @@
+{
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_vs3_r2_showcase_20260927_214615\\User\\Saved\\M5Tests\\20260927_214622_m5_vs3_r2_showcase\\results.json",
+  "kind": "STANDALONE_PACKAGE",
+  "input": "ENGINE_ACTION_AND_LOGIC_NOT_OS",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.303966201841831
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_showcase_20260927_214615",
+      "elapsed_seconds": 3.3063523024320602
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.3171733021736145
+    },
+    {
+      "name": "Open flat collision-validated fixture",
+      "status": "PASS",
+      "evidence_level": "A geometric fixture check",
+      "expected": "840cm clear area, four floor samples",
+      "actual": "X=0.000 Y=-6500.000 Z=6.000",
+      "elapsed_seconds": 3.324872501194477
+    },
+    {
+      "name": "Armory catalog defaults",
+      "status": "PASS",
+      "evidence_level": "A-runtime configuration",
+      "expected": "4 data entries; StarTide/Arcane",
+      "actual": "4",
+      "elapsed_seconds": 6.312983300536871
+    },
+    {
+      "name": "Adult fixture available",
+      "status": "PASS",
+      "evidence_level": "A fixture",
+      "expected": "existing adult citizen",
+      "actual": "商人 1",
+      "elapsed_seconds": 6.31445100158453
+    },
+    {
+      "name": "Showcase combo hit",
+      "status": "PASS",
+      "evidence_level": "B Attack; A open fixture",
+      "expected": "actual sword damage",
+      "actual": "17.0",
+      "elapsed_seconds": 25.788458101451397
+    },
+    {
+      "name": "Heavy wave damages two targets once",
+      "status": "PASS",
+      "evidence_level": "B held/released Attack; A two-target fixture",
+      "expected": "45 / 45",
+      "actual": "45.0 / 45.0",
+      "elapsed_seconds": 33.80395810306072
+    },
+    {
+      "name": "B refused during flight",
+      "status": "PASS",
+      "evidence_level": "B FlightToggle and Armory Actions",
+      "expected": "flying, armory closed",
+      "actual": "站稳并结束当前动作后，才能打开武器库。",
+      "elapsed_seconds": 119.7710376009345
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "M5_Contact",
+      "elapsed_seconds": 203.69961570203304
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "M5_InterceptorA",
+      "elapsed_seconds": 203.75142529979348
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "M3_ChenBo",
+      "elapsed_seconds": 203.791034899652
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen00",
+      "elapsed_seconds": 203.8273905031383
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen02",
+      "elapsed_seconds": 203.86135720089078
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen04",
+      "elapsed_seconds": 203.89479359984398
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen06",
+      "elapsed_seconds": 203.92914210259914
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen08",
+      "elapsed_seconds": 203.96432730183005
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen10",
+      "elapsed_seconds": 203.998487200588
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "M3_LinXia",
+      "elapsed_seconds": 204.0321743004024
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "M5_Harbor",
+      "elapsed_seconds": 204.06804110109806
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "M5_InterceptorB",
+      "elapsed_seconds": 204.1080328002572
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "M3_ANing",
+      "elapsed_seconds": 204.14247870072722
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen01",
+      "elapsed_seconds": 204.17878480255604
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen03",
+      "elapsed_seconds": 204.213223002851
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen05",
+      "elapsed_seconds": 204.2477138005197
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen07",
+      "elapsed_seconds": 204.28212590143085
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen09",
+      "elapsed_seconds": 204.31772150099277
+    },
+    {
+      "name": "Restore original NPC after QA fixture",
+      "status": "PASS",
+      "evidence_level": "A fixture cleanup, not save logic",
+      "expected": "authored valid scene before F5",
+      "actual": "VS2_Citizen11",
+      "elapsed_seconds": 204.35581410303712
+    },
+    {
+      "name": "Armory actual F5 save",
+      "status": "PASS",
+      "evidence_level": "B Save Action + A disk readback",
+      "expected": "saved equipped IDs/paint",
+      "actual": "保存成功。退出并重新启动后，可按 F9 读取。",
+      "elapsed_seconds": 208.33613720163703
+    }
+  ]
+}

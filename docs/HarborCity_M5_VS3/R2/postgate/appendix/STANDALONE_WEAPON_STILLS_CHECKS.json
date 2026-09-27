@@ -1,0 +1,455 @@
+{
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_vs3_r2_armory_20260927_215230\\User\\Saved\\M5Tests\\20260927_215233_m5_vs3_r2_armory\\results.json",
+  "kind": "STANDALONE_PACKAGE",
+  "input": "ENGINE_ACTION_AND_LOGIC_NOT_OS",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.24077619984746
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_armory_20260927_215230",
+      "elapsed_seconds": 3.2415539994835854
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.25176689773798
+    },
+    {
+      "name": "Open flat collision-validated fixture",
+      "status": "PASS",
+      "evidence_level": "A geometric fixture check",
+      "expected": "840cm clear area, four floor samples",
+      "actual": "X=0.000 Y=-6500.000 Z=6.000",
+      "elapsed_seconds": 3.2594895996153355
+    },
+    {
+      "name": "Armory catalog defaults",
+      "status": "PASS",
+      "evidence_level": "A-runtime configuration",
+      "expected": "4 data entries; StarTide/Arcane",
+      "actual": "4",
+      "elapsed_seconds": 6.249713599681854
+    },
+    {
+      "name": "Adult fixture available",
+      "status": "PASS",
+      "evidence_level": "A fixture",
+      "expected": "existing adult citizen",
+      "actual": "商人 1",
+      "elapsed_seconds": 6.251138400286436
+    },
+    {
+      "name": "Armory actual B Action",
+      "status": "PASS",
+      "evidence_level": "B engine Action; not OS button",
+      "expected": "paused UI with pointer",
+      "actual": "open=1 pause=1 pointer=1",
+      "elapsed_seconds": 18.788349598646164
+    },
+    {
+      "name": "Armory_StarTide actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_StarTide.png bytes=1524467 pending=0",
+      "elapsed_seconds": 20.86107949912548
+    },
+    {
+      "name": "Armory_CrimsonNight actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_CrimsonNight.png bytes=1521263 pending=0",
+      "elapsed_seconds": 23.641670998185873
+    },
+    {
+      "name": "Armory_Arcane actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_Arcane.png bytes=1558033 pending=0",
+      "elapsed_seconds": 26.427297297865152
+    },
+    {
+      "name": "Armory_Steamlock actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_Steamlock.png bytes=1574897 pending=0",
+      "elapsed_seconds": 29.214730698615313
+    },
+    {
+      "name": "SteamPaint_01 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_01.png bytes=1568068 pending=0",
+      "elapsed_seconds": 31.30257109925151
+    },
+    {
+      "name": "SteamPaint_02 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_02.png bytes=1569139 pending=0",
+      "elapsed_seconds": 32.674913197755814
+    },
+    {
+      "name": "SteamPaint_03 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_03.png bytes=1567574 pending=0",
+      "elapsed_seconds": 34.05137360095978
+    },
+    {
+      "name": "SteamPaint_04 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_04.png bytes=1566015 pending=0",
+      "elapsed_seconds": 35.426952701061964
+    },
+    {
+      "name": "SteamPaint_05 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_05.png bytes=1567719 pending=0",
+      "elapsed_seconds": 36.80320689827204
+    },
+    {
+      "name": "SteamPaint_06 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_06.png bytes=1567647 pending=0",
+      "elapsed_seconds": 38.17405069991946
+    },
+    {
+      "name": "SteamPaint_07 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_07.png bytes=1565420 pending=0",
+      "elapsed_seconds": 39.54294100031257
+    },
+    {
+      "name": "SteamPaint_08 actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_08.png bytes=1564153 pending=0",
+      "elapsed_seconds": 40.9137281998992
+    },
+    {
+      "name": "Armory close frees preview",
+      "status": "PASS",
+      "evidence_level": "B engine Action + A runtime",
+      "expected": "closed/unpaused/no capture",
+      "actual": "open=0",
+      "elapsed_seconds": 41.62321290001273
+    },
+    {
+      "name": "TP_StarTide actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_StarTide.png bytes=3707351 pending=0",
+      "elapsed_seconds": 42.78605980053544
+    },
+    {
+      "name": "TP_StarTide_Swing actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_StarTide_Swing.png bytes=3693603 pending=0",
+      "elapsed_seconds": 44.270811300724745
+    },
+    {
+      "name": "FP_StarTide actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_StarTide.png bytes=3358158 pending=0",
+      "elapsed_seconds": 47.56421469897032
+    },
+    {
+      "name": "FP_StarTide_Swing actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_StarTide_Swing.png bytes=3015828 pending=0",
+      "elapsed_seconds": 49.05095709860325
+    },
+    {
+      "name": "TP_Arcane actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_Arcane.png bytes=3306210 pending=0",
+      "elapsed_seconds": 52.72146710008383
+    },
+    {
+      "name": "FP_Arcane actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_Arcane.png bytes=3343262 pending=0",
+      "elapsed_seconds": 54.49201149865985
+    },
+    {
+      "name": "FP_Arcane_Shot actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_Arcane_Shot.png bytes=3295726 pending=0",
+      "elapsed_seconds": 56.35928700119257
+    },
+    {
+      "name": "Equip CrimsonNight",
+      "status": "PASS",
+      "evidence_level": "A logic; not OS",
+      "expected": "equipped",
+      "actual": "catalog API used by Slate button",
+      "elapsed_seconds": 57.48581190034747
+    },
+    {
+      "name": "Equip Steamlock paint 8",
+      "status": "PASS",
+      "evidence_level": "A logic; not OS",
+      "expected": "equipped",
+      "actual": "catalog API used by Slate button",
+      "elapsed_seconds": 57.501248098909855
+    },
+    {
+      "name": "TP_Steamlock actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_Steamlock.png bytes=3345346 pending=0",
+      "elapsed_seconds": 59.55121909826994
+    },
+    {
+      "name": "FP_Steamlock actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_Steamlock.png bytes=3343012 pending=0",
+      "elapsed_seconds": 61.427817698568106
+    },
+    {
+      "name": "TP_CrimsonNight actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_CrimsonNight.png bytes=3250281 pending=0",
+      "elapsed_seconds": 64.29303060099483
+    },
+    {
+      "name": "Old save defaults",
+      "status": "PASS",
+      "evidence_level": "A serialization logic; no disk IO",
+      "expected": "StarTide/Arcane",
+      "actual": "legacy version=0",
+      "elapsed_seconds": 64.31078340113163
+    },
+    {
+      "name": "Armory selections restore",
+      "status": "PASS",
+      "evidence_level": "A serialization logic; real F5/F9 pending",
+      "expected": "CrimsonNight Steamlock 7",
+      "actual": "current save schema",
+      "elapsed_seconds": 64.32390249893069
+    },
+    {
+      "name": "M3 final screenshot file Armory_StarTide.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_StarTide.png bytes=1524467 pending=0",
+      "elapsed_seconds": 64.50208060070872
+    },
+    {
+      "name": "M3 final screenshot file Armory_CrimsonNight.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_CrimsonNight.png bytes=1521263 pending=0",
+      "elapsed_seconds": 64.51973740011454
+    },
+    {
+      "name": "M3 final screenshot file Armory_Arcane.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_Arcane.png bytes=1558033 pending=0",
+      "elapsed_seconds": 64.5328224003315
+    },
+    {
+      "name": "M3 final screenshot file Armory_Steamlock.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/Armory_Steamlock.png bytes=1574897 pending=0",
+      "elapsed_seconds": 64.54618329927325
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_01.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_01.png bytes=1568068 pending=0",
+      "elapsed_seconds": 64.55949959903955
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_02.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_02.png bytes=1569139 pending=0",
+      "elapsed_seconds": 64.57295309752226
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_03.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_03.png bytes=1567574 pending=0",
+      "elapsed_seconds": 64.58605419844389
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_04.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_04.png bytes=1566015 pending=0",
+      "elapsed_seconds": 64.59898789972067
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_05.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_05.png bytes=1567719 pending=0",
+      "elapsed_seconds": 64.61178670078516
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_06.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_06.png bytes=1567647 pending=0",
+      "elapsed_seconds": 64.62506179884076
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_07.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_07.png bytes=1565420 pending=0",
+      "elapsed_seconds": 64.63842909783125
+    },
+    {
+      "name": "M3 final screenshot file SteamPaint_08.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/SteamPaint_08.png bytes=1564153 pending=0",
+      "elapsed_seconds": 64.65129600092769
+    },
+    {
+      "name": "M3 final screenshot file TP_StarTide.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_StarTide.png bytes=3707351 pending=0",
+      "elapsed_seconds": 64.66441730037332
+    },
+    {
+      "name": "M3 final screenshot file TP_StarTide_Swing.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_StarTide_Swing.png bytes=3693603 pending=0",
+      "elapsed_seconds": 64.67748739942908
+    },
+    {
+      "name": "M3 final screenshot file FP_StarTide.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_StarTide.png bytes=3358158 pending=0",
+      "elapsed_seconds": 64.69051500037313
+    },
+    {
+      "name": "M3 final screenshot file FP_StarTide_Swing.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_StarTide_Swing.png bytes=3015828 pending=0",
+      "elapsed_seconds": 64.70356779918075
+    },
+    {
+      "name": "M3 final screenshot file TP_Arcane.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_Arcane.png bytes=3306210 pending=0",
+      "elapsed_seconds": 64.71658549830317
+    },
+    {
+      "name": "M3 final screenshot file FP_Arcane.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_Arcane.png bytes=3343262 pending=0",
+      "elapsed_seconds": 64.72973150014877
+    },
+    {
+      "name": "M3 final screenshot file FP_Arcane_Shot.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_Arcane_Shot.png bytes=3295726 pending=0",
+      "elapsed_seconds": 64.74273889884353
+    },
+    {
+      "name": "M3 final screenshot file TP_Steamlock.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_Steamlock.png bytes=3345346 pending=0",
+      "elapsed_seconds": 64.75590540096164
+    },
+    {
+      "name": "M3 final screenshot file FP_Steamlock.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/FP_Steamlock.png bytes=3343012 pending=0",
+      "elapsed_seconds": 64.76883079856634
+    },
+    {
+      "name": "M3 final screenshot file TP_CrimsonNight.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_vs3_r2_armory_20260927_215230/User/Saved/M5Tests/20260927_215233_m5_vs3_r2_armory/TP_CrimsonNight.png bytes=3250281 pending=0",
+      "elapsed_seconds": 64.78169589862227
+    }
+  ]
+}

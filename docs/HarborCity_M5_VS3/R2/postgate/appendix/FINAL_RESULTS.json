@@ -1,0 +1,151 @@
+{
+  "status": "PARTIAL",
+  "suite_status": "EXECUTION_COMPLETE_RESULTS_REQUIRE_REVIEW",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_214134_947_93c38d0d\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "runs": [
+    {
+      "exit_status": "EXITED",
+      "label": "STANDALONE_SHOWCASE",
+      "mode": "m5_vs3_r2_showcase",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_vs3_r2_showcase_20260927_214615",
+      "exit_code": 0,
+      "test_status": "COMPLETE",
+      "failures": 0,
+      "checks": 29,
+      "failed_checks": [],
+      "logged_project_fx_spawns": {}
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "ARMORY_FRESH_PROCESS_LOAD",
+      "mode": "m5_vs3_r2_reopen",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_vs3_r2_reopen_20260927_215216",
+      "exit_code": 0,
+      "test_status": "COMPLETE",
+      "failures": 0,
+      "checks": 5,
+      "failed_checks": [],
+      "logged_project_fx_spawns": {}
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "STANDALONE_WEAPON_STILLS",
+      "mode": "m5_vs3_r2_armory",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_vs3_r2_armory_20260927_215230",
+      "exit_code": 0,
+      "test_status": "COMPLETE",
+      "failures": 0,
+      "checks": 56,
+      "failed_checks": [],
+      "logged_project_fx_spawns": {}
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "PERFORMANCE_HIGH",
+      "mode": "perf",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\perf_20260927_215340",
+      "exit_code": 0,
+      "validity": "INVALID_BACKGROUND_MEDIA_OVERLAP",
+      "test_status": "COMPLETE",
+      "failures": 0,
+      "checks": 16,
+      "failed_checks": [],
+      "adapter_peak_MiB": 5225.0,
+      "logged_project_fx_spawns": {}
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "PERFORMANCE_EPIC",
+      "mode": "perf",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\perf_20260927_215542",
+      "exit_code": 0,
+      "test_status": "COMPLETE",
+      "failures": 0,
+      "checks": 16,
+      "failed_checks": [],
+      "adapter_peak_MiB": 6172.0,
+      "logged_project_fx_spawns": {}
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "FULL_REGRESSION_ONCE",
+      "mode": "m5_full",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_full_20260927_215745",
+      "exit_code": 0,
+      "test_status": "COMPLETE",
+      "failures": 4,
+      "checks": 171,
+      "failed_checks": [
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "status": "FAIL",
+          "evidence_level": "A-fixture",
+          "expected": "read-only safety queries choose A parking fixture; no condition override",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+          "elapsed_seconds": 93.47303130105138
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "status": "FAIL",
+          "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+          "expected": "driving, passenger attached through normal Tick",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.991 Y=-6360.922 Z=22.638 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_fade_seconds\": 1,\r\n\t\"named_post_removal_cooldown_seconds\": 60,\r\n\t\"coffee_stage\": 2,\r\n\t\"ride_stage\": 1,\r\n\t\"pickup_curb_y\": -6500,\r\n\t\"pickup_max_body_gap_cm\": 65,\r\n\t\"pickup_parallel_tolerance_degrees\": 15,\r\n\t\"actual_pickup_body_gap_cm\": 24.996857783275118,\r\n\t\"actual_body_world_min\": \"X=-5904.054 Y=-6475.003 Z=18.857\",\r\n\t\"actual_body_world_max\": \"X=-5432.465 Y=-6246.835 Z=145.096\",\r\n\t\"can_pickup_at_curb\": true,\r\n\t\"named_respawn_seconds\":\r\n\t{\r\n\t\t\"M5_Contact\": 0,\r\n\t\t\"M5_Harbor\": 0,\r\n\t\t\"M3_LinXia\": 0,\r\n\t\t\"M3_ChenBo\": 0,\r\n\t\t\"M3_ANing\": 0,\r\n\t\t\"VS2_Citizen00\": 0,\r\n\t\t\"VS2_Citizen01\": 0,\r\n\t\t\"VS2_Citizen02\": 0,\r\n\t\t\"VS2_Citizen03\": 0,\r\n\t\t\"VS2_Citizen04\": 0,\r\n\t\t\"VS2_Citizen05\": 0,\r\n\t\t\"VS2_Citizen06\": 0,\r\n\t\t\"VS2_Citizen07\": 0,\r\n\t\t\"VS2_Citizen08\": 0,\r\n\t\t\"VS2_Citizen09\": 0,\r\n\t\t\"VS2_Citizen10\": 0,\r\n\t\t\"VS2_Citizen11\": 0\r\n\t}\r\n}",
+          "elapsed_seconds": 108.0360943004489
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "status": "FAIL",
+          "evidence_level": "B-Action + A travel placement; not continuous route proof",
+          "expected": "Complete; no direct quest mutation",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "elapsed_seconds": 116.85077099874616
+        },
+        {
+          "name": "Spell 3 MP cost once",
+          "status": "FAIL",
+          "evidence_level": "B-Action",
+          "expected": "R1 bolt/wave spend on release; full-health heal rejects without charge",
+          "actual": "before 96.82 after 100.00 health 100.00 cooldown 0.00 expectedCost 0.00",
+          "elapsed_seconds": 181.54099339991808
+        }
+      ],
+      "logged_project_fx_spawns": {}
+    },
+    {
+      "exit_status": "EXITED",
+      "label": "STORY_FRESH_PROCESS_LOAD",
+      "mode": "m5_reopen",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_reopen_20260927_220508",
+      "exit_code": 0,
+      "test_status": "COMPLETE",
+      "failures": 1,
+      "checks": 21,
+      "failed_checks": [
+        {
+          "name": "Both side quests survive fresh-process Load",
+          "status": "FAIL",
+          "evidence_level": "B-Action Load + A readback",
+          "expected": "both Complete",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "elapsed_seconds": 9.01518239825964
+        }
+      ],
+      "logged_project_fx_spawns": {}
+    },
+    {
+      "label": "PERFORMANCE_HIGH_CLEAN",
+      "mode": "perf",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\perf_20260927_220602",
+      "exit_code": 0,
+      "exit_status": "EXITED",
+      "test_status": "COMPLETE",
+      "failures": 0,
+      "checks": 16,
+      "failed_checks": [],
+      "adapter_peak_MiB": 5257.0,
+      "logged_project_fx_spawns": {}
+    }
+  ],
+  "real_OS_mouse": "NOT_RUN_TOOL_BACKEND",
+  "user_acceptance": "PENDING"
+}

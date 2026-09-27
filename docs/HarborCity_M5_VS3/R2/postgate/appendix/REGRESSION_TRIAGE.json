@@ -1,0 +1,15 @@
+{
+  "status": "ORIGINAL_FAILS_RETAINED",
+  "ride": "Unsafe passenger door/NPC stand fixture; not fixed; failed pickup -> incomplete ride -> reopen preserves incomplete state.",
+  "full_health_heal": {
+    "classification": "ASSERTION_DOES_NOT_ACCOUNT_FOR_REGEN",
+    "observed_before": 96.82,
+    "observed_after": 100,
+    "health": 100,
+    "cooldown": 0,
+    "code_guard": "HCM5VS3Abilities.cpp:312 returns false before changing cast/MP",
+    "code_regen": "HCM5VS3Abilities.cpp:464 adds 5 MP/sec after 2 seconds idle",
+    "assertion": "HCM1TestM5VS3.cpp:96 compares absolute MP delta <1 without regeneration allowance",
+    "test_status": "FAIL_RETAINED_NOT_RERUN"
+  }
+}

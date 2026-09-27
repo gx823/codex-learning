@@ -1,0 +1,509 @@
+{
+  "status": "WHITELISTED",
+  "private_sources": false,
+  "whole_game": false,
+  "save_games": false,
+  "raw_frames": false,
+  "files": [
+    {
+      "path": "STATUS.md",
+      "bytes": 4329,
+      "sha256": "dc8a814a667868057b5e7b7989a73df5095697a0ac1cc354bee10841c95c4526"
+    },
+    {
+      "path": "ARMORY.md",
+      "bytes": 1574,
+      "sha256": "a355fe306bfddf8d8e2f111b1d97b4fdc63414f1c0cdbb26c184a8b284fabe7a"
+    },
+    {
+      "path": "CONTROLS.md",
+      "bytes": 1239,
+      "sha256": "44d44fa95b280def9bc2692168453fb3ce06eda9d7c2cd8924dabce63655215f"
+    },
+    {
+      "path": "ARMORY_INVENTORY.md",
+      "bytes": 1995,
+      "sha256": "774a6566a4d0d79be01ac6275e57a7460d9d955168262fbc63f13f18e0f1af46"
+    },
+    {
+      "path": "ASSET_LICENSES.md",
+      "bytes": 1436,
+      "sha256": "1862718d9eecf0ea2ff7c4bfdf21c40fb6c97cac22432d38f7e4660c16134ef0"
+    },
+    {
+      "path": "PURCHASE_CANDIDATES.md",
+      "bytes": 5304,
+      "sha256": "b7e8c5b0bcf21bb341305eb3c32c35b943a44c184e1507fca732241ad5b06190"
+    },
+    {
+      "path": "VFX_USAGE.md",
+      "bytes": 882,
+      "sha256": "8fe05db2361b163c33c430198587fcee93615198896b131a9650c0f16b593f7c"
+    },
+    {
+      "path": "RECORDING.md",
+      "bytes": 1653,
+      "sha256": "e06ec63e3fef97117a83c7fd0798ad6b38c6c90f14acece30100e3ddea757de4"
+    },
+    {
+      "path": "PERFORMANCE.md",
+      "bytes": 1426,
+      "sha256": "401e2566bc98dbb41606f4ecfb39120631f9a7597a886c1a770ee7c24cfe9a47"
+    },
+    {
+      "path": "MANUAL_RETEST.md",
+      "bytes": 611,
+      "sha256": "0bb4266d566e3f6efe5b46732ea74a491b7d819270582596b2ef13a8d4b4f5bc"
+    },
+    {
+      "path": "INTERRUPTION_AUDIT.md",
+      "bytes": 746,
+      "sha256": "3650a5fd4f9cf77de4fc3b75ff961b97251a8139f14f01d5c85cb5baa0351449"
+    },
+    {
+      "path": "appendix/ARMORY_FRESH_PROCESS_LOAD_CHECKS.json",
+      "bytes": 1844,
+      "sha256": "8749783ce5ac41f911514446ea25a9790fb57fe46d23e26f5ac60253f26409e6"
+    },
+    {
+      "path": "appendix/ARMORY_FRESH_PROCESS_LOAD_exit.json",
+      "bytes": 1641,
+      "sha256": "d63befaffa8a91343f18971fa825c76e8e2ec201e34974762531d08213b6ef7b"
+    },
+    {
+      "path": "appendix/ARMORY_FRESH_PROCESS_LOAD_launch.json",
+      "bytes": 1574,
+      "sha256": "eb4fe63a7425bd352613797c5c8a3bf65b23b37da23d477ce3d5a7f036099ac9"
+    },
+    {
+      "path": "appendix/ARMORY_FRESH_PROCESS_LOAD_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/ARMORY_FRESH_PROCESS_LOAD_network_sample.json",
+      "bytes": 168,
+      "sha256": "d04b523a07dcdf7bd435ad70bcb737bc54d0126ab9f16656596094c1b6e5912a"
+    },
+    {
+      "path": "appendix/CHANGED_FILES.json",
+      "bytes": 1448,
+      "sha256": "ce7097bcd9c49aea3b650b0983b57cd8078048635d66abd0f496f22129f75bfe"
+    },
+    {
+      "path": "appendix/DOWNLOADS.json",
+      "bytes": 797,
+      "sha256": "474aa7fcf3194cbe79886c1e9a41deb5604ec8cbefbdbf28969f2f9de8e8fd13"
+    },
+    {
+      "path": "appendix/EDITOR_MATRIX_20260927_205420.json",
+      "bytes": 475892,
+      "sha256": "704ec854da931b983a1b75b21c1307eed7d2439601545b0153aa5d2cf449c1bc"
+    },
+    {
+      "path": "appendix/EDITOR_MATRIX_20260927_210053.json",
+      "bytes": 1769579,
+      "sha256": "d3a001d3dbd3317e07d1fe6e7f080ae58bcf87ed2cb274ad4680a9b615f8104b"
+    },
+    {
+      "path": "appendix/FINAL_RESULTS.json",
+      "bytes": 9354,
+      "sha256": "e4d4654c708e7bb0d8657ba1df4b95ac476b4996045cd506fab5c40b31cd2921"
+    },
+    {
+      "path": "appendix/FULL_REGRESSION_ONCE_CHECKS.json",
+      "bytes": 141643,
+      "sha256": "6960de5b397fc6bf5122b228aa4eeb1bc1fa75324d70fb014bc5e6beda71fe7e"
+    },
+    {
+      "path": "appendix/FULL_REGRESSION_ONCE_exit.json",
+      "bytes": 1601,
+      "sha256": "c78b6d97d1c24e3f1eb786ff3fb8052727d4cda754ee9c17b442c7fb1c15ed7f"
+    },
+    {
+      "path": "appendix/FULL_REGRESSION_ONCE_launch.json",
+      "bytes": 1534,
+      "sha256": "794f2200c8abe3bea8ed21529b524dc6a939bfdd24771a454320e5a686e15fb4"
+    },
+    {
+      "path": "appendix/FULL_REGRESSION_ONCE_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/FULL_REGRESSION_ONCE_network_sample.json",
+      "bytes": 168,
+      "sha256": "b0aa9bf7bb1efb11c7bf990ca37949d8a86239e209a0b783619ca46c7f47b67a"
+    },
+    {
+      "path": "appendix/FX_SCOPE.json",
+      "bytes": 1150,
+      "sha256": "76422006b58e6b203155424c099d4d60f020f219cce783914d4d7ebcb098e74c"
+    },
+    {
+      "path": "appendix/INTERRUPTION_AUDIT.json",
+      "bytes": 1412,
+      "sha256": "954a6d84ff7d048f987734e8864b4f31ce4567fa5ecc8aaeb9519092eb9c3d1d"
+    },
+    {
+      "path": "appendix/PACKAGE.json",
+      "bytes": 861,
+      "sha256": "01115098e864331d23602a7f7f631c3887c1f6c2d49c05b0e7773dc0d9e85387"
+    },
+    {
+      "path": "appendix/PERFORMANCE.json",
+      "bytes": 3252,
+      "sha256": "f8a2d25241dc90354960e61b6eeac4c69f993be5eab7913f70b98800b5e9ca58"
+    },
+    {
+      "path": "appendix/PERFORMANCE_EPIC_CHECKS.json",
+      "bytes": 5165,
+      "sha256": "7501e21e1a42c06437a83f1e6f3f3bb85b439a53f5b65174c2b85d23b81aae49"
+    },
+    {
+      "path": "appendix/PERFORMANCE_EPIC_exit.json",
+      "bytes": 1688,
+      "sha256": "acb9b346874d60825e241abe9bd44b516e7001ba8e295cfca56ef9a0378a2a02"
+    },
+    {
+      "path": "appendix/PERFORMANCE_EPIC_GPU.csv",
+      "bytes": 2753,
+      "sha256": "b86e0ef05a6904a618fd5b3d1e3c9d83673d9d58b8c805f94ee8ca97bd0b5fb4"
+    },
+    {
+      "path": "appendix/PERFORMANCE_EPIC_launch.json",
+      "bytes": 1621,
+      "sha256": "83be20770f3297c171a3b7f123fb8e915da52dd87ec8eac4beca8251e614b69f"
+    },
+    {
+      "path": "appendix/PERFORMANCE_EPIC_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/PERFORMANCE_EPIC_network_sample.json",
+      "bytes": 168,
+      "sha256": "9376f3c36e8548c896f2a25836bbbd1978089a33f21be107c854332972c28115"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_CHECKS.json",
+      "bytes": 5171,
+      "sha256": "ec240a2350fb6ef8b08b9c4707cd377c8b3b6c26f3e5d79a080818c474978278"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_CLEAN_CHECKS.json",
+      "bytes": 5171,
+      "sha256": "0e1f8519e7ba6247d7699554bc4be7f38a2c4288039b02c09b554106bd9e79dd"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_CLEAN_exit.json",
+      "bytes": 1688,
+      "sha256": "a880ef5b1676de566d4d533eaa52759da6e60f2c7bd33a2cbb7ccdb82a56527e"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_CLEAN_GPU.csv",
+      "bytes": 2753,
+      "sha256": "f92c82e4627d58adeed7633e411444ac46a67a866df80712f9ea482feb52136c"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_CLEAN_launch.json",
+      "bytes": 1621,
+      "sha256": "6d3ba55e051213fcc1dd62b717c2698d2c5e62bb2c67e4dd397813e20e999df6"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_CLEAN_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_CLEAN_network_sample.json",
+      "bytes": 168,
+      "sha256": "0536db2160f32b61b4efecc0ec100a532d50f2297550d8831832b0d8551b1049"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_exit.json",
+      "bytes": 1688,
+      "sha256": "da987a8d2165bda0f888cba6ab01b4975fce6d91b8e50e4bfc188d7796094afb"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_GPU.csv",
+      "bytes": 2824,
+      "sha256": "dec25abb0ee1863c068f44bd94e504a29942d39104b51086863e8ae64172eedc"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_launch.json",
+      "bytes": 1621,
+      "sha256": "ddb6eb5a0cebfe19f43e2e37cd271cf1645c8789739087ff5100770dc96c59f3"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/PERFORMANCE_HIGH_network_sample.json",
+      "bytes": 168,
+      "sha256": "bb385fe2fc47f38276a8813e98aedca1f814a1a942681f1cbe2dfc714560dcf6"
+    },
+    {
+      "path": "appendix/PERF_CONTEXT.json",
+      "bytes": 555,
+      "sha256": "69efe8dddbbed17e3a388fecb9199a8d1240495ded5ecd8b720b11b1a82b8683"
+    },
+    {
+      "path": "appendix/REGRESSION_TRIAGE.json",
+      "bytes": 691,
+      "sha256": "a832229bb95d846ede914d43ec34790fee574b9d440b1a3398d41d0f3bb81572"
+    },
+    {
+      "path": "appendix/SOURCE_CHANGES.patch",
+      "bytes": 133884,
+      "sha256": "47beae43f208dac21ea3cb87696303bf11da235c2d244d71f40cb6d47e422fa9"
+    },
+    {
+      "path": "appendix/STANDALONE_SHOWCASE_CHECKS.json",
+      "bytes": 8548,
+      "sha256": "a80d1042baa83f42cf4e24d91ae8bd5c4bc21aba80b5bad96e7336450329d3b5"
+    },
+    {
+      "path": "appendix/STANDALONE_SHOWCASE_exit.json",
+      "bytes": 1750,
+      "sha256": "a79c436aec9c59395eed30a48baa74b184859b51cbfc65b18f2302006d089d4e"
+    },
+    {
+      "path": "appendix/STANDALONE_SHOWCASE_launch.json",
+      "bytes": 1683,
+      "sha256": "130a5317290bad834dbba7680b263d83fa56fb57f0dd1a9160c0be68f8400479"
+    },
+    {
+      "path": "appendix/STANDALONE_SHOWCASE_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/STANDALONE_SHOWCASE_network_sample.json",
+      "bytes": 167,
+      "sha256": "bccebea4649d4c88d5a5cb62ee6da7f7335707d79122ddb32dc4b0484b6ac900"
+    },
+    {
+      "path": "appendix/STANDALONE_WEAPON_STILLS_CHECKS.json",
+      "bytes": 24283,
+      "sha256": "d7f2c55c887f34adafd78820a12a40bb68321b569579df849154e4e95d1a7afa"
+    },
+    {
+      "path": "appendix/STANDALONE_WEAPON_STILLS_exit.json",
+      "bytes": 1637,
+      "sha256": "4243bd73f9132f4ca4943d4f8bee518346f7e19e193e77897ee18f44751d245b"
+    },
+    {
+      "path": "appendix/STANDALONE_WEAPON_STILLS_launch.json",
+      "bytes": 1570,
+      "sha256": "d8312b528fa8f89c83d7bad8b36bb6c747d4dec6e67fa17f6d4478da64bb75bb"
+    },
+    {
+      "path": "appendix/STANDALONE_WEAPON_STILLS_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/STANDALONE_WEAPON_STILLS_network_sample.json",
+      "bytes": 168,
+      "sha256": "1bb413f4c6582b0239039ce9e352f021bcfaad31928297467e83a78c3c9f5114"
+    },
+    {
+      "path": "appendix/STORY_FRESH_PROCESS_LOAD_CHECKS.json",
+      "bytes": 13256,
+      "sha256": "a9de39689c409092b1338b97a4b633160c047c00f9b7ab7424edfaab51158aa3"
+    },
+    {
+      "path": "appendix/STORY_FRESH_PROCESS_LOAD_exit.json",
+      "bytes": 1605,
+      "sha256": "f65550a26384256ddb4d9976c4de4a35e4ce8ac2ba35286029f3f6eefe849af5"
+    },
+    {
+      "path": "appendix/STORY_FRESH_PROCESS_LOAD_launch.json",
+      "bytes": 1538,
+      "sha256": "93c2df592c620d49f417247e5ebdc2af0e0984cbe600d91dac3f03d24261db2b"
+    },
+    {
+      "path": "appendix/STORY_FRESH_PROCESS_LOAD_LOG_EXCERPT.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "appendix/STORY_FRESH_PROCESS_LOAD_network_sample.json",
+      "bytes": 168,
+      "sha256": "a0bc8a5cd5c822da34587ba542d7c129028e65a0f989b3f6aa7becae9ed150b9"
+    },
+    {
+      "path": "appendix/VIDEO_QA.json",
+      "bytes": 38876,
+      "sha256": "81223cccf0ab6c63ead6075c4eac42070cbaf366de5a8e24af9b589f91dcaea9"
+    },
+    {
+      "path": "appendix/tools/encode_m5_vs3_r1_final.py",
+      "bytes": 7015,
+      "sha256": "15ba5c47aa4b270baa54af5af078ae8ec2760c493016ae4c8996a836135f9864"
+    },
+    {
+      "path": "appendix/tools/package_m5_vs3.ps1",
+      "bytes": 36981,
+      "sha256": "df9165efc789c6fc3aa2441853fc48a785ef3b0bd20b30438b5585adce7ff125"
+    },
+    {
+      "path": "appendix/tools/run_m5_vs3_r2.ps1",
+      "bytes": 9470,
+      "sha256": "a27a19ef5b571bbe29a7340b4c072b94b7cc1a604666c2ece2bf6c760825285a"
+    },
+    {
+      "path": "appendix/tools/run_m5_vs3_r2_postgate_suite.ps1",
+      "bytes": 2553,
+      "sha256": "4a502aa9ea53452bc197582e063dcc2c508cb42333fe34d196edff7304e38b77"
+    },
+    {
+      "path": "appendix/tools/summarize_m5_vs3_r2_postgate.py",
+      "bytes": 6196,
+      "sha256": "dc8a824f0f39d656a351eb1cf40af79d8a9eadc9d9c4f9f4fdf4a9f421498f15"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 5860,
+      "sha256": "edd630ba2adc918e1ab692f5885d4b413e4a52e1f39ecbdabb0a3b395c2b6007"
+    },
+    {
+      "path": "review/weapon_overview.jpg",
+      "bytes": 186097,
+      "sha256": "9492329daaa2ed7f3471dc6f8ccc873775d96739add5157059cd602c41677f1e"
+    },
+    {
+      "path": "review/images/Armory_Arcane.png",
+      "bytes": 1558033,
+      "sha256": "429581b6046d4fe3634fe7101198490b4d1f6a4e2c8276b307fbcf189a471585"
+    },
+    {
+      "path": "review/images/Armory_CrimsonNight.png",
+      "bytes": 1521263,
+      "sha256": "efb2654cf33c54eacedd8847dc14105efe8bbe5b30edefb133de95f0745f85af"
+    },
+    {
+      "path": "review/images/Armory_StarTide.png",
+      "bytes": 1524467,
+      "sha256": "59fa22b5bbdbf2ce4f8e8c7db3fd31c8787491d9d54ec743877ea13503a099c8"
+    },
+    {
+      "path": "review/images/Armory_Steamlock.png",
+      "bytes": 1574897,
+      "sha256": "fd7f10935c6dc78163239a77ed42d2b19f5f25fba67cc7c58a429e430fdd5635"
+    },
+    {
+      "path": "review/images/FP_Arcane.png",
+      "bytes": 3343262,
+      "sha256": "c6a10043b4f533bd12c2a17906f9764afa89cb6e2e0c4782be68360790e4e2d2"
+    },
+    {
+      "path": "review/images/FP_Arcane_Shot.png",
+      "bytes": 3295726,
+      "sha256": "af5715ef0fb3878e41f908b49af9b51d4b826a0f313b5c61f123e3df10fa4842"
+    },
+    {
+      "path": "review/images/FP_StarTide.png",
+      "bytes": 3358158,
+      "sha256": "89138387dd14e2b1c203ded7b7d8b4096761086fa4db48afa71f528d07111382"
+    },
+    {
+      "path": "review/images/FP_StarTide_Swing.png",
+      "bytes": 3015828,
+      "sha256": "d2d0e61c5460e3d9187253570017c67b8de3523f197ecd304009895e774ee2bf"
+    },
+    {
+      "path": "review/images/FP_Steamlock.png",
+      "bytes": 3343012,
+      "sha256": "9d43577808c07be5089f9ebc18dbb2c00b02df6384c9e758b4ed7fa9a54b825c"
+    },
+    {
+      "path": "review/images/Icon_Arcane.png",
+      "bytes": 319488,
+      "sha256": "5259939ffd4aba8ac7bc6f12abb8faff8853ce28abe585e10c5cc76bc6d7a85f"
+    },
+    {
+      "path": "review/images/Icon_CrimsonNight.png",
+      "bytes": 229376,
+      "sha256": "30b7867f53349c239330d368ab968bdcf5ee4e9075258dfe2812d81da5cbe04f"
+    },
+    {
+      "path": "review/images/Icon_StarTide.png",
+      "bytes": 229376,
+      "sha256": "781f24acd490a1c4c73c8555ef4e5c53173196478e8e12356f70764df5308fe3"
+    },
+    {
+      "path": "review/images/Icon_Steamlock.png",
+      "bytes": 319488,
+      "sha256": "5321ced1e820624d935703bc74b03e724d93236324cef7a88d2ecc07d3ac0a7a"
+    },
+    {
+      "path": "review/images/SteamPaint_01.png",
+      "bytes": 1568068,
+      "sha256": "ecafd6d0de1cac34cf4c905688629f3f4d28a6f67745d15c621befa6e144dc0f"
+    },
+    {
+      "path": "review/images/SteamPaint_02.png",
+      "bytes": 1569139,
+      "sha256": "7e971cef170bd4cbdad0e513b13ba3c26cc09193e2b22b48492c2e14c537ffd2"
+    },
+    {
+      "path": "review/images/SteamPaint_03.png",
+      "bytes": 1567574,
+      "sha256": "6dbb8e39e3d3fe6936a2854b670cd5af1d7f503417c4ca747c05f6122857d957"
+    },
+    {
+      "path": "review/images/SteamPaint_04.png",
+      "bytes": 1566015,
+      "sha256": "e5a9fcaedd5f26182ff88946c67e48d2ae87d0f53226d2014d0154d964a96cef"
+    },
+    {
+      "path": "review/images/SteamPaint_05.png",
+      "bytes": 1567719,
+      "sha256": "93514dca0eb3664b7f7248bc001c7795b19818dac50af61c4a0eacbc3f6c444e"
+    },
+    {
+      "path": "review/images/SteamPaint_06.png",
+      "bytes": 1567647,
+      "sha256": "94528fe67790ea249a4389eaa1c29d598ed809e2a103489800ce52f3034b03da"
+    },
+    {
+      "path": "review/images/SteamPaint_07.png",
+      "bytes": 1565420,
+      "sha256": "2aaf9fdf1ed2b90464d4a0725b028ee35b4082df827ab51fde4422bb39b2579a"
+    },
+    {
+      "path": "review/images/SteamPaint_08.png",
+      "bytes": 1564153,
+      "sha256": "8ed592a17bda81479ae5a1039f1f9ef7351917379265f2c8ab5eaddae8aa42a6"
+    },
+    {
+      "path": "review/images/TP_Arcane.png",
+      "bytes": 3306210,
+      "sha256": "ebf219c7b33936054283f0d81e08ea082c81c449eb98f660e8d2fcc4d0539b3b"
+    },
+    {
+      "path": "review/images/TP_CrimsonNight.png",
+      "bytes": 3250281,
+      "sha256": "9cd84606936c9ced5a7d4da839bb82d2f9dde58b1fcbfcbc58f0cd3ceef79878"
+    },
+    {
+      "path": "review/images/TP_StarTide.png",
+      "bytes": 3707351,
+      "sha256": "bd771bae7b7f488583d80d18ced26bae55548828e5687de698646175611e81f7"
+    },
+    {
+      "path": "review/images/TP_StarTide_Swing.png",
+      "bytes": 3693603,
+      "sha256": "e16ad0c105e81bc2660c7b1f471f6d0929fd6da3bc8dae96c52886d1e594d484"
+    },
+    {
+      "path": "review/images/TP_Steamlock.png",
+      "bytes": 3345346,
+      "sha256": "d38f6c8d8808e6361b259dfd1070e7bbf9675622f45cd1806381a006c2957ff0"
+    }
+  ]
+}

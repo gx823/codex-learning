@@ -1,0 +1,9 @@
+{
+  "initial_high_status": "INVALID_BACKGROUND_MEDIA_OVERLAP",
+  "initial_high_run": "perf_20260927_215340",
+  "high_launch": "2026-09-27T21:53:40+08:00",
+  "audio_decode_finished": "2026-09-27T21:54:38+08:00",
+  "decision": "Retain original measurement. Rerun only High after suite and all media work; Epic starts after audio task and is uncontaminated. Full regression will not repeat.",
+  "clean_high_run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\perf_20260927_220602",
+  "clean_high_status": "COMPLETED_NO_MEDIA_OVERLAP"
+}

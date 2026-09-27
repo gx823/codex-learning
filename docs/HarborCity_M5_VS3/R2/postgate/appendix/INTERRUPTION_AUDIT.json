@@ -1,0 +1,34 @@
+{
+  "status": "PARTIAL_RECOVERY",
+  "evidence": [
+    {
+      "local_time": "2026-09-27T21:04:31",
+      "message": "unexpected status 403 Forbidden: ",
+      "http_status": 403
+    },
+    {
+      "local_time": "2026-09-27T21:04:29",
+      "message": "unexpected status 403 Forbidden: ",
+      "http_status": 403
+    },
+    {
+      "local_time": "2026-09-27T21:04:28",
+      "message": "unexpected status 403 Forbidden: ",
+      "http_status": 403
+    },
+    {
+      "local_time": "2026-09-27T21:04:27",
+      "message": "unexpected status 403 Forbidden: ",
+      "http_status": 403
+    },
+    {
+      "local_time": "2026-09-27T21:04:26",
+      "message": "unexpected status 403 Forbidden: ",
+      "http_status": 403
+    }
+  ],
+  "conclusion": "Model response requests received HTTP 403 five retries at 21:04; local matrix continued and completed at 21:07. This is separate from node kernel-asset path failure. Server rejection root cause is unknown; no evidence of depleted token quota or Unreal crash.",
+  "fix": "Resume from actual completed processes; preserve checkpoints and record terminal run status. Do not alter network/security/account settings or re-run completed test work.",
+  "node_repl": "BLOCKED prior kernel assets os error 3; no successful restart evidence",
+  "engine_matrix": "COMPLETE 140 PASS, 0 FAIL remaining caps30/60/uncapped; 20-cap previous58PASS"
+}

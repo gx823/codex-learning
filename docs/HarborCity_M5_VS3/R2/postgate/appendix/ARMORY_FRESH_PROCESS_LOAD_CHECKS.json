@@ -1,0 +1,47 @@
+{
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_vs3_r2_showcase_20260927_214615\\User\\Saved\\M5Tests\\20260927_215219_m5_vs3_r2_reopen\\results.json",
+  "kind": "STANDALONE_PACKAGE",
+  "input": "ENGINE_ACTION_AND_LOGIC_NOT_OS",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.1789696030318737
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_showcase_20260927_214615",
+      "elapsed_seconds": 3.1797920018434525
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.1893214024603367
+    },
+    {
+      "name": "Previous process armory save exists",
+      "status": "PASS",
+      "evidence_level": "A disk prerequisite",
+      "expected": "real previous-process save, no synthesized fixture",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_showcase_20260927_214615",
+      "elapsed_seconds": 3.1974735036492348
+    },
+    {
+      "name": "New process Load restores weapons and paint",
+      "status": "PASS",
+      "evidence_level": "B Load Action plus A runtime readback; not OS",
+      "expected": "CrimsonNight / Steamlock paint8",
+      "actual": "读取成功：玩家、车辆、照明、任务和路人状态已恢复。",
+      "elapsed_seconds": 7.503503002226353
+    }
+  ]
+}

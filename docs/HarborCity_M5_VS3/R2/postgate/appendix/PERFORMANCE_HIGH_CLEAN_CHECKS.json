@@ -1,0 +1,135 @@
+{
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\perf_20260927_220602\\User\\Saved\\M5Tests\\20260927_220605_m5_vs2_perf\\results.json",
+  "kind": "STANDALONE_PACKAGE",
+  "input": "ENGINE_ACTION_AND_LOGIC_NOT_OS",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.197560802102089
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_perf_20260927_220602",
+      "elapsed_seconds": 3.1983401998877525
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.2089623995125294
+    },
+    {
+      "name": "Standard fill and world audio runtime",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "readback; audible recording verified separately",
+      "actual": "{\"ordinary_point_light\":true,\"ambience_playing\":true,\"footsteps\":0,\"audible_shots\":0}",
+      "elapsed_seconds": 5.2123178988695145
+    },
+    {
+      "name": "Town navigation asset",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "current town map data",
+      "actual": "DA_HarborTown",
+      "elapsed_seconds": 5.21377719938755
+    },
+    {
+      "name": "Rejected young appearances excluded",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "19 adult-base NPCs; diversity is separate art review",
+      "actual": "adult_base=19 excluded=0",
+      "elapsed_seconds": 5.214768402278423
+    },
+    {
+      "name": "Town actor unique",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "one runtime actor",
+      "actual": "1",
+      "elapsed_seconds": 5.22381030023098
+    },
+    {
+      "name": "Help panel starts closed",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "closed",
+      "actual": "0",
+      "elapsed_seconds": 5.224770098924637
+    },
+    {
+      "name": "South approach walk",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=1424 mean_fps=118.585 p99_ms=10.165 wall_seconds=12.008",
+      "elapsed_seconds": 32.33406209945679
+    },
+    {
+      "name": "Market approach walk",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=1411 mean_fps=117.575 p99_ms=10.286 wall_seconds=12.001",
+      "elapsed_seconds": 44.334836699068546
+    },
+    {
+      "name": "High aerial hover",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=473 mean_fps=117.990 p99_ms=10.283 wall_seconds=4.009",
+      "elapsed_seconds": 58.46972810104489
+    },
+    {
+      "name": "Town aerial traversal",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=601 mean_fps=120.021 p99_ms=9.852 wall_seconds=5.007",
+      "elapsed_seconds": 63.57677369937301
+    },
+    {
+      "name": "Spell stress has six existing adult NPCs",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "six live authored adults, A placement only",
+      "actual": "6",
+      "elapsed_seconds": 80.58620430156589
+    },
+    {
+      "name": "Multiple spells and six NPC AI performance",
+      "status": "PASS",
+      "evidence_level": "B-Action spells + A crowd placement and wall-frame readback",
+      "expected": "uncapped; at least two real damage recipients; mean>=60 p99<=25; ordinary NPC reactions, not forced six attackers",
+      "actual": "frames=1620 mean_fps=112.283 p99_ms=10.548 wall_seconds=14.428 npcs=6 damaged=6",
+      "elapsed_seconds": 96.42016430199146
+    },
+    {
+      "name": "Armory performance preview active",
+      "status": "PASS",
+      "evidence_level": "B Armory Action; A runtime readback",
+      "expected": "paused UI with real preview",
+      "actual": "",
+      "elapsed_seconds": 104.62865690141916
+    },
+    {
+      "name": "Armory real preview render performance",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=1153 mean_fps=96.034 p99_ms=11.932 wall_seconds=12.006",
+      "elapsed_seconds": 116.63495020195842
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "target": "HarborCity Win64 Shipping",
+  "candidate_directory": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_214134_947_93c38d0d",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260927_214134_947_93c38d0d\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "stages": [
+    {
+      "name": "EditorBuild",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "name": "GameBuild",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "name": "CookStagePakPackageArchive",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "name": "CookedMapAudit",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "name": "VerifyArchiveFiles",
+      "status": "PASS",
+      "exit_code": null
+    }
+  ]
+}

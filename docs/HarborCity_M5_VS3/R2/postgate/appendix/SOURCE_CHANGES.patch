@@ -1,0 +1,1530 @@
+--- a/Source/HarborCity/M1/HCM1HUD.cpp
++++ b/Source/HarborCity/M1/HCM1HUD.cpp
+@@ -1,4 +1,6 @@
+ #include "HCM1HUD.h"
++#include "M5VS3/HCM5VS3Armory.h"
++#include "M5VS3/SHCM5VS3Armory.h"
+ 
+ #include "HCM1PlayerController.h"
+ #include "HCM1Character.h"
+@@ -158,6 +160,10 @@
+                             [SNew(SButton).HAlign(HAlign_Center).ContentPadding(10).OnClicked_Lambda([this]{if(auto* A=Abilities())A->ToggleImpactShake();return FReply::Handled();})
+                                 [SNew(STextBlock).Text_Lambda([this]{auto* A=Abilities();return FText::FromString(A&&A->UsesImpactShake()?TEXT("命中镜头震动：开"):TEXT("命中镜头震动：关"));}).Font(Body)]]
+                             + SVerticalBox::Slot().AutoHeight().Padding(0,5)
++                            [SNew(SButton).HAlign(HAlign_Center).ContentPadding(12).Visibility_Lambda([this](){return Controller.IsValid()&&Controller->GetArmory()&&Controller->GetArmory()->IsAvailable()?EVisibility::Visible:EVisibility::Collapsed;})
++                                .OnClicked_Lambda([this](){if(Controller.IsValid())Controller->ToggleArmory();return FReply::Handled();})
++                                [SNew(STextBlock).Text(FText::FromString(TEXT("武器库  B"))).Font(Hint)]]
++                            + SVerticalBox::Slot().AutoHeight().Padding(0,5)
+                             [SNew(SButton).HAlign(HAlign_Center).ContentPadding(12).OnClicked(this, &SHCM1Overlay::ContinueClicked)
+                                 [SNew(STextBlock).Text(FText::FromString(TEXT("继续游戏"))).Font(Hint)]]
+                             + SVerticalBox::Slot().AutoHeight().Padding(0, 5)
+@@ -167,7 +173,7 @@
+                             [SNew(SButton).HAlign(HAlign_Center).ContentPadding(12).OnClicked(this, &SHCM1Overlay::QuitClicked)
+                                 [SNew(STextBlock).Text(FText::FromString(TEXT("退出游戏"))).Font(Hint)]]
+                             + SVerticalBox::Slot().AutoHeight().HAlign(HAlign_Center).Padding(0, 18, 0, 0)
+-                            [SNew(STextBlock).Text(FText::FromString(TEXT("P / Esc  继续"))).Font(Body)]
++                            [SNew(STextBlock).Text(FText::FromString(TEXT("P  继续"))).Font(Body)]
+                             + SVerticalBox::Slot().AutoHeight().HAlign(HAlign_Center).Padding(0, 14, 0, 0)
+                             [SNew(STextBlock).Visibility(this, &SHCM1Overlay::CharacterCreditVisibility)
+                                 .Text(FText::FromString(TEXT("Selestia  ©ジンゴ / STUDIO JINGO"))).Font(Body)
+@@ -176,6 +182,8 @@
+                     ]
+                 ]
+             ]
++            +SOverlay::Slot().HAlign(HAlign_Fill).VAlign(VAlign_Fill)
++            [SNew(SHCM5VS3Armory).Controller(Controller)]
+             ]
+         ];
+     }
+@@ -256,7 +264,7 @@
+         return PC && PC->GetCombatComponent() ? FText::FromString(PC->GetCombatComponent()->GetHUDText()) : FText::GetEmpty();
+     }
+     EVisibility PauseVisibility() const
+-    { return Controller.IsValid() && Controller->IsPauseMenuOpen() ? EVisibility::Visible : EVisibility::Collapsed; }
++    { return Controller.IsValid() && Controller->IsPauseMenuOpen() && !(Controller->GetArmory()&&Controller->GetArmory()->IsOpen()) ? EVisibility::Visible : EVisibility::Collapsed; }
+     EVisibility QuestVisibility() const
+     { return Controller.IsValid() && !Controller->GetQuestHUDText().IsEmpty() ? EVisibility::HitTestInvisible : EVisibility::Collapsed; }
+     EVisibility DialogueVisibility() const
+--- a/Source/HarborCity/M1/HCM1PlayerController.cpp
++++ b/Source/HarborCity/M1/HCM1PlayerController.cpp
+@@ -1,4 +1,5 @@
+ #include "HCM1PlayerController.h"
++#include "M5VS3/HCM5VS3Armory.h"
+ #include "M5VS3/HCM5VS3Abilities.h"
+ 
+ #include "HCM1Character.h"
+@@ -72,6 +73,7 @@
+ {
+     bShouldPerformFullTickWhenPaused = true;
+     PlayerCameraManagerClass = AHCM4R2PlayerCameraManager::StaticClass();
++    Armory = CreateDefaultSubobject<UHCM5VS3Armory>(TEXT("VS3Armory"));
+     Navigation = CreateDefaultSubobject<UHCM4R2NavigationComponent>(TEXT("R2Navigation"));
+ }
+ 
+@@ -94,7 +96,9 @@
+     for (const TCHAR* Name : {TEXT("Move"), TEXT("Look"), TEXT("Drive")}) AddAction(Name, EInputActionValueType::Axis2D);
+     for (const TCHAR* Name : {TEXT("Sprint"), TEXT("Jump"), TEXT("Interact"), TEXT("Handbrake"),
+         TEXT("ResetVehicle"), TEXT("Pause"), TEXT("Save"), TEXT("Load"), TEXT("DialogueCancel"),
+-        TEXT("Attack"), TEXT("Aim"), TEXT("ToggleWeapon"), TEXT("Reload"), TEXT("Perspective"), TEXT("FlightToggle"), TEXT("FlightDescend"), TEXT("Help")}) AddAction(Name, EInputActionValueType::Boolean);
++        TEXT("Attack"), TEXT("Aim"), TEXT("ToggleWeapon"), TEXT("Reload"), TEXT("Perspective"), TEXT("FlightToggle"), TEXT("FlightDescend"), TEXT("Help"), TEXT("Armory")}) AddAction(Name, EInputActionValueType::Boolean);
++    GetM1Action(TEXT("Armory"))->bTriggerWhenPaused=true;
++    CommonContext->MapKey(GetM1Action(TEXT("Armory")),EKeys::B);
+     CommonContext->MapKey(GetM1Action(TEXT("Help")), EKeys::H);
+     CommonContext->MapKey(AddAction(TEXT("TimeOfDay"), EInputActionValueType::Boolean), EKeys::T);
+     FlightContext->MapKey(GetM1Action(TEXT("FlightToggle")), EKeys::F);
+@@ -102,7 +106,7 @@
+     CommonContext->MapKey(GetM1Action(TEXT("Perspective")), EKeys::V);
+     GetM1Action(TEXT("Pause"))->bTriggerWhenPaused = true;
+     CommonContext->MapKey(GetM1Action(TEXT("Interact")), EKeys::E);
+-    CommonContext->MapKey(GetM1Action(TEXT("Pause")), EKeys::Escape);
++    // Esc is reserved for the user desktop stop hotkey; P owns game pause.
+     CommonContext->MapKey(GetM1Action(TEXT("Pause")), EKeys::P);
+     CommonContext->MapKey(GetM1Action(TEXT("Save")), EKeys::F5);
+     CommonContext->MapKey(GetM1Action(TEXT("Load")), EKeys::F9);
+@@ -195,6 +199,7 @@
+     Input->BindAction(GetM1Action(TEXT("Handbrake")), ETriggerEvent::Canceled, this, &ThisClass::HandbrakeReleased);
+     Input->BindAction(GetM1Action(TEXT("Interact")), ETriggerEvent::Started, this, &ThisClass::RequestInteract);
+     Input->BindAction(GetM1Action(TEXT("ResetVehicle")), ETriggerEvent::Started, this, &ThisClass::RequestVehicleReset);
++    Input->BindAction(GetM1Action(TEXT("Armory")),ETriggerEvent::Started,this,&ThisClass::ToggleArmory);
+     Input->BindAction(GetM1Action(TEXT("Pause")), ETriggerEvent::Started, this, &ThisClass::TogglePauseMenu);
+     Input->BindAction(GetM1Action(TEXT("Save")), ETriggerEvent::Started, this, &ThisClass::SavePressed);
+     Input->BindAction(GetM1Action(TEXT("Load")), ETriggerEvent::Started, this, &ThisClass::LoadPressed);
+@@ -673,8 +678,11 @@
+         ? TEXT("车辆已安全复位，可以继续驾驶。") : TEXT("复位空间不足，请移开附近障碍后重试。"));
+ }
+ 
++void AHCM1PlayerController::ToggleArmory(){if(!Armory)return;if(Armory->IsOpen())Armory->Close();else Armory->Open();}
++
+ void AHCM1PlayerController::TogglePauseMenu()
+ {
++    if(Armory&&Armory->IsOpen()){Armory->Close();return;}
+     EndNPCDialogue();
+     const bool bWantPause = !bPauseMenuOpen;
+     FlushPressedKeys();
+@@ -915,6 +923,7 @@
+     if (M3Experience && !M3Experience->FillSave(Save, M3Error)) { ShowStatusMessage(M3Error); return false; }
+     if (M5Story) Save->M5Story=M5Story->ExportState();
+     if (M3Experience && GetCombatComponent()) GetCombatComponent()->FillSave(Save);
++    if(Armory)Armory->FillSave(Save);
+     const bool bSaved = UGameplayStatics::SaveGameToSlot(Save, SaveSlotName, 0);
+     ShowStatusMessage(bSaved ? TEXT("保存成功。退出并重新启动后，可按 F9 读取。") : TEXT("保存失败，原有存档未主动删除。"));
+     return bSaved;
+@@ -983,6 +992,7 @@
+     for (const auto& Pair : Lights) Pair.Value->SetLightEnabled(Save->LightStates.FindChecked(Pair.Key));
+     if (SceneSettings) SceneSettings->SetDuskPreset(Save->bSceneDusk);
+     if (M3Experience && GetCombatComponent()) GetCombatComponent()->RestoreSave(Save);
++    if(Armory)Armory->RestoreSave(Save);
+     if (M5Story && !M5Story->ImportState(Save->M5Story,M3Error)) { ShowStatusMessage(M3Error); return false; }
+     ShowStatusMessage(M3Experience ? TEXT("读取成功：玩家、车辆、照明、任务和路人状态已恢复。")
+         : TEXT("读取成功：玩家、车辆和照明状态已恢复。"));
+--- a/Source/HarborCity/M1/HCM1PlayerController.h
++++ b/Source/HarborCity/M1/HCM1PlayerController.h
+@@ -19,6 +19,7 @@
+ class UHCM4R2NavigationComponent;
+ class AHCM5StoryDirector;
+ class UHCM5VS2FlightComponent;
++class UHCM5VS3Armory;
+ 
+ UENUM(BlueprintType)
+ enum class EHCPlayerMode : uint8
+@@ -36,6 +37,8 @@
+     GENERATED_BODY()
+ public:
+     AHCM1PlayerController();
++    UHCM5VS3Armory* GetArmory() const {return Armory;}
++    void ToggleArmory();
+     bool IsControlsPanelOpen() const { return bControlsPanelOpen; }
+     void ToggleControlsPanel() { bControlsPanelOpen = !bControlsPanelOpen; }
+     void CycleVS2TimeOfDay();
+@@ -132,6 +135,7 @@
+     virtual void OnPossess(APawn* InPawn) override;
+ 
+ private:
++    UPROPERTY(VisibleAnywhere) TObjectPtr<UHCM5VS3Armory> Armory;
+     UPROPERTY(VisibleAnywhere) TObjectPtr<UHCM4R2NavigationComponent> Navigation;
+     EHCM4R2Perspective OnFootPerspective = EHCM4R2Perspective::ThirdPerson;
+     EHCM4R2Perspective DrivingPerspective = EHCM4R2Perspective::ThirdPerson;
+--- a/Source/HarborCity/M1/HCM1SaveGame.h
++++ b/Source/HarborCity/M1/HCM1SaveGame.h
+@@ -47,4 +47,9 @@
+     UPROPERTY(SaveGame) int32 M4R2RideAcceptedOrder = 0;
+     // Optional tagged M5 extension. Old saves deserialize Version=0, never pointers.
+     UPROPERTY(SaveGame) FHCM5StorySaveData M5Story;
++    // Optional tagged armory extension: historical saves receive catalog defaults.
++    UPROPERTY(SaveGame) int32 ArmoryVersion=0;
++    UPROPERTY(SaveGame) FName EquippedSwordId;
++    UPROPERTY(SaveGame) FName EquippedGunId;
++    UPROPERTY(SaveGame) TMap<FName,int32> WeaponPaintIndices;
+ };
+--- a/Source/HarborCity/M1/HCM1TestM5VS2.cpp
++++ b/Source/HarborCity/M1/HCM1TestM5VS2.cpp
+@@ -3,6 +3,7 @@
+ #include "HCM1Character.h"
+ #include "HCM1Vehicle.h"
+ #include "M3/HCM3NPC.h"
++#include "M5VS3/HCM5VS3Armory.h"
+ #include "M5VS2/HCM5VS2TownRuntime.h"
+ #include "M5VS2/HCM5VS2FlightComponent.h"
+ #include "M5VS2/HCM5VS2CornerTimeDirector.h"
+@@ -171,6 +172,9 @@
+             });
+             AddStep(TEXT("A aim actual ground ray into crowd before timing"),.4,[this]{PC->SetControlRotation((FVector(0,-6490,8)-PC->PlayerCameraManager->GetCameraLocation()).Rotation());});
+             AddStep(TEXT("Begin measured multiple-spell AI response"),.05,[this]{FrameTimes.Reset();});
++            Tap(TEXT("ToggleWeapon"),.5);
++            AddStep(TEXT("B charge and release heavy wave in crowd workload"),1,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});
++            AddStep(TEXT("Let heavy wave cross real crowd"),1,[]{});
+             Tap(TEXT("Spell4"),.8);Tap(TEXT("Spell2"),.3);
+             AddStep(TEXT("B hold AoE in six-NPC workload"),.7,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});
+             AddStep(TEXT("B let actual AoE land"),.6,[]{});Tap(TEXT("Spell1"),.3);
+@@ -181,6 +185,11 @@
+                 int32 Damaged=0;for(const auto& N:*Crowd)if(N.IsValid()&&N->GetHealth()<100)++Damaged;
+                 Check(TEXT("Multiple spells and six NPC AI performance"),FPS>=60&&P99<=25&&Crowd->Num()==6&&Damaged>=2,TEXT("uncapped; at least two real damage recipients; mean>=60 p99<=25; ordinary NPC reactions, not forced six attackers"),FString::Printf(TEXT("frames=%d mean_fps=%.3f p99_ms=%.3f wall_seconds=%.3f npcs=%d damaged=%d"),Sorted.Num(),FPS,P99,Sum/1000.,Crowd->Num(),Damaged),TEXT("B-Action spells + A crowd placement and wall-frame readback"));
+             });
++            AddStep(TEXT("Calm armory performance fixture"),6,[this]{PlaceCharacter(FVector(0,-9000,110),90);});
++            Tap(TEXT("Armory"),2);
++            AddStep(TEXT("Check measured preview is actually open"),.1,[]{},[this]{Check(TEXT("Armory performance preview active"),PC->GetArmory()->IsOpen()&&PC->GetArmory()->GetPreview(),TEXT("paused UI with real preview"),PC->GetStatusMessage(),TEXT("B Armory Action; A runtime readback"));});
++            Sample(TEXT("Armory real preview render performance"),12);
++            Tap(TEXT("Armory"),1);
+         }
+         return;
+     }
+--- a/Source/HarborCity/M1/HCM1TestM5VS3Armory.cpp
++++ b/Source/HarborCity/M1/HCM1TestM5VS3Armory.cpp
+@@ -0,0 +1,139 @@
++#include "HCM1TestRunner.h"
++#include "HCM1Character.h"
++#include "HCM1PlayerController.h"
++#include "HCM1SaveGame.h"
++#include "M3/HCM3NPC.h"
++#include "M3/HCM3NavRegion.h"
++#include "M3/HCM3State.h"
++#include "M4/HCM4CombatComponent.h"
++#include "M4/HCM4R1ReactionComponent.h"
++#include "Camera/PlayerCameraManager.h"
++#include "M5VS3/HCM5VS3Armory.h"
++#include "M5VS3/HCM5VS3Abilities.h"
++#include "Camera/CameraActor.h"
++#include "Camera/CameraComponent.h"
++#include "GameFramework/CharacterMovementComponent.h"
++#include "Components/CapsuleComponent.h"
++#include "Components/SkeletalMeshComponent.h"
++#include "Engine/GameViewportClient.h"
++#include "EngineUtils.h"
++#include "Kismet/GameplayStatics.h"
++#include "Kismet/KismetRenderingLibrary.h"
++#include "HAL/IConsoleManager.h"
++#include "Misc/CommandLine.h"
++#include "Misc/Parse.h"
++
++void AHCM1TestRunner::AddM5VS3ArmoryTests(){
++    if(Mode==TEXT("m5_vs3_r2_reopen")){
++        AddStep(TEXT("Existing armory disk save prerequisite"),2,[this]{const auto* S=Cast<UHCM1SaveGame>(UGameplayStatics::LoadGameFromSlot(PC->GetSaveSlotName(),0));Check(TEXT("Previous process armory save exists"),S&&S->ArmoryVersion==1&&S->EquippedSwordId==TEXT("CrimsonNight")&&S->EquippedGunId==TEXT("Steamlock"),TEXT("real previous-process save, no synthesized fixture"),PC->GetSaveSlotName(),TEXT("A disk prerequisite"));});
++        Tap(TEXT("Load"),2);
++        AddStep(TEXT("Read actual restored armory"),.2,[]{},[this]{const auto* A=PC->GetArmory();Check(TEXT("New process Load restores weapons and paint"),A&&A->Equipped(EHCM5WeaponClass::Sword)&&A->Equipped(EHCM5WeaponClass::Gun)&&A->Equipped(EHCM5WeaponClass::Sword)->WeaponId==TEXT("CrimsonNight")&&A->Equipped(EHCM5WeaponClass::Gun)->WeaponId==TEXT("Steamlock")&&A->GetPaintIndex(TEXT("Steamlock"))==7,TEXT("CrimsonNight / Steamlock paint8"),PC->GetStatusMessage(),TEXT("B Load Action plus A runtime readback; not OS"));});return;
++    }
++    auto Target=MakeShared<TWeakObjectPtr<AHCM3NPC>>();auto State=MakeShared<FHCM3NPCState>();auto Camera=MakeShared<TWeakObjectPtr<ACameraActor>>();auto Origin=MakeShared<FVector>(0,-6500,6);
++    auto OriginalNPCs=MakeShared<TMap<TWeakObjectPtr<AHCM3NPC>,FHCM3NPCState>>();
++    auto OriginalRegions=MakeShared<TMap<TWeakObjectPtr<AHCM3NavRegion>,FTransform>>();
++    auto Floor=[this](FVector XY){FCollisionQueryParams Q(SCENE_QUERY_STAT(R2FlatQA),false);for(TActorIterator<APawn>I(GetWorld());I;++I)Q.AddIgnoredActor(*I);FHitResult H;
++        const bool Hit=GetWorld()->LineTraceSingleByChannel(H,XY+FVector(0,0,1500),XY-FVector(0,0,1500),ECC_Visibility,Q);return Hit&&H.ImpactNormal.Z>.98f?H.ImpactPoint:XY;};
++    auto Place=[this,Target,State,Floor,Origin](){
++        const auto Ground=*Origin;PlaceCharacter(Ground+FVector(0,0,Character->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+3),0);PC->SetControlRotation(FRotator(-8,0,0));
++        if(!Target->IsValid())return;auto* N=Target->Get();const auto At=Floor(Ground+FVector(138,0,0))+FVector(0,0,N->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+3);
++        if(N->NavigationRegion)N->NavigationRegion->SetActorLocation(At);State->Transform=FTransform(FRotator(0,180,0),At);const bool Restored=N->PrepareR2SwordTestStand(At);
++        N->bStationary=true;N->PatrolPoints.Reset();if(N->GetController())N->GetController()->StopMovement();N->GetCharacterMovement()->StopMovementImmediately();N->SetActorLocation(At,false,nullptr,ETeleportType::TeleportPhysics);N->SetActorRotation(FRotator(0,180,0));
++        UE_LOG(LogTemp,Display,TEXT("R2_FIXTURE floor=%s target=%s restored=%d health=%.2f"),*Ground.ToString(),*At.ToString(),Restored,N->GetHealth());
++    };
++    auto Shot=[this](const FString& Name,bool UI=false){AddStep(Name+TEXT(" capture"),.1,[this,Name,UI]{const FString F=RunDirectory/(Name+TEXT(".png"));M3CaptureFiles.AddUnique(F);M3LastCaptureFrame=GFrameCounter;FScreenshotRequest::RequestScreenshot(F,UI,false,false,FIntRect(),true);});AddM3CaptureCompletion(Name);};
++    AddStep(TEXT("Isolated flat street fixture; adult subject"),3,[this,Target,State,Camera,Floor,Place,Origin,OriginalNPCs,OriginalRegions]{
++        for(TActorIterator<AHCM3NavRegion>I(GetWorld());I;++I)OriginalRegions->Add(*I,I->GetActorTransform());
++        for(TActorIterator<AHCM3NPC>I(GetWorld());I;++I)OriginalNPCs->Add(*I,I->CaptureState());
++        for(TActorIterator<AHCM3NPC>I(GetWorld());I;++I){if(I->StableId==TEXT("VS2_Citizen00")){*Target=*I;*State=I->CaptureState();}else{I->SetActorHiddenInGame(true);I->SetActorEnableCollision(false);I->SetActorTickEnabled(false);}}
++        FCollisionQueryParams Q(SCENE_QUERY_STAT(R2OpenFixture),false);for(TActorIterator<APawn>I(GetWorld());I;++I)Q.AddIgnoredActor(*I);
++        FCollisionObjectQueryParams Objects;Objects.AddObjectTypesToQuery(ECC_WorldStatic);Objects.AddObjectTypesToQuery(ECC_WorldDynamic);
++        bool Found=false;
++        for(const FVector Seed:{FVector(0,-6500,0),FVector(0,-9000,0),FVector(0,2500,0),FVector(2000,5000,0),FVector(-3000,5000,0),FVector(0,5000,0)}){
++            FHitResult H;if(!GetWorld()->LineTraceSingleByObjectType(H,Seed+FVector(0,0,1000),Seed-FVector(0,0,500),Objects,Q)||H.ImpactNormal.Z<.99||H.ImpactPoint.Z>120)continue;
++            const FVector G=H.ImpactPoint;
++            if(GetWorld()->OverlapAnyTestByObjectType(G+FVector(0,0,130),FQuat::Identity,Objects,FCollisionShape::MakeBox(FVector(420,420,85)),Q))continue;
++            bool Flat=true;for(const FVector Offset:{FVector(250,250,0),FVector(-250,250,0),FVector(250,-250,0),FVector(-250,-250,0)}){FHitResult Corner;if(!GetWorld()->LineTraceSingleByObjectType(Corner,G+Offset+FVector(0,0,80),G+Offset-FVector(0,0,80),Objects,Q)||FMath::Abs(Corner.ImpactPoint.Z-G.Z)>4)Flat=false;}
++            if(!Flat)continue;*Origin=G;Found=true;UE_LOG(LogTemp,Display,TEXT("R2_FIXTURE clear_floor=%s actor=%s clear_box=840cm"),*G.ToString(),*GetNameSafe(H.GetActor()));break;
++        }
++        Check(TEXT("Open flat collision-validated fixture"),Found,TEXT("840cm clear area, four floor samples"),Origin->ToString(),TEXT("A geometric fixture check"));
++        Place();const FVector Ground=*Origin;auto* C=GetWorld()->SpawnActor<ACameraActor>();*Camera=C;
++        C->SetActorLocation(Ground+FVector(-310,-310,245));C->SetActorRotation((Ground+FVector(80,0,115)-C->GetActorLocation()).Rotation());C->GetCameraComponent()->SetFieldOfView(60);PC->SetViewTarget(C);
++    },[this,Target]{Check(TEXT("Armory catalog defaults"),PC->GetArmory()->IsAvailable()&&PC->GetArmory()->GetWeapons().Num()==4&&PC->GetArmory()->Equipped(EHCM5WeaponClass::Sword)->WeaponId==TEXT("StarTide")&&PC->GetArmory()->Equipped(EHCM5WeaponClass::Gun)->WeaponId==TEXT("Arcane"),TEXT("4 data entries; StarTide/Arcane"),FString::FromInt(PC->GetArmory()->GetWeapons().Num()),TEXT("A-runtime configuration"));Check(TEXT("Adult fixture available"),Target->IsValid(),TEXT("existing adult citizen"),Target->IsValid()?Target->Get()->DisplayName:TEXT("MISSING"),TEXT("A fixture"));});
++    Tap(TEXT("ToggleWeapon"),1);
++    if(Mode==TEXT("m5_vs3_r2_showcase")){
++        auto Second=MakeShared<TWeakObjectPtr<AHCM3NPC>>();
++        auto Group=[this,Target,Second,Place,Origin,Floor](){Place();for(TActorIterator<AHCM3NPC>I(GetWorld());I;++I)if(I->StableId==TEXT("VS2_Citizen01")){*Second=*I;break;}if(Second->IsValid()){auto* N=Second->Get();N->SetActorHiddenInGame(false);N->SetActorEnableCollision(true);N->SetActorTickEnabled(true);N->PrepareR2SwordTestStand(Floor(*Origin+FVector(360,0,0))+FVector(0,0,N->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+3));}};
++        auto Aim=[this,Target](){if(!Target->IsValid())return;const FVector Eye=PC->PlayerCameraManager->GetCameraLocation();const FVector Point=Target->Get()->GetActorLocation()+FVector(0,0,20);PC->SetControlRotation((Point-Eye).Rotation());};
++        AddStep(TEXT("Unrecorded actual sword warmup"),8,[]{});Tap(TEXT("Attack"),1.3);
++        AddStep(TEXT("Start public recording after warmup"),3,[this,Place]{Place();PC->Tags.AddUnique(TEXT("R1GateRecordingReady"));});
++        // No screenshots inside the action windows: MP4 supplies the frames.
++        for(int32 I=0;I<3;++I)Tap(TEXT("Attack"),.87);AddStep(TEXT("Read combo damage"),3,[]{},[this,Target]{Check(TEXT("Showcase combo hit"),Target->IsValid()&&Target->Get()->GetHealth()<100,TEXT("actual sword damage"),Target->IsValid()?FString::SanitizeFloat(Target->Get()->GetHealth()):TEXT("missing"),TEXT("B Attack; A open fixture"));});
++        AddStep(TEXT("Two adult targets in wave path"),3,[Group]{Group();});
++        AddStep(TEXT("Charge then release sword through Action"),1.0,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});
++        AddStep(TEXT("Heavy wave readback"),4,[]{},[this,Target,Second]{Check(TEXT("Heavy wave damages two targets once"),Target->IsValid()&&Second->IsValid()&&FMath::IsNearlyEqual(Target->Get()->GetHealth(),45.f,.1f)&&FMath::IsNearlyEqual(Second->Get()->GetHealth(),45.f,.1f),TEXT("45 / 45"),FString::Printf(TEXT("%.1f / %.1f"),Target->IsValid()?Target->Get()->GetHealth():-1,Second->IsValid()?Second->Get()->GetHealth():-1),TEXT("B held/released Attack; A two-target fixture"));});
++        AddStep(TEXT("Reset and show pistol"),2,[this,Place,Second]{Place();if(Second->IsValid()){Second->Get()->SetActorHiddenInGame(true);Second->Get()->SetActorEnableCollision(false);}PC->SetViewTarget(Character);});Tap(TEXT("ToggleWeapon"),2);AddStep(TEXT("Aim at torso"),.3,[Aim]{Aim();});
++        AddStep(TEXT("ADS via Action"),2,[this]{Hold(TEXT("Aim"),FInputActionValue(true));});Tap(TEXT("Attack"),1.4);AddStep(TEXT("Release ADS"),.6,[this]{Release(TEXT("Aim"));});Tap(TEXT("Reload"),3);
++        AddStep(TEXT("Spell target reset"),2,[Place]{Place();});AddStep(TEXT("Spell aim fixture"),.2,[Aim]{Aim();});Tap(TEXT("Spell1"),1.0);AddStep(TEXT("Actual bolt release"),1.1,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});AddStep(TEXT("Bolt impact"),3,[]{});
++        AddStep(TEXT("Ground group fixture"),2,[Group]{Group();});AddStep(TEXT("Ground aim"),.2,[this,Origin]{const FVector Eye=PC->PlayerCameraManager->GetCameraLocation();PC->SetControlRotation((*Origin+FVector(280,0,0)-Eye).Rotation());});Tap(TEXT("Spell2"),.8);AddStep(TEXT("Shock held/released"),1.1,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});AddStep(TEXT("Column ring and residue"),4,[]{});
++        Tap(TEXT("ToggleWeapon"),1);AddStep(TEXT("Adult defender for real counter"),2,[this,Place,Target,Second]{Place();if(Second->IsValid()){Second->Get()->SetActorHiddenInGame(true);Second->Get()->SetActorEnableCollision(false);}if(Target->IsValid()){Target->Get()->PrepareR2SwordTestStand(Character->GetActorLocation()+FVector(90,0,0));Target->Get()->GetReactionComponent()->ReactionPreference=EHCM4R1ReactionPreference::DefendAgainstMelee;}});Tap(TEXT("Attack"),4.5);
++        AddStep(TEXT("Stop counter after actual damage"),.5,[Target]{if(Target->IsValid())Target->Get()->GetReactionComponent()->CancelCounter(TEXT("Public review segment"));});Tap(TEXT("Spell3"),4.5);
++        AddStep(TEXT("Natural mana recovery"),10,[this,Camera]{if(Camera->IsValid())PC->SetViewTarget(Camera->Get());});
++        AddStep(TEXT("Defender reset for shield"),1,[this,Target]{if(Target->IsValid())Target->Get()->PrepareR2SwordTestStand(Character->GetActorLocation()+FVector(90,0,0));});Tap(TEXT("Spell4"),1.2);Tap(TEXT("Attack"),4.0);AddStep(TEXT("Shield dissipates"),3,[Target]{if(Target->IsValid())Target->Get()->GetReactionComponent()->CancelCounter(TEXT("Shield review complete"));});
++        AddStep(TEXT("First person section"),2,[this,Place]{Place();PC->SetViewTarget(Character);});Tap(TEXT("ToggleWeapon"),1);Tap(TEXT("Perspective"),2);Tap(TEXT("Attack"),1.5);AddStep(TEXT("First person sword recovery"),2,[]{});Tap(TEXT("ToggleWeapon"),1.5);AddStep(TEXT("FP pistol aim"),.2,[Aim]{Aim();});Tap(TEXT("Attack"),2);Tap(TEXT("Spell1"),1);AddStep(TEXT("FP bolt release"),1,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});AddStep(TEXT("FP recovery"),3,[]{});Tap(TEXT("Perspective"),1);
++        AddStep(TEXT("Flight departure fixture"),2,[this,Place]{Place();PC->SetControlRotation(FRotator(-10,90,0));});Tap(TEXT("FlightToggle"),1);
++        AddStep(TEXT("Actual ascent"),3,[this]{Hold(TEXT("Jump"),FInputActionValue(true));},[this]{Release(TEXT("Jump"));});
++        Tap(TEXT("Armory"),1);AddStep(TEXT("Armory blocked in flight"),.1,[]{},[this]{Check(TEXT("B refused during flight"),PC->IsFlying()&&!PC->GetArmory()->IsOpen(),TEXT("flying, armory closed"),PC->GetStatusMessage(),TEXT("B FlightToggle and Armory Actions"));});
++        AddStep(TEXT("Flight boost through Action"),2,[this]{Hold(TEXT("Move"),FInputActionValue(FVector2D(0,1)));Hold(TEXT("Sprint"),FInputActionValue(true));},[this]{Release(TEXT("Move"));Release(TEXT("Sprint"));});
++        AddStep(TEXT("Hover over town"),4,[]{});Tap(TEXT("Perspective"),3);Tap(TEXT("Perspective"),1);Tap(TEXT("FlightToggle"),8);
++        AddStep(TEXT("Armory calm fixture"),2,[Place]{Place();});Tap(TEXT("Armory"),2);
++        for(const FName Id:{FName(TEXT("StarTide")),FName(TEXT("CrimsonNight")),FName(TEXT("Arcane")),FName(TEXT("Steamlock"))}){AddStep(TEXT("Show each real data weapon"),8,[this,Id]{PC->GetArmory()->Select(Id);});AddStep(TEXT("Preview try effect"),2,[this]{auto* A=PC->GetArmory();if(A->GetPreview())A->GetPreview()->TryEffect(A->Selected(),A->SelectedPaint());});}
++        for(int32 I=0;I<8;++I)AddStep(TEXT("Show eight paints"),1,[this,I]{PC->GetArmory()->SelectPaint(I);});
++        AddStep(TEXT("Equip alternative slots"),2,[this]{PC->GetArmory()->Equip(TEXT("CrimsonNight"),0);PC->GetArmory()->Equip(TEXT("Steamlock"),7);});Tap(TEXT("Armory"),1);
++        Tap(TEXT("Attack"),2);Tap(TEXT("ToggleWeapon"),.5);Tap(TEXT("ToggleWeapon"),1);for(int I=0;I<3;++I)Tap(TEXT("Attack"),1);AddStep(TEXT("Second sword finish"),3,[]{});
++        AddStep(TEXT("Restore authored scene after combat fixture before save"),3,[this,OriginalNPCs,OriginalRegions]{
++            PlaceCharacter(FVector(0,-10000,110),90);PC->SetControlRotation(FRotator(-8,90,0));
++            for(const auto& P:*OriginalRegions)if(P.Key.IsValid())P.Key->SetActorTransform(P.Value);
++            for(const auto& P:*OriginalNPCs)if(P.Key.IsValid()){const bool OK=P.Key->RestoreState(P.Value,Car);Check(TEXT("Restore original NPC after QA fixture"),OK,TEXT("authored valid scene before F5"),P.Key->StableId.ToString(),TEXT("A fixture cleanup, not save logic"));}
++        });Tap(TEXT("Save"),1);
++        AddStep(TEXT("Actual save fields"),.2,[]{},[this]{const auto* S=Cast<UHCM1SaveGame>(UGameplayStatics::LoadGameFromSlot(PC->GetSaveSlotName(),0));Check(TEXT("Armory actual F5 save"),S&&S->EquippedSwordId==TEXT("CrimsonNight")&&S->EquippedGunId==TEXT("Steamlock")&&S->WeaponPaintIndices.FindRef(TEXT("Steamlock"))==7,TEXT("saved equipped IDs/paint"),PC->GetStatusMessage(),TEXT("B Save Action + A disk readback"));});
++        return;
++    }
++    if(Mode==TEXT("m5_vs3_r2_matrix")){
++        FString CapsText;FParse::Value(FCommandLine::Get(),TEXT("R2MatrixCaps="),CapsText,false);
++        for(int32 Cap:{20,30,60,0}){if(!CapsText.IsEmpty()){TArray<FString> Tokens;CapsText.ParseIntoArray(Tokens,TEXT(","),true);if(!Tokens.Contains(FString::FromInt(Cap)))continue;}
++            AddStep(FString::Printf(TEXT("Frame cap %d"),Cap),1,[this,Cap]{auto* C=IConsoleManager::Get().FindConsoleVariable(TEXT("t.MaxFPS"));C->Set(Cap,ECVF_SetByConsole);Check(TEXT("Requested cap active"),C->GetInt()==Cap,FString::FromInt(Cap),FString::FromInt(C->GetInt()),TEXT("A runtime CVar; actual sampled FPS recorded per swing"));});
++            for(int32 Trial=0;Trial<10;++Trial){
++                AddStep(TEXT("Reset standing subject; not an attack"),2.2,[Place]{Place();});
++                for(int32 Combo=0;Combo<3;++Combo){
++                    const FString Label=FString::Printf(TEXT("Sword cap=%d trial=%d combo=%d"),Cap,Trial+1,Combo+1);auto Before=MakeShared<float>();auto Count=MakeShared<int32>();auto Start=MakeShared<double>();
++                    AddStep(Label+TEXT(" before"),.01,[this,Target,Before,Count,Start]{if(Target->IsValid())Target->Get()->PrepareR2SwordTestStand(Target->Get()->GetActorLocation());*Before=Target->IsValid()?Target->Get()->GetHealth():0;*Count=FrameTimes.Num();*Start=FPlatformTime::Seconds();});Tap(TEXT("Attack"),.83);
++                    AddStep(Label+TEXT(" damage"),.01,[]{},[this,Target,Before,Count,Start,Label]{const float After=Target->IsValid()?Target->Get()->GetHealth():0;const double FPS=(FrameTimes.Num()-*Count)/FMath::Max(.001,FPlatformTime::Seconds()-*Start);Check(Label,After<*Before,TEXT("health decreases from actual Attack input"),FString::Printf(TEXT("hp %.2f -> %.2f actual_fps %.2f %s"),*Before,After,FPS,*Character->GetAbilities()->GetR2Diagnostics()),TEXT("B engine Action; A standing/reset fixture, not OS"));});
++                }
++                AddStep(TEXT("Heavy standing subject reset"),1.3,[Place]{Place();});
++                AddStep(TEXT("Actual held Attack"),.7,[this]{Hold(TEXT("Attack"),FInputActionValue(true));},[this]{Release(TEXT("Attack"));});
++                AddStep(TEXT("Heavy damage readback"),1.4,[]{},[this,Target,Cap,Trial]{Check(FString::Printf(TEXT("Heavy cap=%d trial=%d"),Cap,Trial+1),Target->IsValid()&&Target->Get()->GetHealth()<100,TEXT("actual heavy release hit"),Target->IsValid()?FString::SanitizeFloat(Target->Get()->GetHealth()):TEXT("missing"),TEXT("B engine Action"));});
++            }
++        }
++        AddStep(TEXT("Distant empty swing fixture"),2,[this,Target,Place]{Place();if(Target->IsValid())Target->Get()->PrepareR2SwordTestStand(Character->GetActorLocation()+FVector(500,0,0));});
++        Tap(TEXT("Attack"),1.3);AddStep(TEXT("Empty swing readback"),.1,[]{},[this,Target]{Check(TEXT("No damage outside melee reach"),Target->IsValid()&&Target->Get()->GetHealth()==100,TEXT("100"),Target->IsValid()?FString::SanitizeFloat(Target->Get()->GetHealth()):TEXT("missing"),TEXT("B actual empty Attack; A distant fixture"));});
++        Tap(TEXT("Armory"),.4);AddStep(TEXT("Select second sword for same collider"),.2,[this]{PC->GetArmory()->Equip(TEXT("CrimsonNight"),0);IConsoleManager::Get().FindConsoleVariable(TEXT("t.MaxFPS"))->Set(30,ECVF_SetByConsole);});Tap(TEXT("Armory"),.5);
++        for(int32 I=0;I<10;++I){AddStep(TEXT("Second sword standing reset"),2.5,[Place]{Place();});Tap(TEXT("Attack"),1.3);AddStep(TEXT("Second sword readback"),.1,[]{},[this,Target,I]{Check(FString::Printf(TEXT("CrimsonNight 30 cap trial %d"),I+1),Target->IsValid()&&Target->Get()->GetHealth()<100,TEXT("health decreases"),Target->IsValid()?FString::SanitizeFloat(Target->Get()->GetHealth()):TEXT("missing"),TEXT("B Attack; A stationary fixture"));});}
++        return;
++    }
++    AddStep(TEXT("Wait normal shader/weapon warmup"),8,[]{});Tap(TEXT("Attack"),1.1);AddStep(TEXT("Reset visual subject"),1,[this,Place]{Place();PC->Tags.AddUnique(TEXT("R1GateRecordingReady"));});
++    Tap(TEXT("Armory"),1);
++    AddStep(TEXT("Armory B opens and pauses"),.1,[]{},[this]{Check(TEXT("Armory actual B Action"),PC->GetArmory()->IsOpen()&&UGameplayStatics::IsGamePaused(this)&&PC->bShowMouseCursor,TEXT("paused UI with pointer"),FString::Printf(TEXT("open=%d pause=%d pointer=%d"),PC->GetArmory()->IsOpen(),UGameplayStatics::IsGamePaused(this),PC->bShowMouseCursor),TEXT("B engine Action; not OS button"));});
++    for(const FName Id:{FName(TEXT("StarTide")),FName(TEXT("CrimsonNight")),FName(TEXT("Arcane")),FName(TEXT("Steamlock"))}){
++        AddStep(Id.ToString()+TEXT(" preview"),1,[this,Id]{PC->GetArmory()->Select(Id);});Shot(TEXT("Armory_")+Id.ToString(),true);AddStep(TEXT("Export real preview icon"),.1,[this,Id]{if(auto* P=PC->GetArmory()->GetPreview())UKismetRenderingLibrary::ExportRenderTarget(this,P->GetTexture(),RunDirectory,TEXT("Icon_")+Id.ToString()+TEXT(".png"));});
++        AddStep(Id.ToString()+TEXT(" rotate/zoom/try"),.6,[this]{if(auto* P=PC->GetArmory()->GetPreview()){P->RotatePreview(150,20);P->ZoomPreview(1);P->TryEffect(PC->GetArmory()->Selected(),0);}});
++    }
++    for(int32 Paint=0;Paint<8;++Paint){AddStep(TEXT("Eight actual paints"),.3,[this,Paint]{PC->GetArmory()->SelectPaint(Paint);});Shot(FString::Printf(TEXT("SteamPaint_%02d"),Paint+1),true);}
++    Tap(TEXT("Armory"),.5);AddStep(TEXT("Close destroys preview"),.1,[]{},[this]{Check(TEXT("Armory close frees preview"),!PC->GetArmory()->IsOpen()&&!PC->GetArmory()->GetPreview()&&!UGameplayStatics::IsGamePaused(this),TEXT("closed/unpaused/no capture"),FString::Printf(TEXT("open=%d"),PC->GetArmory()->IsOpen()),TEXT("B engine Action + A runtime"));});
++    Shot(TEXT("TP_StarTide"));Tap(TEXT("Attack"),.20);Shot(TEXT("TP_StarTide_Swing"));AddStep(TEXT("finish swing"),1.1,[]{});
++    AddStep(TEXT("Return to real player camera"),.2,[this]{PC->SetViewTarget(Character);});Tap(TEXT("Perspective"),.7);Shot(TEXT("FP_StarTide"));Tap(TEXT("Attack"),.22);Shot(TEXT("FP_StarTide_Swing"));AddStep(TEXT("finish FP swing"),1.1,[]{});Tap(TEXT("Perspective"),.4);
++    Tap(TEXT("ToggleWeapon"),.8);Shot(TEXT("TP_Arcane"));Tap(TEXT("Perspective"),.5);Shot(TEXT("FP_Arcane"));Tap(TEXT("Attack"),.6);Shot(TEXT("FP_Arcane_Shot"));Tap(TEXT("Perspective"),.4);
++    Tap(TEXT("Armory"),.5);AddStep(TEXT("Equip second sword/gun through normal catalog API"),.3,[this]{auto* A=PC->GetArmory();Check(TEXT("Equip CrimsonNight"),A->Equip(TEXT("CrimsonNight"),0),TEXT("equipped"),TEXT("catalog API used by Slate button"),TEXT("A logic; not OS"));Check(TEXT("Equip Steamlock paint 8"),A->Equip(TEXT("Steamlock"),7),TEXT("equipped"),TEXT("catalog API used by Slate button"),TEXT("A logic; not OS"));});Tap(TEXT("Armory"),.5);
++    Shot(TEXT("TP_Steamlock"));Tap(TEXT("Perspective"),.6);Shot(TEXT("FP_Steamlock"));Tap(TEXT("Perspective"),.4);Tap(TEXT("ToggleWeapon"),.3);Tap(TEXT("ToggleWeapon"),.7);Shot(TEXT("TP_CrimsonNight"));
++    AddStep(TEXT("Private isolated save schema roundtrip"),.2,[this]{auto* A=PC->GetArmory();auto* S=NewObject<UHCM1SaveGame>();A->FillSave(S);auto* Old=NewObject<UHCM1SaveGame>();A->RestoreSave(Old);Check(TEXT("Old save defaults"),A->Equipped(EHCM5WeaponClass::Sword)->WeaponId==TEXT("StarTide")&&A->Equipped(EHCM5WeaponClass::Gun)->WeaponId==TEXT("Arcane"),TEXT("StarTide/Arcane"),TEXT("legacy version=0"),TEXT("A serialization logic; no disk IO"));A->RestoreSave(S);Check(TEXT("Armory selections restore"),A->Equipped(EHCM5WeaponClass::Sword)->WeaponId==TEXT("CrimsonNight")&&A->Equipped(EHCM5WeaponClass::Gun)->WeaponId==TEXT("Steamlock")&&A->GetPaintIndex(TEXT("Steamlock"))==7,TEXT("CrimsonNight Steamlock 7"),TEXT("current save schema"),TEXT("A serialization logic; real F5/F9 pending"));});
++}
+--- a/Source/HarborCity/M1/HCM1TestM5VS3R2.cpp
++++ b/Source/HarborCity/M1/HCM1TestM5VS3R2.cpp
+@@ -21,6 +21,7 @@
+ 
+ void AHCM1TestRunner::AddM5VS3R2Tests()
+ {
++    if(Mode==TEXT("m5_vs3_r2_armory")||Mode==TEXT("m5_vs3_r2_matrix")||Mode==TEXT("m5_vs3_r2_showcase")||Mode==TEXT("m5_vs3_r2_reopen")){AddM5VS3ArmoryTests();return;}
+     auto Shot=[this](const FString& Name){AddStep(Name+TEXT(" screenshot"),.12,[this,Name]{const FString F=RunDirectory/(Name+TEXT(".png"));M3CaptureFiles.AddUnique(F);M3LastCaptureFrame=GFrameCounter;FScreenshotRequest::RequestScreenshot(F,false,false,false,FIntRect(),true);});AddM3CaptureCompletion(Name);};
+     auto Sample=[this](const FString& Name){AddStep(Name+TEXT(" bounded diagnostics"),.05,[this,Name]{
+         auto* M=Character->GetMesh();auto* A=M->GetAnimInstance();
+--- a/Source/HarborCity/M1/HCM1TestRunner.h
++++ b/Source/HarborCity/M1/HCM1TestRunner.h
+@@ -61,6 +61,7 @@
+     void AddM5VS3Tests();
+     void AddM5VS3R1Tests();
+     void AddM5VS3R2Tests();
++    void AddM5VS3ArmoryTests();
+     void AddM5VS3SideQuests();
+     bool bM3FinishPending = false, bM3SuppressAutoQuit = false, bM3EndingPlay = false;
+     uint64 M3LastCaptureFrame = MAX_uint64;
+--- a/Source/HarborCity/M3/HCM3NPC.cpp
++++ b/Source/HarborCity/M3/HCM3NPC.cpp
+@@ -38,6 +38,15 @@
+ {
+     Reaction = CreateDefaultSubobject<UHCM4R1ReactionComponent>(TEXT("M4R1Reaction"));
+     PhysicalReaction = CreateDefaultSubobject<UHCM4R1PhysicalReactionComponent>(TEXT("PhysicalReaction"));
++    SwordHurtCapsule=CreateDefaultSubobject<UCapsuleComponent>(TEXT("R2SwordHurtCapsule"));
++    SwordHurtCapsule->SetupAttachment(GetRootComponent());
++    SwordHurtCapsule->InitCapsuleSize(34,88);
++    SwordHurtCapsule->SetCollisionObjectType(ECC_GameTraceChannel1);
++    SwordHurtCapsule->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
++    SwordHurtCapsule->SetCollisionResponseToAllChannels(ECR_Ignore);
++    SwordHurtCapsule->SetCollisionResponseToChannel(ECC_GameTraceChannel1,ECR_Overlap);
++    SwordHurtCapsule->SetGenerateOverlapEvents(false);
++    SwordHurtCapsule->SetCanEverAffectNavigation(false);
+     PrimaryActorTick.bCanEverTick = true;
+     PrimaryActorTick.TickInterval = 0.1f;
+     AIControllerClass = AHCM3AIController::StaticClass();
+@@ -76,6 +85,12 @@
+ void AHCM3NPC::BeginPlay()
+ {
+     Super::BeginPlay();
++    // Apply the query-only hurt volume to existing Blueprint instances too.
++    SwordHurtCapsule->SetCapsuleSize(GetCapsuleComponent()->GetUnscaledCapsuleRadius()+2,GetCapsuleComponent()->GetUnscaledCapsuleHalfHeight());
++    SwordHurtCapsule->SetCollisionObjectType(ECC_GameTraceChannel1);
++    SwordHurtCapsule->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
++    SwordHurtCapsule->SetCollisionResponseToAllChannels(ECR_Ignore);
++    SwordHurtCapsule->SetCollisionResponseToChannel(ECC_GameTraceChannel1,ECR_Overlap);
+     // Apply to existing authored instances as well as the native defaults.
+     GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_Vehicle, ECR_Overlap);
+     GetCharacterMovement()->MaxWalkSpeed = FMath::Clamp(WalkSpeed, 40.0f, 220.0f);
+@@ -639,6 +654,7 @@
+     EndConversation();
+     const bool bVehicleDamage = DamageEvent.DamageTypeClass && DamageEvent.DamageTypeClass->IsChildOf(UHCM4R1VehicleDamageType::StaticClass());
+     if (Health <= 0) { Die(Hit, ImpulseDirection.GetSafeNormal(), !bVehicleDamage); return Applied; }
++    if(bR2StandingFixture)return Applied; // Explicit standing collision fixture, never normal play.
+     if (PhysicalReaction) PhysicalReaction->NotifySurvivingDamage(Source);
+     if(!bVehicleDamage && PhysicalReaction && (DamageEvents%3==0 || (DamageEvents%2==0 && Health<=65.f)) && PhysicalReaction->TryAnimatedKnockdown(Source))return Applied;
+     const double Now = GetWorld()->GetTimeSeconds();
+@@ -1034,6 +1050,21 @@
+     GetCharacterMovement()->DisableMovement(); GetCharacterMovement()->SetComponentTickEnabled(false);
+     SetCanAffectNavigationGeneration(false, true); SetCanBeDamaged(false);
+     ClearCorpse();
++}
++
++bool AHCM3NPC::PrepareR2SwordTestStand(const FVector& Location)
++{
++    FString Mode, Slot;
++    if(!FParse::Value(FCommandLine::Get(),TEXT("M5Test="),Mode) ||
++       !(Mode==TEXT("m5_vs3_r2_armory") || Mode==TEXT("m5_vs3_r2_matrix") || Mode==TEXT("m5_vs3_r2_showcase")) ||
++       !FParse::Value(FCommandLine::Get(),TEXT("HCM1SaveSlot="),Slot) ||
++       !Slot.StartsWith(TEXT("HarborCity_M5_VS1_Test_VS3_")) || Location.ContainsNaN()) return false;
++    // Explicit QA fixture only: restore standing/health, without inflicting damage.
++    // Attacks still enter the real Enhanced Input and collision paths.
++    EndConversation();StopNavigation();ResetCombatForRestore();bR2StandingFixture=Mode==TEXT("m5_vs3_r2_matrix");
++    SetActorLocation(Location,false,nullptr,ETeleportType::TeleportPhysics);
++    SetActorRotation(FRotator(0,180,0));bStationary=true;PatrolPoints.Reset();
++    GetCharacterMovement()->StopMovementImmediately();return true;
+ }
+ 
+ bool AHCM3NPC::ResetCombatForTest()
+--- a/Source/HarborCity/M3/HCM3NPC.h
++++ b/Source/HarborCity/M3/HCM3NPC.h
+@@ -6,6 +6,7 @@
+ #include "HCM3State.h"
+ #include "HCM3NPC.generated.h"
+ 
++class UCapsuleComponent;
+ class AHCM1Vehicle;
+ class AHCM3NavRegion;
+ class AHCM3AIController;
+@@ -25,6 +26,7 @@
+     GENERATED_BODY()
+ public:
+     AHCM3NPC();
++    UPROPERTY(VisibleAnywhere) TObjectPtr<UCapsuleComponent> SwordHurtCapsule;
+     virtual void Tick(float DeltaSeconds) override;
+     virtual float TakeDamage(float DamageAmount, const FDamageEvent& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+     virtual void NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp,
+@@ -87,6 +89,8 @@
+     bool RespawnAtAuthoredPost();
+     void RestoreNamedDeathCooldown();
+     bool ResetCombatForTest();
++    bool PrepareR2SwordTestStand(const FVector& Location);
++    bool bR2StandingFixture=false;
+     UFUNCTION(BlueprintCallable) bool BeginConversation(AActor* Partner);
+     UFUNCTION(BlueprintCallable) void EndConversation();
+     /** Completes only at a valid, nearby door-side stand point; no visible seated animation. */
+--- a/Source/HarborCity/M3/HCM3Recording.cpp
++++ b/Source/HarborCity/M3/HCM3Recording.cpp
+@@ -1,5 +1,6 @@
+ #include "HCM3Recording.h"
+ #include "M5VS3/HCM5VS3QA.h"
++#include "M5VS3/HCM5VS3Armory.h"
+ #include "M1/HCM1PlayerController.h"
+ #include "M1/HCM1Character.h"
+ #include "Async/Async.h"
+@@ -345,7 +346,10 @@
+             *S.Directory, S.CaptureRect.Min.X, S.CaptureRect.Min.Y, S.CaptureRect.Max.X, S.CaptureRect.Max.Y,
+             S.RequestedSize.X, S.RequestedSize.Y, S.SceneViewportSize.X, S.SceneViewportSize.Y, S.WindowSize.X, S.WindowSize.Y);
+     }
+-    if (!PC || !PC->IsGameplayFocused() || PC->IsPauseMenuOpen()) { Stop(TEXT("pause_or_focus_lost")); return; }
++    // An explicitly requested armory capture includes the intentionally paused
++    // game UI. Native Esc/P and application-activation stop handlers stay intact.
++    const bool bArmoryCapture = HCM5VS3LocalQA() && PC && PC->GetArmory() && PC->GetArmory()->IsOpen();
++    if (!PC || !PC->IsGameplayFocused() || (PC->IsPauseMenuOpen() && !bArmoryCapture)) { Stop(TEXT("pause_or_focus_lost")); return; }
+     FIntRect CurrentRect(0, 0, 0, 0);
+     FIntPoint CurrentWindowSize = FIntPoint::ZeroValue;
+     const TSharedPtr<SViewport> CurrentWidget = S.ViewportWidget.Pin();
+--- a/Source/HarborCity/M4/HCM4CombatComponent.cpp
++++ b/Source/HarborCity/M4/HCM4CombatComponent.cpp
+@@ -1,4 +1,5 @@
+ #include "HCM4CombatComponent.h"
++#include "M5VS3/HCM5VS3Armory.h"
+ #include "M5VS3/HCM5VS3Abilities.h"
+ #include "EngineUtils.h"
+ 
+@@ -512,10 +513,10 @@
+     if (!IsCombatEnabled()) return FString();
+     if (PlayerHealth <= 0) return FString::Printf(TEXT("生命 0  |  暂时失去行动\n约 %.0f 秒后安全恢复"), FMath::CeilToFloat(GetDefeatRecoveryRemaining()));
+     if (WeaponMode == EHCM4WeaponMode::Sword)
+-        return FString::Printf(TEXT("星潮剑  |  生命 %.0f\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器"),PlayerHealth);
++        return FString::Printf(TEXT("%s  |  生命 %.0f\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器    B 武器库"),*(GetPC()&&GetPC()->GetArmory()?GetPC()->GetArmory()->EquippedName(true):FString(TEXT("星潮剑"))),PlayerHealth);
+     if (WeaponMode == EHCM4WeaponMode::Unarmed)
+         return FString::Printf(TEXT("空手  |  生命 %.0f\n左键 三段拳击    Q 切换武器"), PlayerHealth);
+-    return FString::Printf(TEXT("魔导枪  %d / %d  |  生命 %.0f%s\n左键 单发    按住右键 瞄准\nR 装弹    Q 收枪"), MagazineAmmo, ReserveAmmo, PlayerHealth,
++    return FString::Printf(TEXT("%s  %d / %d  |  生命 %.0f%s\n左键 单发    按住右键 瞄准\nR 装弹    Q 收枪    B 武器库"), *(GetPC()&&GetPC()->GetArmory()?GetPC()->GetArmory()->EquippedName(false):FString(TEXT("魔导枪"))), MagazineAmmo, ReserveAmmo, PlayerHealth,
+         bReloading ? TEXT("  装弹中") : TEXT(""));
+ }
+ void UHCM4CombatComponent::FillSave(UHCM1SaveGame* Save) const
+@@ -575,3 +576,9 @@
+     }
+     return Applied;
+ }
++
++void UHCM4CombatComponent::ApplyArmoryGunStats(float DamageScale,float SpeedScale,int32 Capacity){
++    DamageScale=FMath::Clamp(DamageScale,.85f,1.15f);SpeedScale=FMath::Clamp(SpeedScale,.85f,1.15f);
++    BodyDamage=34.f*DamageScale;HeadDamage=100.f*DamageScale;ShotInterval=.28f/SpeedScale;
++    MagazineCapacity=FMath::Clamp(Capacity,11,13);MagazineAmmo=FMath::Min(MagazineAmmo,MagazineCapacity);
++}
+--- a/Source/HarborCity/M4/HCM4CombatComponent.h
++++ b/Source/HarborCity/M4/HCM4CombatComponent.h
+@@ -104,6 +104,7 @@
+     void FillSave(UHCM1SaveGame* Save) const;
+     bool ValidateSave(const UHCM1SaveGame* Save) const;
+     void RestoreSave(const UHCM1SaveGame* Save);
++    void ApplyArmoryGunStats(float DamageScale,float SpeedScale,int32 Capacity);
+ 
+     // Kept for old reflected data; the live gain is now derived once from projection magnification.
+     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="M4|Aim") float AimLookScale = .625f;
+--- a/Source/HarborCity/M4R2/HCM4R2PresentationComponent.cpp
++++ b/Source/HarborCity/M4R2/HCM4R2PresentationComponent.cpp
+@@ -423,9 +423,9 @@
+         // Return more gently after combat ends; neither clock nor attack pose changes.
+         IdleArmBlend=bPoseReady?FMath::FInterpConstantTo(IdleArmBlend,bAttacking?0.f:1.f,DeltaSeconds,bAttacking?12.5f:4.f):(bAttacking?0.f:1.f);
+         const float IdleWeight=IdleArmBlend*IdleArmBlend*(3.f-2.f*IdleArmBlend);
+-        const FName UpperNames[2]={TEXT("upperarm_l"),TEXT("upperarm_r")};
+-        const FName LowerNames[2]={TEXT("lowerarm_l"),TEXT("lowerarm_r")};
+-        const FName HandNames[2]={TEXT("hand_l"),TEXT("hand_r")};
++        const FName UpperNames[2]={(SwordView?PresentationBone(Source,TEXT("upperarm_l"),TEXT("UpperArm_L")):FName(TEXT("upperarm_l"))),(SwordView?PresentationBone(Source,TEXT("upperarm_r"),TEXT("UpperArm_R")):FName(TEXT("upperarm_r")))};
++        const FName LowerNames[2]={(SwordView?PresentationBone(Source,TEXT("lowerarm_l"),TEXT("LowerArm_L")):FName(TEXT("lowerarm_l"))),(SwordView?PresentationBone(Source,TEXT("lowerarm_r"),TEXT("LowerArm_R")):FName(TEXT("lowerarm_r")))};
++        const FName HandNames[2]={(SwordView?PresentationBone(Source,TEXT("hand_l"),TEXT("Hand_L")):FName(TEXT("hand_l"))),(SwordView?PresentationBone(Source,TEXT("hand_r"),TEXT("Hand_R")):FName(TEXT("hand_r")))};
+         FTransform OriginalUpper[2],OriginalLower[2],OriginalHand[2];
+         FVector Targets[2];FQuat ExpectedWrist[2];bool Solved[2]={false,false};
+         for(int32 Side=0;Side<2;++Side)
+@@ -455,7 +455,7 @@
+                 // Display-only fit of the real mocap hand path. Keep the hand below
+                 // the sight line, preserving its wrist rotation and source swing timing.
+                 FVector InView=ViewQ.UnrotateVector(Mount.TransformPosition(Targets[Side])-LastView.Location);
+-                InView.X=FMath::Clamp(InView.X,28.,52.);InView.Y=FMath::Clamp(InView.Y,-16.,30.);InView.Z=FMath::Clamp(InView.Z,-34.,-12.);
++                InView.X=FMath::Clamp(InView.X,48.,62.);InView.Y=FMath::Clamp(InView.Y,-16.,26.);InView.Z=FMath::Clamp(InView.Z,-15.,-8.);
+                 Targets[Side]=Mount.InverseTransformPosition(LastView.Location+ViewQ.RotateVector(InView));
+             }
+             const float SideSign=Side==0?-1.f:1.f;
+@@ -498,6 +498,15 @@
+                     Hand.SetRotation(FQuat::Slerp(Hand.GetRotation(),Relaxed,IdleWeight).GetNormalized());
+                 }
+             }
++            if(SwordView&&Side==1&&!Character->GetAbilities()->IsBusy()){
++                const FName Index=PresentationBone(Source,TEXT("index_01_r"),TEXT("IndexProximal_R"));
++                const FName Little=PresentationBone(Source,TEXT("pinky_01_r"),TEXT("LittleProximal_R"));
++                if(FirstPersonBody->DoesSocketExist(Index)&&FirstPersonBody->DoesSocketExist(Little)){
++                    const FVector Across=(FirstPersonBody->GetSocketTransform(Index,RTS_Component).GetLocation()-FirstPersonBody->GetSocketTransform(Little,RTS_Component).GetLocation()).GetSafeNormal();
++                    const FVector Ready=Mount.InverseTransformVectorNoScale(ViewQ.RotateVector(FVector(.65,-.08,.75).GetSafeNormal())).GetSafeNormal();
++                    Hand.SetRotation((FQuat::FindBetweenNormals(Across,Ready)*Hand.GetRotation()).GetNormalized());
++                }
++            }
+             ExpectedWrist[Side]=Hand.GetRotation();
+             // IK preserves the shoulder and lengths. Only this optional idle
+             // wrist correction changes orientation; all finger locals stay copied.
+--- a/Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp
+@@ -1,4 +1,6 @@
+ #include "HCM5VS3Abilities.h"
++#include "HCM5VS3Armory.h"
++#include "HCM5VS3SwordWave.h"
+ #include "HCM5VS3TargetVisual.h"
+ #include "M1/HCM1Character.h"
+ #include "M1/HCM1PlayerController.h"
+@@ -21,6 +23,8 @@
+ #include "Engine/Texture2D.h"
+ #include "Engine/StaticMesh.h"
+ #include "Engine/World.h"
++#include "Components/CapsuleComponent.h"
++#include "Engine/StaticMeshSocket.h"
+ #include "EngineUtils.h"
+ #include "GameFramework/CharacterMovementComponent.h"
+ #include "Kismet/GameplayStatics.h"
+@@ -43,15 +47,20 @@
+     auto* D=NewObject<UDecalComponent>(Owner,FName(Name));Owner->AddInstanceComponent(D);D->SetupAttachment(Owner->GetRootComponent());D->DecalSize=FVector(80,150,150);D->SetFadeScreenSize(.001f);D->RegisterComponent();D->SetVisibility(false);return D;
+ }
+ FName Hand(USkinnedMeshComponent* Mesh){return Mesh->GetBoneIndex(TEXT("Hand_R"))!=INDEX_NONE?TEXT("Hand_R"):TEXT("hand_r");}
+-UNiagaraSystem* System(const TCHAR* Role,int32 Kind){return Asset<UNiagaraSystem>(FString(R1Root)+TEXT("FX/Final/"),FString::Printf(TEXT("NS_R1_%s_%d"),Role,Kind));}
++FLinearColor SpellColor(int32 Kind){const FLinearColor C[]={FLinearColor(.08,.48,1),FLinearColor(.85,.13,1),FLinearColor(.12,1,.3),FLinearColor(1,.63,.12)};return C[FMath::Clamp(Kind,0,3)];}
++UNiagaraSystem* System(const TCHAR* Role,int32 Kind){
++    if(FParse::Param(FCommandLine::Get(),TEXT("R2LegacyFX")))return Asset<UNiagaraSystem>(FString(R1Root)+TEXT("FX/Final/"),FString::Printf(TEXT("NS_R1_%s_%d"),Role,Kind));
++    const FString Name=FString(Role)==TEXT("Halo")?TEXT("Charge"):FString(Role)==TEXT("BladeArc")?TEXT("BladeRibbon"):FString(Role);
++    return Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/Postgate/"),TEXT("NS_Postgate_")+Name);
++}
+ UNiagaraComponent* Particles(AActor* Owner,const TCHAR* Role,int32 Kind,const FVector& At,const FVector& Scale=FVector::OneVector){
+     auto* S=System(Role,Kind);if(!S)return nullptr;
+-    return UNiagaraFunctionLibrary::SpawnSystemAtLocation(Owner,S,At,FRotator::ZeroRotator,Scale,true,true,ENCPoolMethod::AutoRelease);
++    auto* FX=UNiagaraFunctionLibrary::SpawnSystemAtLocation(Owner,S,At,FRotator::ZeroRotator,Scale,true,true,ENCPoolMethod::AutoRelease);if(FX){FX->SetVariableLinearColor(TEXT("User.Color"),SpellColor(Kind));if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R2_VFX_SPAWN system=%s scope=gameplay"),*S->GetPathName());}return FX;
+ }
+ void StopFX(TObjectPtr<UNiagaraComponent>& C){if(C)C->Deactivate();C=nullptr;}
+ void Sound(AActor* Owner,const TCHAR* Role,int32 Kind,const FVector& At){
+     auto* S=Asset<USoundBase>(FString(R1Root)+TEXT("Audio/"),FString::Printf(TEXT("SW_R1_%s_%d"),Role,Kind));
+-    if(S)UGameplayStatics::PlaySoundAtLocation(Owner,S,At,.55f);
++    if(S)UGameplayStatics::PlaySoundAtLocation(Owner,S,At,1.35f);
+ }
+ // A sword crosses the closed palm, unlike the forward barrel axis of HandGrip_R.
+ FTransform SwordGrip(USkinnedMeshComponent* Body){
+@@ -85,7 +94,7 @@
+ void UHCM5VS3Abilities::SpawnR2Impact(const FVector& Where){
+     if(!bR2LegacyFX&&R2ImpactSystem){
+         R2ActiveImpacts.RemoveAll([](const auto& C){return !C.IsValid()||!C->IsActive();});
+-        if(R2ActiveImpacts.Num()<12)R2ActiveImpacts.Add(UNiagaraFunctionLibrary::SpawnSystemAtLocation(Hero,R2ImpactSystem,Where,FRotator::ZeroRotator,FVector(1),true,true,ENCPoolMethod::AutoRelease));
++        if(R2ActiveImpacts.Num()<12){auto* C=UNiagaraFunctionLibrary::SpawnSystemAtLocation(Hero,R2ImpactSystem,Where,FRotator::ZeroRotator,FVector(1),true,true,ENCPoolMethod::AutoRelease);if(C){C->SetVariableLinearColor(TEXT("User.Color"),WeaponTint());R2ActiveImpacts.Add(C);}}
+     }
+     else Particles(Hero,TEXT("Burst"),0,Where,FVector(2));
+ }
+@@ -93,9 +102,10 @@
+     Super::BeginPlay();Hero=Cast<AHCM1Character>(GetOwner());bEnabled=Hero&&GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/"));
+     if(!bEnabled){SetComponentTickEnabled(false);return;}
+     Combat=Hero->GetCombatComponent();Combat->OnAcceptedShot.AddUObject(this,&ThisClass::AcceptedShot);
+-    R2SlashSystem=Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/"),TEXT("NS_R2_Slash"));
+-    R2SlashFPSystem=Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/"),TEXT("NS_R2_SlashFP"));
+-    R2ImpactSystem=Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/"),TEXT("NS_R2_Impact"));
++    R2SlashSystem=Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/Postgate/"),TEXT("NS_Postgate_Slash"));
++    R2ImpactSystem=Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/Postgate/"),TEXT("NS_Postgate_Impact"));
++    R2RibbonSystem=Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/Postgate/"),TEXT("NS_Postgate_BladeRibbon"));
++    R2WaveSystem=Asset<UNiagaraSystem>(TEXT("/Game/HarborCity/M5VS3/R2/FX/Postgate/"),TEXT("NS_Postgate_SwordWave"));
+     auto& Clamp=Hero->GetCharacterMovement()->ProcessRootMotionPostConvertToWorld;
+     if(!Clamp.IsBound()){Clamp.BindUObject(this,&ThisClass::ClampSwordRoot);bOwnsRootClamp=true;}
+     // Ground-projected runes must not project onto stockings or layered clothing.
+@@ -124,9 +134,35 @@
+     for(const TCHAR* Role:{TEXT("Charge"),TEXT("Release"),TEXT("Impact"),TEXT("Break"),TEXT("Summon"),TEXT("Whoosh")})for(int32 K=0;K<4;++K)PreloadedAssets.Add(Asset<USoundBase>(FString(R1Root)+TEXT("Audio/"),FString::Printf(TEXT("SW_R1_%s_%d"),Role,K)));
+     TargetMark=AddMesh(Hero,TEXT("R1TargetMark"));TargetMark->SetStaticMesh(Asset<UStaticMesh>(OldRoot,TEXT("SM_MagicBolt")));TargetMark->SetMaterial(0,RuneSurfaces[0]);
+ }
++void UHCM5VS3Abilities::RefreshArmoryWeapons(){
++    auto* PC=Hero?Cast<AHCM1PlayerController>(Hero->GetController()):nullptr;
++    auto* A=PC?PC->GetArmory():nullptr;if(!bEnabled||!A||!A->IsAvailable()||!Sword||!MagicGun)return;
++    EquippedSwordData=A->Equipped(EHCM5WeaponClass::Sword);EquippedGunData=A->Equipped(EHCM5WeaponClass::Gun);
++    auto Apply=[this,A](UHCM5VS3WeaponData* W,UStaticMeshComponent* TP,UStaticMeshComponent* FP,bool Blade){
++        if(!W)return;auto* M=W->Mesh.LoadSynchronous();if(!M)return;TP->SetStaticMesh(M);FP->SetStaticMesh(M);
++        const int32 Paint=A->GetPaintIndex(W->WeaponId);
++        if(Blade){SwordOutline->SetStaticMesh(M);auto* Out=Asset<UMaterialInterface>(FString(R1Root)+TEXT("Art/"),TEXT("M_R1_SwordOutline"));for(int32 I=0;I<SwordOutline->GetNumMaterials();++I)SwordOutline->SetMaterial(I,Out);SwordMaterials.Reset();}
++        if(W->Paints.IsValidIndex(Paint))for(int32 I=0;I<W->Paints[Paint].Materials.Num();++I){
++            auto* Material=W->Paints[Paint].Materials[I].LoadSynchronous();if(!Material)continue;
++            auto* Dynamic=UMaterialInstanceDynamic::Create(Material,this);TP->SetMaterial(I,Dynamic);FP->SetMaterial(I,Dynamic);if(Blade)SwordMaterials.Add(Dynamic);
++        }
++    };
++    Apply(EquippedSwordData,Sword,FirstSword,true);Apply(EquippedGunData,MagicGun,FirstMagicGun,false);
++    if(EquippedGunData)Combat->ApplyArmoryGunStats(EquippedGunData->DamageScale,EquippedGunData->AttackSpeedScale,EquippedGunData->MagazineCapacity);
++}
++FTransform UHCM5VS3Abilities::SwordWorldGrip(bool FP) const{
++    USkinnedMeshComponent* Mesh=FP?Hero->GetR2PresentationComponent()->GetFirstPersonMesh():static_cast<USkinnedMeshComponent*>(Hero->GetMesh());
++    const FTransform Grip=SwordGrip(Mesh?Mesh:Hero->GetMesh());
++    return EquippedSwordData?(FP?EquippedSwordData->FirstPersonGrip:EquippedSwordData->ThirdPersonGrip)*Grip:Grip;
++}
++FLinearColor UHCM5VS3Abilities::WeaponTint(bool Gun) const{
++    const auto* PC=Hero?Cast<AHCM1PlayerController>(Hero->GetController()):nullptr;const auto* A=PC?PC->GetArmory():nullptr;const auto* W=Gun?EquippedGunData.Get():EquippedSwordData.Get();
++    const int32 I=A&&W?A->GetPaintIndex(W->WeaponId):0;return W&&W->Paints.IsValidIndex(I)?W->Paints[I].EffectColor:FLinearColor(.08f,.48f,1.f);
++}
++bool UHCM5VS3Abilities::ClaimSwordWaveHit(int32 Serial,AHCM3NPC* NPC){if(!NPC)return false;if(Serial==SwingSerial){if(SwingHits.Contains(NPC))return false;SwingHits.Add(NPC);}return true;}
+ void UHCM5VS3Abilities::EndPlay(const EEndPlayReason::Type Reason){SelectTarget(nullptr);StopFX(ChargeFX);StopFX(HealFX);StopFX(BladeFX);StopFX(SummonFX);if(bOwnsRootClamp&&Hero)Hero->GetCharacterMovement()->ProcessRootMotionPostConvertToWorld.Unbind();if(Combat)Combat->OnAcceptedShot.RemoveAll(this);Super::EndPlay(Reason);}
+ void UHCM5VS3Abilities::ResetTransient(){
+-    bSlashNotifyPending=false;
++    bSlashNotifyPending=false;bSwordWindowOpen=false;bSwordWindowClosing=false;CrescentRemaining=0;StopFX(ActiveCrescent);
+     bCastReleaseFullBody=false;bHeld=false;bSpellHeld=false;bComboBuffered=false;SwingTime=0;CastKind=-1;RuneKind=-1;CastTime=0;HitStop=0;bBladeSample=false;DrawTime=0;
+     if(Hero){Hero->SetCombatMovementScale(1);if(auto* A=Hero->GetMesh()->GetAnimInstance()){if(SwingMontage){A->Montage_Resume(SwingMontage);A->Montage_Stop(.12f,SwingMontage);}if(ReadyMontage)A->Montage_Stop(.12f,ReadyMontage);}}
+     StopFX(ChargeFX);StopFX(BladeFX);SelectTarget(nullptr);for(const auto& M:RuneLayers)if(M)M->SetVisibility(false);if(GroundIndicator)GroundIndicator->SetVisibility(false);if(FloorRune)FloorRune->SetVisibility(false);
+@@ -154,9 +190,9 @@
+ void UHCM5VS3Abilities::ReleaseSword(){if(!bHeld)return;bHeld=false;if(Combat->CanUseCombat())StartSwing(HoldTime>=.55f);else ResetTransient();}
+ void UHCM5VS3Abilities::StartSwing(bool Heavy){
+     if(auto* A=Hero->GetMesh()->GetAnimInstance();A&&ReadyMontage)A->Montage_Stop(.06f,ReadyMontage);ReadyMontage=nullptr;
+-    bHeavy=Heavy;Combo=Heavy?2:LastSwingAge<SwingDuration+1.2f?(Combo+1)%3:0;SwingDuration=Heavy?1.15f:Combo==2?.94f:.76f;SwingTime=SwingDuration;LastSwingAge=0;SwingHits.Reset();bBladeSample=false;bContact=false;
++    bHeavy=Heavy;Combo=Heavy?2:LastSwingAge<SwingDuration+1.2f?(Combo+1)%3:0;SwingDuration=(Heavy?1.15f:Combo==2?.94f:.76f)/(EquippedSwordData?FMath::Clamp(EquippedSwordData->AttackSpeedScale,.85f,1.15f):1.f);SwingTime=SwingDuration;LastSwingAge=0;SwingHits.Reset();bBladeSample=false;bContact=false;bSwordWindowOpen=false;bSwordWindowClosing=false;++SwingSerial;
+     Hero->SetSprinting(false);Hero->SetCombatMovementScale(0);Hero->GetCharacterMovement()->StopMovementImmediately();
+-    SwordApproachTarget.Reset();float FacingYaw=Hero->GetControlRotation().Yaw,Best=200.f;
++    SwordApproachTarget.Reset();float FacingYaw=Hero->GetControlRotation().Yaw,Best=300.f;
+     const FVector Aim=FRotator(0,FacingYaw,0).Vector();
+     for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It){const FVector Delta=It->GetActorLocation()-Hero->GetActorLocation();const float Distance=Delta.Size2D();
+         if(It->IsCombatEnabled()&&!It->IsHidden()&&Distance<Best&&(Delta.GetSafeNormal2D()|Aim)>.65f){
+@@ -173,38 +209,88 @@
+     if(SwingTime<=0||!SwordApproachTarget.IsValid())return Motion;
+     const FVector Offset=SwordApproachTarget->GetActorLocation()-Hero->GetActorLocation();const float Distance=Offset.Size2D();
+     const FVector Toward=Offset.GetSafeNormal2D();FVector Travel=Motion.GetTranslation();const float Closing=FVector::DotProduct(Travel,Toward);
+-    const float Allowed=FMath::Max(0.f,Distance-115.f);if(Closing>Allowed)Travel-=Toward*(Closing-Allowed);
++    // Warp the source root into the opponent frame; its authored turn/side step
++    // must not rotate the capsule away from an already selected target mid-swing.
++    Travel=Toward*Closing+FVector(0,0,Travel.Z);
++    const float Allowed=FMath::Max(0.f,Distance-135.f);if(Closing>Allowed)Travel-=Toward*(Closing-Allowed);
+     // A small swept retreat also resolves an initially over-close approach.
+     // CharacterMovement still owns collision; this never teleports through geometry.
+-    if(Distance<110.f)Travel-=Toward*FMath::Min(110.f-Distance,100.f*Dt);
+-    FTransform Result=Motion;Result.SetTranslation(Travel);return Result;
++    if(Distance<130.f)Travel-=Toward*FMath::Min(135.f-Distance,350.f*Dt);
++    else if(Distance>150.f&&!bSwordWindowOpen)Travel+=Toward*FMath::Min(Distance-140.f,550.f*Dt);
++    FTransform Result=Motion;Result.SetTranslation(Travel);
++    const float Yaw=Hero->GetActorRotation().Yaw,TargetYaw=Offset.Rotation().Yaw;
++    const float NextYaw=FMath::FixedTurn(Yaw,TargetYaw,720.f*Dt);
++    Result.SetRotation(FRotator(0,FMath::FindDeltaAngleDegrees(Yaw,NextYaw),0).Quaternion());
++    if(R1Trace()&&SwingTime>SwingDuration-.035f)UE_LOG(LogTemp,Display,TEXT("R2_ROOT swing=%d source_yaw=%.3f applied_yaw=%.3f facing=%.2f target_yaw=%.2f distance=%.1f"),SwingSerial,Motion.Rotator().Yaw,Result.Rotator().Yaw,Yaw,TargetYaw,Distance);
++    return Result;
++}
++void UHCM5VS3Abilities::BeginSwordWindow(){
++    if(!bEnabled||SwingTime<=0||bSwordWindowOpen)return;
++    bSwordWindowOpen=true;bSwordWindowClosing=false;bBladeSample=false;bSlashNotifyPending=true;
++    SwordWindowStartedAt=GetWorld()->GetTimeSeconds();
++    if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R2_SWORD window_begin swing=%d combo=%d heavy=%d time=%.4f"),SwingSerial,Combo,bHeavy,SwordWindowStartedAt);
++}
++void UHCM5VS3Abilities::EndSwordWindow(){
++    // Preserve the final posed sample when Begin/End arrive in the same low-FPS tick.
++    if(bSwordWindowOpen)bSwordWindowClosing=true;
++}
++void UHCM5VS3Abilities::ApplySwordHit(AHCM3NPC* NPC,const FHitResult& H,const TCHAR* Method){
++    if(!NPC||SwingHits.Contains(NPC)||!NPC->IsCombatEnabled()||NPC->IsHidden()||NPC->IsDead())return;
++    // Character-only hurt volumes do not stop at props. A separate world query
++    // prevents the generous sector from damaging a character behind a wall.
++    FHitResult Wall;FCollisionQueryParams O(SCENE_QUERY_STAT(R2SwordOcclusion),false,Hero);O.AddIgnoredActor(NPC);
++    FCollisionObjectQueryParams Objects;Objects.AddObjectTypesToQuery(ECC_WorldStatic);Objects.AddObjectTypesToQuery(ECC_WorldDynamic);
++    if(GetWorld()->LineTraceSingleByObjectType(Wall,Hero->GetActorLocation()+FVector(0,0,25),NPC->GetActorLocation()+FVector(0,0,25),Objects,O)){
++        if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R2_SWORD reject swing=%d npc=%s reason=world_occlusion obstacle=%s"),SwingSerial,*NPC->GetName(),*GetNameSafe(Wall.GetActor()));return;
++    }
++    SwingHits.Add(NPC);const float Before=NPC->GetHealth();
++    UGameplayStatics::ApplyPointDamage(NPC,(bHeavy?55.f:Combo==2?35.f:24.f)*(EquippedSwordData?FMath::Clamp(EquippedSwordData->DamageScale,.85f,1.15f):1.f),(NPC->GetActorLocation()-Hero->GetActorLocation()).GetSafeNormal(),H,Hero->GetController(),Hero,UHCM4MeleeDamageType::StaticClass());
++    AHCM5VS3SpellFX::SpawnNumber(Hero,NPC->GetActorLocation()+FVector(0,0,120),FMath::RoundToInt(Before-NPC->GetHealth()),false);
++    if(bHeavy&&!NPC->IsDead()&&!NPC->IsPhysicalReactionActive())NPC->LaunchCharacter((NPC->GetActorLocation()-Hero->GetActorLocation()).GetSafeNormal2D()*280+FVector(0,0,80),false,false);
++    SpawnR2Impact(H.ImpactPoint);Sound(Hero,TEXT("Impact"),0,H.ImpactPoint);TriggerImpactShake();HitStop=.065f;
++    if(auto* Anim=Hero->GetMesh()->GetAnimInstance();Anim&&SwingMontage)Anim->Montage_Pause(SwingMontage);
++    if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R2_SWORD hit swing=%d npc=%s method=%s hp_before=%.3f hp_after=%.3f distance=%.3f component=%s"),SwingSerial,*NPC->GetName(),Method,Before,NPC->GetHealth(),FVector::Dist2D(Hero->GetActorLocation(),NPC->GetActorLocation()),*GetNameSafe(H.GetComponent()));
+ }
+ void UHCM5VS3Abilities::SwordTrace(){
+-    if(!Sword||!Sword->GetStaticMesh())return;
+-    // This tick follows skeletal evaluation. Use that same evaluated grip for
+-    // collision and presentation; the component still contains the previous
+-    // tick's transform until UpdateVisuals below.
+-    const FTransform T=SwordGrip(Hero->GetMesh());const FVector Base=T.TransformPosition(FVector(12,0,0)),Tip=T.TransformPosition(FVector(94,0,0));
+-    if(!bBladeSample){if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R1_TRACE blade start base=%s tip=%s"),*Base.ToString(),*Tip.ToString());PreviousBase=Base;PreviousTip=Tip;bBladeSample=true;return;}
+-    FCollisionQueryParams Q(SCENE_QUERY_STAT(R1Sword),false,Hero);for(const auto& A:SwingHits)if(A.IsValid())Q.AddIgnoredActor(A.Get());
+-    for(int32 I=0;I<=6&&!bContact;++I){FHitResult H;const float A=I/6.f;
+-        if(!GetWorld()->SweepSingleByChannel(H,FMath::Lerp(PreviousBase,PreviousTip,A),FMath::Lerp(Base,Tip,A),FQuat::Identity,ECC_Visibility,FCollisionShape::MakeSphere(7),Q))continue;
+-        if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R1_TRACE blade hit=%s component=%s point=%s base=%s tip=%s"),*GetNameSafe(H.GetActor()),*GetNameSafe(H.GetComponent()),*H.ImpactPoint.ToString(),*Base.ToString(),*Tip.ToString());
+-        if(auto* NPC=Cast<AHCM3NPC>(H.GetActor())){
+-            if(SwingHits.Contains(NPC))continue;SwingHits.Add(NPC);Q.AddIgnoredActor(NPC);
+-            const float Before=NPC->GetHealth();
+-            UGameplayStatics::ApplyPointDamage(NPC,bHeavy?55.f:Combo==2?35.f:24.f,(Tip-PreviousTip).GetSafeNormal(),H,Hero->GetController(),Hero,UHCM4MeleeDamageType::StaticClass());
+-            AHCM5VS3SpellFX::SpawnNumber(Hero,NPC->GetActorLocation()+FVector(0,0,120),FMath::RoundToInt(Before-NPC->GetHealth()),false);
+-            if(bHeavy&&!NPC->IsDead()&&!NPC->IsPhysicalReactionActive())NPC->LaunchCharacter((NPC->GetActorLocation()-Hero->GetActorLocation()).GetSafeNormal2D()*280+FVector(0,0,80),false,false);
+-            SpawnR2Impact(H.ImpactPoint);Sound(Hero,TEXT("Impact"),0,H.ImpactPoint);
+-            // Local 65ms hit-stop; keep the montage alive and finish its recovery.
+-            TriggerImpactShake();HitStop=.065f;if(auto* Anim=Hero->GetMesh()->GetAnimInstance();Anim&&SwingMontage)Anim->Montage_Pause(SwingMontage);
+-        }else{
+-            bContact=true;SpawnR2Impact(H.ImpactPoint);Sound(Hero,TEXT("Impact"),0,H.ImpactPoint);
+-            if(auto* Anim=Hero->GetMesh()->GetAnimInstance();Anim&&SwingMontage)Anim->Montage_Stop(.10f,SwingMontage);SwingTime=FMath::Min(SwingTime,.2f);
++    if(!bSwordWindowOpen||!Sword||!Sword->GetStaticMesh())return;
++    const FTransform T=SwordWorldGrip();
++    const auto* BaseSocket=Sword->GetStaticMesh()->FindSocket(EquippedSwordData?EquippedSwordData->BladeBaseSocket:FName(TEXT("BladeBase")));
++    const auto* TipSocket=Sword->GetStaticMesh()->FindSocket(EquippedSwordData?EquippedSwordData->BladeTipSocket:FName(TEXT("BladeTip")));
++    const FVector LocalBase=BaseSocket?BaseSocket->RelativeLocation:FVector(12,0,0);
++    const FVector LocalTip=TipSocket?TipSocket->RelativeLocation:FVector(94,0,0);
++    if(!bBladeSample){PreviousSwordTransform=T;bBladeSample=true;}
++    FCollisionQueryParams Q(SCENE_QUERY_STAT(R2SwordHurtCapsule),false,Hero);
++    for(const auto& A:SwingHits)if(A.IsValid())Q.AddIgnoredActor(A.Get());
++    // Quaternions sample the rotational arc, rather than the chord between two tips.
++    const int32 Steps=FMath::Max(8,FMath::CeilToInt(FMath::RadiansToDegrees(PreviousSwordTransform.GetRotation().AngularDistance(T.GetRotation()))/8.f));
++    FTransform Prev=PreviousSwordTransform;
++    for(int32 Step=1;Step<=Steps;++Step){
++        const float Alpha=float(Step)/Steps;FTransform Cur;
++        Cur.SetRotation(FQuat::Slerp(PreviousSwordTransform.GetRotation(),T.GetRotation(),Alpha));
++        Cur.SetTranslation(FMath::Lerp(PreviousSwordTransform.GetLocation(),T.GetLocation(),Alpha));
++        Cur.SetScale3D(FMath::Lerp(PreviousSwordTransform.GetScale3D(),T.GetScale3D(),Alpha));
++        for(int32 I=0;I<=8;++I){
++            const FVector P=FMath::Lerp(LocalBase,LocalTip,I/8.f);TArray<FHitResult> Hits;
++            GetWorld()->SweepMultiByObjectType(Hits,Prev.TransformPosition(P),Cur.TransformPosition(P),FQuat::Identity,FCollisionObjectQueryParams(ECC_GameTraceChannel1),FCollisionShape::MakeSphere(8),Q);
++            for(const FHitResult& H:Hits)if(auto* NPC=Cast<AHCM3NPC>(H.GetActor())){ApplySwordHit(NPC,H,TEXT("arc_capsule"));if(SwingHits.Contains(NPC))Q.AddIgnoredActor(NPC);}
+         }
+-    }
+-    PreviousBase=Base;PreviousTip=Tip;
++        Prev=Cur;
++    }
++    // Body-centre spacing is deliberately generous; height and world occlusion
++    // are checked independently so the sector cannot hit another floor.
++    const float Reach=FMath::Clamp(FVector::Distance(LocalBase,LocalTip)+95.f,160.f,185.f);
++    for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It){
++        const FVector D=It->GetActorLocation()-Hero->GetActorLocation();
++        if(D.Size2D()>Reach||FMath::Abs(D.Z)>100.f||(D.GetSafeNormal2D()|Hero->GetActorForwardVector())<.5f)continue;
++        FHitResult H(*It,It->GetCapsuleComponent(),It->GetActorLocation()+FVector(0,0,25),-D.GetSafeNormal());
++        ApplySwordHit(*It,H,TEXT("front_120_sector"));
++    }
++    PreviousSwordTransform=T;PreviousBase=T.TransformPosition(LocalBase);PreviousTip=T.TransformPosition(LocalTip);
++    if(bSwordWindowClosing){
++        if(R1Trace()&&SwingHits.IsEmpty()&&SwordApproachTarget.IsValid()){const FVector D=SwordApproachTarget->GetActorLocation()-Hero->GetActorLocation();UE_LOG(LogTemp,Display,TEXT("R2_SWORD miss_geometry swing=%d distance=%.1f front_dot=%.3f target_valid=%d"),SwingSerial,D.Size2D(),D.GetSafeNormal2D()|Hero->GetActorForwardVector(),SwordApproachTarget->IsCombatEnabled());}
++        if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R2_SWORD window_end swing=%d time=%.4f hits=%d result=%s"),SwingSerial,GetWorld()->GetTimeSeconds(),SwingHits.Num(),SwingHits.Num()?TEXT("hit"):TEXT("no_eligible_target_in_swept_arc_or_sector"));
++        bSwordWindowOpen=false;bSwordWindowClosing=false;
++    }
+ }
+ void UHCM5VS3Abilities::SelectTarget(AHCM3NPC* NPC){
+     if(SelectedTarget.Get()==NPC)return;
+@@ -271,7 +357,7 @@
+     Particles(Hero,TEXT("Burst"),Kind,RuneCenter);Sound(Hero,TEXT("Release"),Kind,RuneCenter);
+     if(Kind==0){const FVector Dir=PC->PlayerCameraManager->GetCameraRotation().Vector();auto* FX=AHCM5VS3SpellFX::Spawn(Hero,RuneCenter,Dir*3000,30,3.5f,0);if(FX)FX->SetHomingTarget(SelectedTarget.Get());}
+     else if(Kind==1){
+-        AHCM5VS3SpellFX::Spawn(Hero,AimGround,FVector::ZeroVector,0,.8f,1,false);Particles(Hero,TEXT("Wave"),1,AimGround+FVector(0,0,260));Particles(Hero,TEXT("Burst"),1,AimGround+FVector(0,0,65),FVector(3));
++        AHCM5VS3SpellFX::Spawn(Hero,AimGround,FVector::ZeroVector,0,.8f,1,false);Particles(Hero,TEXT("Wave"),1,AimGround);
+         TriggerImpactShake(FMath::Clamp(1-FVector::Dist2D(Hero->GetActorLocation(),AimGround)/1700.f,0.f,1.f));
+         for(TActorIterator<AHCM3NPC> It(GetWorld());It;++It){const float D=FVector::Dist2D(It->GetActorLocation(),AimGround);if(!It->IsCombatEnabled()||D>350||FMath::Abs(It->GetActorLocation().Z-AimGround.Z)>220)continue;
+             FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(R1WaveOcclusion),false,Hero);for(TActorIterator<AHCM3NPC> Other(GetWorld());Other;++Other)Q.AddIgnoredActor(*Other);if(GetWorld()->LineTraceSingleByChannel(H,AimGround+FVector(0,0,60),It->GetActorLocation(),ECC_Visibility,Q)&&H.GetActor()!=*It)continue;
+@@ -282,41 +368,58 @@
+     SelectTarget(nullptr);UE_LOG(LogTemp,Display,TEXT("R1_SPELL_RELEASE kind=%d mp=%.2f"),Kind,MP);
+ }
+ void UHCM5VS3Abilities::ShieldImpact(const FVector& Origin){if(ShieldRemaining<=0)return;ShieldPulse=1;ShieldHitAge=0;const FVector Hit=Hero->GetActorLocation()+(Origin-Hero->GetActorLocation()).GetSafeNormal()*110;if(ShieldMaterial)ShieldMaterial->SetVectorParameterValue(TEXT("HitPosition"),FLinearColor(Hit.X,Hit.Y,Hit.Z));Particles(Hero,TEXT("Burst"),3,Hit);Sound(Hero,TEXT("Impact"),3,Hit);}
+-void UHCM5VS3Abilities::AcceptedShot(const FHCM4AcceptedShot& Shot){IdleMP=0;const FVector D=Shot.AimPoint-Shot.WorldMuzzle;AHCM5VS3SpellFX::Spawn(Hero,Shot.WorldMuzzle,D.GetSafeNormal()*3000,0,FMath::Min(1.f,D.Size()/3000.f),0);}
++void UHCM5VS3Abilities::AcceptedShot(const FHCM4AcceptedShot& Shot){IdleMP=0;const FVector D=Shot.AimPoint-Shot.WorldMuzzle;
++    if(auto* M=Particles(Hero,TEXT("Burst"),0,Shot.WorldMuzzle,FVector(.35)))M->SetVariableLinearColor(TEXT("User.Color"),WeaponTint(true));
++    if(auto* FX=AHCM5VS3SpellFX::Spawn(Hero,Shot.WorldMuzzle,D.GetSafeNormal()*3000,0,FMath::Min(1.f,D.Size()/3000.f),0))FX->SetVisualTint(WeaponTint(true));
++}
+ void UHCM5VS3Abilities::UpdateVisuals(float Dt){
+     auto* PC=Cast<AHCM1PlayerController>(Hero->GetController());if(!PC)return;
+     const bool FP=PC->IsFirstPersonPerspective(),Foot=PC->GetPlayerMode()==EHCPlayerMode::OnFoot&&!PC->IsFlying()&&!PC->IsDialogueOpen();
+     const bool Equipped=Foot&&Combat->GetWeaponMode()==EHCM4WeaponMode::Sword&&CastKind<0&&CastTime<=0;
+     SwordReveal=FMath::FInterpConstantTo(SwordReveal,Equipped?1.f:0.f,Dt,1.f/.3f);
+-    auto* Body=Hero->GetMesh();FTransform Mount=SwordGrip(Body);
++    if(!EquippedSwordData)RefreshArmoryWeapons();
++    auto* Body=Hero->GetMesh();FTransform Mount=SwordWorldGrip();
+     Sword->SetWorldTransform(Mount);Sword->SetVisibility(!FP&&SwordReveal>.005f);
+     SwordOutline->SetWorldTransform(Mount);SwordOutline->SetVisibility(!FP&&SwordReveal>.005f);
+     const bool Forming=SwordReveal>.01f&&SwordReveal<.99f;
+     if(Forming&&!SummonFX)SummonFX=Particles(Hero,TEXT("Summon"),0,Mount.GetLocation());
+-    if(!Forming)StopFX(SummonFX);if(SummonFX)SummonFX->SetWorldLocation(Mount.TransformPosition(FVector(FMath::Lerp(-14.f,96.f,SwordReveal),0,0)));
++    if(!Forming)StopFX(SummonFX);if(SummonFX){SummonFX->SetVariableLinearColor(TEXT("User.Color"),WeaponTint());const FVector Tip=Sword->GetSocketLocation(EquippedSwordData?EquippedSwordData->BladeTipSocket:FName(TEXT("BladeTip")));SummonFX->SetWorldLocation(FMath::Lerp(Mount.GetLocation(),Tip,SwordReveal));}
+     SummonRing->SetVisibility(!FP&&Forming);SummonRing->SetWorldLocation(Mount.GetLocation());SummonRing->SetWorldRotation(Mount.Rotator());SummonRing->SetWorldScale3D(FVector(.27f));
+     for(const auto& M:SwordMaterials){M->SetScalarParameterValue(TEXT("Reveal"),SwordReveal);M->SetScalarParameterValue(TEXT("AttackGlow"),bHeld?1+HoldTime*2:SwingTime>0?2.f:0.f);}
+     auto* Arms=Hero->GetR2PresentationComponent()->GetFirstPersonMesh();FirstSword->SetVisibility(FP&&SwordReveal>.005f&&Arms);
+-    if(Arms){FTransform FM=SwordGrip(Arms);FirstSword->SetWorldTransform(FM);}
++    if(Arms){FTransform FM=SwordWorldGrip(true);FirstSword->SetWorldTransform(FM);}
+     const bool Gun=Foot&&CastKind<0&&Combat->GetWeaponMode()==EHCM4WeaponMode::Pistol;MagicGun->SetVisibility(Gun&&!FP);FirstMagicGun->SetVisibility(Gun&&FP);
+-    if(auto* W=Combat->GetWeaponActor()){MagicGun->SetWorldTransform(MagicGunGrip(W->GetArticulatedMesh(),W->GetActorTransform()));W->GetWeaponMesh()->SetVisibility(false);if(W->GetArticulatedMesh())W->GetArticulatedMesh()->SetVisibility(false);}
+-    if(auto* W=Hero->GetR2PresentationComponent()->GetFirstPersonPistol()){FirstMagicGun->SetWorldTransform(MagicGunGrip(W,W->GetComponentTransform()));W->SetVisibility(false);}
+-    const bool ActiveBlade=SwingTime>0&&!bContact&&(1-SwingTime/SwingDuration)>.18f&&(1-SwingTime/SwingDuration)<.8f;
+-    if(bR2LegacyFX&&ActiveBlade&&!BladeFX)BladeFX=Particles(Hero,TEXT("BladeArc"),0,Sword->GetComponentLocation());
+-    if(!ActiveBlade)StopFX(BladeFX);if(BladeFX)BladeFX->SetWorldLocation(Mount.TransformPosition(FVector(65,0,0)));
+-    const FTransform DisplayGrip=FP&&Arms?SwordGrip(Arms):Mount;
+-    const FVector VisualTip=DisplayGrip.TransformPosition(FVector(94,0,0));
++    if(auto* W=Combat->GetWeaponActor()){MagicGun->SetWorldTransform((EquippedGunData?EquippedGunData->ThirdPersonGrip:FTransform::Identity)*MagicGunGrip(W->GetArticulatedMesh(),W->GetActorTransform()));W->GetWeaponMesh()->SetVisibility(false);if(W->GetArticulatedMesh())W->GetArticulatedMesh()->SetVisibility(false);}
++    if(auto* W=Hero->GetR2PresentationComponent()->GetFirstPersonPistol()){FirstMagicGun->SetWorldTransform((EquippedGunData?EquippedGunData->FirstPersonGrip:FTransform::Identity)*MagicGunGrip(W,W->GetComponentTransform()));W->SetVisibility(false);}
++    const FTransform DisplayGrip=FP&&Arms?SwordWorldGrip(true):Mount;
++    const auto* BSocket=EquippedSwordData&&Sword->GetStaticMesh()?Sword->GetStaticMesh()->FindSocket(EquippedSwordData->BladeBaseSocket):nullptr;
++    const auto* TSocket=EquippedSwordData&&Sword->GetStaticMesh()?Sword->GetStaticMesh()->FindSocket(EquippedSwordData->BladeTipSocket):nullptr;
++    const FVector VisualBase=DisplayGrip.TransformPosition(BSocket?BSocket->RelativeLocation:FVector(12,0,0));
++    const FVector VisualTip=DisplayGrip.TransformPosition(TSocket?TSocket->RelativeLocation:FVector(94,0,0));
++    const bool ActiveBlade=bSwordWindowOpen;
++    if(ActiveBlade&&!BladeFX){
++        if(bR2LegacyFX)BladeFX=Particles(Hero,TEXT("BladeArc"),0,Sword->GetComponentLocation());
++        else if(R2RibbonSystem)BladeFX=UNiagaraFunctionLibrary::SpawnSystemAtLocation(Hero,R2RibbonSystem,(VisualTip+VisualBase)*.5f,FRotator::ZeroRotator,FVector(1),true,true,ENCPoolMethod::None);
++        if(BladeFX){BladeFX->SetVariableLinearColor(TEXT("User.Color"),WeaponTint());if(FP)BladeFX->SetFirstPersonPrimitiveType(EFirstPersonPrimitiveType::FirstPerson);}
++    }
++    if(!ActiveBlade)StopFX(BladeFX);
++    if(BladeFX){BladeFX->SetWorldLocation((VisualTip+VisualBase)*.5f);BladeFX->SetVariableVec3(TEXT("User.BladeDirection"),(VisualTip-VisualBase).GetSafeNormal());BladeFX->SetVariableFloat(TEXT("User.Width"),FVector::Dist(VisualTip,VisualBase));}
+     if(bSlashNotifyPending){
+         bSlashNotifyPending=false;
+-        if(!bR2LegacyFX&&R2SlashSystem&&SwingTime>0&&!bContact){
+-            const FVector Blade=DisplayGrip.GetUnitAxis(EAxis::X);
+-            FVector Tangent=VisualTip-PreviousVisualTip;Tangent-=Blade*(Tangent|Blade);
+-            if(!Tangent.Normalize())Tangent=DisplayGrip.GetUnitAxis(EAxis::Y);
+-            const FRotator Direction=FRotationMatrix::MakeFromXY(Blade,Tangent).Rotator();
+-            const float Size=FP?.53f:1.f;
+-            auto* FX=UNiagaraFunctionLibrary::SpawnSystemAtLocation(Hero,FP&&R2SlashFPSystem?R2SlashFPSystem.Get():R2SlashSystem.Get(),DisplayGrip.GetLocation(),Direction,FVector(Size),true,true,ENCPoolMethod::AutoRelease);
+-            if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R2_SLASH notify combo=%d first=%d spawned=%d tip=%s tangent=%s"),Combo,FP,FX!=nullptr,*VisualTip.ToString(),*Tangent.ToString());
++        if(!bR2LegacyFX&&R2SlashSystem&&SwingTime>0){
++            ActiveCrescent=UNiagaraFunctionLibrary::SpawnSystemAtLocation(Hero,R2SlashSystem,Hero->GetActorLocation(),FRotator::ZeroRotator,FVector(FP?.29f:bHeavy?1.25f:1.f),true,true,ENCPoolMethod::None);
++            CrescentRemaining=FP?.12f:.24f;
++            if(ActiveCrescent){ActiveCrescent->SetVariableLinearColor(TEXT("User.Color"),WeaponTint());if(FP){ActiveCrescent->SetFirstPersonPrimitiveType(EFirstPersonPrimitiveType::FirstPerson);ActiveCrescent->SetCustomTimeDilation(2);}}
++            if(bHeavy)AHCM5VS3SwordWave::Spawn(Hero,R2WaveSystem,R2ImpactSystem,WeaponTint(),55.f*(EquippedSwordData?EquippedSwordData->DamageScale:1.f),SwingSerial,SwingHits);
++            if(R1Trace())UE_LOG(LogTemp,Display,TEXT("R2_SLASH window combo=%d first=%d spawned=%d body_center=%s"),Combo,FP,ActiveCrescent!=nullptr,*Hero->GetActorLocation().ToString());
+         }
++    }
++    if(ActiveCrescent){CrescentRemaining-=Dt;
++        const float Rolls[]={-42.f,8.f,48.f};const FQuat BodyQ=Hero->GetActorRotation().Quaternion();
++        const FQuat ViewQ=PC->PlayerCameraManager->GetCameraRotation().Quaternion();
++        ActiveCrescent->SetWorldLocation(FP?PC->PlayerCameraManager->GetCameraLocation()+ViewQ.RotateVector(FVector(72,0,-23)):Hero->GetActorLocation()+BodyQ.RotateVector(FVector(18,0,18)));
++        ActiveCrescent->SetWorldRotation((FP?ViewQ:BodyQ)*FRotator(FP?90.f:0.f,55,Rolls[FMath::Clamp(Combo,0,2)]).Quaternion());
++        if(CrescentRemaining<=0){ActiveCrescent->DestroyComponent();ActiveCrescent=nullptr;}
+     }
+     PreviousVisualTip=VisualTip;
+     // Keep the first-person reticle/aperture clear. The same charge particles
+@@ -370,7 +473,7 @@
+     }
+     UpdateAim(Dt);if(IsCastingAim()&&CastIdle>=8)CancelSpell();
+     if(HitStop>0){HitStop=FMath::Max(0.f,HitStop-Dt);if(HitStop==0)if(auto* A=Hero->GetMesh()->GetAnimInstance();A&&SwingMontage)A->Montage_Resume(SwingMontage);}
+-    else if(SwingTime>0){SwingTime=FMath::Max(0.f,SwingTime-Dt);const float T=1-SwingTime/SwingDuration;if(T>.18f&&T<.8f&&!bContact)SwordTrace();if(SwingTime==0){Hero->SetCombatMovementScale(1);if(bComboBuffered){bComboBuffered=false;StartSwing(false);}}}
++    else if(SwingTime>0){SwingTime=FMath::Max(0.f,SwingTime-Dt);const float T=1-SwingTime/SwingDuration;if(bSwordWindowOpen)SwordTrace();if(SwingTime==0){Hero->SetCombatMovementScale(1);if(bComboBuffered){bComboBuffered=false;StartSwing(false);}}}
+     if(CastKind>=2){CastTime-=Dt;if(CastTime<=0)ReleaseSpell();}
+     else if(CastKind<0&&CastTime>0){CastTime=FMath::Max(0.f,CastTime-Dt);if(CastTime==0)Hero->SetCombatMovementScale(1);}
+     if(!IsBusy()&&CastTime<=0&&Combat->GetWeaponMode()==EHCM4WeaponMode::Sword){auto* A=Hero->GetMesh()->GetAnimInstance();if(A&&(!ReadyMontage||!A->Montage_IsPlaying(ReadyMontage)))PlayPose(TEXT("A_SwordReady"),0,true,true);}
+@@ -394,16 +497,17 @@
+     Hero=Source;Travel=Velocity;HitDamage=Damage;Remaining=Life;Style=Kind;bTravel=Projectile;
+     Mesh->SetStaticMesh(Projectile?LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere")):Asset<UStaticMesh>(OldRoot,TEXT("SM_ArcaneWave_Outer")));
+     Mesh->SetMaterial(0,Asset<UMaterialInterface>(FString(R1Root)+TEXT("FinalArt/"),Projectile?TEXT("M_R1_Core"):TEXT("M_R1_Rune1")));
+-    if(Projectile){SetActorScale3D(FVector(.32));auto* H=System(TEXT("Halo"),Kind);if(H){Halo=UNiagaraFunctionLibrary::SpawnSystemAttached(H,Mesh,NAME_None,FVector::ZeroVector,FRotator::ZeroRotator,EAttachLocation::SnapToTarget,true);if(Halo)Halo->SetAbsolute(false,false,true);}auto* S=System(TEXT("Trail"),Kind);if(S){Trail=UNiagaraFunctionLibrary::SpawnSystemAttached(S,Mesh,NAME_None,FVector::ZeroVector,FRotator::ZeroRotator,EAttachLocation::SnapToTarget,false);if(Trail)Trail->SetAbsolute(false,false,true);}
++    if(Projectile){SetActorScale3D(FVector(.32));auto* H=System(TEXT("Halo"),Kind);if(H){Halo=UNiagaraFunctionLibrary::SpawnSystemAttached(H,Mesh,NAME_None,FVector::ZeroVector,FRotator::ZeroRotator,EAttachLocation::SnapToTarget,true);if(Halo){Halo->SetAbsolute(false,false,true);Halo->SetVariableLinearColor(TEXT("User.Color"),SpellColor(Kind));}}auto* S=System(TEXT("Trail"),Kind);if(S){Trail=UNiagaraFunctionLibrary::SpawnSystemAttached(S,Mesh,NAME_None,FVector::ZeroVector,FRotator::ZeroRotator,EAttachLocation::SnapToTarget,false);if(Trail){Trail->SetAbsolute(false,false,true);Trail->SetVariableLinearColor(TEXT("User.Color"),SpellColor(Kind));}}
+         int32 Lights=0;for(TActorIterator<AHCM5VS3SpellFX> It(GetWorld());It;++It)if(It->Light)++Lights;
+         if(Lights<4){Light=NewObject<UPointLightComponent>(this);AddInstanceComponent(Light);Light->SetupAttachment(Mesh);Light->SetCastShadows(false);Light->SetIntensity(100);Light->SetAttenuationRadius(150);Light->SetLightColor(FLinearColor(.3f,.65f,1));Light->RegisterComponent();}
+     }else{
+-        SetActorRotation(FRotator(90,0,0));SetActorScale3D(FVector(1));
++        SetActorRotation(FRotator(90,0,0));SetActorScale3D(FVector(1));Remaining=FMath::Max(Remaining,3.f);Mesh->SetVisibility(false);
+         FadeMaterial=UMaterialInstanceDynamic::Create(Mesh->GetMaterial(0),this);Mesh->SetMaterial(0,FadeMaterial);
+         Scorch=AddDecal(this,TEXT("R1Scorch"));Scorch->SetUsingAbsoluteScale(true);Scorch->DecalSize=FVector(60,Style==1?350:100,Style==1?350:100);Scorch->SetWorldRotation(FRotator(-90,0,0));
+-        auto* Mat=Asset<UMaterialInterface>(FString(R1Root)+TEXT("FinalArt/"),TEXT("M_R1_Ground1"));Scorch->SetDecalMaterial(Mat);Scorch->SetVisibility(true);Scorch->SetFadeOut(.1f,.35f,false);
+-    }
+-}
++        auto* Mat=Asset<UMaterialInterface>(FString(R1Root)+TEXT("FinalArt/"),TEXT("M_R1_Ground1"));Scorch->SetDecalMaterial(Mat);Scorch->SetVisibility(true);Scorch->SetFadeOut(.3f,2.5f,false);
++    }
++}
++void AHCM5VS3SpellFX::SetVisualTint(const FLinearColor& Tint){if(Trail)Trail->SetVariableLinearColor(TEXT("User.Color"),Tint);if(Halo)Halo->SetVariableLinearColor(TEXT("User.Color"),Tint);if(Light)Light->SetLightColor(Tint);}
+ void AHCM5VS3SpellFX::Tick(float Dt){
+     Super::Tick(Dt);Remaining-=Dt;Age+=Dt;if(Remaining<=0||!Hero.IsValid()){Destroy();return;}
+     if(Number){SetActorLocation(GetActorLocation()+FVector(0,0,Dt*26));if(auto* PC=Cast<APlayerController>(Hero->GetController());PC&&PC->PlayerCameraManager)SetActorRotation((PC->PlayerCameraManager->GetCameraLocation()-GetActorLocation()).Rotation());return;}
+@@ -418,5 +522,5 @@
+             Particles(Hero.Get(),TEXT("Burst"),Style,H.ImpactPoint,FVector(3));Sound(Hero.Get(),TEXT("Impact"),Style,H.ImpactPoint);AHCM5VS3SpellFX::Spawn(Hero.Get(),H.ImpactPoint+H.ImpactNormal*2,FVector::ZeroVector,0,.8f,1,false);Destroy();return;
+         }SetActorLocation(End);SetActorRotation(Travel.Rotation());
+         if(Trail){const FRotationMatrix R(Travel.Rotation());Trail->SetWorldLocation(End+(R.GetUnitAxis(EAxis::Y)*FMath::Sin(Age*55)+R.GetUnitAxis(EAxis::Z)*FMath::Cos(Age*55))*12);}
+-    }else{const float Scale=FMath::Lerp(.3f,6.f,FMath::SmoothStep(0.f,.45f,Age));SetActorScale3D(FVector(Scale));Mesh->SetVisibility(Age<.45f);if(FadeMaterial)FadeMaterial->SetScalarParameterValue(TEXT("Reveal"),FMath::Clamp(1-Age/.45f,0.f,1.f));}
+-}
++    }else{const float Scale=FMath::Lerp(.3f,6.f,FMath::SmoothStep(0.f,.45f,Age));SetActorScale3D(FVector(Scale));Mesh->SetVisibility(false);if(FadeMaterial)FadeMaterial->SetScalarParameterValue(TEXT("Reveal"),FMath::Clamp(1-Age/.45f,0.f,1.f));}
++}
+--- a/Source/HarborCity/M5VS3/HCM5VS3Abilities.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3Abilities.h
+@@ -7,6 +7,7 @@
+ class UCharacterMovementComponent;
+ class UTextRenderComponent; class UDecalComponent; class UStaticMeshComponent; class UAnimMontage; class UStaticMesh;
+ class UMaterialInterface; class UMaterialInstanceDynamic; class UNiagaraComponent; class UNiagaraSystem; class UPointLightComponent;
++class UHCM5VS3WeaponData;
+ struct FHCM4AcceptedShot;
+ UCLASS(ClassGroup=(HarborCity),meta=(BlueprintSpawnableComponent))
+ class HARBORCITY_API UHCM5VS3Abilities : public UActorComponent
+@@ -21,6 +22,11 @@
+     bool IsBusy() const { return bHeld || SwingTime>0 || CastKind>=0 || DrawTime>0 || CastTime>0; }
+     FString GetR2Diagnostics() const;
+     void QueueSlashNotify(){bSlashNotifyPending=true;}
++    void BeginSwordWindow();
++    void EndSwordWindow();
++    bool IsSwordWindowOpen() const { return bSwordWindowOpen; }
++    void RefreshArmoryWeapons();
++    bool ClaimSwordWaveHit(int32 Serial,AHCM3NPC* NPC);
+     // Comparison is accepted only by the bounded local QA launcher.
+     void SetR2LegacyFXForReview(bool Legacy);
+     bool IsCastingAim() const {return CastKind==0 || CastKind==1;}
+@@ -56,6 +62,9 @@
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> FirstSword;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> MagicGun;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> FirstMagicGun;
++    UPROPERTY() TObjectPtr<UHCM5VS3WeaponData> EquippedSwordData;
++    UPROPERTY() TObjectPtr<UHCM5VS3WeaponData> EquippedGunData;
++    FTransform SwordWorldGrip(bool FirstPerson=false) const;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> CastCircle;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> Shield;
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> TargetRing;
+@@ -80,9 +89,19 @@
+     UPROPERTY() TObjectPtr<UNiagaraSystem> R2SlashSystem;
+     UPROPERTY() TObjectPtr<UNiagaraSystem> R2SlashFPSystem;
+     UPROPERTY() TObjectPtr<UNiagaraSystem> R2ImpactSystem;
++    UPROPERTY() TObjectPtr<UNiagaraSystem> R2RibbonSystem;
++    UPROPERTY() TObjectPtr<UNiagaraSystem> R2WaveSystem;
++    UPROPERTY() TObjectPtr<UNiagaraComponent> ActiveCrescent;
++    float CrescentRemaining=0;
++    FLinearColor WeaponTint(bool Gun=false) const;
+     TArray<TWeakObjectPtr<UNiagaraComponent>> R2ActiveImpacts;
+     bool bSlashNotifyPending=false,bR2LegacyFX=false;
+     FVector PreviousVisualTip=FVector::ZeroVector;
++    FTransform PreviousSwordTransform=FTransform::Identity;
++    bool bSwordWindowOpen=false,bSwordWindowClosing=false;
++    int32 SwingSerial=0;
++    double SwordWindowStartedAt=0;
++    void ApplySwordHit(AHCM3NPC* NPC,const FHitResult& Hit,const TCHAR* Method);
+     void SpawnR2Impact(const FVector& Where);
+     TWeakObjectPtr<AHCM3NPC> SwordApproachTarget;
+     float ShieldHitAge=10;
+@@ -111,6 +130,7 @@
+     void Initialize(AHCM1Character* Source,const FVector& Velocity,float Damage,float Life,int32 Kind,bool bProjectile);
+     static AHCM5VS3SpellFX* Spawn(AHCM1Character* Source,const FVector& Where,const FVector& Velocity,float Damage,float Life,int32 Kind,bool bProjectile=true);
+     void SetHomingTarget(AActor* Target){HomingTarget=Target;}
++    void SetVisualTint(const FLinearColor& Tint);
+     static void SpawnNumber(AHCM1Character* Source,const FVector& Where,int32 Amount,bool Healing);
+ private:
+     UPROPERTY() TObjectPtr<UStaticMeshComponent> Mesh;
+--- a/Source/HarborCity/M5VS3/HCM5VS3Armory.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3Armory.cpp
+@@ -0,0 +1,106 @@
++#include "HCM5VS3Armory.h"
++#include "HCM5VS3Abilities.h"
++#include "M1/HCM1PlayerController.h"
++#include "M1/HCM1Character.h"
++#include "M1/HCM1SaveGame.h"
++#include "M4/HCM4CombatComponent.h"
++#include "Components/StaticMeshComponent.h"
++#include "Components/SceneCaptureComponent2D.h"
++#include "Components/PointLightComponent.h"
++#include "Engine/TextureRenderTarget2D.h"
++#include "Engine/Texture2D.h"
++#include "Engine/StaticMesh.h"
++#include "Engine/World.h"
++#include "Materials/MaterialInterface.h"
++#include "NiagaraSystem.h"
++#include "NiagaraComponent.h"
++#include "NiagaraFunctionLibrary.h"
++#include "Sound/SoundBase.h"
++#include "Misc/App.h"
++
++AHCM5VS3ArmoryPreview::AHCM5VS3ArmoryPreview(){
++    PrimaryActorTick.bCanEverTick=true;PrimaryActorTick.bTickEvenWhenPaused=true;
++    RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
++    Pivot=CreateDefaultSubobject<USceneComponent>(TEXT("Turntable"));Pivot->SetupAttachment(RootComponent);
++    Model=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Weapon"));Model->SetupAttachment(Pivot);
++    Outline=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Outline"));Outline->SetupAttachment(Model);
++    for(auto* M:{Model.Get(),Outline.Get()}){M->SetCollisionEnabled(ECollisionEnabled::NoCollision);M->SetCanEverAffectNavigation(false);M->SetVisibleInSceneCaptureOnly(true);M->SetCastShadow(false);M->SetLightingChannels(false,true,false);}
++    Capture=CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("ArmoryCamera"));Capture->SetupAttachment(RootComponent);
++    Capture->bCaptureEveryFrame=false;Capture->bCaptureOnMovement=false;Capture->bAlwaysPersistRenderingState=true;
++    Capture->PrimitiveRenderMode=ESceneCapturePrimitiveRenderMode::PRM_UseShowOnlyList;Capture->CaptureSource=ESceneCaptureSource::SCS_FinalColorLDR;
++    Capture->FOVAngle=35;Capture->ShowFlags.SetAtmosphere(false);Capture->ShowFlags.SetFog(false);Capture->ShowFlags.SetMotionBlur(false);
++    Capture->PostProcessSettings.bOverride_AutoExposureMethod=true;Capture->PostProcessSettings.AutoExposureMethod=AEM_Manual;
++    Capture->PostProcessSettings.bOverride_AutoExposureBias=true;Capture->PostProcessSettings.AutoExposureBias=0;
++    Capture->ShowOnlyComponents.Add(Model);Capture->ShowOnlyComponents.Add(Outline);
++    auto* Key=CreateDefaultSubobject<UPointLightComponent>(TEXT("SoftKey"));Key->SetupAttachment(RootComponent);Key->SetRelativeLocation(FVector(-100,-65,95));Key->SetIntensity(2000);Key->SetAttenuationRadius(600);Key->SetSourceRadius(70);Key->SetCastShadows(false);Key->SetLightingChannels(false,true,false);
++    auto* Fill=CreateDefaultSubobject<UPointLightComponent>(TEXT("CoolFill"));Fill->SetupAttachment(RootComponent);Fill->SetRelativeLocation(FVector(20,100,30));Fill->SetIntensity(1200);Fill->SetLightColor(FLinearColor(.55,.75,1));Fill->SetAttenuationRadius(600);Fill->SetSourceRadius(60);Fill->SetCastShadows(false);Fill->SetLightingChannels(false,true,false);
++}
++void AHCM5VS3ArmoryPreview::ShowWeapon(UHCM5VS3WeaponData* W,int32 Paint){
++    if(!W)return;auto* Mesh=W->Mesh.LoadSynchronous();if(!Mesh)return;
++    if(!Texture){Texture=NewObject<UTextureRenderTarget2D>(this);Texture->ClearColor=FLinearColor(.012,.023,.038,1);Texture->RenderTargetFormat=RTF_RGBA8;Texture->InitCustomFormat(768,768,PF_B8G8R8A8,false);Capture->TextureTarget=Texture;}
++    Model->SetStaticMesh(Mesh);Outline->SetStaticMesh(Mesh);
++    const auto B=Mesh->GetBounds();Radius=FMath::Max(20.f,float(B.BoxExtent.GetMax()));
++    Model->SetRelativeLocation(-B.Origin);Model->SetRelativeRotation(FRotator::ZeroRotator);
++    if(W->Paints.IsValidIndex(Paint))for(int32 I=0;I<W->Paints[Paint].Materials.Num();++I)Model->SetMaterial(I,W->Paints[Paint].Materials[I].LoadSynchronous());
++    auto* Out=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/HarborCity/M5VS3/R1/Art/M_R1_SwordOutline.M_R1_SwordOutline"));
++    for(int32 I=0;I<Outline->GetNumMaterials();++I)Outline->SetMaterial(I,Out);
++    Spin=25;Tilt=W->WeaponClass==EHCM5WeaponClass::Sword?75.f:0.f;Zoom=1;ManualAge=10;
++    Capture->CaptureScene();
++}
++void AHCM5VS3ArmoryPreview::Tick(float Dt){Super::Tick(Dt);Dt=FMath::Clamp(float(FApp::GetDeltaTime()),0.f,.05f);ManualAge+=Dt;if(ManualAge>1)Spin+=Dt*16;if(IsValid(PreviewEffect))PreviewEffect->AdvanceSimulation(1,Dt);
++    Pivot->SetRelativeRotation(FRotator(Tilt,Spin,0));Capture->SetRelativeLocation(FVector(-Radius*4.2f*Zoom,0,0));Capture->CaptureScene();}
++void AHCM5VS3ArmoryPreview::RotatePreview(float X,float Y){Spin+=X*.4f;Tilt=FMath::Clamp(Tilt+Y*.3f,-85.f,85.f);ManualAge=0;}
++void AHCM5VS3ArmoryPreview::ZoomPreview(float Delta){Zoom=FMath::Clamp(Zoom-Delta*.09f,.7f,1.65f);ManualAge=0;}
++void AHCM5VS3ArmoryPreview::TryEffect(UHCM5VS3WeaponData* W,int32 Paint){
++    if(!W)return;const auto* FX=W->Effects.Find(W->WeaponClass==EHCM5WeaponClass::Sword?FName(TEXT("Slash")):FName(TEXT("Muzzle")));if(!FX)return;
++    if(PreviewEffect){Capture->ShowOnlyComponents.Remove(PreviewEffect);PreviewEffect->DestroyComponent();}
++    PreviewEffect=UNiagaraFunctionLibrary::SpawnSystemAtLocation(this,FX->LoadSynchronous(),GetActorLocation(),FRotator::ZeroRotator,FVector(.55),true,true,ENCPoolMethod::None);
++    if(PreviewEffect){PreviewEffect->SetForceSolo(true);PreviewEffect->SetComponentTickEnabled(false);PreviewEffect->SetVisibleInSceneCaptureOnly(true);PreviewEffect->PrimaryComponentTick.bTickEvenWhenPaused=true;PreviewEffect->SetTickBehavior(ENiagaraTickBehavior::UsePrereqs);Capture->ShowOnlyComponents.Add(PreviewEffect);
++        if(W->Paints.IsValidIndex(Paint))PreviewEffect->SetVariableLinearColor(TEXT("User.Color"),W->Paints[Paint].EffectColor);}
++}
++
++UHCM5VS3Armory::UHCM5VS3Armory(){PrimaryComponentTick.bCanEverTick=false;}
++void UHCM5VS3Armory::BeginPlay(){Super::BeginPlay();PC=Cast<AHCM1PlayerController>(GetOwner());if(!PC||!GetWorld()->GetOutermost()->GetName().Contains(TEXT("/M5VS3/")))return;
++    Catalog=LoadObject<UHCM5VS3ArmoryCatalog>(nullptr,TEXT("/Game/HarborCity/M5VS3/R2/Armory/DA_Armory.DA_Armory"));if(!Catalog)return;
++    SwordId=Catalog->DefaultSword;GunId=Catalog->DefaultGun;
++    for(const auto& Ref:Catalog->Weapons)if(auto* W=Ref.LoadSynchronous()){
++        if(Find(W->WeaponId)){UE_LOG(LogTemp,Error,TEXT("R2_ARMORY duplicate id %s"),*W->WeaponId.ToString());continue;}
++        Weapons.Add(W);ResidentAssets.Add(W->Mesh.LoadSynchronous());ResidentAssets.Add(W->Icon.LoadSynchronous());
++        for(const auto& P:W->Paints)for(const auto& M:P.Materials)ResidentAssets.Add(M.LoadSynchronous());
++        for(const auto& E:W->Effects)ResidentAssets.Add(E.Value.LoadSynchronous());for(const auto& E:W->Sounds)ResidentAssets.Add(E.Value.LoadSynchronous());
++    }
++}
++void UHCM5VS3Armory::EndPlay(const EEndPlayReason::Type R){if(Preview)Preview->Destroy();Super::EndPlay(R);}
++UHCM5VS3WeaponData* UHCM5VS3Armory::Find(FName Id) const{for(UHCM5VS3WeaponData* W:Weapons)if(W&&W->WeaponId==Id)return W;return nullptr;}
++UHCM5VS3WeaponData* UHCM5VS3Armory::Equipped(EHCM5WeaponClass K) const{return Find(K==EHCM5WeaponClass::Sword?SwordId:GunId);}
++int32 UHCM5VS3Armory::GetPaintIndex(FName Id) const{return PaintIndices.FindRef(Id);}
++FString UHCM5VS3Armory::EquippedName(bool Sword) const{const auto* W=Equipped(Sword?EHCM5WeaponClass::Sword:EHCM5WeaponClass::Gun);return W?W->DisplayName.ToString():(Sword?TEXT("星潮剑"):TEXT("魔导枪"));}
++bool UHCM5VS3Armory::Open(){
++    auto* H=PC?PC->GetControlledCharacter():nullptr;auto* C=PC?PC->GetCombatComponent():nullptr;
++    if(!IsAvailable()||!H||!C)return false;
++    if(PC->IsFlying()||PC->GetPlayerMode()!=EHCPlayerMode::OnFoot||H->GetAbilities()->IsBusy()||C->IsAttacking()||C->IsReloading()||C->GetPlayerHealth()<=0||PC->IsDialogueOpen()){
++        PC->ShowStatusMessage(TEXT("站稳并结束当前动作后，才能打开武器库。"));return false;}
++    if(!PC->IsPauseMenuOpen())PC->TogglePauseMenu();if(!PC->IsPauseMenuOpen())return false;
++    bOpen=true;FActorSpawnParameters Params;Params.ObjectFlags|=RF_Transient;
++    Preview=GetWorld()->SpawnActor<AHCM5VS3ArmoryPreview>(FVector(0,0,-200000),FRotator::ZeroRotator,Params);
++    if(!Preview){Close();PC->ShowStatusMessage(TEXT("武器预览暂时无法打开。"));return false;}
++    Select(SwordId);return true;
++}
++void UHCM5VS3Armory::Close(){bOpen=false;if(Preview){Preview->Destroy();Preview=nullptr;}if(PC&&PC->IsPauseMenuOpen())PC->TogglePauseMenu();}
++void UHCM5VS3Armory::Select(FName Id){if(!Find(Id))return;SelectedId=Id;PreviewPaint=GetPaintIndex(Id);if(Preview)Preview->ShowWeapon(Selected(),PreviewPaint);}
++void UHCM5VS3Armory::SelectPaint(int32 I){auto* W=Selected();if(!W||!W->Paints.IsValidIndex(I))return;PreviewPaint=I;if(Preview)Preview->ShowWeapon(W,I);}
++bool UHCM5VS3Armory::Equip(FName Id,int32 Paint){
++    auto* W=Find(Id);if(!bOpen||!W||!W->bEquippable||!W->Paints.IsValidIndex(Paint))return false;
++    (W->WeaponClass==EHCM5WeaponClass::Sword?SwordId:GunId)=Id;PaintIndices.Add(Id,Paint);
++    if(auto* H=PC->GetControlledCharacter())H->GetAbilities()->RefreshArmoryWeapons();return true;
++}
++void UHCM5VS3Armory::FillSave(UHCM1SaveGame* S) const{if(!S||!IsAvailable())return;S->ArmoryVersion=1;S->EquippedSwordId=SwordId;S->EquippedGunId=GunId;S->WeaponPaintIndices=PaintIndices;}
++void UHCM5VS3Armory::RestoreSave(const UHCM1SaveGame* S){
++    if(!Catalog||!S)return;SwordId=Catalog->DefaultSword;GunId=Catalog->DefaultGun;PaintIndices.Reset();
++    if(S->ArmoryVersion>=1){
++        auto Valid=[this](FName Id,EHCM5WeaponClass K){auto* W=Find(Id);return W&&W->bEquippable&&W->WeaponClass==K;};
++        if(Valid(S->EquippedSwordId,EHCM5WeaponClass::Sword))SwordId=S->EquippedSwordId;if(Valid(S->EquippedGunId,EHCM5WeaponClass::Gun))GunId=S->EquippedGunId;
++        for(const auto& P:S->WeaponPaintIndices)if(auto* W=Find(P.Key);W&&W->Paints.IsValidIndex(P.Value))PaintIndices.Add(P.Key,P.Value);
++    }
++    if(auto* H=PC->GetControlledCharacter())H->GetAbilities()->RefreshArmoryWeapons();
++}
+--- a/Source/HarborCity/M5VS3/HCM5VS3Armory.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3Armory.h
+@@ -0,0 +1,66 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Components/ActorComponent.h"
++#include "GameFramework/Actor.h"
++#include "HCM5VS3ArmoryData.h"
++#include "HCM5VS3Armory.generated.h"
++class AHCM1PlayerController;class UHCM1SaveGame;class UStaticMeshComponent;class USceneCaptureComponent2D;class UTextureRenderTarget2D;class UNiagaraComponent;
++
++UCLASS()
++class HARBORCITY_API AHCM5VS3ArmoryPreview : public AActor
++{
++    GENERATED_BODY()
++public:
++    AHCM5VS3ArmoryPreview();
++    virtual void Tick(float Dt) override;
++    void ShowWeapon(UHCM5VS3WeaponData* Weapon,int32 Paint);
++    void RotatePreview(float X,float Y);
++    void ZoomPreview(float Delta);
++    void TryEffect(UHCM5VS3WeaponData* Weapon,int32 Paint);
++    UTextureRenderTarget2D* GetTexture() const{return Texture;}
++private:
++    UPROPERTY() TObjectPtr<USceneComponent> Pivot;
++    UPROPERTY() TObjectPtr<UStaticMeshComponent> Model;
++    UPROPERTY() TObjectPtr<UStaticMeshComponent> Outline;
++    UPROPERTY() TObjectPtr<USceneCaptureComponent2D> Capture;
++    UPROPERTY() TObjectPtr<UTextureRenderTarget2D> Texture;
++    UPROPERTY() TObjectPtr<UNiagaraComponent> PreviewEffect;
++    float Spin=0,Tilt=0,Zoom=1,Radius=75,ManualAge=10;
++};
++
++UCLASS(ClassGroup=(HarborCity))
++class HARBORCITY_API UHCM5VS3Armory : public UActorComponent
++{
++    GENERATED_BODY()
++public:
++    UHCM5VS3Armory();
++    virtual void BeginPlay() override;
++    virtual void EndPlay(const EEndPlayReason::Type Reason) override;
++    bool IsAvailable() const{return Weapons.Num()>0;}
++    bool IsOpen() const{return bOpen;}
++    bool Open();
++    void Close();
++    const TArray<TObjectPtr<UHCM5VS3WeaponData>>& GetWeapons() const{return Weapons;}
++    UHCM5VS3WeaponData* Find(FName Id) const;
++    UHCM5VS3WeaponData* Equipped(EHCM5WeaponClass Kind) const;
++    int32 GetPaintIndex(FName Weapon) const;
++    bool Equip(FName Id,int32 Paint);
++    void Select(FName Id);
++    void SelectPaint(int32 Index);
++    UHCM5VS3WeaponData* Selected() const{return Find(SelectedId);}
++    int32 SelectedPaint() const{return PreviewPaint;}
++    AHCM5VS3ArmoryPreview* GetPreview() const{return Preview;}
++    void FillSave(UHCM1SaveGame* Save) const;
++    void RestoreSave(const UHCM1SaveGame* Save);
++    FString EquippedName(bool Sword) const;
++private:
++    UPROPERTY() TObjectPtr<AHCM1PlayerController> PC;
++    UPROPERTY() TObjectPtr<UHCM5VS3ArmoryCatalog> Catalog;
++    UPROPERTY() TArray<TObjectPtr<UHCM5VS3WeaponData>> Weapons;
++    UPROPERTY() TObjectPtr<AHCM5VS3ArmoryPreview> Preview;
++    UPROPERTY() TArray<TObjectPtr<UObject>> ResidentAssets;
++    FName SwordId=TEXT("StarTide"),GunId=TEXT("Arcane"),SelectedId;
++    TMap<FName,int32> PaintIndices;
++    int32 PreviewPaint=0;
++    bool bOpen=false;
++};
+--- a/Source/HarborCity/M5VS3/HCM5VS3ArmoryData.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3ArmoryData.h
+@@ -0,0 +1,61 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Engine/DataAsset.h"
++#include "HCM5VS3ArmoryData.generated.h"
++class UStaticMesh; class UMaterialInterface; class UTexture2D; class UNiagaraSystem; class USoundBase;
++
++UENUM(BlueprintType)
++enum class EHCM5WeaponClass:uint8 { Sword, Gun };
++
++USTRUCT(BlueprintType)
++struct FHCM5WeaponPaint
++{
++    GENERATED_BODY()
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName Id;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FText Name;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FLinearColor Swatch=FLinearColor(.08,.45,1);
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<TSoftObjectPtr<UMaterialInterface>> Materials;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FLinearColor EffectColor=FLinearColor(.08,.45,1);
++};
++
++/** Catalog entry. Runtime never branches on model names or vendor package paths. */
++UCLASS(BlueprintType)
++class HARBORCITY_API UHCM5VS3WeaponData : public UPrimaryDataAsset
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName WeaponId;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FText DisplayName;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FText Description;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) EHCM5WeaponClass WeaponClass=EHCM5WeaponClass::Sword;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) TSoftObjectPtr<UStaticMesh> Mesh;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) TSoftObjectPtr<UTexture2D> Icon;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<FHCM5WeaponPaint> Paints;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FTransform ThirdPersonGrip=FTransform::Identity;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FTransform FirstPersonGrip=FTransform::Identity;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName GripSocket=TEXT("Grip");
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName BladeBaseSocket=TEXT("BladeBase");
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName BladeTipSocket=TEXT("BladeTip");
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName MuzzleSocket=TEXT("Muzzle");
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) float DamageScale=1;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) float AttackSpeedScale=1;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) int32 MagazineCapacity=12;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) bool bEquippable=true;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FText UnavailableReason;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FString SourceURL;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FString License;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName EffectFamily;
++    // Each complete weapon family comes from one package. Spell effects remain independent.
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) TMap<FName,TSoftObjectPtr<UNiagaraSystem>> Effects;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) TMap<FName,TSoftObjectPtr<USoundBase>> Sounds;
++};
++
++UCLASS(BlueprintType)
++class HARBORCITY_API UHCM5VS3ArmoryCatalog : public UDataAsset
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<TSoftObjectPtr<UHCM5VS3WeaponData>> Weapons;
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName DefaultSword=TEXT("StarTide");
++    UPROPERTY(EditAnywhere,BlueprintReadOnly) FName DefaultGun=TEXT("Arcane");
++};
+--- a/Source/HarborCity/M5VS3/HCM5VS3R1PolishEditor.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3R1PolishEditor.cpp
+@@ -91,7 +91,7 @@
+             auto* Settings=FindFProperty<FStructProperty>(S->Struct,TEXT("PhysicsSettings"));
+             if(!Settings)return TEXT("FAIL: long hair settings missing");
+             void* Values=Settings->ContainerPtrToValuePtr<void>(Data);
+-            for(const auto& Pair:TArray<TPair<FName,float>>{{TEXT("Stiffness"),.02f},{TEXT("Damping"),.35f},{TEXT("LimitAngle"),60.f}}){
++            for(const auto& Pair:TArray<TPair<FName,float>>{{TEXT("Stiffness"),.055f},{TEXT("Damping"),.45f},{TEXT("LimitAngle"),45.f}}){
+                 auto* F=FindFProperty<FFloatProperty>(Settings->Struct,Pair.Key);if(!F)return TEXT("FAIL: long hair field missing");F->SetPropertyValue_InContainer(Values,Pair.Value);
+             }
+             // Kawaii multiplies this direction by project gravity; zero stays zero.
+--- a/Source/HarborCity/M5VS3/HCM5VS3R2AssetEditor.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3R2AssetEditor.cpp
+@@ -0,0 +1,56 @@
++#include "HCM5VS3R2FXAuthoring.h"
++#if WITH_EDITOR
++#include "Engine/StaticMesh.h"
++#include "PhysicsEngine/BodySetup.h"
++#include "NiagaraSystem.h"
++#include "NiagaraEmitter.h"
++#include "NiagaraScript.h"
++#include "Serialization/JsonSerializer.h"
++#include "Serialization/JsonWriter.h"
++#include "Misc/App.h"
++#endif
++FString UHCM5VS3R2FXAuthoring::PrepareStandard(UNiagaraSystem* S){
++#if WITH_EDITOR
++    if(!S||!S->GetPathName().StartsWith(TEXT("/Game/HarborCity/M5VS3/R2/FX/Postgate/")))return TEXT("FAIL: scope");
++    TSet<FGuid> Old;for(const auto& H:S->GetEmitterHandles())Old.Add(H.GetId());S->RemoveEmitterHandlesById(Old);
++    auto& P=S->GetExposedParameters();
++    P.SetParameterValue(FLinearColor(.08f,.48f,1.f),FNiagaraVariable(FNiagaraTypeDefinition::GetColorDef(),TEXT("User.Color")),true);
++    P.SetParameterValue(FVector3f(0,0,1),FNiagaraVariable(FNiagaraTypeDefinition::GetVec3Def(),TEXT("User.BladeDirection")),true);
++    P.SetParameterValue(80.f,FNiagaraVariable(FNiagaraTypeDefinition::GetFloatDef(),TEXT("User.Width")),true);
++    S->MarkPackageDirty();return TEXT("PASS");
++#else
++    return TEXT("NOT_RUN");
++#endif
++}
++FString UHCM5VS3R2FXAuthoring::InspectStandard(UNiagaraSystem* S){
++#if WITH_EDITOR
++    if(!S)return TEXT("FAIL: missing");S->RequestCompile(false);S->WaitForCompilationComplete();
++    auto R=MakeShared<FJsonObject>();int32 Stateful=0,Lightweight=0,Renderers=0;bool ScriptsValid=true;
++    for(const auto& H:S->GetEmitterHandles()){
++        if(H.GetStatelessEmitter()){++Lightweight;continue;}
++        auto E=H.GetInstance();if(auto* D=E.GetEmitterData()){++Stateful;Renderers+=D->GetRenderers().Num();
++            for(auto* Script:{D->SpawnScriptProps.Script.Get(),D->UpdateScriptProps.Script.Get()})if(!Script||!Script->IsScriptCompilationPending(false)&&Script->GetLastCompileStatus()==ENiagaraScriptCompileStatus::NCS_Error)ScriptsValid=false;}
++    }
++    R->SetNumberField(TEXT("stateful_emitters"),Stateful);R->SetNumberField(TEXT("lightweight_emitters"),Lightweight);R->SetNumberField(TEXT("renderers"),Renderers);
++    R->SetBoolField(TEXT("scripts_valid"),ScriptsValid);R->SetBoolField(TEXT("ready"),S->IsReadyToRun());
++    ScriptsValid&=S->GetSystemSpawnScript()&&S->GetSystemUpdateScript()&&S->GetSystemSpawnScript()->GetLastCompileStatus()!=ENiagaraScriptCompileStatus::NCS_Error&&S->GetSystemUpdateScript()->GetLastCompileStatus()!=ENiagaraScriptCompileStatus::NCS_Error;
++    R->SetBoolField(TEXT("can_render"),FApp::CanEverRender());R->SetStringField(TEXT("runtime"),TEXT("NOT_RUN: asset compile only"));
++    R->SetStringField(TEXT("status"),Stateful>0&&Lightweight==0&&ScriptsValid?TEXT("PASS"):TEXT("FAIL"));
++    FString Out;FJsonSerializer::Serialize(R,TJsonWriterFactory<>::Create(&Out));return Out;
++#else
++    return TEXT("NOT_RUN");
++#endif
++}
++FString UHCM5VS3R2FXAuthoring::FinalizeWeapon(UStaticMesh* M){
++#if WITH_EDITOR
++    if(!M||!M->GetPathName().StartsWith(TEXT("/Game/HarborCity/M5VS3/R2/Weapons/"))||M->GetNumSourceModels()<1)return TEXT("FAIL: scope or LOD0");
++    M->Modify();M->SetNumSourceModels(3);M->bAutoComputeLODScreenSize=false;
++    const float Fractions[]={1.f,.5f,.25f};const float Screens[]={1.f,.4f,.17f};
++    for(int32 I=0;I<3;++I){auto& L=M->GetSourceModel(I);if(I){L.BuildSettings=M->GetSourceModel(0).BuildSettings;L.ReductionSettings=M->GetSourceModel(0).ReductionSettings;}L.ReductionSettings.BaseLODModel=0;L.ReductionSettings.PercentTriangles=Fractions[I];L.ScreenSize=Screens[I];}
++    M->Build(false);M->CreateBodySetup();auto* Body=M->GetBodySetup();Body->AggGeom.EmptyElements();
++    const auto B=M->GetBoundingBox();FKBoxElem Box;Box.Center=B.GetCenter();const auto S=B.GetSize();Box.X=S.X;Box.Y=S.Y;Box.Z=S.Z;Body->AggGeom.BoxElems.Add(Box);Body->CollisionTraceFlag=CTF_UseSimpleAsComplex;Body->InvalidatePhysicsData();Body->CreatePhysicsMeshes();
++    M->PostEditChange();M->MarkPackageDirty();return FString::Printf(TEXT("PASS: lods=%d simple_boxes=%d"),M->GetNumLODs(),Body->AggGeom.BoxElems.Num());
++#else
++    return TEXT("NOT_RUN");
++#endif
++}
+--- a/Source/HarborCity/M5VS3/HCM5VS3R2FXAuthoring.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3R2FXAuthoring.h
+@@ -8,6 +8,9 @@
+ {
+     GENERATED_BODY()
+ public:
++    UFUNCTION(BlueprintCallable) static FString PrepareStandard(UNiagaraSystem* System);
++    UFUNCTION(BlueprintCallable) static FString InspectStandard(UNiagaraSystem* System);
++    UFUNCTION(BlueprintCallable) static FString FinalizeWeapon(UStaticMesh* Mesh);
+     UFUNCTION(BlueprintCallable) static FString InspectBindings(UNiagaraSystem* System);
+     UFUNCTION(BlueprintCallable) static FString BuildSlash(UNiagaraSystem* System,UStaticMesh* Crescent,UStaticMesh* Filaments,UMaterialInterface* Edge,UMaterialInterface* Glint);
+     UFUNCTION(BlueprintCallable) static FString BuildImpact(UNiagaraSystem* System,UStaticMesh* Star,UStaticMesh* Rays,UMaterialInterface* Flash,UMaterialInterface* SpeedLines,UMaterialInterface* Spark);
+--- a/Source/HarborCity/M5VS3/HCM5VS3SwordWave.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3SwordWave.cpp
+@@ -0,0 +1,40 @@
++#include "HCM5VS3SwordWave.h"
++#include "HCM5VS3Abilities.h"
++#include "M1/HCM1Character.h"
++#include "M3/HCM3NPC.h"
++#include "M4/HCM4DamageTypes.h"
++#include "Engine/World.h"
++#include "EngineUtils.h"
++#include "NiagaraFunctionLibrary.h"
++#include "NiagaraComponent.h"
++#include "Kismet/GameplayStatics.h"
++#include "Misc/CommandLine.h"
++#include "Misc/Parse.h"
++AHCM5VS3SwordWave::AHCM5VS3SwordWave(){PrimaryActorTick.bCanEverTick=true;RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("WaveRoot"));}
++void AHCM5VS3SwordWave::Spawn(AHCM1Character* H,UNiagaraSystem* S,UNiagaraSystem* Hit,const FLinearColor& Tint,float D,int32 Serial,const TSet<TWeakObjectPtr<AActor>>& AlreadyHit){
++    if(!H||!S)return;int32 Count=0;for(TActorIterator<AHCM5VS3SwordWave>I(H->GetWorld());I;++I)if(++Count>=4)return;
++    FActorSpawnParameters P;P.Owner=H;P.Instigator=H;auto* W=H->GetWorld()->SpawnActor<AHCM5VS3SwordWave>(H->GetActorLocation()+H->GetActorForwardVector()*80+FVector(0,0,10),H->GetActorRotation(),P);if(!W)return;
++    W->Hero=H;W->Direction=H->GetActorForwardVector();W->Damage=D;W->Impact=Hit;W->SwingSerial=Serial;W->HitActors=AlreadyHit;W->Color=Tint;
++    W->Effect=UNiagaraFunctionLibrary::SpawnSystemAttached(S,W->GetRootComponent(),NAME_None,FVector::ZeroVector,FRotator(90,55,0),EAttachLocation::SnapToTarget,false);
++    if(W->Effect)W->Effect->SetVariableLinearColor(TEXT("User.Color"),Tint);W->SetLifeSpan(1.5f);
++}
++void AHCM5VS3SwordWave::Shatter(const FVector& At){
++    if(Impact)if(auto* C=UNiagaraFunctionLibrary::SpawnSystemAtLocation(this,Impact,At,FRotator::ZeroRotator,FVector(.75f)))C->SetVariableLinearColor(TEXT("User.Color"),Color);
++    Destroy();
++}
++void AHCM5VS3SwordWave::Tick(float Dt){
++    Super::Tick(Dt);if(!Hero.IsValid()){Destroy();return;}
++    const FVector Start=GetActorLocation();const float Step=FMath::Min(1400.f*Dt,800.f-Travelled);FVector End=Start+Direction*Step;
++    FCollisionQueryParams Query(SCENE_QUERY_STAT(R2SwordWave),false,Hero.Get());Query.AddIgnoredActor(this);for(const auto& A:HitActors)if(A.IsValid())Query.AddIgnoredActor(A.Get());
++    FCollisionObjectQueryParams World;World.AddObjectTypesToQuery(ECC_WorldStatic);World.AddObjectTypesToQuery(ECC_WorldDynamic);
++    FHitResult Wall;const bool Blocked=GetWorld()->SweepSingleByObjectType(Wall,Start,End,GetActorQuat(),World,FCollisionShape::MakeBox(FVector(12,90,55)),Query);if(Blocked)End=FMath::Lerp(Start,End,Wall.Time);
++    TArray<FHitResult> Hits;GetWorld()->SweepMultiByObjectType(Hits,Start,End,GetActorQuat(),FCollisionObjectQueryParams(ECC_GameTraceChannel1),FCollisionShape::MakeBox(FVector(12,90,55)),Query);
++    for(const auto& H:Hits)if(auto* NPC=Cast<AHCM3NPC>(H.GetActor());NPC&&!NPC->IsHidden()&&NPC->IsCombatEnabled()&&!HitActors.Contains(NPC)){
++        HitActors.Add(NPC);if(!Hero->GetAbilities()->ClaimSwordWaveHit(SwingSerial,NPC))continue;
++        const float Before=NPC->GetHealth();UGameplayStatics::ApplyPointDamage(NPC,Damage,Direction,H,Hero->GetController(),Hero.Get(),UHCM4MeleeDamageType::StaticClass());
++        AHCM5VS3SpellFX::SpawnNumber(Hero.Get(),NPC->GetActorLocation()+FVector(0,0,120),FMath::RoundToInt(Before-NPC->GetHealth()),false);
++        if(Impact)if(auto* C=UNiagaraFunctionLibrary::SpawnSystemAtLocation(this,Impact,H.ImpactPoint,FRotator::ZeroRotator,FVector(1)))C->SetVariableLinearColor(TEXT("User.Color"),Color);
++        if(FParse::Param(FCommandLine::Get(),TEXT("R1Trace")))UE_LOG(LogTemp,Display,TEXT("R2_WAVE swing=%d target=%s hp_before=%.2f hp_after=%.2f distance=%.1f"),SwingSerial,*NPC->GetName(),Before,NPC->GetHealth(),Travelled);
++    }
++    Travelled+=FVector::Dist(Start,End);SetActorLocation(End);if(Blocked||Travelled>=799.9f)Shatter(End);
++}
+--- a/Source/HarborCity/M5VS3/HCM5VS3SwordWave.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3SwordWave.h
+@@ -0,0 +1,22 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "GameFramework/Actor.h"
++#include "HCM5VS3SwordWave.generated.h"
++class AHCM1Character;class UNiagaraComponent;class UNiagaraSystem;
++UCLASS()
++class HARBORCITY_API AHCM5VS3SwordWave : public AActor
++{
++    GENERATED_BODY()
++public:
++    AHCM5VS3SwordWave();
++    static void Spawn(AHCM1Character* Hero,UNiagaraSystem* Effect,UNiagaraSystem* Impact,const FLinearColor& Tint,float Damage,int32 Swing,const TSet<TWeakObjectPtr<AActor>>& AlreadyHit);
++    virtual void Tick(float DeltaSeconds) override;
++private:
++    UPROPERTY() TObjectPtr<UNiagaraComponent> Effect;
++    UPROPERTY() TObjectPtr<UNiagaraSystem> Impact;
++    TWeakObjectPtr<AHCM1Character> Hero;
++    TSet<TWeakObjectPtr<AActor>> HitActors;
++    FVector Direction;FLinearColor Color;
++    float Damage=55,Travelled=0;int32 SwingSerial=0;
++    void Shatter(const FVector& At);
++};
+--- a/Source/HarborCity/M5VS3/HCM5VS3SwordWindow.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3SwordWindow.cpp
+@@ -0,0 +1,15 @@
++#include "HCM5VS3SwordWindow.h"
++#include "HCM5VS3Abilities.h"
++#include "M1/HCM1Character.h"
++#include "Components/SkeletalMeshComponent.h"
++
++void UHCM5VS3SwordWindow::NotifyBegin(USkeletalMeshComponent* M,UAnimSequenceBase* A,float Duration,const FAnimNotifyEventReference& E)
++{
++    Super::NotifyBegin(M,A,Duration,E);
++    if(auto* H=Cast<AHCM1Character>(M?M->GetOwner():nullptr);H&&M==H->GetMesh()) H->GetAbilities()->BeginSwordWindow();
++}
++void UHCM5VS3SwordWindow::NotifyEnd(USkeletalMeshComponent* M,UAnimSequenceBase* A,const FAnimNotifyEventReference& E)
++{
++    Super::NotifyEnd(M,A,E);
++    if(auto* H=Cast<AHCM1Character>(M?M->GetOwner():nullptr);H&&M==H->GetMesh()) H->GetAbilities()->EndSwordWindow();
++}
+--- a/Source/HarborCity/M5VS3/HCM5VS3SwordWindow.h
++++ b/Source/HarborCity/M5VS3/HCM5VS3SwordWindow.h
+@@ -0,0 +1,14 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Animation/AnimNotifies/AnimNotifyState.h"
++#include "HCM5VS3SwordWindow.generated.h"
++
++/** Sole timing source for blade damage and its accompanying trail. */
++UCLASS(meta=(DisplayName="HarborCity Sword Attack Window"))
++class HARBORCITY_API UHCM5VS3SwordWindow : public UAnimNotifyState
++{
++    GENERATED_BODY()
++public:
++    virtual void NotifyBegin(USkeletalMeshComponent* MeshComp,UAnimSequenceBase* Animation,float TotalDuration,const FAnimNotifyEventReference& EventReference) override;
++    virtual void NotifyEnd(USkeletalMeshComponent* MeshComp,UAnimSequenceBase* Animation,const FAnimNotifyEventReference& EventReference) override;
++};
+--- a/Source/HarborCity/M5VS3/HCM5VS3TargetVisual.cpp
++++ b/Source/HarborCity/M5VS3/HCM5VS3TargetVisual.cpp
+@@ -11,7 +11,7 @@
+ }
+ void UHCM5VS3TargetVisual::Initialize(){
+     auto* Mat=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/HarborCity/M5VS3/R1/FinalArt/M_TargetOutline.M_TargetOutline"));
+-    FlashMaterial=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/HarborCity/M5VS3/R1/FinalArt/M_TargetFlash.M_TargetFlash"));
++    FlashMaterial=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/HarborCity/M5VS3/R2/Art/M_R2_TargetRim.M_R2_TargetRim"));
+     TInlineComponentArray<UMeshComponent*> Meshes(GetOwner());
+     for(auto* M:Meshes){
+         if(!M->IsVisible()||M->bHiddenInGame||M->GetName().Contains(TEXT("Outline")))continue;
+@@ -29,6 +29,6 @@
+     }
+ }
+ void UHCM5VS3TargetVisual::SetSelected(bool Selected){for(UMeshComponent* M:Outlines)if(M)M->SetVisibility(Selected);}
+-void UHCM5VS3TargetVisual::Flash(){if(!FlashMaterial)return;FlashRemaining=.12f;for(UMeshComponent* M:Sources)if(M)M->SetOverlayMaterial(FlashMaterial);SetComponentTickEnabled(true);}
++void UHCM5VS3TargetVisual::Flash(){if(!FlashMaterial)return;FlashRemaining=.08f;for(UMeshComponent* M:Sources)if(M)M->SetOverlayMaterial(FlashMaterial);SetComponentTickEnabled(true);}
+ void UHCM5VS3TargetVisual::TickComponent(float Dt,ELevelTick T,FActorComponentTickFunction* F){Super::TickComponent(Dt,T,F);FlashRemaining-=Dt;if(FlashRemaining<=0){for(int32 I=0;I<Sources.Num();++I)if(Sources[I])Sources[I]->SetOverlayMaterial(SavedOverlays[I]);SetComponentTickEnabled(false);}}
+ void UHCM5VS3TargetVisual::EndPlay(const EEndPlayReason::Type Reason){for(int32 I=0;I<Sources.Num();++I)if(IsValid(Sources[I]))Sources[I]->SetOverlayMaterial(SavedOverlays[I]);for(UMeshComponent* M:Outlines)if(IsValid(M))M->DestroyComponent();Super::EndPlay(Reason);}
+--- a/Source/HarborCity/M5VS3/SHCM5VS3Armory.cpp
++++ b/Source/HarborCity/M5VS3/SHCM5VS3Armory.cpp
+@@ -0,0 +1,86 @@
++#include "SHCM5VS3Armory.h"
++#include "HCM5VS3Armory.h"
++#include "M1/HCM1PlayerController.h"
++#include "Engine/TextureRenderTarget2D.h"
++#include "Engine/Texture2D.h"
++#include "Fonts/CompositeFont.h"
++#include "Misc/Paths.h"
++#include "Styling/CoreStyle.h"
++#include "Widgets/Images/SImage.h"
++#include "Widgets/Input/SButton.h"
++#include "Widgets/Layout/SBorder.h"
++#include "Widgets/Layout/SBox.h"
++#include "Widgets/Layout/SScrollBox.h"
++#include "Widgets/Layout/SWrapBox.h"
++#include "Widgets/Text/STextBlock.h"
++#include "Widgets/SBoxPanel.h"
++
++namespace {
++FLinearColor Ink(.86,.91,.97),Gold(.88,.7,.39),Panel(.025,.044,.066,.98);
++class SHCWeaponPreview : public SCompoundWidget {
++public:
++    SLATE_BEGIN_ARGS(SHCWeaponPreview){} SLATE_ARGUMENT(TWeakObjectPtr<AHCM1PlayerController>,Controller) SLATE_END_ARGS()
++    void Construct(const FArguments& A){PC=A._Controller;Brush.DrawAs=ESlateBrushDrawType::Image;Brush.ImageSize=FVector2D(768);
++        ChildSlot[SNew(SImage).Image(&Brush)];}
++    AHCM5VS3ArmoryPreview* Preview() const{return PC.IsValid()&&PC->GetArmory()?PC->GetArmory()->GetPreview():nullptr;}
++    virtual void Tick(const FGeometry& G,double T,float Dt) override{SCompoundWidget::Tick(G,T,Dt);Brush.SetResourceObject(Preview()?Preview()->GetTexture():nullptr);}
++    virtual FReply OnMouseButtonDown(const FGeometry&,const FPointerEvent& E) override {return E.GetEffectingButton()==EKeys::LeftMouseButton?FReply::Handled().CaptureMouse(SharedThis(this)):FReply::Unhandled();}
++    virtual FReply OnMouseButtonUp(const FGeometry&,const FPointerEvent&) override{return FReply::Handled().ReleaseMouseCapture();}
++    virtual FReply OnMouseMove(const FGeometry&,const FPointerEvent& E) override {if(HasMouseCapture()){if(auto* P=Preview())P->RotatePreview(E.GetCursorDelta().X,E.GetCursorDelta().Y);return FReply::Handled();}return FReply::Unhandled();}
++    virtual FReply OnMouseWheel(const FGeometry&,const FPointerEvent& E) override {if(auto* P=Preview())P->ZoomPreview(E.GetWheelDelta());return FReply::Handled();}
++private:TWeakObjectPtr<AHCM1PlayerController> PC;FSlateBrush Brush;
++};
++}
++UHCM5VS3Armory* SHCM5VS3Armory::Armory() const{return Controller.IsValid()?Controller->GetArmory():nullptr;}
++void SHCM5VS3Armory::Construct(const FArguments& A){
++    Controller=A._Controller;
++    auto CF=MakeShared<FCompositeFont>(TEXT("ArmoryChinese"),FPaths::ProjectContentDir()/TEXT("HarborCity/UI/Fonts/DroidSansFallback.ttf"),EFontHinting::Default,EFontLoadingPolicy::LazyLoad);
++    Font=FSlateFontInfo(CF,18);Heading=FSlateFontInfo(CF,28);
++    SetVisibility(TAttribute<EVisibility>::CreateLambda([this](){return Armory()&&Armory()->IsOpen()?EVisibility::Visible:EVisibility::Collapsed;}));
++    auto Tab=[this](const TCHAR* Text,EHCM5WeaponClass Kind){return SNew(SButton).ContentPadding(12).OnClicked_Lambda([this,Kind](){Page=Kind;RefreshList();return FReply::Handled();})[SNew(STextBlock).Text(FText::FromString(Text)).Font(Font).ColorAndOpacity(Ink)];};
++    ChildSlot[SNew(SBorder).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush")).BorderBackgroundColor(FLinearColor(0,0,0,.72)).Padding(26).HAlign(HAlign_Center).VAlign(VAlign_Center)
++    [SNew(SBox).WidthOverride(1220).HeightOverride(740)
++    [SNew(SBorder).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush")).BorderBackgroundColor(Panel).Padding(24)
++    [SNew(SVerticalBox)
++    +SVerticalBox::Slot().AutoHeight().Padding(0,0,0,16)[SNew(SHorizontalBox)
++        +SHorizontalBox::Slot().FillWidth(1)[SNew(STextBlock).Text(FText::FromString(TEXT("星潮武器库"))).Font(Heading).ColorAndOpacity(Gold)]
++        +SHorizontalBox::Slot().AutoWidth()[SNew(SButton).ContentPadding(FMargin(20,7)).OnClicked_Lambda([this](){if(Armory())Armory()->Close();return FReply::Handled();})[SNew(STextBlock).Text(FText::FromString(TEXT("关闭  B"))).Font(Font)]]]
++    +SVerticalBox::Slot().FillHeight(1)[SNew(SHorizontalBox)
++        +SHorizontalBox::Slot().AutoWidth().Padding(0,0,15,0)[SNew(SBox).WidthOverride(240)[SNew(SVerticalBox)
++            +SVerticalBox::Slot().AutoHeight()[SNew(SHorizontalBox)+SHorizontalBox::Slot()[Tab(TEXT("剑"),EHCM5WeaponClass::Sword)]+SHorizontalBox::Slot()[Tab(TEXT("远程"),EHCM5WeaponClass::Gun)]]
++            +SVerticalBox::Slot().FillHeight(1).Padding(0,12,0,0)[SNew(SScrollBox)+SScrollBox::Slot()[SAssignNew(List,SVerticalBox)]]]]
++        +SHorizontalBox::Slot().FillWidth(1).Padding(0,0,20,0)[SNew(SVerticalBox)
++            +SVerticalBox::Slot().FillHeight(1)[SNew(SHCWeaponPreview).Controller(Controller)]
++            +SVerticalBox::Slot().AutoHeight().Padding(0,12)[SNew(STextBlock).Text(FText::FromString(TEXT("拖动旋转 · 滚轮缩放"))).Font(Font).Justification(ETextJustify::Center).ColorAndOpacity(FLinearColor(.55,.68,.78))]]
++        +SHorizontalBox::Slot().AutoWidth()[SNew(SBox).WidthOverride(300)[SNew(SScrollBox)+SScrollBox::Slot()[SAssignNew(Details,SVerticalBox)]]]]
++    ]]]];
++}
++FReply SHCM5VS3Armory::OnKeyDown(const FGeometry&,const FKeyEvent& E){if(E.GetKey()==EKeys::B){if(Armory())Armory()->Close();return FReply::Handled();}return FReply::Unhandled();}
++void SHCM5VS3Armory::Tick(const FGeometry& G,double T,float Dt){SCompoundWidget::Tick(G,T,Dt);const bool Open=Armory()&&Armory()->IsOpen();if(Open&&!WasOpen){Page=EHCM5WeaponClass::Sword;RefreshList();RefreshDetails();}WasOpen=Open;if(Open&&Armory()->Selected()&&LastSelection!=Armory()->Selected()->WeaponId){Page=Armory()->Selected()->WeaponClass;RefreshList();}}
++void SHCM5VS3Armory::RefreshList(){
++    List->ClearChildren();IconBrushes.Reset();if(!Armory())return;
++    for(UHCM5VS3WeaponData* W:Armory()->GetWeapons()){if(W->WeaponClass!=Page)continue;
++        TSharedPtr<FSlateBrush> B=MakeShared<FSlateBrush>();B->SetResourceObject(W->Icon.LoadSynchronous());B->ImageSize=FVector2D(64);B->DrawAs=ESlateBrushDrawType::Image;IconBrushes.Add(B);
++        List->AddSlot().AutoHeight().Padding(0,0,0,8)[SNew(SButton).ContentPadding(8).OnClicked_Lambda([this,Id=W->WeaponId](){Armory()->Select(Id);RefreshDetails();return FReply::Handled();})
++        [SNew(SHorizontalBox)+SHorizontalBox::Slot().AutoWidth()[SNew(SBox).WidthOverride(64).HeightOverride(64)[SNew(SImage).Image(B.Get())]]
++        +SHorizontalBox::Slot().FillWidth(1).VAlign(VAlign_Center).Padding(10,0)[SNew(STextBlock).Font(Font).AutoWrapText(true).Text_Lambda([this,W](){return FText::FromString(W->DisplayName.ToString()+(Armory()&&Armory()->Equipped(W->WeaponClass)==W?TEXT("\n已装备"):TEXT("")));}).ColorAndOpacity(Ink)]]];
++    }
++    if(!Armory()->Selected()||Armory()->Selected()->WeaponClass!=Page)for(UHCM5VS3WeaponData* W:Armory()->GetWeapons())if(W->WeaponClass==Page){Armory()->Select(W->WeaponId);break;}
++    RefreshDetails();
++}
++void SHCM5VS3Armory::RefreshDetails(){
++    Details->ClearChildren();auto* C=Armory();auto* W=C?C->Selected():nullptr;if(!W)return;LastSelection=W->WeaponId;
++    auto Text=[this](const FString& S,const FLinearColor& Color,bool Big=false){Details->AddSlot().AutoHeight().Padding(0,0,0,14)[SNew(STextBlock).Text(FText::FromString(S)).Font(Big?Heading:Font).AutoWrapText(true).ColorAndOpacity(Color)];};
++    Text(W->DisplayName.ToString(),Gold,true);Text(W->Description.ToString(),Ink);
++    auto* Current=C->Equipped(W->WeaponClass);
++    auto Stat=[&](const TCHAR* Label,float Value,float Base,const FString& Suffix){const auto Color=Value>Base+.001f?FLinearColor(.35,.9,.58):Value<Base-.001f?FLinearColor(1,.43,.38):Ink;Text(FString::Printf(TEXT("%s  %.1f%s"),Label,Value,*Suffix),Color);};
++    if(W->WeaponClass==EHCM5WeaponClass::Sword){Stat(TEXT("斩击伤害"),24*W->DamageScale,Current?24*Current->DamageScale:24,TEXT(""));Stat(TEXT("重击伤害"),55*W->DamageScale,Current?55*Current->DamageScale:55,TEXT(""));Stat(TEXT("出招速度"),100*W->AttackSpeedScale,Current?100*Current->AttackSpeedScale:100,TEXT("%"));}
++    else {Stat(TEXT("射击伤害"),34*W->DamageScale,Current?34*Current->DamageScale:34,TEXT(""));Stat(TEXT("射速"),W->AttackSpeedScale/.28f,Current?Current->AttackSpeedScale/.28f:1/.28f,TEXT(" 发/秒"));Stat(TEXT("弹匣"),W->MagazineCapacity,Current?Current->MagazineCapacity:12,TEXT(" 发"));}
++    Text(TEXT("涂装"),Gold);TSharedPtr<SWrapBox> PaintBox;Details->AddSlot().AutoHeight().Padding(0,0,0,16)[SAssignNew(PaintBox,SWrapBox).UseAllottedSize(true)];
++    for(int32 I=0;I<W->Paints.Num();++I){const auto P=W->Paints[I];PaintBox->AddSlot().Padding(0,0,6,8)[SNew(SButton).ContentPadding(7).OnClicked_Lambda([this,I](){Armory()->SelectPaint(I);RefreshDetails();return FReply::Handled();})
++        [SNew(SHorizontalBox)+SHorizontalBox::Slot().AutoWidth()[SNew(SBox).WidthOverride(18).HeightOverride(18)[SNew(SBorder).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush")).BorderBackgroundColor(P.Swatch)]]
++        +SHorizontalBox::Slot().AutoWidth().Padding(6,0)[SNew(STextBlock).Text(FText::FromString((C->SelectedPaint()==I?TEXT("✓ "):TEXT(""))+P.Name.ToString())).Font(Font).ColorAndOpacity(Ink)]]];}
++    Details->AddSlot().AutoHeight().Padding(0,8)[SNew(SButton).ContentPadding(14).OnClicked_Lambda([this](){auto* A=Armory();if(A&&A->GetPreview())A->GetPreview()->TryEffect(A->Selected(),A->SelectedPaint());return FReply::Handled();})[SNew(STextBlock).Text(FText::FromString(TEXT("试招"))).Font(Font).Justification(ETextJustify::Center)]];
++    Details->AddSlot().AutoHeight().Padding(0,8)[SNew(SButton).ContentPadding(14).IsEnabled(W->bEquippable).OnClicked_Lambda([this](){auto* A=Armory();if(A&&A->Selected())A->Equip(A->Selected()->WeaponId,A->SelectedPaint());RefreshDetails();return FReply::Handled();})[SNew(STextBlock).Text(FText::FromString(W->bEquippable?TEXT("装备"):TEXT("暂不可装备"))).Font(Font).Justification(ETextJustify::Center)]];
++    if(!W->bEquippable)Text(W->UnavailableReason.ToString(),FLinearColor(1,.68,.42));
++}
+--- a/Source/HarborCity/M5VS3/SHCM5VS3Armory.h
++++ b/Source/HarborCity/M5VS3/SHCM5VS3Armory.h
+@@ -0,0 +1,24 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Widgets/SCompoundWidget.h"
++#include "HCM5VS3ArmoryData.h"
++class AHCM1PlayerController;class UHCM5VS3Armory;class SVerticalBox;
++
++class SHCM5VS3Armory : public SCompoundWidget
++{
++public:
++    SLATE_BEGIN_ARGS(SHCM5VS3Armory){} SLATE_ARGUMENT(TWeakObjectPtr<AHCM1PlayerController>,Controller) SLATE_END_ARGS()
++    void Construct(const FArguments& Args);
++    virtual bool SupportsKeyboardFocus() const override{return true;}
++    virtual FReply OnKeyDown(const FGeometry&,const FKeyEvent& Event) override;
++    virtual void Tick(const FGeometry&,double,float) override;
++private:
++    TWeakObjectPtr<AHCM1PlayerController> Controller;
++    TSharedPtr<SVerticalBox> List,Details;
++    TArray<TSharedPtr<FSlateBrush>> IconBrushes;
++    FSlateFontInfo Font,Heading;
++    EHCM5WeaponClass Page=EHCM5WeaponClass::Sword;
++    FName LastSelection;bool WasOpen=false;
++    UHCM5VS3Armory* Armory() const;
++    void RefreshList();void RefreshDetails();
++};
+--- a/Config/DefaultEngine.ini
++++ b/Config/DefaultEngine.ini
+@@ -104,3 +104,6 @@
+ 
+ [/Script/TcpMessaging.TcpMessagingSettings]
+ EnableTransport=False
++
++[/Script/Engine.CollisionProfile]
+++DefaultChannelResponses=(Channel=ECC_GameTraceChannel1,DefaultResponse=ECR_Ignore,bTraceType=False,bStaticObject=False,Name="HCSwordHurt")

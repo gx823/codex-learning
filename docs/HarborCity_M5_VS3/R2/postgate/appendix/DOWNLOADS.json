@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "path": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R2\\Purchased\\HolyFallen\\source.zip",
+      "bytes": 734126,
+      "sha256": "332c98e80646f67f44e12ca5a53696f46f10080c6528f6eee77d81017ebaefaf"
+    },
+    {
+      "path": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R2\\Purchased\\Steampunk\\source.zip",
+      "bytes": 1297305,
+      "sha256": "8b8af3760989e406b7adc603b9fb4c57d792257f9cdd2036fba2568e46e6049f"
+    },
+    {
+      "path": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R2\\Purchased\\Steampunk\\steampunk_pistol_ue_texture.zip",
+      "bytes": 109422556,
+      "sha256": "4f843a268427d6d735c0995d2dae17ebda58fee86287ce20aa8c8f285f90de22"
+    }
+  ],
+  "confirmed_bytes": 111453987,
+  "budget_gib": 10,
+  "unknown_completed_downloads": false
+}

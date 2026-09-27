@@ -1,0 +1,1375 @@
+{
+  "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R2\\m5_full_20260927_215745\\User\\Saved\\M5Tests\\20260927_215747_m5_full\\results.json",
+  "kind": "STANDALONE_PACKAGE",
+  "input": "ENGINE_ACTION_AND_LOGIC_NOT_OS",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.2829198017716408
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_full_20260927_215745",
+      "elapsed_seconds": 3.2836906984448433
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.294683799147606
+    },
+    {
+      "name": "M5 scene prerequisites",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual M5 director, six authored targets, combat and real application focus",
+      "actual": "mode=0 pawn=BP_TownHero_C_2147482310 speed=0.000 km/h characterCount=1",
+      "elapsed_seconds": 3.301349200308323
+    },
+    {
+      "name": "M5 actual purchased Selestia player mesh",
+      "status": "PASS",
+      "evidence_level": "A-runtime asset identity; not visual approval",
+      "expected": "private Selestia mesh in the real possessed character; rejected procedural heroes excluded",
+      "actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp.SKM_Selestia_Warp",
+      "elapsed_seconds": 3.3018220998346806
+    },
+    {
+      "name": "M5 active animation matches combat configured class",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "Selestia AnimBP active without old combat class override",
+      "actual": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/ABP_TownFlight.ABP_TownFlight_C",
+      "elapsed_seconds": 3.30903510004282
+    },
+    {
+      "name": "M5 original proportions and normalized bind units",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "247 original bones; town adds 3 virtual IK bones; unit bind scales; uniform mesh scale 1.25",
+      "actual": "scale=X=1.250 Y=1.250 Z=1.250 bones=250 unit_binds=1",
+      "elapsed_seconds": 3.315657999366522
+    },
+    {
+      "name": "M5 first-person camera uses original eye height",
+      "status": "PASS",
+      "evidence_level": "A-runtime; no head-animation camera inheritance",
+      "expected": "original eye reference 117.164879cm * 1.25 - mesh offset 89cm",
+      "actual": "57.4561",
+      "elapsed_seconds": 3.3352955989539623
+    },
+    {
+      "name": "M5 fresh isolated initial state",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "fresh Contact, TP, unarmed; no test stage reset",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Contact\",\r\n\t\"chapter\": \"01 · 寄给明天的包裹\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_Contact\",\r\n\t\"target_location\": \"X=-4650.000 Y=-4450.000 Z=94.952\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 3.0149705410003662,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\"\r\n\t]\r\n}",
+      "elapsed_seconds": 3.3358573988080025
+    },
+    {
+      "name": "M5 unchanged base look gains",
+      "status": "PASS",
+      "evidence_level": "A-readback",
+      "expected": "on-foot1.5; driving1.125=0.75 base",
+      "actual": "X=1.500 Y=1.500 / X=1.125 Y=1.125",
+      "elapsed_seconds": 3.3452173992991447
+    },
+    {
+      "name": "Initial stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Contact",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Contact\",\r\n\t\"chapter\": \"01 · 寄给明天的包裹\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 0,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_Contact\",\r\n\t\"target_location\": \"X=-4650.000 Y=-4450.000 Z=94.952\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 4.6220922470092773,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\"\r\n\t]\r\n} status=海湾漫游 · M5-VS2 港町候选　H 操作说明 · T 时段 · F 飞行 · P 暂停 vehicle=",
+      "elapsed_seconds": 4.898053199052811
+    },
+    {
+      "name": "Initial story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_Contact",
+      "actual": "M5_Contact X=-4650.000 Y=-4450.000 Z=94.952",
+      "elapsed_seconds": 4.899486098438501
+    },
+    {
+      "name": "Initial minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Contact\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t-100,\r\n\t\t-1660,\r\n\t\t98.150001525878906\r\n\t],\r\n\t\"target\": [\r\n\t\t-4650,\r\n\t\t-4450,\r\n\t\t94.951977252960205\r\n\t],\r\n\t\"heading_degrees\": 90,\r\n\t\"route_m\": 66.731986999511719,\r\n\t\"straight_m\": 53.372840881347656,\r\n\t\"plan_count\": 1,\r\n\t\"message\": \"01 · 寄给明天的包裹\\n路线 67 m · 直线 53 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t-100,\r\n\t\t\t-1660,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-912,\r\n\t\t\t-1615,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-1406,\r\n\t\t\t-1786,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-1976,\r\n\t\t\t-1976,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-2337,\r\n\t\t\t-2014,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-2394,\r\n\t\t\t-2071,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-3952,\r\n\t\t\t-3648,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-3990,\r\n\t\t\t-3762,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4180,\r\n\t\t\t-4807,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4541,\r\n\t\t\t-4921,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4598,\r\n\t\t\t-4902,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4650,\r\n\t\t\t-4450,\r\n\t\t\t10\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 4.9004461988806725
+    },
+    {
+      "name": "Street exploration music mode and bounded players",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio state",
+      "expected": "private playlist: all playing channels resolve only to the two private tracks; no legacy scene-mode music",
+      "actual": "{\r\n\t\"requested_mode\": 1,\r\n\t\"current_mode\": 1,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 6.6216640472412109,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 6.897920601069927
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "BP_NPCIdleR2_R_C_1 immediate_readback_only=frame=774 fp=0 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=-100.000 Y=-2060.000 Z=155.606 target=X=-4650.000 Y=-4450.000 Z=94.952 distance=180.011 hit=BP_NPCIdleR2_R_C_1 reachable=1",
+      "elapsed_seconds": 6.900514401495457
+    },
+    {
+      "name": "m5_chapter1 dialogue approach grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=774 fp=0 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=-100.000 Y=-2060.000 Z=155.606 target=X=-4650.000 Y=-4450.000 Z=94.952 distance=180.011 hit=BP_NPCIdleR2_R_C_1 reachable=1",
+      "elapsed_seconds": 6.909348100423813
+    },
+    {
+      "name": "m5_chapter1 dialogue approach settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=774 fp=0 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=-100.000 Y=-2060.000 Z=155.606 target=X=-4650.000 Y=-4450.000 Z=94.952 distance=180.011 hit=BP_NPCIdleR2_R_C_1 reachable=1} settled={frame=836 fp=0 player=X=-4522.721 Y=-4322.721 Z=92.150 view=X=-4467.882 Y=-4267.882 Z=151.969 target=X=-4650.000 Y=-4450.000 Z=94.952 distance=180.022 hit=BP_NPCIdleR2_R_C_1 reachable=1}",
+      "elapsed_seconds": 7.502642299979925
+    },
+    {
+      "name": "M5 E selected actual story NPC",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "M5_Contact",
+      "actual": "弦音",
+      "elapsed_seconds": 7.971866998821497
+    },
+    {
+      "name": "m5_chapter1_dialogue actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter1_dialogue.png bytes=2782159 pending=0",
+      "elapsed_seconds": 9.300057999789715
+    },
+    {
+      "name": "M5 E completes and closes dialogue",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "closed after five authored lines",
+      "actual": "",
+      "elapsed_seconds": 11.330067101866007
+    },
+    {
+      "name": "Accepted delivery stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Harbor",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbor\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 1,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_Harbor\",\r\n\t\"target_location\": \"X=8400.000 Y=-5400.000 Z=89.097\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 3,\\r\\n\\t\\\"current_mode\\\": 3,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 0.99976992607116699,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 11.653278350830078,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\"\r\n\t]\r\n} status=主线 02 · 港湾的十二秒：前往港湾，找到汐原。 vehicle=",
+      "elapsed_seconds": 11.93115970119834
+    },
+    {
+      "name": "Accepted delivery story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_Harbor",
+      "actual": "M5_Harbor X=8400.000 Y=-5400.000 Z=89.097",
+      "elapsed_seconds": 11.934775199741125
+    },
+    {
+      "name": "Accepted delivery minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbor\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t-4522.7207793864218,\r\n\t\t-4322.7207793864218,\r\n\t\t92.15000133514404\r\n\t],\r\n\t\"target\": [\r\n\t\t8400,\r\n\t\t-5400,\r\n\t\t89.097061157226562\r\n\t],\r\n\t\"heading_degrees\": -135,\r\n\t\"route_m\": 136.42269897460938,\r\n\t\"straight_m\": 129.67546081542969,\r\n\t\"plan_count\": 3,\r\n\t\"message\": \"02 · 港湾的十二秒\\n路线 136 m · 直线 130 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t-4522.7207793864218,\r\n\t\t\t-4322.7207793864218,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4560,\r\n\t\t\t-4465,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4598,\r\n\t\t\t-4693,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4598,\r\n\t\t\t-4902,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4541,\r\n\t\t\t-4921,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-1748,\r\n\t\t\t-4750,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t1539,\r\n\t\t\t-4712,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t1653,\r\n\t\t\t-4712,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t5928,\r\n\t\t\t-4940,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t8400,\r\n\t\t\t-5400,\r\n\t\t\t16.52235875601616\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 11.943045999854803
+    },
+    {
+      "name": "Contact interior music mode and bounded players",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio state",
+      "expected": "private playlist: all playing channels resolve only to the two private tracks; no legacy scene-mode music",
+      "actual": "{\r\n\t\"requested_mode\": 3,\r\n\t\"current_mode\": 3,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 13.658398628234863,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 13.938102200627327
+    },
+    {
+      "name": "Harbor checkpoint actual save file state",
+      "status": "PASS",
+      "evidence_level": "B-Action Save + file readback",
+      "expected": "M5.Signal.Harbor",
+      "actual": "M5.Signal.Harbor",
+      "elapsed_seconds": 14.749288998544216
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "BP_NPCIdleR2_V_C_1 immediate_readback_only=frame=1558 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=151.969 target=X=8400.000 Y=-5400.000 Z=89.097 distance=180.002 hit=BP_NPCIdleR2_V_C_1 reachable=1",
+      "elapsed_seconds": 14.754780899733305
+    },
+    {
+      "name": "m5_chapter2 dialogue approach grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=1558 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=151.969 target=X=8400.000 Y=-5400.000 Z=89.097 distance=180.002 hit=BP_NPCIdleR2_V_C_1 reachable=1",
+      "elapsed_seconds": 14.765719998627901
+    },
+    {
+      "name": "m5_chapter2 dialogue approach settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=1558 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=151.969 target=X=8400.000 Y=-5400.000 Z=89.097 distance=180.002 hit=BP_NPCIdleR2_V_C_1 reachable=1} settled={frame=1630 fp=0 player=X=8580.000 Y=-5400.000 Z=89.150 view=X=8973.923 Y=-5400.000 Z=158.609 target=X=8400.000 Y=-5400.000 Z=89.097 distance=180.000 hit=BP_NPCIdleR2_V_C_1 reachable=1}",
+      "elapsed_seconds": 15.352827299386263
+    },
+    {
+      "name": "M5 E selected actual story NPC",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "M5_Harbor",
+      "actual": "汐原",
+      "elapsed_seconds": 15.81331330165267
+    },
+    {
+      "name": "m5_chapter2_dialogue actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter2_dialogue.png bytes=2667247 pending=0",
+      "elapsed_seconds": 17.12201289832592
+    },
+    {
+      "name": "M5 E completes and closes dialogue",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "closed after five authored lines",
+      "actual": "",
+      "elapsed_seconds": 19.096936400979757
+    },
+    {
+      "name": "First investigation stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Ambush",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 2,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_InterceptorA\",\r\n\t\"target_location\": \"X=-4800.000 Y=7900.000 Z=277.617\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 0.99968934059143066,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 19.42259407043457,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\"\r\n\t]\r\n} status=突破中继庭院：击败两名封锁组拦截者，保护离线记录。 vehicle=",
+      "elapsed_seconds": 19.69849120080471
+    },
+    {
+      "name": "First investigation story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_InterceptorA",
+      "actual": "M5_InterceptorA X=-4800.000 Y=7900.000 Z=277.617",
+      "elapsed_seconds": 19.705370601266623
+    },
+    {
+      "name": "First investigation minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t8580,\r\n\t\t-5400,\r\n\t\t89.150001525878906\r\n\t],\r\n\t\"target\": [\r\n\t\t-4800,\r\n\t\t7900,\r\n\t\t277.61743529637658\r\n\t],\r\n\t\"heading_degrees\": 180,\r\n\t\"route_m\": 190.50868225097656,\r\n\t\"straight_m\": 188.65693664550781,\r\n\t\"plan_count\": 5,\r\n\t\"message\": \"02 · 港湾的十二秒\\n路线 191 m · 直线 189 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t8580,\r\n\t\t\t-5400,\r\n\t\t\t13.958986319153913\r\n\t\t],\r\n\t\t[\r\n\t\t\t5203.4666666666662,\r\n\t\t\t-1976,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t2964,\r\n\t\t\t988,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t1976,\r\n\t\t\t2409.9450980392157,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t855,\r\n\t\t\t3838,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t817,\r\n\t\t\t3876,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-589,\r\n\t\t\t4940,\r\n\t\t\t20\r\n\t\t],\r\n\t\t[\r\n\t\t\t-2338.4901960784314,\r\n\t\t\t5928,\r\n\t\t\t60\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4800,\r\n\t\t\t7900,\r\n\t\t\t189.7993646465502\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 19.714893098920584
+    },
+    {
+      "name": "Actual earlier checkpoint restored stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Harbor",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbor\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 2,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_Harbor\",\r\n\t\"target_location\": \"X=8400.000 Y=-5400.000 Z=88.947\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 3,\\r\\n\\t\\\"current_mode\\\": 3,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 21.158063888549805,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\"\r\n\t]\r\n} status=读取成功：玩家、车辆、照明、任务和路人状态已恢复。 vehicle=safe; old decoration aggregate intersected; physical body clear; excluded distant effects: VS3FirstSword VS3FirstMagicGun VS2TakeoffRune M4R2_FirstPersonBody M4R2_FirstPersonPistol M4R2_FPFlashA M4R2_FPFlashB M4R2_FPFlashCap ",
+      "elapsed_seconds": 21.43558679893613
+    },
+    {
+      "name": "Actual earlier checkpoint restored story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_Harbor",
+      "actual": "M5_Harbor X=8400.000 Y=-5400.000 Z=88.947",
+      "elapsed_seconds": 21.44369350001216
+    },
+    {
+      "name": "Actual earlier checkpoint restored minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Harbor\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t-4522.7207793864218,\r\n\t\t-4322.7207793864218,\r\n\t\t92.15000133514404\r\n\t],\r\n\t\"target\": [\r\n\t\t8400,\r\n\t\t-5400,\r\n\t\t88.947013854980469\r\n\t],\r\n\t\"heading_degrees\": -135,\r\n\t\"route_m\": 136.42269897460938,\r\n\t\"straight_m\": 129.67546081542969,\r\n\t\"plan_count\": 6,\r\n\t\"message\": \"02 · 港湾的十二秒\\n路线 136 m · 直线 130 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t-4522.7207793864218,\r\n\t\t\t-4322.7207793864218,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4560,\r\n\t\t\t-4465,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4598,\r\n\t\t\t-4693,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4598,\r\n\t\t\t-4902,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4541,\r\n\t\t\t-4921,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-1748,\r\n\t\t\t-4750,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t1539,\r\n\t\t\t-4712,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t1653,\r\n\t\t\t-4712,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t5928,\r\n\t\t\t-4940,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t8400,\r\n\t\t\t-5400,\r\n\t\t\t16.52235875601616\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 21.45733379945159
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "BP_NPCIdleR2_V_C_1 immediate_readback_only=frame=2303 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=149.606 target=X=8400.000 Y=-5400.000 Z=88.947 distance=180.003 hit=BP_NPCIdleR2_V_C_1 reachable=1",
+      "elapsed_seconds": 21.464616399258375
+    },
+    {
+      "name": "m5_chapter2_replay dialogue approach grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=2303 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=149.606 target=X=8400.000 Y=-5400.000 Z=88.947 distance=180.003 hit=BP_NPCIdleR2_V_C_1 reachable=1",
+      "elapsed_seconds": 21.48402800038457
+    },
+    {
+      "name": "m5_chapter2_replay dialogue approach settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=2303 fp=0 player=X=8580.000 Y=-5400.000 Z=90.000 view=X=-4467.882 Y=-4267.882 Z=149.606 target=X=8400.000 Y=-5400.000 Z=88.947 distance=180.003 hit=BP_NPCIdleR2_V_C_1 reachable=1} settled={frame=2368 fp=0 player=X=8580.000 Y=-5400.000 Z=89.150 view=X=8973.923 Y=-5400.000 Z=158.609 target=X=8400.000 Y=-5400.000 Z=88.947 distance=180.000 hit=BP_NPCIdleR2_V_C_1 reachable=1}",
+      "elapsed_seconds": 22.036467600613832
+    },
+    {
+      "name": "M5 E selected actual story NPC",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "M5_Harbor",
+      "actual": "汐原",
+      "elapsed_seconds": 22.496257700026035
+    },
+    {
+      "name": "m5_chapter2_replay_dialogue actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter2_replay_dialogue.png bytes=2664741 pending=0",
+      "elapsed_seconds": 23.79929620027542
+    },
+    {
+      "name": "M5 E completes and closes dialogue",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "closed after five authored lines",
+      "actual": "",
+      "elapsed_seconds": 25.80956729874015
+    },
+    {
+      "name": "Investigation after load stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Ambush",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 0,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 3,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_InterceptorA\",\r\n\t\"target_location\": \"X=-4800.000 Y=7900.000 Z=277.472\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 0.99972838163375854,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 26.136470794677734,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\"\r\n\t]\r\n} status=突破中继庭院：击败两名封锁组拦截者，保护离线记录。 vehicle=safe; old decoration aggregate intersected; physical body clear; excluded distant effects: VS3FirstSword VS3FirstMagicGun VS2TakeoffRune M4R2_FirstPersonBody M4R2_FirstPersonPistol M4R2_FPFlashA M4R2_FPFlashB M4R2_FPFlashCap ",
+      "elapsed_seconds": 26.412209801375866
+    },
+    {
+      "name": "Investigation after load story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_InterceptorA",
+      "actual": "M5_InterceptorA X=-4800.000 Y=7900.000 Z=277.472",
+      "elapsed_seconds": 26.420892998576164
+    },
+    {
+      "name": "Investigation after load minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t8580,\r\n\t\t-5400,\r\n\t\t89.150001525878906\r\n\t],\r\n\t\"target\": [\r\n\t\t-4800,\r\n\t\t7900,\r\n\t\t277.47152813275659\r\n\t],\r\n\t\"heading_degrees\": 180,\r\n\t\"route_m\": 190.50868225097656,\r\n\t\"straight_m\": 188.65693664550781,\r\n\t\"plan_count\": 8,\r\n\t\"message\": \"02 · 港湾的十二秒\\n路线 191 m · 直线 189 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t8580,\r\n\t\t\t-5400,\r\n\t\t\t13.958986319153913\r\n\t\t],\r\n\t\t[\r\n\t\t\t5203.4666666666662,\r\n\t\t\t-1976,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t2964,\r\n\t\t\t988,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t1976,\r\n\t\t\t2409.9450980392157,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t855,\r\n\t\t\t3838,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t817,\r\n\t\t\t3876,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-589,\r\n\t\t\t4940,\r\n\t\t\t20\r\n\t\t],\r\n\t\t[\r\n\t\t\t-2338.4901960784314,\r\n\t\t\t5928,\r\n\t\t\t60\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4800,\r\n\t\t\t7900,\r\n\t\t\t189.7993646465502\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 26.430952601134777
+    },
+    {
+      "name": "M5 ADS1.6 and reciprocal input",
+      "status": "PASS",
+      "evidence_level": "B-Action + A-camera readback",
+      "expected": "real final POV1.6; look0.625",
+      "actual": "projection=1.60000028 input=0.62500000",
+      "elapsed_seconds": 29.051862102001905
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "BP_NPCIdleR2_R_C_2 immediate_readback_only=frame=3235 fp=1 player=X=-4440.000 Y=7900.000 Z=275.600 view=X=8580.000 Y=-5400.000 Z=146.606 target=X=-4800.000 Y=7900.000 Z=277.472 distance=360.005 hit=StaticMeshActor_82 reachable=0",
+      "elapsed_seconds": 29.55567280203104
+    },
+    {
+      "name": "M5 real live interceptor",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "existing live authored NPC, player placed near it",
+      "actual": "M5_InterceptorA",
+      "elapsed_seconds": 29.56458570063114
+    },
+    {
+      "name": "M5 stationary ballistic fixture disclosed",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: target movement tick suspended; health/collision/damage routes unchanged",
+      "actual": "M5_InterceptorA",
+      "elapsed_seconds": 29.574218701571226
+    },
+    {
+      "name": "Courtyard combat music mode and bounded players",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio state",
+      "expected": "private playlist: all playing channels resolve only to the two private tracks; no legacy scene-mode music",
+      "actual": "{\r\n\t\"requested_mode\": 2,\r\n\t\"current_mode\": 2,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 31.786933898925781,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 32.06395620107651
+    },
+    {
+      "name": "M5 actual shot accepted; ray outcome recorded",
+      "status": "PASS",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot; moving/falling targets may be missed; target defeat and actual damage are asserted separately",
+      "actual": "shots 0->1 hits 0->1 hit=BP_NPCIdleR2_R_C_2 hp=66.0 muzzleBlocked=0 muzzle=X=-4504.254 Y=7887.446 Z=328.135 rayTarget=X=-4779.614 Y=7898.785 Z=323.617 view=X=-4440.000 Y=7900.000 Z=332.278",
+      "elapsed_seconds": 33.47765799984336
+    },
+    {
+      "name": "M5 actual shot accepted; ray outcome recorded",
+      "status": "PASS",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot; moving/falling targets may be missed; target defeat and actual damage are asserted separately",
+      "actual": "shots 1->2 hits 1->2 hit=BP_NPCIdleR2_R_C_2 hp=32.0 muzzleBlocked=0 muzzle=X=-4504.289 Y=7887.305 Z=328.084 rayTarget=X=-4792.141 Y=7899.470 Z=321.746 view=X=-4440.000 Y=7900.000 Z=332.278",
+      "elapsed_seconds": 34.38984680175781
+    },
+    {
+      "name": "M5 actual shot accepted; ray outcome recorded",
+      "status": "PASS",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot; moving/falling targets may be missed; target defeat and actual damage are asserted separately",
+      "actual": "shots 2->3 hits 2->3 hit=BP_NPCIdleR2_R_C_2 hp=0.0 muzzleBlocked=0 muzzle=X=-4505.027 Y=7885.887 Z=326.393 rayTarget=X=-4774.757 Y=7899.565 Z=315.523 view=X=-4440.000 Y=7900.000 Z=332.278",
+      "elapsed_seconds": 35.29718539863825
+    },
+    {
+      "name": "M5 actual interceptor defeated M5_InterceptorA",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "real NPC dead after Attack actions, with actual damage hits recorded",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Ambush\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 1,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 3,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_InterceptorB\",\r\n\t\"target_location\": \"X=-4927.672 Y=7181.078 Z=228.605\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 2,\\r\\n\\t\\\"current_mode\\\": 2,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 37.651329040527344,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\"\r\n\t]\r\n}",
+      "elapsed_seconds": 37.92718390002847
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "BP_NPCIdleR2_V_C_2 immediate_readback_only=frame=4294 fp=1 player=X=-4567.672 Y=7181.078 Z=229.589 view=X=-4440.000 Y=7900.000 Z=332.278 target=X=-4927.672 Y=7181.078 Z=228.605 distance=360.001 hit=none reachable=0",
+      "elapsed_seconds": 37.940177500247955
+    },
+    {
+      "name": "M5 real live interceptor",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "existing live authored NPC, player placed near it",
+      "actual": "M5_InterceptorB",
+      "elapsed_seconds": 37.94991359859705
+    },
+    {
+      "name": "M5 stationary ballistic fixture disclosed",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: target movement tick suspended; health/collision/damage routes unchanged",
+      "actual": "M5_InterceptorB",
+      "elapsed_seconds": 37.95936259999871
+    },
+    {
+      "name": "Courtyard combat music mode and bounded players",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio state",
+      "expected": "private playlist: all playing channels resolve only to the two private tracks; no legacy scene-mode music",
+      "actual": "{\r\n\t\"requested_mode\": 2,\r\n\t\"current_mode\": 2,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 40.154460906982422,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 40.43014619871974
+    },
+    {
+      "name": "M5 actual shot accepted; ray outcome recorded",
+      "status": "PASS",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot; moving/falling targets may be missed; target defeat and actual damage are asserted separately",
+      "actual": "shots 3->4 hits 3->4 hit=BP_NPCIdleR2_V_C_2 hp=66.0 muzzleBlocked=0 muzzle=X=-4632.875 Y=7169.275 Z=281.345 rayTarget=X=-4915.647 Y=7180.987 Z=270.214 view=X=-4567.672 Y=7181.078 Z=286.267",
+      "elapsed_seconds": 41.848083298653364
+    },
+    {
+      "name": "M5 actual shot accepted; ray outcome recorded",
+      "status": "PASS",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot; moving/falling targets may be missed; target defeat and actual damage are asserted separately",
+      "actual": "shots 4->5 hits 4->5 hit=BP_NPCIdleR2_V_C_2 hp=32.0 muzzleBlocked=0 muzzle=X=-4631.966 Y=7169.017 Z=281.204 rayTarget=X=-4918.648 Y=7181.343 Z=271.922 view=X=-4567.672 Y=7181.078 Z=286.267",
+      "elapsed_seconds": 42.75668299943209
+    },
+    {
+      "name": "M5 actual shot accepted; ray outcome recorded",
+      "status": "PASS",
+      "evidence_level": "B-Action ADS/fire; A current-pose aim fixture",
+      "expected": "one accepted shot; moving/falling targets may be missed; target defeat and actual damage are asserted separately",
+      "actual": "shots 5->6 hits 5->6 hit=BP_NPCIdleR2_V_C_2 hp=0.0 muzzleBlocked=0 muzzle=X=-4632.399 Y=7168.320 Z=279.843 rayTarget=X=-4903.060 Y=7177.873 Z=263.884 view=X=-4567.672 Y=7181.078 Z=286.267",
+      "elapsed_seconds": 43.66700230166316
+    },
+    {
+      "name": "M5 actual interceptor defeated M5_InterceptorB",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "real NPC dead after Attack actions, with actual damage hits recorded",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.RecoverShard\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 4,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_RelayCache\",\r\n\t\"target_location\": \"X=-4800.000 Y=8700.000 Z=365.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 2,\\r\\n\\t\\\"current_mode\\\": 2,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 46.028964996337891,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\"\r\n\t]\r\n}",
+      "elapsed_seconds": 46.30463080108166
+    },
+    {
+      "name": "Battle complete stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.RecoverShard",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.RecoverShard\",\r\n\t\"chapter\": \"02 · 港湾的十二秒\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 4,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_RelayCache\",\r\n\t\"target_location\": \"X=-4800.000 Y=8700.000 Z=365.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 2,\\r\\n\\t\\\"current_mode\\\": 2,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 46.636150360107422,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\"\r\n\t]\r\n} status=封锁解除。澪光：好啦，现在把那份不该消失的记录带走。 vehicle=safe; old decoration aggregate intersected; physical body clear; excluded distant effects: VS3FirstSword VS3FirstMagicGun VS2TakeoffRune M4R2_FirstPersonBody M4R2_FirstPersonPistol M4R2_FPFlashA M4R2_FPFlashB M4R2_FPFlashCap ",
+      "elapsed_seconds": 46.91184899955988
+    },
+    {
+      "name": "Battle complete story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_RelayCache",
+      "actual": "M5_RelayCache X=-4800.000 Y=8700.000 Z=365.000",
+      "elapsed_seconds": 46.926056798547506
+    },
+    {
+      "name": "Battle complete minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.RecoverShard\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t-4567.6724573531001,\r\n\t\t7181.078195242997,\r\n\t\t228.81060604417104\r\n\t],\r\n\t\"target\": [\r\n\t\t-4800,\r\n\t\t8700,\r\n\t\t365\r\n\t],\r\n\t\"heading_degrees\": -179.72993469238281,\r\n\t\"route_m\": 16.878742218017578,\r\n\t\"straight_m\": 15.365869522094727,\r\n\t\"plan_count\": 16,\r\n\t\"message\": \"02 · 港湾的十二秒\\n路线 17 m · 直线 15 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t-4567.6724573531001,\r\n\t\t\t7181.078195242997,\r\n\t\t\t150.39585883391675\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4883,\r\n\t\t\t8645,\r\n\t\t\t240\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4883,\r\n\t\t\t8740,\r\n\t\t\t240\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4845,\r\n\t\t\t8759,\r\n\t\t\t240\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4792.6400000000003,\r\n\t\t\t8751.5200000000004,\r\n\t\t\t240.00000000000003\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 46.938263300806284
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "HCM5StoryTerminal_0 immediate_readback_only=frame=5436 fp=1 player=X=-4620.000 Y=8700.000 Z=326.800 view=X=-4567.672 Y=7181.078 Z=286.267 target=X=-4800.000 Y=8700.000 Z=365.000 distance=184.009 hit=HCM5StoryTerminal_0 reachable=1",
+      "elapsed_seconds": 46.958014100790024
+    },
+    {
+      "name": "M5 cache grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=5436 fp=1 player=X=-4620.000 Y=8700.000 Z=326.800 view=X=-4567.672 Y=7181.078 Z=286.267 target=X=-4800.000 Y=8700.000 Z=365.000 distance=184.009 hit=HCM5StoryTerminal_0 reachable=1",
+      "elapsed_seconds": 46.97727470099926
+    },
+    {
+      "name": "M5 cache settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=5436 fp=1 player=X=-4620.000 Y=8700.000 Z=326.800 view=X=-4567.672 Y=7181.078 Z=286.267 target=X=-4800.000 Y=8700.000 Z=365.000 distance=184.009 hit=HCM5StoryTerminal_0 reachable=1} settled={frame=5501 fp=1 player=X=-4620.000 Y=8700.000 Z=326.022 view=X=-4620.000 Y=8700.000 Z=383.478 target=X=-4800.000 Y=8700.000 Z=365.000 distance=184.172 hit=HCM5StoryTerminal_0 reachable=1}",
+      "elapsed_seconds": 47.51411810144782
+    },
+    {
+      "name": "Evidence collected stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Tower",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 5,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_TowerUplink\",\r\n\t\"target_location\": \"X=10200.000 Y=-6500.000 Z=100.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 2,\\r\\n\\t\\\"current_mode\\\": 2,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 48.548263549804688,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\"\r\n\t]\r\n} status=主线 03 · 把夜色还给城市：证据已入终端，前往数据塔广播。 vehicle=safe; old decoration aggregate intersected; physical body clear; excluded distant effects: VS3FirstSword VS3FirstMagicGun VS2TakeoffRune M4R2_FirstPersonBody M4R2_FirstPersonPistol M4R2_FPFlashA M4R2_FPFlashB M4R2_FPFlashCap ",
+      "elapsed_seconds": 48.82401520013809
+    },
+    {
+      "name": "Evidence collected story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_TowerUplink",
+      "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000",
+      "elapsed_seconds": 48.840066600590944
+    },
+    {
+      "name": "Evidence collected minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t-4620,\r\n\t\t8700,\r\n\t\t326.02160803476971\r\n\t],\r\n\t\"target\": [\r\n\t\t10200,\r\n\t\t-6500,\r\n\t\t100\r\n\t],\r\n\t\"heading_degrees\": 180,\r\n\t\"route_m\": 212.4747314453125,\r\n\t\"straight_m\": 212.29046630859375,\r\n\t\"plan_count\": 18,\r\n\t\"message\": \"03 · 把夜色还给城市\\n路线 212 m · 直线 212 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t-4620,\r\n\t\t\t8700,\r\n\t\t\t242.62935820564067\r\n\t\t],\r\n\t\t[\r\n\t\t\t-2278.2117647058822,\r\n\t\t\t6916,\r\n\t\t\t130\r\n\t\t],\r\n\t\t[\r\n\t\t\t-0,\r\n\t\t\t4560.298039215686,\r\n\t\t\t16.156862745098039\r\n\t\t],\r\n\t\t[\r\n\t\t\t703,\r\n\t\t\t3952,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t817,\r\n\t\t\t3876,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t855,\r\n\t\t\t3838,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t10200,\r\n\t\t\t-6460,\r\n\t\t\t10\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 48.8531185016036
+    },
+    {
+      "name": "Evidence checkpoint actual save file state",
+      "status": "PASS",
+      "evidence_level": "B-Action Save + file readback",
+      "expected": "M5.Signal.Tower",
+      "actual": "M5.Signal.Tower",
+      "elapsed_seconds": 49.635298401117325
+    },
+    {
+      "name": "M5 defeated IDs persist without repeat enemies",
+      "status": "PASS",
+      "evidence_level": "B-Action Load + A-readback",
+      "expected": "two persistent victories, no live enabled interceptor",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 5,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_TowerUplink\",\r\n\t\"target_location\": \"X=10200.000 Y=-6500.000 Z=100.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 50.974479675292969,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\"\r\n\t]\r\n}",
+      "elapsed_seconds": 51.250769298523664
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "HCM5StoryTerminal_1 immediate_readback_only=frame=5976 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=-4620.000 Y=8700.000 Z=383.478 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_1450 reachable=0",
+      "elapsed_seconds": 51.26758719980717
+    },
+    {
+      "name": "M5 tower approach grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=5976 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=-4620.000 Y=8700.000 Z=383.478 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_1450 reachable=0",
+      "elapsed_seconds": 51.28076320141554
+    },
+    {
+      "name": "M5 tower approach settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=5976 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=-4620.000 Y=8700.000 Z=383.478 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_1450 reachable=0} settled={frame=6046 fp=1 player=X=10380.000 Y=-6500.000 Z=92.150 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.171 hit=HCM5StoryTerminal_1 reachable=1}",
+      "elapsed_seconds": 51.855516001582146
+    },
+    {
+      "name": "Broadcast started stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Upload",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Upload\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0.99654179811477661,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 6,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_TowerUplink\",\r\n\t\"target_location\": \"X=10200.000 Y=-6500.000 Z=100.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 3,\\r\\n\\t\\\"current_mode\\\": 3,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 52.685104370117188,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\"\r\n\t]\r\n} status=解码开始。留在终端附近；离开或受击会安全中止，证据不会丢失。 vehicle=safe; ",
+      "elapsed_seconds": 52.96153059974313
+    },
+    {
+      "name": "Broadcast started story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_TowerUplink",
+      "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000",
+      "elapsed_seconds": 52.97839039936662
+    },
+    {
+      "name": "Broadcast started minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Upload\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t10380,\r\n\t\t-6500,\r\n\t\t92.150001525878906\r\n\t],\r\n\t\"target\": [\r\n\t\t10200,\r\n\t\t-6500,\r\n\t\t100\r\n\t],\r\n\t\"heading_degrees\": 180,\r\n\t\"route_m\": 1.8763240575790405,\r\n\t\"straight_m\": 1.7999999523162842,\r\n\t\"plan_count\": 20,\r\n\t\"message\": \"03 · 把夜色还给城市\\n路线 2 m · 直线 2 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t10380,\r\n\t\t\t-6500,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t10279,\r\n\t\t\t-6460,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t10200,\r\n\t\t\t-6460,\r\n\t\t\t10\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 52.99282839894295
+    },
+    {
+      "name": "Leaving interrupts safely stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Tower",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 7,\r\n\t\"player_recoveries\": 0,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_TowerUplink\",\r\n\t\"target_location\": \"X=10200.000 Y=-6500.000 Z=100.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 53.69158935546875,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"52.750 transition old=M5.Signal.Upload new=M5.Signal.Tower\"\r\n\t]\r\n} status=解码已暂停，证据仍在。准备好后按 E 重连。 vehicle=safe; ",
+      "elapsed_seconds": 53.96596920117736
+    },
+    {
+      "name": "Leaving interrupts safely story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_TowerUplink",
+      "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000",
+      "elapsed_seconds": 53.98253070190549
+    },
+    {
+      "name": "Leaving interrupts safely minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": false,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t9500,\r\n\t\t9500,\r\n\t\t-330.85999915564696\r\n\t],\r\n\t\"target\": [\r\n\t\t10200,\r\n\t\t-6500,\r\n\t\t100\r\n\t],\r\n\t\"heading_degrees\": 0,\r\n\t\"route_m\": 1.8763240575790405,\r\n\t\"straight_m\": 160.15304565429688,\r\n\t\"plan_count\": 21,\r\n\t\"message\": \"03 · 把夜色还给城市\\n方向提示 · 直线 160 m\\n路线不可用 · 起点或目标不在可达地面\",\r\n\t\"route\": []\r\n}",
+      "elapsed_seconds": 54.00472750142217
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "HCM5StoryTerminal_1 immediate_readback_only=frame=6323 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=9500.000 Y=9500.000 Z=-267.495 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_736 reachable=0",
+      "elapsed_seconds": 54.0193837992847
+    },
+    {
+      "name": "M5 tower return grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=6323 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=9500.000 Y=9500.000 Z=-267.495 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_736 reachable=0",
+      "elapsed_seconds": 54.04039639979601
+    },
+    {
+      "name": "M5 tower return settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=6323 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=9500.000 Y=9500.000 Z=-267.495 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=StaticMeshActor_736 reachable=0} settled={frame=6386 fp=1 player=X=10380.000 Y=-6500.000 Z=92.150 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.171 hit=HCM5StoryTerminal_1 reachable=1}",
+      "elapsed_seconds": 54.56761499866843
+    },
+    {
+      "name": "M5 failure stimulus explicitly A",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: zero-health save-restore fixture, not a claimed NPC attack",
+      "actual": "production timed recovery is then observed",
+      "elapsed_seconds": 55.07303790003061
+    },
+    {
+      "name": "Defeat safely stops broadcast stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Tower",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 9,\r\n\t\"player_recoveries\": 1,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_TowerUplink\",\r\n\t\"target_location\": \"X=10200.000 Y=-6500.000 Z=100.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 2,\\r\\n\\t\\\"current_mode\\\": 2,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 0.98309779167175293,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 55.657623291015625,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"52.750 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.323 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"54.806 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.806 player_defeated; stable_stage_and_evidence_retained\"\r\n\t]\r\n} status=连接已安全中止。证据保留，恢复后可重新广播。 vehicle=safe; ",
+      "elapsed_seconds": 55.93351940065622
+    },
+    {
+      "name": "Defeat safely stops broadcast story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_TowerUplink",
+      "actual": "M5_TowerUplink X=10200.000 Y=-6500.000 Z=100.000",
+      "elapsed_seconds": 55.95049700140953
+    },
+    {
+      "name": "Defeat safely stops broadcast minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t10380,\r\n\t\t-6500,\r\n\t\t92.149999405112283\r\n\t],\r\n\t\"target\": [\r\n\t\t10200,\r\n\t\t-6500,\r\n\t\t100\r\n\t],\r\n\t\"heading_degrees\": 180,\r\n\t\"route_m\": 1.8763240575790405,\r\n\t\"straight_m\": 1.7999999523162842,\r\n\t\"plan_count\": 24,\r\n\t\"message\": \"03 · 把夜色还给城市\\n路线 2 m · 直线 2 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t10380,\r\n\t\t\t-6500,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t10279,\r\n\t\t\t-6460,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t10200,\r\n\t\t\t-6460,\r\n\t\t\t10\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 55.969643000513315
+    },
+    {
+      "name": "M5 production recovery retains evidence",
+      "status": "PASS",
+      "evidence_level": "A failure fixture + runtime recovery",
+      "expected": "recovered player, Tower stage, two victories retained",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Tower\",\r\n\t\"chapter\": \"03 · 把夜色还给城市\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 0,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 9,\r\n\t\"player_recoveries\": 1,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_TowerUplink\",\r\n\t\"target_location\": \"X=10200.000 Y=-6500.000 Z=100.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 2,\\r\\n\\t\\\"current_mode\\\": 2,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 59.663986206054688,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"52.750 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.323 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"54.806 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.806 player_defeated; stable_stage_and_evidence_retained\"\r\n\t]\r\n}",
+      "elapsed_seconds": 59.939852099865675
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "HCM5StoryTerminal_1 immediate_readback_only=frame=7056 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=HCM5StoryTerminal_1 reachable=1",
+      "elapsed_seconds": 59.95937820151448
+    },
+    {
+      "name": "M5 tower retry grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=7056 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=HCM5StoryTerminal_1 reachable=1",
+      "elapsed_seconds": 59.9746658988297
+    },
+    {
+      "name": "M5 tower retry settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=7056 fp=1 player=X=10380.000 Y=-6500.000 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.136 hit=HCM5StoryTerminal_1 reachable=1} settled={frame=7126 fp=1 player=X=10380.000 Y=-6500.000 Z=92.150 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=10200.000 Y=-6500.000 Z=100.000 distance=180.171 hit=HCM5StoryTerminal_1 reachable=1}",
+      "elapsed_seconds": 60.543678499758244
+    },
+    {
+      "name": "M5 pause halts music",
+      "status": "PASS",
+      "evidence_level": "B-Action Pause",
+      "expected": "pause menu and explicit audio pause",
+      "actual": "{\r\n\t\"requested_mode\": 2,\r\n\t\"current_mode\": 2,\r\n\t\"crossfading\": false,\r\n\t\"paused\": true,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 60.688041687011719,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 61.85307240113616
+    },
+    {
+      "name": "Tower decoding interior music mode and bounded players",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio state",
+      "expected": "private playlist: all playing channels resolve only to the two private tracks; no legacy scene-mode music",
+      "actual": "{\r\n\t\"requested_mode\": 3,\r\n\t\"current_mode\": 3,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 0,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 63.566707611083984,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 64.76722729951143
+    },
+    {
+      "name": "Public evidence broadcast stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Debrief",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Debrief\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": false,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6.0027370452880859,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 11,\r\n\t\"player_recoveries\": 1,\r\n\t\"navigation_target_valid\": true,\r\n\t\"target_id\": \"M5_Contact\",\r\n\t\"target_location\": \"X=-4650.000 Y=-4450.000 Z=94.802\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 70.477989196777344,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"52.750 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.323 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"54.806 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.806 player_defeated; stable_stage_and_evidence_retained\",\r\n\t\t\"60.300 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"66.207 transition old=M5.Signal.Upload new=M5.Signal.Debrief\"\r\n\t]\r\n} status=主线 04 · 尚未沉默的人：广播完成，回情报屋确认签收。 vehicle=safe; ",
+      "elapsed_seconds": 71.67760990187526
+    },
+    {
+      "name": "Public evidence broadcast story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "M5_Contact",
+      "actual": "M5_Contact X=-4650.000 Y=-4450.000 Z=94.802",
+      "elapsed_seconds": 71.69856379926205
+    },
+    {
+      "name": "Public evidence broadcast minimap receives actual target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "navigation component target equals live story actor",
+      "actual": "{\r\n\t\"enabled\": true,\r\n\t\"map_loaded\": true,\r\n\t\"texture_loaded\": true,\r\n\t\"bake_identity\": \"eb6e19a932baf0c4495b3edf4c902f068983f1f9340ec9a1584a83ef98e2ae21\",\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Debrief\",\r\n\t\"target_valid\": true,\r\n\t\"route_valid\": true,\r\n\t\"driving\": false,\r\n\t\"walk_after_parking\": false,\r\n\t\"position\": [\r\n\t\t10380,\r\n\t\t-6500,\r\n\t\t92.150001525878906\r\n\t],\r\n\t\"target\": [\r\n\t\t-4650,\r\n\t\t-4450,\r\n\t\t94.801979112625119\r\n\t],\r\n\t\"heading_degrees\": 180,\r\n\t\"route_m\": 155.57394409179688,\r\n\t\"straight_m\": 151.69158935546875,\r\n\t\"plan_count\": 26,\r\n\t\"message\": \"04 · 尚未沉默的人\\n路线 156 m · 直线 152 m\\n步行可达路线 · 到达后按 E 互动\",\r\n\t\"route\": [\r\n\t\t[\r\n\t\t\t10380,\r\n\t\t\t-6500,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t10279,\r\n\t\t\t-6460,\r\n\t\t\t10\r\n\t\t],\r\n\t\t[\r\n\t\t\t1862,\r\n\t\t\t-6061,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-988,\r\n\t\t\t-5662,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-1083,\r\n\t\t\t-5643,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4541,\r\n\t\t\t-4921,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4598,\r\n\t\t\t-4902,\r\n\t\t\t0\r\n\t\t],\r\n\t\t[\r\n\t\t\t-4650,\r\n\t\t\t-4450,\r\n\t\t\t10\r\n\t\t]\r\n\t]\r\n}",
+      "elapsed_seconds": 71.71804859861732
+    },
+    {
+      "name": "M5 grounded relocation fixture",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "A: ground trace, capsule clear; no traversal claim",
+      "actual": "BP_NPCIdleR2_R_C_1 immediate_readback_only=frame=8508 fp=1 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=-4650.000 Y=-4450.000 Z=94.802 distance=180.009 hit=StaticMeshActor_1053 reachable=0",
+      "elapsed_seconds": 71.73944149911404
+    },
+    {
+      "name": "m5_chapter4 dialogue approach grounded placement",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "grounded collision-clear candidate; eligibility checked after frame ticks",
+      "actual": "frame=8508 fp=1 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=-4650.000 Y=-4450.000 Z=94.802 distance=180.009 hit=StaticMeshActor_1053 reachable=0",
+      "elapsed_seconds": 71.76519989967346
+    },
+    {
+      "name": "m5_chapter4 dialogue approach settled reachable",
+      "status": "PASS",
+      "evidence_level": "A-fixture then A-runtime",
+      "expected": "production eligibility after at least one frame; original distance/collision; no competing vehicle or light",
+      "actual": "immediate={frame=8508 fp=1 player=X=-4522.721 Y=-4322.721 Z=93.000 view=X=10380.000 Y=-6500.000 Z=149.606 target=X=-4650.000 Y=-4450.000 Z=94.802 distance=180.009 hit=StaticMeshActor_1053 reachable=0} settled={frame=8558 fp=1 player=X=-4522.721 Y=-4322.721 Z=92.150 view=X=-4522.721 Y=-4322.721 Z=149.606 target=X=-4650.000 Y=-4450.000 Z=94.802 distance=180.020 hit=none reachable=1}",
+      "elapsed_seconds": 72.27975790202618
+    },
+    {
+      "name": "M5 E selected actual story NPC",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "M5_Contact",
+      "actual": "弦音",
+      "elapsed_seconds": 72.74691199883819
+    },
+    {
+      "name": "m5_chapter4_dialogue actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter4_dialogue.png bytes=2783573 pending=0",
+      "elapsed_seconds": 74.07468169927597
+    },
+    {
+      "name": "M5 E completes and closes dialogue",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "closed after five authored lines",
+      "actual": "",
+      "elapsed_seconds": 76.12070420011878
+    },
+    {
+      "name": "First night complete stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Complete",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6.0027370452880859,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 12,\r\n\t\"player_recoveries\": 1,\r\n\t\"navigation_target_valid\": false,\r\n\t\"target_id\": \"None\",\r\n\t\"target_location\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 3,\\r\\n\\t\\\"current_mode\\\": 3,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 0.99972051382064819,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 75.521293640136719,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"52.750 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.323 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"54.806 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.806 player_defeated; stable_stage_and_evidence_retained\",\r\n\t\t\"60.300 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"66.207 transition old=M5.Signal.Upload new=M5.Signal.Debrief\",\r\n\t\t\"74.449 transition old=M5.Signal.Debrief new=M5.Signal.Complete\"\r\n\t]\r\n} status=主线切片完成 · 无人签收的黎明。证据已送达，下一封信正在路上。 vehicle=safe; ",
+      "elapsed_seconds": 76.72328549996018
+    },
+    {
+      "name": "First night complete story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "completed story has no target",
+      "actual": "None X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 76.7483047991991
+    },
+    {
+      "name": "Side-quest placement found clear ground",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "actual authored actor; collision-clear A placement",
+      "actual": "M3_LinXia",
+      "elapsed_seconds": 76.76998220011592
+    },
+    {
+      "name": "Side-quest NPC reachable after camera settles",
+      "status": "PASS",
+      "evidence_level": "B Action + A readback; not whole-town route",
+      "expected": "collision-safe fixture outside range then real Move action arrival",
+      "actual": "id=M3_LinXia player=X=5783.479 Y=-4300.723 Z=92.150 npc=X=5608.215 Y=-4300.723 Z=87.882 distance=175.32 fp=1 flying=0 hit=BP_NPCIdleR2_Q_C_1 component=CharacterMesh0",
+      "elapsed_seconds": 78.49196119979024
+    },
+    {
+      "name": "Side-quest placement found clear ground",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "actual authored actor; collision-clear A placement",
+      "actual": "M3_ChenBo",
+      "elapsed_seconds": 82.1904371008277
+    },
+    {
+      "name": "Side-quest NPC reachable after camera settles",
+      "status": "PASS",
+      "evidence_level": "B Action + A readback; not whole-town route",
+      "expected": "collision-safe fixture outside range then real Move action arrival",
+      "actual": "id=M3_ChenBo player=X=-324.524 Y=2500.000 Z=98.150 npc=X=-500.000 Y=2500.000 Z=94.531 distance=175.51 fp=1 flying=0 hit=BP_NPCIdleR2_R_C_3 component=CharacterMesh0",
+      "elapsed_seconds": 83.96054530143738
+    },
+    {
+      "name": "Side-quest placement found clear ground",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "actual authored actor; collision-clear A placement",
+      "actual": "M3_ANing",
+      "elapsed_seconds": 87.55571220070124
+    },
+    {
+      "name": "Side-quest NPC reachable after camera settles",
+      "status": "PASS",
+      "evidence_level": "B Action + A readback; not whole-town route",
+      "expected": "collision-safe fixture outside range then real Move action arrival",
+      "actual": "id=M3_ANing player=X=-6000.000 Y=-5725.194 Z=89.150 npc=X=-6000.000 Y=-5900.000 Z=88.946 distance=174.81 fp=1 flying=0 hit=None component=None",
+      "elapsed_seconds": 89.32668429985642
+    },
+    {
+      "name": "Coffee delivered through actual dialogue input",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "Complete",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  2 m",
+      "elapsed_seconds": 93.41791849955916
+    },
+    {
+      "name": "Ride accepted through actual dialogue input",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "Active",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  2 m",
+      "elapsed_seconds": 93.44696630164981
+    },
+    {
+      "name": "Pickup fixture has legal curb and NPC-walkable door",
+      "status": "FAIL",
+      "evidence_level": "A-fixture",
+      "expected": "read-only safety queries choose A parking fixture; no condition override",
+      "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+      "elapsed_seconds": 93.47303130105138
+    },
+    {
+      "name": "Real passenger boarding on current town curb",
+      "status": "FAIL",
+      "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+      "expected": "driving, passenger attached through normal Tick",
+      "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.991 Y=-6360.922 Z=22.638 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_fade_seconds\": 1,\r\n\t\"named_post_removal_cooldown_seconds\": 60,\r\n\t\"coffee_stage\": 2,\r\n\t\"ride_stage\": 1,\r\n\t\"pickup_curb_y\": -6500,\r\n\t\"pickup_max_body_gap_cm\": 65,\r\n\t\"pickup_parallel_tolerance_degrees\": 15,\r\n\t\"actual_pickup_body_gap_cm\": 24.996857783275118,\r\n\t\"actual_body_world_min\": \"X=-5904.054 Y=-6475.003 Z=18.857\",\r\n\t\"actual_body_world_max\": \"X=-5432.465 Y=-6246.835 Z=145.096\",\r\n\t\"can_pickup_at_curb\": true,\r\n\t\"named_respawn_seconds\":\r\n\t{\r\n\t\t\"M5_Contact\": 0,\r\n\t\t\"M5_Harbor\": 0,\r\n\t\t\"M3_LinXia\": 0,\r\n\t\t\"M3_ChenBo\": 0,\r\n\t\t\"M3_ANing\": 0,\r\n\t\t\"VS2_Citizen00\": 0,\r\n\t\t\"VS2_Citizen01\": 0,\r\n\t\t\"VS2_Citizen02\": 0,\r\n\t\t\"VS2_Citizen03\": 0,\r\n\t\t\"VS2_Citizen04\": 0,\r\n\t\t\"VS2_Citizen05\": 0,\r\n\t\t\"VS2_Citizen06\": 0,\r\n\t\t\"VS2_Citizen07\": 0,\r\n\t\t\"VS2_Citizen08\": 0,\r\n\t\t\"VS2_Citizen09\": 0,\r\n\t\t\"VS2_Citizen10\": 0,\r\n\t\t\"VS2_Citizen11\": 0\r\n\t}\r\n}",
+      "elapsed_seconds": 108.0360943004489
+    },
+    {
+      "name": "Driving reverse signed velocity",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "actual negative forward velocity",
+      "actual": "X=-2061.783 Y=-85.557 Z=0.113",
+      "elapsed_seconds": 112.03954850137234
+    },
+    {
+      "name": "Ride completed by normal parking/dropoff condition",
+      "status": "FAIL",
+      "evidence_level": "B-Action + A travel placement; not continuous route proof",
+      "expected": "Complete; no direct quest mutation",
+      "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+      "elapsed_seconds": 116.85077099874616
+    },
+    {
+      "name": "Complete checkpoint actual save file state",
+      "status": "PASS",
+      "evidence_level": "B-Action Save + file readback",
+      "expected": "M5.Signal.Complete",
+      "actual": "M5.Signal.Complete",
+      "elapsed_seconds": 119.77129239961505
+    },
+    {
+      "name": "Complete reload stable story stage",
+      "status": "PASS",
+      "evidence_level": "B-Action then A-readback",
+      "expected": "M5.Signal.Complete",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6.0027370452880859,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 12,\r\n\t\"player_recoveries\": 1,\r\n\t\"navigation_target_valid\": false,\r\n\t\"target_id\": \"None\",\r\n\t\"target_location\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 120.27617645263672,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"52.750 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.323 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"54.806 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.806 player_defeated; stable_stage_and_evidence_retained\",\r\n\t\t\"60.300 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"66.207 transition old=M5.Signal.Upload new=M5.Signal.Debrief\",\r\n\t\t\"74.449 transition old=M5.Signal.Debrief new=M5.Signal.Complete\"\r\n\t]\r\n} status=存档中的车辆位置不安全，保留当前游戏。 vehicle=player physical bounds intersects vehicle; IsValid=true, Min=(X=-7383.424 Y=9277.594 Z=274.677), Max=(X=-7234.396 Y=9364.312 Z=456.297)",
+      "elapsed_seconds": 121.47689479961991
+    },
+    {
+      "name": "Complete reload story navigation target",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "completed story has no target",
+      "actual": "None X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 121.51182010024786
+    },
+    {
+      "name": "M5 duplicate victory rejected",
+      "status": "PASS",
+      "evidence_level": "A-validation",
+      "expected": "reject duplicate stable ID",
+      "actual": "主线拦截者记录无效。",
+      "elapsed_seconds": 121.54540840163827
+    },
+    {
+      "name": "M5 unknown stage rejected",
+      "status": "PASS",
+      "evidence_level": "A-validation",
+      "expected": "reject unknown stage",
+      "actual": "主线存档版本或阶段未知。",
+      "elapsed_seconds": 121.5780314989388
+    },
+    {
+      "name": "M5 future version rejected",
+      "status": "PASS",
+      "evidence_level": "A-validation",
+      "expected": "reject unknown version",
+      "actual": "主线存档版本或阶段未知。",
+      "elapsed_seconds": 121.61080380156636
+    },
+    {
+      "name": "M5 legacy optional field validates without mutation",
+      "status": "PASS",
+      "evidence_level": "A-validation",
+      "expected": "version0 optional extension accepted; Validate does not advance/reset the live quest",
+      "actual": "{\r\n\t\"quest_id\": \"M5.UnclaimedDawn\",\r\n\t\"stage_id\": \"M5.Signal.Complete\",\r\n\t\"chapter\": \"04 · 尚未沉默的人\",\r\n\t\"complete\": true,\r\n\t\"tracked\": true,\r\n\t\"defeated_interceptors\": 2,\r\n\t\"required_interceptors\": 2,\r\n\t\"upload_seconds\": 6.0027370452880859,\r\n\t\"story_driving_meters\": 0,\r\n\t\"transitions\": 12,\r\n\t\"player_recoveries\": 1,\r\n\t\"navigation_target_valid\": false,\r\n\t\"target_id\": \"None\",\r\n\t\"target_location\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"music\": \"{\\r\\n\\t\\\"requested_mode\\\": 1,\\r\\n\\t\\\"current_mode\\\": 1,\\r\\n\\t\\\"crossfading\\\": false,\\r\\n\\t\\\"paused\\\": false,\\r\\n\\t\\\"owned_channels\\\": 2,\\r\\n\\t\\\"playing_channels\\\": 1,\\r\\n\\t\\\"transitions\\\": 0,\\r\\n\\t\\\"duck_gain\\\": 1,\\r\\n\\t\\\"master_volume\\\": 0.40000000596046448,\\r\\n\\t\\\"private_playlist\\\": true,\\r\\n\\t\\\"active_private_assets_only\\\": true,\\r\\n\\t\\\"public_capture_bgm_muted\\\": true,\\r\\n\\t\\\"playlist_index\\\": 0,\\r\\n\\t\\\"playlist_elapsed\\\": 120.27617645263672,\\r\\n\\t\\\"exploration_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\\\",\\r\\n\\t\\\"combat_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\\\",\\r\\n\\t\\\"interior_asset\\\": \\\"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\\\"\\r\\n}\",\r\n\t\"events\": [\r\n\t\t\"0.000 Begin; heroine=Mioguang; adult_age=22; original_story=UnclaimedDawn\",\r\n\t\t\"10.584 transition old=M5.Signal.Contact new=M5.Signal.Harbor\",\r\n\t\t\"18.358 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"19.475 save_imported stage=M5.Signal.Harbor\",\r\n\t\t\"25.069 transition old=M5.Signal.Harbor new=M5.Signal.Ambush\",\r\n\t\t\"34.506 actual_interceptor_defeat id=M5_InterceptorA\",\r\n\t\t\"42.909 actual_interceptor_defeat id=M5_InterceptorB\",\r\n\t\t\"42.909 transition old=M5.Signal.Ambush new=M5.Signal.RecoverShard\",\r\n\t\t\"47.269 transition old=M5.Signal.RecoverShard new=M5.Signal.Tower\",\r\n\t\t\"49.389 save_imported stage=M5.Signal.Tower\",\r\n\t\t\"51.612 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"52.750 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.323 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"54.806 transition old=M5.Signal.Upload new=M5.Signal.Tower\",\r\n\t\t\"54.806 player_defeated; stable_stage_and_evidence_retained\",\r\n\t\t\"60.300 transition old=M5.Signal.Tower new=M5.Signal.Upload\",\r\n\t\t\"66.207 transition old=M5.Signal.Upload new=M5.Signal.Debrief\",\r\n\t\t\"74.449 transition old=M5.Signal.Debrief new=M5.Signal.Complete\"\r\n\t]\r\n}",
+      "elapsed_seconds": 121.64299109950662
+    },
+    {
+      "name": "m5_story_complete actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_story_complete.png bytes=2634588 pending=0",
+      "elapsed_seconds": 122.83918030187488
+    },
+    {
+      "name": "VS3 abilities enabled on current world",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "enabled",
+      "actual": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "elapsed_seconds": 124.84152580052614
+    },
+    {
+      "name": "VS3 initial stamina",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "100",
+      "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_y\": 0,\r\n\t\"height_above_sea_cm\": 426.29739379882812,\r\n\t\"cruise_cm_s\": 1000,\r\n\t\"boost_cm_s\": 2500,\r\n\t\"vertical_cm_s\": 600,\r\n\t\"takeoffs\": 0,\r\n\t\"visual_bank_degrees\": 0,\r\n\t\"landings\": 0,\r\n\t\"rejected\": 0,\r\n\t\"last_reason\": \"\",\r\n\t\"requested_velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position\": \"X=-7310.000 Y=9329.310 Z=366.297\",\r\n\t\"velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position_x\": -7309.9997130095662,\r\n\t\"velocity_x\": 0,\r\n\t\"requested_velocity_x\": 0,\r\n\t\"position_y\": 9329.3098273532469,\r\n\t\"velocity_y\": 0,\r\n\t\"requested_velocity_y\": 0,\r\n\t\"position_z\": 366.29740882823114,\r\n\t\"velocity_z\": 0,\r\n\t\"requested_velocity_z\": 0,\r\n\t\"movement_mode\": 1,\r\n\t\"physics_interaction\": true,\r\n\t\"look_yaw\": 1.5000000596046448,\r\n\t\"look_pitch\": 1.5000000596046448\r\n}",
+      "elapsed_seconds": 124.88086299970746
+    },
+    {
+      "name": "PunchImpact actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/PunchImpact.png bytes=2894616 pending=0",
+      "elapsed_seconds": 133.53754509985447
+    },
+    {
+      "name": "Actual punch damages target",
+      "status": "PASS",
+      "evidence_level": "B-Action + A placement",
+      "expected": "health reduced by Attack Action",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen00\",\r\n\t\"health\": 25,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 0,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 0,\r\n\t\"capsule_actual_body_valid\": false,\r\n\t\"capsule_physics_state_created\": false,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": true,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_R/Runtime_90e2904516/Animation/MM_Attack_01_NPCR.MM_Attack_01_NPCR\\\",\\r\\n\\t\\\"counter_starts\\\": 1,\\r\\n\\t\\\"counter_hits\\\": 1,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 1,\\r\\n\\t\\\"counter_sweeps\\\": 1,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 7,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 6.9358937963843346,\r\n\t\"damage_events\": 3,\r\n\t\"reaction_plays\": 1,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"J_Bip_C_Head\",\r\n\t\"last_damage\": 25\r\n}",
+      "elapsed_seconds": 136.53912959992886
+    },
+    {
+      "name": "Q selects sword",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "Sword",
+      "actual": "星潮剑  |  生命 85\n左键松开 挥剑   按住 蓄力\nQ / 滚轮 切换武器    B 武器库",
+      "elapsed_seconds": 137.94882379844785
+    },
+    {
+      "name": "SwordDraw actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/SwordDraw.png bytes=2952162 pending=0",
+      "elapsed_seconds": 139.13970860093832
+    },
+    {
+      "name": "SwordCombo actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/SwordCombo.png bytes=2840734 pending=0",
+      "elapsed_seconds": 144.9932158999145
+    },
+    {
+      "name": "Blade sweep damages adult target",
+      "status": "PASS",
+      "evidence_level": "B-Action + A placement",
+      "expected": "health reduced via input-driven blade sweep",
+      "actual": "{\r\n\t\"stable_id\": \"VS2_Citizen01\",\r\n\t\"health\": 0,\r\n\t\"max_health\": 100,\r\n\t\"dead\": true,\r\n\t\"corpse_present\": true,\r\n\t\"ragdoll_simulating\": true,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0.2160222977399826,\r\n\t\"pre_ragdoll_montage\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/AM_M4_HitFront_NPCV.AM_M4_HitFront_NPCV\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 60.377048492431641,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 2,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 0,\r\n\t\"capsule_collision_enabled\": 0,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 0,\r\n\t\"capsule_actual_body_valid\": false,\r\n\t\"capsule_physics_state_created\": false,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": false,\r\n\t\"controller_tick\": false,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 1,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 7,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 4,\r\n\t\"reaction_plays\": 2,\r\n\t\"last_hit_direction\": \"Front\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 55\r\n}",
+      "elapsed_seconds": 147.6091990992427
+    },
+    {
+      "name": "SwordFirstPerson actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/SwordFirstPerson.png bytes=2517424 pending=0",
+      "elapsed_seconds": 149.8762865997851
+    },
+    {
+      "name": "MagicGun actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/MagicGun.png bytes=2633613 pending=0",
+      "elapsed_seconds": 155.1488122008741
+    },
+    {
+      "name": "Magic gun uses existing firearm damage",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "Pistol damage authority",
+      "actual": "魔导枪  4 / 48  |  生命 85\n左键 单发    按住右键 瞄准\nR 装弹    Q 收枪    B 武器库",
+      "elapsed_seconds": 156.14920699968934
+    },
+    {
+      "name": "Spell 1 MP cost once",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "R1 bolt/wave spend on release; full-health heal rejects without charge",
+      "actual": "before 100.00 after 85.00 health 85.00 cooldown 0.96 expectedCost 15.00",
+      "elapsed_seconds": 158.8391692005098
+    },
+    {
+      "name": "Spell1Rune actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell1Rune.png bytes=2633844 pending=0",
+      "elapsed_seconds": 160.00863249972463
+    },
+    {
+      "name": "Spell 2 MP cost once",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "R1 bolt/wave spend on release; full-health heal rejects without charge",
+      "actual": "before 100.00 after 65.00 health 85.00 cooldown 5.96 expectedCost 35.00",
+      "elapsed_seconds": 168.4907747991383
+    },
+    {
+      "name": "Spell2Rune actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell2Rune.png bytes=2678255 pending=0",
+      "elapsed_seconds": 169.6590585000813
+    },
+    {
+      "name": "Spell 3 MP cost once",
+      "status": "FAIL",
+      "evidence_level": "B-Action",
+      "expected": "R1 bolt/wave spend on release; full-health heal rejects without charge",
+      "actual": "before 96.82 after 100.00 health 100.00 cooldown 0.00 expectedCost 0.00",
+      "elapsed_seconds": 181.54099339991808
+    },
+    {
+      "name": "Spell3Rune actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell3Rune.png bytes=2710351 pending=0",
+      "elapsed_seconds": 182.71382629871368
+    },
+    {
+      "name": "Spell 4 MP cost once",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "R1 bolt/wave spend on release; full-health heal rejects without charge",
+      "actual": "before 100.00 after 75.00 health 100.00 cooldown 11.45 expectedCost 25.00",
+      "elapsed_seconds": 191.59336889907718
+    },
+    {
+      "name": "Spell4Rune actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell4Rune.png bytes=2581975 pending=0",
+      "elapsed_seconds": 192.77870310097933
+    },
+    {
+      "name": "VS3 abilities enabled on current world",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "enabled",
+      "actual": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "elapsed_seconds": 203.00257280096412
+    },
+    {
+      "name": "VS3 initial stamina",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "100",
+      "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_y\": 0,\r\n\t\"height_above_sea_cm\": 149.15000915527344,\r\n\t\"cruise_cm_s\": 1000,\r\n\t\"boost_cm_s\": 2500,\r\n\t\"vertical_cm_s\": 600,\r\n\t\"takeoffs\": 0,\r\n\t\"visual_bank_degrees\": 0,\r\n\t\"landings\": 0,\r\n\t\"rejected\": 0,\r\n\t\"last_reason\": \"\",\r\n\t\"requested_velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position\": \"X=1990.000 Y=-9950.000 Z=89.150\",\r\n\t\"velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position_x\": 1990,\r\n\t\"velocity_x\": 0,\r\n\t\"requested_velocity_x\": 0,\r\n\t\"position_y\": -9950,\r\n\t\"velocity_y\": 0,\r\n\t\"requested_velocity_y\": 0,\r\n\t\"position_z\": 89.150001764297485,\r\n\t\"velocity_z\": 0,\r\n\t\"requested_velocity_z\": 0,\r\n\t\"movement_mode\": 1,\r\n\t\"physics_interaction\": true,\r\n\t\"look_yaw\": 1.5000000596046448,\r\n\t\"look_pitch\": 1.5000000596046448\r\n}",
+      "elapsed_seconds": 203.05892400071025
+    },
+    {
+      "name": "Normal flight consumes 5 per second",
+      "status": "PASS",
+      "evidence_level": "B-Action flight + A readback",
+      "expected": "20 over four simulated seconds",
+      "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": true,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 66.690444946289062,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Hover\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_y\": 0,\r\n\t\"height_above_sea_cm\": 1164.95556640625,\r\n\t\"cruise_cm_s\": 1000,\r\n\t\"boost_cm_s\": 2500,\r\n\t\"vertical_cm_s\": 600,\r\n\t\"takeoffs\": 1,\r\n\t\"visual_bank_degrees\": -0,\r\n\t\"landings\": 0,\r\n\t\"rejected\": 0,\r\n\t\"last_reason\": \"F 降落 · Space 上升 · 左 Ctrl 下降 · Shift 沿镜头加速\",\r\n\t\"requested_velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position\": \"X=0.000 Y=-6800.000 Z=1104.956\",\r\n\t\"velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position_x\": 0,\r\n\t\"velocity_x\": 0,\r\n\t\"requested_velocity_x\": 0,\r\n\t\"position_y\": -6800,\r\n\t\"velocity_y\": 0,\r\n\t\"requested_velocity_y\": 0,\r\n\t\"position_z\": 1104.9555112649552,\r\n\t\"velocity_z\": 0,\r\n\t\"requested_velocity_z\": 0,\r\n\t\"movement_mode\": 5,\r\n\t\"physics_interaction\": false,\r\n\t\"look_yaw\": 1.5000000596046448,\r\n\t\"look_pitch\": 1.5000000596046448\r\n}",
+      "elapsed_seconds": 211.67383569851518
+    },
+    {
+      "name": "FlightStamina actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/FlightStamina.png bytes=2935631 pending=0",
+      "elapsed_seconds": 212.830293700099
+    },
+    {
+      "name": "Flight keeps hands empty and MP full",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "no weapon/cast/attack",
+      "actual": "空手  |  生命 100\n左键 三段拳击    Q 切换武器",
+      "elapsed_seconds": 214.45622289925814
+    },
+    {
+      "name": "StaminaAutoLanding actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/StaminaAutoLanding.png bytes=2891282 pending=0",
+      "elapsed_seconds": 234.60249879956245
+    },
+    {
+      "name": "Stamina auto landing reaches ground",
+      "status": "PASS",
+      "evidence_level": "B-Action",
+      "expected": "grounded, no manual landing input",
+      "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 49.573493957519531,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_y\": 0,\r\n\t\"height_above_sea_cm\": 158.15000915527344,\r\n\t\"cruise_cm_s\": 1000,\r\n\t\"boost_cm_s\": 2500,\r\n\t\"vertical_cm_s\": 600,\r\n\t\"takeoffs\": 1,\r\n\t\"visual_bank_degrees\": 0,\r\n\t\"landings\": 1,\r\n\t\"rejected\": 0,\r\n\t\"last_reason\": \"已落地，保持空手；Q 切换武器。\",\r\n\t\"requested_velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position\": \"X=0.000 Y=-6800.000 Z=98.150\",\r\n\t\"velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position_x\": 0,\r\n\t\"velocity_x\": 0,\r\n\t\"requested_velocity_x\": 0,\r\n\t\"position_y\": -6800,\r\n\t\"velocity_y\": 0,\r\n\t\"requested_velocity_y\": 0,\r\n\t\"position_z\": 98.150001844880009,\r\n\t\"velocity_z\": 0,\r\n\t\"requested_velocity_z\": 0,\r\n\t\"movement_mode\": 1,\r\n\t\"physics_interaction\": true,\r\n\t\"look_yaw\": 1.5000000596046448,\r\n\t\"look_pitch\": 1.5000000596046448\r\n}",
+      "elapsed_seconds": 235.61016440019011
+    },
+    {
+      "name": "Ground stamina recovery",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "100 after ten seconds",
+      "actual": "{\r\n\t\"available\": true,\r\n\t\"flying\": false,\r\n\t\"landing\": false,\r\n\t\"boost\": false,\r\n\t\"stamina\": 100,\r\n\t\"exhausted\": false,\r\n\t\"presentation_state\": \"Grounded\",\r\n\t\"ascend\": false,\r\n\t\"descend\": false,\r\n\t\"input_x\": 0,\r\n\t\"input_y\": 0,\r\n\t\"height_above_sea_cm\": 158.15000915527344,\r\n\t\"cruise_cm_s\": 1000,\r\n\t\"boost_cm_s\": 2500,\r\n\t\"vertical_cm_s\": 600,\r\n\t\"takeoffs\": 1,\r\n\t\"visual_bank_degrees\": 0,\r\n\t\"landings\": 1,\r\n\t\"rejected\": 0,\r\n\t\"last_reason\": \"已落地，保持空手；Q 切换武器。\",\r\n\t\"requested_velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position\": \"X=0.000 Y=-6800.000 Z=98.150\",\r\n\t\"velocity\": \"X=0.000 Y=0.000 Z=0.000\",\r\n\t\"position_x\": 0,\r\n\t\"velocity_x\": 0,\r\n\t\"requested_velocity_x\": 0,\r\n\t\"position_y\": -6800,\r\n\t\"velocity_y\": 0,\r\n\t\"requested_velocity_y\": 0,\r\n\t\"position_z\": 98.150001844880009,\r\n\t\"velocity_z\": 0,\r\n\t\"requested_velocity_z\": 0,\r\n\t\"movement_mode\": 1,\r\n\t\"physics_interaction\": true,\r\n\t\"look_yaw\": 1.5000000596046448,\r\n\t\"look_pitch\": 1.5000000596046448\r\n}",
+      "elapsed_seconds": 245.61267780140042
+    },
+    {
+      "name": "Private BGM naturally alternates back to track one",
+      "status": "PASS",
+      "evidence_level": "A-runtime audio component clocks, no seek/speedup",
+      "expected": "two natural-duration crossfades, index zero; audibility is separate",
+      "actual": "{\r\n\t\"requested_mode\": 1,\r\n\t\"current_mode\": 1,\r\n\t\"crossfading\": false,\r\n\t\"paused\": false,\r\n\t\"owned_channels\": 2,\r\n\t\"playing_channels\": 1,\r\n\t\"transitions\": 2,\r\n\t\"duck_gain\": 1,\r\n\t\"master_volume\": 0.40000000596046448,\r\n\t\"private_playlist\": true,\r\n\t\"active_private_assets_only\": true,\r\n\t\"public_capture_bgm_muted\": true,\r\n\t\"playlist_index\": 0,\r\n\t\"playlist_elapsed\": 8.6129884719848633,\r\n\t\"exploration_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_NeonDelivery.SW_M5_NeonDelivery\",\r\n\t\"combat_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_HandshakeOverride.SW_M5_HandshakeOverride\",\r\n\t\"interior_asset\": \"/Game/HarborCity/M5/Audio/SW_M5_AfterRainTerminal.SW_M5_AfterRainTerminal\"\r\n}",
+      "elapsed_seconds": 436.81172059848905
+    },
+    {
+      "name": "M3 final screenshot file m5_chapter1_dialogue.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter1_dialogue.png bytes=2782159 pending=0",
+      "elapsed_seconds": 436.9389723986387
+    },
+    {
+      "name": "M3 final screenshot file m5_chapter2_dialogue.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter2_dialogue.png bytes=2667247 pending=0",
+      "elapsed_seconds": 437.0523913986981
+    },
+    {
+      "name": "M3 final screenshot file m5_chapter2_replay_dialogue.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter2_replay_dialogue.png bytes=2664741 pending=0",
+      "elapsed_seconds": 437.16697800159454
+    },
+    {
+      "name": "M3 final screenshot file m5_chapter4_dialogue.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_chapter4_dialogue.png bytes=2783573 pending=0",
+      "elapsed_seconds": 437.2816568017006
+    },
+    {
+      "name": "M3 final screenshot file m5_story_complete.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/m5_story_complete.png bytes=2634588 pending=0",
+      "elapsed_seconds": 437.3966801017523
+    },
+    {
+      "name": "M3 final screenshot file PunchImpact.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/PunchImpact.png bytes=2894616 pending=0",
+      "elapsed_seconds": 437.51062009856105
+    },
+    {
+      "name": "M3 final screenshot file SwordDraw.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/SwordDraw.png bytes=2952162 pending=0",
+      "elapsed_seconds": 437.625581599772
+    },
+    {
+      "name": "M3 final screenshot file SwordCombo.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/SwordCombo.png bytes=2840734 pending=0",
+      "elapsed_seconds": 437.73918199911714
+    },
+    {
+      "name": "M3 final screenshot file SwordFirstPerson.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/SwordFirstPerson.png bytes=2517424 pending=0",
+      "elapsed_seconds": 437.853615000844
+    },
+    {
+      "name": "M3 final screenshot file MagicGun.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/MagicGun.png bytes=2633613 pending=0",
+      "elapsed_seconds": 437.9693953990936
+    },
+    {
+      "name": "M3 final screenshot file Spell1Rune.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell1Rune.png bytes=2633844 pending=0",
+      "elapsed_seconds": 438.08527589961886
+    },
+    {
+      "name": "M3 final screenshot file Spell2Rune.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell2Rune.png bytes=2678255 pending=0",
+      "elapsed_seconds": 438.2004531994462
+    },
+    {
+      "name": "M3 final screenshot file Spell3Rune.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell3Rune.png bytes=2710351 pending=0",
+      "elapsed_seconds": 438.31357580050826
+    },
+    {
+      "name": "M3 final screenshot file Spell4Rune.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/Spell4Rune.png bytes=2581975 pending=0",
+      "elapsed_seconds": 438.428057000041
+    },
+    {
+      "name": "M3 final screenshot file FlightStamina.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/FlightStamina.png bytes=2935631 pending=0",
+      "elapsed_seconds": 438.54448610171676
+    },
+    {
+      "name": "M3 final screenshot file StaminaAutoLanding.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R2/m5_full_20260927_215745/User/Saved/M5Tests/20260927_215747_m5_full/StaminaAutoLanding.png bytes=2891282 pending=0",
+      "elapsed_seconds": 438.65855609998107
+    }
+  ]
+}

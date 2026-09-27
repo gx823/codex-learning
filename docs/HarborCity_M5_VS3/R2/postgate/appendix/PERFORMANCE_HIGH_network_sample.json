@@ -1,0 +1,6 @@
+{
+  "status": "SAMPLED",
+  "pid": 27628,
+  "tcp_listeners": [],
+  "scope": "One runtime TCP-listener sample, not proof that Windows showed no firewall dialog."
+}
