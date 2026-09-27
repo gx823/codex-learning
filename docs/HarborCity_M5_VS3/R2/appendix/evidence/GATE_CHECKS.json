@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Runtime actors",
+    "status": "PASS",
+    "evidence_level": "A",
+    "expected": "M1 controller, character, car, switch",
+    "actual": "PC=1 character=1 car=1 lamp=1",
+    "elapsed_seconds": 11.996488001197577
+  },
+  {
+    "name": "Isolated save slot",
+    "status": "PASS",
+    "evidence_level": "A",
+    "expected": "HarborCity_M2_V1_Test_*",
+    "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_gate_20260927_161505",
+    "elapsed_seconds": 12.000099498778582
+  },
+  {
+    "name": "R2 initial real application focus",
+    "status": "PASS",
+    "evidence_level": "A-runtime prerequisite",
+    "expected": "actual application activation before any test input; no focus override",
+    "actual": "focused=1",
+    "elapsed_seconds": 12.038660299032927
+  },
+  {
+    "name": "Old blade damage through Attack",
+    "status": "FAIL",
+    "evidence_level": "B engine Action / A fixture",
+    "expected": "Health reduced by actual weapon sweep",
+    "actual": "100.0",
+    "elapsed_seconds": 42.5617114007473
+  },
+  {
+    "name": "New blade damage through Attack",
+    "status": "FAIL",
+    "evidence_level": "B engine Action / A fixture",
+    "expected": "Health reduced by actual weapon sweep",
+    "actual": "100.0",
+    "elapsed_seconds": 48.927854999899864
+  }
+]

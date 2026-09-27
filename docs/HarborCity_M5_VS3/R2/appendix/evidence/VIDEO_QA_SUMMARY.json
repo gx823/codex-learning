@@ -1,0 +1,10 @@
+{
+  "duration_seconds": 24.884496000000002,
+  "actual_capture_fps": 20.41431741273763,
+  "bytes": 13972324,
+  "decode": "PASS_FULL_VIDEO_AND_AUDIO_DECODE",
+  "audio_signal": "PASS",
+  "listening": "NOT_RUN",
+  "bgm": "muted public capture",
+  "sha256": "d5fe23dd0eb83e112fcb34e2b0c10ebe1f195171769f3de426a9b196fa7d96e7"
+}

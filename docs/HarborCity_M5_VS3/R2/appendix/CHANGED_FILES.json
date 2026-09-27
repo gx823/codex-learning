@@ -1,0 +1,77 @@
+[
+  {
+    "path": "Source/HarborCity/HarborCity.Build.cs",
+    "sha256": "d707ebee804b5653ed3f5b9d625f985bced041595ae6d91e872366162d272937",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1HUD.cpp",
+    "sha256": "bee672dd322516d1f07051ef0fcee29dd174b4277c7fd58ffdc79e020c493930",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestM5VS3.cpp",
+    "sha256": "e145eb56bd840331d5b906bd8cc8051bd99efc4e83c50a1f51e2206acac94def",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestM5VS3R2.cpp",
+    "sha256": "610a329c37c7fc11d671291e71937c30e2f4275cd3e55ac5496a74a714be213a",
+    "new": true
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestRunner.cpp",
+    "sha256": "1713993b97528c08482e206398217eb714301a7ca50caa538e2b70b941da8ab2",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M1/HCM1TestRunner.h",
+    "sha256": "8b5fe368cd546c3d3f4f30ce110689e74ac941f4ee1aaa380f5da76c77315b85",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M3/HCM3Recording.cpp",
+    "sha256": "f3227a449326dbe2ae68c4ad2fe1f88f72c5597a3d8e2eefb66001e1e7c8de81",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp",
+    "sha256": "e135b56ea912a49bbf5b9d4ce0d62a24be45107381791374adae28d447fd5dd5",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3Abilities.h",
+    "sha256": "3d7326487da019f7c47e25e2edf7892ab89f542145853d544b2bf7fee160aa62",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3R1PolishEditor.cpp",
+    "sha256": "2991e795d000a29b80d27ec221b95197453c3f166dc9e225673b7185eeccfa1e",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3R1PolishEditor.h",
+    "sha256": "6367b6a3a4e52e59a6a87899e4343b355521d5437e70888ab3bdbdf102fb69e5",
+    "new": false
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3R2FXAuthoring.cpp",
+    "sha256": "af448b39866dce78ec9b53e4263dbe7abe659841c211652ba54a5eafa32c6ca6",
+    "new": true
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3R2FXAuthoring.h",
+    "sha256": "9d93388bc2caa57a6d51925265e20c24e53cbd5841e00f7e27e03892dca2afd1",
+    "new": true
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3SlashNotify.cpp",
+    "sha256": "b8477d7b28a8e0822389254925e13dfa17e8cd66535d9b0d86c22b694c0e7c82",
+    "new": true
+  },
+  {
+    "path": "Source/HarborCity/M5VS3/HCM5VS3SlashNotify.h",
+    "sha256": "10a6d491021f6e4e74e3d934864c0b65fcdc5aafa2047de772ac77a4ba352108",
+    "new": true
+  }
+]

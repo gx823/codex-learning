@@ -1,0 +1,101 @@
+{
+  "gate_run": "m5_vs3_r2_gate_20260927_161505",
+  "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_161607_545239E4\\capture.mp4",
+  "secondary_video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_160615_22573E8A\\capture.mp4",
+  "conclusion": "PARTIAL：刀光已由模糊圆环改成尖端月牙，命中改成星形爆点。最新约 20 FPS 录制中旧、新两组剑击均未命中，剑命中缺陷仍 FAIL；单独保留前一段真实命中证据。造型和强度等待你审阅。",
+  "visual_status": "USER_REVIEW_PARTIAL",
+  "sword_latest_status": "FAIL",
+  "hair_static": "USER_REVIEW: hangs down; physics active",
+  "hair_motion": "USER_REVIEW: settles after movement, not all speeds/turns covered",
+  "recording_artifacts": "latest selected frames no preparation banner; earlier impact clip FP banner retained; full human listening NOT_RUN",
+  "comparison_scope": "identical camera position/FOV; legacy FX switch only, not original R1 EXE; old/new target appearances differ",
+  "captures": [
+    {
+      "file": "old_slash.jpg",
+      "recording": "20260927_130630_742B54E0",
+      "seconds": 3.93
+    },
+    {
+      "file": "new_slash1.jpg",
+      "recording": "20260927_161607_545239E4",
+      "seconds": 10.43
+    },
+    {
+      "file": "new_slash2.jpg",
+      "recording": "20260927_161607_545239E4",
+      "seconds": 11.55
+    },
+    {
+      "file": "new_slash3.jpg",
+      "recording": "20260927_161607_545239E4",
+      "seconds": 12.81
+    },
+    {
+      "file": "old_impact.jpg",
+      "recording": "20260927_130630_742B54E0",
+      "seconds": 4.02
+    },
+    {
+      "file": "new_impact.jpg",
+      "recording": "20260927_160615_22573E8A",
+      "seconds": 11.42
+    },
+    {
+      "file": "fp_slash.jpg",
+      "recording": "20260927_161607_545239E4",
+      "seconds": 16.8
+    }
+  ],
+  "cards": [
+    {
+      "src": "old_slash.jpg",
+      "title": "旧刀光",
+      "caption": "旧特效开关：模糊环感明显。这是同机位对照，不是原 R1 EXE。"
+    },
+    {
+      "src": "new_slash1.jpg",
+      "title": "新刀光 · 第一段",
+      "caption": "尖端月牙与细线已可见；本段挥剑未命中，功能仍有缺陷。"
+    },
+    {
+      "src": "new_slash2.jpg",
+      "title": "新刀光 · 第二段",
+      "caption": "月牙随这一段剑的朝向变化；轮廓和强度等待审阅。"
+    },
+    {
+      "src": "new_slash3.jpg",
+      "title": "新刀光 · 第三段",
+      "caption": "上挑附近的蓝白月牙；是否足够清楚、有力度，请以正常速度录像判断。"
+    },
+    {
+      "src": "old_impact.jpg",
+      "title": "旧命中",
+      "caption": "与新图同机位，不同角色目标；旧环状特效容易盖住接触位置。"
+    },
+    {
+      "src": "new_impact.jpg",
+      "title": "新命中 · 前一段真实命中",
+      "caption": "星形白核和放射速度线，来自实际剑刃命中；C3 资产随后未改。"
+    },
+    {
+      "src": "hair_before.png",
+      "title": "持枪长发 · 修复前",
+      "caption": "站定时长发仍横向展开。"
+    },
+    {
+      "src": "hair_after.png",
+      "title": "持枪长发 · 修复后",
+      "caption": "长发恢复向下，保留物理；跑动后回落见录像尾段。"
+    },
+    {
+      "src": "rune_after.png",
+      "title": "攻击阵 · 胸前身体中线",
+      "caption": "阵心不再依附右肩；手部穿入阵中的动作细节还未单独验收。"
+    },
+    {
+      "src": "fp_slash.jpg",
+      "title": "第一人称刀光",
+      "caption": "采用较小、较淡版本；近处 NPC 本身会遮挡画面，保留真实取景。"
+    }
+  ]
+}

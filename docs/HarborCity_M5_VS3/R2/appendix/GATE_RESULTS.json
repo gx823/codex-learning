@@ -1,0 +1,269 @@
+{
+  "status": "USER_REVIEW_PARTIAL",
+  "phase": "R2_PRE_GATE",
+  "kind": "EDITOR_GAME_NOT_STANDALONE",
+  "engine": "5.8.2-56702186+++UE5+Release-5.8",
+  "evidence_layers": {
+    "logic": "asset readback + source review",
+    "engine_input": "EnhancedInput Action; explicit setup fixtures",
+    "os_input": "NOT_RUN"
+  },
+  "A_checks": [
+    {
+      "name": "R2 magic gun existing damage",
+      "status": "PASS",
+      "evidence_level": "B engine Action + A fixture",
+      "expected": "one body shot: 100 -> 66",
+      "actual": "66.0",
+      "elapsed_seconds": 33.71890090033412
+    },
+    {
+      "name": "R2 shield 25 MP spent once",
+      "status": "PASS",
+      "evidence_level": "B engine Action",
+      "expected": "MP 100 -> 75 after windup",
+      "actual": "weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=-0.023 draw=0.000 mp=75.00 shield=5.48 center=X=337.301 Y=-6657.696 Z=122.287",
+      "elapsed_seconds": 38.08085360005498
+    },
+    {
+      "name": "Sword contact at original fixture",
+      "status": "PASS",
+      "evidence_level": "B Attack + A placement",
+      "expected": "real blade sweep damage",
+      "actual": "health 100 -> 76; one 24-point sweep hit",
+      "elapsed_seconds": 49.27845009788871
+    }
+  ],
+  "gate_checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 11.996488001197577
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_gate_20260927_161505",
+      "elapsed_seconds": 12.000099498778582
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 12.038660299032927
+    },
+    {
+      "name": "Old blade damage through Attack",
+      "status": "FAIL",
+      "evidence_level": "B engine Action / A fixture",
+      "expected": "Health reduced by actual weapon sweep",
+      "actual": "100.0",
+      "elapsed_seconds": 42.5617114007473
+    },
+    {
+      "name": "New blade damage through Attack",
+      "status": "FAIL",
+      "evidence_level": "B engine Action / A fixture",
+      "expected": "Health reduced by actual weapon sweep",
+      "actual": "100.0",
+      "elapsed_seconds": 48.927854999899864
+    }
+  ],
+  "review": {
+    "gate_run": "m5_vs3_r2_gate_20260927_161505",
+    "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_161607_545239E4\\capture.mp4",
+    "secondary_video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_160615_22573E8A\\capture.mp4",
+    "conclusion": "PARTIAL：刀光已由模糊圆环改成尖端月牙，命中改成星形爆点。最新约 20 FPS 录制中旧、新两组剑击均未命中，剑命中缺陷仍 FAIL；单独保留前一段真实命中证据。造型和强度等待你审阅。",
+    "visual_status": "USER_REVIEW_PARTIAL",
+    "sword_latest_status": "FAIL",
+    "hair_static": "USER_REVIEW: hangs down; physics active",
+    "hair_motion": "USER_REVIEW: settles after movement, not all speeds/turns covered",
+    "recording_artifacts": "latest selected frames no preparation banner; earlier impact clip FP banner retained; full human listening NOT_RUN",
+    "comparison_scope": "identical camera position/FOV; legacy FX switch only, not original R1 EXE; old/new target appearances differ",
+    "captures": [
+      {
+        "file": "old_slash.jpg",
+        "recording": "20260927_130630_742B54E0",
+        "seconds": 3.93
+      },
+      {
+        "file": "new_slash1.jpg",
+        "recording": "20260927_161607_545239E4",
+        "seconds": 10.43
+      },
+      {
+        "file": "new_slash2.jpg",
+        "recording": "20260927_161607_545239E4",
+        "seconds": 11.55
+      },
+      {
+        "file": "new_slash3.jpg",
+        "recording": "20260927_161607_545239E4",
+        "seconds": 12.81
+      },
+      {
+        "file": "old_impact.jpg",
+        "recording": "20260927_130630_742B54E0",
+        "seconds": 4.02
+      },
+      {
+        "file": "new_impact.jpg",
+        "recording": "20260927_160615_22573E8A",
+        "seconds": 11.42
+      },
+      {
+        "file": "fp_slash.jpg",
+        "recording": "20260927_161607_545239E4",
+        "seconds": 16.8
+      }
+    ],
+    "cards": [
+      {
+        "src": "old_slash.jpg",
+        "title": "旧刀光",
+        "caption": "旧特效开关：模糊环感明显。这是同机位对照，不是原 R1 EXE。"
+      },
+      {
+        "src": "new_slash1.jpg",
+        "title": "新刀光 · 第一段",
+        "caption": "尖端月牙与细线已可见；本段挥剑未命中，功能仍有缺陷。"
+      },
+      {
+        "src": "new_slash2.jpg",
+        "title": "新刀光 · 第二段",
+        "caption": "月牙随这一段剑的朝向变化；轮廓和强度等待审阅。"
+      },
+      {
+        "src": "new_slash3.jpg",
+        "title": "新刀光 · 第三段",
+        "caption": "上挑附近的蓝白月牙；是否足够清楚、有力度，请以正常速度录像判断。"
+      },
+      {
+        "src": "old_impact.jpg",
+        "title": "旧命中",
+        "caption": "与新图同机位，不同角色目标；旧环状特效容易盖住接触位置。"
+      },
+      {
+        "src": "new_impact.jpg",
+        "title": "新命中 · 前一段真实命中",
+        "caption": "星形白核和放射速度线，来自实际剑刃命中；C3 资产随后未改。"
+      },
+      {
+        "src": "hair_before.png",
+        "title": "持枪长发 · 修复前",
+        "caption": "站定时长发仍横向展开。"
+      },
+      {
+        "src": "hair_after.png",
+        "title": "持枪长发 · 修复后",
+        "caption": "长发恢复向下，保留物理；跑动后回落见录像尾段。"
+      },
+      {
+        "src": "rune_after.png",
+        "title": "攻击阵 · 胸前身体中线",
+        "caption": "阵心不再依附右肩；手部穿入阵中的动作细节还未单独验收。"
+      },
+      {
+        "src": "fp_slash.jpg",
+        "title": "第一人称刀光",
+        "caption": "采用较小、较淡版本；近处 NPC 本身会遮挡画面，保留真实取景。"
+      }
+    ]
+  },
+  "video": {
+    "duration_seconds": 24.884496000000002,
+    "actual_capture_fps": 20.41431741273763,
+    "bytes": 13972324,
+    "decode": "PASS_FULL_VIDEO_AND_AUDIO_DECODE",
+    "audio_signal": "PASS",
+    "listening": "NOT_RUN",
+    "bgm": "muted public capture",
+    "sha256": "d5fe23dd0eb83e112fcb34e2b0c10ebe1f195171769f3de426a9b196fa7d96e7"
+  },
+  "budgets": {
+    "slash_particles_per_activation": 14,
+    "impact_particles_per_activation": 20,
+    "concurrent_impact_cap": 12,
+    "new_point_lights": 0,
+    "scope": "R2 slash/impact only; scene-wide totals and performance deferred",
+    "translucency": "slash 2 mesh layers + glints; impact 2 mesh layers + sparks; not measured overdraw"
+  },
+  "history_retained": [
+    "R1 original gun/shield/sword/audio FAIL records",
+    "R2 early wrong hair ABP restored; not counted as live fix",
+    "R2 gravity-only hair visual FAIL",
+    "first inline-capture gate broke combo timing and failed hits",
+    "mesh slot zero missing: repaired",
+    "normalized age missing from compiled lightweight output: repaired with explicit dynamic parameter",
+    "20260927_160451 gate old blade hit FAIL; new only one hit; animation preparation visible",
+    "full FX author process exit 3 at shutdown retained; later targeted author exit 0"
+  ],
+  "not_run": [
+    "Shipping/new independent package before approval",
+    "full regression before approval",
+    "final packaged audio validation",
+    "real OS mouse/keyboard",
+    "B Niagara Examples Pack actual 5.8 import/download size",
+    "C2/C4-C7/D/E before gate approval",
+    "browser local-file preview blocked; static link/image checks only"
+  ],
+  "baseline_exe": "E:/GameDev/Builds/HarborCity/M5_VS3/Candidate_20260927_032901_667_f475d32f/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe",
+  "new_downloaded_asset_bytes": 0,
+  "fix_findings": {
+    "hair": {
+      "live_asset": "ABP_TownFlight / Batch_7a9c9d9d2395",
+      "finding": "two long-hair Kawaii nodes had zero gravity and high rest stiffness; flight external force readback zero in gun idle",
+      "change": "world gravity direction (0,0,-1), project gravity enabled; long-chain stiffness .02, damping .35, angle 60; physics alpha remains 1",
+      "status": "static/moving visual USER_REVIEW; no physics disabling"
+    },
+    "sword": {
+      "finding": "collision used previous component transform; root is Hips and REF_POSE locking changed blade path",
+      "change": "same evaluated skeletal grip for visual/sweep; R2 animation copies lock ANIM_FIRST_FRAME, retain root motion",
+      "status": "95cm A test PASS; gate misses still observed, not fully closed; unchanged reach/radius/damage"
+    },
+    "gun": {
+      "finding": "old failed capture was still in Sword mode; current normal queued cycle reached Pistol and caused 34 damage",
+      "change": "test waits for action recovery; no firearm damage change",
+      "status": "current input path PASS; exact old timing root cause OPEN"
+    },
+    "shield": {
+      "finding": "old assertion sampled before cast windup completed",
+      "change": "wait for release, then assert one 25 MP spend and six-second shield",
+      "status": "engine input PASS; gameplay cost/duration unchanged"
+    },
+    "rune": {
+      "change": "actual chest bone + actor forward 90cm; retains wall trace and first-person camera aim",
+      "status": "third-person frame USER_REVIEW; hand-through-rune pose/FP full gesture not separately verified"
+    },
+    "audio": {
+      "finding": "QA window unfocused multiplier was 0",
+      "change": "save/set to 1 only while QA capture, restore on stop",
+      "status": "Editor-game nonzero native submix + full AV decode PASS; final Shipping NOT_RUN"
+    },
+    "hud": {
+      "change": "skill hint autowrap plus explicit line break; gate does not emit diagnostic notification text",
+      "status": "selected video frames reviewed; no claim of OS input test"
+    },
+    "new_sample_age": {
+      "finding": "compiled lightweight particle dataset lacks NormalizedAge; old crescent fade-in remained zero",
+      "change": "native DynamicMaterialParameter.R curve 0..1 across particle lifetime; material uses that output",
+      "status": "compiled output verified + actual crescent visible; visual style USER_REVIEW"
+    }
+  },
+  "secondary_video": {
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260927_160615_22573E8A\\capture.mp4",
+    "purpose": "actual impact before final slash-notify retiming; same C3 assets",
+    "duration_seconds": 24.867286,
+    "actual_capture_fps": 20.468659104978325,
+    "audio_signal": "PASS",
+    "decode": "PASS_FULL_VIDEO_AND_AUDIO_DECODE",
+    "sha256": "87b80917695925bc8252c6f973febada06c49b4c87f36ac10e98710b5d6508a7"
+  }
+}

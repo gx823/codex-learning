@@ -1,0 +1,14 @@
+[2026.09.27-08.15.47:910][233]LogTemp: Display: R1_TRACE blade hit=BP_NPCIdleR2_R_C_5 component=CharacterMesh0 point=X=12.202 Y=-6707.720 Z=131.564 base=X=44.208 Y=-6738.239 Z=117.454 tip=X=-9.241 Y=-6680.564 Z=140.707
+[2026.09.27-08.15.48:040][236]LogTemp: Display: R2_SLASH notify combo=0 first=0 spawned=1 tip=X=149.790 Y=-6740.485 Z=60.814 tangent=X=0.464 Y=-0.825 Z=-0.323
+[2026.09.27-08.15.49:068][267]LogTemp: Display: R2_SLASH notify combo=1 first=0 spawned=1 tip=X=102.549 Y=-6742.268 Z=107.003 tangent=X=-0.314 Y=0.945 Z=-0.094
+[2026.09.27-08.15.50:340][305]LogTemp: Display: R2_SLASH notify combo=2 first=0 spawned=1 tip=X=30.129 Y=-6876.273 Z=219.354 tangent=X=0.931 Y=-0.323 Z=-0.173
+[2026.09.27-08.15.52:044][356]LogTemp: Display: R2_SLASH notify combo=0 first=1 spawned=1 tip=X=-21.220 Y=-6756.744 Z=104.547 tangent=X=0.332 Y=0.710 Z=-0.621
+[2026.09.27-08.15.52:075][357]LogTemp: Display: R1_TRACE blade hit=BP_NPCIdleR2_R_C_5 component=CharacterMesh0 point=X=9.559 Y=-6709.800 Z=94.924 base=X=89.416 Y=-6779.147 Z=91.207 tip=X=114.386 Y=-6703.126 Z=73.280
+[2026.09.27-08.16.07:740][825]LogTemp: Display: M3_RECORDING_STARTED D:/科研学习/codex学习/docs/HarborCity_M5_VS3/recordings/20260927_161607_545239E4 rect=(0,0)-(1920,1080) native=1920x1080 scene=1920x1080 window=1920x1080
+[2026.09.27-08.16.14:560][968]LogTemp: Display: M1_TEST_STEP 34 Old blade hit readback
+[2026.09.27-08.16.18:092][ 42]LogTemp: Display: R2_SLASH notify combo=0 first=0 spawned=1 tip=X=69.002 Y=-6676.084 Z=84.025 tangent=X=0.881 Y=0.003 Z=-0.472
+[2026.09.27-08.16.19:213][ 65]LogTemp: Display: R2_SLASH notify combo=1 first=0 spawned=1 tip=X=144.590 Y=-6815.234 Z=118.993 tangent=X=0.505 Y=0.746 Z=-0.434
+[2026.09.27-08.16.20:468][ 91]LogTemp: Display: R2_SLASH notify combo=2 first=0 spawned=1 tip=X=22.825 Y=-6870.629 Z=219.715 tangent=X=0.609 Y=0.513 Z=0.605
+[2026.09.27-08.16.20:916][100]LogTemp: Display: M1_TEST_STEP 44 New blade hit readback
+[2026.09.27-08.16.24:475][170]LogTemp: Display: R2_SLASH notify combo=0 first=1 spawned=1 tip=X=66.657 Y=-6710.279 Z=80.177 tangent=X=0.924 Y=-0.069 Z=-0.375
+[2026.09.27-08.16.32:751][335]LogTemp: Display: M3_RECORDING_FINISHED D:/科研学习/codex学习/docs/HarborCity_M5_VS3/recordings/20260927_161607_545239E4

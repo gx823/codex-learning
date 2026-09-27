@@ -1,0 +1,26 @@
+[
+  {
+    "name": "R2 magic gun existing damage",
+    "status": "PASS",
+    "evidence_level": "B engine Action + A fixture",
+    "expected": "one body shot: 100 -> 66",
+    "actual": "66.0",
+    "elapsed_seconds": 33.71890090033412
+  },
+  {
+    "name": "R2 shield 25 MP spent once",
+    "status": "PASS",
+    "evidence_level": "B engine Action",
+    "expected": "MP 100 -> 75 after windup",
+    "actual": "weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=-0.023 draw=0.000 mp=75.00 shield=5.48 center=X=337.301 Y=-6657.696 Z=122.287",
+    "elapsed_seconds": 38.08085360005498
+  },
+  {
+    "name": "Sword contact at original fixture",
+    "status": "PASS",
+    "evidence_level": "B Attack + A placement",
+    "expected": "real blade sweep damage",
+    "actual": "health 100 -> 76; one 24-point sweep hit",
+    "elapsed_seconds": 49.27845009788871
+  }
+]

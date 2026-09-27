@@ -1,0 +1,107 @@
+{
+  "scope": "live hair ABP and project-owned R2 animation copies/FX only; no raw assets included",
+  "assets": [
+    {
+      "asset": "HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_7a9c9d9d2395/ABP_TownFlight.uasset",
+      "sha256": "e1e45995b552d5e57c39dc29d2561f598eb54f824dd106277107bbf838c49bc9",
+      "bytes": 1912636,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/Animation/A_Sword1.uasset",
+      "sha256": "8efd8410eeb04e50b7a6729c60ee1e43153ab855c2162ef7b177a05e3dff6631",
+      "bytes": 386229,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/Animation/A_Sword2.uasset",
+      "sha256": "80e7bde93883ab126286268b2639577fc3d322bbc089a47bc244e8c3e44a9104",
+      "bytes": 396811,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/Animation/A_Sword3.uasset",
+      "sha256": "c89a8f980a914291487b148a9254239adb0fc9e1837f56a7ed64debddf34349b",
+      "bytes": 354559,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/Animation/A_SwordHeavy.uasset",
+      "sha256": "451fd81cbf0bc69caebbabc252a4911a99db6bc7be2ad61d5d9dcc8c87717b2b",
+      "bytes": 431196,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/MI_R2_CrescentFP.uasset",
+      "sha256": "c998c12fd56269499e6e564b569e461485e04e11d2def0cd687f0bac401e0fcd",
+      "bytes": 3811,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/M_R2_Crescent.uasset",
+      "sha256": "4d66ee71af357990b0ef81d347e4bf870f7bbd3f22f02cb988424f9e13be585c",
+      "bytes": 9608,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/M_R2_ImpactRays.uasset",
+      "sha256": "f4d6e666438036551e4f1a4cdd028d93c809f18901ef4ae73d8f068b71b2b7ab",
+      "bytes": 7561,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/M_R2_ImpactWhite.uasset",
+      "sha256": "e821cde33073ba4996f297930bd191f3870c86c9ffc24d4016617db6bd98c3fe",
+      "bytes": 7242,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/M_R2_StarFragment.uasset",
+      "sha256": "a90115efadf0d10f954435d6823a5147e8573bc68190dafb1d31ef81fcd4f3c8",
+      "bytes": 7590,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/NS_R2_Impact.uasset",
+      "sha256": "542ba13dcb4583f7d02cc7cee670eeab063bc050f91d0dcee703cbc64a4dccff",
+      "bytes": 188126,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/NS_R2_Slash.uasset",
+      "sha256": "0896d3ea8e0aecffb88961eb36b88b4b194c087aed9a8bf8657168b0e8d1ebec",
+      "bytes": 187748,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/NS_R2_SlashFP.uasset",
+      "sha256": "f75ddb1ea8a7c697bb5e3a90bfceb6f9756df5267658e45098ca37bfe31b4ee8",
+      "bytes": 187795,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/SM_R2_Crescent.uasset",
+      "sha256": "4e80d0f79611d3b94100547549fadada7331edbdee13943ddac044b5a9687051",
+      "bytes": 18523,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/SM_R2_Filaments.uasset",
+      "sha256": "be38ee58e3bf008ba10a8d687484bd7ffb885c17c059290c4f519df560751da5",
+      "bytes": 22538,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/SM_R2_ImpactRays.uasset",
+      "sha256": "d9675f1fd1926e26f55d03c037fcaa9f488079ff8fed75976884b266a12fa4dc",
+      "bytes": 12742,
+      "raw_file_in_review": false
+    },
+    {
+      "asset": "HarborCity/M5VS3/R2/FX/SM_R2_ImpactStar.uasset",
+      "sha256": "eb791a65930d5ac1c51c11131ecd8b86ed8de1ec9409e591ec8f7abb1e28dbc9",
+      "bytes": 12479,
+      "raw_file_in_review": false
+    }
+  ]
+}

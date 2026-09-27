@@ -1,0 +1,237 @@
+[
+  {
+    "path": "STATUS.md",
+    "bytes": 1271,
+    "sha256": "7e3454ceeb95c747370f3d267806fa311dc0b83afdc41c646136732e8c27a4c4"
+  },
+  {
+    "path": "README.md",
+    "bytes": 570,
+    "sha256": "5e5c2606866ceb859957ffc259bd80291f881f9c918201c711efb9b9fef7e190"
+  },
+  {
+    "path": "REFERENCE_BOARD.md",
+    "bytes": 2794,
+    "sha256": "8e632ed5608d106f6cfe8379300e7708020aea4b203de96774bfe85421d23157"
+  },
+  {
+    "path": "PURCHASE_CANDIDATES.md",
+    "bytes": 3952,
+    "sha256": "6ca220e6f4bd39f9c0f6b857033c444cbf23c3f76835ff29334a5c59bc376d6f"
+  },
+  {
+    "path": "WEAPON_DIRECTIONS.md",
+    "bytes": 1250,
+    "sha256": "4919de955ee319d7c6799de5563a79a237997f4e714c9be7e4b1e3c991d540ae"
+  },
+  {
+    "path": "RECORDING.md",
+    "bytes": 977,
+    "sha256": "1a6c03752a30db5473d4a7438ddc567c3bd2d11cea85cb4a9924b3afe499ac15"
+  },
+  {
+    "path": "review/index.html",
+    "bytes": 4936,
+    "sha256": "83e45c2ecbf42cd03c7144090cbfdd194489e5a16dd9ab0c55a6a83e1378f614"
+  },
+  {
+    "path": "review/references.html",
+    "bytes": 8620,
+    "sha256": "4d9d0597d4f4148353208a523b9e90b9e5e02ad5b8847f4058e91c6862fdf691"
+  },
+  {
+    "path": "appendix/GATE_RESULTS.json",
+    "bytes": 11618,
+    "sha256": "44cda9d34477374a8fe3c85a44fa9e82a269e2fe426d9a9e83ffe9a171a99240"
+  },
+  {
+    "path": "appendix/CANDIDATES.json",
+    "bytes": 9899,
+    "sha256": "56d4d9f3bdeffda61d43b0bdb8eb011bc027f60dc1be93cbccb3121d4144aedf"
+  },
+  {
+    "path": "appendix/CHANGED_FILES.json",
+    "bytes": 2562,
+    "sha256": "4e6c520abdc6e7a9bb54579680a2d0787379034bffa6fce0abcea4fb23bbfba6"
+  },
+  {
+    "path": "appendix/ASSET_CHANGES.json",
+    "bytes": 3960,
+    "sha256": "aaa8290da42acb285c334523193c31bd7490c476da864e5f3d0b4973d40df7a1"
+  },
+  {
+    "path": "appendix/SOURCE_CHANGES.patch",
+    "bytes": 51661,
+    "sha256": "7058076389f15d551a5eaadceacab03d925f0c8c54db7e1febbedc3ddb2ecb18"
+  },
+  {
+    "path": "appendix/REVIEW_ASSESSMENT.json",
+    "bytes": 3806,
+    "sha256": "27c6e5c2840ece6c41a338805592bc64e9234f70c37ed54cb1b32d10745d2e95"
+  },
+  {
+    "path": "appendix/evidence/20260927_160011_761_R2CompiledBindings.json",
+    "bytes": 1064,
+    "sha256": "6aa11618f1466f68994c532d69c38852b77b6b2084a7de3c7067ac53ef0150ad"
+  },
+  {
+    "path": "appendix/evidence/20260927_160400_212_R2DynamicAge.json",
+    "bytes": 1818,
+    "sha256": "817ce81ab40d174905aca77a6d76a8b1c1b05f9cef116c7dd2350ff69b8d966d"
+  },
+  {
+    "path": "appendix/evidence/A_CHECKS.json",
+    "bytes": 913,
+    "sha256": "7ba2d214e3e2845d70b8b52443f3598446cd2c297669ca9fc3c822f6c085795f"
+  },
+  {
+    "path": "appendix/evidence/GATE_CHECKS.json",
+    "bytes": 1322,
+    "sha256": "e9cc72a71a31b4c58c905221846afacb17ac28ef812e2c33b73175761a3f89db"
+  },
+  {
+    "path": "appendix/evidence/GATE_LAUNCH.json",
+    "bytes": 1607,
+    "sha256": "2bd54af487963bf7870d0dd5a0408b66d05cdf43452e5d4b9167d02ab91d6bdd"
+  },
+  {
+    "path": "appendix/evidence/GATE_LOG_EXCERPT.txt",
+    "bytes": 2277,
+    "sha256": "b3c9418efbb2681c7e28270a3afd8774537c68d47c44902b68b4b5e443b5e47f"
+  },
+  {
+    "path": "appendix/evidence/VIDEO_QA_SUMMARY.json",
+    "bytes": 332,
+    "sha256": "99a2ab0d51d48dc24925e36c3e1611fd0b9e77a89bfde095d3d6c612f36eb597"
+  },
+  {
+    "path": "review/images/old_slash.jpg",
+    "bytes": 405541,
+    "sha256": "be0e9b4eb3c2b3f58dc23a7e12d2a9629fea11675dcc6a264eed079eed79329a"
+  },
+  {
+    "path": "review/images/new_slash1.jpg",
+    "bytes": 415506,
+    "sha256": "d90d0bc95d8ca611e382291b183a85829c00df767ec572830b3e3baedd1baaf6"
+  },
+  {
+    "path": "review/images/new_slash2.jpg",
+    "bytes": 416499,
+    "sha256": "bb81553a9c77ef48060e99bbc063dd6ceb81d503095f841780979714ef7dc7a3"
+  },
+  {
+    "path": "review/images/new_slash3.jpg",
+    "bytes": 419558,
+    "sha256": "c820823b86757d1b2d5cc863b80ea80c4f84b46998d4cbff14b96350c3bdcbd9"
+  },
+  {
+    "path": "review/images/old_impact.jpg",
+    "bytes": 403019,
+    "sha256": "439ef18d31fdb19f67b75c5ec2c5ab1bcd020276c3d5a48755f73f7938e42893"
+  },
+  {
+    "path": "review/images/new_impact.jpg",
+    "bytes": 415283,
+    "sha256": "c1bc4d5ac1baaf83550a676222201890b2089cd4d7435d6bd1230463e031cd64"
+  },
+  {
+    "path": "review/images/hair_before.png",
+    "bytes": 2965919,
+    "sha256": "5b7a8e7ef93b962cd655a989e77dac0b7c6787d6e4fc8ddad8d4e37548d19323"
+  },
+  {
+    "path": "review/images/hair_after.png",
+    "bytes": 2970989,
+    "sha256": "36e729106e277d18dc711b19d7eacc27e615b0b8166aadb60005ed5a694369b1"
+  },
+  {
+    "path": "review/images/rune_after.png",
+    "bytes": 2978136,
+    "sha256": "c759698b408f4af00b51275b64302b0a5a79b224e0d2123e49d05cb416a90384"
+  },
+  {
+    "path": "review/images/fp_slash.jpg",
+    "bytes": 326463,
+    "sha256": "97e4c81080db7968327157f7ffd5153b246510901e3a0c3c515ce3dcd9cc1323"
+  },
+  {
+    "path": "review/references/gun_inquisitor.jpg",
+    "bytes": 63830,
+    "sha256": "7c971faf87095107a3b98bbb0227b545d607efc93a3a95be3f49776fa5ca37be"
+  },
+  {
+    "path": "review/references/gun_pirate.jpg",
+    "bytes": 57385,
+    "sha256": "d9f90959b574e0cd5d990f7e71c8bcce5f56ff0c2788422a4b4f8fdd17ca00ca"
+  },
+  {
+    "path": "review/references/gun_steampunk.jpg",
+    "bytes": 57086,
+    "sha256": "8812672d49e8aa4726cc862bcd37642c1b079df3b3ad7b331bb0d96a43d1a265"
+  },
+  {
+    "path": "review/references/ref_electric.jpg",
+    "bytes": 9461,
+    "sha256": "3b1812b6b3c12fba070ef8c223445ad18d28e338030272965c30822c92ac51a8"
+  },
+  {
+    "path": "review/references/ref_lava.jpg",
+    "bytes": 6646,
+    "sha256": "49cb9499755f30a39981ccbf8b0d776370ddc7cb0dc7e0767011b256576fd1c5"
+  },
+  {
+    "path": "review/references/ref_stylized_slash.jpg",
+    "bytes": 83351,
+    "sha256": "b71ab3ec3da205abbb3a134fc892cf0adb4b7729c5bfcd1fa8cfd8e85c1aa498"
+  },
+  {
+    "path": "review/references/ref_venom.jpg",
+    "bytes": 35287,
+    "sha256": "a30ed6f063fc3264004223b9784ae786422385e12fd30df6b8e839f8c5702e52"
+  },
+  {
+    "path": "review/references/sword_angel.jpg",
+    "bytes": 23183,
+    "sha256": "707b021bf79145520ec1cc1264be86f15489cdbd42ab87d529a3b136845092fb"
+  },
+  {
+    "path": "review/references/sword_gem.jpg",
+    "bytes": 78318,
+    "sha256": "e354975d75f5d91d876bb89f73887830c0ee608184027b95ee1ac9f254124e45"
+  },
+  {
+    "path": "review/references/sword_holy.jpg",
+    "bytes": 56011,
+    "sha256": "ceb91d27ab8c6e2e45857406a197f24a5e26ffac7c6befea0576b87fc25f8daf"
+  },
+  {
+    "path": "review/references/sword_luminaciel.jpg",
+    "bytes": 91933,
+    "sha256": "3d22ea209be06169429695f78cd6683206e44d142b463fd5173616e58e66bd57"
+  },
+  {
+    "path": "review/references/sword_oblivion.jpg",
+    "bytes": 79922,
+    "sha256": "bcab4c1c091c83bc435a1ecde75da30c8d060c62f56cf654e18fe74de671673a"
+  },
+  {
+    "path": "review/references/vfx_anime.jpg",
+    "bytes": 53823,
+    "sha256": "dc314d5c9faac00960d4edd495432a693931749be9c98fddec04d75df35e7053"
+  },
+  {
+    "path": "review/references/vfx_epic.jpg",
+    "bytes": 47781,
+    "sha256": "1dd0bdcd80d6f81ca3a743c852711bc3536fea94e56ab73e0857079149f47465"
+  },
+  {
+    "path": "review/references/vfx_hit.jpg",
+    "bytes": 53152,
+    "sha256": "c124e85d4f09a40c0aa0dcd4f187591ffd7db506c5568c2cb2c319995daa2a23"
+  },
+  {
+    "path": "review/references/vfx_stylized.jpg",
+    "bytes": 56769,
+    "sha256": "09833abd96b5c99512d8352b2a38ebf9bc31fb1584043a1b99cc62ac4fd0a1ea"
+  }
+]
