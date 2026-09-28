@@ -1,0 +1,154 @@
+[
+  {
+    "quality": "High",
+    "status": "COMPLETE",
+    "cpu": "Intel(R) Core(TM) i7-14650HX",
+    "gpu": "Intel(R) UHD Graphics",
+    "viewport": [
+      1920,
+      1080
+    ],
+    "actual_settings": {
+      "t.MaxFPS": "0",
+      "r.VSync": "0",
+      "r.ScreenPercentage": "100",
+      "sg.ViewDistanceQuality": "2",
+      "sg.ShadowQuality": "2",
+      "sg.GlobalIlluminationQuality": "2",
+      "sg.ReflectionQuality": "2",
+      "sg.PostProcessQuality": "2",
+      "sg.TextureQuality": "2",
+      "sg.EffectsQuality": "2"
+    },
+    "scenes": [
+      {
+        "scene": "South approach walk",
+        "wall_seconds": 12.008871499449015,
+        "average_fps": 45.21657176737328,
+        "p99_frame_ms": 25.12659877538681,
+        "max_frame_ms": 26.819702237844467,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Market approach walk",
+        "wall_seconds": 12.012233901768923,
+        "average_fps": 44.12168497001645,
+        "p99_frame_ms": 25.87290108203888,
+        "max_frame_ms": 27.28629857301712,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "High aerial hover",
+        "wall_seconds": 4.014662500470877,
+        "average_fps": 45.8319970803072,
+        "p99_frame_ms": 24.108901619911194,
+        "max_frame_ms": 24.378299713134766,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Town aerial traversal",
+        "wall_seconds": 5.00864090025425,
+        "average_fps": 44.722711102852124,
+        "p99_frame_ms": 24.375300854444504,
+        "max_frame_ms": 33.612798899412155,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Armory real preview render performance",
+        "wall_seconds": 12.026227198541164,
+        "average_fps": 32.429122912903956,
+        "p99_frame_ms": 35.21599993109703,
+        "max_frame_ms": 40.02779722213745,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "6 NPC + magic/sword wave/light arrow/shock",
+        "average_fps": 35.252,
+        "p99_frame_ms": 32.817,
+        "wall_seconds": 24.538,
+        "assertion": "FAIL",
+        "npcs": "6",
+        "damaged": "6",
+        "actual": "frames=865 mean_fps=35.252 p99_ms=32.817 wall_seconds=24.538 npcs=6 damaged=6"
+      }
+    ],
+    "adapter_peak_GiB": 2.896484375,
+    "scope": "One independent unrecorded run; adapter sampling is not an instantaneous per-process peak."
+  },
+  {
+    "quality": "Epic",
+    "status": "COMPLETE",
+    "cpu": "Intel(R) Core(TM) i7-14650HX",
+    "gpu": "Intel(R) UHD Graphics",
+    "viewport": [
+      1920,
+      1080
+    ],
+    "actual_settings": {
+      "t.MaxFPS": "0",
+      "r.VSync": "0",
+      "r.ScreenPercentage": "100",
+      "sg.ViewDistanceQuality": "3",
+      "sg.ShadowQuality": "3",
+      "sg.GlobalIlluminationQuality": "3",
+      "sg.ReflectionQuality": "3",
+      "sg.PostProcessQuality": "3",
+      "sg.TextureQuality": "3",
+      "sg.EffectsQuality": "3"
+    },
+    "scenes": [
+      {
+        "scene": "South approach walk",
+        "wall_seconds": 12.039700999855995,
+        "average_fps": 23.671684205729765,
+        "p99_frame_ms": 45.12680321931839,
+        "max_frame_ms": 45.64020037651062,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Market approach walk",
+        "wall_seconds": 12.01933329924941,
+        "average_fps": 24.543790629254147,
+        "p99_frame_ms": 44.42409798502922,
+        "max_frame_ms": 45.56879773736,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "High aerial hover",
+        "wall_seconds": 4.037318296730518,
+        "average_fps": 26.750429880017148,
+        "p99_frame_ms": 39.20399770140648,
+        "max_frame_ms": 39.205402135849,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Town aerial traversal",
+        "wall_seconds": 5.030565001070499,
+        "average_fps": 26.438382164169976,
+        "p99_frame_ms": 40.807902812957764,
+        "max_frame_ms": 48.1359027326107,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "Armory real preview render performance",
+        "wall_seconds": 12.000513199716806,
+        "average_fps": 22.249048482884948,
+        "p99_frame_ms": 48.59220236539841,
+        "max_frame_ms": 52.88400128483772,
+        "unfocused_frames": 0
+      },
+      {
+        "scene": "6 NPC + magic/sword wave/light arrow/shock",
+        "average_fps": 22.563,
+        "p99_frame_ms": 49.507,
+        "wall_seconds": 24.908,
+        "assertion": "FAIL",
+        "npcs": "6",
+        "damaged": "6",
+        "actual": "frames=562 mean_fps=22.563 p99_ms=49.507 wall_seconds=24.908 npcs=6 damaged=6"
+      }
+    ],
+    "adapter_peak_GiB": 3.6845703125,
+    "scope": "One independent unrecorded run; adapter sampling is not an instantaneous per-process peak."
+  }
+]

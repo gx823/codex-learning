@@ -1,0 +1,59 @@
+{
+  "overall": "PARTIAL",
+  "gaps": [
+    {
+      "id": "FINAL_REGRESSION",
+      "status": "NOT_RUN",
+      "detail": "最终完整回归尚未运行，次数0；锁屏解除后只运行一轮。旧接送3 FAIL与倒地FAIL保留至VS4。"
+    },
+    {
+      "id": "FINAL_MEDIA",
+      "status": "NOT_RUN",
+      "detail": "未完成3–4分钟≥29.5fps主片和游戏内0.25倍慢放。Release只交付中断诊断片段与头发对照。"
+    },
+    {
+      "id": "PERFORMANCE",
+      "status": "FAIL",
+      "detail": "High/Epic现有数据均来自AC=0、电量7%的运行，均有6 FAIL；接电后的同条件复测NOT_RUN。"
+    },
+    {
+      "id": "C_OS",
+      "status": "NOT_RUN",
+      "detail": "LockApp占据前台；焦点校验拒绝，未发送鼠标点击。"
+    },
+    {
+      "id": "COMPARISONS",
+      "status": "PARTIAL",
+      "detail": "九张对照来源均标注。4–7使用编辑器诊断；多数效果机位不同，不作为最终包同机位验收。"
+    },
+    {
+      "id": "FP_PEAK",
+      "status": "NOT_RUN",
+      "detail": "20个指定时刻样本通过；未证明每个效果全生命周期逐帧峰值。"
+    },
+    {
+      "id": "GUN",
+      "status": "PARTIAL",
+      "detail": "主体已变亮；金色太浅，刻纹仍弱；三次材质尝试后保留待审。"
+    },
+    {
+      "id": "HAIR",
+      "status": "USER_REVIEW",
+      "detail": "低位持枪和物理保留；发梢仍略外张，未证明三状态均在1秒内自然下垂；缺ADS动态左右对照。"
+    },
+    {
+      "id": "BOW",
+      "status": "PARTIAL",
+      "detail": "三种方案第一人称均失败；正式库四把，魔导枪蓄力光箭保留，星弓迁VS4。"
+    },
+    {
+      "id": "ART",
+      "status": "USER_REVIEW",
+      "detail": "特效、枪、头发和星弓/降级方案艺术验收全部PENDING。"
+    }
+  ],
+  "zero_usage": {
+    "systems": [],
+    "sounds": []
+  }
+}

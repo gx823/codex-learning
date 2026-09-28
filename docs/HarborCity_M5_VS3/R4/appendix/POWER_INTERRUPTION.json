@@ -1,0 +1,32 @@
+{
+  "status": "WAITING_USER_AC",
+  "ac_line": 0,
+  "battery_percent": 7,
+  "source": "Win32 GetSystemPowerStatus; read-only; no OS/power settings changed",
+  "request": "User asked to connect AC; do not resume high-load tests before AC is verified.",
+  "retained_performance_attempts": [
+    {
+      "exit_code": 0,
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\perf_20260928_234908",
+      "test_status": "COMPLETE",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260928_225009_194_f9a7d9e2\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "candidate": "E:/GameDev/Builds/HarborCity/M5_VS3/Candidate_20260928_225009_194_f9a7d9e2",
+      "recording": "NOT_REQUESTED",
+      "failures": 6,
+      "name": "performance_high",
+      "status": "EXITED"
+    },
+    {
+      "exit_code": 0,
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\perf_20260928_235124",
+      "test_status": "COMPLETE",
+      "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260928_225009_194_f9a7d9e2\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "candidate": "E:/GameDev/Builds/HarborCity/M5_VS3/Candidate_20260928_225009_194_f9a7d9e2",
+      "recording": "NOT_REQUESTED",
+      "failures": 6,
+      "name": "performance_epic",
+      "status": "EXITED"
+    }
+  ],
+  "new_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260928_225009_194_f9a7d9e2\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe"
+}

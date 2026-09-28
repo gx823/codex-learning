@@ -1,0 +1,177 @@
+{
+  "status": "MEASURED_USER_REVIEW",
+  "source_run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223536",
+  "method": "Unmodified 1920x1080 PNG sRGB channel arithmetic means over explicitly recorded small rectangles. Not base-colour texture values; scene lighting, outlines and glyph reflections remain.",
+  "rows": [
+    {
+      "scene": "B_Afternoon_FP",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223536\\User\\Saved\\M5Tests\\20260928_223543_m5_vs3_r3_b\\B_Afternoon_FP.png",
+      "regions": [
+        {
+          "name": "body_receiver",
+          "rect": [
+            1320,
+            810,
+            1350,
+            837
+          ],
+          "srgb_mean": [
+            213.49,
+            212.1,
+            200.48
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        },
+        {
+          "name": "body_rear",
+          "rect": [
+            1445,
+            947,
+            1470,
+            975
+          ],
+          "srgb_mean": [
+            207.07,
+            207.07,
+            196.94
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        },
+        {
+          "name": "metal_band",
+          "rect": [
+            1233,
+            760,
+            1243,
+            780
+          ],
+          "srgb_mean": [
+            201.72,
+            204.6,
+            188.54
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        }
+      ]
+    },
+    {
+      "scene": "B_Armory",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223536\\User\\Saved\\M5Tests\\20260928_223543_m5_vs3_r3_b\\B_Armory.png",
+      "regions": [
+        {
+          "name": "body_barrel",
+          "rect": [
+            942,
+            367,
+            960,
+            384
+          ],
+          "srgb_mean": [
+            224.28,
+            216.14,
+            204.55
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        },
+        {
+          "name": "body_receiver",
+          "rect": [
+            846,
+            529,
+            863,
+            539
+          ],
+          "srgb_mean": [
+            214.48,
+            202.58,
+            186.69
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        },
+        {
+          "name": "body_grip",
+          "rect": [
+            876,
+            654,
+            891,
+            673
+          ],
+          "srgb_mean": [
+            217.35,
+            207.82,
+            193.81
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        },
+        {
+          "name": "metal_band",
+          "rect": [
+            886,
+            450,
+            894,
+            456
+          ],
+          "srgb_mean": [
+            187.79,
+            201.17,
+            191.19
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        }
+      ]
+    },
+    {
+      "scene": "B_Dusk_TP",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223536\\User\\Saved\\M5Tests\\20260928_223543_m5_vs3_r3_b\\B_Dusk_TP.png",
+      "regions": [
+        {
+          "name": "body_grip",
+          "rect": [
+            694,
+            808,
+            710,
+            819
+          ],
+          "srgb_mean": [
+            233.9,
+            228.69,
+            217.49
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        },
+        {
+          "name": "body_receiver",
+          "rect": [
+            762,
+            683,
+            771,
+            698
+          ],
+          "srgb_mean": [
+            111.23,
+            91.96,
+            100.52
+          ],
+          "validity": "EXCLUDED_BACKGROUND_OVERLAP",
+          "reason": "Fixed historical ROI crosses gun outline and background; do not use as body colour."
+        },
+        {
+          "name": "metal_band",
+          "rect": [
+            716,
+            760,
+            724,
+            769
+          ],
+          "srgb_mean": [
+            199.43,
+            190.76,
+            181.29
+          ],
+          "validity": "VISIBLE_SURFACE_ROI"
+        }
+      ]
+    }
+  ],
+  "conclusion": "Body is substantially brighter, no longer black. Armory barrel 224/216/205; afternoon body 213/212/200; dusk grip 234/229/217. Gold rings look too pale and relief contrast remains weak: PARTIAL, user visual review needed."
+}

@@ -1,0 +1,4072 @@
+{
+  "source_revision": "R3 verified purchased sources, reused unchanged in R4; R4 presentation copies tracked by source patch/package manifest",
+  "data": {
+    "status": "PASS",
+    "systems": [
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Arrow_Cast.NS_Arrow_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Arrow_Cast.NS_Arrow_Cast",
+        "name": "NS_Arrow_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 15,
+        "lightweight_emitters": 0,
+        "renderers": 15,
+        "user_parameters": [
+          {
+            "name": "User.Flare Impact Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 05",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Stip Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Wind Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Wind Color 02",
+            "type": "LinearColor"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_05",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "FlareImpact",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningStrip",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_02",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Arrow_Hit.NS_Arrow_Hit",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Arrow_Hit.NS_Arrow_Hit",
+        "name": "NS_Arrow_Hit",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 14,
+        "lightweight_emitters": 0,
+        "renderers": 14,
+        "user_parameters": [
+          {
+            "name": "User.Flare Impact Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 05",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Lightning Strip Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Ring_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_05",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "FlareImpact",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningStrip",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Ring_02",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Arrow_Projectile.NS_Arrow_Projectile",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Arrow_Projectile.NS_Arrow_Projectile",
+        "name": "NS_Arrow_Projectile",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 3,
+        "lightweight_emitters": 0,
+        "renderers": 3,
+        "user_parameters": [
+          {
+            "name": "User.Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Projectile_Bright",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Projectile_Dark",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Bomb_Explosion.NS_Bomb_Explosion",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Bomb_Explosion.NS_Bomb_Explosion",
+        "name": "NS_Bomb_Explosion",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 23,
+        "lightweight_emitters": 0,
+        "renderers": 23,
+        "user_parameters": [
+          {
+            "name": "User.Bubble First Explo Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Bubble Fresnel Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Bubble Noise Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Bubble Noise Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Bubble Out Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Impact Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 05",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Ground Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Ground Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Lightning Strip Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Sparkles Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Spike Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Spike Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ground_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_05",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ground_Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "FlareImpact",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningStrip",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flare03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bubble_Noise01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bubble_First_Explo",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bubble_Out",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bubble_Noise02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bubble_Fresnel",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Bomb_Projectile.NS_Bomb_Projectile",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Bomb_Projectile.NS_Bomb_Projectile",
+        "name": "NS_Bomb_Projectile",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 3,
+        "lightweight_emitters": 0,
+        "renderers": 3,
+        "user_parameters": [
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Trail Color 01",
+            "type": "LinearColor"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bomb_Glow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Trail",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Bomb_Spawn.NS_Bomb_Spawn",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Bomb_Spawn.NS_Bomb_Spawn",
+        "name": "NS_Bomb_Spawn",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 14,
+        "lightweight_emitters": 0,
+        "renderers": 14,
+        "user_parameters": [
+          {
+            "name": "User.Bomb Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flash Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flash Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flash_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flash_Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_01",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Buff_Cast.NS_Buff_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Buff_Cast.NS_Buff_Cast",
+        "name": "NS_Buff_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 10,
+        "lightweight_emitters": 0,
+        "renderers": 10,
+        "user_parameters": [
+          {
+            "name": "User.Arrow Big Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Arrow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Trail Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bomb_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Arrow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "BigArrow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02_Trail",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Buff_Loop.NS_Buff_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Buff_Loop.NS_Buff_Loop",
+        "name": "NS_Buff_Loop",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 9,
+        "lightweight_emitters": 0,
+        "renderers": 9,
+        "user_parameters": [
+          {
+            "name": "User.Arrow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flares Color",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Stretched Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Stars Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Arrow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Stars",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flares",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Spiral",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Dash.NS_Dash",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Dash.NS_Dash",
+        "name": "NS_Dash",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 4,
+        "lightweight_emitters": 0,
+        "renderers": 4,
+        "user_parameters": [
+          {
+            "name": "User.Lines Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Wind Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Wind Color 02",
+            "type": "LinearColor"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Wind_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_Smokes",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_Speed",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Add_Lines",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Debuff_Cast.NS_Debuff_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Debuff_Cast.NS_Debuff_Cast",
+        "name": "NS_Debuff_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 7,
+        "lightweight_emitters": 0,
+        "renderers": 7,
+        "user_parameters": [
+          {
+            "name": "User.Arrow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Slash Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Slash Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Sparkles Dark Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bomb_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "BigArrow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Dark",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Bright",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Slash",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Debuff_Loop.NS_Debuff_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Debuff_Loop.NS_Debuff_Loop",
+        "name": "NS_Debuff_Loop",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 9,
+        "lightweight_emitters": 0,
+        "renderers": 9,
+        "user_parameters": [
+          {
+            "name": "User.Arrow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Arrow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Sparkles_Dark",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Arrow_Green",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Arrow_Purple",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flares",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Explosion_Fire_Ground.NS_Explosion_Fire_Ground",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Explosion_Fire_Ground.NS_Explosion_Fire_Ground",
+        "name": "NS_Explosion_Fire_Ground",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 18,
+        "lightweight_emitters": 0,
+        "renderers": 19,
+        "user_parameters": [
+          {
+            "name": "User.Bubble First Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Ground Mark Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Light Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Smokes Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Smokes Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Trail Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bubble_First_Explo",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02_Trail",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Smokes",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SmokesCenter",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02001",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ground_Mark",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Light",
+            "local_space": false,
+            "renderers": 2
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Explosion_Fire_Omni.NS_Explosion_Fire_Omni",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Explosion_Fire_Omni.NS_Explosion_Fire_Omni",
+        "name": "NS_Explosion_Fire_Omni",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 15,
+        "lightweight_emitters": 0,
+        "renderers": 16,
+        "user_parameters": [
+          {
+            "name": "User.Bubble First Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Light Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Smokes Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Smokes Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Trail Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bubble_First_Explo",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02_Trail",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Smokes",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SmokesCenter",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02001",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01001",
+            "local_space": false,
+            "renderers": 2
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Explosion_Ice_Ground.NS_Explosion_Ice_Ground",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Explosion_Ice_Ground.NS_Explosion_Ice_Ground",
+        "name": "NS_Explosion_Ice_Ground",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 18,
+        "lightweight_emitters": 0,
+        "renderers": 19,
+        "user_parameters": [
+          {
+            "name": "User.Bubble First Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Ground Mark Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Light Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Smokes Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Smokes Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Trail Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bubble_First_Explo",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02_Trail",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Smokes",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SmokesCenter",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02001",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ground_Mark",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Light",
+            "local_space": false,
+            "renderers": 2
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Explosion_Ice_Omni.NS_Explosion_Ice_Omni",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Explosion_Ice_Omni.NS_Explosion_Ice_Omni",
+        "name": "NS_Explosion_Ice_Omni",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 15,
+        "lightweight_emitters": 0,
+        "renderers": 16,
+        "user_parameters": [
+          {
+            "name": "User.Bubble First Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Light Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Smokes Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Smokes Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Trail Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bubble_First_Explo",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02_Trail",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Smokes",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SmokesCenter",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02001",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01001",
+            "local_space": false,
+            "renderers": 2
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Fire.NS_Fire",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Fire.NS_Fire",
+        "name": "NS_Fire",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 4,
+        "lightweight_emitters": 0,
+        "renderers": 4,
+        "user_parameters": [
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bomb_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_FireBall_Cast.NS_Fireball_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Fireball_Cast.NS_Fireball_Cast",
+        "name": "NS_Fireball_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 26,
+        "lightweight_emitters": 0,
+        "renderers": 26,
+        "user_parameters": [
+          {
+            "name": "User.First Flash Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Stretched Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Stretched Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Stretched Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Stretched Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Strip Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Second Flash Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Second Flash Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Shoot Flash Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Shoot Flash Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Smokes Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkle Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkle Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Wind Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Wind Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "FirstGlow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SecondGlow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "ShootFlash_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "ShootFlash_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "FirstFlash",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SecondFlash_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SecondFlash_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningStrip",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flames",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Smokes",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare01",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_FireBall_Hit.NS_Fireball_Hit",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Fireball_Hit.NS_Fireball_Hit",
+        "name": "NS_Fireball_Hit",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 17,
+        "lightweight_emitters": 0,
+        "renderers": 17,
+        "user_parameters": [
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flash Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Strip Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Smokes Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "SecondGlow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flames01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Smokes",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "FirstFlash",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "FirstGlow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "FlareImpact",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningStrip",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spike02",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_FireBall_Projectile.NS_Fireball_Projectile",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Fireball_Projectile.NS_Fireball_Projectile",
+        "name": "NS_Fireball_Projectile",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 9,
+        "lightweight_emitters": 0,
+        "renderers": 9,
+        "user_parameters": [
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 05",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Smoke Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Trail Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "SecondGlow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flames01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Smokes",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "FirstGlow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Projectile_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Projectile_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Projectile_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Trail_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Trail_02",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Gunshot_Cast.NS_Gunshot_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Gunshot_Cast.NS_Gunshot_Cast",
+        "name": "NS_Gunshot_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 14,
+        "lightweight_emitters": 0,
+        "renderers": 14,
+        "user_parameters": [
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 05",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Impact Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Strip Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Wind Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_05",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningStrip",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Wind_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Impact_01",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Gunshot_Hit.NS_Gunshot_Hit",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Gunshot_Hit.NS_Gunshot_Hit",
+        "name": "NS_Gunshot_Hit",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 11,
+        "lightweight_emitters": 0,
+        "renderers": 11,
+        "user_parameters": [
+          {
+            "name": "User.Flare Impact Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 05",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Impact Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spike Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Stars Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_04",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_05",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Impact_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "FlareImpact",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Gunshot_Projectile.NS_Gunshot_Projectile",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Gunshot_Projectile.NS_Gunshot_Projectile",
+        "name": "NS_Gunshot_Projectile",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 3,
+        "lightweight_emitters": 0,
+        "renderers": 3,
+        "user_parameters": [
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Projectile_Bright",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Projectile_Dark",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Heal_Cast.NS_Heal_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Heal_Cast.NS_Heal_Cast",
+        "name": "NS_Heal_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 9,
+        "lightweight_emitters": 0,
+        "renderers": 9,
+        "user_parameters": [
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lens Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bomb_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Lens",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Heal_Loop.NS_Heal_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Heal_Loop.NS_Heal_Loop",
+        "name": "NS_Heal_Loop",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 9,
+        "lightweight_emitters": 0,
+        "renderers": 9,
+        "user_parameters": [
+          {
+            "name": "User.Flares Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Raimbow",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flares",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Lightning_Cast.NS_Lightning_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Lightning_Cast.NS_Lightning_Cast",
+        "name": "NS_Lightning_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 19,
+        "lightweight_emitters": 0,
+        "renderers": 19,
+        "user_parameters": [
+          {
+            "name": "User.Flare Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Stretched Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Stretched Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Stretched Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Stretched Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Lightning Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Rainbow Color",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Big Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "LinearColor"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Big_Star",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_Stretched_04",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Lightning",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_04",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Lightning_Hit.NS_Lightning_Hit",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Lightning_Hit.NS_Lightning_Hit",
+        "name": "NS_Lightning_Hit",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 22,
+        "lightweight_emitters": 0,
+        "renderers": 22,
+        "user_parameters": [
+          {
+            "name": "User.Explo Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flames Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Flare Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ground Crack Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Ground Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ground Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Lightning Arc Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Arc Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Ligthning Strip Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Spikes Color 01",
+            "type": "LinearColor"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "GroundGlow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "GroundGlow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Lightning_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spikes",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningArc_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningArc_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningStrip",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Lightning_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "FlareImpact",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "GroundCrack_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Bubble_First_Explo",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Spike01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flames_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flames_02",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Lightning_Muzzle.NS_Lightning_Muzzle",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Lightning_Muzzle.NS_Lightning_Muzzle",
+        "name": "NS_Lightning_Muzzle",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 15,
+        "lightweight_emitters": 0,
+        "renderers": 15,
+        "user_parameters": [
+          {
+            "name": "User.Flare Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flare Color 04",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Lightning Arc Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Arc Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Beam Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lightning Spot Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Stretched Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Spikes Color 01",
+            "type": "LinearColor"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Glow_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_Stretched",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Lightning",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flare_04",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Spikes",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningArc_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningArc_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningSpot",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "LightningBeam",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Lightning_Range.NS_Lightning_Range",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Lightning_Range.NS_Lightning_Range",
+        "name": "NS_Lightning_Range",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 1,
+        "lightweight_emitters": 0,
+        "renderers": 1,
+        "user_parameters": [
+          {
+            "name": "User.Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Lifetime",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Scale",
+            "type": "NiagaraFloat"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Flare_01",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Pickup_Cast.NS_Pickup_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Pickup_Cast.NS_Pickup_Cast",
+        "name": "NS_Pickup_Cast",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 11,
+        "lightweight_emitters": 0,
+        "renderers": 11,
+        "user_parameters": [
+          {
+            "name": "User.Flash Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Flash Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Rainbow Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bomb_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_03",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Raimbow",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flash_Glow_01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Flash_Glow_02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Star02",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring02",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Pickup_Loop.NS_Pickup_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Pickup_Loop.NS_Pickup_Loop",
+        "name": "NS_Pickup_Loop",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 9,
+        "lightweight_emitters": 0,
+        "renderers": 9,
+        "user_parameters": [
+          {
+            "name": "User.Flares Color 01",
+            "type": "LinearColor"
+          },
+          {
+            "name": "User.Glow Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Glow Color 04",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Ring Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Sparkles Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Star Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Bomb_Glow_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles",
+            "local_space": false,
+            "renderers": 1
+          },
+          {
+            "name": "Ring01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Star02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Bomb_Glow_04",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Flares",
+            "local_space": false,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/VFX/Particles/NS_Slash.NS_Slash",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/NS_Slash.NS_Slash",
+        "name": "NS_Slash",
+        "type": "NiagaraSystem",
+        "stateful_emitters": 5,
+        "lightweight_emitters": 0,
+        "renderers": 5,
+        "user_parameters": [
+          {
+            "name": "User.Lifetime Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Scale Overall",
+            "type": "NiagaraFloat"
+          },
+          {
+            "name": "User.Slash 01 Active",
+            "type": "NiagaraBool"
+          },
+          {
+            "name": "User.Slash 02 Active",
+            "type": "NiagaraBool"
+          },
+          {
+            "name": "User.Slash 03 Active",
+            "type": "NiagaraBool"
+          },
+          {
+            "name": "User.Slash Color 01",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Slash Color 02",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Slash Color 03",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Active",
+            "type": "NiagaraBool"
+          },
+          {
+            "name": "User.Sparkles Color",
+            "type": "NiagaraDataInterfaceColorCurve"
+          },
+          {
+            "name": "User.Sparkles Max Spawn",
+            "type": "NiagaraInt32"
+          },
+          {
+            "name": "User.Sparkles Min Spawn",
+            "type": "NiagaraInt32"
+          },
+          {
+            "name": "User.Wind Active",
+            "type": "NiagaraBool"
+          },
+          {
+            "name": "User.Wind Color",
+            "type": "LinearColor"
+          }
+        ],
+        "emitters": [
+          {
+            "name": "Slash_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Sparkles_01",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Slash_02",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Slash_03",
+            "local_space": true,
+            "renderers": 1
+          },
+          {
+            "name": "Slash_Wind",
+            "local_space": true,
+            "renderers": 1
+          }
+        ],
+        "scripts_valid": true,
+        "ready": false,
+        "can_render": false,
+        "runtime": "NOT_RUN: asset compile only",
+        "status": "PASS"
+      }
+    ],
+    "sounds": [
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_ArrowShot_Cast.SFX_ArrowShot_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_ArrowShot_Cast.SFX_ArrowShot_Cast",
+        "name": "SFX_ArrowShot_Cast",
+        "type": "SoundWave",
+        "duration_seconds": 1.0299773216247559
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_ArrowShot_Hit.SFX_ArrowShot_Hit",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_ArrowShot_Hit.SFX_ArrowShot_Hit",
+        "name": "SFX_ArrowShot_Hit",
+        "type": "SoundWave",
+        "duration_seconds": 0.816598653793335
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_BasicAttack.SFX_BasicAttack",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_BasicAttack.SFX_BasicAttack",
+        "name": "SFX_BasicAttack",
+        "type": "SoundWave",
+        "duration_seconds": 0.9721542000770569
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Bomb_Bounce.SFX_Bomb_Bounce",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Bounce.SFX_Bomb_Bounce",
+        "name": "SFX_Bomb_Bounce",
+        "type": "SoundWave",
+        "duration_seconds": 0.9925169944763184
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Bomb_Cast.SFX_Bomb_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Cast.SFX_Bomb_Cast",
+        "name": "SFX_Bomb_Cast",
+        "type": "SoundWave",
+        "duration_seconds": 2.1811790466308594
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Bomb_Explosion.SFX_Bomb_Explosion",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Explosion.SFX_Bomb_Explosion",
+        "name": "SFX_Bomb_Explosion",
+        "type": "SoundWave",
+        "duration_seconds": 2.0199546813964844
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Bomb_Launch.SFX_Bomb_Launch",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Launch.SFX_Bomb_Launch",
+        "name": "SFX_Bomb_Launch",
+        "type": "SoundWave",
+        "duration_seconds": 1.418321967124939
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Bomb_Loop.SFX_Bomb_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Loop.SFX_Bomb_Loop",
+        "name": "SFX_Bomb_Loop",
+        "type": "SoundWave",
+        "duration_seconds": 2.762267589569092
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Buff_Cast.SFX_Buff_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Buff_Cast.SFX_Buff_Cast",
+        "name": "SFX_Buff_Cast",
+        "type": "SoundWave",
+        "duration_seconds": 2.1535375118255615
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Buff_Loop.SFX_Buff_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Buff_Loop.SFX_Buff_Loop",
+        "name": "SFX_Buff_Loop",
+        "type": "SoundWave",
+        "duration_seconds": 2.956916093826294
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Dash.SFX_Dash",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Dash.SFX_Dash",
+        "name": "SFX_Dash",
+        "type": "SoundWave",
+        "duration_seconds": 0.7485487461090088
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Debuff_Cast.SFX_Debuff_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Debuff_Cast.SFX_Debuff_Cast",
+        "name": "SFX_Debuff_Cast",
+        "type": "SoundWave",
+        "duration_seconds": 2.3924036026000977
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Debuff_Loop.SFX_Debuff_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Debuff_Loop.SFX_Debuff_Loop",
+        "name": "SFX_Debuff_Loop",
+        "type": "SoundWave",
+        "duration_seconds": 2.2268481254577637
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Explosion.SFX_Explosion",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Explosion.SFX_Explosion",
+        "name": "SFX_Explosion",
+        "type": "SoundWave",
+        "duration_seconds": 1.7483673095703125
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_ExplosionIce.SFX_ExplosionIce",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_ExplosionIce.SFX_ExplosionIce",
+        "name": "SFX_ExplosionIce",
+        "type": "SoundWave",
+        "duration_seconds": 1.8244670629501343
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_FireBall_Cast.SFX_FireBall_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_FireBall_Cast.SFX_FireBall_Cast",
+        "name": "SFX_FireBall_Cast",
+        "type": "SoundWave",
+        "duration_seconds": 2.236281156539917
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_FireBall_Hit.SFX_FireBall_Hit",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_FireBall_Hit.SFX_FireBall_Hit",
+        "name": "SFX_FireBall_Hit",
+        "type": "SoundWave",
+        "duration_seconds": 1.8296825885772705
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_FireBall_Projectile.SFX_FireBall_Projectile",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_FireBall_Projectile.SFX_FireBall_Projectile",
+        "name": "SFX_FireBall_Projectile",
+        "type": "SoundWave",
+        "duration_seconds": 2.4614739418029785
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_GunShot.SFX_GunShot",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_GunShot.SFX_GunShot",
+        "name": "SFX_GunShot",
+        "type": "SoundWave",
+        "duration_seconds": 1.0200906991958618
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_GunShot_Impact.SFX_GunShot_Impact",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_GunShot_Impact.SFX_GunShot_Impact",
+        "name": "SFX_GunShot_Impact",
+        "type": "SoundWave",
+        "duration_seconds": 0.9200453758239746
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Heal_Cast.SFX_Heal_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Heal_Cast.SFX_Heal_Cast",
+        "name": "SFX_Heal_Cast",
+        "type": "SoundWave",
+        "duration_seconds": 3.2790021896362305
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Heal_Loop.SFX_Heal_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Heal_Loop.SFX_Heal_Loop",
+        "name": "SFX_Heal_Loop",
+        "type": "SoundWave",
+        "duration_seconds": 2.956916093826294
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Lightning_Cast.SFX_Lightning_Cast",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Lightning_Cast.SFX_Lightning_Cast",
+        "name": "SFX_Lightning_Cast",
+        "type": "SoundWave",
+        "duration_seconds": 2.2467119693756104
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Lightning_Hit.SFX_Lightning_Hit",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Lightning_Hit.SFX_Lightning_Hit",
+        "name": "SFX_Lightning_Hit",
+        "type": "SoundWave",
+        "duration_seconds": 1.640612244606018
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_Lightning_Launch.SFX_Lightning_Launch",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Lightning_Launch.SFX_Lightning_Launch",
+        "name": "SFX_Lightning_Launch",
+        "type": "SoundWave",
+        "duration_seconds": 1.372108817100525
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_PickUp.SFX_PickUp",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_PickUp.SFX_PickUp",
+        "name": "SFX_PickUp",
+        "type": "SoundWave",
+        "duration_seconds": 1.5073015689849854
+      },
+      {
+        "source": "/Game/Vefects/Anime_Stylized_VFX/Audio/WAV/SFX_PickUp_Loop.SFX_PickUp_Loop",
+        "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_PickUp_Loop.SFX_PickUp_Loop",
+        "name": "SFX_PickUp_Loop",
+        "type": "SoundWave",
+        "duration_seconds": 1.8368934392929077
+      }
+    ],
+    "gameplay_coverage": "NOT_RUN",
+    "originals_unchanged": true
+  }
+}

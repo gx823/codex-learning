@@ -1,0 +1,63 @@
+{
+  "status": "PARTIAL",
+  "media": [
+    {
+      "file": "M5_VS3_R4_PARTIAL_CAPTURE.mp4",
+      "bytes": 37715876,
+      "sha256": "a357078aa65381804b097b21c61ba4472dee6251588d4a994457809b02dc4860",
+      "duration_seconds": 79.0,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "average_fps": 28.92258619816718,
+      "LUFS": -18.36,
+      "dBTP": -1.52,
+      "audio": [
+        "aac",
+        "48000",
+        2
+      ],
+      "decode": "PASS",
+      "source_speed": "unchanged native timestamps",
+      "interpolation": false,
+      "private_BGM_muted": true
+    },
+    {
+      "file": "M5_VS3_R4_HAIR_COMPARE.mp4",
+      "bytes": 4143659,
+      "sha256": "e5b86120aaf4466b4de772035b858a740eff531387fb8356a38b7fee0fd66151",
+      "duration_seconds": 3.7,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "average_fps": 42.21132897603486,
+      "LUFS": -17.99,
+      "dBTP": -3.46,
+      "audio": [
+        "aac",
+        "48000",
+        2
+      ],
+      "decode": "PASS",
+      "source_speed": "unchanged native timestamps",
+      "interpolation": false,
+      "private_BGM_muted": true
+    }
+  ],
+  "interrupted_capture_native_fps": 28.945020017539797,
+  "frame_cleanup": {
+    "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4",
+    "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260928_235402_A7363B30\\capture.mp4",
+    "frames": 2285,
+    "bytes": 812121935,
+    "ppm_deleted": 0,
+    "audio_intermediate_removed": true,
+    "retained": "capture metadata, 8 keyframes, MP4 and QA"
+  },
+  "final_3_to_4_minute_video": "NOT_RUN",
+  "quarter_time_slow_video": "NOT_RUN",
+  "listening": "NOT_RUN",
+  "reason": "Latest Shipping showcase ended after focus loss. Windows now locked; no new desktop recording attempted. Partial clip is labelled by filename and report, never advertised as final."
+}

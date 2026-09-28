@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "R4 recording directories, all completed native MP4s decoded before cleanup",
+  "runs": [
+    {
+      "dir": "20260928_100330_4D238EB5",
+      "frames": 0,
+      "video": true,
+      "qa": true,
+      "cleanup": true
+    },
+    {
+      "dir": "20260928_105535_7CADD7A1",
+      "frames": 0,
+      "video": true,
+      "qa": true,
+      "cleanup": true
+    },
+    {
+      "dir": "20260928_203659_6E4B12FD",
+      "frames": 0,
+      "video": true,
+      "qa": true,
+      "cleanup": true
+    },
+    {
+      "dir": "20260928_205204_78EC8844",
+      "frames": 0,
+      "video": true,
+      "qa": true,
+      "cleanup": true
+    },
+    {
+      "dir": "20260928_223727_C312FD72",
+      "frames": 0,
+      "video": true,
+      "qa": true,
+      "cleanup": true
+    },
+    {
+      "dir": "20260928_235402_A7363B30",
+      "frames": 0,
+      "video": true,
+      "qa": true,
+      "cleanup": true
+    }
+  ]
+}

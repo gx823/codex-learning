@@ -1,0 +1,48 @@
+{
+  "source_revision": "R3 verified purchased sources, reused unchanged in R4; R4 presentation copies tracked by source patch/package manifest",
+  "data": {
+    "date": "2026-09-28T01:05:09.037984",
+    "new_download_bytes": 0,
+    "items": [
+      {
+        "name": "sword_textures",
+        "source": "C:\\Users\\HP\\Downloads\\textures.zip",
+        "bytes": 90453891,
+        "sha256": "c704b37e3ab75ff55dacf662c70bd694c48bd4a5a38dfe184369c042e55d3d47",
+        "upstream_hash": null,
+        "integrity": "PASS_LOCAL_CRC_UPSTREAM_HASH_NOT_PROVIDED",
+        "destination": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R2\\Purchased\\HolyFallen\\textures",
+        "file_count": 32
+      },
+      {
+        "name": "blender",
+        "source": "C:\\Users\\HP\\Downloads\\blender-5.2.2-windows-x64.zip",
+        "bytes": 404453484,
+        "sha256": "3849d17a682cba006075aaa3f3597ecb5c9c30ec31035b2e092c53e40679b535",
+        "upstream_hash": "3849d17a682cba006075aaa3f3597ecb5c9c30ec31035b2e092c53e40679b535",
+        "integrity": "PASS_SHA256_AND_CRC",
+        "destination": "E:\\GameDev\\Tools\\Blender",
+        "file_count": 6525
+      },
+      {
+        "name": "longbow",
+        "source": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R2\\Mixamo\\Longbow\\Pro Longbow Pack.zip",
+        "bytes": 4140415,
+        "sha256": "711c54ba11baf743be83776ded34d402265e120a34fda82d00173ff3d26ea7f5",
+        "upstream_hash": "711c54ba11baf743be83776ded34d402265e120a34fda82d00173ff3d26ea7f5",
+        "integrity": "PASS_SHA256_AND_CRC",
+        "destination": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R2\\Mixamo\\Longbow\\ProLongbow",
+        "file_count": 40
+      }
+    ],
+    "vfx": {
+      "files": 234,
+      "bytes": 186501240,
+      "manifest_sha256": "3855692aa1f37865ff0d8eabd2cdf7e10c1ed3ae6d5dbb03c5e4502fb8ccbfd1",
+      "niagara_count": 31,
+      "sound_count": 27,
+      "migration": "NOT_RUN_PENDING_DEMO_REVIEW"
+    },
+    "status": "VERIFIED_AND_EXTRACTED"
+  }
+}

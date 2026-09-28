@@ -1,0 +1,10 @@
+{
+  "status": "PARTIAL",
+  "release_tag": "harborcity-m5-vs3-r4-20260928-225009-f9a7d9e2",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260928_225009_194_f9a7d9e2\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "public_videos": [
+    "M5_VS3_R4_PARTIAL_CAPTURE.mp4",
+    "M5_VS3_R4_HAIR_COMPARE.mp4"
+  ],
+  "release_body": "R4 可试玩 Shipping 候选（加密游戏包仅留本机），PARTIAL。审阅ZIP含源码差异、真实截图和逐项缺口。31/31系统、27/27音效有实际生成记录；ADS20/20、剑矩阵181/0、20个FP指定时刻样本达标。Windows锁屏且未接电：最终完整回归、接电性能复测、完整3–4分钟录像、0.25倍慢放和C-OS鼠标未完成。只上传明确命名的中断诊断片段与头发对照，不能当最终主片。图4–7标注编辑器诊断；艺术PENDING；星弓/接送/倒地保留VS4。购买资源及派生资产、音效源、私人音乐、存档和游戏整包均不公开。"
+}

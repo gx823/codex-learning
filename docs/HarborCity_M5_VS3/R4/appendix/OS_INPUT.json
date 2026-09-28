@@ -1,0 +1,12 @@
+{
+  "status": "NOT_RUN",
+  "blocker": "BLOCKED_LOCKED",
+  "level": "C-OS input attempted; no click injected",
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260929_011333",
+  "attempts": [
+    "Computer Use native pipe os error 2",
+    "Win32 helper refused because target not foreground; foreground PID1816 verified LockApp"
+  ],
+  "conclusion": "Windows locked. Helper checked target focus and refused before SendInput. Engine-action Armory opened, which is not an OS click.",
+  "manual": "解锁后启动新EXE，按B，鼠标单击远程→魔导枪→星潮象牙→装备，检查选择和装备文字。"
+}

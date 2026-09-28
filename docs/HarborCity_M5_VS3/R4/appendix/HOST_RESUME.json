@@ -1,0 +1,22 @@
+{
+  "time": "2026-09-29T01:25:09.2783458+08:00",
+  "ac_line": 0,
+  "battery_percent": 39,
+  "foreground_pid": 0,
+  "foreground_process": "Idle",
+  "games": [],
+  "disks": [
+    {
+      "Name": "C",
+      "free_GiB": 76.85
+    },
+    {
+      "Name": "D",
+      "free_GiB": 144.23
+    },
+    {
+      "Name": "E",
+      "free_GiB": 196.35
+    }
+  ]
+}

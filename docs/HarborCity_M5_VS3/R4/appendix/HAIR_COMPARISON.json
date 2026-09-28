@@ -1,0 +1,26 @@
+{
+  "status": "USER_REVIEW",
+  "before_run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_100313",
+  "after_run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223708",
+  "before_executable": "E:/GameDev/Builds/HarborCity/M5_VS3/Candidate_20260928_025240_832_1eac9805/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe",
+  "after_executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260928_210241_531_978e704e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "output": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\M5_VS3_R4_HAIR_COMPARE.mp4",
+  "speed": 1,
+  "interpolation": false,
+  "physics_disabled": false,
+  "intervals": [
+    [
+      "持枪待机",
+      1.0241441003978253,
+      1.0811617992818356,
+      1.3
+    ],
+    [
+      "持枪施法",
+      11.584793498367072,
+      13.555636500567198,
+      2.4
+    ]
+  ],
+  "scope": "Matching idle and spell camera positions; ADS dynamics and front/side penetration use the separate new Shipping hair run. Older side retains its original lower capture cadence."
+}

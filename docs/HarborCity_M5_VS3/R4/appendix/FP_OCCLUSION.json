@@ -1,0 +1,341 @@
+{
+  "method": "Absolute sRGB channel difference: max(|R|,|G|,|B|) >=32 of 255, whole 1920x1080 frame. No crop, alignment, noise subtraction, or image masking. Control is second no-effect capture. PASS needs both limit and control <=0.5%. Fixed world dilation 0.0001; QA steps use real time.",
+  "scope": "Actual sampled effect moments, not exhaustive temporal maximum; missing effects or absent effect spawns are NOT_RUN regardless of numerical ratio. Latest build remeasured Shield only; nineteen other rows retain earlier R4 executable provenance.",
+  "rows": [
+    {
+      "effect": "Arcane_muzzle",
+      "changed_percent": 0.6225,
+      "limit_percent": 25.0,
+      "control_percent": 0.0001,
+      "status": "PASS",
+      "pixels": 12908,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Arcane_muzzle_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Arcane_muzzle_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Arrow_release",
+      "changed_percent": 3.1863,
+      "limit_percent": 25.0,
+      "control_percent": 0.0001,
+      "status": "PASS",
+      "pixels": 66072,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Arrow_release_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Arrow_release_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Bolt_charge",
+      "changed_percent": 0.3016,
+      "limit_percent": 25.0,
+      "control_percent": 0.0008,
+      "status": "PASS",
+      "pixels": 6254,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Bolt_charge_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Bolt_charge_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Bolt_release",
+      "changed_percent": 3.5252,
+      "limit_percent": 12.5,
+      "control_percent": 0.0004,
+      "status": "PASS",
+      "pixels": 73099,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Bolt_release_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Bolt_release_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "CrimsonNight_charge",
+      "changed_percent": 1.4837,
+      "limit_percent": 25.0,
+      "control_percent": 0.0011,
+      "status": "PASS",
+      "pixels": 30766,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_charge_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_charge_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "CrimsonNight_slash1",
+      "changed_percent": 1.3859,
+      "limit_percent": 25.0,
+      "control_percent": 0.0005,
+      "status": "PASS",
+      "pixels": 28737,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_slash1_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_slash1_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "CrimsonNight_slash2",
+      "changed_percent": 2.9366,
+      "limit_percent": 25.0,
+      "control_percent": 0.0002,
+      "status": "PASS",
+      "pixels": 60894,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_slash2_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_slash2_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "CrimsonNight_slash3",
+      "changed_percent": 0.3971,
+      "limit_percent": 25.0,
+      "control_percent": 0.0001,
+      "status": "PASS",
+      "pixels": 8234,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_slash3_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_slash3_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "CrimsonNight_wave",
+      "changed_percent": 1.0297,
+      "limit_percent": 25.0,
+      "control_percent": 0.0005,
+      "status": "PASS",
+      "pixels": 21351,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_wave_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\CrimsonNight_wave_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Heal",
+      "changed_percent": 9.7949,
+      "limit_percent": 25.0,
+      "control_percent": 0.0098,
+      "status": "PASS",
+      "pixels": 203107,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Heal_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Heal_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Shield",
+      "changed_percent": 2.9477,
+      "limit_percent": 25.0,
+      "control_percent": 0.0,
+      "status": "PASS",
+      "pixels": 61124,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_230014\\User\\Saved\\M5Tests\\20260928_230026_m5_vs3_r3_b\\Shield_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_230014\\User\\Saved\\M5Tests\\20260928_230026_m5_vs3_r3_b\\Shield_without.png",
+      "build": "20260928_225009_194_f9a7d9e2"
+    },
+    {
+      "effect": "Shock_column",
+      "changed_percent": 5.5524,
+      "limit_percent": 25.0,
+      "control_percent": 0.0908,
+      "status": "PASS",
+      "pixels": 115135,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shock_column_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shock_column_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Shock_impact",
+      "changed_percent": 8.7544,
+      "limit_percent": 25.0,
+      "control_percent": 0.4956,
+      "status": "PASS",
+      "pixels": 181531,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shock_impact_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shock_impact_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Shock_warning",
+      "changed_percent": 5.5086,
+      "limit_percent": 25.0,
+      "control_percent": 0.0732,
+      "status": "PASS",
+      "pixels": 114227,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shock_warning_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shock_warning_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "StarTide_charge",
+      "changed_percent": 1.8473,
+      "limit_percent": 25.0,
+      "control_percent": 0.0014,
+      "status": "PASS",
+      "pixels": 38306,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_charge_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_charge_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "StarTide_slash1",
+      "changed_percent": 2.1171,
+      "limit_percent": 25.0,
+      "control_percent": 0.0006,
+      "status": "PASS",
+      "pixels": 43901,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_slash1_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_slash1_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "StarTide_slash2",
+      "changed_percent": 3.9709,
+      "limit_percent": 25.0,
+      "control_percent": 0.0018,
+      "status": "PASS",
+      "pixels": 82340,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_slash2_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_slash2_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "StarTide_slash3",
+      "changed_percent": 1.0898,
+      "limit_percent": 25.0,
+      "control_percent": 0.0004,
+      "status": "PASS",
+      "pixels": 22598,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_slash3_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_slash3_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "StarTide_wave",
+      "changed_percent": 0.6154,
+      "limit_percent": 25.0,
+      "control_percent": 0.001,
+      "status": "PASS",
+      "pixels": 12761,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_wave_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\StarTide_wave_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    },
+    {
+      "effect": "Steamlock_muzzle",
+      "changed_percent": 3.4215,
+      "limit_percent": 25.0,
+      "control_percent": 0.0001,
+      "status": "PASS",
+      "pixels": 70949,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Steamlock_muzzle_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Steamlock_muzzle_without.png",
+      "build": "20260928_210241_531_978e704e",
+      "provenance": "Unchanged effect; inherited earlier R4 package sample, not rerun on newer EXE."
+    }
+  ],
+  "historical_failures": [
+    {
+      "effect": "Shield",
+      "changed_percent": 27.9091,
+      "limit_percent": 25.0,
+      "control_percent": 0.0124,
+      "status": "FAIL",
+      "pixels": 578723,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "with_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shield_with.png",
+      "without_file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_223138\\User\\Saved\\M5Tests\\20260928_223143_m5_vs3_r3_b\\Shield_without.png"
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "method": "Native per-step wall frame times aligned to capture first world time",
+  "alignment_error_world_seconds": 0.0,
+  "scenes": [
+    {
+      "name": "M4 R2 await initial game focus",
+      "start": -13.611894600093365,
+      "end": -13.583410799503326
+    },
+    {
+      "name": "Isolated flat street fixture; adult subject",
+      "start": -13.583410799503326,
+      "end": -10.557205598801374
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": -10.557205598801374,
+      "end": -10.444658499211073
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": -10.444658499211073,
+      "end": -9.4307451993227
+    },
+    {
+      "name": "Unrecorded actual sword warmup",
+      "start": -9.4307451993227,
+      "end": -1.4280019998550415
+    },
+    {
+      "name": "Attack press",
+      "start": -1.4280019998550415,
+      "end": -1.30667619779706
+    },
+    {
+      "name": "Attack release",
+      "start": -1.30667619779706,
+      "end": 0.0
+    },
+    {
+      "name": "Start public recording after warmup",
+      "start": 0.0,
+      "end": 3.012261401861906
+    },
+    {
+      "name": "Attack press",
+      "start": 3.012261401861906,
+      "end": 3.142893001437187
+    },
+    {
+      "name": "Attack release",
+      "start": 3.142893001437187,
+      "end": 4.033282499760389
+    },
+    {
+      "name": "Attack press",
+      "start": 4.033282499760389,
+      "end": 4.147392801940441
+    },
+    {
+      "name": "Attack release",
+      "start": 4.147392801940441,
+      "end": 5.028536900877953
+    },
+    {
+      "name": "Attack press",
+      "start": 5.028536900877953,
+      "end": 5.13773600012064
+    },
+    {
+      "name": "Attack release",
+      "start": 5.13773600012064,
+      "end": 6.035842999815941
+    },
+    {
+      "name": "Read combo damage",
+      "start": 6.035842999815941,
+      "end": 9.04228150099516
+    },
+    {
+      "name": "Two adult targets in wave path",
+      "start": 9.04228150099516,
+      "end": 12.066141299903393
+    },
+    {
+      "name": "Charge then release sword through Action",
+      "start": 12.066141299903393,
+      "end": 13.07331420108676
+    },
+    {
+      "name": "Heavy wave readback",
+      "start": 13.07331420108676,
+      "end": 17.110218200832605
+    },
+    {
+      "name": "R4 clear street full eight-metre wave fixture",
+      "start": 17.110218200832605,
+      "end": 17.837545599788427
+    },
+    {
+      "name": "R4 full-range charge",
+      "start": 17.837545599788427,
+      "end": 18.9693721011281
+    },
+    {
+      "name": "R4 entire wave flight and end",
+      "start": 18.9693721011281,
+      "end": 20.67327370122075
+    },
+    {
+      "name": "R3 CrimsonNight equip and same camera",
+      "start": 20.67327370122075,
+      "end": 22.67594639956951
+    },
+    {
+      "name": "Attack press",
+      "start": 22.67594639956951,
+      "end": 22.803688801825047
+    },
+    {
+      "name": "Attack release",
+      "start": 22.803688801825047,
+      "end": 23.946266900748014
+    },
+    {
+      "name": "Attack press",
+      "start": 23.946266900748014,
+      "end": 24.068975802510977
+    },
+    {
+      "name": "Attack release",
+      "start": 24.068975802510977,
+      "end": 25.170274201780558
+    },
+    {
+      "name": "Attack press",
+      "start": 25.170274201780558,
+      "end": 25.312806200236082
+    },
+    {
+      "name": "Attack release",
+      "start": 25.312806200236082,
+      "end": 26.430814500898123
+    },
+    {
+      "name": "R3 crimson two subjects",
+      "start": 26.430814500898123,
+      "end": 28.431323301047087
+    },
+    {
+      "name": "R3 crimson fire charge",
+      "start": 28.431323301047087,
+      "end": 29.5447605997324
+    },
+    {
+      "name": "R3 crimson wave and ice omni end",
+      "start": 29.5447605997324,
+      "end": 33.561476301401854
+    },
+    {
+      "name": "R4 clear street full eight-metre wave fixture",
+      "start": 33.561476301401854,
+      "end": 34.26708050072193
+    },
+    {
+      "name": "R4 full-range charge",
+      "start": 34.26708050072193,
+      "end": 35.37699929997325
+    },
+    {
+      "name": "R4 entire wave flight and end",
+      "start": 35.37699929997325,
+      "end": 37.11779209971428
+    },
+    {
+      "name": "R3 restore star tide",
+      "start": 37.11779209971428,
+      "end": 38.143542900681496
+    },
+    {
+      "name": "Reset and show pistol",
+      "start": 38.143542900681496,
+      "end": 40.1674499027431
+    },
+    {
+      "name": "ToggleWeapon press",
+      "start": 40.1674499027431,
+      "end": 40.27901520207524
+    },
+    {
+      "name": "ToggleWeapon release",
+      "start": 40.27901520207524,
+      "end": 42.303184401243925
+    },
+    {
+      "name": "Aim at torso",
+      "start": 42.303184401243925,
+      "end": 42.60685000196099
+    },
+    {
+      "name": "ADS via Action",
+      "start": 42.60685000196099,
+      "end": 44.627681002020836
+    },
+    {
+      "name": "Attack press",
+      "start": 44.627681002020836,
+      "end": 44.7550740018487
+    },
+    {
+      "name": "Attack release",
+      "start": 44.7550740018487,
+      "end": 46.16789600253105
+    },
+    {
+      "name": "Release ADS",
+      "start": 46.16789600253105,
+      "end": 46.77420560270548
+    },
+    {
+      "name": "Reload press",
+      "start": 46.77420560270548,
+      "end": 46.89096660166979
+    },
+    {
+      "name": "Reload release",
+      "start": 46.89096660166979,
+      "end": 49.90738660097122
+    },
+    {
+      "name": "R3 steam equip",
+      "start": 49.90738660097122,
+      "end": 50.94576780125499
+    },
+    {
+      "name": "R3 steam aim",
+      "start": 50.94576780125499,
+      "end": 51.261039201170206
+    },
+    {
+      "name": "Attack press",
+      "start": 51.261039201170206,
+      "end": 51.37339920178056
+    },
+    {
+      "name": "Attack release",
+      "start": 51.37339920178056,
+      "end": 52.598307102918625
+    },
+    {
+      "name": "Attack press",
+      "start": 52.598307102918625,
+      "end": 52.711949702352285
+    },
+    {
+      "name": "Attack release",
+      "start": 52.711949702352285,
+      "end": 53.92988650128245
+    },
+    {
+      "name": "Reload press",
+      "start": 53.92988650128245,
+      "end": 54.029129803180695
+    },
+    {
+      "name": "Reload release",
+      "start": 54.029129803180695,
+      "end": 57.0465252995491
+    },
+    {
+      "name": "R3 fallback light-arrow equip",
+      "start": 57.0465252995491,
+      "end": 58.047739900648594
+    },
+    {
+      "name": "R3 fallback light-arrow target reset",
+      "start": 58.047739900648594,
+      "end": 59.06790340319276
+    },
+    {
+      "name": "R3 fallback light-arrow aim",
+      "start": 59.06790340319276,
+      "end": 59.56981899961829
+    },
+    {
+      "name": "R3 fallback light-arrow draw and release",
+      "start": 59.56981899961829,
+      "end": 59.877073902636766
+    },
+    {
+      "name": "R3 arrow impact settle",
+      "start": 59.877073902636766,
+      "end": 62.91336990147829
+    },
+    {
+      "name": "R3 fallback light-arrow target reset",
+      "start": 62.91336990147829,
+      "end": 63.938694301992655
+    },
+    {
+      "name": "R3 fallback light-arrow aim",
+      "start": 63.938694301992655,
+      "end": 64.45620930194855
+    },
+    {
+      "name": "R3 fallback light-arrow draw and release",
+      "start": 64.45620930194855,
+      "end": 66.28902020305395
+    },
+    {
+      "name": "R3 arrow impact settle",
+      "start": 66.28902020305395,
+      "end": 69.29476480185986
+    },
+    {
+      "name": "Perspective press",
+      "start": 69.29476480185986,
+      "end": 69.4096897020936
+    },
+    {
+      "name": "Perspective release",
+      "start": 69.4096897020936,
+      "end": 70.44099500030279
+    },
+    {
+      "name": "R3 FP fallback light-arrow aim",
+      "start": 70.44099500030279,
+      "end": 70.84029550105333
+    },
+    {
+      "name": "R3 FP fallback light-arrow charged shot",
+      "start": 70.84029550105333,
+      "end": 72.34268010035157
+    },
+    {
+      "name": "R3 FP fallback light-arrow recovery",
+      "start": 72.34268010035157,
+      "end": 74.38264340162277
+    },
+    {
+      "name": "Perspective press",
+      "start": 74.38264340162277,
+      "end": 74.51608480140567
+    },
+    {
+      "name": "Perspective release",
+      "start": 74.51608480140567,
+      "end": 75.53931850194931
+    },
+    {
+      "name": "R3 restore Arcane",
+      "start": 75.53931850194931,
+      "end": 76.56475140154362
+    },
+    {
+      "name": "Spell target reset",
+      "start": 76.56475140154362,
+      "end": 78.57415540143847
+    },
+    {
+      "name": "Spell aim fixture",
+      "start": 78.57415540143847,
+      "end": 78.77685500308871
+    },
+    {
+      "name": "Spell1 press",
+      "start": 78.77685500308871,
+      "end": 78.87688500061631
+    },
+    {
+      "name": "Spell1 release",
+      "start": 78.87688500061631,
+      "end": 79.8799219019711
+    },
+    {
+      "name": "Actual bolt release",
+      "start": 79.8799219019711,
+      "end": 80.98050890117884
+    },
+    {
+      "name": "Bolt impact",
+      "start": 80.98050890117884,
+      "end": 81.32863960042596
+    }
+  ],
+  "status": "INTERRUPTED",
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r2_showcase_20260928_235341",
+  "scope": "Retained interrupted Shipping run; not a complete final showcase."
+}

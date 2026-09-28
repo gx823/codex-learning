@@ -1,0 +1,31 @@
+{
+  "status": "FALLBACK_TO_CHARGED_ARCANE",
+  "run": "m5_vs3_r3_b_20260928_204902",
+  "kind": "EDITOR_GAME diagnostic only",
+  "attempts": [
+    {
+      "approach": 1,
+      "method": "固定双手目标 IK；FP 参考姿态独立 IK",
+      "status": "FAIL",
+      "reason": "TP left-grip delta0cm and bow up dot0.9903; FP arms not properly visible and string crosses crosshair.",
+      "evidence": "E_1_TP_draw.png / E_1_FP_draw.png"
+    },
+    {
+      "approach": 2,
+      "method": "胸部朝向对齐后双手 IK；FP 解剖掌面朝向",
+      "status": "FAIL",
+      "reason": "TP left-grip delta0cm and bow up dot0.9903; FP arms not properly visible and string crosses crosshair.",
+      "evidence": "E_2_TP_draw.png / E_2_FP_draw.png"
+    },
+    {
+      "approach": 3,
+      "method": "缩短可达范围；FP 较短拉距和弓尺寸",
+      "status": "FAIL",
+      "reason": "TP left-grip delta0cm and bow up dot0.9903; FP arms not properly visible and string crosses crosshair.",
+      "evidence": "E_3_TP_draw.png / E_3_FP_draw.png"
+    }
+  ],
+  "final_catalog_weapons": 4,
+  "starbow": "DEFERRED_M5_VS4",
+  "original_motion_files_modified": false
+}
