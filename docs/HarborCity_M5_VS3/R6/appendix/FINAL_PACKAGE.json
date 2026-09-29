@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "exe_sha256": "90295598EBB7FDD0E458AB95E76C82986D271511C71329164FBC29237FA3FFAC",
+  "engine": "UE 5.8.2",
+  "completed": "2026-09-29T22:01:28.0291891+08:00",
+  "stages": [
+    {
+      "name": "EditorBuild",
+      "status": "PASS"
+    },
+    {
+      "name": "GameBuild",
+      "status": "PASS"
+    },
+    {
+      "name": "CookStagePakPackageArchive",
+      "status": "PASS"
+    },
+    {
+      "name": "CookedMapAudit",
+      "status": "PASS"
+    },
+    {
+      "name": "VerifyArchiveFiles",
+      "status": "PASS"
+    }
+  ],
+  "source_inputs_stable": true,
+  "content_inputs_stable": true,
+  "archive_files": 87,
+  "loose_private_files": 0,
+  "native_encryption": {
+    "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+    "exe_sha256": "90295598EBB7FDD0E458AB95E76C82986D271511C71329164FBC29237FA3FFAC",
+    "target": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp",
+    "containers": [
+      {
+        "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Content\\Paks\\global.ucas",
+        "sha256": "ee9e8158c7933d3aa891300f5c0c00d827f45229d4da55820114272b4680bc2b"
+      },
+      {
+        "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Content\\Paks\\global.utoc",
+        "sha256": "6d7cf0139fac0ba9aa552d55be91165b94b3590aa15c6729af0c7bebac297636"
+      },
+      {
+        "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.pak",
+        "sha256": "bb5f7568b132084744476921c568bcae44b71ac3611af464a7741fb4a76dbb50"
+      },
+      {
+        "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.ucas",
+        "sha256": "2224780bd67980eb9167e7408cc166a2ef98c31eb828beecc7856ff39c5e0172"
+      },
+      {
+        "path": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Content\\Paks\\HarborCity-Windows.utoc",
+        "sha256": "cdac89e33ceaf678d2628f98a96385872d6144331192d4b01c43ef877e08599c"
+      }
+    ],
+    "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim.",
+    "private_report_sha256": "26d8cc1f486375fa983b1c4bd43af76c8e9aa82448ed3934db59ff1f81d4b176",
+    "native_calls": [
+      {
+        "label": "pak_info",
+        "exit_code": 0,
+        "redacted_native_log_sha256": "d708e702d6a97713e42e7b5e0614467f2261ce5099213e221891553a7a6666e9"
+      },
+      {
+        "label": "list_with_key",
+        "exit_code": 0,
+        "redacted_native_log_sha256": "142691aa0cf190cb1cf345e4216c351536a90389f9cd3496010ee5211d2ca4ba"
+      },
+      {
+        "label": "utoc_info",
+        "exit_code": 0,
+        "redacted_native_log_sha256": "40d2febb128452cb7460250e27ac4de4b0e5df390bbb4086ca2d207830e83db7"
+      },
+      {
+        "label": "extract_with_key",
+        "exit_code": 0,
+        "redacted_native_log_sha256": "c0d1323a9b99fc304f4e1658e3d150d3b66f1b8d0da3edd598da7edd621a8288"
+      },
+      {
+        "label": "extract_no_key",
+        "exit_code": 1,
+        "redacted_native_log_sha256": "a30667d0678e660d4680dba87e7d109ca81372e4873f78571581c7cf612f8348"
+      }
+    ],
+    "targets": [
+      {
+        "filename": "../../../HarborCity/Content/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp.uasset",
+        "chunk_type": "ExportBundleData",
+        "bytes": 7433875,
+        "with_key": "PASS_POSITIVE_CONTROL",
+        "without_key": "PASS_DIRECT_EXTRACTION_REFUSED"
+      }
+    ]
+  },
+  "package_manifest_sha256": "59bbf30da2ec04299873623bf7e3e66fcd87f5119a1251b6581a53c8060ede42",
+  "runtime_evidence": "FINAL_TESTS.json; final standalone executable, no editor play substituted."
+}

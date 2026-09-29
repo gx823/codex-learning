@@ -1,0 +1,316 @@
+{
+  "source_only": true,
+  "assets_not_included": true,
+  "changes": [
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1Character.cpp",
+      "before_sha256": "38341334c2ac07b14ffc25caf21c87aa31cd5c1eb02422dee2a4979a5597ff33",
+      "after_sha256": "a6b65ed8ede03a2405f9542a52d79184f237ddeaca59c2f73beeecf704fd0742"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1Character.h",
+      "before_sha256": "c551f71f34f99878387b4455184a93e15370b40c07e30352b60fc859de82dc12",
+      "after_sha256": "398fcca5b9990a18e7732ff490b7db56eaddb8dba2a9d58bfaa7a9a4b831cdef"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1PlayerController.cpp",
+      "before_sha256": "a28d30d31ca8478d8364db431a323fc19547e9c06cdf2d65c72e82cb1a138bb9",
+      "after_sha256": "ad1e670012df390aaf6109eaf6af9e125c4239c4456fcda1dedc427bc87e4c5b"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5.cpp",
+      "before_sha256": "fc6f95d766a117ac9a4d1d482584d42aaff4dd29ee1ee99887dd66aede093ded",
+      "after_sha256": "e509dde5ecef83d2b621deab92289e4c472cdbdfa4acdb8dfd0ab121ca970da6"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS2.cpp",
+      "before_sha256": "14411c7d67b81c31e6568c0bccd7e5c5818b8699af059fb81666146419c460d5",
+      "after_sha256": "671b5bf45a8b9f366bf25968adfb536dff11f8fffce5c0f62043286dbbd5be1f"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R5.cpp",
+      "before_sha256": "8c6e5a2c3b4bb605fd7c2c10b08453b07a927f16e8b21124b38f901ee5e2cd5d",
+      "after_sha256": "7a815154412d344206e1cf983caa854ba5e6a80e61e92eb56d17d8eac986a84e"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R5Acceptance.cpp",
+      "before_sha256": "9a14a3b5c2e87d1f1551235f486392f94f412a6098925a52392c0aa2425e676e",
+      "after_sha256": "8cbcfc0a6616d7c2e43ce39b56c3e9eac8dd421e76148593ea22637165d51bfc"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R5Peaks.cpp",
+      "before_sha256": "90981022493375db3b2c4d194fa409ea3e66e2c1ecfbcc5857d8d9d232711242",
+      "after_sha256": "e531c38855d6b58ff2a17df16271aa1f1686d87b1891bfbc0298fd4ce437f641"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R6.cpp",
+      "before_sha256": null,
+      "after_sha256": "094666c618d036957db16ba182d9d6307a7d1a0bbb6010253349c4cd3485ac62"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R6Coverage.cpp",
+      "before_sha256": null,
+      "after_sha256": "23a796be0df081011c9bd8bf05ce98457cf918a9bc9b4a0f3dcbc80e69a1833e"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R6Review.cpp",
+      "before_sha256": null,
+      "after_sha256": "428466d075344f1b1db70c1da689fca10b96de7185b1969dd8644aa016adb8f2"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestRunner.h",
+      "before_sha256": "1abf2dd7ea3fa1bfb5ed1f927303125a621e0919c45b89554c8cf0bdb09882b7",
+      "after_sha256": "7e981a39bf31376437e393f7aa4d7e59b0b8f3f16cb767fac049c45f1b00a038"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M3/HCM3NPC.cpp",
+      "before_sha256": "80347f6529e24ddc97519a6a6888ac99cd6bb3417d7e9541de1465f44e1ea53d",
+      "after_sha256": "2fefc3ba44e42cbbe9e803e0b0e5cc92f8125528698433b2e53e74eca787febe"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4/HCM4CombatComponent.cpp",
+      "before_sha256": "f0bc4e61ef4fa8682276175793ae8dc30e50226848b5b83ee352262a64313a1e",
+      "after_sha256": "e9283acf00a690835e02b1cf476e68293bcf3654f1382f8d2914b50f93805537"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4R2/HCM4R2PlayerCameraManager.cpp",
+      "before_sha256": "860c10342dd4b589bd8223cf7d959f7a2d8bbf07daba03beb1acdefb6e0eaf2c",
+      "after_sha256": "fb01a2dea566b8320587c8c85dc84e145a9055cfd0d6e5e4238c62e44e1117f1"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4R2/HCM4R2PresentationComponent.cpp",
+      "before_sha256": "f012d9cbdc112656ef34cfe7177abadfba6c12951d30cce66b3ae3169b5e6795",
+      "after_sha256": "d00ff28120e467826f8e9f60d2620e5db63b39025d1d7af96fb86919192b395a"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4R2/HCM4R2PresentationComponent.h",
+      "before_sha256": "2c0621b2fe0cf5af5ea465af7cb23c37a350cac4b6e99064b2b985fc4ec620b0",
+      "after_sha256": "6387fcc0ff8f5c6a8f79c2f16d9302cb423d1bdb51f5c6c660d2bbbb74581c6c"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2LookAnimInstance.cpp",
+      "before_sha256": "63d4af4b4a0ce24a1a2fed8e4fd14fee32d48bf6d565e3ca4f726bd86e41d6b0",
+      "after_sha256": "88ac34aacd242fd2141c444ba6fed4a629c176fd60c116ec832b3de1beab2e92"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp",
+      "before_sha256": "e4f667077c253d270296387bdaccc4a37e1d519010f0bda0f3eea0306f864f0b",
+      "after_sha256": "65b6a0d0af3ea65dd826d2be72e128377d8a71914ddbd02f7ba3f0ba1054e36c"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Abilities.h",
+      "before_sha256": "294cb5d989a76678a769842ebbe0075b0bb329e3a7431f5b9ad17432f3121589",
+      "after_sha256": "0a1cceb8917fb1df1387f439c175ff21cb050397b107b280a8a1153b854de2b3"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Armory.cpp",
+      "before_sha256": "83d552aaf9f98e23c38c57f838648de1cc924457c2b6ab6c30d6dcb9ab3b0f8d",
+      "after_sha256": "f5514185cd4a695a52d82038af4c19ccff85f640a002d78501d522c6ea761d2e"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Bow.cpp",
+      "before_sha256": "ff5eb36caba6f926fc2c1537e59c30da616e364ab03934a8891c698dab64b3b5",
+      "after_sha256": "cc4f6b270c8f3692c2272bf771ce76dfabfa4827463ec94f4f935abd0e3a42b1"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3BowPose.h",
+      "before_sha256": null,
+      "after_sha256": "cfbb7bb63cc85e5831515b14f66dbebd5a7645e1f5a51ed576117057cdb56aa4"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3BowPresentation.cpp",
+      "before_sha256": null,
+      "after_sha256": "96a21056eb51efff3ca9ac579a80d0357d17b8c6c6e7ffc262d9813108b0276d"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3SwordWave.cpp",
+      "before_sha256": "e411e26880f196387e1715d88dcf5c9dac540064c7aa010525e72c37de7b88d9",
+      "after_sha256": "d83ffafa03725b26ef1314a0d386fb0575ecdc15ff011c20fd69f0b80f55b18e"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3VFX.cpp",
+      "before_sha256": "e676408cd10108c627b3792da79b7715ae98e818ed31ef6a49833a44bad45cd5",
+      "after_sha256": "0e9392521b9ad75bb5f246dae06b1ca2e30c4f91992456fec577632108cfc62e"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/SHCM5VS3Armory.cpp",
+      "before_sha256": "0d8ca4a1d06f50f0ef915a0416294dd7e11c6fb6900c7a2c15ed7d2032afa35d",
+      "after_sha256": "c166423d63c005b84762482d3672afefc8ac7045aa415b8a85e6b576b5d8ed90"
+    },
+    {
+      "path": "tools/blender_m5_vs3_r6_arrow.py",
+      "before_sha256": null,
+      "after_sha256": "e1a417c922a48b5cb30da047ac0d5ffc9266ea15dd95ccf8401f03079538aec8"
+    },
+    {
+      "path": "tools/blender_m5_vs3_r6_arrow_axes.py",
+      "before_sha256": null,
+      "after_sha256": "425855b58aa6af3089505a7b1cfa4cac0e834a65dcb5133aecb1b8d76f0ad83b"
+    },
+    {
+      "path": "tools/blender_m5_vs3_r6_bow_preview.py",
+      "before_sha256": null,
+      "after_sha256": "dcbe778a033bdcff8b5adcae5713da34be4c7e28ffc278d9a20fd82703641015"
+    },
+    {
+      "path": "tools/blender_m5_vs3_r6_inspect_bow.py",
+      "before_sha256": null,
+      "after_sha256": "910d6e025e48a4d53af58252090342e9b85d476be181ce1356d4d84de2e32d04"
+    },
+    {
+      "path": "tools/hc_r6_analyze_acceptance.py",
+      "before_sha256": null,
+      "after_sha256": "bf11b84c72c1625dbf48a3a289c92295b46bfc0788500487a1bb88f61ce941e3"
+    },
+    {
+      "path": "tools/hc_r6_analyze_hair.py",
+      "before_sha256": null,
+      "after_sha256": "10e0d5828e15b9da8deb7210fad560b4f58c86c3286bb76357b71868adf5ab20"
+    },
+    {
+      "path": "tools/hc_r6_checkpoint.py",
+      "before_sha256": null,
+      "after_sha256": "bf39d2b8d9f28f21d4311854eb9d449c80aa20489af6550255d043944ba059a2"
+    },
+    {
+      "path": "tools/hc_r6_collect_final_evidence.py",
+      "before_sha256": null,
+      "after_sha256": "81a4f4e4fdef8676823f82f26b5787c712976ced11d2c27d25c87392d5ecc6ed"
+    },
+    {
+      "path": "tools/hc_r6_contact_sheet.py",
+      "before_sha256": null,
+      "after_sha256": "979b077b6acfa9c2c409f4b92995c1882e193e6a57a3fa07f1c002d817f16964"
+    },
+    {
+      "path": "tools/hc_r6_encode_diagnostic.py",
+      "before_sha256": null,
+      "after_sha256": "3addf90b0ed2ff26fae88661720ec2eb5b23c99b70ec736bac529b71c1d1b8cc"
+    },
+    {
+      "path": "tools/hc_r6_export_all_media.ps1",
+      "before_sha256": null,
+      "after_sha256": "01aa5bcacb212509a97170b9b63bd5a2bcabeb88adcefd01db12d2b44886ea99"
+    },
+    {
+      "path": "tools/hc_r6_export_native_media.py",
+      "before_sha256": null,
+      "after_sha256": "6f6d73ec447bad744c869a308ce3e1af07a5584fa7e37c1f8629a25a7c885e1a"
+    },
+    {
+      "path": "tools/hc_r6_final_test_queue.ps1",
+      "before_sha256": null,
+      "after_sha256": "56fcb57d7271a0ce2e02a25f3fa19303b3ff68776ff54da117d49465696caee7"
+    },
+    {
+      "path": "tools/hc_r6_finalize_artifacts.py",
+      "before_sha256": null,
+      "after_sha256": "8a8b5e192ad40b04c008232aad34de8bb34ceffdbd1923401c9183dfb66c1734"
+    },
+    {
+      "path": "tools/hc_r6_finish_test_chain.ps1",
+      "before_sha256": null,
+      "after_sha256": "2f985cdfcca4d48a3318082c5e79014e8771f1c4e5b1b627b9d9f82669093246"
+    },
+    {
+      "path": "tools/hc_r6_material_figures.py",
+      "before_sha256": null,
+      "after_sha256": "93df134dc61dee966c9ef0c718f5fc11d318e1cc769e643e7c7f8e1a848ea6f5"
+    },
+    {
+      "path": "tools/hc_r6_media_timeline.py",
+      "before_sha256": null,
+      "after_sha256": "047515feb21fd4a43d0887f7f3b869d8b9b0774cdccefde55d496a254ee9bd07"
+    },
+    {
+      "path": "tools/hc_r6_native_figures.py",
+      "before_sha256": null,
+      "after_sha256": "ff6b30e678e37881de42b40346bfd53b72d986f82f76aa2c8de2a4d887d7d1bd"
+    },
+    {
+      "path": "tools/hc_r6_os_input.ps1",
+      "before_sha256": null,
+      "after_sha256": "c19b43ca7c55ee1eb11518155ed26cd79048f98652cf751e31d8817cd04664e1"
+    },
+    {
+      "path": "tools/hc_r6_peak_figures.py",
+      "before_sha256": null,
+      "after_sha256": "274eee860f93fcbfe5c2f3ff805e109ce203db2330e0c9187d3e8f68ce274545"
+    },
+    {
+      "path": "tools/hc_r6_prepare_publication.py",
+      "before_sha256": null,
+      "after_sha256": "aee1e08f2522bcc0c76c2b239c298fdcc16d930107107b08706a6383ab7ee8e7"
+    },
+    {
+      "path": "tools/hc_r6_prepare_purchased.ps1",
+      "before_sha256": null,
+      "after_sha256": "1c0d653293f283ebcfc5d54fd2eeac861f01dcb185f208b376642d30d23bcc93"
+    },
+    {
+      "path": "tools/hc_r6_stop_guard.ps1",
+      "before_sha256": null,
+      "after_sha256": "f033da91a837d0a56139625c5078c329c540b6ec63fff41d1acb035f82f81e41"
+    },
+    {
+      "path": "tools/hc_r6_summarize.py",
+      "before_sha256": null,
+      "after_sha256": "7fdbf28d8ba418e1778c490e8051dc1cbca77e22883f374074b714df75096bf0"
+    },
+    {
+      "path": "tools/hc_r6_write_reports.py",
+      "before_sha256": null,
+      "after_sha256": "86ceda2a793a61c62a73d0a5639c0a37d52458653c3542181c41bf4b78043b53"
+    },
+    {
+      "path": "tools/publish_m5_vs3_r6_docs.py",
+      "before_sha256": null,
+      "after_sha256": "0dcdb56d7707285e75a081b04f45cc6b8c057dd5344aac4ff862c540b437105f"
+    },
+    {
+      "path": "tools/publish_m5_vs3_r6_release.py",
+      "before_sha256": null,
+      "after_sha256": "0df68075455ebdc73f02f8ae2781e3d75dcc70f1993b93f4a062b247990a3e8b"
+    },
+    {
+      "path": "tools/run_m5_vs3_r6.ps1",
+      "before_sha256": null,
+      "after_sha256": "a3beec3e04b5c93ad160680887261906e5a4c15faa23cb05f3d866f4725a253a"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r6_arrow.py",
+      "before_sha256": null,
+      "after_sha256": "290ad77ee6094ea446035d631d4fca62515c9d73fd6e2fe129f34119ca5cddc2"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r6_author_run.ps1",
+      "before_sha256": null,
+      "after_sha256": "e5cbecc73f6d553c1807df61a0a46f4913cead708425dadd6b0abc73fa5d9d07"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r6_bow_catalog.py",
+      "before_sha256": null,
+      "after_sha256": "5ce07e4551d73b3ffb51d4d46393a0206ad5c8d6e2661f0faec086033f2bee4f"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r6_bow_import.py",
+      "before_sha256": null,
+      "after_sha256": "db98788e82338d610e288911ea80a0275c8aecb75e118bf90576ec87ba20ce60"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r6_bow_inspect_pose.py",
+      "before_sha256": null,
+      "after_sha256": "6e985db8b267a35e51e6d4b39f88319edb12de63030dd9eaf6ac0f8eeaa9a41a"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r6_bow_retarget.py",
+      "before_sha256": null,
+      "after_sha256": "ab1533b596cf73a81c42b687f82e27503fc8ad66cce0ff2d406f88011a86e6af"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r6_ivory.py",
+      "before_sha256": null,
+      "after_sha256": "26cdb6728f3b667fd01977be40dfd3f42d456710e39ac45c2c49f760bc365ff8"
+    }
+  ]
+}

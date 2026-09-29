@@ -1,0 +1,7 @@
+{
+  "browser_rendering": "BLOCKED",
+  "reason": "Browser runtime setup succeeded, getForUrl returned No browser is available; documented bootstrap recovery list returned []. No alternative browser automation used.",
+  "static_links_and_images": "Checked by hc_r6_prepare_publication.py before ZIP creation; publication aborts on any missing local reference.",
+  "responsive_rendering": "NOT_RUN",
+  "image_review": "Agent inspected native bow, ADS, cafe/shock comparisons and contact sheets; not a human art approval."
+}

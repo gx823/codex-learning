@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>海湾漫游 R6 审阅</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f5f6f7;color:#25292d;font:16px/1.7 "Microsoft YaHei",sans-serif;letter-spacing:0}main{max-width:1200px;margin:auto;padding:24px}header{border-bottom:2px solid #334a42;padding-bottom:20px}h1{font-size:30px;line-height:1.35;margin:0 0 12px}h2{font-size:21px;margin:0 0 12px}a{color:#176d62}figure{margin:32px 0;padding:0 0 28px;border-bottom:1px solid #c7cdd0}img{display:block;width:100%;height:auto}figcaption{margin-top:12px}.state{color:#9b3c20;font-weight:700}nav{display:flex;gap:18px;flex-wrap:wrap}@media(max-width:600px){main{padding:16px}h1{font-size:26px}}</style></head>
+<body><main><header><h1>海湾漫游 M5-VS3 R6</h1><p class="state">PARTIAL · 用户验收 PENDING</p><p>冲刺状态与购买星弓已经接入，但拳命中后恢复、第一人称握姿、咖啡馆镜头、穿发和配色仍有未达标项。唯一完整回归与最终独立包已经保留，失败不隐藏。</p>
+<nav><a href="../STATUS.md">状态</a><a href="../ISSUE_MATRIX.md">11 项问题</a><a href="../TEST_REPORT.md">测试</a><a href="../RECORDING.md">录像与指标</a><a href="../MANUAL_RETEST.md">待试玩</a></nav></header><figure><h2>冲刺 / PARTIAL</h2><img loading="lazy" src="final/01_sprint_R5_R6.jpg" alt="冲刺 / PARTIAL"><figcaption>双视角持续按住 Shift 不再退出；TP 拳命中窗口后恢复仍需 0.733 秒，超过 0.2 秒。图为各自录像时刻，不是严格同机位。</figcaption></figure>
+<figure><h2>星弓 / PARTIAL</h2><img loading="lazy" src="final/02_bow_R6_TP_FP.jpg" alt="星弓 / PARTIAL"><figcaption>Ventyra 原生弓、Exouch 第一人称动作和 Mixamo 第三人称已接入；TP 8/10、FP 10/10，左手握合仍需修正。</figcaption></figure>
+<figure><h2>旧失败与新接入</h2><img loading="lazy" src="final/02_bow_R4_failed_R6.jpg" alt="旧失败与新接入"><figcaption>左侧 R4 是旧编辑器失败证据，右侧是 R6 独立包；不把旧编辑器图当成独立包验收。</figcaption></figure>
+<figure><h2>第一人称拉弓</h2><img loading="lazy" src="final/R6_BOW_FP_FULL.png" alt="第一人称拉弓"><figcaption>实际独立包录像帧，20 度右倾；箭尖可见，握把附近手掌仍显松开，未通过美术验收。</figcaption></figure>
+<figure><h2>咖啡馆 / FAIL</h2><img loading="lazy" src="final/03_cafe_R5_R6.jpg" alt="咖啡馆 / FAIL"><figcaption>门框和墙边仍造成严重遮挡；补充外部镜头碰撞未解决全部室内视野，局部淡化尚未实现。</figcaption></figure>
+<figure><h2>第三人称瞄准 / PARTIAL</h2><img loading="lazy" src="final/04_ads_R5_R6.jpg" alt="第三人称瞄准 / PARTIAL"><figcaption>肩位向外移动，中心更清楚；严格角色轮廓比例和贴近淡化没有完成验收。</figcaption></figure>
+<figure><h2>冲击 / PARTIAL</h2><img loading="lazy" src="final/05_shock_frames.jpg" alt="冲击 / PARTIAL"><figcaption>正常及真实 0.25 倍慢放均打中两名目标。代码同帧触发，不替代小于等于 0.05 秒的视觉同步证明，见录像审计。</figcaption></figure>
+<figure><h2>第一人称峰值 / 19 of 20</h2><img loading="lazy" src="final/06_fp_peaks_1.jpg" alt="第一人称峰值 / 19 of 20"><figcaption>全生命周期重测，光箭蓄力仍为 28.60%，超过 25%；配对噪声均低于 0.5%。</figcaption></figure>
+<figure><h2>剑气与斩击</h2><img loading="lazy" src="final/06_fp_peaks_2.jpg" alt="剑气与斩击"><figcaption>原先过大的项目已缩小；每版使用自身峰值时刻作诊断对比，不是同步机位截图。</figcaption></figure>
+<figure><h2>象牙配色 / PARTIAL</h2><img loading="lazy" src="final/07_ivory_R4_R5_R6.jpg" alt="象牙配色 / PARTIAL"><figcaption>三处相同相机已核对。午后主体为 203,200,190，仍略低于目标；淡金件不合格。</figcaption></figure>
+<figure><h2>主片审阅</h2><img loading="lazy" src="final/MAIN_QA_CONTACT.jpg" alt="主片审阅"><figcaption>最终包原生采集约 3 分 02 秒，失败镜头保留；没有将独立片段存在当成问题修复。</figcaption></figure>
+</main></body></html>

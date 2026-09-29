@@ -1,0 +1,14 @@
+{
+  "status": "PASS_EXPLICIT_WHITELIST",
+  "texts": 50,
+  "images": 13,
+  "excluded": [
+    "purchased originals and derivatives",
+    "Selestia raw data",
+    "private music and separate paid SFX",
+    "game archive",
+    "saves",
+    "raw or compressed frame sequences"
+  ],
+  "final_exe_sha256": "90295598EBB7FDD0E458AB95E76C82986D271511C71329164FBC29237FA3FFAC"
+}

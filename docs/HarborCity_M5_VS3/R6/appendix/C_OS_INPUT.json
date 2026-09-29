@@ -1,0 +1,14 @@
+{
+  "status": "BLOCKED_TOOL_UNAVAILABLE",
+  "evidence_level": "C-OS NOT_RUN",
+  "native_plugin": "computer-use / @oai/sky",
+  "observations": "This chat initialized the documented sky API and attempted list_apps twice. Both attempts failed with native helper pipe error 2; the last was around 21:33 on 2026-09-29. The tool transcript is the evidence, not a fabricated desktop capture.",
+  "game_mouse_inputs_sent_in_R6": 0,
+  "armory_close_mouse_verified": false,
+  "sprint_combo_mouse_keyboard_verified": false,
+  "sprint_hipfire_mouse_keyboard_verified": false,
+  "human_test": "PENDING",
+  "fallback_tool": "hc_r6_os_input.ps1 was prepared but NOT_RUN. Computer-use guidance requires using the native JS API for app control and forbids mixing direct PowerShell UI automation in this turn.",
+  "R5_cause": "UNCONFIRMED. R5 screenshot showed the armory still open after the attempted close. Incorrect click targeting, same-frame press/release, and focus remain hypotheses; source review alone cannot distinguish them.",
+  "in_engine_menu_tests": "Separate B-level checks, not substituted for a real mouse click."
+}

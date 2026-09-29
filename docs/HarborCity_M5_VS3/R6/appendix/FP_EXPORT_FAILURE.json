@@ -1,0 +1,6 @@
+{
+  "status": "FAILED_FIRST_EXPORT_PRESERVED",
+  "reason": "FImageUtils compressed output in the diagnostic .png-named frames has JPEG signature FFD8FFE0. FFmpeg's extension-selected PNG decoder rejected it. No raw/uncompressed frame format was used.",
+  "resolution": "Exporter now reads the actual format with Pillow and explicitly selects mjpeg or png decoder. The zero-packet temporary MP4 is removed only after exact path and small size verification; original compressed frames retained until final decode succeeds.",
+  "game_build_changed": false
+}

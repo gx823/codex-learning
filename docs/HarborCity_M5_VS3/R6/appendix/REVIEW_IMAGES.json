@@ -1,0 +1,80 @@
+[
+  {
+    "file": "review/final/01_sprint_R5_R6.jpg",
+    "title": "冲刺 / PARTIAL",
+    "caption": "双视角持续按住 Shift 不再退出；TP 拳命中窗口后恢复仍需 0.733 秒，超过 0.2 秒。图为各自录像时刻，不是严格同机位。",
+    "sha256": "260f764882cadee958a95659f31baef68138d2e2856344eb3847a0ad86d379ad"
+  },
+  {
+    "file": "review/final/02_bow_R6_TP_FP.jpg",
+    "title": "星弓 / PARTIAL",
+    "caption": "Ventyra 原生弓、Exouch 第一人称动作和 Mixamo 第三人称已接入；TP 8/10、FP 10/10，左手握合仍需修正。",
+    "sha256": "a1705a4c7de8e1e17226cfbe2c6e241c0bd952cfbf9c7914fbe21e8b8d45b4ec"
+  },
+  {
+    "file": "review/final/02_bow_R4_failed_R6.jpg",
+    "title": "旧失败与新接入",
+    "caption": "左侧 R4 是旧编辑器失败证据，右侧是 R6 独立包；不把旧编辑器图当成独立包验收。",
+    "sha256": "814139e852b8bfae8536cbf875624031c8ac7b309515289b16feda9c7a077a5f"
+  },
+  {
+    "file": "review/final/R6_BOW_FP_FULL.png",
+    "title": "第一人称拉弓",
+    "caption": "实际独立包录像帧，20 度右倾；箭尖可见，握把附近手掌仍显松开，未通过美术验收。",
+    "sha256": "9959632358ca8c7f5ba9c8b7a5ea251175ffcc4bd7225cb466d958981c03a32f"
+  },
+  {
+    "file": "review/final/03_cafe_R5_R6.jpg",
+    "title": "咖啡馆 / FAIL",
+    "caption": "门框和墙边仍造成严重遮挡；补充外部镜头碰撞未解决全部室内视野，局部淡化尚未实现。",
+    "sha256": "9106417005719470c4e2fa23fd5cce913c363a2238a389a3bc3282248cb5d4e1"
+  },
+  {
+    "file": "review/final/04_ads_R5_R6.jpg",
+    "title": "第三人称瞄准 / PARTIAL",
+    "caption": "肩位向外移动，中心更清楚；严格角色轮廓比例和贴近淡化没有完成验收。",
+    "sha256": "b2c9e1c916963797450d946f020891ac537d23bf5e574d2e8b4a8f07be01aef2"
+  },
+  {
+    "file": "review/final/05_shock_frames.jpg",
+    "title": "冲击 / PARTIAL",
+    "caption": "正常及真实 0.25 倍慢放均打中两名目标。代码同帧触发，不替代小于等于 0.05 秒的视觉同步证明，见录像审计。",
+    "sha256": "2f89906e8ce17dad5a3ecfd253a1e2dd890be0a1cba505c2172e628bc25d44ad"
+  },
+  {
+    "file": "review/final/06_fp_peaks_1.jpg",
+    "title": "第一人称峰值 / 19 of 20",
+    "caption": "全生命周期重测，光箭蓄力仍为 28.60%，超过 25%；配对噪声均低于 0.5%。",
+    "sha256": "9f489e94d4ddc15ea4079980448e13f8a4c74b1bc335342bceeab307d92b5b76"
+  },
+  {
+    "file": "review/final/06_fp_peaks_2.jpg",
+    "title": "剑气与斩击",
+    "caption": "原先过大的项目已缩小；每版使用自身峰值时刻作诊断对比，不是同步机位截图。",
+    "sha256": "0110c32c1d6d2830b93534df7517d4704a40a6436f3b54249e21d397e7c2772c"
+  },
+  {
+    "file": "review/final/07_ivory_R4_R5_R6.jpg",
+    "title": "象牙配色 / PARTIAL",
+    "caption": "三处相同相机已核对。午后主体为 203,200,190，仍略低于目标；淡金件不合格。",
+    "sha256": "fa4d6d2666edbd57ae29f8af7eddd667016cd110b1e899c45665a671d8ba483c"
+  },
+  {
+    "file": "review/final/MAIN_QA_CONTACT.jpg",
+    "title": "主片审阅",
+    "caption": "最终包原生采集约 3 分 02 秒，失败镜头保留；没有将独立片段存在当成问题修复。",
+    "sha256": "d60f62c4ca92c05ecd70b7169a682d2ef23c139e4ff0a535362432947de6df0e"
+  },
+  {
+    "file": "review/R6_BOW_TP_DRAW.png",
+    "title": "独立包原生拉弓截图",
+    "caption": "第一人称图为拉弓过程，完整拉弓另见主片 88.5 秒图。",
+    "sha256": "18f21a6874b0ab6d4003e0f2c050315999b7263c86540537b79a1b004b558e36"
+  },
+  {
+    "file": "review/R6_BOW_FP_DRAW.png",
+    "title": "独立包原生拉弓截图",
+    "caption": "第一人称图为拉弓过程，完整拉弓另见主片 88.5 秒图。",
+    "sha256": "6c3e875ca4a16a837b8c2aca6609a44babdd6dadf44e168b8ca53c1b3e70ea75"
+  }
+]

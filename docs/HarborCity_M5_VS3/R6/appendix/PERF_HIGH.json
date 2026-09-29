@@ -1,0 +1,648 @@
+{
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\perf_20260929_225435",
+  "host": {
+    "time": "2026-09-29T22:54:34.973625+08:00",
+    "ac_line": 1,
+    "battery_percent": 100,
+    "foreground_pid": 5096,
+    "foreground_process": "ChatGPT",
+    "games": [],
+    "disks": [
+      {
+        "Name": "C",
+        "free_GiB": 74.27
+      },
+      {
+        "Name": "D",
+        "free_GiB": 133.72
+      },
+      {
+        "Name": "E",
+        "free_GiB": 188.99
+      }
+    ],
+    "input_desktop": {
+      "name": "Default",
+      "opened": true,
+      "open_error": 0,
+      "wts_valid": true,
+      "session_flags": 1,
+      "session_state": 0,
+      "query_error": 0,
+      "available": true
+    }
+  },
+  "raw_checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.246789701282978
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_perf_20260929_225435",
+      "elapsed_seconds": 3.248130399733782
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.258209601044655
+    },
+    {
+      "name": "Standard fill and world audio runtime",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "readback; audible recording verified separately",
+      "actual": "{\"ordinary_point_light\":true,\"ambience_playing\":true,\"footsteps\":0,\"audible_shots\":0}",
+      "elapsed_seconds": 5.262381698936224
+    },
+    {
+      "name": "Town navigation asset",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "current town map data",
+      "actual": "DA_HarborTown",
+      "elapsed_seconds": 5.263576600700617
+    },
+    {
+      "name": "Rejected young appearances excluded",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "19 adult-base NPCs; diversity is separate art review",
+      "actual": "adult_base=19 excluded=0",
+      "elapsed_seconds": 5.27219669893384
+    },
+    {
+      "name": "Town actor unique",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "one runtime actor",
+      "actual": "1",
+      "elapsed_seconds": 5.281920999288559
+    },
+    {
+      "name": "Help panel starts closed",
+      "status": "PASS",
+      "evidence_level": "A-runtime",
+      "expected": "closed",
+      "actual": "0",
+      "elapsed_seconds": 5.289580699056387
+    },
+    {
+      "name": "South approach walk",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=1415 mean_fps=117.866 p99_ms=9.904 wall_seconds=12.005",
+      "elapsed_seconds": 32.37242870032787
+    },
+    {
+      "name": "Market approach walk",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=1406 mean_fps=117.095 p99_ms=10.227 wall_seconds=12.007",
+      "elapsed_seconds": 44.37987520173192
+    },
+    {
+      "name": "High aerial hover",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=469 mean_fps=117.136 p99_ms=9.939 wall_seconds=4.004",
+      "elapsed_seconds": 58.49793750047684
+    },
+    {
+      "name": "Town aerial traversal",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=596 mean_fps=119.033 p99_ms=9.983 wall_seconds=5.007",
+      "elapsed_seconds": 63.61203300207853
+    },
+    {
+      "name": "Spell stress has six existing adult NPCs",
+      "status": "PASS",
+      "evidence_level": "A-fixture",
+      "expected": "six live authored adults, A placement only",
+      "actual": "6",
+      "elapsed_seconds": 80.62756099924445
+    },
+    {
+      "name": "Multiple spells and six NPC AI performance",
+      "status": "PASS",
+      "evidence_level": "B-Action spells + A crowd placement and wall-frame readback",
+      "expected": "uncapped; at least two shock-step damage recipients before resets; mean>=60 p99<=25; ordinary NPC reactions, not forced six attackers",
+      "actual": "frames=3690 mean_fps=111.487 p99_ms=10.396 wall_seconds=33.098 npcs=6 damaged=6",
+      "elapsed_seconds": 115.13648200035095
+    },
+    {
+      "name": "Armory performance preview active",
+      "status": "PASS",
+      "evidence_level": "B Armory Action; A runtime readback",
+      "expected": "paused UI with real preview",
+      "actual": "",
+      "elapsed_seconds": 123.37602189928293
+    },
+    {
+      "name": "Armory real preview render performance",
+      "status": "PASS",
+      "evidence_level": "A wall-frame measurement + B movement",
+      "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+      "actual": "frames=1113 mean_fps=92.706 p99_ms=12.433 wall_seconds=12.006",
+      "elapsed_seconds": 135.38172680139542
+    }
+  ],
+  "unit_categories": [
+    {
+      "phase": "setup",
+      "frames": 1,
+      "mean_ms": {
+        "frame_ms": 244.4659,
+        "game_ms": 0.0,
+        "render_ms": 429419.375,
+        "gpu_ms": 0.0
+      }
+    },
+    {
+      "phase": "world_settle",
+      "frames": 311,
+      "mean_ms": {
+        "frame_ms": 9.652789710610932,
+        "game_ms": 3.392933118971061,
+        "render_ms": 4.759575884244373,
+        "gpu_ms": 7.7140324758842445
+      }
+    },
+    {
+      "phase": "M4 R2 await initial game focus",
+      "frames": 1,
+      "mean_ms": {
+        "frame_ms": 8.9628,
+        "game_ms": 5.6863,
+        "render_ms": 2.8724,
+        "gpu_ms": 7.8301
+      }
+    },
+    {
+      "phase": "Town runtime references",
+      "frames": 240,
+      "mean_ms": {
+        "frame_ms": 8.348866666666666,
+        "game_ms": 2.903754166666667,
+        "render_ms": 3.03174,
+        "gpu_ms": 7.780945
+      }
+    },
+    {
+      "phase": "Warmup route",
+      "frames": 1784,
+      "mean_ms": {
+        "frame_ms": 8.411682174887892,
+        "game_ms": 2.963324831838565,
+        "render_ms": 2.9886809977578475,
+        "gpu_ms": 7.814795011210762
+      }
+    },
+    {
+      "phase": "B start walk",
+      "frames": 12,
+      "mean_ms": {
+        "frame_ms": 8.439883333333334,
+        "game_ms": 3.6634666666666664,
+        "render_ms": 3.5647583333333333,
+        "gpu_ms": 7.9039166666666665
+      }
+    },
+    {
+      "phase": "South approach walk",
+      "frames": 1415,
+      "mean_ms": {
+        "frame_ms": 8.484227349823321,
+        "game_ms": 2.9163811307420495,
+        "render_ms": 3.1347696819787987,
+        "gpu_ms": 7.883220565371024
+      }
+    },
+    {
+      "phase": "Market approach walk",
+      "frames": 1406,
+      "mean_ms": {
+        "frame_ms": 8.540065433854908,
+        "game_ms": 2.9287724751066855,
+        "render_ms": 3.126549786628734,
+        "gpu_ms": 7.965367425320057
+      }
+    },
+    {
+      "phase": "B stop before flight",
+      "frames": 233,
+      "mean_ms": {
+        "frame_ms": 8.587524463519314,
+        "game_ms": 2.9153296137339058,
+        "render_ms": 2.928217596566524,
+        "gpu_ms": 8.037368669527897
+      }
+    },
+    {
+      "phase": "FlightToggle press",
+      "frames": 11,
+      "mean_ms": {
+        "frame_ms": 9.697336363636364,
+        "game_ms": 2.7468909090909093,
+        "render_ms": 3.321909090909091,
+        "gpu_ms": 8.191145454545454
+      }
+    },
+    {
+      "phase": "FlightToggle release",
+      "frames": 111,
+      "mean_ms": {
+        "frame_ms": 9.062742342342343,
+        "game_ms": 2.8650972972972975,
+        "render_ms": 3.229557657657658,
+        "gpu_ms": 8.480563963963965
+      }
+    },
+    {
+      "phase": "B climb",
+      "frames": 791,
+      "mean_ms": {
+        "frame_ms": 8.8505195954488,
+        "game_ms": 3.1008792667509484,
+        "render_ms": 3.40042402022756,
+        "gpu_ms": 8.234245132743363
+      }
+    },
+    {
+      "phase": "High aerial hover",
+      "frames": 469,
+      "mean_ms": {
+        "frame_ms": 8.53709488272921,
+        "game_ms": 3.016341791044776,
+        "render_ms": 3.443471641791045,
+        "gpu_ms": 7.920650959488273
+      }
+    },
+    {
+      "phase": "B forward flight",
+      "frames": 12,
+      "mean_ms": {
+        "frame_ms": 8.918683333333334,
+        "game_ms": 4.405733333333333,
+        "render_ms": 3.840425,
+        "gpu_ms": 7.97705
+      }
+    },
+    {
+      "phase": "Town aerial traversal",
+      "frames": 596,
+      "mean_ms": {
+        "frame_ms": 8.401007046979865,
+        "game_ms": 2.947365436241611,
+        "render_ms": 3.34361677852349,
+        "gpu_ms": 7.776453523489933
+      }
+    },
+    {
+      "phase": "B end route",
+      "frames": 123,
+      "mean_ms": {
+        "frame_ms": 8.184743902439024,
+        "game_ms": 2.9315040650406505,
+        "render_ms": 3.105071544715447,
+        "gpu_ms": 7.520919512195122
+      }
+    },
+    {
+      "phase": "Wait for actual stamina landing",
+      "frames": 1928,
+      "mean_ms": {
+        "frame_ms": 8.30318760373444,
+        "game_ms": 2.87992479253112,
+        "render_ms": 3.2121990663900415,
+        "gpu_ms": 7.676976867219917
+      }
+    },
+    {
+      "phase": "A six-adult spell stress fixture",
+      "frames": 112,
+      "mean_ms": {
+        "frame_ms": 8.984271428571429,
+        "game_ms": 3.408058035714286,
+        "render_ms": 3.4926642857142856,
+        "gpu_ms": 8.190145535714286
+      }
+    },
+    {
+      "phase": "A aim actual ground ray into crowd before timing",
+      "frames": 46,
+      "mean_ms": {
+        "frame_ms": 8.799602173913044,
+        "game_ms": 3.051430434782609,
+        "render_ms": 3.2355108695652173,
+        "gpu_ms": 8.195143478260869
+      }
+    },
+    {
+      "phase": "Begin measured multiple-spell AI response",
+      "frames": 6,
+      "mean_ms": {
+        "frame_ms": 8.65955,
+        "game_ms": 3.1145666666666667,
+        "render_ms": 2.9758833333333334,
+        "gpu_ms": 8.141633333333333
+      }
+    },
+    {
+      "phase": "ToggleWeapon press",
+      "frames": 23,
+      "mean_ms": {
+        "frame_ms": 9.08285652173913,
+        "game_ms": 3.2847565217391304,
+        "render_ms": 3.4571652173913043,
+        "gpu_ms": 8.311647826086956
+      }
+    },
+    {
+      "phase": "ToggleWeapon release",
+      "frames": 122,
+      "mean_ms": {
+        "frame_ms": 9.054064754098361,
+        "game_ms": 3.2997590163934425,
+        "render_ms": 3.4820696721311477,
+        "gpu_ms": 8.393585245901638
+      }
+    },
+    {
+      "phase": "B charge and release heavy wave in crowd workload",
+      "frames": 112,
+      "mean_ms": {
+        "frame_ms": 8.933605357142858,
+        "game_ms": 3.2074607142857143,
+        "render_ms": 3.3088732142857142,
+        "gpu_ms": 8.266394642857144
+      }
+    },
+    {
+      "phase": "Let heavy wave cross real crowd",
+      "frames": 110,
+      "mean_ms": {
+        "frame_ms": 9.102407272727273,
+        "game_ms": 3.5275118181818184,
+        "render_ms": 3.4631981818181816,
+        "gpu_ms": 8.404844545454546
+      }
+    },
+    {
+      "phase": "Spell4 press",
+      "frames": 12,
+      "mean_ms": {
+        "frame_ms": 8.913641666666667,
+        "game_ms": 3.209825,
+        "render_ms": 3.4019833333333334,
+        "gpu_ms": 8.195741666666667
+      }
+    },
+    {
+      "phase": "Spell4 release",
+      "frames": 90,
+      "mean_ms": {
+        "frame_ms": 8.922077777777778,
+        "game_ms": 3.3229544444444445,
+        "render_ms": 3.432,
+        "gpu_ms": 8.259666666666666
+      }
+    },
+    {
+      "phase": "Snapshot crowd health immediately before shock",
+      "frames": 6,
+      "mean_ms": {
+        "frame_ms": 8.855816666666666,
+        "game_ms": 2.9549666666666665,
+        "render_ms": 3.5819833333333335,
+        "gpu_ms": 8.25075
+      }
+    },
+    {
+      "phase": "Spell2 press",
+      "frames": 12,
+      "mean_ms": {
+        "frame_ms": 9.02005,
+        "game_ms": 3.231533333333333,
+        "render_ms": 3.530825,
+        "gpu_ms": 8.33145
+      }
+    },
+    {
+      "phase": "Spell2 release",
+      "frames": 34,
+      "mean_ms": {
+        "frame_ms": 8.89695294117647,
+        "game_ms": 3.4144,
+        "render_ms": 3.504314705882353,
+        "gpu_ms": 8.28365
+      }
+    },
+    {
+      "phase": "B hold AoE in six-NPC workload",
+      "frames": 81,
+      "mean_ms": {
+        "frame_ms": 8.74322839506173,
+        "game_ms": 3.230132098765432,
+        "render_ms": 3.419601234567901,
+        "gpu_ms": 8.188628395061729
+      }
+    },
+    {
+      "phase": "B let actual AoE land",
+      "frames": 67,
+      "mean_ms": {
+        "frame_ms": 9.043816417910447,
+        "game_ms": 3.5330194029850746,
+        "render_ms": 3.4493626865671643,
+        "gpu_ms": 8.439737313432836
+      }
+    },
+    {
+      "phase": "Spell1 press",
+      "frames": 12,
+      "mean_ms": {
+        "frame_ms": 8.776016666666667,
+        "game_ms": 3.427233333333333,
+        "render_ms": 3.317125,
+        "gpu_ms": 8.228725
+      }
+    },
+    {
+      "phase": "Spell1 release",
+      "frames": 34,
+      "mean_ms": {
+        "frame_ms": 9.013461764705882,
+        "game_ms": 3.4526205882352943,
+        "render_ms": 3.5991235294117647,
+        "gpu_ms": 8.324814705882353
+      }
+    },
+    {
+      "phase": "B hold and release actual bolt",
+      "frames": 78,
+      "mean_ms": {
+        "frame_ms": 8.97986923076923,
+        "game_ms": 3.4171910256410256,
+        "render_ms": 3.423594871794872,
+        "gpu_ms": 8.334996153846154
+      }
+    },
+    {
+      "phase": "R3 fallback light-arrow remote slot for measured load",
+      "frames": 88,
+      "mean_ms": {
+        "frame_ms": 9.167976136363636,
+        "game_ms": 3.5489511363636366,
+        "render_ms": 3.461663636363636,
+        "gpu_ms": 8.475190909090909
+      }
+    },
+    {
+      "phase": "R3 aim at one of six adults",
+      "frames": 224,
+      "mean_ms": {
+        "frame_ms": 9.125769642857144,
+        "game_ms": 3.258848660714286,
+        "render_ms": 3.47010625,
+        "gpu_ms": 8.494570535714287
+      }
+    },
+    {
+      "phase": "R3 real fallback light-arrow fire within workload",
+      "frames": 368,
+      "mean_ms": {
+        "frame_ms": 9.079553260869565,
+        "game_ms": 3.4631214673913044,
+        "render_ms": 3.4625502717391305,
+        "gpu_ms": 8.459742391304347
+      }
+    },
+    {
+      "phase": "R3 actual arrow flight",
+      "frames": 309,
+      "mean_ms": {
+        "frame_ms": 9.204874110032362,
+        "game_ms": 3.322708737864078,
+        "render_ms": 3.4475381877022655,
+        "gpu_ms": 8.540488996763754
+      }
+    },
+    {
+      "phase": "R6 starbow equip inside measured workload",
+      "frames": 89,
+      "mean_ms": {
+        "frame_ms": 8.996338202247191,
+        "game_ms": 3.338447191011236,
+        "render_ms": 3.5314426966292136,
+        "gpu_ms": 8.316549438202248
+      }
+    },
+    {
+      "phase": "R6 real starbow load aim",
+      "frames": 199,
+      "mean_ms": {
+        "frame_ms": 8.924315075376885,
+        "game_ms": 3.1371276381909547,
+        "render_ms": 3.3446231155778894,
+        "gpu_ms": 8.319558291457286
+      }
+    },
+    {
+      "phase": "R6 starbow continuous charged shots",
+      "frames": 474,
+      "mean_ms": {
+        "frame_ms": 9.031349789029536,
+        "game_ms": 3.383857805907173,
+        "render_ms": 3.4469837552742617,
+        "gpu_ms": 8.405844514767933
+      }
+    },
+    {
+      "phase": "R6 native arrow flight in timed workload",
+      "frames": 225,
+      "mean_ms": {
+        "frame_ms": 9.020218222222223,
+        "game_ms": 3.2199573333333333,
+        "render_ms": 3.3021324444444446,
+        "gpu_ms": 8.441423555555556
+      }
+    },
+    {
+      "phase": "Measure ordinary NPC reactions to spells",
+      "frames": 915,
+      "mean_ms": {
+        "frame_ms": 8.750792786885246,
+        "game_ms": 3.1124124590163933,
+        "render_ms": 3.3158365027322403,
+        "gpu_ms": 8.164739344262294
+      }
+    },
+    {
+      "phase": "Calm armory performance fixture",
+      "frames": 690,
+      "mean_ms": {
+        "frame_ms": 8.703082028985508,
+        "game_ms": 3.1434178260869565,
+        "render_ms": 3.3205417391304346,
+        "gpu_ms": 8.133457536231884
+      }
+    },
+    {
+      "phase": "Armory press",
+      "frames": 18,
+      "mean_ms": {
+        "frame_ms": 12.326772222222223,
+        "game_ms": 4.183233333333333,
+        "render_ms": 4.783205555555556,
+        "gpu_ms": 9.151083333333334
+      }
+    },
+    {
+      "phase": "Armory release",
+      "frames": 299,
+      "mean_ms": {
+        "frame_ms": 10.060379933110369,
+        "game_ms": 1.8663642140468228,
+        "render_ms": 4.481878260869565,
+        "gpu_ms": 9.161208026755853
+      }
+    },
+    {
+      "phase": "Check measured preview is actually open",
+      "frames": 10,
+      "mean_ms": {
+        "frame_ms": 10.93587,
+        "game_ms": 1.2044,
+        "render_ms": 4.97631,
+        "gpu_ms": 10.02072
+      }
+    },
+    {
+      "phase": "Armory real preview render performance",
+      "frames": 1113,
+      "mean_ms": {
+        "frame_ms": 10.786840970350404,
+        "game_ms": 1.204040790655885,
+        "render_ms": 5.17644465408805,
+        "gpu_ms": 9.835441689128482
+      }
+    }
+  ],
+  "scope": "Overlapping stat unit CPU/render/GPU categories, not individual GPU passes; no capture during benchmark."
+}

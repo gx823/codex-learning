@@ -1,0 +1,97 @@
+{
+  "status": "ACTUAL_SMALL_REGION_SAMPLES",
+  "samples": [
+    {
+      "view": "B_Armory",
+      "part": "body",
+      "box": [
+        946,
+        362,
+        953,
+        369
+      ],
+      "median_srgb": [
+        232,
+        230,
+        222
+      ],
+      "target": [
+        225,
+        215,
+        195
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "Same small displayed-region ROI as R5, not whole-object segmentation or a promise of identical colour under dusk light."
+    },
+    {
+      "view": "B_Armory",
+      "part": "metal",
+      "box": [
+        931,
+        403,
+        936,
+        408
+      ],
+      "median_srgb": [
+        228,
+        225,
+        216
+      ],
+      "target": [
+        225,
+        203,
+        153
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "Same small displayed-region ROI as R5, not whole-object segmentation or a promise of identical colour under dusk light."
+    },
+    {
+      "view": "B_Afternoon_FP",
+      "part": "body",
+      "box": [
+        1370,
+        805,
+        1377,
+        812
+      ],
+      "median_srgb": [
+        203,
+        200,
+        190
+      ],
+      "target": [
+        225,
+        215,
+        195
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "Same small displayed-region ROI as R5, not whole-object segmentation or a promise of identical colour under dusk light."
+    },
+    {
+      "view": "B_Afternoon_FP",
+      "part": "metal",
+      "box": [
+        1228,
+        701,
+        1233,
+        706
+      ],
+      "median_srgb": [
+        118,
+        111,
+        74
+      ],
+      "target": [
+        225,
+        203,
+        153
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "Same small displayed-region ROI as R5, not whole-object segmentation or a promise of identical colour under dusk light."
+    }
+  ]
+}

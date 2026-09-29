@@ -1,0 +1,218 @@
+{
+  "status": "DECODE_VERIFIED_AND_TEMP_FRAMES_REMOVED",
+  "output": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\review\\final\\R6_FP_EFFECT_LIFETIMES.mp4",
+  "sha256": "d74f47b8b9f27ab235b0a798677ff4fc5fb6e962f66875295be4ae2aadd5768b",
+  "rows": [
+    {
+      "effect": "Arcane_muzzle",
+      "frames": 93,
+      "first_frame": 0,
+      "seconds": 3.1
+    },
+    {
+      "effect": "Arrow_charge",
+      "frames": 33,
+      "first_frame": 0,
+      "seconds": 1.1
+    },
+    {
+      "effect": "Arrow_release",
+      "frames": 150,
+      "first_frame": 0,
+      "seconds": 5.0
+    },
+    {
+      "effect": "Bolt_charge",
+      "frames": 36,
+      "first_frame": 0,
+      "seconds": 1.2
+    },
+    {
+      "effect": "Bolt_release",
+      "frames": 150,
+      "first_frame": 0,
+      "seconds": 5.0
+    },
+    {
+      "effect": "CrimsonNight_charge",
+      "frames": 33,
+      "first_frame": 0,
+      "seconds": 1.1
+    },
+    {
+      "effect": "CrimsonNight_slash1",
+      "frames": 29,
+      "first_frame": 0,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "CrimsonNight_slash2",
+      "frames": 29,
+      "first_frame": 0,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "CrimsonNight_slash3",
+      "frames": 29,
+      "first_frame": 0,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "CrimsonNight_wave",
+      "frames": 120,
+      "first_frame": 0,
+      "seconds": 4.0
+    },
+    {
+      "effect": "Heal",
+      "frames": 242,
+      "first_frame": 0,
+      "seconds": 8.066666666666666
+    },
+    {
+      "effect": "Shield",
+      "frames": 242,
+      "first_frame": 0,
+      "seconds": 8.066666666666666
+    },
+    {
+      "effect": "Shock_release",
+      "frames": 150,
+      "first_frame": 0,
+      "seconds": 5.0
+    },
+    {
+      "effect": "Shock_warning",
+      "frames": 36,
+      "first_frame": 0,
+      "seconds": 1.2
+    },
+    {
+      "effect": "StarTide_charge",
+      "frames": 33,
+      "first_frame": 0,
+      "seconds": 1.1
+    },
+    {
+      "effect": "StarTide_slash1",
+      "frames": 29,
+      "first_frame": 0,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "StarTide_slash2",
+      "frames": 29,
+      "first_frame": 0,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "StarTide_slash3",
+      "frames": 29,
+      "first_frame": 0,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "StarTide_wave",
+      "frames": 120,
+      "first_frame": 0,
+      "seconds": 4.0
+    },
+    {
+      "effect": "Steamlock_muzzle",
+      "frames": 93,
+      "first_frame": 0,
+      "seconds": 3.1
+    }
+  ],
+  "removed_compressed_frames": 1705,
+  "freed_bytes": 302417006,
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1088,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuvj420p",
+        "level": 40,
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 4,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 872960,
+        "duration": "56.833333",
+        "bit_rate": "7868414",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1705",
+        "nb_read_frames": "1705",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.8.101 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\review\\final\\R6_FP_EFFECT_LIFETIMES.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "56.833333",
+      "size": "55920673",
+      "bit_rate": "7871531",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.6.100"
+      }
+    }
+  },
+  "scope": "Diagnostic scene captures at controlled simulation timestamps; no audio, not native real-time 30 FPS evidence. Peak pairs retained separately."
+}

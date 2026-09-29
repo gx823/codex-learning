@@ -1,0 +1,61 @@
+{
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_233012",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "M1 controller, character, car, switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.2004110999405384
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20260929_233012",
+      "elapsed_seconds": 3.2012286968529224
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.212576400488615
+    },
+    {
+      "name": "R6 continuous30-minute exploration",
+      "status": "FAIL",
+      "evidence_level": "B normal Move/Look navigation, no teleports after warmup; host memory and AC in launcher",
+      "expected": "1800s actual package exploration,>=12 reached route goals",
+      "actual": "wall_seconds=1800.003 goals=0 hitches_gt100ms=0 frames=219486",
+      "elapsed_seconds": 1818.2207079976797
+    }
+  ],
+  "exit": 0,
+  "AC_all": true,
+  "unlocked_all": true,
+  "host_samples": 60,
+  "memory": {
+    "private_bytes": {
+      "early_MiB": 4519.921875,
+      "last_MiB": 4544.48828125,
+      "growth_MiB": 24.56640625,
+      "peak_MiB": 4692.83984375
+    },
+    "working_set_bytes": {
+      "early_MiB": 1824.86328125,
+      "last_MiB": 1847.97265625,
+      "growth_MiB": 23.109375,
+      "peak_MiB": 1969.0234375
+    }
+  },
+  "route_samples": 1792,
+  "sampled_distance_m": 0.0,
+  "reached_goals": 0,
+  "moving_sample_percent": 0.0,
+  "mode": "30 real minutes of automated normal-input navigation; not human free exploration or proof of every gameplay subsystem."
+}

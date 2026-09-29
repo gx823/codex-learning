@@ -1,0 +1,1575 @@
+{
+  "status": "COMPLETED_ROWS_ONLY",
+  "runs": [
+    {
+      "job": "full_once",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_full_20260929_220440",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_full_20260929_220440\\User\\Saved\\M5Tests\\20260929_220443_m5_full\\results.json",
+      "checks": 235,
+      "failures": 3,
+      "failed_checks": [
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "status": "FAIL",
+          "evidence_level": "A-fixture",
+          "expected": "read-only safety queries choose A parking fixture; no condition override",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+          "elapsed_seconds": 93.72705990076065
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "status": "FAIL",
+          "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+          "expected": "driving, passenger attached through normal Tick",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.775 Y=-6360.922 Z=22.640 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_fade_seconds\": 1,\r\n\t\"named_post_removal_cooldown_seconds\": 60,\r\n\t\"coffee_stage\": 2,\r\n\t\"ride_stage\": 1,\r\n\t\"pickup_curb_y\": -6500,\r\n\t\"pickup_max_body_gap_cm\": 65,\r\n\t\"pickup_parallel_tolerance_degrees\": 15,\r\n\t\"actual_pickup_body_gap_cm\": 24.996188720408099,\r\n\t\"actual_body_world_min\": \"X=-5903.838 Y=-6475.004 Z=18.859\",\r\n\t\"actual_body_world_max\": \"X=-5432.249 Y=-6246.834 Z=145.098\",\r\n\t\"can_pickup_at_curb\": true,\r\n\t\"named_respawn_seconds\":\r\n\t{\r\n\t\t\"M5_Contact\": 0,\r\n\t\t\"M5_Harbor\": 0,\r\n\t\t\"M3_LinXia\": 0,\r\n\t\t\"M3_ChenBo\": 0,\r\n\t\t\"M3_ANing\": 0,\r\n\t\t\"VS2_Citizen00\": 0,\r\n\t\t\"VS2_Citizen01\": 0,\r\n\t\t\"VS2_Citizen02\": 0,\r\n\t\t\"VS2_Citizen03\": 0,\r\n\t\t\"VS2_Citizen04\": 0,\r\n\t\t\"VS2_Citizen05\": 0,\r\n\t\t\"VS2_Citizen06\": 0,\r\n\t\t\"VS2_Citizen07\": 0,\r\n\t\t\"VS2_Citizen08\": 0,\r\n\t\t\"VS2_Citizen09\": 0,\r\n\t\t\"VS2_Citizen10\": 0,\r\n\t\t\"VS2_Citizen11\": 0\r\n\t}\r\n}",
+          "elapsed_seconds": 108.29599940031767
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "status": "FAIL",
+          "evidence_level": "B-Action + A travel placement; not continuous route proof",
+          "expected": "Complete; no direct quest mutation",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "elapsed_seconds": 117.11092419922352
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:04:40.0989064+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 26908,
+        "foreground_process": "msedge",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.76
+          },
+          {
+            "Name": "D",
+            "free_GiB": 134.14
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "A_sprint",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_221322",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_221322\\User\\Saved\\M5Tests\\20260929_221325_m5_vs3_r3_b\\results.json",
+      "checks": 284,
+      "failures": 40,
+      "failed_checks": [
+        {
+          "name": "TP_reload_01 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 436.9147733002901
+        },
+        {
+          "name": "TP_reload_01 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 436.98905140161514
+        },
+        {
+          "name": "TP_reload_02 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 445.7786629013717
+        },
+        {
+          "name": "TP_reload_02 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 445.85480070114136
+        },
+        {
+          "name": "TP_reload_03 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 454.65671610087156
+        },
+        {
+          "name": "TP_reload_03 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 454.73444459959865
+        },
+        {
+          "name": "TP_reload_04 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 463.5251123011112
+        },
+        {
+          "name": "TP_reload_04 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 463.605818901211
+        },
+        {
+          "name": "TP_reload_05 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 472.40026719868183
+        },
+        {
+          "name": "TP_reload_05 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 472.4796702004969
+        },
+        {
+          "name": "TP_reload_06 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 481.27508360147476
+        },
+        {
+          "name": "TP_reload_06 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 481.3562251999974
+        },
+        {
+          "name": "TP_reload_07 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 490.1544899009168
+        },
+        {
+          "name": "TP_reload_07 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 490.23603419959545
+        },
+        {
+          "name": "TP_reload_08 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 499.03342359885573
+        },
+        {
+          "name": "TP_reload_08 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 499.11542119830847
+        },
+        {
+          "name": "TP_reload_09 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 507.9218987002969
+        },
+        {
+          "name": "TP_reload_09 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 508.0058878995478
+        },
+        {
+          "name": "TP_reload_10 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 516.8052470013499
+        },
+        {
+          "name": "TP_reload_10 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 516.8902505002916
+        },
+        {
+          "name": "FP_reload_01 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 952.3216032981873
+        },
+        {
+          "name": "FP_reload_01 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 952.4786765016615
+        },
+        {
+          "name": "FP_reload_02 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 961.3475832007825
+        },
+        {
+          "name": "FP_reload_02 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 961.5043626986444
+        },
+        {
+          "name": "FP_reload_03 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 970.380826100707
+        },
+        {
+          "name": "FP_reload_03 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 970.5382505990565
+        },
+        {
+          "name": "FP_reload_04 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 979.4098405987024
+        },
+        {
+          "name": "FP_reload_04 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 979.5694788992405
+        },
+        {
+          "name": "FP_reload_05 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 988.4405010007322
+        },
+        {
+          "name": "FP_reload_05 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 988.6034376993775
+        },
+        {
+          "name": "FP_reload_06 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 997.4789647012949
+        },
+        {
+          "name": "FP_reload_06 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 997.6422067992389
+        },
+        {
+          "name": "FP_reload_07 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1006.5203195996583
+        },
+        {
+          "name": "FP_reload_07 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1006.7021997980773
+        },
+        {
+          "name": "FP_reload_08 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1015.577276699245
+        },
+        {
+          "name": "FP_reload_08 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1015.7484694980085
+        },
+        {
+          "name": "FP_reload_09 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1024.634501401335
+        },
+        {
+          "name": "FP_reload_09 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1024.8027454987168
+        },
+        {
+          "name": "FP_reload_10 persistent sprint and resume",
+          "status": "FAIL",
+          "evidence_level": "B normal actions; A per-frame velocity, no synthetic velocity",
+          "expected": "sprint stays true, recovery<=.2s",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1033.6670227013528
+        },
+        {
+          "name": "FP_reload_10 action speed",
+          "status": "FAIL",
+          "evidence_level": "B gameplay actions",
+          "expected": "melee552.5 hip650 ADS/cast/reload400; heavy accelerates from200",
+          "actual": "min=339999995214436424907732413799364296704.000 recovery=-1.00000 sprint=1 hits=0 shots=0 frames=0 charge_min=339999995214436424907732413799364296704.000",
+          "elapsed_seconds": 1033.8357420004904
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:13:22.6329832+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.54
+          },
+          {
+            "Name": "D",
+            "free_GiB": 134.09
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "A_R5_regression",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_223042",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_223042\\User\\Saved\\M5Tests\\20260929_223045_m5_vs3_r3_b\\results.json",
+      "checks": 328,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:30:42.4602134+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.54
+          },
+          {
+            "Name": "D",
+            "free_GiB": 134.08
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "D_fist70cm",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_223913",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_223913\\User\\Saved\\M5Tests\\20260929_223916_m5_vs3_r3_b\\results.json",
+      "checks": 54,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:39:13.5417313+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.53
+          },
+          {
+            "Name": "D",
+            "free_GiB": 134.07
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sword_matrix",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r2_matrix_20260929_224033",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r2_matrix_20260929_224033\\User\\Saved\\M5Tests\\20260929_224036_m5_vs3_r2_matrix\\results.json",
+      "checks": 140,
+      "failures": 1,
+      "failed_checks": [
+        {
+          "name": "Armory catalog defaults",
+          "status": "FAIL",
+          "evidence_level": "A-runtime configuration",
+          "expected": "R3 four data entries; StarTide/Arcane",
+          "actual": "5",
+          "elapsed_seconds": 6.234570201486349
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:40:33.178331+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.53
+          },
+          {
+            "Name": "D",
+            "free_GiB": 134.07
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "hair",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224553",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224553\\User\\Saved\\M5Tests\\20260929_224556_m5_vs3_r3_b\\results.json",
+      "checks": 37,
+      "failures": 10,
+      "failed_checks": [
+        {
+          "name": "r5hairfinal_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=12 sphere_overlap_pct=8.000 max_sphere_overlap_cm=0.7244 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.138 authored_arm_capsules=24",
+          "elapsed_seconds": 28.28790559992194
+        },
+        {
+          "name": "r5hairfinal_30fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=97 sphere_overlap_pct=71.852 max_sphere_overlap_cm=3.3697 center_inside_frames=32 max_center_inside_cm=0.8697 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=1.300 authored_arm_capsules=24",
+          "elapsed_seconds": 35.8609713986516
+        },
+        {
+          "name": "r5hairfinal_30fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=2.8503 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.499 tip_y_end=4.859 authored_arm_capsules=24 max_tip_delta_at1s=8.397 max_tip_delta_end=11.094",
+          "elapsed_seconds": 50.19905989989638
+        },
+        {
+          "name": "r5hairfinal_30fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=3.4805 center_inside_frames=2 max_center_inside_cm=0.3555 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.198 tip_y_end=7.181 authored_arm_capsules=24 max_tip_delta_at1s=14.628 max_tip_delta_end=16.199",
+          "elapsed_seconds": 56.27387659996748
+        },
+        {
+          "name": "r5hairfinal_30fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=88 sphere_overlap_pct=97.778 max_sphere_overlap_cm=4.1006 center_inside_frames=2 max_center_inside_cm=1.6006 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=7.870 tip_y_end=7.468 authored_arm_capsules=24 max_tip_delta_at1s=25.958 max_tip_delta_end=25.410",
+          "elapsed_seconds": 62.3530686981976
+        },
+        {
+          "name": "r5hairfinal_60fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=32 sphere_overlap_pct=10.667 max_sphere_overlap_cm=0.3063 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.185 authored_arm_capsules=24",
+          "elapsed_seconds": 79.38132660090923
+        },
+        {
+          "name": "r5hairfinal_60fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=270 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=201 sphere_overlap_pct=74.444 max_sphere_overlap_cm=3.3972 center_inside_frames=72 max_center_inside_cm=0.8972 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.841 authored_arm_capsules=24",
+          "elapsed_seconds": 86.89564859867096
+        },
+        {
+          "name": "r5hairfinal_60fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=2.9140 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.513 tip_y_end=4.871 authored_arm_capsules=24 max_tip_delta_at1s=8.504 max_tip_delta_end=10.935",
+          "elapsed_seconds": 101.11236939951777
+        },
+        {
+          "name": "r5hairfinal_60fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=3.4145 center_inside_frames=4 max_center_inside_cm=0.2895 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.235 tip_y_end=7.190 authored_arm_capsules=24 max_tip_delta_at1s=14.763 max_tip_delta_end=16.314",
+          "elapsed_seconds": 107.11932510137558
+        },
+        {
+          "name": "r5hairfinal_60fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=178 sphere_overlap_pct=98.889 max_sphere_overlap_cm=3.5113 center_inside_frames=3 max_center_inside_cm=1.0113 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=7.675 tip_y_end=7.482 authored_arm_capsules=24 max_tip_delta_at1s=25.214 max_tip_delta_end=25.006",
+          "elapsed_seconds": 113.13161540031433
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:45:52.9372338+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.5
+          },
+          {
+            "Name": "D",
+            "free_GiB": 134.07
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "FP_peaks",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751\\User\\Saved\\M5Tests\\20260929_224754_m5_vs3_r3_b\\results.json",
+      "checks": 28,
+      "failures": 1,
+      "failed_checks": [
+        {
+          "name": "Arrow_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=28.6019 control=0.1441 frames=33 simulation_seconds=1.1000 wall_seconds=1.973",
+          "elapsed_seconds": 38.86986019834876
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:47:51.583129+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.5
+          },
+          {
+            "Name": "D",
+            "free_GiB": 134.06
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "arrow20",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225108",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225108\\User\\Saved\\M5Tests\\20260929_225112_m5_vs3_r3_b\\results.json",
+      "checks": 37,
+      "failures": 1,
+      "failed_checks": [
+        {
+          "name": "Arcane fallback normal shot 2 hit",
+          "status": "FAIL",
+          "evidence_level": "B Attack Action, swept projectile; A standing fixture",
+          "expected": "66.0",
+          "actual": "100.0",
+          "elapsed_seconds": 17.743564799427986
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:51:08.3151291+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.52
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.77
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "R6_hip_control",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225223",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225223\\User\\Saved\\M5Tests\\20260929_225226_m5_vs3_r3_b\\results.json",
+      "checks": 28,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:52:23.2493973+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.52
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.76
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "R5_hip_control",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225312",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225312\\User\\Saved\\M5Tests\\20260929_225316_m5_vs3_r3_b\\results.json",
+      "checks": 28,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:53:11.8571479+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.74
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "ivory",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225402",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225402\\User\\Saved\\M5Tests\\20260929_225405_m5_vs3_r3_b\\results.json",
+      "checks": 9,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:54:02.2642938+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.73
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "perf_high",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\perf_20260929_225435",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\perf_20260929_225435\\User\\Saved\\M5Tests\\20260929_225438_m5_vs2_perf\\results.json",
+      "checks": 16,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:54:34.973625+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.72
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "perf_epic",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\perf_20260929_225656",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\perf_20260929_225656\\User\\Saved\\M5Tests\\20260929_225659_m5_vs2_perf\\results.json",
+      "checks": 16,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:56:56.5781022+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.72
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "review",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231857",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231857\\User\\Saved\\M5Tests\\20260929_231900_m5_vs3_r3_b\\results.json",
+      "checks": 4,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:18:57.0925599+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.26
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "slow",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_232505",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_232505\\User\\Saved\\M5Tests\\20260929_232508_m5_vs3_r3_b\\results.json",
+      "checks": 4,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:25:05.1641353+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.26
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.82
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "cafe",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_232851",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_232851\\User\\Saved\\M5Tests\\20260929_232854_m5_vs3_r3_b\\results.json",
+      "checks": 3,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:28:51.458913+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.26
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.76
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "soak30min",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_233012",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_233012\\User\\Saved\\M5Tests\\20260929_233015_m5_vs3_r3_b\\results.json",
+      "checks": 4,
+      "failures": 1,
+      "failed_checks": [
+        {
+          "name": "R6 continuous30-minute exploration",
+          "status": "FAIL",
+          "evidence_level": "B normal Move/Look navigation, no teleports after warmup; host memory and AC in launcher",
+          "expected": "1800s actual package exploration,>=12 reached route goals",
+          "actual": "wall_seconds=1800.003 goals=0 hitches_gt100ms=0 frames=219486",
+          "elapsed_seconds": 1818.2207079976797
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:30:12.3176184+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.26
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.74
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_01",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225920",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225920\\User\\Saved\\M5Tests\\20260929_225924_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T22:59:19.394201+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.73
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_02",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230118",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230118\\User\\Saved\\M5Tests\\20260929_230121_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:01:18.495243+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.72
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_03",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230316",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230316\\User\\Saved\\M5Tests\\20260929_230319_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:03:16.1677359+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.62
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_04",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230513",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230513\\User\\Saved\\M5Tests\\20260929_230516_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:05:13.8068783+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.96
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_05",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230711",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230711\\User\\Saved\\M5Tests\\20260929_230714_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:07:11.4034136+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_06",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230909",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_230909\\User\\Saved\\M5Tests\\20260929_230912_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:09:09.0232088+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_07",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231106",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231106\\User\\Saved\\M5Tests\\20260929_231109_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:11:06.6933132+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_08",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231304",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231304\\User\\Saved\\M5Tests\\20260929_231307_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:13:04.2752781+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_09",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231502",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231502\\User\\Saved\\M5Tests\\20260929_231504_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:15:01.8424392+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.26
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    },
+    {
+      "job": "sprint_fresh_10",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231659",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231659\\User\\Saved\\M5Tests\\20260929_231702_m5_vs3_r3_b\\results.json",
+      "checks": 32,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_214747_862_494a0410\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T23:16:59.4322944+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 5096,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 74.26
+          },
+          {
+            "Name": "D",
+            "free_GiB": 133.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 188.99
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      }
+    }
+  ]
+}

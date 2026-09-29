@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ventyra_animated.fbx",
+    "bytes": 17383584,
+    "sha256": "BBC28E9C6F820E8152652697A187B020689E49CE9DDF4046E7CB43FE5DAF7A64",
+    "destination": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R6\\Purchased\\Ventyra\\ventyra_animated.fbx",
+    "status": "PASS_LOCAL_COPY",
+    "original_retained": true
+  },
+  {
+    "name": "ventyra_animated.blend",
+    "bytes": 19720429,
+    "sha256": "F6F4677FBA70049CB853F9A3CFA8D6BB085A820AB63A4BFE9DBEFC4EB1583A4E",
+    "destination": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R6\\Purchased\\Ventyra\\ventyra_animated.blend",
+    "status": "PASS_LOCAL_COPY",
+    "original_retained": true
+  },
+  {
+    "name": "ventyra.zip",
+    "bytes": 437017081,
+    "sha256": "4FCAF2AFE3F1A520CE5FB9C953F074577683CEBBC5357B3BECF5811C30B0D30B",
+    "destination": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R6\\Purchased\\Ventyra\\ventyra.zip",
+    "status": "PASS_LOCAL_COPY",
+    "original_retained": true
+  },
+  {
+    "name": "source.zip",
+    "bytes": 14122554,
+    "sha256": "AD51D7530A5B3336D47693012DCA2723806B36A4283F869CA0998335EB7ED87C",
+    "destination": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R6\\Purchased\\Exouch_FPBow\\source.zip",
+    "status": "PASS_LOCAL_COPY",
+    "original_retained": true
+  },
+  {
+    "name": "bowanimations.blend",
+    "bytes": 2150732,
+    "sha256": "6BA379EF0AE8DF99284145B2CC782FDD74DF4297C2855317A2D9B2104B5DAE52",
+    "destination": "E:\\GameDev\\Assets\\HarborCity\\M5_VS3_R6\\Purchased\\Exouch_FPBow\\bowanimations.blend",
+    "status": "PASS_LOCAL_COPY",
+    "original_retained": true
+  }
+]

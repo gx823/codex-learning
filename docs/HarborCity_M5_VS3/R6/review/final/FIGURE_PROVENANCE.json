@@ -1,0 +1,232 @@
+{
+  "rows": [
+    {
+      "figure": "01_sprint_R5_R6.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\M5_VS3_R5_PARTIAL_REVIEW.mp4",
+      "seconds": 4.8,
+      "label": "R5 主片 / 跑剑"
+    },
+    {
+      "figure": "01_sprint_R5_R6.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 8.8,
+      "label": "R6 主片 / 按住冲刺挥剑"
+    },
+    {
+      "figure": "03_cafe_R5_R6.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\M5_VS3_R5_PARTIAL_REVIEW.mp4",
+      "seconds": 166,
+      "label": "R5 / 166s 墙体遮挡"
+    },
+    {
+      "figure": "03_cafe_R5_R6.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 117,
+      "label": "R6 / 门框遮挡仍存在"
+    },
+    {
+      "figure": "03_cafe_R5_R6.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 123,
+      "label": "R6 / 贴墙视野仍未通过"
+    },
+    {
+      "figure": "04_ads_R5_R6.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\M5_VS3_R5_PARTIAL_REVIEW.mp4",
+      "seconds": 72.5,
+      "label": "R5 / 用户指出的瞄准画面"
+    },
+    {
+      "figure": "04_ads_R5_R6.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 139,
+      "label": "R6 / 向右外移后的肩位"
+    },
+    {
+      "figure": "05_shock_frames.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+      "seconds": 121.44,
+      "label": "R5 原始录制 / 121.44s"
+    },
+    {
+      "figure": "05_shock_frames.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+      "seconds": 121.88,
+      "label": "R5 原始录制 / 121.88s"
+    },
+    {
+      "figure": "05_shock_frames.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+      "seconds": 122.1,
+      "label": "R5 原始录制 / 122.10s"
+    },
+    {
+      "figure": "05_shock_frames.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 98.9,
+      "label": "R6 主片 / 98.900s"
+    },
+    {
+      "figure": "05_shock_frames.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 98.967,
+      "label": "R6 主片 / 98.967s"
+    },
+    {
+      "figure": "05_shock_frames.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 99.033,
+      "label": "R6 主片 / 99.033s"
+    },
+    {
+      "figure": "R6_BOW_FP_FULL.png",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 88.5,
+      "label": "Native packaged frame, unmodified content"
+    },
+    {
+      "figure": "R6_ADS_NATIVE.png",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "seconds": 139,
+      "label": "Native packaged frame, unmodified content"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R4 Shipping / 武器库",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_183326\\User\\Saved\\M5Tests\\20260929_183331_m5_vs3_r3_b\\B_Armory.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R5 Shipping / 武器库",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644\\User\\Saved\\M5Tests\\20260929_175647_m5_vs3_r3_b\\B_Armory.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R6 Shipping / 武器库",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225402\\User\\Saved\\M5Tests\\20260929_225405_m5_vs3_r3_b\\B_Armory.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R4 Shipping / 午后第一人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_183326\\User\\Saved\\M5Tests\\20260929_183331_m5_vs3_r3_b\\B_Afternoon_FP.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R5 Shipping / 午后第一人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644\\User\\Saved\\M5Tests\\20260929_175647_m5_vs3_r3_b\\B_Afternoon_FP.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R6 Shipping / 午后第一人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225402\\User\\Saved\\M5Tests\\20260929_225405_m5_vs3_r3_b\\B_Afternoon_FP.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R4 Shipping / 傍晚第三人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_183326\\User\\Saved\\M5Tests\\20260929_183331_m5_vs3_r3_b\\B_Dusk_TP.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R5 Shipping / 傍晚第三人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644\\User\\Saved\\M5Tests\\20260929_175647_m5_vs3_r3_b\\B_Dusk_TP.png"
+    },
+    {
+      "figure": "07_ivory_R4_R5_R6.jpg",
+      "label": "R6 Shipping / 傍晚第三人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_225402\\User\\Saved\\M5Tests\\20260929_225405_m5_vs3_r3_b\\B_Dusk_TP.png"
+    },
+    {
+      "figure": "02_bow_R4_failed_R6.jpg",
+      "label": "R4 failed editor evidence / NOT Shipping",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r3_b_20260928_204902\\User\\Saved\\M5Tests\\20260928_205105_m5_vs3_r3_b\\E_3_FP_draw.png"
+    },
+    {
+      "figure": "02_bow_R4_failed_R6.jpg",
+      "label": "R6 Shipping / initial partial draw",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\review\\R6_BOW_FP_DRAW.png"
+    },
+    {
+      "figure": "02_bow_R6_TP_FP.jpg",
+      "label": "R6 Shipping / TP held bow",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\review\\R6_BOW_TP_DRAW.png"
+    },
+    {
+      "figure": "02_bow_R6_TP_FP.jpg",
+      "label": "R6 Shipping / FP partial draw",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\review\\R6_BOW_FP_DRAW.png"
+    },
+    {
+      "figure": "06_fp_peaks_1.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\StarTide_wave_peak_with.png",
+      "label": "R5 StarTide_wave / 40.16%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_1.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751\\User\\Saved\\M5Tests\\20260929_224754_m5_vs3_r3_b\\StarTide_wave_peak_with.png",
+      "label": "R6 StarTide_wave / 20.14%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_1.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\CrimsonNight_wave_peak_with.png",
+      "label": "R5 CrimsonNight_wave / 37.91%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_1.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751\\User\\Saved\\M5Tests\\20260929_224754_m5_vs3_r3_b\\CrimsonNight_wave_peak_with.png",
+      "label": "R6 CrimsonNight_wave / 20.64%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_1.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\CrimsonNight_slash2_peak_with.png",
+      "label": "R5 CrimsonNight_slash2 / 31.14%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_1.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751\\User\\Saved\\M5Tests\\20260929_224754_m5_vs3_r3_b\\CrimsonNight_slash2_peak_with.png",
+      "label": "R6 CrimsonNight_slash2 / 24.69%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_2.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Arrow_charge_peak_with.png",
+      "label": "R5 Arrow_charge / 0.14%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_2.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751\\User\\Saved\\M5Tests\\20260929_224754_m5_vs3_r3_b\\Arrow_charge_peak_with.png",
+      "label": "R6 Arrow_charge / 28.60%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_2.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Bolt_charge_peak_with.png",
+      "label": "R5 Bolt_charge / 1.20%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_2.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751\\User\\Saved\\M5Tests\\20260929_224754_m5_vs3_r3_b\\Bolt_charge_peak_with.png",
+      "label": "R6 Bolt_charge / 5.17%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_2.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Shock_warning_peak_with.png",
+      "label": "R5 Shock_warning / 2.34%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    },
+    {
+      "figure": "06_fp_peaks_2.jpg",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_224751\\User\\Saved\\M5Tests\\20260929_224754_m5_vs3_r3_b\\Shock_warning_peak_with.png",
+      "label": "R6 Shock_warning / 3.80%",
+      "scope": "Same test fixture, each version own lifetime peak; not the same animation frame or native viewport capture."
+    }
+  ],
+  "limits": "Only native video extraction, image resizing and labels. Apart from the three weapon material camera-equality checks, pairs use different shot moments/cameras and are NOT strict same-camera acceptance. Diagnostic effect comparisons use each version own peak. R4 failed bow is explicitly editor evidence."
+}

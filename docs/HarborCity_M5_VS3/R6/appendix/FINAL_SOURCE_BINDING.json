@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "files": 373,
+  "scope": "All source/config/project files in the package source inventory still match bytes and SHA256; final EXE also matches. Native encryption verifier separately rechecked immutable packaged containers.",
+  "inventory_sha256": "00e34e02cc257662dc78d0fe53921a575be33e1517db800f53337ade08e9568b"
+}

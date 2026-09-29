@@ -1,0 +1,2174 @@
+{
+  "recordings": [
+    {
+      "job": "review",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_231857",
+      "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.mp4",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_231915_6935DE40\\capture.json",
+      "seconds": 182.245049,
+      "actual_capture_fps": 29.987097207782035,
+      "audio": "PASS",
+      "scenes": [
+        {
+          "step": 1,
+          "scene": "M4 R2 await initial game focus",
+          "start": -12.008819200098515,
+          "end": -12.000230997800827
+        },
+        {
+          "step": 2,
+          "scene": "R6 review native warmup",
+          "start": -12.000230997800827,
+          "end": 0.0
+        },
+        {
+          "step": 3,
+          "scene": "R6 recording countdown",
+          "start": 0.0,
+          "end": 6.500083900988102
+        },
+        {
+          "step": 4,
+          "scene": "R6 review normal mode key",
+          "start": 6.500083900988102,
+          "end": 6.566802401095629
+        },
+        {
+          "step": 5,
+          "scene": "R6 review key up",
+          "start": 6.566802401095629,
+          "end": 6.800107602030039
+        },
+        {
+          "step": 6,
+          "scene": "R6 review normal mode key",
+          "start": 6.800107602030039,
+          "end": 6.8667492009699345
+        },
+        {
+          "step": 7,
+          "scene": "R6 review key up",
+          "start": 6.8667492009699345,
+          "end": 7.100141000002623
+        },
+        {
+          "step": 8,
+          "scene": "R6 review normal mode key",
+          "start": 7.100141000002623,
+          "end": 7.166786201298237
+        },
+        {
+          "step": 9,
+          "scene": "R6 review key up",
+          "start": 7.166786201298237,
+          "end": 7.400194600224495
+        },
+        {
+          "step": 10,
+          "scene": "R6 held sprint before action",
+          "start": 7.400194600224495,
+          "end": 8.300346799194813
+        },
+        {
+          "step": 11,
+          "scene": "Attack press",
+          "start": 8.300346799194813,
+          "end": 8.400459300726652
+        },
+        {
+          "step": 12,
+          "scene": "Attack release",
+          "start": 8.400459300726652,
+          "end": 8.866984002292156
+        },
+        {
+          "step": 13,
+          "scene": "Attack press",
+          "start": 8.866984002292156,
+          "end": 8.967051800340414
+        },
+        {
+          "step": 14,
+          "scene": "Attack release",
+          "start": 8.967051800340414,
+          "end": 9.433661099523306
+        },
+        {
+          "step": 15,
+          "scene": "Attack press",
+          "start": 9.433661099523306,
+          "end": 9.533758401870728
+        },
+        {
+          "step": 16,
+          "scene": "Attack release",
+          "start": 9.533758401870728,
+          "end": 10.000429701060057
+        },
+        {
+          "step": 17,
+          "scene": "R6 sprint continues without re-press",
+          "start": 10.000429701060057,
+          "end": 11.20045880228281
+        },
+        {
+          "step": 18,
+          "scene": "R6 release sprint input",
+          "start": 11.20045880228281,
+          "end": 11.65032409876585
+        },
+        {
+          "step": 19,
+          "scene": "R6 review normal mode key",
+          "start": 11.65032409876585,
+          "end": 11.717000100761652
+        },
+        {
+          "step": 20,
+          "scene": "R6 review key up",
+          "start": 11.717000100761652,
+          "end": 11.950340699404478
+        },
+        {
+          "step": 21,
+          "scene": "R6 review normal mode key",
+          "start": 11.950340699404478,
+          "end": 12.017142102122307
+        },
+        {
+          "step": 22,
+          "scene": "R6 review key up",
+          "start": 12.017142102122307,
+          "end": 12.250348400324583
+        },
+        {
+          "step": 23,
+          "scene": "R6 review normal mode key",
+          "start": 12.250348400324583,
+          "end": 12.317047100514174
+        },
+        {
+          "step": 24,
+          "scene": "R6 review key up",
+          "start": 12.317047100514174,
+          "end": 12.550566300749779
+        },
+        {
+          "step": 25,
+          "scene": "R6 held sprint before action",
+          "start": 12.550566300749779,
+          "end": 13.450529299676418
+        },
+        {
+          "step": 26,
+          "scene": "Attack press",
+          "start": 13.450529299676418,
+          "end": 13.550441902130842
+        },
+        {
+          "step": 27,
+          "scene": "Attack release",
+          "start": 13.550441902130842,
+          "end": 14.017291702330112
+        },
+        {
+          "step": 28,
+          "scene": "Attack press",
+          "start": 14.017291702330112,
+          "end": 14.117154698818922
+        },
+        {
+          "step": 29,
+          "scene": "Attack release",
+          "start": 14.117154698818922,
+          "end": 14.583935901522636
+        },
+        {
+          "step": 30,
+          "scene": "Attack press",
+          "start": 14.583935901522636,
+          "end": 14.683971099555492
+        },
+        {
+          "step": 31,
+          "scene": "Attack release",
+          "start": 14.683971099555492,
+          "end": 15.150481801480055
+        },
+        {
+          "step": 32,
+          "scene": "R6 sprint continues without re-press",
+          "start": 15.150481801480055,
+          "end": 16.350461300462484
+        },
+        {
+          "step": 33,
+          "scene": "R6 release sprint input",
+          "start": 16.350461300462484,
+          "end": 16.800479900091887
+        },
+        {
+          "step": 34,
+          "scene": "R6 review catalog selection",
+          "start": 16.800479900091887,
+          "end": 17.4569053016603
+        },
+        {
+          "step": 35,
+          "scene": "R6 review normal mode key",
+          "start": 17.4569053016603,
+          "end": 17.523337598890066
+        },
+        {
+          "step": 36,
+          "scene": "R6 review key up",
+          "start": 17.523337598890066,
+          "end": 17.757079400122166
+        },
+        {
+          "step": 37,
+          "scene": "R6 review normal mode key",
+          "start": 17.757079400122166,
+          "end": 17.823706600815058
+        },
+        {
+          "step": 38,
+          "scene": "R6 review key up",
+          "start": 17.823706600815058,
+          "end": 18.05701170116663
+        },
+        {
+          "step": 39,
+          "scene": "R6 review normal mode key",
+          "start": 18.05701170116663,
+          "end": 18.123621098697186
+        },
+        {
+          "step": 40,
+          "scene": "R6 review key up",
+          "start": 18.123621098697186,
+          "end": 18.356977701187134
+        },
+        {
+          "step": 41,
+          "scene": "R6 held sprint before action",
+          "start": 18.356977701187134,
+          "end": 19.257166601717472
+        },
+        {
+          "step": 42,
+          "scene": "Attack press",
+          "start": 19.257166601717472,
+          "end": 19.35700000077486
+        },
+        {
+          "step": 43,
+          "scene": "Attack release",
+          "start": 19.35700000077486,
+          "end": 19.823682099580765
+        },
+        {
+          "step": 44,
+          "scene": "Attack press",
+          "start": 19.823682099580765,
+          "end": 19.923667199909687
+        },
+        {
+          "step": 45,
+          "scene": "Attack release",
+          "start": 19.923667199909687,
+          "end": 20.39038709923625
+        },
+        {
+          "step": 46,
+          "scene": "Attack press",
+          "start": 20.39038709923625,
+          "end": 20.490291200578213
+        },
+        {
+          "step": 47,
+          "scene": "Attack release",
+          "start": 20.490291200578213,
+          "end": 20.957005601376295
+        },
+        {
+          "step": 48,
+          "scene": "R6 sprint continues without re-press",
+          "start": 20.957005601376295,
+          "end": 22.157047301530838
+        },
+        {
+          "step": 49,
+          "scene": "R6 release sprint input",
+          "start": 22.157047301530838,
+          "end": 22.606990698724985
+        },
+        {
+          "step": 50,
+          "scene": "R6 review catalog selection",
+          "start": 22.606990698724985,
+          "end": 23.257005099207163
+        },
+        {
+          "step": 51,
+          "scene": "R6 review normal mode key",
+          "start": 23.257005099207163,
+          "end": 23.323643900454044
+        },
+        {
+          "step": 52,
+          "scene": "R6 review key up",
+          "start": 23.323643900454044,
+          "end": 23.55698750168085
+        },
+        {
+          "step": 53,
+          "scene": "R6 review normal mode key",
+          "start": 23.55698750168085,
+          "end": 23.623707201331854
+        },
+        {
+          "step": 54,
+          "scene": "R6 review key up",
+          "start": 23.623707201331854,
+          "end": 23.857499200850725
+        },
+        {
+          "step": 55,
+          "scene": "R6 review normal mode key",
+          "start": 23.857499200850725,
+          "end": 23.923949401825666
+        },
+        {
+          "step": 56,
+          "scene": "R6 review key up",
+          "start": 23.923949401825666,
+          "end": 24.157370001077652
+        },
+        {
+          "step": 57,
+          "scene": "R6 held sprint before action",
+          "start": 24.157370001077652,
+          "end": 25.057362899184227
+        },
+        {
+          "step": 58,
+          "scene": "R6 ADS held in sprint",
+          "start": 25.057362899184227,
+          "end": 26.057402901351452
+        },
+        {
+          "step": 59,
+          "scene": "R6 sprint continues without re-press",
+          "start": 26.057402901351452,
+          "end": 27.25740920007229
+        },
+        {
+          "step": 60,
+          "scene": "R6 release sprint input",
+          "start": 27.25740920007229,
+          "end": 27.707421101629734
+        },
+        {
+          "step": 61,
+          "scene": "R6 review catalog selection",
+          "start": 27.707421101629734,
+          "end": 28.357420701533556
+        },
+        {
+          "step": 62,
+          "scene": "R6 review normal mode key",
+          "start": 28.357420701533556,
+          "end": 28.424042999744415
+        },
+        {
+          "step": 63,
+          "scene": "R6 review key up",
+          "start": 28.424042999744415,
+          "end": 28.657510600984097
+        },
+        {
+          "step": 64,
+          "scene": "R6 review normal mode key",
+          "start": 28.657510600984097,
+          "end": 28.724097602069378
+        },
+        {
+          "step": 65,
+          "scene": "R6 review key up",
+          "start": 28.724097602069378,
+          "end": 28.957743000239134
+        },
+        {
+          "step": 66,
+          "scene": "R6 review normal mode key",
+          "start": 28.957743000239134,
+          "end": 29.02405120059848
+        },
+        {
+          "step": 67,
+          "scene": "R6 review key up",
+          "start": 29.02405120059848,
+          "end": 29.257412999868393
+        },
+        {
+          "step": 68,
+          "scene": "R6 held sprint before action",
+          "start": 29.257412999868393,
+          "end": 30.157678801566362
+        },
+        {
+          "step": 69,
+          "scene": "Spell1 press",
+          "start": 30.157678801566362,
+          "end": 30.25758669897914
+        },
+        {
+          "step": 70,
+          "scene": "Spell1 release",
+          "start": 30.25758669897914,
+          "end": 30.507558800280094
+        },
+        {
+          "step": 71,
+          "scene": "R6 real draw",
+          "start": 30.507558800280094,
+          "end": 31.007529601454735
+        },
+        {
+          "step": 72,
+          "scene": "R6 projectile impact and recovery",
+          "start": 31.007529601454735,
+          "end": 31.507497299462557
+        },
+        {
+          "step": 73,
+          "scene": "R6 sprint continues without re-press",
+          "start": 31.507497299462557,
+          "end": 32.707574900239706
+        },
+        {
+          "step": 74,
+          "scene": "R6 release sprint input",
+          "start": 32.707574900239706,
+          "end": 33.15781209990382
+        },
+        {
+          "step": 75,
+          "scene": "R6 FP review normal camera",
+          "start": 33.15781209990382,
+          "end": 33.45767730101943
+        },
+        {
+          "step": 76,
+          "scene": "Perspective press",
+          "start": 33.45767730101943,
+          "end": 33.55782460048795
+        },
+        {
+          "step": 77,
+          "scene": "Perspective release",
+          "start": 33.55782460048795,
+          "end": 34.16270760074258
+        },
+        {
+          "step": 78,
+          "scene": "R6 review normal mode key",
+          "start": 34.16270760074258,
+          "end": 34.22945950180292
+        },
+        {
+          "step": 79,
+          "scene": "R6 review key up",
+          "start": 34.22945950180292,
+          "end": 34.462719298899174
+        },
+        {
+          "step": 80,
+          "scene": "R6 review normal mode key",
+          "start": 34.462719298899174,
+          "end": 34.52942689880729
+        },
+        {
+          "step": 81,
+          "scene": "R6 review key up",
+          "start": 34.52942689880729,
+          "end": 34.76282900199294
+        },
+        {
+          "step": 82,
+          "scene": "R6 review normal mode key",
+          "start": 34.76282900199294,
+          "end": 34.82949310168624
+        },
+        {
+          "step": 83,
+          "scene": "R6 review key up",
+          "start": 34.82949310168624,
+          "end": 35.06278629973531
+        },
+        {
+          "step": 84,
+          "scene": "R6 held sprint before action",
+          "start": 35.06278629973531,
+          "end": 35.962857600301504
+        },
+        {
+          "step": 85,
+          "scene": "Attack press",
+          "start": 35.962857600301504,
+          "end": 36.06302670016885
+        },
+        {
+          "step": 86,
+          "scene": "Attack release",
+          "start": 36.06302670016885,
+          "end": 36.52955820038915
+        },
+        {
+          "step": 87,
+          "scene": "Attack press",
+          "start": 36.52955820038915,
+          "end": 36.62966030091047
+        },
+        {
+          "step": 88,
+          "scene": "Attack release",
+          "start": 36.62966030091047,
+          "end": 37.09618439897895
+        },
+        {
+          "step": 89,
+          "scene": "Attack press",
+          "start": 37.09618439897895,
+          "end": 37.19620480015874
+        },
+        {
+          "step": 90,
+          "scene": "Attack release",
+          "start": 37.19620480015874,
+          "end": 37.662964299321175
+        },
+        {
+          "step": 91,
+          "scene": "R6 sprint continues without re-press",
+          "start": 37.662964299321175,
+          "end": 38.863003600388765
+        },
+        {
+          "step": 92,
+          "scene": "R6 release sprint input",
+          "start": 38.863003600388765,
+          "end": 39.31290680170059
+        },
+        {
+          "step": 93,
+          "scene": "R6 review normal mode key",
+          "start": 39.31290680170059,
+          "end": 39.37964620068669
+        },
+        {
+          "step": 94,
+          "scene": "R6 review key up",
+          "start": 39.37964620068669,
+          "end": 39.61298060044646
+        },
+        {
+          "step": 95,
+          "scene": "R6 review normal mode key",
+          "start": 39.61298060044646,
+          "end": 39.67967680096626
+        },
+        {
+          "step": 96,
+          "scene": "R6 review key up",
+          "start": 39.67967680096626,
+          "end": 39.91292190179229
+        },
+        {
+          "step": 97,
+          "scene": "R6 review normal mode key",
+          "start": 39.91292190179229,
+          "end": 39.97961210086942
+        },
+        {
+          "step": 98,
+          "scene": "R6 review key up",
+          "start": 39.97961210086942,
+          "end": 40.212960701435804
+        },
+        {
+          "step": 99,
+          "scene": "R6 held sprint before action",
+          "start": 40.212960701435804,
+          "end": 41.113108798861504
+        },
+        {
+          "step": 100,
+          "scene": "Attack press",
+          "start": 41.113108798861504,
+          "end": 41.213510401546955
+        },
+        {
+          "step": 101,
+          "scene": "Attack release",
+          "start": 41.213510401546955,
+          "end": 41.67968260124326
+        },
+        {
+          "step": 102,
+          "scene": "Attack press",
+          "start": 41.67968260124326,
+          "end": 41.77971890196204
+        },
+        {
+          "step": 103,
+          "scene": "Attack release",
+          "start": 41.77971890196204,
+          "end": 42.24639629945159
+        },
+        {
+          "step": 104,
+          "scene": "Attack press",
+          "start": 42.24639629945159,
+          "end": 42.34637809917331
+        },
+        {
+          "step": 105,
+          "scene": "Attack release",
+          "start": 42.34637809917331,
+          "end": 42.813057102262974
+        },
+        {
+          "step": 106,
+          "scene": "R6 sprint continues without re-press",
+          "start": 42.813057102262974,
+          "end": 44.01309920102358
+        },
+        {
+          "step": 107,
+          "scene": "R6 release sprint input",
+          "start": 44.01309920102358,
+          "end": 44.46316049993038
+        },
+        {
+          "step": 108,
+          "scene": "R6 review catalog selection",
+          "start": 44.46316049993038,
+          "end": 45.11304010078311
+        },
+        {
+          "step": 109,
+          "scene": "R6 review normal mode key",
+          "start": 45.11304010078311,
+          "end": 45.1797623001039
+        },
+        {
+          "step": 110,
+          "scene": "R6 review key up",
+          "start": 45.1797623001039,
+          "end": 45.41310120001435
+        },
+        {
+          "step": 111,
+          "scene": "R6 review normal mode key",
+          "start": 45.41310120001435,
+          "end": 45.47974060103297
+        },
+        {
+          "step": 112,
+          "scene": "R6 review key up",
+          "start": 45.47974060103297,
+          "end": 45.7130615003407
+        },
+        {
+          "step": 113,
+          "scene": "R6 review normal mode key",
+          "start": 45.7130615003407,
+          "end": 45.77970129996538
+        },
+        {
+          "step": 114,
+          "scene": "R6 review key up",
+          "start": 45.77970129996538,
+          "end": 46.012999299913645
+        },
+        {
+          "step": 115,
+          "scene": "R6 held sprint before action",
+          "start": 46.012999299913645,
+          "end": 46.913171000778675
+        },
+        {
+          "step": 116,
+          "scene": "Attack press",
+          "start": 46.913171000778675,
+          "end": 47.01308650150895
+        },
+        {
+          "step": 117,
+          "scene": "Attack release",
+          "start": 47.01308650150895,
+          "end": 47.47980419918895
+        },
+        {
+          "step": 118,
+          "scene": "Attack press",
+          "start": 47.47980419918895,
+          "end": 47.57981609925628
+        },
+        {
+          "step": 119,
+          "scene": "Attack release",
+          "start": 47.57981609925628,
+          "end": 48.04658010229468
+        },
+        {
+          "step": 120,
+          "scene": "Attack press",
+          "start": 48.04658010229468,
+          "end": 48.14650009945035
+        },
+        {
+          "step": 121,
+          "scene": "Attack release",
+          "start": 48.14650009945035,
+          "end": 48.61321510002017
+        },
+        {
+          "step": 122,
+          "scene": "R6 sprint continues without re-press",
+          "start": 48.61321510002017,
+          "end": 49.81320809945464
+        },
+        {
+          "step": 123,
+          "scene": "R6 release sprint input",
+          "start": 49.81320809945464,
+          "end": 50.26330300047994
+        },
+        {
+          "step": 124,
+          "scene": "R6 review catalog selection",
+          "start": 50.26330300047994,
+          "end": 50.913301799446344
+        },
+        {
+          "step": 125,
+          "scene": "R6 review normal mode key",
+          "start": 50.913301799446344,
+          "end": 50.97988019883633
+        },
+        {
+          "step": 126,
+          "scene": "R6 review key up",
+          "start": 50.97988019883633,
+          "end": 51.21327029913664
+        },
+        {
+          "step": 127,
+          "scene": "R6 review normal mode key",
+          "start": 51.21327029913664,
+          "end": 51.27997200191021
+        },
+        {
+          "step": 128,
+          "scene": "R6 review key up",
+          "start": 51.27997200191021,
+          "end": 51.513246800750494
+        },
+        {
+          "step": 129,
+          "scene": "R6 review normal mode key",
+          "start": 51.513246800750494,
+          "end": 51.58006040006876
+        },
+        {
+          "step": 130,
+          "scene": "R6 review key up",
+          "start": 51.58006040006876,
+          "end": 51.813263300806284
+        },
+        {
+          "step": 131,
+          "scene": "R6 held sprint before action",
+          "start": 51.813263300806284,
+          "end": 52.71332269906998
+        },
+        {
+          "step": 132,
+          "scene": "R6 ADS held in sprint",
+          "start": 52.71332269906998,
+          "end": 53.713495802134275
+        },
+        {
+          "step": 133,
+          "scene": "R6 sprint continues without re-press",
+          "start": 53.713495802134275,
+          "end": 54.91350819915533
+        },
+        {
+          "step": 134,
+          "scene": "R6 release sprint input",
+          "start": 54.91350819915533,
+          "end": 55.3634776994586
+        },
+        {
+          "step": 135,
+          "scene": "R6 review catalog selection",
+          "start": 55.3634776994586,
+          "end": 56.013410199433565
+        },
+        {
+          "step": 136,
+          "scene": "R6 review normal mode key",
+          "start": 56.013410199433565,
+          "end": 56.08008420094848
+        },
+        {
+          "step": 137,
+          "scene": "R6 review key up",
+          "start": 56.08008420094848,
+          "end": 56.3134238012135
+        },
+        {
+          "step": 138,
+          "scene": "R6 review normal mode key",
+          "start": 56.3134238012135,
+          "end": 56.38009610027075
+        },
+        {
+          "step": 139,
+          "scene": "R6 review key up",
+          "start": 56.38009610027075,
+          "end": 56.61342940106988
+        },
+        {
+          "step": 140,
+          "scene": "R6 review normal mode key",
+          "start": 56.61342940106988,
+          "end": 56.68009750172496
+        },
+        {
+          "step": 141,
+          "scene": "R6 review key up",
+          "start": 56.68009750172496,
+          "end": 56.913433499634266
+        },
+        {
+          "step": 142,
+          "scene": "R6 held sprint before action",
+          "start": 56.913433499634266,
+          "end": 57.81358389928937
+        },
+        {
+          "step": 143,
+          "scene": "Spell1 press",
+          "start": 57.81358389928937,
+          "end": 57.91365519911051
+        },
+        {
+          "step": 144,
+          "scene": "Spell1 release",
+          "start": 57.91365519911051,
+          "end": 58.16352039948106
+        },
+        {
+          "step": 145,
+          "scene": "R6 real draw",
+          "start": 58.16352039948106,
+          "end": 58.663600001484156
+        },
+        {
+          "step": 146,
+          "scene": "R6 projectile impact and recovery",
+          "start": 58.663600001484156,
+          "end": 59.16359730064869
+        },
+        {
+          "step": 147,
+          "scene": "R6 sprint continues without re-press",
+          "start": 59.16359730064869,
+          "end": 60.36385330185294
+        },
+        {
+          "step": 148,
+          "scene": "R6 release sprint input",
+          "start": 60.36385330185294,
+          "end": 60.81384190171957
+        },
+        {
+          "step": 149,
+          "scene": "Perspective press",
+          "start": 60.81384190171957,
+          "end": 60.913817301392555
+        },
+        {
+          "step": 150,
+          "scene": "Perspective release",
+          "start": 60.913817301392555,
+          "end": 61.41376319900155
+        },
+        {
+          "step": 151,
+          "scene": "R6 review normal mode key",
+          "start": 61.41376319900155,
+          "end": 61.48051239922643
+        },
+        {
+          "step": 152,
+          "scene": "R6 review key up",
+          "start": 61.48051239922643,
+          "end": 61.71403869986534
+        },
+        {
+          "step": 153,
+          "scene": "R6 review normal mode key",
+          "start": 61.71403869986534,
+          "end": 61.78050919994712
+        },
+        {
+          "step": 154,
+          "scene": "R6 review key up",
+          "start": 61.78050919994712,
+          "end": 62.01391340047121
+        },
+        {
+          "step": 155,
+          "scene": "R6 review normal mode key",
+          "start": 62.01391340047121,
+          "end": 62.080535899847746
+        },
+        {
+          "step": 156,
+          "scene": "R6 review key up",
+          "start": 62.080535899847746,
+          "end": 62.3138042986393
+        },
+        {
+          "step": 157,
+          "scene": "R6 run and jump attack fixture",
+          "start": 62.3138042986393,
+          "end": 63.31387669965625
+        },
+        {
+          "step": 158,
+          "scene": "R6 ordinary running",
+          "start": 63.31387669965625,
+          "end": 64.11387160047889
+        },
+        {
+          "step": 159,
+          "scene": "Attack press",
+          "start": 64.11387160047889,
+          "end": 64.21392910182476
+        },
+        {
+          "step": 160,
+          "scene": "Attack release",
+          "start": 64.21392910182476,
+          "end": 64.71397640183568
+        },
+        {
+          "step": 161,
+          "scene": "Jump press",
+          "start": 64.71397640183568,
+          "end": 64.81430549919605
+        },
+        {
+          "step": 162,
+          "scene": "Jump release",
+          "start": 64.81430549919605,
+          "end": 64.91394330188632
+        },
+        {
+          "step": 163,
+          "scene": "Attack press",
+          "start": 64.91394330188632,
+          "end": 65.01409300044179
+        },
+        {
+          "step": 164,
+          "scene": "Attack release",
+          "start": 65.01409300044179,
+          "end": 65.29756719991565
+        },
+        {
+          "step": 165,
+          "scene": "Attack press",
+          "start": 65.29756719991565,
+          "end": 65.39746310189366
+        },
+        {
+          "step": 166,
+          "scene": "Attack release",
+          "start": 65.39746310189366,
+          "end": 66.19744360074401
+        },
+        {
+          "step": 167,
+          "scene": "R6 landing",
+          "start": 66.19744360074401,
+          "end": 67.39748360216618
+        },
+        {
+          "step": 168,
+          "scene": "R6 review catalog selection",
+          "start": 67.39748360216618,
+          "end": 68.04768339917064
+        },
+        {
+          "step": 169,
+          "scene": "R6 review normal mode key",
+          "start": 68.04768339917064,
+          "end": 68.11406330019236
+        },
+        {
+          "step": 170,
+          "scene": "R6 review key up",
+          "start": 68.11406330019236,
+          "end": 68.34743950143456
+        },
+        {
+          "step": 171,
+          "scene": "R6 review normal mode key",
+          "start": 68.34743950143456,
+          "end": 68.41411190107465
+        },
+        {
+          "step": 172,
+          "scene": "R6 review key up",
+          "start": 68.41411190107465,
+          "end": 68.64742280170321
+        },
+        {
+          "step": 173,
+          "scene": "R6 review normal mode key",
+          "start": 68.64742280170321,
+          "end": 68.71404379978776
+        },
+        {
+          "step": 174,
+          "scene": "R6 review key up",
+          "start": 68.71404379978776,
+          "end": 68.94737970083952
+        },
+        {
+          "step": 175,
+          "scene": "R6 bow scene reset",
+          "start": 68.94737970083952,
+          "end": 69.74758300185204
+        },
+        {
+          "step": 176,
+          "scene": "R6 bow perspective release",
+          "start": 69.74758300185204,
+          "end": 70.14777250215411
+        },
+        {
+          "step": 177,
+          "scene": "R6 bow steady aim",
+          "start": 70.14777250215411,
+          "end": 70.64741269871593
+        },
+        {
+          "step": 178,
+          "scene": "R6 bow locomotion",
+          "start": 70.64741269871593,
+          "end": 70.997568000108
+        },
+        {
+          "step": 179,
+          "scene": "R6 real draw",
+          "start": 70.997568000108,
+          "end": 71.54748380184174
+        },
+        {
+          "step": 180,
+          "scene": "R6 projectile impact and recovery",
+          "start": 71.54748380184174,
+          "end": 72.94755329936743
+        },
+        {
+          "step": 181,
+          "scene": "R6 bow locomotion up",
+          "start": 72.94755329936743,
+          "end": 73.44750399887562
+        },
+        {
+          "step": 182,
+          "scene": "R6 bow steady aim",
+          "start": 73.44750399887562,
+          "end": 73.94754629954696
+        },
+        {
+          "step": 183,
+          "scene": "R6 bow locomotion",
+          "start": 73.94754629954696,
+          "end": 74.29759380221367
+        },
+        {
+          "step": 184,
+          "scene": "R6 real draw",
+          "start": 74.29759380221367,
+          "end": 76.09759100154042
+        },
+        {
+          "step": 185,
+          "scene": "R6 projectile impact and recovery",
+          "start": 76.09759100154042,
+          "end": 77.49769930168986
+        },
+        {
+          "step": 186,
+          "scene": "R6 bow locomotion up",
+          "start": 77.49769930168986,
+          "end": 77.997583899647
+        },
+        {
+          "step": 187,
+          "scene": "R6 bow steady aim",
+          "start": 77.997583899647,
+          "end": 78.49770750105381
+        },
+        {
+          "step": 188,
+          "scene": "R6 bow locomotion",
+          "start": 78.49770750105381,
+          "end": 78.8476934991777
+        },
+        {
+          "step": 189,
+          "scene": "R6 real draw",
+          "start": 78.8476934991777,
+          "end": 80.6520805992186
+        },
+        {
+          "step": 190,
+          "scene": "R6 projectile impact and recovery",
+          "start": 80.6520805992186,
+          "end": 82.05206460133195
+        },
+        {
+          "step": 191,
+          "scene": "R6 bow locomotion up",
+          "start": 82.05206460133195,
+          "end": 82.55228070169687
+        },
+        {
+          "step": 192,
+          "scene": "R6 bow scene reset",
+          "start": 82.55228070169687,
+          "end": 83.35202050209045
+        },
+        {
+          "step": 193,
+          "scene": "R6 bow perspective release",
+          "start": 83.35202050209045,
+          "end": 83.75202789902687
+        },
+        {
+          "step": 194,
+          "scene": "R6 bow steady aim",
+          "start": 83.75202789902687,
+          "end": 84.25209990143776
+        },
+        {
+          "step": 195,
+          "scene": "R6 real draw",
+          "start": 84.25209990143776,
+          "end": 84.80216800048947
+        },
+        {
+          "step": 196,
+          "scene": "R6 projectile impact and recovery",
+          "start": 84.80216800048947,
+          "end": 86.20211470127106
+        },
+        {
+          "step": 197,
+          "scene": "R6 bow locomotion up",
+          "start": 86.20211470127106,
+          "end": 86.70223649963737
+        },
+        {
+          "step": 198,
+          "scene": "R6 bow steady aim",
+          "start": 86.70223649963737,
+          "end": 87.20214179903269
+        },
+        {
+          "step": 199,
+          "scene": "R6 real draw",
+          "start": 87.20214179903269,
+          "end": 89.00215810164809
+        },
+        {
+          "step": 200,
+          "scene": "R6 projectile impact and recovery",
+          "start": 89.00215810164809,
+          "end": 90.40220830217004
+        },
+        {
+          "step": 201,
+          "scene": "R6 bow locomotion up",
+          "start": 90.40220830217004,
+          "end": 90.90227160230279
+        },
+        {
+          "step": 202,
+          "scene": "R6 bow steady aim",
+          "start": 90.90227160230279,
+          "end": 91.40220410004258
+        },
+        {
+          "step": 203,
+          "scene": "R6 real draw",
+          "start": 91.40220410004258,
+          "end": 93.2023104019463
+        },
+        {
+          "step": 204,
+          "scene": "R6 projectile impact and recovery",
+          "start": 93.2023104019463,
+          "end": 94.602279599756
+        },
+        {
+          "step": 205,
+          "scene": "R6 bow locomotion up",
+          "start": 94.602279599756,
+          "end": 95.10233910009265
+        },
+        {
+          "step": 206,
+          "scene": "Perspective press",
+          "start": 95.10233910009265,
+          "end": 95.20260529965162
+        },
+        {
+          "step": 207,
+          "scene": "Perspective release",
+          "start": 95.20260529965162,
+          "end": 95.7023469991982
+        },
+        {
+          "step": 208,
+          "scene": "R6 ground group exact camera ray",
+          "start": 95.7023469991982,
+          "end": 96.70241260156035
+        },
+        {
+          "step": 209,
+          "scene": "R6 settled ground projection",
+          "start": 96.70241260156035,
+          "end": 97.2023973017931
+        },
+        {
+          "step": 210,
+          "scene": "R6 final ground aim after camera shift",
+          "start": 97.2023973017931,
+          "end": 97.7024510987103
+        },
+        {
+          "step": 211,
+          "scene": "Spell2 press",
+          "start": 97.7024510987103,
+          "end": 97.8025572001934
+        },
+        {
+          "step": 212,
+          "scene": "Spell2 release",
+          "start": 97.8025572001934,
+          "end": 98.10257760062814
+        },
+        {
+          "step": 213,
+          "scene": "R6 real draw",
+          "start": 98.10257760062814,
+          "end": 98.90256740152836
+        },
+        {
+          "step": 214,
+          "scene": "R6 projectile impact and recovery",
+          "start": 98.90256740152836,
+          "end": 100.90255929902196
+        },
+        {
+          "step": 215,
+          "scene": "R6 shock two-target actual result",
+          "start": 100.90255929902196,
+          "end": 101.10851829871535
+        },
+        {
+          "step": 216,
+          "scene": "R6 health prerequisite for visible heal",
+          "start": 101.10851829871535,
+          "end": 102.10851779952645
+        },
+        {
+          "step": 217,
+          "scene": "Spell3 press",
+          "start": 102.10851779952645,
+          "end": 102.20871049910784
+        },
+        {
+          "step": 218,
+          "scene": "Spell3 release",
+          "start": 102.20871049910784,
+          "end": 107.20997070148587
+        },
+        {
+          "step": 219,
+          "scene": "R6 cafe approach regular collision camera",
+          "start": 107.20997070148587,
+          "end": 109.2144977003336
+        },
+        {
+          "step": 220,
+          "scene": "R6 cafe walk through doorway",
+          "start": 109.2144977003336,
+          "end": 111.21453090012074
+        },
+        {
+          "step": 221,
+          "scene": "R6 cafe inside full turn",
+          "start": 111.21453090012074,
+          "end": 121.21468029916286
+        },
+        {
+          "step": 222,
+          "scene": "R6 cafe near-wall turn",
+          "start": 121.21468029916286,
+          "end": 123.21464269980788
+        },
+        {
+          "step": 223,
+          "scene": "R6 cafe camera collision settle",
+          "start": 123.21464269980788,
+          "end": 127.21494730189443
+        },
+        {
+          "step": 224,
+          "scene": "R6 review normal mode key",
+          "start": 127.21494730189443,
+          "end": 127.28154220059514
+        },
+        {
+          "step": 225,
+          "scene": "R6 review key up",
+          "start": 127.28154220059514,
+          "end": 127.51497570052743
+        },
+        {
+          "step": 226,
+          "scene": "R6 review normal mode key",
+          "start": 127.51497570052743,
+          "end": 127.58149100095034
+        },
+        {
+          "step": 227,
+          "scene": "R6 review key up",
+          "start": 127.58149100095034,
+          "end": 127.81492120027542
+        },
+        {
+          "step": 228,
+          "scene": "R6 review normal mode key",
+          "start": 127.81492120027542,
+          "end": 127.8815466016531
+        },
+        {
+          "step": 229,
+          "scene": "R6 review key up",
+          "start": 127.8815466016531,
+          "end": 128.11493800207973
+        },
+        {
+          "step": 230,
+          "scene": "R6 first-person wave review",
+          "start": 128.11493800207973,
+          "end": 129.1149079017341
+        },
+        {
+          "step": 231,
+          "scene": "Perspective press",
+          "start": 129.1149079017341,
+          "end": 129.2149582989514
+        },
+        {
+          "step": 232,
+          "scene": "Perspective release",
+          "start": 129.2149582989514,
+          "end": 129.71492470055819
+        },
+        {
+          "step": 233,
+          "scene": "R6 real draw",
+          "start": 129.71492470055819,
+          "end": 130.56494170054793
+        },
+        {
+          "step": 234,
+          "scene": "R6 projectile impact and recovery",
+          "start": 130.56494170054793,
+          "end": 133.56515699997544
+        },
+        {
+          "step": 235,
+          "scene": "Perspective press",
+          "start": 133.56515699997544,
+          "end": 133.66524669900537
+        },
+        {
+          "step": 236,
+          "scene": "Perspective release",
+          "start": 133.66524669900537,
+          "end": 134.16515729948878
+        },
+        {
+          "step": 237,
+          "scene": "R6 review catalog selection",
+          "start": 134.16515729948878,
+          "end": 134.83114489912987
+        },
+        {
+          "step": 238,
+          "scene": "R6 review normal mode key",
+          "start": 134.83114489912987,
+          "end": 134.89783250167966
+        },
+        {
+          "step": 239,
+          "scene": "R6 review key up",
+          "start": 134.89783250167966,
+          "end": 135.13119199872017
+        },
+        {
+          "step": 240,
+          "scene": "R6 review normal mode key",
+          "start": 135.13119199872017,
+          "end": 135.1977268010378
+        },
+        {
+          "step": 241,
+          "scene": "R6 review key up",
+          "start": 135.1977268010378,
+          "end": 135.4312027990818
+        },
+        {
+          "step": 242,
+          "scene": "R6 review normal mode key",
+          "start": 135.4312027990818,
+          "end": 135.49774900078773
+        },
+        {
+          "step": 243,
+          "scene": "R6 review key up",
+          "start": 135.49774900078773,
+          "end": 135.73132260143757
+        },
+        {
+          "step": 244,
+          "scene": "R6 TPS aim composition",
+          "start": 135.73132260143757,
+          "end": 136.73126409947872
+        },
+        {
+          "step": 245,
+          "scene": "R6 ADS shoulder framing",
+          "start": 136.73126409947872,
+          "end": 141.73133790120482
+        },
+        {
+          "step": 246,
+          "scene": "Perspective press",
+          "start": 141.73133790120482,
+          "end": 141.83124890178442
+        },
+        {
+          "step": 247,
+          "scene": "Perspective release",
+          "start": 141.83124890178442,
+          "end": 142.83129620179534
+        },
+        {
+          "step": 248,
+          "scene": "Attack press",
+          "start": 142.83129620179534,
+          "end": 142.93130499869585
+        },
+        {
+          "step": 249,
+          "scene": "Attack release",
+          "start": 142.93130499869585,
+          "end": 143.9312724992633
+        },
+        {
+          "step": 250,
+          "scene": "R6 real draw",
+          "start": 143.9312724992633,
+          "end": 144.8313714005053
+        },
+        {
+          "step": 251,
+          "scene": "R6 projectile impact and recovery",
+          "start": 144.8313714005053,
+          "end": 146.83128609880805
+        },
+        {
+          "step": 252,
+          "scene": "Spell1 press",
+          "start": 146.83128609880805,
+          "end": 146.9314277023077
+        },
+        {
+          "step": 253,
+          "scene": "Spell1 release",
+          "start": 146.9314277023077,
+          "end": 147.33133130148053
+        },
+        {
+          "step": 254,
+          "scene": "R6 real draw",
+          "start": 147.33133130148053,
+          "end": 148.2313550002873
+        },
+        {
+          "step": 255,
+          "scene": "R6 projectile impact and recovery",
+          "start": 148.2313550002873,
+          "end": 150.23139790073037
+        },
+        {
+          "step": 256,
+          "scene": "R6 afternoon ivory steady view",
+          "start": 150.23139790073037,
+          "end": 155.2313646003604
+        },
+        {
+          "step": 257,
+          "scene": "Perspective press",
+          "start": 155.2313646003604,
+          "end": 155.33177990093827
+        },
+        {
+          "step": 258,
+          "scene": "Perspective release",
+          "start": 155.33177990093827,
+          "end": 156.33149909973145
+        },
+        {
+          "step": 259,
+          "scene": "R6 dusk ivory third-person view",
+          "start": 156.33149909973145,
+          "end": 162.33159340173006
+        },
+        {
+          "step": 260,
+          "scene": "R6 armory calm location",
+          "start": 162.33159340173006,
+          "end": 163.33153419941664
+        },
+        {
+          "step": 261,
+          "scene": "Armory press",
+          "start": 163.33153419941664,
+          "end": 163.44775500148535
+        },
+        {
+          "step": 262,
+          "scene": "Armory release",
+          "start": 163.44775500148535,
+          "end": 164.24904460087419
+        },
+        {
+          "step": 263,
+          "scene": "R6 actual armory material and license preview",
+          "start": 164.24904460087419,
+          "end": 170.2635085992515
+        },
+        {
+          "step": 264,
+          "scene": "R6 actual armory material and license preview",
+          "start": 170.2635085992515,
+          "end": 176.26375430077314
+        },
+        {
+          "step": 265,
+          "scene": "Armory press",
+          "start": 176.26375430077314,
+          "end": 176.38089330121875
+        },
+        {
+          "step": 266,
+          "scene": "Armory release",
+          "start": 176.38089330121875,
+          "end": 177.18102100118995
+        },
+        {
+          "step": 267,
+          "scene": "R6 clean closing walk",
+          "start": 177.18102100118995,
+          "end": 182.18133889883757
+        },
+        {
+          "step": 268,
+          "scene": "R6 review end",
+          "start": 182.18133889883757,
+          "end": 182.28123620152473
+        }
+      ],
+      "checks": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "evidence_level": "A",
+          "expected": "M1 controller, character, car, switch",
+          "actual": "PC=1 character=1 car=1 lamp=1",
+          "elapsed_seconds": 3.2104750014841557
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "evidence_level": "A",
+          "expected": "HarborCity_M2_V1_Test_*",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20260929_231857",
+          "elapsed_seconds": 3.2113675996661186
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "evidence_level": "A-runtime prerequisite",
+          "expected": "actual application activation before any test input; no focus override",
+          "actual": "focused=1",
+          "elapsed_seconds": 3.2223360016942024
+        },
+        {
+          "name": "R6 shock both adult subjects",
+          "status": "PASS",
+          "evidence_level": "B normal spell camera ray; no forced damage",
+          "expected": "2 real damage recipients",
+          "actual": "2",
+          "elapsed_seconds": 116.12182009965181
+        }
+      ],
+      "scope": "Wall-time scene durations matched to first captured world timestamp; frame-accurate visual events checked separately."
+    },
+    {
+      "job": "slow",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_232505",
+      "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_232523_21E7EFCD\\capture.mp4",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_232523_21E7EFCD\\capture.json",
+      "seconds": 119.17808600000001,
+      "actual_capture_fps": 30.005516282582352,
+      "audio": "PASS",
+      "scenes": [
+        {
+          "step": 1,
+          "scene": "M4 R2 await initial game focus",
+          "start": -12.007604502141476,
+          "end": -12.000253800302744
+        },
+        {
+          "step": 2,
+          "scene": "R6 review native warmup",
+          "start": -12.000253800302744,
+          "end": 0.0
+        },
+        {
+          "step": 3,
+          "scene": "R6 recording countdown",
+          "start": 0.0,
+          "end": 6.500309698283672
+        },
+        {
+          "step": 4,
+          "scene": "R6 actual quarter-speed world time",
+          "start": 6.500309698283672,
+          "end": 6.550324998795986
+        },
+        {
+          "step": 5,
+          "scene": "R6 review normal mode key",
+          "start": 6.550324998795986,
+          "end": 6.800406899303198
+        },
+        {
+          "step": 6,
+          "scene": "R6 review key up",
+          "start": 6.800406899303198,
+          "end": 7.683694798499346
+        },
+        {
+          "step": 7,
+          "scene": "R6 review normal mode key",
+          "start": 7.683694798499346,
+          "end": 7.933745797723532
+        },
+        {
+          "step": 8,
+          "scene": "R6 review key up",
+          "start": 7.933745797723532,
+          "end": 8.817125100642443
+        },
+        {
+          "step": 9,
+          "scene": "R6 review normal mode key",
+          "start": 8.817125100642443,
+          "end": 9.067142598330975
+        },
+        {
+          "step": 10,
+          "scene": "R6 review key up",
+          "start": 9.067142598330975,
+          "end": 9.950516700744629
+        },
+        {
+          "step": 11,
+          "scene": "R6 held sprint before action",
+          "start": 9.950516700744629,
+          "end": 13.551723398268223
+        },
+        {
+          "step": 12,
+          "scene": "Attack press",
+          "start": 13.551723398268223,
+          "end": 13.950852200388908
+        },
+        {
+          "step": 13,
+          "scene": "Attack release",
+          "start": 13.950852200388908,
+          "end": 15.80089920014143
+        },
+        {
+          "step": 14,
+          "scene": "Attack press",
+          "start": 15.80089920014143,
+          "end": 16.201044999063015
+        },
+        {
+          "step": 15,
+          "scene": "Attack release",
+          "start": 16.201044999063015,
+          "end": 18.051396999508142
+        },
+        {
+          "step": 16,
+          "scene": "Attack press",
+          "start": 18.051396999508142,
+          "end": 18.451108999550343
+        },
+        {
+          "step": 17,
+          "scene": "Attack release",
+          "start": 18.451108999550343,
+          "end": 20.30124919861555
+        },
+        {
+          "step": 18,
+          "scene": "R6 sprint continues without re-press",
+          "start": 20.30124919861555,
+          "end": 25.101396698504686
+        },
+        {
+          "step": 19,
+          "scene": "R6 release sprint input",
+          "start": 25.101396698504686,
+          "end": 26.901367001235485
+        },
+        {
+          "step": 20,
+          "scene": "R6 review catalog selection",
+          "start": 26.901367001235485,
+          "end": 29.5095124989748
+        },
+        {
+          "step": 21,
+          "scene": "R6 review normal mode key",
+          "start": 29.5095124989748,
+          "end": 29.759465400129557
+        },
+        {
+          "step": 22,
+          "scene": "R6 review key up",
+          "start": 29.759465400129557,
+          "end": 30.64291239902377
+        },
+        {
+          "step": 23,
+          "scene": "R6 review normal mode key",
+          "start": 30.64291239902377,
+          "end": 30.89280829951167
+        },
+        {
+          "step": 24,
+          "scene": "R6 review key up",
+          "start": 30.89280829951167,
+          "end": 31.776121597737074
+        },
+        {
+          "step": 25,
+          "scene": "R6 review normal mode key",
+          "start": 31.776121597737074,
+          "end": 32.02624149993062
+        },
+        {
+          "step": 26,
+          "scene": "R6 review key up",
+          "start": 32.02624149993062,
+          "end": 32.909490797668695
+        },
+        {
+          "step": 27,
+          "scene": "R6 bow scene reset",
+          "start": 32.909490797668695,
+          "end": 36.10953639820218
+        },
+        {
+          "step": 28,
+          "scene": "R6 bow perspective release",
+          "start": 36.10953639820218,
+          "end": 37.70954290032387
+        },
+        {
+          "step": 29,
+          "scene": "R6 bow steady aim",
+          "start": 37.70954290032387,
+          "end": 39.70956809818745
+        },
+        {
+          "step": 30,
+          "scene": "R6 bow locomotion",
+          "start": 39.70956809818745,
+          "end": 41.109624698758125
+        },
+        {
+          "step": 31,
+          "scene": "R6 real draw",
+          "start": 41.109624698758125,
+          "end": 43.30967349931598
+        },
+        {
+          "step": 32,
+          "scene": "R6 projectile impact and recovery",
+          "start": 43.30967349931598,
+          "end": 48.910487700253725
+        },
+        {
+          "step": 33,
+          "scene": "R6 bow locomotion up",
+          "start": 48.910487700253725,
+          "end": 50.910374101251364
+        },
+        {
+          "step": 34,
+          "scene": "R6 bow scene reset",
+          "start": 50.910374101251364,
+          "end": 54.11106079816818
+        },
+        {
+          "step": 35,
+          "scene": "R6 bow perspective release",
+          "start": 54.11106079816818,
+          "end": 55.71143589913845
+        },
+        {
+          "step": 36,
+          "scene": "R6 bow steady aim",
+          "start": 55.71143589913845,
+          "end": 57.711435697972775
+        },
+        {
+          "step": 37,
+          "scene": "R6 real draw",
+          "start": 57.711435697972775,
+          "end": 59.91137479990721
+        },
+        {
+          "step": 38,
+          "scene": "R6 projectile impact and recovery",
+          "start": 59.91137479990721,
+          "end": 65.51137449964881
+        },
+        {
+          "step": 39,
+          "scene": "R6 bow locomotion up",
+          "start": 65.51137449964881,
+          "end": 67.51147399842739
+        },
+        {
+          "step": 40,
+          "scene": "Perspective press",
+          "start": 67.51147399842739,
+          "end": 67.9115859977901
+        },
+        {
+          "step": 41,
+          "scene": "Perspective release",
+          "start": 67.9115859977901,
+          "end": 69.91151240095496
+        },
+        {
+          "step": 42,
+          "scene": "R6 ground group exact camera ray",
+          "start": 69.91151240095496,
+          "end": 73.91186149790883
+        },
+        {
+          "step": 43,
+          "scene": "R6 settled ground projection",
+          "start": 73.91186149790883,
+          "end": 75.91197399795055
+        },
+        {
+          "step": 44,
+          "scene": "R6 final ground aim after camera shift",
+          "start": 75.91197399795055,
+          "end": 77.91198929771781
+        },
+        {
+          "step": 45,
+          "scene": "Spell2 press",
+          "start": 77.91198929771781,
+          "end": 78.31205669790506
+        },
+        {
+          "step": 46,
+          "scene": "Spell2 release",
+          "start": 78.31205669790506,
+          "end": 79.51213989779353
+        },
+        {
+          "step": 47,
+          "scene": "R6 real draw",
+          "start": 79.51213989779353,
+          "end": 82.71212089806795
+        },
+        {
+          "step": 48,
+          "scene": "R6 projectile impact and recovery",
+          "start": 82.71212089806795,
+          "end": 90.71276329830289
+        },
+        {
+          "step": 49,
+          "scene": "R6 shock two-target actual result",
+          "start": 90.71276329830289,
+          "end": 91.51259239763021
+        },
+        {
+          "step": 50,
+          "scene": "R6 review normal mode key",
+          "start": 91.51259239763021,
+          "end": 91.7626903988421
+        },
+        {
+          "step": 51,
+          "scene": "R6 review key up",
+          "start": 91.7626903988421,
+          "end": 92.6459028981626
+        },
+        {
+          "step": 52,
+          "scene": "R6 review normal mode key",
+          "start": 92.6459028981626,
+          "end": 92.89601700007915
+        },
+        {
+          "step": 53,
+          "scene": "R6 review key up",
+          "start": 92.89601700007915,
+          "end": 93.7793250977993
+        },
+        {
+          "step": 54,
+          "scene": "R6 review normal mode key",
+          "start": 93.7793250977993,
+          "end": 94.029456499964
+        },
+        {
+          "step": 55,
+          "scene": "R6 review key up",
+          "start": 94.029456499964,
+          "end": 94.9126489982009
+        },
+        {
+          "step": 56,
+          "scene": "R6 first-person wave review",
+          "start": 94.9126489982009,
+          "end": 98.91284240037203
+        },
+        {
+          "step": 57,
+          "scene": "Perspective press",
+          "start": 98.91284240037203,
+          "end": 99.31283450126648
+        },
+        {
+          "step": 58,
+          "scene": "Perspective release",
+          "start": 99.31283450126648,
+          "end": 101.31312569975853
+        },
+        {
+          "step": 59,
+          "scene": "R6 real draw",
+          "start": 101.31312569975853,
+          "end": 104.71316739916801
+        },
+        {
+          "step": 60,
+          "scene": "R6 projectile impact and recovery",
+          "start": 104.71316739916801,
+          "end": 116.71333019807935
+        },
+        {
+          "step": 61,
+          "scene": "Perspective press",
+          "start": 116.71333019807935,
+          "end": 117.11334820091724
+        },
+        {
+          "step": 62,
+          "scene": "Perspective release",
+          "start": 117.11334820091724,
+          "end": 119.1134542003274
+        },
+        {
+          "step": 63,
+          "scene": "R6 review end",
+          "start": 119.1134542003274,
+          "end": 119.2134222984314
+        }
+      ],
+      "checks": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "evidence_level": "A",
+          "expected": "M1 controller, character, car, switch",
+          "actual": "PC=1 character=1 car=1 lamp=1",
+          "elapsed_seconds": 3.1818987987935543
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "evidence_level": "A",
+          "expected": "HarborCity_M2_V1_Test_*",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20260929_232505",
+          "elapsed_seconds": 3.182805098593235
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "evidence_level": "A-runtime prerequisite",
+          "expected": "actual application activation before any test input; no focus override",
+          "actual": "focused=1",
+          "elapsed_seconds": 3.192501001060009
+        },
+        {
+          "name": "R6 shock both adult subjects",
+          "status": "PASS",
+          "evidence_level": "B normal spell camera ray; no forced damage",
+          "expected": "2 real damage recipients",
+          "actual": "2",
+          "elapsed_seconds": 105.90223680064082
+        }
+      ],
+      "scope": "Wall-time scene durations matched to first captured world timestamp; frame-accurate visual events checked separately."
+    },
+    {
+      "job": "cafe",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\m5_vs3_r3_b_20260929_232851",
+      "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_232909_D1EA6230\\capture.mp4",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_232909_D1EA6230\\capture.json",
+      "seconds": 26.549357,
+      "actual_capture_fps": 30.019559419084988,
+      "audio": "PASS",
+      "scenes": [
+        {
+          "step": 1,
+          "scene": "M4 R2 await initial game focus",
+          "start": -12.009486097842455,
+          "end": -11.99937679991126
+        },
+        {
+          "step": 2,
+          "scene": "R6 review native warmup",
+          "start": -11.99937679991126,
+          "end": 0.0
+        },
+        {
+          "step": 3,
+          "scene": "R6 recording countdown",
+          "start": 0.0,
+          "end": 6.500265900045633
+        },
+        {
+          "step": 4,
+          "scene": "R6 cafe approach regular collision camera",
+          "start": 6.500265900045633,
+          "end": 8.50021480023861
+        },
+        {
+          "step": 5,
+          "scene": "R6 cafe walk through doorway",
+          "start": 8.50021480023861,
+          "end": 10.500373601913452
+        },
+        {
+          "step": 6,
+          "scene": "R6 cafe inside full turn",
+          "start": 10.500373601913452,
+          "end": 20.50117990002036
+        },
+        {
+          "step": 7,
+          "scene": "R6 cafe near-wall turn",
+          "start": 20.50117990002036,
+          "end": 22.501137800514698
+        },
+        {
+          "step": 8,
+          "scene": "R6 cafe camera collision settle",
+          "start": 22.501137800514698,
+          "end": 26.50120159983635
+        },
+        {
+          "step": 9,
+          "scene": "R6 review end",
+          "start": 26.50120159983635,
+          "end": 26.601449701935053
+        }
+      ],
+      "checks": [
+        {
+          "name": "Runtime actors",
+          "status": "PASS",
+          "evidence_level": "A",
+          "expected": "M1 controller, character, car, switch",
+          "actual": "PC=1 character=1 car=1 lamp=1",
+          "elapsed_seconds": 3.1912501007318497
+        },
+        {
+          "name": "Isolated save slot",
+          "status": "PASS",
+          "evidence_level": "A",
+          "expected": "HarborCity_M2_V1_Test_*",
+          "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20260929_232851",
+          "elapsed_seconds": 3.192297600209713
+        },
+        {
+          "name": "R2 initial real application focus",
+          "status": "PASS",
+          "evidence_level": "A-runtime prerequisite",
+          "expected": "actual application activation before any test input; no focus override",
+          "actual": "focused=1",
+          "elapsed_seconds": 3.20420990139246
+        }
+      ],
+      "scope": "Wall-time scene durations matched to first captured world timestamp; frame-accurate visual events checked separately."
+    }
+  ]
+}
