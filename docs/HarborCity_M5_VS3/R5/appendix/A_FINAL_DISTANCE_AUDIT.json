@@ -1,0 +1,52 @@
+{
+  "run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r3_b_20260929_171044",
+  "raw_failures": 25,
+  "raw_jump_distance_failures": [
+    {
+      "name": "TP_run_jump_sword_09 jump matches control",
+      "status": "FAIL",
+      "evidence_level": "B matched jump control",
+      "expected": "apex/distance within5%; standing drift<=2cm",
+      "actual": "min_speed=400.000 mean_speed=399.886 attack_frames=96 foot_speed=501.242 foot_crossings=5 peak=127.531 jump_distance=457.879 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=7.373 Y=1257.276 Z=0.000 reference=X=127.531 Y=421.891 Z=16.334",
+      "elapsed_seconds": 370.16373259946704
+    },
+    {
+      "name": "TP_run_jump_fist_05 jump matches control",
+      "status": "FAIL",
+      "evidence_level": "B matched jump control",
+      "expected": "apex/distance within5%; standing drift<=2cm",
+      "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=582.863 foot_crossings=4 peak=127.518 jump_distance=442.227 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.363 delta=X=0.000 Y=1242.325 Z=0.000 reference=X=127.531 Y=420.510 Z=16.334",
+      "elapsed_seconds": 408.3968106992543
+    },
+    {
+      "name": "TP_run_jump_fist_06 jump matches control",
+      "status": "FAIL",
+      "evidence_level": "B matched jump control",
+      "expected": "apex/distance within5%; standing drift<=2cm",
+      "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.309 foot_crossings=4 peak=127.531 jump_distance=444.528 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1244.558 Z=0.000 reference=X=127.530 Y=420.816 Z=16.334",
+      "elapsed_seconds": 414.7893483005464
+    },
+    {
+      "name": "TP_run_jump_fist_08 jump matches control",
+      "status": "FAIL",
+      "evidence_level": "B matched jump control",
+      "expected": "apex/distance within5%; standing drift<=2cm",
+      "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.372 foot_crossings=4 peak=127.530 jump_distance=442.853 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=1242.867 Z=-0.000 reference=X=127.531 Y=421.415 Z=16.333",
+      "elapsed_seconds": 427.58756110072136
+    },
+    {
+      "name": "TP_run_jump_fist_09 jump matches control",
+      "status": "FAIL",
+      "evidence_level": "B matched jump control",
+      "expected": "apex/distance within5%; standing drift<=2cm",
+      "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.320 foot_crossings=4 peak=127.531 jump_distance=443.546 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1243.570 Z=-0.000 reference=X=127.531 Y=421.891 Z=16.334",
+      "elapsed_seconds": 433.991986900568
+    }
+  ],
+  "separate_csv_recalculation": {
+    "method": "last grounded position immediately before first airborne sample to first grounded position after flight; excludes normal walking before Jump was consumed. Raw runtime checks retained unchanged.",
+    "max_running_sword_error_percent": 0.01887070903070586,
+    "max_running_fist_error_percent": 0.17419284599643028
+  },
+  "interpretation": "The original5 checks use distance from scenario start, including walking before Jump is consumed; rawFAIL remains. CSV airborne-only results are additional analysis, not rewritten PASS. Melee fixed contact misses remain unresolved."
+}

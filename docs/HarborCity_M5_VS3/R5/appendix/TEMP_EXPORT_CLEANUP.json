@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "removed": [
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\main_audio_corrected.mp4",
+      "bytes": 145713829,
+      "sha256": "390e2774681e794a71889b801a7be816d2d94a8d43b8ef149e97cbc9e57b012f"
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\main_audio_limited.mp4",
+      "bytes": 145714925,
+      "sha256": "be2de10a757f9f6b123d6c8cb450eb3ae8644c51cb467046c574dda5a9ac5833"
+    }
+  ],
+  "failure_evidence_retained": [
+    "MAIN_AUDIO_ATTEMPT1.json",
+    "MAIN_AUDIO_ATTEMPT2.json",
+    "MAIN_AUDIO_LIMITER_TUNING.json"
+  ]
+}

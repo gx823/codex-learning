@@ -1,0 +1,77 @@
+{
+  "source": {
+    "job": "old_r2_combat",
+    "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_r2_combat_20260929_142546",
+    "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_r2_combat_20260929_142546\\User\\Saved\\M4Tests\\20260929_142613_r2_combat\\results.json",
+    "status": "COMPLETE",
+    "checks": 252,
+    "failures": 6
+  },
+  "failures": [
+    {
+      "name": "TP_rightwall_hip actual camera collision attribution",
+      "status": "FAIL",
+      "evidence_level": "A-fixture/B-Key-view",
+      "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+      "actual": "expected=StaticMeshActor_2 hit=StaticMeshActor_2 component=StaticMeshComponent0 startPenetrating=0 errorCm=4.652174 final=X=-154.000 Y=-3823.000 Z=168.150",
+      "elapsed_seconds": 115.19490130245686
+    },
+    {
+      "name": "TP_rightwall_ads actual camera collision attribution",
+      "status": "FAIL",
+      "evidence_level": "A-fixture/B-Key-view",
+      "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+      "actual": "expected=None hit=None component=None startPenetrating=0 errorCm=3.000000 final=X=-170.000 Y=-3835.000 Z=168.150",
+      "elapsed_seconds": 117.3491813018918
+    },
+    {
+      "name": "TP_rightwall_release actual camera collision attribution",
+      "status": "FAIL",
+      "evidence_level": "A-fixture/B-Key-view",
+      "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+      "actual": "expected=StaticMeshActor_2 hit=StaticMeshActor_2 component=StaticMeshComponent0 startPenetrating=0 errorCm=4.652174 final=X=-154.000 Y=-3823.000 Z=168.150",
+      "elapsed_seconds": 119.5522052012384
+    },
+    {
+      "name": "TP_cabinet_corner_hip actual camera collision attribution",
+      "status": "FAIL",
+      "evidence_level": "A-fixture/B-Key-view",
+      "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+      "actual": "expected=StaticMeshActor_3 hit=StaticMeshActor_3 component=StaticMeshComponent0 startPenetrating=0 errorCm=35.660864 final=X=-81.465 Y=-3856.994 Z=168.150",
+      "elapsed_seconds": 120.91778060048819
+    },
+    {
+      "name": "TP_cabinet_corner_ads actual camera collision attribution",
+      "status": "FAIL",
+      "evidence_level": "A-fixture/B-Key-view",
+      "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+      "actual": "expected=StaticMeshActor_3 hit=StaticMeshActor_3 component=StaticMeshComponent0 startPenetrating=0 errorCm=35.178195 final=X=-82.106 Y=-3866.946 Z=168.150",
+      "elapsed_seconds": 122.79835519939661
+    },
+    {
+      "name": "TP_shoulder_restored_clear actual camera collision attribution",
+      "status": "FAIL",
+      "evidence_level": "A-fixture/B-Key-view",
+      "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+      "actual": "expected=None hit=None component=None startPenetrating=0 errorCm=3.000000 final=X=-230.000 Y=-3785.000 Z=168.150",
+      "elapsed_seconds": 125.22604269906878
+    }
+  ],
+  "attribution": "Six third-person camera-collision oracle mismatches (3–35.66cm). No punch damage/combo failure. Exact root cause UNKNOWN pending comparison with current camera offsets; not suppressed or replaced.",
+  "matrix": {
+    "job": "sword_matrix",
+    "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r2_matrix_20260929_141739",
+    "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r2_matrix_20260929_141739\\User\\Saved\\M5Tests\\20260929_141809_m5_vs3_r2_matrix\\results.json",
+    "status": "COMPLETE",
+    "checks": 140,
+    "failures": 0
+  },
+  "melee": {
+    "job": "old_melee",
+    "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_melee_20260929_142330",
+    "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_melee_20260929_142330\\User\\Saved\\M4Tests\\20260929_142442_melee\\results.json",
+    "status": "COMPLETE",
+    "checks": 14,
+    "failures": 0
+  }
+}

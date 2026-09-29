@@ -1,0 +1,5 @@
+{
+  "status": "FAILED_ENCODING_ATTEMPT1",
+  "reason": "Compressed JPEG frame bytes were named .png by the capture helper. FFmpeg inferred PNG and rejected JPEG signature. Source pixels intact. Decoder now selected by actual magic bytes; no game rerun.",
+  "error": "[png @ 0000027f43db3080] Invalid PNG signature 0xFFD8FFE000104A46.\r\n    Last message repeated 27 times\r\n[png @ 0000027f45fed400] Invalid PNG signature 0xFFD8FFE000104A46.\r\n[vist#0:0/png @ 0000027f43dc26c0] [dec:png @ 0000027f45de4e40] Decoding error: Invalid data found when processing input\r\n[png @ 0000027f45d5c6c0] Invalid PNG signature 0xFFD8FFE000104A46.\r\n[vist#0:0/png @ 0000027f43dc26c0] [dec:png @ 0000027f45de4e40] Decoding error: Invalid data found when processing input\r\n[png @ 0000027f45fe91c0] Invalid PNG signature 0xFFD8FFE000104A46.\r\n[vist#0:0/png @ 0000027f43dc26c0] [dec:png @ 0000027f45de4e40] Decoding error: Invalid data found when processing input\r\n[png @ 0000027f45fe9e00] Inva"
+}

@@ -1,0 +1,201 @@
+{
+  "status": "MEASURED_NOT_RUNTIME_ACCEPTANCE",
+  "blender_version": "5.2.2 LTS",
+  "source": "D:\\科研学习\\codex学习\\assets\\M5_VS1\\hero\\Selestia\\Source_v1_02_b9d138dabe3d\\SELESTIA.fbx",
+  "world_mesh_height_m": 1.369634035974741,
+  "unit_assumption": "FBX imported world metres; validate full mesh height before use. Multiply 100cm/m and actor1.25. Includes authored sleeves weighted >=0.5; excludes weak skin influences.",
+  "arms": [
+    {
+      "bone": "UpperArm_L",
+      "weighted_vertex_threshold": 0.5,
+      "weighted_vertices": 938,
+      "objects": [
+        {
+          "name": "Selestia_costume_glove",
+          "vertices": 626
+        },
+        {
+          "name": "Selestia_body",
+          "vertices": 312
+        }
+      ],
+      "joint_length_cm_at_scale_1_25": 24.970889419006944,
+      "radial_95_cm": 6.090533076307614,
+      "radial_max_cm": 7.190112531811426,
+      "axial_min_max_cm": [
+        0.668652355670929,
+        24.85576644539833
+      ],
+      "source_head_m": [
+        0.07931313663721085,
+        0.00608148705214262,
+        1.049247145652771
+      ],
+      "source_tail_m": [
+        0.27908024191856384,
+        0.00608148705214262,
+        1.049247145652771
+      ]
+    },
+    {
+      "bone": "UpperArm_R",
+      "weighted_vertex_threshold": 0.5,
+      "weighted_vertices": 938,
+      "objects": [
+        {
+          "name": "Selestia_costume_glove",
+          "vertices": 626
+        },
+        {
+          "name": "Selestia_body",
+          "vertices": 312
+        }
+      ],
+      "joint_length_cm_at_scale_1_25": 24.970889419006944,
+      "radial_95_cm": 6.090533076307614,
+      "radial_max_cm": 7.190112575293194,
+      "axial_min_max_cm": [
+        0.6686430424451828,
+        24.855758994817734
+      ],
+      "source_head_m": [
+        -0.07931313663721085,
+        0.006081489846110344,
+        1.049247145652771
+      ],
+      "source_tail_m": [
+        -0.27908024191856384,
+        0.006081489846110344,
+        1.049247145652771
+      ]
+    },
+    {
+      "bone": "LowerArm_L",
+      "weighted_vertex_threshold": 0.5,
+      "weighted_vertices": 520,
+      "objects": [
+        {
+          "name": "Selestia_costume_glove",
+          "vertices": 251
+        },
+        {
+          "name": "Selestia_body",
+          "vertices": 269
+        }
+      ],
+      "joint_length_cm_at_scale_1_25": 23.958061574367292,
+      "radial_95_cm": 3.99760015952884,
+      "radial_max_cm": 4.225729921572677,
+      "axial_min_max_cm": [
+        -0.039444612639272236,
+        23.695124002188095
+      ],
+      "source_head_m": [
+        0.27908024191856384,
+        0.00608148705214262,
+        1.049247145652771
+      ],
+      "source_tail_m": [
+        0.4706939458847046,
+        0.0016714176163077354,
+        1.049120545387268
+      ]
+    },
+    {
+      "bone": "LowerArm_R",
+      "weighted_vertex_threshold": 0.5,
+      "weighted_vertices": 520,
+      "objects": [
+        {
+          "name": "Selestia_costume_glove",
+          "vertices": 251
+        },
+        {
+          "name": "Selestia_body",
+          "vertices": 269
+        }
+      ],
+      "joint_length_cm_at_scale_1_25": 23.958061574367292,
+      "radial_95_cm": 3.997600500794084,
+      "radial_max_cm": 4.22573008299355,
+      "axial_min_max_cm": [
+        -0.03945205412492214,
+        23.695116559565577
+      ],
+      "source_head_m": [
+        -0.27908024191856384,
+        0.006081489846110344,
+        1.049247145652771
+      ],
+      "source_tail_m": [
+        -0.4706939458847046,
+        0.0016714204102754593,
+        1.049120545387268
+      ]
+    },
+    {
+      "bone": "Hand_L",
+      "weighted_vertex_threshold": 0.5,
+      "weighted_vertices": 495,
+      "objects": [
+        {
+          "name": "Selestia_costume_glove",
+          "vertices": 230
+        },
+        {
+          "name": "Selestia_body",
+          "vertices": 265
+        }
+      ],
+      "joint_length_cm_at_scale_1_25": 7.067583523798422,
+      "radial_95_cm": 3.2271382733710423,
+      "radial_max_cm": 3.5847563714147745,
+      "axial_min_max_cm": [
+        -0.272840256805081,
+        8.453458548924548
+      ],
+      "source_head_m": [
+        0.4706939458847046,
+        0.0016714141238480806,
+        1.049120545387268
+      ],
+      "source_tail_m": [
+        0.5272346138954163,
+        0.0016714140074327588,
+        1.049120545387268
+      ]
+    },
+    {
+      "bone": "Hand_R",
+      "weighted_vertex_threshold": 0.5,
+      "weighted_vertices": 495,
+      "objects": [
+        {
+          "name": "Selestia_costume_glove",
+          "vertices": 230
+        },
+        {
+          "name": "Selestia_body",
+          "vertices": 265
+        }
+      ],
+      "joint_length_cm_at_scale_1_25": 7.067583523798422,
+      "radial_95_cm": 3.2271379915440295,
+      "radial_max_cm": 3.584756625126485,
+      "axial_min_max_cm": [
+        -0.2728477073856775,
+        8.453443647763354
+      ],
+      "source_head_m": [
+        -0.4706939458847046,
+        0.0016714169178158045,
+        1.049120545387268
+      ],
+      "source_tail_m": [
+        -0.5272346138954163,
+        0.0016714168014004827,
+        1.049120545387268
+      ]
+    }
+  ]
+}

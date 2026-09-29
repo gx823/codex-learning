@@ -1,0 +1,2454 @@
+{
+  "scope": "Every currently recorded failed runtime run under R5; original files retained. Truncated actual strings here link to full local results. Ongoing runs are not pre-labelled.",
+  "runs": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_r2_combat_20260929_142546",
+      "case": "m4_r2_combat",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 252,
+      "failures": 6,
+      "cause": "Old TP camera collision oracle mismatch; mechanism UNKNOWN, not declared fixed.",
+      "failed_checks": [
+        {
+          "name": "TP_rightwall_hip actual camera collision attribution",
+          "status": "FAIL",
+          "evidence_level": "A-fixture/B-Key-view",
+          "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+          "actual": "expected=StaticMeshActor_2 hit=StaticMeshActor_2 component=StaticMeshComponent0 startPenetrating=0 errorCm=4.652174 final=X=-154.000 Y=-3823.000 Z=168.150",
+          "elapsed_seconds": 115.19490130245686
+        },
+        {
+          "name": "TP_rightwall_ads actual camera collision attribution",
+          "status": "FAIL",
+          "evidence_level": "A-fixture/B-Key-view",
+          "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+          "actual": "expected=None hit=None component=None startPenetrating=0 errorCm=3.000000 final=X=-170.000 Y=-3835.000 Z=168.150",
+          "elapsed_seconds": 117.3491813018918
+        },
+        {
+          "name": "TP_rightwall_release actual camera collision attribution",
+          "status": "FAIL",
+          "evidence_level": "A-fixture/B-Key-view",
+          "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+          "actual": "expected=StaticMeshActor_2 hit=StaticMeshActor_2 component=StaticMeshComponent0 startPenetrating=0 errorCm=4.652174 final=X=-154.000 Y=-3823.000 Z=168.150",
+          "elapsed_seconds": 119.5522052012384
+        },
+        {
+          "name": "TP_cabinet_corner_hip actual camera collision attribution",
+          "status": "FAIL",
+          "evidence_level": "A-fixture/B-Key-view",
+          "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+          "actual": "expected=StaticMeshActor_3 hit=StaticMeshActor_3 component=StaticMeshComponent0 startPenetrating=0 errorCm=35.660864 final=X=-81.465 Y=-3856.994 Z=168.150",
+          "elapsed_seconds": 120.91778060048819
+        },
+        {
+          "name": "TP_cabinet_corner_ads actual camera collision attribution",
+          "status": "FAIL",
+          "evidence_level": "A-fixture/B-Key-view",
+          "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+          "actual": "expected=StaticMeshActor_3 hit=StaticMeshActor_3 component=StaticMeshComponent0 startPenetrating=0 errorCm=35.178195 final=X=-82.106 Y=-3866.946 Z=168.150",
+          "elapsed_seconds": 122.79835519939661
+        },
+        {
+          "name": "TP_shoulder_restored_clear actual camera collision attribution",
+          "status": "FAIL",
+          "evidence_level": "A-fixture/B-Key-view",
+          "expected": "final PlayerCameraManager POV matches actual ECC_Camera Sphere12 sweep and named obstacle, not barrel visibilitytrace",
+          "actual": "expected=None hit=None component=None startPenetrating=0 errorCm=3.000000 final=X=-230.000 Y=-3785.000 Z=168.150",
+          "elapsed_seconds": 125.22604269906878
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_r2_combat_20260929_142546\\User\\Saved\\M4Tests\\20260929_142613_r2_combat\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_full_20260929_170315",
+      "case": "m5_full",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 171,
+      "failures": 3,
+      "cause": "Preserved pickup curb/boarding/dropoff failures, deferred to M5-VS4.",
+      "failed_checks": [
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "status": "FAIL",
+          "evidence_level": "A-fixture",
+          "expected": "read-only safety queries choose A parking fixture; no condition override",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+          "elapsed_seconds": 93.85079490020871
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "status": "FAIL",
+          "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+          "expected": "driving, passenger attached through normal Tick",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.997 Y=-6360.911 Z=22.606 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/",
+          "elapsed_seconds": 108.40804030001163
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "status": "FAIL",
+          "evidence_level": "B-Action + A travel placement; not continuous route proof",
+          "expected": "Complete; no direct quest mutation",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "elapsed_seconds": 117.22843509912491
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_full_20260929_170315\\User\\Saved\\M5Tests\\20260929_170322_m5_full\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_121909",
+      "case": "r5baseline",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 87,
+      "failures": 6,
+      "cause": "Initial fixture/input assumptions and capture timing; see BASELINE_ATTEMPT1_AUDIT and baseline checkpoint.",
+      "failed_checks": [
+        {
+          "name": "TP_run_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=551 attack_frames=5 window_frames=0 min_speed=400.000 mean_speed=400.000 feet_local_distance=26.204 peak_height=0.000 fell=0 landed=0 delta=X=238.590 Y=-61.893 Z=0.000; weapon=1 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=690.851 Y=-6561.669 Z=121.804",
+          "elapsed_seconds": 30.19704829901457
+        },
+        {
+          "name": "TP_sprint_sword attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=556 attack_frames=32 window_frames=0 min_speed=9.785 mean_speed=44.601 feet_local_distance=253.932 peak_height=0.000 fell=0 landed=0 delta=X=56.499 Y=-69.812 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=691.195 Y=-6570.271 Z=121.972",
+          "elapsed_seconds": 39.740431401878595
+        },
+        {
+          "name": "TP_jump_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=564 attack_frames=5 window_frames=0 min_speed=400.000 mean_speed=400.000 feet_local_distance=13.661 peak_height=115.254 fell=1 landed=1 delta=X=253.663 Y=90.123 Z=0.000; weapon=1 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=647.924 Y=-6421.616 Z=119.928",
+          "elapsed_seconds": 59.003751300275326
+        },
+        {
+          "name": "FP_run_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=552 attack_frames=5 window_frames=0 min_speed=400.000 mean_speed=400.000 feet_local_distance=24.195 peak_height=0.000 fell=0 landed=0 delta=X=239.382 Y=-61.006 Z=0.000; weapon=1 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=691.008 Y=-6560.814 Z=122.027",
+          "elapsed_seconds": 89.17339570075274
+        },
+        {
+          "name": "FP_sprint_sword attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=578 attack_frames=36 window_frames=0 min_speed=9.542 mean_speed=41.348 feet_local_distance=206.579 peak_height=0.000 fell=0 landed=0 delta=X=53.191 Y=-68.750 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=690.028 Y=-6569.841 Z=122.219",
+          "elapsed_seconds": 98.6770089007914
+        },
+        {
+          "name": "FP_jump_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=576 attack_frames=5 window_frames=0 min_speed=400.000 mean_speed=400.000 feet_local_distance=14.052 peak_height=114.385 fell=1 landed=1 delta=X=255.263 Y=90.369 Z=-0.000; weapon=1 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=641.867 Y=-6410.515 Z=115.850",
+          "elapsed_seconds": 117.88344009965658
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_121909\\User\\Saved\\M5Tests\\20260929_121912_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_122804",
+      "case": "r5baseline",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 100,
+      "failures": 4,
+      "cause": "Initial fixture/input assumptions and capture timing; see BASELINE_ATTEMPT1_AUDIT and baseline checkpoint.",
+      "failed_checks": [
+        {
+          "name": "TP_run_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=458 attack_frames=29 window_frames=0 min_speed=19.816 mean_speed=154.388 feet_local_distance=208.412 peak_height=0.000 fell=0 landed=0 delta=X=0.000 Y=2004.606 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=-1.410 Y=-4358.386 Z=113.231",
+          "elapsed_seconds": 65.05420099943876
+        },
+        {
+          "name": "TP_jump_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=465 attack_frames=28 window_frames=0 min_speed=13.539 mean_speed=113.687 feet_local_distance=306.555 peak_height=68.739 fell=1 landed=1 delta=X=0.000 Y=2031.540 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=1.758 Y=-4328.058 Z=115.827",
+          "elapsed_seconds": 94.55835879966617
+        },
+        {
+          "name": "FP_run_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=457 attack_frames=31 window_frames=0 min_speed=18.862 mean_speed=155.976 feet_local_distance=236.179 peak_height=0.000 fell=0 landed=0 delta=X=0.000 Y=1984.746 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=1.730 Y=-4372.642 Z=124.789",
+          "elapsed_seconds": 125.40992959961295
+        },
+        {
+          "name": "FP_jump_fist attack observed",
+          "status": "FAIL",
+          "evidence_level": "B Enhanced Input; A isolated no-target fixture; baseline behavior, not R5 acceptance",
+          "expected": "real hit window reached",
+          "actual": "frames=461 attack_frames=30 window_frames=0 min_speed=14.069 mean_speed=118.175 feet_local_distance=283.711 peak_height=67.953 fell=1 landed=1 delta=X=0.000 Y=2009.682 Z=-0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=2.495 Y=-4348.803 Z=115.779",
+          "elapsed_seconds": 154.79846800118685
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_122804\\User\\Saved\\M5Tests\\20260929_122958_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_132442",
+      "case": "r5apilot",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 60,
+      "failures": 3,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_stand_jump_sword_01 two airborne segments",
+          "status": "FAIL",
+          "evidence_level": "A observed attack transitions",
+          "expected": "two starts while airborne",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=158 foot_speed=182.543 foot_crossings=2 peak=127.547 jump_distance=0.000 landed=1 segments=2 air_segments=1 hits=2 camera_bob=16.997 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 82.31997169926763
+        },
+        {
+          "name": "TP_run_heavy_01 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=280 cm/s moving",
+          "actual": "min_speed=221.709 mean_speed=317.476 attack_frames=110 foot_speed=589.899 foot_crossings=3 peak=0.000 jump_distance=0.000 landed=0 segments=1 air_segments=0 hits=0 camera_bob=0.850 delta=X=0.000 Y=1006.653 Z=0.000",
+          "elapsed_seconds": 100.65109569951892
+        },
+        {
+          "name": "TP_move_charge_01 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=280 cm/s moving",
+          "actual": "min_speed=220.936 mean_speed=316.502 attack_frames=80 foot_speed=548.041 foot_crossings=2 peak=0.000 jump_distance=0.000 landed=0 segments=1 air_segments=0 hits=1 camera_bob=0.850 delta=X=0.000 Y=969.587 Z=0.000",
+          "elapsed_seconds": 106.41089399904013
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_132442\\User\\Saved\\M5Tests\\20260929_132508_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_133136",
+      "case": "r5apilot",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 64,
+      "failures": 2,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_run_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=399.868 attack_frames=75 foot_speed=550.232 foot_crossings=3 peak=127.530 jump_distance=420.006 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=5.519 Y=1226.404 Z=-0.000",
+          "elapsed_seconds": 62.58065129816532
+        },
+        {
+          "name": "TP_stand_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=74 foot_speed=269.402 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.409 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 74.76596320047975
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_133136\\User\\Saved\\M5Tests\\20260929_133200_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_133540",
+      "case": "r5apilot",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 64,
+      "failures": 2,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_run_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=539.332 foot_crossings=3 peak=127.531 jump_distance=420.014 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1226.690 Z=0.000",
+          "elapsed_seconds": 61.37752280011773
+        },
+        {
+          "name": "TP_stand_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=74 foot_speed=269.472 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.400 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 73.57143190130591
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_133540\\User\\Saved\\M5Tests\\20260929_133601_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_133949",
+      "case": "r5a",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 568,
+      "failures": 20,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_run_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=74 foot_speed=583.260 foot_crossings=4 peak=127.531 jump_distance=441.308 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.407 delta=X=0.000 Y=1241.314 Z=-0.000",
+          "elapsed_seconds": 386.3145284987986
+        },
+        {
+          "name": "TP_run_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=588.219 foot_crossings=4 peak=127.531 jump_distance=439.441 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1239.515 Z=-0.000",
+          "elapsed_seconds": 392.6815950013697
+        },
+        {
+          "name": "TP_run_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=588.229 foot_crossings=4 peak=127.531 jump_distance=440.411 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1240.416 Z=-0.000",
+          "elapsed_seconds": 399.0438527986407
+        },
+        {
+          "name": "TP_run_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=587.949 foot_crossings=4 peak=127.527 jump_distance=441.323 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.589 delta=X=0.000 Y=1241.362 Z=-0.000",
+          "elapsed_seconds": 405.4200109988451
+        },
+        {
+          "name": "TP_run_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=588.239 foot_crossings=4 peak=127.531 jump_distance=441.479 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1241.621 Z=0.000",
+          "elapsed_seconds": 411.7962356992066
+        },
+        {
+          "name": "TP_run_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=588.230 foot_crossings=4 peak=127.531 jump_distance=441.225 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1241.259 Z=0.000",
+          "elapsed_seconds": 418.2035573013127
+        },
+        {
+          "name": "TP_run_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=588.209 foot_crossings=4 peak=127.530 jump_distance=442.036 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1242.145 Z=-0.000",
+          "elapsed_seconds": 424.60063679888844
+        },
+        {
+          "name": "TP_run_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=588.196 foot_crossings=4 peak=127.531 jump_distance=439.830 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1243.065 Z=0.000",
+          "elapsed_seconds": 431.0069212988019
+        },
+        {
+          "name": "TP_run_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=587.331 foot_crossings=4 peak=127.531 jump_distance=443.933 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1244.072 Z=0.000",
+          "elapsed_seconds": 437.4210962019861
+        },
+        {
+          "name": "TP_run_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=588.053 foot_crossings=4 peak=127.531 jump_distance=443.513 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=1243.663 Z=0.000",
+          "elapsed_seconds": 443.8424359001219
+        },
+        {
+          "name": "TP_stand_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=74 foot_speed=276.663 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.398 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 514.0773584991693
+        },
+        {
+          "name": "TP_stand_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.784 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 520.4808942005038
+        },
+        {
+          "name": "TP_stand_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.744 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.344 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 526.8929295986891
+        },
+        {
+          "name": "TP_stand_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.743 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 533.3133985996246
+        },
+        {
+          "name": "TP_stand_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.721 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 539.7526043988764
+        },
+        {
+          "name": "TP_stand_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.695 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 546.168091699481
+        },
+        {
+          "name": "TP_stand_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.702 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 552.6007225997746
+        },
+        {
+          "name": "TP_stand_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=74 foot_speed=276.337 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.410 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 559.056898701936
+        },
+        {
+          "name": "TP_stand_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.679 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 565.5033788010478
+        },
+        {
+          "name": "TP_stand_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.688 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 571.9528414011002
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_133949\\User\\Saved\\M5Tests\\20260929_134010_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_135747",
+      "case": "r5aextra",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 13,
+      "failures": 3,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "R5 extra 0 sword jump timing",
+          "status": "FAIL",
+          "evidence_level": "B normal Jump Action triggered from observed animation window",
+          "expected": "normal Jump buffered <=.2s",
+          "actual": "window=1 requested=0.3261 jump=-1.0000 delay=-1.3261 air_starts=0 max_swing=0.760 cast=0 min_cast_speed=339999995214436424907732413799364296704.00 mp_before=100.00 mp_after=100.00",
+          "elapsed_seconds": 45.57943329960108
+        },
+        {
+          "name": "TP mobile body turn0.1s",
+          "status": "FAIL",
+          "evidence_level": "B calibrated normal Look Action",
+          "expected": "body within3degrees after0.1s",
+          "actual": "body=163.612 aim=180.000 error=16.388",
+          "elapsed_seconds": 91.67730479687452
+        },
+        {
+          "name": "FP mobile body turn0.1s",
+          "status": "FAIL",
+          "evidence_level": "B calibrated normal Look Action",
+          "expected": "body within3degrees after0.1s",
+          "actual": "body=163.612 aim=180.000 error=16.388",
+          "elapsed_seconds": 95.02594229951501
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_135747\\User\\Saved\\M5Tests\\20260929_135903_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_141157",
+      "case": "r5afist",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 204,
+      "failures": 20,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_near_run_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=74 foot_speed=580.620 foot_crossings=4 peak=127.531 jump_distance=428.673 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.394 delta=X=0.000 Y=1228.677 Z=-0.000",
+          "elapsed_seconds": 189.9914549998939
+        },
+        {
+          "name": "TP_near_run_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.131 foot_crossings=4 peak=127.531 jump_distance=427.403 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=1227.407 Z=0.000",
+          "elapsed_seconds": 196.1670215986669
+        },
+        {
+          "name": "TP_near_run_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.197 foot_crossings=4 peak=127.529 jump_distance=428.159 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.416 delta=X=0.000 Y=1228.164 Z=0.000",
+          "elapsed_seconds": 202.3493223004043
+        },
+        {
+          "name": "TP_near_run_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=584.922 foot_crossings=4 peak=127.526 jump_distance=428.546 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.465 delta=X=0.000 Y=1228.551 Z=0.000",
+          "elapsed_seconds": 208.53432489931583
+        },
+        {
+          "name": "TP_near_run_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.290 foot_crossings=4 peak=127.529 jump_distance=428.628 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.413 delta=X=0.000 Y=1228.740 Z=-0.000",
+          "elapsed_seconds": 214.72552770003676
+        },
+        {
+          "name": "TP_near_run_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.471 foot_crossings=4 peak=127.531 jump_distance=428.674 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1228.684 Z=0.000",
+          "elapsed_seconds": 220.92101179808378
+        },
+        {
+          "name": "TP_near_run_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.670 foot_crossings=4 peak=127.531 jump_distance=429.401 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1229.509 Z=0.000",
+          "elapsed_seconds": 227.12472639977932
+        },
+        {
+          "name": "TP_near_run_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.647 foot_crossings=4 peak=127.530 jump_distance=429.727 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1229.999 Z=0.000",
+          "elapsed_seconds": 233.33717520162463
+        },
+        {
+          "name": "TP_near_run_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.814 foot_crossings=4 peak=127.530 jump_distance=430.493 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1230.530 Z=-0.000",
+          "elapsed_seconds": 239.56464729830623
+        },
+        {
+          "name": "TP_near_run_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=585.895 foot_crossings=4 peak=127.531 jump_distance=430.774 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=1230.848 Z=0.000",
+          "elapsed_seconds": 245.78607580065727
+        },
+        {
+          "name": "TP_near_stand_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=74 foot_speed=276.958 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.438 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 252.00948959961534
+        },
+        {
+          "name": "TP_near_stand_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.516 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 258.20081770047545
+        },
+        {
+          "name": "TP_near_stand_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.510 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 264.4065430983901
+        },
+        {
+          "name": "TP_near_stand_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.520 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 270.60982659831643
+        },
+        {
+          "name": "TP_near_stand_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.478 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 276.82486990094185
+        },
+        {
+          "name": "TP_near_stand_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.494 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 283.0378051996231
+        },
+        {
+          "name": "TP_near_stand_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.471 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 289.2616690993309
+        },
+        {
+          "name": "TP_near_stand_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.511 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 295.48134069889784
+        },
+        {
+          "name": "TP_near_stand_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.533 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 301.7162530981004
+        },
+        {
+          "name": "TP_near_stand_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.542 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 307.9493369013071
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_141157\\User\\Saved\\M5Tests\\20260929_141227_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_143108",
+      "case": "r5afistprobe",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 24,
+      "failures": 2,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_near_run_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=74 foot_speed=513.063 foot_crossings=3 peak=127.530 jump_distance=420.021 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1226.702 Z=-0.000",
+          "elapsed_seconds": 37.53807869926095
+        },
+        {
+          "name": "TP_near_stand_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=74 foot_speed=267.744 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 43.612978499382734
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_143108\\User\\Saved\\M5Tests\\20260929_143130_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_143715",
+      "case": "r5afistcontact",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 204,
+      "failures": 10,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_contact_run_jump_fist_01 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.198 mean_speed=398.448 attack_frames=74 foot_speed=587.737 foot_crossings=4 peak=127.530 jump_distance=420.032 landed=1 segments=2 air_segments=2 hits=1 camera_bob=17.335 delta=X=23.894 Y=1225.918 Z=0.000",
+          "elapsed_seconds": 190.8402890972793
+        },
+        {
+          "name": "TP_contact_run_jump_fist_02 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.200 mean_speed=398.634 attack_frames=75 foot_speed=586.168 foot_crossings=4 peak=127.531 jump_distance=424.173 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.793 Y=1223.475 Z=0.000",
+          "elapsed_seconds": 197.02681079879403
+        },
+        {
+          "name": "TP_contact_run_jump_fist_03 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.457 foot_crossings=4 peak=127.530 jump_distance=422.876 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.218 Y=1222.188 Z=0.000",
+          "elapsed_seconds": 203.2101200968027
+        },
+        {
+          "name": "TP_contact_run_jump_fist_04 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.561 foot_crossings=4 peak=127.531 jump_distance=423.062 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.306 Y=1222.425 Z=-0.000",
+          "elapsed_seconds": 209.4053620994091
+        },
+        {
+          "name": "TP_contact_run_jump_fist_05 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.781 foot_crossings=4 peak=127.531 jump_distance=423.440 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.494 Y=1222.810 Z=0.000",
+          "elapsed_seconds": 215.59852209687233
+        },
+        {
+          "name": "TP_contact_run_jump_fist_06 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.199 mean_speed=398.634 attack_frames=75 foot_speed=586.136 foot_crossings=4 peak=127.530 jump_distance=424.147 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.785 Y=1223.453 Z=0.000",
+          "elapsed_seconds": 221.79750129953027
+        },
+        {
+          "name": "TP_contact_run_jump_fist_07 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=586.108 foot_crossings=4 peak=127.531 jump_distance=424.126 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.789 Y=1223.551 Z=-0.000",
+          "elapsed_seconds": 227.99956769868731
+        },
+        {
+          "name": "TP_contact_run_jump_fist_08 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.205 mean_speed=398.634 attack_frames=75 foot_speed=586.145 foot_crossings=4 peak=127.530 jump_distance=424.349 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.335 delta=X=24.772 Y=1223.691 Z=-0.000",
+          "elapsed_seconds": 234.21636959910393
+        },
+        {
+          "name": "TP_contact_run_jump_fist_09 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.202 mean_speed=398.634 attack_frames=75 foot_speed=586.237 foot_crossings=4 peak=127.530 jump_distance=425.483 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.336 delta=X=24.743 Y=1224.927 Z=0.000",
+          "elapsed_seconds": 240.4404681995511
+        },
+        {
+          "name": "TP_contact_run_jump_fist_10 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=586.092 foot_crossings=4 peak=127.526 jump_distance=426.120 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.662 delta=X=24.973 Y=1225.472 Z=-0.000",
+          "elapsed_seconds": 246.6729364991188
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_143715\\User\\Saved\\M5Tests\\20260929_143736_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628",
+      "case": "r5hairbaseline",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 12,
+      "cause": "Measured live hair sphere/capsule overlap and/or individual tip displacement exceeds limits. Three attempts and final retained combination are distinguished in B_FIX_REPORT.",
+      "failed_checks": [
+        {
+          "name": "r5hairbaseline_30fps_walk penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=180 seconds=6.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=7.0779 center_inside_frames=11 max_center_inside_cm=3.3279 speed_min=180.00 gait_cycles=6.0 tip_y_at1s=0.000 tip_y_end=-1.878 authored_arm_capsules=2",
+          "elapsed_seconds": 20.29430690035224
+        },
+        {
+          "name": "r5hairbaseline_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=150 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.6512 center_inside_frames=140 max_center_inside_cm=5.9012 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=-0.074 authored_arm_capsules=2",
+          "elapsed_seconds": 28.356913901865482
+        },
+        {
+          "name": "r5hairbaseline_30fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=135 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.4925 center_inside_frames=118 max_center_inside_cm=5.7425 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.894 authored_arm_capsules=2",
+          "elapsed_seconds": 35.92714840173721
+        },
+        {
+          "name": "r5hairbaseline_30fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=7.4974 center_inside_frames=90 max_center_inside_cm=3.7474 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.599 tip_y_end=7.095 authored_arm_capsules=2 max_tip_delta_at1s=17.134 max_tip_delta_end=16.005",
+          "elapsed_seconds": 50.255979903042316
+        },
+        {
+          "name": "r5hairbaseline_30fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=5.5099 center_inside_frames=90 max_center_inside_cm=1.7599 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=6.610 tip_y_end=7.740 authored_arm_capsules=2 max_tip_delta_at1s=17.253 max_tip_delta_end=15.153",
+          "elapsed_seconds": 56.3201685026288
+        },
+        {
+          "name": "r5hairbaseline_30fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=8.5228 center_inside_frames=89 max_center_inside_cm=4.7728 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=6.440 tip_y_end=6.902 authored_arm_capsules=2 max_tip_delta_at1s=31.741 max_tip_delta_end=27.548",
+          "elapsed_seconds": 62.38918140158057
+        },
+        {
+          "name": "r5hairbaseline_60fps_walk penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=360 seconds=6.000 nodes=8 bones=150 sphere_overlap_frames=360 sphere_overlap_pct=100.000 max_sphere_overlap_cm=7.7423 center_inside_frames=23 max_center_inside_cm=3.9923 speed_min=180.00 gait_cycles=6.0 tip_y_at1s=0.000 tip_y_end=-1.859 authored_arm_capsules=2",
+          "elapsed_seconds": 71.40028399974108
+        },
+        {
+          "name": "r5hairbaseline_60fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=300 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.6014 center_inside_frames=278 max_center_inside_cm=5.8514 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.021 authored_arm_capsules=2",
+          "elapsed_seconds": 79.41672610118985
+        },
+        {
+          "name": "r5hairbaseline_60fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=270 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=270 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.6351 center_inside_frames=234 max_center_inside_cm=5.8851 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.553 authored_arm_capsules=2",
+          "elapsed_seconds": 86.92271600291133
+        },
+        {
+          "name": "r5hairbaseline_60fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=7.6769 center_inside_frames=180 max_center_inside_cm=3.9269 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=6.003 tip_y_end=7.106 authored_arm_capsules=2 max_tip_delta_at1s=17.175 max_tip_delta_end=15.872",
+          "elapsed_seconds": 101.12399500235915
+        },
+        {
+          "name": "r5hairbaseline_60fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=5.4833 center_inside_frames=180 max_center_inside_cm=1.7333 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.296 tip_y_end=7.746 authored_arm_capsules=2 max_tip_delta_at1s=17.282 max_tip_delta_end=15.079",
+          "elapsed_seconds": 107.12628430128098
+        },
+        {
+          "name": "r5hairbaseline_60fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=7.9490 center_inside_frames=178 max_center_inside_cm=4.1990 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=6.450 tip_y_end=6.907 authored_arm_capsules=2 max_tip_delta_at1s=32.040 max_tip_delta_end=28.282",
+          "elapsed_seconds": 113.12828930094838
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628\\User\\Saved\\M5Tests\\20260929_145636_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_150558",
+      "case": "r5hairafter1",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 12,
+      "cause": "Measured live hair sphere/capsule overlap and/or individual tip displacement exceeds limits. Three attempts and final retained combination are distinguished in B_FIX_REPORT.",
+      "failed_checks": [
+        {
+          "name": "r5hairafter1_30fps_walk penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=180 seconds=6.000 nodes=8 bones=150 sphere_overlap_frames=179 sphere_overlap_pct=99.444 max_sphere_overlap_cm=8.8566 center_inside_frames=22 max_center_inside_cm=5.1066 speed_min=180.00 gait_cycles=6.0 tip_y_at1s=0.000 tip_y_end=-1.482 authored_arm_capsules=12",
+          "elapsed_seconds": 27.447959002107382
+        },
+        {
+          "name": "r5hairafter1_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=150 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.6232 center_inside_frames=128 max_center_inside_cm=5.8732 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.194 authored_arm_capsules=12",
+          "elapsed_seconds": 35.51487170159817
+        },
+        {
+          "name": "r5hairafter1_30fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=135 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.5937 center_inside_frames=95 max_center_inside_cm=5.8437 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.858 authored_arm_capsules=12",
+          "elapsed_seconds": 43.07917179912329
+        },
+        {
+          "name": "r5hairafter1_30fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=7.2985 center_inside_frames=90 max_center_inside_cm=3.5485 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=6.127 tip_y_end=7.565 authored_arm_capsules=12 max_tip_delta_at1s=13.826 max_tip_delta_end=16.490",
+          "elapsed_seconds": 57.4197927005589
+        },
+        {
+          "name": "r5hairafter1_30fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.8807 center_inside_frames=90 max_center_inside_cm=1.7557 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=8.189 tip_y_end=8.677 authored_arm_capsules=12 max_tip_delta_at1s=13.917 max_tip_delta_end=13.660",
+          "elapsed_seconds": 63.48143230006099
+        },
+        {
+          "name": "r5hairafter1_30fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.024 nodes=8 bones=150 sphere_overlap_frames=89 sphere_overlap_pct=98.889 max_sphere_overlap_cm=7.2018 center_inside_frames=88 max_center_inside_cm=3.4518 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=6.850 tip_y_end=7.239 authored_arm_capsules=12 max_tip_delta_at1s=30.572 max_tip_delta_end=26.486",
+          "elapsed_seconds": 69.57786010205746
+        },
+        {
+          "name": "r5hairafter1_60fps_walk penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=360 seconds=6.000 nodes=8 bones=150 sphere_overlap_frames=351 sphere_overlap_pct=97.500 max_sphere_overlap_cm=8.9718 center_inside_frames=38 max_center_inside_cm=5.2218 speed_min=180.00 gait_cycles=6.0 tip_y_at1s=0.000 tip_y_end=-1.829 authored_arm_capsules=12",
+          "elapsed_seconds": 78.58617800101638
+        },
+        {
+          "name": "r5hairafter1_60fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=300 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.6577 center_inside_frames=263 max_center_inside_cm=5.9077 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.290 authored_arm_capsules=12",
+          "elapsed_seconds": 86.61373380199075
+        },
+        {
+          "name": "r5hairafter1_60fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=270 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=270 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.6957 center_inside_frames=207 max_center_inside_cm=5.9457 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.527 authored_arm_capsules=12",
+          "elapsed_seconds": 94.11692590266466
+        },
+        {
+          "name": "r5hairafter1_60fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=8.1011 center_inside_frames=180 max_center_inside_cm=4.3511 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.591 tip_y_end=7.574 authored_arm_capsules=12 max_tip_delta_at1s=19.874 max_tip_delta_end=16.538",
+          "elapsed_seconds": 108.32115960121155
+        },
+        {
+          "name": "r5hairafter1_60fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.8300 center_inside_frames=180 max_center_inside_cm=1.7050 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=8.240 tip_y_end=8.682 authored_arm_capsules=12 max_tip_delta_at1s=13.612 max_tip_delta_end=13.730",
+          "elapsed_seconds": 114.33855560049415
+        },
+        {
+          "name": "r5hairafter1_60fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=7.5296 center_inside_frames=173 max_center_inside_cm=3.7796 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=6.879 tip_y_end=7.238 authored_arm_capsules=12 max_tip_delta_at1s=29.936 max_tip_delta_end=26.139",
+          "elapsed_seconds": 120.34317880123854
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_150558\\User\\Saved\\M5Tests\\20260929_150626_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_151416",
+      "case": "r5hairprobe",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 6,
+      "failures": 1,
+      "cause": "Measured live hair sphere/capsule overlap and/or individual tip displacement exceeds limits. Three attempts and final retained combination are distinguished in B_FIX_REPORT.",
+      "failed_checks": [
+        {
+          "name": "r5hairprobe_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=150 sphere_overlap_pct=100.000 max_sphere_overlap_cm=9.5852 center_inside_frames=127 max_center_inside_cm=5.8352 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.194 authored_arm_capsules=12",
+          "elapsed_seconds": 22.59986139833927
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_151416\\User\\Saved\\M5Tests\\20260929_151441_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_152019",
+      "case": "r5hairafter2",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 12,
+      "cause": "Measured live hair sphere/capsule overlap and/or individual tip displacement exceeds limits. Three attempts and final retained combination are distinguished in B_FIX_REPORT.",
+      "failed_checks": [
+        {
+          "name": "r5hairafter2_30fps_walk penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=180 seconds=6.000 nodes=8 bones=150 sphere_overlap_frames=171 sphere_overlap_pct=95.000 max_sphere_overlap_cm=2.1427 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=180.00 gait_cycles=6.0 tip_y_at1s=0.000 tip_y_end=-2.737 authored_arm_capsules=12",
+          "elapsed_seconds": 23.440333399921656
+        },
+        {
+          "name": "r5hairafter2_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=142 sphere_overlap_pct=94.667 max_sphere_overlap_cm=3.3073 center_inside_frames=20 max_center_inside_cm=0.8073 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.155 authored_arm_capsules=12",
+          "elapsed_seconds": 31.508233200758696
+        },
+        {
+          "name": "r5hairafter2_30fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=135 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.5180 center_inside_frames=72 max_center_inside_cm=2.0180 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=1.070 authored_arm_capsules=12",
+          "elapsed_seconds": 39.07885719835758
+        },
+        {
+          "name": "r5hairafter2_30fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.5982 center_inside_frames=90 max_center_inside_cm=1.4732 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.389 tip_y_end=4.859 authored_arm_capsules=12 max_tip_delta_at1s=8.330 max_tip_delta_end=11.100",
+          "elapsed_seconds": 53.38090869784355
+        },
+        {
+          "name": "r5hairafter2_30fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.8805 center_inside_frames=90 max_center_inside_cm=1.7555 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.198 tip_y_end=7.181 authored_arm_capsules=12 max_tip_delta_at1s=14.626 max_tip_delta_end=16.198",
+          "elapsed_seconds": 59.45294339954853
+        },
+        {
+          "name": "r5hairafter2_30fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.028 nodes=8 bones=150 sphere_overlap_frames=88 sphere_overlap_pct=97.778 max_sphere_overlap_cm=5.2295 center_inside_frames=87 max_center_inside_cm=2.1045 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=9.210 tip_y_end=7.479 authored_arm_capsules=12 max_tip_delta_at1s=26.040 max_tip_delta_end=25.464",
+          "elapsed_seconds": 65.56775739789009
+        },
+        {
+          "name": "r5hairafter2_60fps_walk penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=360 seconds=6.000 nodes=8 bones=150 sphere_overlap_frames=342 sphere_overlap_pct=95.000 max_sphere_overlap_cm=2.1536 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=180.00 gait_cycles=6.0 tip_y_at1s=0.000 tip_y_end=-2.792 authored_arm_capsules=12",
+          "elapsed_seconds": 74.57539109885693
+        },
+        {
+          "name": "r5hairafter2_60fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=284 sphere_overlap_pct=94.667 max_sphere_overlap_cm=3.3278 center_inside_frames=40 max_center_inside_cm=0.8278 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.190 authored_arm_capsules=12",
+          "elapsed_seconds": 82.5873866006732
+        },
+        {
+          "name": "r5hairafter2_60fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=270 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=270 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.6481 center_inside_frames=141 max_center_inside_cm=2.1481 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.755 authored_arm_capsules=12",
+          "elapsed_seconds": 90.0942277982831
+        },
+        {
+          "name": "r5hairafter2_60fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.5612 center_inside_frames=180 max_center_inside_cm=1.4362 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.459 tip_y_end=4.871 authored_arm_capsules=12 max_tip_delta_at1s=7.797 max_tip_delta_end=10.221",
+          "elapsed_seconds": 104.31218500062823
+        },
+        {
+          "name": "r5hairafter2_60fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=4.8297 center_inside_frames=180 max_center_inside_cm=1.7047 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.236 tip_y_end=7.190 authored_arm_capsules=12 max_tip_delta_at1s=15.184 max_tip_delta_end=16.735",
+          "elapsed_seconds": 110.31231399998069
+        },
+        {
+          "name": "r5hairafter2_60fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=5.6797 center_inside_frames=172 max_center_inside_cm=2.5547 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=7.984 tip_y_end=7.484 authored_arm_capsules=12 max_tip_delta_at1s=24.389 max_tip_delta_end=24.563",
+          "elapsed_seconds": 116.3395591005683
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_152019\\User\\Saved\\M5Tests\\20260929_152040_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255",
+      "case": "r5hairafter3",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 10,
+      "cause": "Measured live hair sphere/capsule overlap and/or individual tip displacement exceeds limits. Three attempts and final retained combination are distinguished in B_FIX_REPORT.",
+      "failed_checks": [
+        {
+          "name": "r5hairafter3_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=12 sphere_overlap_pct=8.000 max_sphere_overlap_cm=0.7244 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.138 authored_arm_capsules=24",
+          "elapsed_seconds": 44.38866440206766
+        },
+        {
+          "name": "r5hairafter3_30fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=95 sphere_overlap_pct=70.370 max_sphere_overlap_cm=3.3622 center_inside_frames=32 max_center_inside_cm=0.8622 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=1.261 authored_arm_capsules=24",
+          "elapsed_seconds": 51.95963820070028
+        },
+        {
+          "name": "r5hairafter3_30fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=2 sphere_overlap_pct=2.222 max_sphere_overlap_cm=0.1201 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.347 tip_y_end=7.844 authored_arm_capsules=24 max_tip_delta_at1s=14.886 max_tip_delta_end=18.037",
+          "elapsed_seconds": 66.31521390005946
+        },
+        {
+          "name": "r5hairafter3_30fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.001 nodes=8 bones=150 sphere_overlap_frames=19 sphere_overlap_pct=21.111 max_sphere_overlap_cm=1.2771 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=9.087 tip_y_end=7.867 authored_arm_capsules=24 max_tip_delta_at1s=15.001 max_tip_delta_end=16.293",
+          "elapsed_seconds": 72.38026849925518
+        },
+        {
+          "name": "r5hairafter3_30fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.018 nodes=8 bones=150 sphere_overlap_frames=9 sphere_overlap_pct=10.000 max_sphere_overlap_cm=2.5624 center_inside_frames=1 max_center_inside_cm=0.0624 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=11.689 tip_y_end=11.704 authored_arm_capsules=24 max_tip_delta_at1s=34.385 max_tip_delta_end=33.048",
+          "elapsed_seconds": 78.48202620074153
+        },
+        {
+          "name": "r5hairafter3_60fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=32 sphere_overlap_pct=10.667 max_sphere_overlap_cm=0.3026 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.186 authored_arm_capsules=24",
+          "elapsed_seconds": 95.51092280074954
+        },
+        {
+          "name": "r5hairafter3_60fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=270 seconds=4.501 nodes=8 bones=150 sphere_overlap_frames=198 sphere_overlap_pct=73.333 max_sphere_overlap_cm=3.3993 center_inside_frames=66 max_center_inside_cm=0.8993 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.818 authored_arm_capsules=24",
+          "elapsed_seconds": 103.0256550014019
+        },
+        {
+          "name": "r5hairafter3_60fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=4 sphere_overlap_pct=2.222 max_sphere_overlap_cm=0.1587 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.348 tip_y_end=7.852 authored_arm_capsules=24 max_tip_delta_at1s=14.946 max_tip_delta_end=18.052",
+          "elapsed_seconds": 117.2439915984869
+        },
+        {
+          "name": "r5hairafter3_60fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=40 sphere_overlap_pct=22.222 max_sphere_overlap_cm=1.4519 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=9.112 tip_y_end=7.807 authored_arm_capsules=24 max_tip_delta_at1s=15.052 max_tip_delta_end=16.298",
+          "elapsed_seconds": 123.24743280187249
+        },
+        {
+          "name": "r5hairafter3_60fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=19 sphere_overlap_pct=10.556 max_sphere_overlap_cm=1.9466 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=11.795 tip_y_end=11.703 authored_arm_capsules=24 max_tip_delta_at1s=34.656 max_tip_delta_end=33.033",
+          "elapsed_seconds": 129.26414370164275
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_160926",
+      "case": "r5fppeaks",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 23,
+      "failures": 12,
+      "cause": "Effect coverage outside limits and/or duplicate-control noise. Early attempts also failed capture-owner,30Hz and charge/heal/ground prerequisites; see C audit and FP_FINAL_PEAKS.",
+      "failed_checks": [
+        {
+          "name": "Arcane_muzzle full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 2.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=63 simulation_seconds=3.2249 wall_seconds=3.299",
+          "elapsed_seconds": 18.902253601700068
+        },
+        {
+          "name": "Steamlock_muzzle full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 2.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0311 control=0.0000 frames=63 simulation_seconds=3.1043 wall_seconds=3.181",
+          "elapsed_seconds": 27.41570520028472
+        },
+        {
+          "name": "Arrow_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=22 simulation_seconds=1.1240 wall_seconds=1.212",
+          "elapsed_seconds": 33.96265070140362
+        },
+        {
+          "name": "Arrow_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=97 simulation_seconds=5.0320 wall_seconds=5.011",
+          "elapsed_seconds": 38.98195170238614
+        },
+        {
+          "name": "StarTide_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=82 simulation_seconds=4.0182 wall_seconds=4.010",
+          "elapsed_seconds": 49.520016599446535
+        },
+        {
+          "name": "CrimsonNight_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=84 simulation_seconds=4.0313 wall_seconds=4.006",
+          "elapsed_seconds": 60.20593650266528
+        },
+        {
+          "name": "Bolt_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0016 control=0.0000 frames=24 simulation_seconds=1.1599 wall_seconds=1.238",
+          "elapsed_seconds": 76.89851140230894
+        },
+        {
+          "name": "Bolt_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 4.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=2.6511 control=0.0000 frames=99 simulation_seconds=5.0280 wall_seconds=5.007",
+          "elapsed_seconds": 81.9194132015109
+        },
+        {
+          "name": "Shock_warning full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=25 simulation_seconds=1.2152 wall_seconds=1.277",
+          "elapsed_seconds": 96.43926610052586
+        },
+        {
+          "name": "Shock_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=100 simulation_seconds=5.0269 wall_seconds=5.018",
+          "elapsed_seconds": 101.47469690069556
+        },
+        {
+          "name": "Heal full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=159 simulation_seconds=8.0702 wall_seconds=8.161",
+          "elapsed_seconds": 122.88317020237446
+        },
+        {
+          "name": "Shield full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A final executable paired scene render; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport visual recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0002 control=0.0000 frames=162 simulation_seconds=8.1109 wall_seconds=8.191",
+          "elapsed_seconds": 144.32314670085907
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_160926\\User\\Saved\\M5Tests\\20260929_160929_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_162727",
+      "case": "r5fppeaks",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 23,
+      "failures": 12,
+      "cause": "Effect coverage outside limits and/or duplicate-control noise. Early attempts also failed capture-owner,30Hz and charge/heal/ground prerequisites; see C audit and FP_FINAL_PEAKS.",
+      "failed_checks": [
+        {
+          "name": "Arcane_muzzle full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 2.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=13.4486 control=0.0000 frames=93 simulation_seconds=3.1000 wall_seconds=7.199",
+          "elapsed_seconds": 25.829634699970484
+        },
+        {
+          "name": "Arrow_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0074 control=0.0000 frames=33 simulation_seconds=1.1000 wall_seconds=2.494",
+          "elapsed_seconds": 46.13957279920578
+        },
+        {
+          "name": "Arrow_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=27.6970 control=0.0000 frames=150 simulation_seconds=5.0000 wall_seconds=11.250",
+          "elapsed_seconds": 57.39414719864726
+        },
+        {
+          "name": "StarTide_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=37.3015 control=0.0000 frames=29 simulation_seconds=0.9667 wall_seconds=2.221",
+          "elapsed_seconds": 64.24592829868197
+        },
+        {
+          "name": "StarTide_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=120 simulation_seconds=4.0000 wall_seconds=9.051",
+          "elapsed_seconds": 78.0832292996347
+        },
+        {
+          "name": "CrimsonNight_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=40.0924 control=0.0000 frames=29 simulation_seconds=0.9667 wall_seconds=2.196",
+          "elapsed_seconds": 84.81521369889379
+        },
+        {
+          "name": "CrimsonNight_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=120 simulation_seconds=4.0000 wall_seconds=8.912",
+          "elapsed_seconds": 98.48586840182543
+        },
+        {
+          "name": "Bolt_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=2.3704 control=0.0000 frames=35 simulation_seconds=1.1667 wall_seconds=2.761",
+          "elapsed_seconds": 116.76171969994903
+        },
+        {
+          "name": "Bolt_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 4.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=59.6571 control=0.0000 frames=150 simulation_seconds=5.0000 wall_seconds=10.880",
+          "elapsed_seconds": 127.6503183990717
+        },
+        {
+          "name": "Shock_warning full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.4653 control=0.0000 frames=35 simulation_seconds=1.1667 wall_seconds=2.609",
+          "elapsed_seconds": 143.54129099845886
+        },
+        {
+          "name": "Shock_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.1754 control=0.0000 frames=150 simulation_seconds=5.0000 wall_seconds=10.627",
+          "elapsed_seconds": 154.1788681000471
+        },
+        {
+          "name": "Heal full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.0000 control=0.0000 frames=242 simulation_seconds=8.0667 wall_seconds=17.272",
+          "elapsed_seconds": 184.73520980030298
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_162727\\User\\Saved\\M5Tests\\20260929_162801_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_165015",
+      "case": "r5fppeaks",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "checks": 28,
+      "failures": 10,
+      "cause": "Effect coverage outside limits and/or duplicate-control noise. Early attempts also failed capture-owner,30Hz and charge/heal/ground prerequisites; see C audit and FP_FINAL_PEAKS.",
+      "failed_checks": [
+        {
+          "name": "Arrow_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.1152 control=0.0400 frames=33 simulation_seconds=1.1000 wall_seconds=2.709",
+          "elapsed_seconds": 46.294611901044846
+        },
+        {
+          "name": "StarTide_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=26.8481 control=0.5893 frames=29 simulation_seconds=0.9667 wall_seconds=2.341",
+          "elapsed_seconds": 64.82578979805112
+        },
+        {
+          "name": "StarTide_slash3 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=10.5904 control=1.0069 frames=29 simulation_seconds=0.9667 wall_seconds=2.407",
+          "elapsed_seconds": 67.2422647997737
+        },
+        {
+          "name": "StarTide_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=44.9961 control=0.2255 frames=120 simulation_seconds=4.0000 wall_seconds=9.428",
+          "elapsed_seconds": 80.67408619821072
+        },
+        {
+          "name": "CrimsonNight_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=35.4373 control=0.1983 frames=29 simulation_seconds=0.9667 wall_seconds=2.179",
+          "elapsed_seconds": 87.35516950115561
+        },
+        {
+          "name": "CrimsonNight_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=45.1384 control=0.0967 frames=120 simulation_seconds=4.0000 wall_seconds=8.733",
+          "elapsed_seconds": 101.93417979776859
+        },
+        {
+          "name": "Bolt_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=1.1994 control=0.0432 frames=35 simulation_seconds=1.1667 wall_seconds=2.673",
+          "elapsed_seconds": 121.8885490000248
+        },
+        {
+          "name": "Bolt_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 4.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=3.1688 control=0.0432 frames=150 simulation_seconds=5.0000 wall_seconds=10.852",
+          "elapsed_seconds": 132.74979040026665
+        },
+        {
+          "name": "Shock_warning full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=2.3322 control=0.0494 frames=35 simulation_seconds=1.1667 wall_seconds=2.667",
+          "elapsed_seconds": 150.49787719920278
+        },
+        {
+          "name": "Shield full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=2.8522 control=0.0426 frames=242 simulation_seconds=8.0667 wall_seconds=17.668",
+          "elapsed_seconds": 226.69078660011292
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_165015\\User\\Saved\\M5Tests\\20260929_165047_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_171044",
+      "case": "r5a",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 568,
+      "failures": 25,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_run_jump_sword_09 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=399.886 attack_frames=96 foot_speed=501.242 foot_crossings=5 peak=127.531 jump_distance=457.879 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=7.373 Y=1257.276 Z=0.000 reference=X=127.531 Y=421.891 Z=16.334",
+          "elapsed_seconds": 370.16373259946704
+        },
+        {
+          "name": "TP_run_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.971 foot_crossings=4 peak=127.530 jump_distance=439.030 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1239.120 Z=0.000",
+          "elapsed_seconds": 382.8237355016172
+        },
+        {
+          "name": "TP_run_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.763 foot_crossings=4 peak=127.531 jump_distance=440.426 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1240.718 Z=-0.000",
+          "elapsed_seconds": 389.1985922008753
+        },
+        {
+          "name": "TP_run_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.763 foot_crossings=4 peak=127.531 jump_distance=440.466 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=1240.506 Z=-0.000",
+          "elapsed_seconds": 395.5790258012712
+        },
+        {
+          "name": "TP_run_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.702 foot_crossings=4 peak=127.531 jump_distance=440.849 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1240.864 Z=-0.000",
+          "elapsed_seconds": 401.95260969921947
+        },
+        {
+          "name": "TP_run_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=582.863 foot_crossings=4 peak=127.518 jump_distance=442.227 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.363 delta=X=0.000 Y=1242.325 Z=0.000",
+          "elapsed_seconds": 408.3330508992076
+        },
+        {
+          "name": "TP_run_jump_fist_05 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=582.863 foot_crossings=4 peak=127.518 jump_distance=442.227 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.363 delta=X=0.000 Y=1242.325 Z=0.000 reference=X=127.531 Y=420.510 Z=16.334",
+          "elapsed_seconds": 408.3968106992543
+        },
+        {
+          "name": "TP_run_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.309 foot_crossings=4 peak=127.531 jump_distance=444.528 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1244.558 Z=0.000",
+          "elapsed_seconds": 414.7258580997586
+        },
+        {
+          "name": "TP_run_jump_fist_06 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.309 foot_crossings=4 peak=127.531 jump_distance=444.528 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1244.558 Z=0.000 reference=X=127.530 Y=420.816 Z=16.334",
+          "elapsed_seconds": 414.7893483005464
+        },
+        {
+          "name": "TP_run_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.552 foot_crossings=4 peak=127.530 jump_distance=441.593 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1241.640 Z=-0.000",
+          "elapsed_seconds": 421.11344569921494
+        },
+        {
+          "name": "TP_run_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.372 foot_crossings=4 peak=127.530 jump_distance=442.853 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=1242.867 Z=-0.000",
+          "elapsed_seconds": 427.51920910179615
+        },
+        {
+          "name": "TP_run_jump_fist_08 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.372 foot_crossings=4 peak=127.530 jump_distance=442.853 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=1242.867 Z=-0.000 reference=X=127.531 Y=421.415 Z=16.333",
+          "elapsed_seconds": 427.58756110072136
+        },
+        {
+          "name": "TP_run_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.320 foot_crossings=4 peak=127.531 jump_distance=443.546 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1243.570 Z=-0.000",
+          "elapsed_seconds": 433.9249642007053
+        },
+        {
+          "name": "TP_run_jump_fist_09 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.320 foot_crossings=4 peak=127.531 jump_distance=443.546 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1243.570 Z=-0.000 reference=X=127.531 Y=421.891 Z=16.334",
+          "elapsed_seconds": 433.991986900568
+        },
+        {
+          "name": "TP_run_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.386 foot_crossings=4 peak=127.530 jump_distance=442.864 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1242.879 Z=0.000",
+          "elapsed_seconds": 440.3293981999159
+        },
+        {
+          "name": "TP_stand_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.907 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 510.43307680264115
+        },
+        {
+          "name": "TP_stand_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.772 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 516.8376590013504
+        },
+        {
+          "name": "TP_stand_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.777 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 523.2381476014853
+        },
+        {
+          "name": "TP_stand_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.777 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 529.6522911004722
+        },
+        {
+          "name": "TP_stand_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.744 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 536.0774028003216
+        },
+        {
+          "name": "TP_stand_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.741 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 542.4939508028328
+        },
+        {
+          "name": "TP_stand_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.739 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 548.9131006002426
+        },
+        {
+          "name": "TP_stand_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.716 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 555.3481537997723
+        },
+        {
+          "name": "TP_stand_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.706 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 561.7841208018363
+        },
+        {
+          "name": "TP_stand_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.684 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 568.2340883016586
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_171044\\User\\Saved\\M5Tests\\20260929_171047_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_172543",
+      "case": "r5afistcontact",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 204,
+      "failures": 10,
+      "cause": "Fixed geometry fist contact misses; additional jump-distance checks can include pre-liftoff travel. Actual individual checks retained; final CSV recalculation is separate.",
+      "failed_checks": [
+        {
+          "name": "TP_contact_run_jump_fist_01 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.208 mean_speed=398.634 attack_frames=75 foot_speed=584.872 foot_crossings=4 peak=127.531 jump_distance=421.812 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=23.700 Y=1221.111 Z=-0.000",
+          "elapsed_seconds": 187.31345959752798
+        },
+        {
+          "name": "TP_contact_run_jump_fist_02 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.208 mean_speed=398.634 attack_frames=75 foot_speed=584.893 foot_crossings=4 peak=127.530 jump_distance=421.860 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=23.721 Y=1221.178 Z=0.000",
+          "elapsed_seconds": 193.4844518005848
+        },
+        {
+          "name": "TP_contact_run_jump_fist_03 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.270 foot_crossings=4 peak=127.531 jump_distance=422.601 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.068 Y=1221.932 Z=0.000",
+          "elapsed_seconds": 199.67035580053926
+        },
+        {
+          "name": "TP_contact_run_jump_fist_04 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.491 foot_crossings=4 peak=127.530 jump_distance=422.943 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.248 Y=1222.249 Z=-0.000",
+          "elapsed_seconds": 205.86300839856267
+        },
+        {
+          "name": "TP_contact_run_jump_fist_05 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.205 mean_speed=398.634 attack_frames=75 foot_speed=586.690 foot_crossings=4 peak=127.531 jump_distance=426.281 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=25.161 Y=1225.621 Z=-0.000",
+          "elapsed_seconds": 212.05969999730587
+        },
+        {
+          "name": "TP_contact_run_jump_fist_06 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.917 foot_crossings=4 peak=127.531 jump_distance=423.690 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.616 Y=1223.003 Z=-0.000",
+          "elapsed_seconds": 218.25641129910946
+        },
+        {
+          "name": "TP_contact_run_jump_fist_07 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=586.002 foot_crossings=4 peak=127.531 jump_distance=423.921 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.720 Y=1223.353 Z=0.000",
+          "elapsed_seconds": 224.47380619868636
+        },
+        {
+          "name": "TP_contact_run_jump_fist_08 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.087 mean_speed=398.627 attack_frames=75 foot_speed=586.332 foot_crossings=4 peak=127.531 jump_distance=424.649 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.821 Y=1224.019 Z=-0.000",
+          "elapsed_seconds": 230.68160839751363
+        },
+        {
+          "name": "TP_contact_run_jump_fist_09 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=586.427 foot_crossings=4 peak=127.531 jump_distance=425.636 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.845 Y=1224.977 Z=0.000",
+          "elapsed_seconds": 236.90326070040464
+        },
+        {
+          "name": "TP_contact_run_jump_fist_10 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.199 mean_speed=398.634 attack_frames=75 foot_speed=586.160 foot_crossings=4 peak=127.531 jump_distance=424.147 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.793 Y=1223.467 Z=-0.000",
+          "elapsed_seconds": 243.12148519977927
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_172543\\User\\Saved\\M5Tests\\20260929_172546_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829",
+      "case": "r5hairfinal",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 10,
+      "cause": "Measured live hair sphere/capsule overlap and/or individual tip displacement exceeds limits. Three attempts and final retained combination are distinguished in B_FIX_REPORT.",
+      "failed_checks": [
+        {
+          "name": "r5hairfinal_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=12 sphere_overlap_pct=8.000 max_sphere_overlap_cm=0.7244 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.138 authored_arm_capsules=24",
+          "elapsed_seconds": 28.303577799350023
+        },
+        {
+          "name": "r5hairfinal_30fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=95 sphere_overlap_pct=70.370 max_sphere_overlap_cm=3.3624 center_inside_frames=32 max_center_inside_cm=0.8624 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=1.261 authored_arm_capsules=24",
+          "elapsed_seconds": 35.87219309806824
+        },
+        {
+          "name": "r5hairfinal_30fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=2.8503 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.499 tip_y_end=4.859 authored_arm_capsules=24 max_tip_delta_at1s=8.410 max_tip_delta_end=11.140",
+          "elapsed_seconds": 50.19893490150571
+        },
+        {
+          "name": "r5hairfinal_30fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=3.4805 center_inside_frames=2 max_center_inside_cm=0.3555 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.198 tip_y_end=7.181 authored_arm_capsules=24 max_tip_delta_at1s=14.628 max_tip_delta_end=16.199",
+          "elapsed_seconds": 56.268631000071764
+        },
+        {
+          "name": "r5hairfinal_30fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=88 sphere_overlap_pct=97.778 max_sphere_overlap_cm=4.1003 center_inside_frames=2 max_center_inside_cm=1.6003 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=7.869 tip_y_end=7.468 authored_arm_capsules=24 max_tip_delta_at1s=26.053 max_tip_delta_end=25.545",
+          "elapsed_seconds": 62.33564219996333
+        },
+        {
+          "name": "r5hairfinal_60fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=31 sphere_overlap_pct=10.333 max_sphere_overlap_cm=0.3027 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.186 authored_arm_capsules=24",
+          "elapsed_seconds": 79.35754910111427
+        },
+        {
+          "name": "r5hairfinal_60fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=270 seconds=4.501 nodes=8 bones=150 sphere_overlap_frames=198 sphere_overlap_pct=73.333 max_sphere_overlap_cm=3.4062 center_inside_frames=65 max_center_inside_cm=0.9062 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.826 authored_arm_capsules=24",
+          "elapsed_seconds": 86.86955580115318
+        },
+        {
+          "name": "r5hairfinal_60fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=2.9138 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.514 tip_y_end=4.871 authored_arm_capsules=24 max_tip_delta_at1s=8.622 max_tip_delta_end=11.213",
+          "elapsed_seconds": 101.07242489978671
+        },
+        {
+          "name": "r5hairfinal_60fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=3.4146 center_inside_frames=4 max_center_inside_cm=0.2896 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.238 tip_y_end=7.190 authored_arm_capsules=24 max_tip_delta_at1s=14.755 max_tip_delta_end=16.305",
+          "elapsed_seconds": 107.07381390035152
+        },
+        {
+          "name": "r5hairfinal_60fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=178 sphere_overlap_pct=98.889 max_sphere_overlap_cm=3.5133 center_inside_frames=3 max_center_inside_cm=1.0133 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=7.680 tip_y_end=7.482 authored_arm_capsules=24 max_tip_delta_at1s=25.707 max_tip_delta_end=25.532",
+          "elapsed_seconds": 113.07659989967942
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215",
+      "case": "r5fppeaks",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 28,
+      "failures": 9,
+      "cause": "Effect coverage outside limits and/or duplicate-control noise. Early attempts also failed capture-owner,30Hz and charge/heal/ground prerequisites; see C audit and FP_FINAL_PEAKS.",
+      "failed_checks": [
+        {
+          "name": "Arrow_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.1355 control=0.0404 frames=33 simulation_seconds=1.1000 wall_seconds=1.903",
+          "elapsed_seconds": 38.49750419706106
+        },
+        {
+          "name": "StarTide_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=23.2701 control=0.5902 frames=29 simulation_seconds=0.9667 wall_seconds=1.622",
+          "elapsed_seconds": 52.1688185967505
+        },
+        {
+          "name": "StarTide_slash3 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=10.5904 control=1.0070 frames=29 simulation_seconds=0.9667 wall_seconds=1.677",
+          "elapsed_seconds": 53.854298397898674
+        },
+        {
+          "name": "StarTide_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=40.1570 control=0.2254 frames=120 simulation_seconds=4.0000 wall_seconds=6.457",
+          "elapsed_seconds": 63.36249849945307
+        },
+        {
+          "name": "CrimsonNight_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=31.1395 control=0.1988 frames=29 simulation_seconds=0.9667 wall_seconds=1.618",
+          "elapsed_seconds": 68.96936089918017
+        },
+        {
+          "name": "CrimsonNight_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=37.9091 control=0.0985 frames=120 simulation_seconds=4.0000 wall_seconds=6.486",
+          "elapsed_seconds": 80.11686349660158
+        },
+        {
+          "name": "Bolt_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=1.1992 control=0.0437 frames=36 simulation_seconds=1.2000 wall_seconds=2.071",
+          "elapsed_seconds": 99.46640719845891
+        },
+        {
+          "name": "Bolt_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 4.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=3.8668 control=0.0421 frames=150 simulation_seconds=5.0000 wall_seconds=8.112",
+          "elapsed_seconds": 107.58759589865804
+        },
+        {
+          "name": "Shock_warning full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=2.3351 control=0.0501 frames=36 simulation_seconds=1.2000 wall_seconds=2.148",
+          "elapsed_seconds": 124.81523499637842
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\results.json"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_182820",
+      "case": "m5_vs3_r3_b",
+      "kind": "STANDALONE_PACKAGE",
+      "status": "COMPLETE",
+      "checks": 7,
+      "failures": 1,
+      "cause": "See per-check expected/actual; unresolved root causes remain UNKNOWN. No later PASS replaces this run.",
+      "failed_checks": [
+        {
+          "name": "Slow actual shock impact includes both subjects",
+          "status": "FAIL",
+          "evidence_level": "B Spell2/Attack; A two-target fixture",
+          "expected": "2 damage reductions read immediately after shock",
+          "actual": "0",
+          "elapsed_seconds": 78.89596730098128
+        }
+      ],
+      "full_raw_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_182820\\User\\Saved\\M5Tests\\20260929_182823_m5_vs3_r3_b\\results.json"
+    }
+  ],
+  "non_runtime": [
+    {
+      "item": "C early hidden build launch",
+      "status": "FAIL",
+      "cause": "Source content/mtime preflight exited nonzero under redirected launch; direct execution succeeded. Exact environment cause UNKNOWN; error log retained."
+    },
+    {
+      "item": "D first author",
+      "status": "FAIL",
+      "cause": "Compared str(FBox) containing object addresses; fixed comparison to numeric bounds before applying."
+    },
+    {
+      "item": "D material attempts",
+      "status": "PARTIAL",
+      "cause": "First standalone colour pink/cool grey; neutral grading alone did not fix preview; isolated preview lighting removed pink. Final screen RGB review separate."
+    },
+    {
+      "item": "E assets",
+      "status": "BLOCKED_DOWNLOAD",
+      "cause": "Browser had no available instance; desktop native pipe unavailable; purchased dependencies absent locally."
+    },
+    {
+      "item": "C-OS preliminary inspection",
+      "status": "INVALID_SCREEN_COORDINATES",
+      "cause": "Helper lacked per-monitor DPI awareness, included desktop margins. Per-thread DPI context corrected before actual input; preliminary image excluded from public review."
+    },
+    {
+      "evidence": "appendix/FINAL_LEGACY_M4_NOT_RUN.json",
+      "details": {
+        "status": "NOT_RUN",
+        "reason": "Final Shipping only cooks current HarborTown; M4Test parsing is compiled out in Shipping and HCM5VS3LocalQA accepts M5Test only. Old M4 map absent. Old_melee launch entered ordinary town, generated no results, runner timed out; normal CloseMainWindow requested. Related editor-game results remain14/0 and252/6, not final Shipping evidence.",
+        "package": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+        "cooked_maps": [
+          "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+        ],
+        "source": "HCM1TestRunner.cpp BeginPlay #if !UE_BUILD_SHIPPING",
+        "normal_close_requested": true,
+        "old_melee_run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_melee_20260929_173615"
+      }
+    },
+    {
+      "evidence": "appendix/RECORDING_ATTEMPT1_FAILURE.json",
+      "details": {
+        "job": "showcase_recording_attempt1",
+        "run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r2_showcase_20260929_180142",
+        "results": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r2_showcase_20260929_180142/User/Saved/M5Tests/20260929_180145_m5_vs3_r2_showcase/results.json",
+        "status": "COMPLETE",
+        "checks": 13,
+        "failures": 0,
+        "recording": "NOT_STARTED",
+        "reason": "runner passed420seconds, Shipping recorder creation accepts <=360. Runtime checks complete13/0, no frames were generated. Corrected runner only; next run records same frozen executable."
+      }
+    },
+    {
+      "evidence": "appendix/FP_EXPORT_FAILURE.json",
+      "details": {
+        "status": "FAILED_ENCODING_ATTEMPT1",
+        "reason": "Compressed JPEG frame bytes were named .png by the capture helper. FFmpeg inferred PNG and rejected JPEG signature. Source pixels intact. Decoder now selected by actual magic bytes; no game rerun.",
+        "error": "[png @ 0000027f43db3080] Invalid PNG signature 0xFFD8FFE000104A46.\r\n    Last message repeated 27 times\r\n[png @ 0000027f45fed400] Invalid PNG signature 0xFFD8FFE000104A46.\r\n[vist#0:0/png @ 0000027f43dc26c0] [dec:png @ 0000027f45de4e40] Decoding error: Invalid data found when processing input\r\n[png @ 0000027f45d5c6c0] Invalid PNG signature 0xFFD8FFE000104A46.\r\n[vist#0:0/png @ 0000027f43dc26c0] [dec:png @ 0000027f45de4e40] Decoding error: Invalid data found when processing input\r\n[png @ 0000027f45fe91c0] Invalid PNG signature 0xFFD8FFE000104A46.\r\n[vist#0:0/png @ 0000027f43dc26c0] [dec:png @ 0000027f45de4e40] Decoding error: Invalid data found when processing input\r\n[png @ 0000027f45fe9e00] Inva"
+      }
+    },
+    {
+      "evidence": "appendix/MAIN_AUDIO_ATTEMPT1.json",
+      "details": {
+        "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "output": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\M5_VS3_R5_PARTIAL_REVIEW.mp4",
+        "decode": "PASS",
+        "integrated_lufs": -18.1,
+        "true_peak_db": -0.73,
+        "audio_status": "FAIL",
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+              "profile": "High",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "mime_codec_string": "avc1.640028",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1080,
+              "has_b_frames": 2,
+              "sample_aspect_ratio": "1:1",
+              "display_aspect_ratio": "16:9",
+              "pix_fmt": "yuvj420p",
+              "level": 40,
+              "color_range": "pc",
+              "color_space": "bt470bg",
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "1774750/59227",
+              "time_base": "1/16000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 3790304,
+              "duration": "236.894000",
+              "bit_rate": "4738362",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "7099",
+              "extradata_size": 51,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "encoder": "Lavc63.8.101 libx264"
+              }
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_long_name": "AAC (Advanced Audio Coding)",
+              "profile": "LC",
+              "codec_type": "audio",
+              "codec_tag_string": "mp4a",
+              "codec_tag": "0x6134706d",
+              "mime_codec_string": "mp4a.40.2",
+              "sample_fmt": "fltp",
+              "sample_rate": "48000",
+              "channels": 2,
+              "channel_layout": "stereo",
+              "bits_per_sample": 0,
+              "initial_padding": 1024,
+              "id": "0x2",
+              "r_frame_rate": "0/0",
+              "avg_frame_rate": "0/0",
+              "time_base": "1/48000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 11371200,
+              "duration": "236.900000",
+              "bit_rate": "171631",
+              "nb_frames": "11105",
+              "extradata_size": 5,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler"
+              }
+            }
+          ],
+          "format": {
+            "filename": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\M5_VS3_R5_PARTIAL_REVIEW.mp4",
+            "nb_streams": 2,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "format_long_name": "QuickTime / MOV",
+            "start_time": "0.000000",
+            "duration": "236.900000",
+            "size": "145713913",
+            "bit_rate": "4920689",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf63.6.100"
+            }
+          }
+        },
+        "clips": [
+          [
+            3,
+            37
+          ],
+          [
+            40,
+            131
+          ],
+          [
+            141,
+            176
+          ],
+          [
+            189,
+            202
+          ],
+          [
+            209,
+            272.867799
+          ]
+        ],
+        "speed": 1,
+        "timing": "Only identified waiting/transit/dialogue tails removed; native frame intervals within each segment preserved. No interpolation/FPS conversion.",
+        "known_omission": "New purchased bow unavailable; standard follow-camera/full8m trajectory not established for every shot; reviewer sees original frames."
+      }
+    },
+    {
+      "evidence": "appendix/MAIN_AUDIO_ATTEMPT2.json",
+      "details": {
+        "status": "FAIL_TRUE_PEAK",
+        "integrated_lufs": -19.48,
+        "true_peak_db": 0.34,
+        "reason": "AAC re-encoding after simple gain adjustment created reconstructed true-peak overshoot. Third approach uses oversampled peak limiter and measures encoded output."
+      }
+    },
+    {
+      "evidence": "appendix/MAIN_AUDIO_LIMITER_TUNING.json",
+      "details": {
+        "method": 3,
+        "ceiling0_63": {
+          "lufs": -18.57,
+          "true_peak_db": -0.46,
+          "status": "FAIL"
+        },
+        "next_ceiling": 0.4,
+        "reason": "Measured decoded AAC true peaks still overshoot; tune same oversampled limiter ceiling, preserving previous measurements."
+      }
+    },
+    {
+      "evidence": "appendix/OS_ATTEMPT1.json",
+      "details": {
+        "status": "NOT_RUN_OS_INPUT",
+        "run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r3_b_20260929_183402",
+        "reason": "C-OS host wrapper terminated before first screenshot; game completed90second input window with no injected input. Outer hidden process stderr was not redirected, exception cause UNKNOWN. Preserve old run; next controller logs all output.",
+        "r4_colour_completed": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/os_final_20260929_183323/results.json"
+      }
+    },
+    {
+      "evidence": "appendix/OS_ATTEMPT2.json",
+      "details": {
+        "status": "PARTIAL",
+        "r4_input_sequence": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/os_final_20260929_183746/R4_os/sequence.json",
+        "r5": "NOT_RUN_INPUT",
+        "r5_run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r3_b_20260929_183941",
+        "reason": "Hidden chained controller ended before first R5 OS screenshot with empty redirected log. No stop marker. R4 complete actual input preserved. Isolate final input helper invocation with direct captured stderr."
+      }
+    },
+    {
+      "evidence": "appendix/C_OS_INPUT.json",
+      "details": {
+        "status": "PARTIAL_INPUT_INJECTED_NO_ACTION_ACCEPTANCE",
+        "final_input": {
+          "status": "INPUT_SEQUENCE_SENT",
+          "evidence": "C-OS SendInput; not human testing",
+          "pid": 8216,
+          "ui_order": "remote, Arcane, ivory, equip, drag, wheel, close",
+          "movement": "W plus three clicks; W plus Space and two clicks",
+          "visual_acceptance": "PENDING_REVIEW",
+          "time": "2026-09-29T18:45:59.2868067+08:00"
+        },
+        "r4_input": {
+          "status": "INPUT_SEQUENCE_SENT",
+          "evidence": "C-OS SendInput; not human testing",
+          "pid": 11952,
+          "ui_order": "remote, Arcane, ivory, equip, drag, wheel, close",
+          "movement": "W plus three clicks; W plus Space and two clicks",
+          "visual_acceptance": "PENDING_REVIEW",
+          "time": "2026-09-29T18:38:23.6014139+08:00"
+        },
+        "provenance": "Actual SendInput and client screen capture; same os fixture and key timings. R4/R5 camera rig identical initially; moving follow camera naturally diverges when travel differs. Animation phase not artificially aligned.",
+        "human_mouse": "NOT_RUN",
+        "prior_attempts": [
+          "OS_ATTEMPT1.json",
+          "OS_ATTEMPT2.json"
+        ],
+        "visual_review": "OS captures still show armory throughout supposed close/run/jump steps. SendInput return values do not prove intended action. Final engine snapshot open=0 occurs at sequence finish/cleanup and does not establish close timing. Drag/zoom appearance changed, but running/jumping action evidence invalid.",
+        "running_jump": "NOT_RUN_VALID_C_OS",
+        "manual": "Open final EXE, B > remote > Arcane > ivory > equip, drag/wheel/close; then W+three clicks and Space+two clicks. Human test PENDING."
+      }
+    },
+    {
+      "evidence": "appendix/D_SCREEN_COLOUR_ATTEMPT1.json",
+      "details": {
+        "status": "INVALID_ROI",
+        "samples": [
+          {
+            "view": "B_Armory",
+            "part": "body",
+            "box": [
+              946,
+              362,
+              953,
+              369
+            ],
+            "median_srgb": [
+              204,
+              204,
+              190
+            ],
+            "target": [
+              225,
+              215,
+              195
+            ],
+            "tolerance": 15,
+            "status": "FAIL",
+            "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+          },
+          {
+            "view": "B_Armory",
+            "part": "metal",
+            "box": [
+              931,
+              403,
+              936,
+              408
+            ],
+            "median_srgb": [
+              188,
+              181,
+              161
+            ],
+            "target": [
+              215,
+              190,
+              130
+            ],
+            "tolerance": 20,
+            "status": "FAIL",
+            "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+          },
+          {
+            "view": "B_Afternoon_FP",
+            "part": "body",
+            "box": [
+              1294,
+              875,
+              1301,
+              882
+            ],
+            "median_srgb": [
+              105,
+              216,
+              237
+            ],
+            "target": [
+              225,
+              215,
+              195
+            ],
+            "tolerance": 15,
+            "status": "FAIL",
+            "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+          },
+          {
+            "view": "B_Afternoon_FP",
+            "part": "metal",
+            "box": [
+              1233,
+              815,
+              1238,
+              820
+            ],
+            "median_srgb": [
+              124,
+              117,
+              121
+            ],
+            "target": [
+              215,
+              190,
+              130
+            ],
+            "tolerance": 20,
+            "status": "FAIL",
+            "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+          }
+        ],
+        "dusk": "NOT_MEASURED: gun too small in required whole-character frame for trustworthy material-only ROI; image retained.",
+        "warning": "Do not treat shader BaseColor constants as screen RGB acceptance. Swatch placement requires visual review.",
+        "reason": "Afternoon FP body ROI selected cyan crystal; metal ROI not confidently selected. Superseded as measurements, failed selection retained. Preview rows independently unchanged."
+      }
+    }
+  ]
+}

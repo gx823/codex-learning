@@ -1,0 +1,99 @@
+{
+  "status": "PARTIAL_SCREEN_COLOUR_NOT_ACCEPTED",
+  "samples": [
+    {
+      "view": "B_Armory",
+      "part": "body",
+      "box": [
+        946,
+        362,
+        953,
+        369
+      ],
+      "median_srgb": [
+        204,
+        204,
+        190
+      ],
+      "target": [
+        225,
+        215,
+        195
+      ],
+      "tolerance": 15,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    },
+    {
+      "view": "B_Armory",
+      "part": "metal",
+      "box": [
+        931,
+        403,
+        936,
+        408
+      ],
+      "median_srgb": [
+        188,
+        181,
+        161
+      ],
+      "target": [
+        215,
+        190,
+        130
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    },
+    {
+      "view": "B_Afternoon_FP",
+      "part": "body",
+      "box": [
+        1370,
+        805,
+        1377,
+        812
+      ],
+      "median_srgb": [
+        85,
+        97,
+        98
+      ],
+      "target": [
+        225,
+        215,
+        195
+      ],
+      "tolerance": 15,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    },
+    {
+      "view": "B_Afternoon_FP",
+      "part": "metal",
+      "box": [
+        1228,
+        701,
+        1233,
+        706
+      ],
+      "median_srgb": [
+        116,
+        110,
+        74
+      ],
+      "target": [
+        215,
+        190,
+        130
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    }
+  ],
+  "dusk": "NOT_MEASURED: gun too small in required whole-character frame for trustworthy material-only ROI; image retained.",
+  "warning": "Small interior patches visually reviewed in D_FP_ROI_FINAL.jpg. Shader BaseColor constants do not establish screen RGB acceptance; full object segmentation NOT_RUN."
+}

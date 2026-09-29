@@ -1,0 +1,400 @@
+{
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b",
+  "raw_status": "COMPLETE",
+  "raw_checks": 37,
+  "raw_failures": 10,
+  "failed_checks": [
+    {
+      "name": "r5hairafter3_30fps_run penetration limit",
+      "status": "FAIL",
+      "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+      "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+      "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=12 sphere_overlap_pct=8.000 max_sphere_overlap_cm=0.7244 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.138 authored_arm_capsules=24",
+      "elapsed_seconds": 44.38866440206766
+    },
+    {
+      "name": "r5hairafter3_30fps_sprint penetration limit",
+      "status": "FAIL",
+      "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+      "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+      "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=95 sphere_overlap_pct=70.370 max_sphere_overlap_cm=3.3622 center_inside_frames=32 max_center_inside_cm=0.8622 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=1.261 authored_arm_capsules=24",
+      "elapsed_seconds": 51.95963820070028
+    },
+    {
+      "name": "r5hairafter3_30fps_gun_idle tip lateral relative to unarmed",
+      "status": "FAIL",
+      "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+      "expected": "every matching long-hair tip <=5cm at1s and end",
+      "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=2 sphere_overlap_pct=2.222 max_sphere_overlap_cm=0.1201 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.347 tip_y_end=7.844 authored_arm_capsules=24 max_tip_delta_at1s=14.886 max_tip_delta_end=18.037",
+      "elapsed_seconds": 66.31521390005946
+    },
+    {
+      "name": "r5hairafter3_30fps_ADS tip lateral relative to unarmed",
+      "status": "FAIL",
+      "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+      "expected": "every matching long-hair tip <=5cm at1s and end",
+      "actual": "frames=90 seconds=3.001 nodes=8 bones=150 sphere_overlap_frames=19 sphere_overlap_pct=21.111 max_sphere_overlap_cm=1.2771 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=9.087 tip_y_end=7.867 authored_arm_capsules=24 max_tip_delta_at1s=15.001 max_tip_delta_end=16.293",
+      "elapsed_seconds": 72.38026849925518
+    },
+    {
+      "name": "r5hairafter3_30fps_spell tip lateral relative to unarmed",
+      "status": "FAIL",
+      "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+      "expected": "every matching long-hair tip <=5cm at1s and end",
+      "actual": "frames=90 seconds=3.018 nodes=8 bones=150 sphere_overlap_frames=9 sphere_overlap_pct=10.000 max_sphere_overlap_cm=2.5624 center_inside_frames=1 max_center_inside_cm=0.0624 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=11.689 tip_y_end=11.704 authored_arm_capsules=24 max_tip_delta_at1s=34.385 max_tip_delta_end=33.048",
+      "elapsed_seconds": 78.48202620074153
+    },
+    {
+      "name": "r5hairafter3_60fps_run penetration limit",
+      "status": "FAIL",
+      "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+      "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+      "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=32 sphere_overlap_pct=10.667 max_sphere_overlap_cm=0.3026 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.186 authored_arm_capsules=24",
+      "elapsed_seconds": 95.51092280074954
+    },
+    {
+      "name": "r5hairafter3_60fps_sprint penetration limit",
+      "status": "FAIL",
+      "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+      "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+      "actual": "frames=270 seconds=4.501 nodes=8 bones=150 sphere_overlap_frames=198 sphere_overlap_pct=73.333 max_sphere_overlap_cm=3.3993 center_inside_frames=66 max_center_inside_cm=0.8993 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.818 authored_arm_capsules=24",
+      "elapsed_seconds": 103.0256550014019
+    },
+    {
+      "name": "r5hairafter3_60fps_gun_idle tip lateral relative to unarmed",
+      "status": "FAIL",
+      "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+      "expected": "every matching long-hair tip <=5cm at1s and end",
+      "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=4 sphere_overlap_pct=2.222 max_sphere_overlap_cm=0.1587 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.348 tip_y_end=7.852 authored_arm_capsules=24 max_tip_delta_at1s=14.946 max_tip_delta_end=18.052",
+      "elapsed_seconds": 117.2439915984869
+    },
+    {
+      "name": "r5hairafter3_60fps_ADS tip lateral relative to unarmed",
+      "status": "FAIL",
+      "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+      "expected": "every matching long-hair tip <=5cm at1s and end",
+      "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=40 sphere_overlap_pct=22.222 max_sphere_overlap_cm=1.4519 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=9.112 tip_y_end=7.807 authored_arm_capsules=24 max_tip_delta_at1s=15.052 max_tip_delta_end=16.298",
+      "elapsed_seconds": 123.24743280187249
+    },
+    {
+      "name": "r5hairafter3_60fps_spell tip lateral relative to unarmed",
+      "status": "FAIL",
+      "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+      "expected": "every matching long-hair tip <=5cm at1s and end",
+      "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=19 sphere_overlap_pct=10.556 max_sphere_overlap_cm=1.9466 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=11.795 tip_y_end=11.703 authored_arm_capsules=24 max_tip_delta_at1s=34.656 max_tip_delta_end=33.033",
+      "elapsed_seconds": 129.26414370164275
+    }
+  ],
+  "method": "Per-frame live Kawaii bone spheres vs the same measured arm capsule proxies before/after. Component units transformed once to world cm. Includes strand radius. Center-only depth is separately reported; mesh visual acceptance is separate.",
+  "rows": [
+    {
+      "case": "ADS",
+      "requested_cap_fps": 30,
+      "frames": 90,
+      "duration_seconds": 3.00053,
+      "actual_mean_fps": 29.99460771097331,
+      "p99_frame_ms": 33.34000000000037,
+      "sphere_overlap_frames": 19,
+      "sphere_overlap_percent": 21.11111111111111,
+      "max_sphere_overlap_cm": 1.2771,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.5,
+      "head_roll_range": [
+        -12.1,
+        -9.645
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_30fps_ADS.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "gun_idle",
+      "requested_cap_fps": 30,
+      "frames": 90,
+      "duration_seconds": 3.00001,
+      "actual_mean_fps": 29.999865169145306,
+      "p99_frame_ms": 33.340000000000146,
+      "sphere_overlap_frames": 2,
+      "sphere_overlap_percent": 2.2222222222222223,
+      "max_sphere_overlap_cm": 0.1201,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.5,
+      "head_roll_range": [
+        -11.607,
+        -9.563
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_30fps_gun_idle.csv",
+      "numeric_penetration_status": "PASS"
+    },
+    {
+      "case": "run",
+      "requested_cap_fps": 30,
+      "frames": 150,
+      "duration_seconds": 5.00003,
+      "actual_mean_fps": 29.999798659069405,
+      "p99_frame_ms": 33.34000000000037,
+      "sphere_overlap_frames": 12,
+      "sphere_overlap_percent": 8.0,
+      "max_sphere_overlap_cm": 0.7244,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 7.5,
+      "head_roll_range": [
+        -9.414,
+        6.143
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_30fps_run.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "spell",
+      "requested_cap_fps": 30,
+      "frames": 90,
+      "duration_seconds": 3.01803,
+      "actual_mean_fps": 29.818742252152642,
+      "p99_frame_ms": 37.19,
+      "sphere_overlap_frames": 9,
+      "sphere_overlap_percent": 10.0,
+      "max_sphere_overlap_cm": 2.5624,
+      "center_inside_percent": 1.1111111111111112,
+      "max_center_inside_cm": 0.0624,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.0,
+      "head_roll_range": [
+        -12.401,
+        -2.017
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_30fps_spell.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "sprint",
+      "requested_cap_fps": 30,
+      "frames": 135,
+      "duration_seconds": 4.50008,
+      "actual_mean_fps": 29.999440308949463,
+      "p99_frame_ms": 33.34000000000037,
+      "sphere_overlap_frames": 95,
+      "sphere_overlap_percent": 70.37037037037037,
+      "max_sphere_overlap_cm": 3.3622,
+      "center_inside_percent": 23.703703703703702,
+      "max_center_inside_cm": 0.8622,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 9.5,
+      "head_roll_range": [
+        -10.664,
+        5.307
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_30fps_sprint.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "unarmed_idle",
+      "requested_cap_fps": 30,
+      "frames": 90,
+      "duration_seconds": 3.00002,
+      "actual_mean_fps": 29.99976404679963,
+      "p99_frame_ms": 33.34000000000037,
+      "sphere_overlap_frames": 0,
+      "sphere_overlap_percent": 0.0,
+      "max_sphere_overlap_cm": 0.0,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.0,
+      "head_roll_range": [
+        -1.515,
+        5.647
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_30fps_unarmed_idle.csv",
+      "numeric_penetration_status": "PASS"
+    },
+    {
+      "case": "walk",
+      "requested_cap_fps": 30,
+      "frames": 180,
+      "duration_seconds": 6.00002,
+      "actual_mean_fps": 29.99988268202303,
+      "p99_frame_ms": 33.34000000000037,
+      "sphere_overlap_frames": 0,
+      "sphere_overlap_percent": 0.0,
+      "max_sphere_overlap_cm": 0.0,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 6.0,
+      "head_roll_range": [
+        2.19,
+        11.478
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_30fps_walk.csv",
+      "numeric_penetration_status": "PASS"
+    },
+    {
+      "case": "ADS",
+      "requested_cap_fps": 60,
+      "frames": 180,
+      "duration_seconds": 3.00023,
+      "actual_mean_fps": 59.995441687112034,
+      "p99_frame_ms": 16.68999999999965,
+      "sphere_overlap_frames": 40,
+      "sphere_overlap_percent": 22.22222222222222,
+      "max_sphere_overlap_cm": 1.4519,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.5,
+      "head_roll_range": [
+        -12.1,
+        -9.645
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_60fps_ADS.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "gun_idle",
+      "requested_cap_fps": 60,
+      "frames": 180,
+      "duration_seconds": 3.00034,
+      "actual_mean_fps": 59.993229814289116,
+      "p99_frame_ms": 16.73000000000002,
+      "sphere_overlap_frames": 4,
+      "sphere_overlap_percent": 2.2222222222222223,
+      "max_sphere_overlap_cm": 0.1587,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.5,
+      "head_roll_range": [
+        -11.665,
+        -9.557
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_60fps_gun_idle.csv",
+      "numeric_penetration_status": "PASS"
+    },
+    {
+      "case": "run",
+      "requested_cap_fps": 60,
+      "frames": 300,
+      "duration_seconds": 5.00021,
+      "actual_mean_fps": 59.99751180887482,
+      "p99_frame_ms": 16.680000000000028,
+      "sphere_overlap_frames": 32,
+      "sphere_overlap_percent": 10.666666666666666,
+      "max_sphere_overlap_cm": 0.3026,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 7.5,
+      "head_roll_range": [
+        -9.418,
+        6.137
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_60fps_run.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "spell",
+      "requested_cap_fps": 60,
+      "frames": 180,
+      "duration_seconds": 3.00023,
+      "actual_mean_fps": 59.996044953461166,
+      "p99_frame_ms": 16.680000000000028,
+      "sphere_overlap_frames": 19,
+      "sphere_overlap_percent": 10.555555555555555,
+      "max_sphere_overlap_cm": 1.9466,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.0,
+      "head_roll_range": [
+        -12.404,
+        -2.431
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_60fps_spell.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "sprint",
+      "requested_cap_fps": 60,
+      "frames": 270,
+      "duration_seconds": 4.50079,
+      "actual_mean_fps": 59.989473965906356,
+      "p99_frame_ms": 16.689999999999984,
+      "sphere_overlap_frames": 198,
+      "sphere_overlap_percent": 73.33333333333333,
+      "max_sphere_overlap_cm": 3.3993,
+      "center_inside_percent": 24.444444444444443,
+      "max_center_inside_cm": 0.8993,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 9.5,
+      "head_roll_range": [
+        -10.699,
+        5.292
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_60fps_sprint.csv",
+      "numeric_penetration_status": "FAIL"
+    },
+    {
+      "case": "unarmed_idle",
+      "requested_cap_fps": 60,
+      "frames": 180,
+      "duration_seconds": 3.00009,
+      "actual_mean_fps": 59.99825703387387,
+      "p99_frame_ms": 16.680000000000028,
+      "sphere_overlap_frames": 0,
+      "sphere_overlap_percent": 0.0,
+      "max_sphere_overlap_cm": 0.0,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 0.0,
+      "head_roll_range": [
+        -1.515,
+        6.176
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_60fps_unarmed_idle.csv",
+      "numeric_penetration_status": "PASS"
+    },
+    {
+      "case": "walk",
+      "requested_cap_fps": 60,
+      "frames": 360,
+      "duration_seconds": 6.00037,
+      "actual_mean_fps": 59.99632334508749,
+      "p99_frame_ms": 16.690000000000094,
+      "sphere_overlap_frames": 0,
+      "sphere_overlap_percent": 0.0,
+      "max_sphere_overlap_cm": 0.0,
+      "center_inside_percent": 0.0,
+      "max_center_inside_cm": 0.0,
+      "minimum_solver_bones": 150,
+      "authored_arm_capsules": 24,
+      "gait_cycles": 6.0,
+      "head_roll_range": [
+        2.174,
+        11.477
+      ],
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_154255\\User\\Saved\\M5Tests\\20260929_154316_m5_vs3_r3_b\\r5hairafter3_60fps_walk.csv",
+      "numeric_penetration_status": "PASS"
+    }
+  ],
+  "visual": "USER_REVIEW after video inspection; numeric data does not establish mesh clearance"
+}

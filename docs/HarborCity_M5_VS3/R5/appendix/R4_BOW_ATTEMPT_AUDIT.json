@@ -1,0 +1,43 @@
+{
+  "status": "R4_AUDIT_COMPLETE_NEW_BOW_NOT_RUN",
+  "old_run": "R4/m5_vs3_r3_b_20260928_204902",
+  "evidence_level": "EDITOR_GAME, not standalone",
+  "reporting_gap": "All three reason strings were identical; there was no per-approach FP arm visibility/string-to-reticle measurement.",
+  "code_paths": [
+    {
+      "approach": 1,
+      "tp": "Fixed target two-bone IK; preserve wrist rotation",
+      "fp": "Reference arms, preserve wrist rotation; left view target (60,-26,-26); right draw endpoint x21"
+    },
+    {
+      "approach": 2,
+      "tp": "Rotate chest/arms toward aim before same two-bone IK",
+      "fp": "Same reach targets as approach1, anatomical palm rotation"
+    },
+    {
+      "approach": 3,
+      "tp": "Shorter left reach32 instead42 and pull34 instead39",
+      "fp": "Left target52 instead60, right endpoint26 instead21; bow scale.46 instead.50"
+    }
+  ],
+  "shared_tp_metric_reason": "UpdateVisuals places bow at Hand_L directly, so grip_delta=0 by construction. MakeFromXZ(control forward, world up) makes up_dot=cos(8degrees)=0.9903 at the shared -8degree aim; this does not independently validate hand contact or FP string clearance.",
+  "fp_observed_positions": [
+    [
+      37.054,
+      -6520.129,
+      126.256
+    ],
+    [
+      37.054,
+      -6520.129,
+      126.271
+    ],
+    [
+      36.314,
+      -6521.865,
+      125.8
+    ]
+  ],
+  "conclusion": "Three code branches and differing readback positions exist. Repeated prose is inadequate reporting, not proof that no branch ran. Original per-approach image files are absent from inspected run/review locations; no retrospective visual PASS can be assigned.",
+  "new_r5_plan": "Do not retry old prototypes. Use authorized new animation and bow assets; distinct parameter/hash/readback evidence for every approach, max3."
+}

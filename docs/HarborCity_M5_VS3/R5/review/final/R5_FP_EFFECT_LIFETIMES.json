@@ -1,0 +1,110 @@
+{
+  "status": "PASS_DECODE",
+  "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\R5_FP_EFFECT_LIFETIMES.mp4",
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b",
+  "sha256": "4a774ae1cef617b900d32647d2dab4f8c61f086f0540e5e6a2a3fbaf5df35caf",
+  "temporary_png_removed": 1705,
+  "effects": [
+    {
+      "effect": "Arcane_muzzle",
+      "frames": 93,
+      "seconds": 3.1
+    },
+    {
+      "effect": "Arrow_charge",
+      "frames": 33,
+      "seconds": 1.1
+    },
+    {
+      "effect": "Arrow_release",
+      "frames": 150,
+      "seconds": 5.0
+    },
+    {
+      "effect": "Bolt_charge",
+      "frames": 36,
+      "seconds": 1.2
+    },
+    {
+      "effect": "Bolt_release",
+      "frames": 150,
+      "seconds": 5.0
+    },
+    {
+      "effect": "CrimsonNight_charge",
+      "frames": 33,
+      "seconds": 1.1
+    },
+    {
+      "effect": "CrimsonNight_slash1",
+      "frames": 29,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "CrimsonNight_slash2",
+      "frames": 29,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "CrimsonNight_slash3",
+      "frames": 29,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "CrimsonNight_wave",
+      "frames": 120,
+      "seconds": 4.0
+    },
+    {
+      "effect": "Heal",
+      "frames": 242,
+      "seconds": 8.066666666666666
+    },
+    {
+      "effect": "Shield",
+      "frames": 242,
+      "seconds": 8.066666666666666
+    },
+    {
+      "effect": "Shock_release",
+      "frames": 150,
+      "seconds": 5.0
+    },
+    {
+      "effect": "Shock_warning",
+      "frames": 36,
+      "seconds": 1.2
+    },
+    {
+      "effect": "StarTide_charge",
+      "frames": 33,
+      "seconds": 1.1
+    },
+    {
+      "effect": "StarTide_slash1",
+      "frames": 29,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "StarTide_slash2",
+      "frames": 29,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "StarTide_slash3",
+      "frames": 29,
+      "seconds": 0.9666666666666667
+    },
+    {
+      "effect": "StarTide_wave",
+      "frames": 120,
+      "seconds": 4.0
+    },
+    {
+      "effect": "Steamlock_muzzle",
+      "frames": 93,
+      "seconds": 3.1
+    }
+  ],
+  "scope": "Final Shipping paired-render diagnostic.30 simulation frames per second; capture wall-rate differs. No native-speed/public-film FPS claim, no audio fabricated."
+}

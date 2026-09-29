@@ -1,0 +1,1128 @@
+{
+  "status": "COMPLETE_ROWS_ONLY",
+  "batch": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\final_tests_20260929_170313",
+  "runs": [
+    {
+      "job": "full_once",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_full_20260929_170315",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_full_20260929_170315\\User\\Saved\\M5Tests\\20260929_170322_m5_full\\results.json",
+      "status": "COMPLETE",
+      "checks": 171,
+      "failures": 3,
+      "failed_checks": [
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "status": "FAIL",
+          "evidence_level": "A-fixture",
+          "expected": "read-only safety queries choose A parking fixture; no condition override",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+          "elapsed_seconds": 93.85079490020871
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "status": "FAIL",
+          "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+          "expected": "driving, passenger attached through normal Tick",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.997 Y=-6360.911 Z=22.606 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_life",
+          "elapsed_seconds": 108.40804030001163
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "status": "FAIL",
+          "evidence_level": "B-Action + A travel placement; not continuous route proof",
+          "expected": "Complete; no direct quest mutation",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "elapsed_seconds": 117.22843509912491
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:03:14.7064217+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.71
+          },
+          {
+            "Name": "D",
+            "free_GiB": 138.0
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 438.64222199842334,
+      "mean_fps": 120.0001515330178,
+      "p99_ms": 10.304100811481476
+    },
+    {
+      "job": "A_all",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_171044",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_171044\\User\\Saved\\M5Tests\\20260929_171047_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 568,
+      "failures": 25,
+      "failed_checks": [
+        {
+          "name": "TP_run_jump_sword_09 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=399.886 attack_frames=96 foot_speed=501.242 foot_crossings=5 peak=127.531 jump_distance=457.879 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=7.373 Y=1257.276 Z=0.000 reference=X=127.531 Y=421.891 Z=16.334",
+          "elapsed_seconds": 370.16373259946704
+        },
+        {
+          "name": "TP_run_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.971 foot_crossings=4 peak=127.530 jump_distance=439.030 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1239.120 Z=0.000",
+          "elapsed_seconds": 382.8237355016172
+        },
+        {
+          "name": "TP_run_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.763 foot_crossings=4 peak=127.531 jump_distance=440.426 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1240.718 Z=-0.000",
+          "elapsed_seconds": 389.1985922008753
+        },
+        {
+          "name": "TP_run_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.763 foot_crossings=4 peak=127.531 jump_distance=440.466 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=1240.506 Z=-0.000",
+          "elapsed_seconds": 395.5790258012712
+        },
+        {
+          "name": "TP_run_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.702 foot_crossings=4 peak=127.531 jump_distance=440.849 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1240.864 Z=-0.000",
+          "elapsed_seconds": 401.95260969921947
+        },
+        {
+          "name": "TP_run_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=582.863 foot_crossings=4 peak=127.518 jump_distance=442.227 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.363 delta=X=0.000 Y=1242.325 Z=0.000",
+          "elapsed_seconds": 408.3330508992076
+        },
+        {
+          "name": "TP_run_jump_fist_05 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=582.863 foot_crossings=4 peak=127.518 jump_distance=442.227 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.363 delta=X=0.000 Y=1242.325 Z=0.000 reference=X=127.531 Y=420.510 Z=16.334",
+          "elapsed_seconds": 408.3968106992543
+        },
+        {
+          "name": "TP_run_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.309 foot_crossings=4 peak=127.531 jump_distance=444.528 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1244.558 Z=0.000",
+          "elapsed_seconds": 414.7258580997586
+        },
+        {
+          "name": "TP_run_jump_fist_06 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.309 foot_crossings=4 peak=127.531 jump_distance=444.528 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1244.558 Z=0.000 reference=X=127.530 Y=420.816 Z=16.334",
+          "elapsed_seconds": 414.7893483005464
+        },
+        {
+          "name": "TP_run_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.552 foot_crossings=4 peak=127.530 jump_distance=441.593 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1241.640 Z=-0.000",
+          "elapsed_seconds": 421.11344569921494
+        },
+        {
+          "name": "TP_run_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.372 foot_crossings=4 peak=127.530 jump_distance=442.853 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=1242.867 Z=-0.000",
+          "elapsed_seconds": 427.51920910179615
+        },
+        {
+          "name": "TP_run_jump_fist_08 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.372 foot_crossings=4 peak=127.530 jump_distance=442.853 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.336 delta=X=0.000 Y=1242.867 Z=-0.000 reference=X=127.531 Y=421.415 Z=16.333",
+          "elapsed_seconds": 427.58756110072136
+        },
+        {
+          "name": "TP_run_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.320 foot_crossings=4 peak=127.531 jump_distance=443.546 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1243.570 Z=-0.000",
+          "elapsed_seconds": 433.9249642007053
+        },
+        {
+          "name": "TP_run_jump_fist_09 jump matches control",
+          "status": "FAIL",
+          "evidence_level": "B matched jump control",
+          "expected": "apex/distance within5%; standing drift<=2cm",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.320 foot_crossings=4 peak=127.531 jump_distance=443.546 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=1243.570 Z=-0.000 reference=X=127.531 Y=421.891 Z=16.334",
+          "elapsed_seconds": 433.991986900568
+        },
+        {
+          "name": "TP_run_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=400.000 mean_speed=400.000 attack_frames=75 foot_speed=583.386 foot_crossings=4 peak=127.530 jump_distance=442.864 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=1242.879 Z=0.000",
+          "elapsed_seconds": 440.3293981999159
+        },
+        {
+          "name": "TP_stand_jump_fist_01 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.907 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 510.43307680264115
+        },
+        {
+          "name": "TP_stand_jump_fist_02 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.772 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 516.8376590013504
+        },
+        {
+          "name": "TP_stand_jump_fist_03 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.777 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 523.2381476014853
+        },
+        {
+          "name": "TP_stand_jump_fist_04 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.777 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 529.6522911004722
+        },
+        {
+          "name": "TP_stand_jump_fist_05 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.744 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 536.0774028003216
+        },
+        {
+          "name": "TP_stand_jump_fist_06 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.741 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 542.4939508028328
+        },
+        {
+          "name": "TP_stand_jump_fist_07 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.739 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 548.9131006002426
+        },
+        {
+          "name": "TP_stand_jump_fist_08 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.716 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.334 delta=X=0.000 Y=0.000 Z=-0.000",
+          "elapsed_seconds": 555.3481537997723
+        },
+        {
+          "name": "TP_stand_jump_fist_09 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.706 foot_crossings=2 peak=127.530 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.335 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 561.7841208018363
+        },
+        {
+          "name": "TP_stand_jump_fist_10 landing-target hit",
+          "status": "FAIL",
+          "evidence_level": "A real collision and damage",
+          "expected": "at least one actual damage event near landing",
+          "actual": "min_speed=0.000 mean_speed=0.000 attack_frames=75 foot_speed=273.684 foot_crossings=2 peak=127.531 jump_distance=0.000 landed=1 segments=2 air_segments=2 hits=0 camera_bob=16.333 delta=X=0.000 Y=0.000 Z=0.000",
+          "elapsed_seconds": 568.2340883016586
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:10:44.0338127+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.95
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 827.2373393028975,
+      "mean_fps": 57.53990599055033,
+      "p99_ms": 17.152700573205948
+    },
+    {
+      "job": "A_extra",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_172437",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_172437\\User\\Saved\\M5Tests\\20260929_172440_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 13,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:24:37.4088349+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.71
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.94
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 61.341477300971746,
+      "mean_fps": 113.15031216110354,
+      "p99_ms": 16.760297119617462
+    },
+    {
+      "job": "A_fist_contact",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_172543",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_172543\\User\\Saved\\M5Tests\\20260929_172546_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 204,
+      "failures": 10,
+      "failed_checks": [
+        {
+          "name": "TP_contact_run_jump_fist_01 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.208 mean_speed=398.634 attack_frames=75 foot_speed=584.872 foot_crossings=4 peak=127.531 jump_distance=421.812 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=23.700 Y=1221.111 Z=-0.000",
+          "elapsed_seconds": 187.31345959752798
+        },
+        {
+          "name": "TP_contact_run_jump_fist_02 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.208 mean_speed=398.634 attack_frames=75 foot_speed=584.893 foot_crossings=4 peak=127.530 jump_distance=421.860 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=23.721 Y=1221.178 Z=0.000",
+          "elapsed_seconds": 193.4844518005848
+        },
+        {
+          "name": "TP_contact_run_jump_fist_03 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.270 foot_crossings=4 peak=127.531 jump_distance=422.601 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.068 Y=1221.932 Z=0.000",
+          "elapsed_seconds": 199.67035580053926
+        },
+        {
+          "name": "TP_contact_run_jump_fist_04 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.491 foot_crossings=4 peak=127.530 jump_distance=422.943 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.248 Y=1222.249 Z=-0.000",
+          "elapsed_seconds": 205.86300839856267
+        },
+        {
+          "name": "TP_contact_run_jump_fist_05 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.205 mean_speed=398.634 attack_frames=75 foot_speed=586.690 foot_crossings=4 peak=127.531 jump_distance=426.281 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=25.161 Y=1225.621 Z=-0.000",
+          "elapsed_seconds": 212.05969999730587
+        },
+        {
+          "name": "TP_contact_run_jump_fist_06 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=585.917 foot_crossings=4 peak=127.531 jump_distance=423.690 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.616 Y=1223.003 Z=-0.000",
+          "elapsed_seconds": 218.25641129910946
+        },
+        {
+          "name": "TP_contact_run_jump_fist_07 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=586.002 foot_crossings=4 peak=127.531 jump_distance=423.921 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.334 delta=X=24.720 Y=1223.353 Z=0.000",
+          "elapsed_seconds": 224.47380619868636
+        },
+        {
+          "name": "TP_contact_run_jump_fist_08 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.087 mean_speed=398.627 attack_frames=75 foot_speed=586.332 foot_crossings=4 peak=127.531 jump_distance=424.649 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.821 Y=1224.019 Z=-0.000",
+          "elapsed_seconds": 230.68160839751363
+        },
+        {
+          "name": "TP_contact_run_jump_fist_09 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.209 mean_speed=398.634 attack_frames=75 foot_speed=586.427 foot_crossings=4 peak=127.531 jump_distance=425.636 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.845 Y=1224.977 Z=0.000",
+          "elapsed_seconds": 236.90326070040464
+        },
+        {
+          "name": "TP_contact_run_jump_fist_10 speed retained",
+          "status": "FAIL",
+          "evidence_level": "B per-frame velocity, no screenshots",
+          "expected": ">=396 cm/s airborne",
+          "actual": "min_speed=358.199 mean_speed=398.634 attack_frames=75 foot_speed=586.160 foot_crossings=4 peak=127.531 jump_distance=424.147 landed=1 segments=2 air_segments=2 hits=1 camera_bob=16.333 delta=X=24.793 Y=1223.467 Z=-0.000",
+          "elapsed_seconds": 243.12148519977927
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:25:43.8742701+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.71
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.94
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 306.1351768001914,
+      "mean_fps": 59.41820344367151,
+      "p99_ms": 17.16030016541481
+    },
+    {
+      "job": "sword_matrix",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r2_matrix_20260929_173055",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r2_matrix_20260929_173055\\User\\Saved\\M5Tests\\20260929_173058_m5_vs3_r2_matrix\\results.json",
+      "status": "COMPLETE",
+      "checks": 140,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:30:55.5870664+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.93
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 314.2417374998331,
+      "mean_fps": 37.50134118572594,
+      "p99_ms": 50.199899822473526
+    },
+    {
+      "job": "old_melee",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_melee_20260929_173615",
+      "results": null,
+      "status": "NOT_RUN",
+      "checks": 0,
+      "failures": 0,
+      "reason": "Final Shipping only cooks current HarborTown; M4Test parsing is compiled out in Shipping and HCM5VS3LocalQA accepts M5Test only. Old M4 map absent. Old_melee launch entered ordinary town, generated no results, runner timed out; normal CloseMainWindow requested. Related editor-game results remain14/0 and252/6, not final Shipping evidence.",
+      "exe": null,
+      "host": null
+    },
+    {
+      "job": "old_r2_combat",
+      "run": null,
+      "results": null,
+      "status": "NOT_RUN",
+      "checks": 0,
+      "failures": 0,
+      "reason": "Final Shipping only cooks current HarborTown; M4Test parsing is compiled out in Shipping and HCM5VS3LocalQA accepts M5Test only. Old M4 map absent. Old_melee launch entered ordinary town, generated no results, runner timed out; normal CloseMainWindow requested. Related editor-game results remain14/0 and252/6, not final Shipping evidence.",
+      "exe": null,
+      "host": null
+    },
+    {
+      "job": "B_final",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 10,
+      "failed_checks": [
+        {
+          "name": "r5hairfinal_30fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=150 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=12 sphere_overlap_pct=8.000 max_sphere_overlap_cm=0.7244 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.138 authored_arm_capsules=24",
+          "elapsed_seconds": 28.303577799350023
+        },
+        {
+          "name": "r5hairfinal_30fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=135 seconds=4.500 nodes=8 bones=150 sphere_overlap_frames=95 sphere_overlap_pct=70.370 max_sphere_overlap_cm=3.3624 center_inside_frames=32 max_center_inside_cm=0.8624 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=1.261 authored_arm_capsules=24",
+          "elapsed_seconds": 35.87219309806824
+        },
+        {
+          "name": "r5hairfinal_30fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=2.8503 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.499 tip_y_end=4.859 authored_arm_capsules=24 max_tip_delta_at1s=8.410 max_tip_delta_end=11.140",
+          "elapsed_seconds": 50.19893490150571
+        },
+        {
+          "name": "r5hairfinal_30fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=90 sphere_overlap_pct=100.000 max_sphere_overlap_cm=3.4805 center_inside_frames=2 max_center_inside_cm=0.3555 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.198 tip_y_end=7.181 authored_arm_capsules=24 max_tip_delta_at1s=14.628 max_tip_delta_end=16.199",
+          "elapsed_seconds": 56.268631000071764
+        },
+        {
+          "name": "r5hairfinal_30fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=90 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=88 sphere_overlap_pct=97.778 max_sphere_overlap_cm=4.1003 center_inside_frames=2 max_center_inside_cm=1.6003 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=7.869 tip_y_end=7.468 authored_arm_capsules=24 max_tip_delta_at1s=26.053 max_tip_delta_end=25.545",
+          "elapsed_seconds": 62.33564219996333
+        },
+        {
+          "name": "r5hairfinal_60fps_run penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=300 seconds=5.000 nodes=8 bones=150 sphere_overlap_frames=31 sphere_overlap_pct=10.333 max_sphere_overlap_cm=0.3027 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=400.00 gait_cycles=7.5 tip_y_at1s=0.000 tip_y_end=0.186 authored_arm_capsules=24",
+          "elapsed_seconds": 79.35754910111427
+        },
+        {
+          "name": "r5hairfinal_60fps_sprint penetration limit",
+          "status": "FAIL",
+          "evidence_level": "A numeric bone/capsule approximation; mesh review separate",
+          "expected": "overlap<=5% frames and depth<=1.5cm; includes hair bone radius",
+          "actual": "frames=270 seconds=4.501 nodes=8 bones=150 sphere_overlap_frames=198 sphere_overlap_pct=73.333 max_sphere_overlap_cm=3.4062 center_inside_frames=65 max_center_inside_cm=0.9062 speed_min=650.00 gait_cycles=9.5 tip_y_at1s=0.000 tip_y_end=0.826 authored_arm_capsules=24",
+          "elapsed_seconds": 86.86955580115318
+        },
+        {
+          "name": "r5hairfinal_60fps_gun_idle tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=2.9138 center_inside_frames=0 max_center_inside_cm=0.0000 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=5.514 tip_y_end=4.871 authored_arm_capsules=24 max_tip_delta_at1s=8.622 max_tip_delta_end=11.213",
+          "elapsed_seconds": 101.07242489978671
+        },
+        {
+          "name": "r5hairfinal_60fps_ADS tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=180 sphere_overlap_pct=100.000 max_sphere_overlap_cm=3.4146 center_inside_frames=4 max_center_inside_cm=0.2896 speed_min=0.00 gait_cycles=0.5 tip_y_at1s=7.238 tip_y_end=7.190 authored_arm_capsules=24 max_tip_delta_at1s=14.755 max_tip_delta_end=16.305",
+          "elapsed_seconds": 107.07381390035152
+        },
+        {
+          "name": "r5hairfinal_60fps_spell tip lateral relative to unarmed",
+          "status": "FAIL",
+          "evidence_level": "A matched individual leaf positions; no left/right cancellation",
+          "expected": "every matching long-hair tip <=5cm at1s and end",
+          "actual": "frames=180 seconds=3.000 nodes=8 bones=150 sphere_overlap_frames=178 sphere_overlap_pct=98.889 max_sphere_overlap_cm=3.5133 center_inside_frames=3 max_center_inside_cm=1.0133 speed_min=0.00 gait_cycles=0.0 tip_y_at1s=7.680 tip_y_end=7.482 authored_arm_capsules=24 max_tip_delta_at1s=25.707 max_tip_delta_end=25.532",
+          "elapsed_seconds": 113.07659989967942
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:48:29.2465093+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.93
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 113.24204520136118,
+      "mean_fps": 52.05124441006038,
+      "p99_ms": 33.94100069999695
+    },
+    {
+      "job": "FP_peaks",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 28,
+      "failures": 9,
+      "failed_checks": [
+        {
+          "name": "Arrow_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=0.1355 control=0.0404 frames=33 simulation_seconds=1.1000 wall_seconds=1.903",
+          "elapsed_seconds": 38.49750419706106
+        },
+        {
+          "name": "StarTide_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=23.2701 control=0.5902 frames=29 simulation_seconds=0.9667 wall_seconds=1.622",
+          "elapsed_seconds": 52.1688185967505
+        },
+        {
+          "name": "StarTide_slash3 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=10.5904 control=1.0070 frames=29 simulation_seconds=0.9667 wall_seconds=1.677",
+          "elapsed_seconds": 53.854298397898674
+        },
+        {
+          "name": "StarTide_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=40.1570 control=0.2254 frames=120 simulation_seconds=4.0000 wall_seconds=6.457",
+          "elapsed_seconds": 63.36249849945307
+        },
+        {
+          "name": "CrimsonNight_slash2 full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=31.1395 control=0.1988 frames=29 simulation_seconds=0.9667 wall_seconds=1.618",
+          "elapsed_seconds": 68.96936089918017
+        },
+        {
+          "name": "CrimsonNight_wave full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=37.9091 control=0.0985 frames=120 simulation_seconds=4.0000 wall_seconds=6.486",
+          "elapsed_seconds": 80.11686349660158
+        },
+        {
+          "name": "Bolt_charge full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=1.1992 control=0.0437 frames=36 simulation_seconds=1.2000 wall_seconds=2.071",
+          "elapsed_seconds": 99.46640719845891
+        },
+        {
+          "name": "Bolt_release full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 4.0..12.5%; duplicate control noise<=0.5%",
+          "actual": "peak=3.8668 control=0.0421 frames=150 simulation_seconds=5.0000 wall_seconds=8.112",
+          "elapsed_seconds": 107.58759589865804
+        },
+        {
+          "name": "Shock_warning full-lifetime sampled peak",
+          "status": "FAIL",
+          "evidence_level": "A paired scene render; executable provenance in launch.json; 30 Hz fixed simulation, temporal AA/motion blur off; native viewport recording separate",
+          "expected": "peak 3.0..25.0%; duplicate control noise<=0.5%",
+          "actual": "peak=2.3351 control=0.0501 frames=36 simulation_seconds=1.2000 wall_seconds=2.148",
+          "elapsed_seconds": 124.81523499637842
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:52:15.3424789+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.84
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 190.01612439751625,
+      "mean_fps": 30.186920395448304,
+      "p99_ms": 67.04560294747353
+    },
+    {
+      "job": "arrow20",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175531",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175531\\User\\Saved\\M5Tests\\20260929_175533_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 37,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:55:30.8712992+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.54
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 68.45450019836426,
+      "mean_fps": 113.32943292038519,
+      "p99_ms": 11.159498244524002
+    },
+    {
+      "job": "D_colour",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644\\User\\Saved\\M5Tests\\20260929_175647_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 9,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:56:44.4033471+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.53
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 27.154454600065947,
+      "mean_fps": 110.65382064415599,
+      "p99_ms": 12.383799999952316
+    },
+    {
+      "job": "perf_high",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\perf_20260929_175716",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\perf_20260929_175716\\User\\Saved\\M5Tests\\20260929_175719_m5_vs2_perf\\results.json",
+      "status": "COMPLETE",
+      "checks": 16,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:57:16.831464+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.52
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 127.48141749948263,
+      "mean_fps": 95.64140604474254,
+      "p99_ms": 12.468799948692322
+    },
+    {
+      "job": "perf_epic",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\perf_20260929_175929",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\perf_20260929_175929\\User\\Saved\\M5Tests\\20260929_175932_m5_vs2_perf\\results.json",
+      "status": "COMPLETE",
+      "checks": 16,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T17:59:29.3965002+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.52
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 127.6887168996036,
+      "mean_fps": 67.48225238513157,
+      "p99_ms": 17.80269667506218
+    },
+    {
+      "job": "showcase_recording_attempt1",
+      "run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r2_showcase_20260929_180142",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r2_showcase_20260929_180142\\User\\Saved\\M5Tests\\20260929_180145_m5_vs3_r2_showcase\\results.json",
+      "status": "COMPLETE",
+      "checks": 13,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T18:01:41.9268235+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.52
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 288.94611660018563,
+      "mean_fps": 113.41217319591793,
+      "p99_ms": 11.182297021150589
+    },
+    {
+      "job": "showcase",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r2_showcase_20260929_181943",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r2_showcase_20260929_181943\\User\\Saved\\M5Tests\\20260929_181946_m5_vs3_r2_showcase\\results.json",
+      "status": "COMPLETE",
+      "checks": 13,
+      "failures": 0,
+      "failed_checks": [],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T18:19:42.9771236+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.51
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 289.95021810010076,
+      "mean_fps": 87.02099179747064,
+      "p99_ms": 25.63139796257019
+    },
+    {
+      "job": "slow",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_182820",
+      "results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_182820\\User\\Saved\\M5Tests\\20260929_182823_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "checks": 7,
+      "failures": 1,
+      "failed_checks": [
+        {
+          "name": "Slow actual shock impact includes both subjects",
+          "status": "FAIL",
+          "evidence_level": "B Spell2/Attack; A two-target fixture",
+          "expected": "2 damage reductions read immediately after shock",
+          "actual": "0",
+          "elapsed_seconds": 78.89596730098128
+        }
+      ],
+      "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+      "host": {
+        "time": "2026-09-29T18:28:20.0766398+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 24312,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 75.7
+          },
+          {
+            "Name": "D",
+            "free_GiB": 137.36
+          },
+          {
+            "Name": "E",
+            "free_GiB": 192.08
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "duration": 138.8607718013227,
+      "mean_fps": 87.67390267412189,
+      "p99_ms": 24.69100058078766
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "NOT_RUN_OS_INPUT",
+  "run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r3_b_20260929_183402",
+  "reason": "C-OS host wrapper terminated before first screenshot; game completed90second input window with no injected input. Outer hidden process stderr was not redirected, exception cause UNKNOWN. Preserve old run; next controller logs all output.",
+  "r4_colour_completed": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/os_final_20260929_183323/results.json"
+}

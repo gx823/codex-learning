@@ -1,0 +1,11 @@
+{
+  "status": "NOT_RUN",
+  "reason": "Final Shipping only cooks current HarborTown; M4Test parsing is compiled out in Shipping and HCM5VS3LocalQA accepts M5Test only. Old M4 map absent. Old_melee launch entered ordinary town, generated no results, runner timed out; normal CloseMainWindow requested. Related editor-game results remain14/0 and252/6, not final Shipping evidence.",
+  "package": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "cooked_maps": [
+    "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown"
+  ],
+  "source": "HCM1TestRunner.cpp BeginPlay #if !UE_BUILD_SHIPPING",
+  "normal_close_requested": true,
+  "old_melee_run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m4_melee_20260929_173615"
+}

@@ -1,0 +1,186 @@
+{
+  "status": "TWELVE_CORRECT_WEAPONS_AND_CLEAR_CORRIDOR_REPRODUCED",
+  "evidence": "EDITOR_GAME; first independent package attempt separately preserved",
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_122804",
+  "checks": 100,
+  "failures": 4,
+  "limitation": "Four fist window-observation assertions failed. Screenshot capture caused long frame gaps; window-crossing and sampled jump peaks cannot establish final hit/jump metrics. Full-body slot/low speed/root displacement observed; later quantitative tests run without screenshots.",
+  "scenarios": [
+    {
+      "case": "FP_jump_fist",
+      "attack_frames": 30,
+      "window_frames": 0,
+      "min_speed_cm_s": 14.069,
+      "mean_speed_cm_s": 118.175,
+      "sampled_peak_cm": 67.953,
+      "max_frame_gap_seconds": 0.33807,
+      "slots": [
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=461 attack_frames=30 window_frames=0 min_speed=14.069 mean_speed=118.175 feet_local_distance=283.711 peak_height=67.953 fell=1 landed=1 delta=X=0.000 Y=2009.682 Z=-0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=2.495 Y=-4348.803 Z=115.779"
+    },
+    {
+      "case": "FP_jump_sword",
+      "attack_frames": 47,
+      "window_frames": 2,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 107.332,
+      "sampled_peak_cm": 82.751,
+      "max_frame_gap_seconds": 0.35412000000000005,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=454 attack_frames=47 window_frames=2 min_speed=0.000 mean_speed=107.332 feet_local_distance=351.812 peak_height=82.751 fell=1 landed=1 delta=X=32.872 Y=1853.426 Z=0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=32.831 Y=-4505.603 Z=122.834"
+    },
+    {
+      "case": "FP_move_charge",
+      "attack_frames": 157,
+      "window_frames": 34,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 166.864,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.35146999999999995,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=512 attack_frames=157 window_frames=34 min_speed=0.000 mean_speed=166.864 feet_local_distance=710.370 peak_height=0.000 fell=0 landed=0 delta=X=204.781 Y=1874.585 Z=0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=205.616 Y=-4485.704 Z=120.765"
+    },
+    {
+      "case": "FP_run_fist",
+      "attack_frames": 31,
+      "window_frames": 0,
+      "min_speed_cm_s": 18.862,
+      "mean_speed_cm_s": 155.976,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.33639,
+      "slots": [
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=457 attack_frames=31 window_frames=0 min_speed=18.862 mean_speed=155.976 feet_local_distance=236.179 peak_height=0.000 fell=0 landed=0 delta=X=0.000 Y=1984.746 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=1.730 Y=-4372.642 Z=124.789"
+    },
+    {
+      "case": "FP_run_sword",
+      "attack_frames": 45,
+      "window_frames": 2,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 95.547,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.37156,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=443 attack_frames=45 window_frames=2 min_speed=0.000 mean_speed=95.547 feet_local_distance=341.768 peak_height=0.000 fell=0 landed=0 delta=X=29.827 Y=1813.778 Z=0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=29.629 Y=-4544.094 Z=122.045"
+    },
+    {
+      "case": "FP_sprint_sword",
+      "attack_frames": 48,
+      "window_frames": 2,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 105.127,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.34983,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=444 attack_frames=48 window_frames=2 min_speed=0.000 mean_speed=105.127 feet_local_distance=361.228 peak_height=0.000 fell=0 landed=0 delta=X=33.834 Y=1827.557 Z=0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=33.798 Y=-4343.380 Z=122.824"
+    },
+    {
+      "case": "TP_jump_fist",
+      "attack_frames": 28,
+      "window_frames": 0,
+      "min_speed_cm_s": 13.539,
+      "mean_speed_cm_s": 113.687,
+      "sampled_peak_cm": 68.739,
+      "max_frame_gap_seconds": 0.36307,
+      "slots": [
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=465 attack_frames=28 window_frames=0 min_speed=13.539 mean_speed=113.687 feet_local_distance=306.555 peak_height=68.739 fell=1 landed=1 delta=X=0.000 Y=2031.540 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=1.758 Y=-4328.058 Z=115.827"
+    },
+    {
+      "case": "TP_jump_sword",
+      "attack_frames": 48,
+      "window_frames": 2,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 103.793,
+      "sampled_peak_cm": 82.914,
+      "max_frame_gap_seconds": 0.36714999999999987,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=458 attack_frames=48 window_frames=2 min_speed=0.000 mean_speed=103.793 feet_local_distance=368.876 peak_height=82.914 fell=1 landed=1 delta=X=19.950 Y=1867.303 Z=-0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=20.920 Y=-4493.656 Z=116.162"
+    },
+    {
+      "case": "TP_move_charge",
+      "attack_frames": 157,
+      "window_frames": 32,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 162.737,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.3707099999999999,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=517 attack_frames=157 window_frames=32 min_speed=0.000 mean_speed=162.737 feet_local_distance=649.612 peak_height=0.000 fell=0 landed=0 delta=X=175.336 Y=1987.907 Z=0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=173.911 Y=-4373.421 Z=112.449"
+    },
+    {
+      "case": "TP_run_fist",
+      "attack_frames": 29,
+      "window_frames": 0,
+      "min_speed_cm_s": 19.816,
+      "mean_speed_cm_s": 154.388,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.3583499999999997,
+      "slots": [
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=458 attack_frames=29 window_frames=0 min_speed=19.816 mean_speed=154.388 feet_local_distance=208.412 peak_height=0.000 fell=0 landed=0 delta=X=0.000 Y=2004.606 Z=0.000; weapon=0 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=-1.410 Y=-4358.386 Z=113.231"
+    },
+    {
+      "case": "TP_run_sword",
+      "attack_frames": 35,
+      "window_frames": 2,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 84.556,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.4000000000000001,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=443 attack_frames=35 window_frames=2 min_speed=0.000 mean_speed=84.556 feet_local_distance=344.750 peak_height=0.000 fell=0 landed=0 delta=X=19.439 Y=1844.800 Z=0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=19.596 Y=-4514.024 Z=121.576"
+    },
+    {
+      "case": "TP_sprint_sword",
+      "attack_frames": 45,
+      "window_frames": 2,
+      "min_speed_cm_s": 0,
+      "mean_speed_cm_s": 107.982,
+      "sampled_peak_cm": 0,
+      "max_frame_gap_seconds": 0.37344,
+      "slots": [
+        "UpperBody",
+        "FullBody",
+        "none"
+      ],
+      "observation": "frames=448 attack_frames=45 window_frames=2 min_speed=0.000 mean_speed=107.982 feet_local_distance=452.657 peak_height=0.000 fell=0 landed=0 delta=X=19.332 Y=1844.930 Z=0.000; weapon=2 held=0 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=20.123 Y=-4328.815 Z=117.210"
+    }
+  ]
+}

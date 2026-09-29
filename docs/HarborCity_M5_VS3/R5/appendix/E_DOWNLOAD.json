@@ -1,0 +1,24 @@
+{
+  "status": "BLOCKED_DOWNLOAD",
+  "checked": "2026-09-29T07:51:39.632Z",
+  "browser": "agent.browsers.getForUrl(Fab Ventyra URL): No browser is available; discovery []",
+  "desktop": "Earlier native desktop probe failed pipe error 2; Epic/Fab editor clicks unavailable. No credentials inspected or networking/security altered.",
+  "local": "Downloads only existing Pro Longbow Pack.zip; no Bow/First/Exouch content in VFXStaging; R5 purchased directory absent.",
+  "packages": [
+    {
+      "name": "First Person Bow Animation Pack",
+      "author": "Exouch",
+      "url": "https://www.fab.com/listings/51d8d55c-2441-4655-a0ed-0fec0e55fd39",
+      "license": "Personal, purchased 2026-09-29 per user",
+      "destination": "C:/Users/HP/Documents/Unreal Projects/VFXStaging"
+    },
+    {
+      "name": "Bow Ventyra [Stylized Fantasy]",
+      "author": "Wrotzal",
+      "url": "https://www.fab.com/listings/4c7b9d52-5074-4a95-a298-824cd4de3dc9",
+      "license": "Personal, purchased 2026-09-29 per user",
+      "destination": "E:/GameDev/Assets/HarborCity/M5_VS3_R5/Purchased/Ventyra"
+    }
+  ],
+  "next": "User can add purchased animation pack to VFXStaging through launcher and download Ventyra FBX+BLEND. R5 final proceeds without restoring unverified bow; Arcane charged light arrow remains."
+}

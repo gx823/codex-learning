@@ -1,0 +1,6 @@
+{
+  "status": "FAIL_TRUE_PEAK",
+  "integrated_lufs": -19.48,
+  "true_peak_db": 0.34,
+  "reason": "AAC re-encoding after simple gain adjustment created reconstructed true-peak overshoot. Third approach uses oversampled peak limiter and measures encoded output."
+}

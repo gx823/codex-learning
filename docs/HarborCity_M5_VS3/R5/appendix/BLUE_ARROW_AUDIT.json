@@ -1,0 +1,14 @@
+{
+  "status": "SOURCE_ASSET_AND_CAPTURE_TIMELINE_IDENTIFIED_RUNTIME_RECHECK_PENDING",
+  "old_image": "R4/review/final/09_hair_compare.jpg",
+  "capture_offset": "0.8s into a clip beginning0.1s after the second ToggleWeapon release",
+  "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Buff_Cast",
+  "asset_emitter_names": [
+    "Arrow",
+    "BigArrow"
+  ],
+  "cause": "Sword Forming condition used 0.01<reveal<0.99 for both materializing and dematerializing. Switching to gun starts Buff_Cast at sword/hand location; Deactivate leaves existing particles alive. This fits the two floating upward arrows during low-gun pose.",
+  "change": "Only materializing equipped sword spawns short Gunshot_Cast energy at actual sword grip, tinted to weapon. Dissolve/end immediately destroys only summon component. Shield Buff_Cast remains a real gold buff cue.",
+  "classification": "Weapon presentation artifact, not quest/interaction marker. Final same-sequence runtime validation pending.",
+  "old_runtime_log": "Original hair-run game.log absent; do not claim event-log correlation."
+}

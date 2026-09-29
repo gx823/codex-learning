@@ -1,0 +1,80 @@
+{
+  "run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R4/m5_vs3_r2_matrix_20260928_230147",
+  "source_results": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R4\\m5_vs3_r2_matrix_20260928_230147\\User\\Saved\\M5Tests\\20260928_230157_m5_vs3_r2_matrix\\results.json",
+  "status": "COMPLETE",
+  "checks": 170,
+  "failures": 94,
+  "runner_outcome": "TIMEOUT_PROCESS_LEFT_RUNNING",
+  "runner_exit_code": null,
+  "last_focus": {
+    "seconds": 233.1580524,
+    "game_foreground": false
+  },
+  "focus_events": [
+    {
+      "seconds": 0.2905021,
+      "game_foreground": false
+    },
+    {
+      "seconds": 7.0005435,
+      "game_foreground": true
+    },
+    {
+      "seconds": 103.379173,
+      "game_foreground": false
+    },
+    {
+      "seconds": 107.3300941,
+      "game_foreground": true
+    },
+    {
+      "seconds": 158.1602589,
+      "game_foreground": false
+    },
+    {
+      "seconds": 164.1084683,
+      "game_foreground": true
+    },
+    {
+      "seconds": 167.9869871,
+      "game_foreground": false
+    },
+    {
+      "seconds": 188.1283387,
+      "game_foreground": true
+    },
+    {
+      "seconds": 201.8980189,
+      "game_foreground": false
+    },
+    {
+      "seconds": 215.1376841,
+      "game_foreground": true
+    },
+    {
+      "seconds": 219.4134277,
+      "game_foreground": false
+    },
+    {
+      "seconds": 230.2269813,
+      "game_foreground": true
+    },
+    {
+      "seconds": 233.1580524,
+      "game_foreground": false
+    }
+  ],
+  "confirmed": [
+    "窗口多次丢失前台，最后233.158秒后再无取得前台记录",
+    "CanUseCombat明确拒绝非GameplayFocused输入",
+    "最终results有94 FAIL及EndPlay before completion；brief.json是较早的109检查34FAIL快照，不能代替最终记录",
+    "runner等待超时并留下进程，exit_code为空；后来引擎EndPlay时写入Test interrupted"
+  ],
+  "unknown": [
+    "导致失焦的外部程序/用户操作未记录",
+    "未记录该运行逐帧供电/频率，不能归因电池降频",
+    "各次失败与前台变化时间轴起点不同，不能证明全部94失败均由失焦单一原因引发"
+  ],
+  "root_cause_status": "PARTIALLY_ESTABLISHED_FOCUS_LOSS; external trigger UNKNOWN",
+  "preservation": "保留该次94FAIL，不以234024的181/0覆盖，不跨运行累计。"
+}

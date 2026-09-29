@@ -1,0 +1,66 @@
+{
+  "status": "VERIFIED",
+  "files": [
+    {
+      "name": "M5_VS3_R5_PARTIAL_REVIEW.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\M5_VS3_R5_PARTIAL_REVIEW.mp4",
+      "size": 145714831,
+      "sha256": "b118f7de452e94688b5bccf8f2f12f53b45e1815bdbecfb8016bd16f55b80911",
+      "width": 1920,
+      "height": 1080,
+      "seconds": 236.907,
+      "average_fps": 29.965218565856787,
+      "audio": [
+        {
+          "codec": "aac",
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ],
+      "integrated_lufs": -20.0,
+      "true_peak_db": -6.08
+    },
+    {
+      "name": "M5_VS3_R5_SLOW.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\M5_VS3_R5_SLOW.mp4",
+      "size": 89662052,
+      "sha256": "4df460640ebc6504f9310dc387c1e2539666bd6eefdd075a3bae21fd68921015",
+      "width": 1920,
+      "height": 1080,
+      "seconds": 130.6,
+      "average_fps": 29.997855654944246,
+      "audio": [
+        {
+          "codec": "aac",
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ],
+      "integrated_lufs": -18.25,
+      "true_peak_db": -1.33
+    },
+    {
+      "name": "R5_HAIR_NORMAL_COMPARE.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\R5_HAIR_NORMAL_COMPARE.mp4",
+      "size": 11892752,
+      "sha256": "f268bfdd285313a488bb2ff466563e1b18ff9d237d5726f8ee8b76e66758f7a0",
+      "width": 1920,
+      "height": 580,
+      "seconds": 19.0,
+      "average_fps": 30.0,
+      "audio": []
+    },
+    {
+      "name": "R5_FP_EFFECT_LIFETIMES.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\R5_FP_EFFECT_LIFETIMES.mp4",
+      "size": 31823989,
+      "sha256": "4a774ae1cef617b900d32647d2dab4f8c61f086f0540e5e6a2a3fbaf5df35caf",
+      "width": 1920,
+      "height": 1080,
+      "seconds": 56.833333,
+      "average_fps": 30.0,
+      "audio": []
+    }
+  ],
+  "limits": "See RECORDING.md; technical encoding pass does not imply shot coverage/art acceptance."
+}

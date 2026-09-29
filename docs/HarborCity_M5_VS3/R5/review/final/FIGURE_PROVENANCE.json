@@ -1,0 +1,179 @@
+{
+  "rows": [
+    {
+      "figure": "04_shock_triptych.jpg",
+      "label": "预告 · 左侧目标并未完整入画",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 121.44
+      }
+    },
+    {
+      "figure": "04_shock_triptych.jpg",
+      "label": "立体光柱下落",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 121.88
+      }
+    },
+    {
+      "figure": "04_shock_triptych.jpg",
+      "label": "落地爆发 · 冲击圈",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 122.1
+      }
+    },
+    {
+      "figure": "05_heal.jpg",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 128
+      },
+      "note": "Final native viewport; green cross/rune shown. R4 same-camera equivalent NOT_RUN."
+    },
+    {
+      "figure": "03_wave.jpg",
+      "label": "星潮剑气 53.20s",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 53.2
+      }
+    },
+    {
+      "figure": "03_wave.jpg",
+      "label": "星潮剑气 53.55s",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 53.55
+      }
+    },
+    {
+      "figure": "03_wave.jpg",
+      "label": "星潮剑气 53.90s",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 53.9
+      }
+    },
+    {
+      "figure": "07_effects.jpg",
+      "label": "枪械射击片段",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 88
+      }
+    },
+    {
+      "figure": "07_effects.jpg",
+      "label": "空手命中与敌对提示片段",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 156
+      }
+    },
+    {
+      "figure": "07_effects.jpg",
+      "label": "飞行加速片段",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 168
+      }
+    },
+    {
+      "figure": "07_effects.jpg",
+      "label": "傍晚火盆",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 192
+      }
+    },
+    {
+      "figure": "07_effects.jpg",
+      "label": "室内拾取发光 · 炉火视野未证实",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 200
+      }
+    },
+    {
+      "figure": "07_effects.jpg",
+      "label": "实际治疗",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_182003_701AC26F\\capture.mp4",
+        "seconds": 128
+      }
+    },
+    {
+      "figure": "08_gun_three_views.jpg",
+      "label": "R4最终包复拍 · 武器库",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_183326\\User\\Saved\\M5Tests\\20260929_183331_m5_vs3_r3_b\\B_Armory.png"
+    },
+    {
+      "figure": "08_gun_three_views.jpg",
+      "label": "R5最终包 · 武器库",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644\\User\\Saved\\M5Tests\\20260929_175647_m5_vs3_r3_b\\B_Armory.png"
+    },
+    {
+      "figure": "08_gun_three_views.jpg",
+      "label": "R4最终包复拍 · 午后第一人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_183326\\User\\Saved\\M5Tests\\20260929_183331_m5_vs3_r3_b\\B_Afternoon_FP.png"
+    },
+    {
+      "figure": "08_gun_three_views.jpg",
+      "label": "R5最终包 · 午后第一人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644\\User\\Saved\\M5Tests\\20260929_175647_m5_vs3_r3_b\\B_Afternoon_FP.png"
+    },
+    {
+      "figure": "08_gun_three_views.jpg",
+      "label": "R4最终包复拍 · 傍晚第三人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_183326\\User\\Saved\\M5Tests\\20260929_183331_m5_vs3_r3_b\\B_Dusk_TP.png"
+    },
+    {
+      "figure": "08_gun_three_views.jpg",
+      "label": "R5最终包 · 傍晚第三人称",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175644\\User\\Saved\\M5Tests\\20260929_175647_m5_vs3_r3_b\\B_Dusk_TP.png"
+    },
+    {
+      "figure": "08_gun_blender_compare.jpg",
+      "label": "R4材质 · Blender匹配机位",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\D_Blender_R4_matching.jpg"
+    },
+    {
+      "figure": "08_gun_blender_compare.jpg",
+      "label": "R5材质 · Blender匹配机位",
+      "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\D_Blender_material_v2.jpg"
+    },
+    {
+      "figure": "02_hair_worst_proxy_frames.jpg",
+      "label": "骨骼代理深度3.362cm 附近帧",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+        "depth": 3.3624,
+        "time": 24.504330199241732,
+        "case": "sprint"
+      }
+    },
+    {
+      "figure": "02_hair_worst_proxy_frames.jpg",
+      "label": "骨骼代理深度3.361cm 附近帧",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+        "depth": 3.361,
+        "time": 26.50434019924173,
+        "case": "sprint"
+      }
+    },
+    {
+      "figure": "02_hair_worst_proxy_frames.jpg",
+      "label": "骨骼代理深度3.344cm 附近帧",
+      "source": {
+        "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+        "depth": 3.3436,
+        "time": 25.03767019924173,
+        "case": "sprint"
+      }
+    }
+  ],
+  "limits": "Hair worst-proxy frame timestamps approximate; do not assert exact mesh penetration. Three-view weapon camera equality recorded separately. C effects are final package screenshots, R4 strict same-camera comparisons unavailable."
+}

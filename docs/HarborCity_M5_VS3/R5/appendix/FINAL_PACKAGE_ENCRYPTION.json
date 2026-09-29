@@ -1,0 +1,366 @@
+{
+  "status": "PASS",
+  "candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68",
+  "exe_sha256": "2C6E92F039C7098F8661D9F912DD66BB9898AEB18675330B92761DBD73B26268",
+  "actual_container_encryption": "PASS: native UnrealPak Encrypted=1",
+  "pak_index_encryption": "PASS: native bEncryptedIndex=1",
+  "no_key_direct_extraction": "PASS: exact Selestia mesh denied; keyed positive control succeeded",
+  "runtime_usage": "Recorded separately in FINAL_SINGLE_RUN_VFX_USAGE.json:18/31 systems,17/27 sounds in one final full regression. Cook counts are not usage counts.",
+  "purpose": "R5 repaired candidate; runtime acceptance recorded separately",
+  "purchased_systems_cooked": 31,
+  "purchased_soundwaves_cooked": 27,
+  "assets": [
+    {
+      "name": "NS_Arrow_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Arrow_Cast.NS_Arrow_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Arrow_Hit",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Arrow_Hit.NS_Arrow_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Arrow_Projectile",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Arrow_Projectile.NS_Arrow_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Bomb_Explosion",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Bomb_Explosion.NS_Bomb_Explosion",
+      "cooked": true
+    },
+    {
+      "name": "NS_Bomb_Projectile",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Bomb_Projectile.NS_Bomb_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Bomb_Spawn",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Bomb_Spawn.NS_Bomb_Spawn",
+      "cooked": true
+    },
+    {
+      "name": "NS_Buff_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Buff_Cast.NS_Buff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Buff_Loop",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Buff_Loop.NS_Buff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Dash",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Dash.NS_Dash",
+      "cooked": true
+    },
+    {
+      "name": "NS_Debuff_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Debuff_Cast.NS_Debuff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Debuff_Loop",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Debuff_Loop.NS_Debuff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Fire_Ground",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Explosion_Fire_Ground.NS_Explosion_Fire_Ground",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Fire_Omni",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Explosion_Fire_Omni.NS_Explosion_Fire_Omni",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Ice_Ground",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Explosion_Ice_Ground.NS_Explosion_Ice_Ground",
+      "cooked": true
+    },
+    {
+      "name": "NS_Explosion_Ice_Omni",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Explosion_Ice_Omni.NS_Explosion_Ice_Omni",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fire",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Fire.NS_Fire",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fireball_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Fireball_Cast.NS_Fireball_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fireball_Hit",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Fireball_Hit.NS_Fireball_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Fireball_Projectile",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Fireball_Projectile.NS_Fireball_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Gunshot_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Gunshot_Cast.NS_Gunshot_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Gunshot_Hit",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Gunshot_Hit.NS_Gunshot_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Gunshot_Projectile",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Gunshot_Projectile.NS_Gunshot_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "NS_Heal_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Heal_Cast.NS_Heal_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Heal_Loop",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Heal_Loop.NS_Heal_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Lightning_Cast.NS_Lightning_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Hit",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Lightning_Hit.NS_Lightning_Hit",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Muzzle",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Lightning_Muzzle.NS_Lightning_Muzzle",
+      "cooked": true
+    },
+    {
+      "name": "NS_Lightning_Range",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Lightning_Range.NS_Lightning_Range",
+      "cooked": true
+    },
+    {
+      "name": "NS_Pickup_Cast",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Pickup_Cast.NS_Pickup_Cast",
+      "cooked": true
+    },
+    {
+      "name": "NS_Pickup_Loop",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Pickup_Loop.NS_Pickup_Loop",
+      "cooked": true
+    },
+    {
+      "name": "NS_Slash",
+      "kind": "systems",
+      "asset": "/Game/HarborCity/M5VS3/R4/FX/NS_Slash.NS_Slash",
+      "cooked": true
+    },
+    {
+      "name": "SFX_ArrowShot_Cast",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_ArrowShot_Cast.SFX_ArrowShot_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_ArrowShot_Hit",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_ArrowShot_Hit.SFX_ArrowShot_Hit",
+      "cooked": true
+    },
+    {
+      "name": "SFX_BasicAttack",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_BasicAttack.SFX_BasicAttack",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Bounce",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Bounce.SFX_Bomb_Bounce",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Cast",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Cast.SFX_Bomb_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Explosion",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Explosion.SFX_Bomb_Explosion",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Launch",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Launch.SFX_Bomb_Launch",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Bomb_Loop",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Bomb_Loop.SFX_Bomb_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Buff_Cast",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Buff_Cast.SFX_Buff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Buff_Loop",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Buff_Loop.SFX_Buff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Dash",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Dash.SFX_Dash",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Debuff_Cast",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Debuff_Cast.SFX_Debuff_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Debuff_Loop",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Debuff_Loop.SFX_Debuff_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Explosion",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Explosion.SFX_Explosion",
+      "cooked": true
+    },
+    {
+      "name": "SFX_ExplosionIce",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_ExplosionIce.SFX_ExplosionIce",
+      "cooked": true
+    },
+    {
+      "name": "SFX_FireBall_Cast",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_FireBall_Cast.SFX_FireBall_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_FireBall_Hit",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_FireBall_Hit.SFX_FireBall_Hit",
+      "cooked": true
+    },
+    {
+      "name": "SFX_FireBall_Projectile",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_FireBall_Projectile.SFX_FireBall_Projectile",
+      "cooked": true
+    },
+    {
+      "name": "SFX_GunShot",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_GunShot.SFX_GunShot",
+      "cooked": true
+    },
+    {
+      "name": "SFX_GunShot_Impact",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_GunShot_Impact.SFX_GunShot_Impact",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Heal_Cast",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Heal_Cast.SFX_Heal_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Heal_Loop",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Heal_Loop.SFX_Heal_Loop",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Lightning_Cast",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Lightning_Cast.SFX_Lightning_Cast",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Lightning_Hit",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Lightning_Hit.SFX_Lightning_Hit",
+      "cooked": true
+    },
+    {
+      "name": "SFX_Lightning_Launch",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_Lightning_Launch.SFX_Lightning_Launch",
+      "cooked": true
+    },
+    {
+      "name": "SFX_PickUp",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_PickUp.SFX_PickUp",
+      "cooked": true
+    },
+    {
+      "name": "SFX_PickUp_Loop",
+      "kind": "sounds",
+      "asset": "/Game/HarborCity/M5VS3/R3/FX/Audio/SFX_PickUp_Loop.SFX_PickUp_Loop",
+      "cooked": true
+    }
+  ],
+  "private_music_packages": 4,
+  "original_vfx_dependencies": 135,
+  "verification_report_sha256": "8acda1f162a74372734d3227b0c0e15c649c1f57e4904dfe9de5f0c997ccf9de",
+  "scope": "Native container flags and bounded no-key extraction of one mesh. All listed R4 systems/R3 sounds share this encrypted container. No absolute reverse-engineering resistance claim; no extracted asset or key included."
+}

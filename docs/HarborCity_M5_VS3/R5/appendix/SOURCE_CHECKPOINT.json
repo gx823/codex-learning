@@ -1,0 +1,427 @@
+{
+  "status": "CURRENT_SOURCE_DIFF_TEST_RESULTS_RECORDED_SEPARATELY",
+  "actual_changes": [
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1Character.cpp",
+      "before_sha256": "de5b4709ffe47ba777934c5698f64a419fc29de6791b03e45d13b573ddbdb296",
+      "after_sha256": "38341334c2ac07b14ffc25caf21c87aa31cd5c1eb02422dee2a4979a5597ff33"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1Character.h",
+      "before_sha256": "82313b32146b5d221c3b472b2032b5f7cb7e4a15e4a4a9b361ca9dad06d9edb5",
+      "after_sha256": "c551f71f34f99878387b4455184a93e15370b40c07e30352b60fc859de82dc12"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1PlayerController.cpp",
+      "before_sha256": "c9f45e6e8f7410a08354c607da6ee42c965f65dcf9b5351d531175bf1f79c404",
+      "after_sha256": "a28d30d31ca8478d8364db431a323fc19547e9c06cdf2d65c72e82cb1a138bb9"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3Armory.cpp",
+      "before_sha256": "a68de01490a3c794855d337ac53ab9ea6852232fb06e20b41214d8597057fd55",
+      "after_sha256": "c38b2385fea8a5c9025f1f1e4cf6e3c7803c218c90066a66808a1bae67312b75"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R3.cpp",
+      "before_sha256": "a26c8a154561ae0c0f2cee74eccdd9a1631ebbfdf2d1b28495990c024417d47d",
+      "after_sha256": "01df780ebd5434ee28c79159b88edc210e21f9dd67eac37127a8c6c7c3f981f2"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R5.cpp",
+      "before_sha256": null,
+      "after_sha256": "8c6e5a2c3b4bb605fd7c2c10b08453b07a927f16e8b21124b38f901ee5e2cd5d"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R5Acceptance.cpp",
+      "before_sha256": null,
+      "after_sha256": "9a14a3b5c2e87d1f1551235f486392f94f412a6098925a52392c0aa2425e676e"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R5Hair.cpp",
+      "before_sha256": null,
+      "after_sha256": "345d7d6ffe8f46d33e9508252d75e40a9e633dd5eb8667f06c7ccb924c5d120c"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestM5VS3R5Peaks.cpp",
+      "before_sha256": null,
+      "after_sha256": "90981022493375db3b2c4d194fa409ea3e66e2c1ecfbcc5857d8d9d232711242"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestRunner.cpp",
+      "before_sha256": "09f17210b48e053a8593283cdbecf841dc57113ae5f072dc301d30cbc977798d",
+      "after_sha256": "aa42d0be4c0bcb2e090aecd2fe6f1b049c72cf4c6a0ad13a8fe45850a339976d"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM1TestRunner.h",
+      "before_sha256": "b453e2aa7177843ba00a4583adcc7f85afdbb83e4f099b5ceb4fef044514067a",
+      "after_sha256": "1abf2dd7ea3fa1bfb5ed1f927303125a621e0919c45b89554c8cf0bdb09882b7"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M1/HCM5VS3FirstPersonCapture.h",
+      "before_sha256": null,
+      "after_sha256": "e8dddd833b698f22132be2a8104676f6c47f6cd5abfeade5c39e6ba6f1fc3ad5"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4/HCM4CombatComponent.cpp",
+      "before_sha256": "153f1222664a0a6f00404c6dee08ec7cfaae4cd8788134cabf83cb7923d9d93c",
+      "after_sha256": "f0bc4e61ef4fa8682276175793ae8dc30e50226848b5b83ee352262a64313a1e"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4/HCM4CombatComponent.h",
+      "before_sha256": "7ec7974cef72fb39c17bdb48466defd44b80ec1161392a8e556885108ca37ffc",
+      "after_sha256": "9d810b8658c1be503dd597d4e4c57d45d476d633364a87f71e88454aa472af88"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M4R2/HCM4R2PlayerAnimInstance.cpp",
+      "before_sha256": "371549385c31461d65218abce6b16f97e2956b15902beafb1ce957337dce02d1",
+      "after_sha256": "c7c392e4df75d232a876eafb7d6b71f8a21689e2bb45a9f53fbe7881a999aecf"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2LookAnimInstance.cpp",
+      "before_sha256": "19806221017cf9e44d19246f4a8d86ab75cda95d6d2b39aa9da9e0e16fa31246",
+      "after_sha256": "63d4af4b4a0ce24a1a2fed8e4fd14fee32d48bf6d565e3ca4f726bd86e41d6b0"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS2/HCM5VS2PhysicsEditor.cpp",
+      "before_sha256": "a6ee6b0bbdc1162fdffa003c6c243b20b1aff90512458d76a2d40a9953832d23",
+      "after_sha256": "bcf2dfddd9fc62577fdfded0e209c454c3b08f8743a9f619f80efadf03241dfa"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/AnimNode_HCM5VS3PosePolish.cpp",
+      "before_sha256": "90554d8366e64bb8588f642769f206ba56c35220ac58da2095e318b958261b6d",
+      "after_sha256": "732238d8910b4860d41649cd9b3b17e7f6ef2d2dad58ee06fa12c47719f87410"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/AnimNode_HCM5VS3PosePolish.h",
+      "before_sha256": "0ec2f66f5872c6753acae4c00a7f342052e68da470901459a6de6d39ee2889b4",
+      "after_sha256": "c58b4a02482df34e2a1ab2fcab24f5926f0289b6c33ad24ab13a858374ada3c7"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Abilities.cpp",
+      "before_sha256": "5b32584476f38f87fbeb6ddd912df4ba641b4dc36309b86cec2de0b20e14d551",
+      "after_sha256": "e4f667077c253d270296387bdaccc4a37e1d519010f0bda0f3eea0306f864f0b"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Abilities.h",
+      "before_sha256": "f814ee0c78dbdf8bcd8a90ee585775d0ad2fbee2f6e0309661f475a507c24932",
+      "after_sha256": "294cb5d989a76678a769842ebbe0075b0bb329e3a7431f5b9ad17432f3121589"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Armory.cpp",
+      "before_sha256": "afed6cce79436d40aba6817455906166c4a9487c24e9902936f086697708053e",
+      "after_sha256": "83d552aaf9f98e23c38c57f838648de1cc924457c2b6ab6c30d6dcb9ab3b0f8d"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3Bow.cpp",
+      "before_sha256": "f9d80cf8d5ba632a7822ce2523cf88f1cf515cc78012b6ad8e4a0f50f23dba41",
+      "after_sha256": "ff5eb36caba6f926fc2c1537e59c30da616e364ab03934a8891c698dab64b3b5"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3SwordWave.cpp",
+      "before_sha256": "79a8f3ef60aff3726bfa8b8b63890e428d82a9d64239b1a6cbb3bd8b33e963ae",
+      "after_sha256": "e411e26880f196387e1715d88dcf5c9dac540064c7aa010525e72c37de7b88d9"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3VFX.cpp",
+      "before_sha256": "a1a0004b7ad032563f1a2ff3f67ff2cb95cd054eaf050329fb165b6009c03e12",
+      "after_sha256": "e676408cd10108c627b3792da79b7715ae98e818ed31ef6a49833a44bad45cd5"
+    },
+    {
+      "path": "HarborCity/Source/HarborCity/M5VS3/HCM5VS3VFX.h",
+      "before_sha256": "5700a1272583c24b0929577edfb0b178e90bb3c0fa07a9992fe853a592693660",
+      "after_sha256": "88fb6953b17ce06acde0dec97411b46d7a13a31174108f23178fbccc4e616e56"
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HCM5VS3R5Editor.cpp",
+      "before_sha256": null,
+      "after_sha256": "e81fb252c229f71f61f99b2e81a29c34f269ed1b259e6b65aa0605da3850b252"
+    },
+    {
+      "path": "HarborCity/Source/HarborCityEditor/HCM5VS3R5Editor.h",
+      "before_sha256": null,
+      "after_sha256": "280fa8add019750135f5aa37c95bfe5fb358134dd0f9e1939b237b414e10a48d"
+    },
+    {
+      "path": "docs/HarborCity_M5_VS3/R5/.gitignore",
+      "before_sha256": null,
+      "after_sha256": "1795369b934120b8c35e99507f6a65e611c33847c65ff39aa15797142b2620e2"
+    },
+    {
+      "path": "tools/blender_m5_vs3_r5_arm_measure.py",
+      "before_sha256": null,
+      "after_sha256": "e5a4206f52b17db873e33e0213d5d669419787a6205925efe9e191779a253451"
+    },
+    {
+      "path": "tools/blender_m5_vs3_r5_gun_compare.py",
+      "before_sha256": null,
+      "after_sha256": "478156f5f825cea898c8774bff49faffe99ad42154c70eba6d5ed158f83b9794"
+    },
+    {
+      "path": "tools/blender_m5_vs3_r5_gun_material.py",
+      "before_sha256": null,
+      "after_sha256": "a2d09e49aba9e6931ad8b77f55a98faed0a09e4bed52045deef7776601d2cc50"
+    },
+    {
+      "path": "tools/build_m5_vs3.ps1",
+      "before_sha256": "d002e4a477b62917d06c7f84b03881eeaf1e9b28c16fc4df4e6dee5a3becce43",
+      "after_sha256": "b37372d46ea950429755bfb107b5d39d396eb0283203abe306590dc58b3f907b"
+    },
+    {
+      "path": "tools/hc_r5_a_regression_queue.ps1",
+      "before_sha256": null,
+      "after_sha256": "78f65d4c2a64e898af376352984dfd27b5616b9fd89a6027072650acfedf746a"
+    },
+    {
+      "path": "tools/hc_r5_analyze_acceptance.py",
+      "before_sha256": null,
+      "after_sha256": "718259cf444991d444824001eb203502277f7bfdc97d954183264d25bf3109b8"
+    },
+    {
+      "path": "tools/hc_r5_analyze_hair.py",
+      "before_sha256": null,
+      "after_sha256": "e9ddcea6d837f52cc0d97451bce96bf7a1afba2b82374f4eddcefd1dbbdaa95c"
+    },
+    {
+      "path": "tools/hc_r5_apply_hair_runtime.py",
+      "before_sha256": null,
+      "after_sha256": "e68e87b5dbefd020a5f4d5562e424b49bf0eb0d3a9704b866184870aae3974b6"
+    },
+    {
+      "path": "tools/hc_r5_apply_mobile_proposal.py",
+      "before_sha256": null,
+      "after_sha256": "cceb657cdcae5a6ada93f7553d43e194d4f2cdd3688ba98e6530e437d90c6fb4"
+    },
+    {
+      "path": "tools/hc_r5_collect_final_evidence.py",
+      "before_sha256": null,
+      "after_sha256": "0784aa69eaefd42731c833a8da5ad9fe3df1961036f8c5e1cd8f5c7d74f54cd1"
+    },
+    {
+      "path": "tools/hc_r5_edit_main.py",
+      "before_sha256": null,
+      "after_sha256": "abf6b645be450a76c65f54ca8ab300acded30bcd93b53ec3cd8177d5c8dae3dc"
+    },
+    {
+      "path": "tools/hc_r5_encode_fp_diagnostics.py",
+      "before_sha256": null,
+      "after_sha256": "b467a4afba8e01fd509edf05f4e52c9dc4fa6d05f3dac3ccbddf8b7f83197b3d"
+    },
+    {
+      "path": "tools/hc_r5_export_native_media.py",
+      "before_sha256": null,
+      "after_sha256": "72fd8ccdbb4fcf32f6806d71a687f80233f2de538ede337acc6e0061b88d8bc1"
+    },
+    {
+      "path": "tools/hc_r5_failure_ledger.py",
+      "before_sha256": null,
+      "after_sha256": "6926a86ccb02805b562e7a69dd5d2643df9fc1e80543a0bbad5def3bec60f345"
+    },
+    {
+      "path": "tools/hc_r5_final_figures.py",
+      "before_sha256": null,
+      "after_sha256": "b5c0bf9a11b4241b2d761d83ffad853724299040ba8ab29eb0d85a5fee6716a2"
+    },
+    {
+      "path": "tools/hc_r5_final_os_comparisons.ps1",
+      "before_sha256": null,
+      "after_sha256": "67aae495046d793d2516101e48501f18b3ccb41e79dcda510bdce0b963fc1d1e"
+    },
+    {
+      "path": "tools/hc_r5_final_test_queue.ps1",
+      "before_sha256": null,
+      "after_sha256": "ebeabec32aedca93830e99808160baa2d8aa10883e20f0512e5110d5d0327d54"
+    },
+    {
+      "path": "tools/hc_r5_finalize_delivery_docs.py",
+      "before_sha256": null,
+      "after_sha256": "cd532c364b2e502674f840b33ec19e9aa9c4f1b53a4be7072841253c1b4c8f35"
+    },
+    {
+      "path": "tools/hc_r5_finalize_review.py",
+      "before_sha256": null,
+      "after_sha256": "2ebf9650d0f8177aa5c2728ed1407c69dca2283b2fdd8237ef9b84ac5ab73c86"
+    },
+    {
+      "path": "tools/hc_r5_fix_main_audio.py",
+      "before_sha256": null,
+      "after_sha256": "3a2381baf1a44892faee470f7d3d603a922a290531b4c6c160066e269797e07c"
+    },
+    {
+      "path": "tools/hc_r5_fp_sheet.py",
+      "before_sha256": null,
+      "after_sha256": "e36411f8375d461ece9f4c293d08367f16a0a2a0360ebfe8d78893e37198f2aa"
+    },
+    {
+      "path": "tools/hc_r5_gun_material_audit.py",
+      "before_sha256": null,
+      "after_sha256": "eed66829e1814829f14675774d75ada9fed11ebd16cba54a679c9d399dcf1cb5"
+    },
+    {
+      "path": "tools/hc_r5_hair_compare_media.py",
+      "before_sha256": null,
+      "after_sha256": "b33ce501890454f07e3cbfcded896b7777d7c0136fdda24cd6a2e649aa2cbf56"
+    },
+    {
+      "path": "tools/hc_r5_host_status.ps1",
+      "before_sha256": null,
+      "after_sha256": "f027844aecb2c803c9f8cb7e38a40f4bca2dfbc4f1c6d1d3136e489eedf76599"
+    },
+    {
+      "path": "tools/hc_r5_os_figures.py",
+      "before_sha256": null,
+      "after_sha256": "ded73c2ffaac3f4c04ed596081aaaa865e3cc62a203feb61b7037cbb6b1af342"
+    },
+    {
+      "path": "tools/hc_r5_os_input.ps1",
+      "before_sha256": null,
+      "after_sha256": "bcf8d7ef600b5b8e24c8e476494e5ce3f36afb37a901ade9514bda5ae02ea046"
+    },
+    {
+      "path": "tools/hc_r5_os_sequence.ps1",
+      "before_sha256": null,
+      "after_sha256": "2e1f53dff53440b4078288d6d2fd0d9d48044c2750bcf1255d4e0b18aa8e1504"
+    },
+    {
+      "path": "tools/hc_r5_physbone_extract.py",
+      "before_sha256": null,
+      "after_sha256": "0c5544a5e0df85be0216f354741a4088f9bb33439d036f65cfdfde26ad5ed9db"
+    },
+    {
+      "path": "tools/hc_r5_prepare_hair_capsules.py",
+      "before_sha256": null,
+      "after_sha256": "13902d06b89574ad131cf1c9180e2105b9b7743a24e285d2a77c7c69fe496066"
+    },
+    {
+      "path": "tools/hc_r5_prepare_publication.py",
+      "before_sha256": null,
+      "after_sha256": "5ed81fc4c612a94b36a188b8ab1857ffd992759b83128ff48ea2f85a1f06436c"
+    },
+    {
+      "path": "tools/hc_r5_stop_guard.ps1",
+      "before_sha256": null,
+      "after_sha256": "d38651eb875d78581686148adf22a629a491d52d3fe650a787b010d501e519ef"
+    },
+    {
+      "path": "tools/hc_r5_visual_sheet.py",
+      "before_sha256": null,
+      "after_sha256": "8b4d08c7490159996e9fee2684eb50e7949be56e4979222ea0cb75db7cf7be48"
+    },
+    {
+      "path": "tools/hc_r5_write_checkpoint_diff.py",
+      "before_sha256": null,
+      "after_sha256": "256206a9f4bc18a41b0585d7cb63cdffe6d1fa0af2846116359118e4babbfda8"
+    },
+    {
+      "path": "tools/package_m5_vs3.ps1",
+      "before_sha256": "df9165efc789c6fc3aa2441853fc48a785ef3b0bd20b30438b5585adce7ff125",
+      "after_sha256": "9e2347a0b5f8ec00dd68db3498a145dd8a34c205e231158ef5891505d99d5768"
+    },
+    {
+      "path": "tools/publish_m5_vs3_r5_docs.py",
+      "before_sha256": null,
+      "after_sha256": "be0d0b754e31b0cf83ea983e6aad5e2e0575adaedf2af60e5727623a6dc75dcf"
+    },
+    {
+      "path": "tools/publish_m5_vs3_r5_release.py",
+      "before_sha256": null,
+      "after_sha256": "0b79befc8b7aab405d96719b185efcb970f47ba7e8c2a4f42376a822fec515ce"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5.ps1",
+      "before_sha256": null,
+      "after_sha256": "81043d8c4b3b3ed90982fdc52ec8c2bebfdd5314f3b1952e8bc4a85110d8640b"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_cd_checks.ps1",
+      "before_sha256": null,
+      "after_sha256": "59f7ad4ff7cc9fbd501e8942a6d11d5822725f5c08ee022c9a9bb9a2bec88349"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_cd_editor.ps1",
+      "before_sha256": null,
+      "after_sha256": "af64ae548686b61e6415b0d0213668a693e01373684c9c4794ad743ecae45f26"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_cd_editor2.ps1",
+      "before_sha256": null,
+      "after_sha256": "4d44f787b4b0b94b5cf1ad4fbed0cfea984ad95262717c84722e707826a672c4"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_final_after_package.ps1",
+      "before_sha256": null,
+      "after_sha256": "985ce12f19ec4e5db2987f6c707fa0a59dc5be79fd418eec5cc56b6144d1b79c"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_final_os_solo.ps1",
+      "before_sha256": null,
+      "after_sha256": "fecf7c45b5e862a19ad36b87a228e8199b303d6ab2e7adffe48a3df73c8953c9"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_os_controller.ps1",
+      "before_sha256": null,
+      "after_sha256": "9e9e5a6a4c12dce16882bbbdc1e21b9a9c5a1c3630845c759193a91906bb7bba"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_resume_final.ps1",
+      "before_sha256": null,
+      "after_sha256": "319492546cdd8c37233fb691a11201039649a536f1f9dbcd4591fb2e184edc0b"
+    },
+    {
+      "path": "tools/run_m5_vs3_r5_visual_build.ps1",
+      "before_sha256": null,
+      "after_sha256": "beb9e728c27a7bfee4e88f3145827ca3fdc48bd4f3ad6014af1b32cabc041a0a"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r5_gun_material.py",
+      "before_sha256": null,
+      "after_sha256": "b8c04f70e5e56cebf49dc3df9d1bd7b207f5feac3ae30649873eff11815e31ce"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r5_hair_capsules.py",
+      "before_sha256": null,
+      "after_sha256": "bc4bd6fa86e659ec855de13b35c28189421183d1b6c77df76d9b114c58280cb8"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r5_hair_capsules2.py",
+      "before_sha256": null,
+      "after_sha256": "f794cbbd05b23ef5d15b42faead30c0b53adb78fc02c21ae6ed892a446cb9e52"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r5_hair_capsules3.py",
+      "before_sha256": null,
+      "after_sha256": "de497bdb502b291ccd92a40f6e28ac854574d101083840d29170eb0d66e62a53"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r5_read_probe.py",
+      "before_sha256": null,
+      "after_sha256": "da8204ccb6db9d70473b066e6f3bacaee06d706fbf9d9a7db8c3be94daa97f1d"
+    },
+    {
+      "path": "tools/ue_m5_vs3_r5_shock.py",
+      "before_sha256": null,
+      "after_sha256": "5a575445166d0055f4241a5d4fc3824d379712a1b443fcd13dda5b1b507b2199"
+    },
+    {
+      "path": "tools/verify_m5_vs3_r5_candidate_coverage.py",
+      "before_sha256": null,
+      "after_sha256": "f086eadf37f24258071f8b07f05c44e9ab0fc38b4e230b19f1c98a249cf3453f"
+    },
+    {
+      "path": "tools/verify_m5_vs3_r5_container_coverage.py",
+      "before_sha256": null,
+      "after_sha256": "3d8328558457a60fb821b2028d468a46c2a4249ff9a4d4a450021bdf7fc2f711"
+    },
+    {
+      "path": "tools/verify_m5_vs3_r5_final_coverage.py",
+      "before_sha256": null,
+      "after_sha256": "4a84e028a37febb690bcf1cb19a0a81d2440bdca7ad474dd5ebd1771ab44a52d"
+    },
+    {
+      "path": ".gitignore",
+      "scope": "Only R5 ignore addition; earlier local rules preserved",
+      "before_sha256": "8a669c09d53f0c975cc38428596f43ca06f3fd946dc8250d0247795901dd83a4",
+      "after_sha256": "714ed6267aeca2c4c11ed4218a8c56cd66394d6c9500c054db431796add95ec1"
+    }
+  ],
+  "test_checkpoint": "WORK_CHECKPOINT.json"
+}

@@ -1,0 +1,104 @@
+{
+  "status": "PASS_DECODE_VISUAL_REVIEW_REQUIRED",
+  "video": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\review\\final\\R5_HAIR_NORMAL_COMPARE.mp4",
+  "speed": 1,
+  "scope": "Left is A intermediate Shipping before B, not the original R4 executable. Same final hair fixture/camera; both captured native normal speed. No audio in split-screen comparison.",
+  "clips": [
+    {
+      "case": "walk",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628\\User\\Saved\\M5Tests\\20260929_145636_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_145644_87AEBBD0\\capture.mp4",
+      "trim_start": 6.413692383712624,
+      "duration": 4,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "walk",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+      "trim_start": 6.340825500583742,
+      "duration": 4,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "run",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628\\User\\Saved\\M5Tests\\20260929_145636_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_145644_87AEBBD0\\capture.mp4",
+      "trim_start": 15.476299385225866,
+      "duration": 4,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "run",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+      "trim_start": 15.419064900523518,
+      "duration": 4,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "sprint",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628\\User\\Saved\\M5Tests\\20260929_145636_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_145644_87AEBBD0\\capture.mp4",
+      "trim_start": 23.546533885097595,
+      "duration": 3.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "sprint",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+      "trim_start": 23.48768019924173,
+      "duration": 3.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "gun_idle",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628\\User\\Saved\\M5Tests\\20260929_145636_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_145644_87AEBBD0\\capture.mp4",
+      "trim_start": 39.3753653864027,
+      "duration": 2.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "gun_idle",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+      "trim_start": 39.3144220026792,
+      "duration": 2.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "ADS",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628\\User\\Saved\\M5Tests\\20260929_145636_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_145644_87AEBBD0\\capture.mp4",
+      "trim_start": 45.439553985989185,
+      "duration": 2.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "ADS",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+      "trim_start": 45.38411810124526,
+      "duration": 2.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "spell",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_145628\\User\\Saved\\M5Tests\\20260929_145636_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_145644_87AEBBD0\\capture.mp4",
+      "trim_start": 51.508566884940954,
+      "duration": 2.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    },
+    {
+      "case": "spell",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_174829\\User\\Saved\\M5Tests\\20260929_174832_m5_vs3_r3_b",
+      "capture": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\recordings\\20260929_174840_04B7D93C\\capture.mp4",
+      "trim_start": 51.451129301136824,
+      "duration": 2.5,
+      "alignment": "same scripted case at30FPS; elapsed readback minus sampled duration and capture first world seconds; approximate subframe phase, no temporal warp"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PARTIAL_INPUT_INJECTED_NO_ACTION_ACCEPTANCE",
+  "final_input": {
+    "status": "INPUT_SEQUENCE_SENT",
+    "evidence": "C-OS SendInput; not human testing",
+    "pid": 8216,
+    "ui_order": "remote, Arcane, ivory, equip, drag, wheel, close",
+    "movement": "W plus three clicks; W plus Space and two clicks",
+    "visual_acceptance": "PENDING_REVIEW",
+    "time": "2026-09-29T18:45:59.2868067+08:00"
+  },
+  "r4_input": {
+    "status": "INPUT_SEQUENCE_SENT",
+    "evidence": "C-OS SendInput; not human testing",
+    "pid": 11952,
+    "ui_order": "remote, Arcane, ivory, equip, drag, wheel, close",
+    "movement": "W plus three clicks; W plus Space and two clicks",
+    "visual_acceptance": "PENDING_REVIEW",
+    "time": "2026-09-29T18:38:23.6014139+08:00"
+  },
+  "provenance": "Actual SendInput and client screen capture; same os fixture and key timings. R4/R5 camera rig identical initially; moving follow camera naturally diverges when travel differs. Animation phase not artificially aligned.",
+  "human_mouse": "NOT_RUN",
+  "prior_attempts": [
+    "OS_ATTEMPT1.json",
+    "OS_ATTEMPT2.json"
+  ],
+  "visual_review": "OS captures still show armory throughout supposed close/run/jump steps. SendInput return values do not prove intended action. Final engine snapshot open=0 occurs at sequence finish/cleanup and does not establish close timing. Drag/zoom appearance changed, but running/jumping action evidence invalid.",
+  "running_jump": "NOT_RUN_VALID_C_OS",
+  "manual": "Open final EXE, B > remote > Arcane > ivory > equip, drag/wheel/close; then W+three clicks and Space+two clicks. Human test PENDING."
+}

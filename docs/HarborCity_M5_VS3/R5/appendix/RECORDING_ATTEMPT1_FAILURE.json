@@ -1,0 +1,10 @@
+{
+  "job": "showcase_recording_attempt1",
+  "run": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r2_showcase_20260929_180142",
+  "results": "D:/科研学习/codex学习/docs/HarborCity_M5_VS3/R5/m5_vs3_r2_showcase_20260929_180142/User/Saved/M5Tests/20260929_180145_m5_vs3_r2_showcase/results.json",
+  "status": "COMPLETE",
+  "checks": 13,
+  "failures": 0,
+  "recording": "NOT_STARTED",
+  "reason": "runner passed420seconds, Shipping recorder creation accepts <=360. Runtime checks complete13/0, no frames were generated. Corrected runner only; next run records same frozen executable."
+}

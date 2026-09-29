@@ -1,0 +1,277 @@
+{
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215",
+  "exe": "E:\\GameDev\\Builds\\HarborCity\\M5_VS3\\Candidate_20260929_165508_714_fce88b68\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "method": "1920x1080 paired final-scene renders, full effect lifetime at controlled30Hz simulation; duplicated hidden-FX control; threshold>=32 RGB levels. This is A diagnostic, not native-speed viewport capture. Native public MP4 is separate.",
+  "rows": [
+    {
+      "effect": "Arcane_muzzle",
+      "peak_percent": 7.27079,
+      "peak_sim_seconds": 0.266667,
+      "max_control_noise": 0.04509,
+      "frames": 93,
+      "sim_seconds": 3.099998,
+      "wall_seconds": 5.2013,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Arcane_muzzle_frames.csv"
+    },
+    {
+      "effect": "Arrow_charge",
+      "peak_percent": 0.13551,
+      "peak_sim_seconds": 0.2,
+      "max_control_noise": 0.04036,
+      "frames": 33,
+      "sim_seconds": 1.1,
+      "wall_seconds": 1.8872,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Arrow_charge_frames.csv"
+    },
+    {
+      "effect": "Arrow_release",
+      "peak_percent": 14.58512,
+      "peak_sim_seconds": 0.133333,
+      "max_control_noise": 0.04316,
+      "frames": 150,
+      "sim_seconds": 4.999997,
+      "wall_seconds": 8.0764,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Arrow_release_frames.csv"
+    },
+    {
+      "effect": "Bolt_charge",
+      "peak_percent": 1.19917,
+      "peak_sim_seconds": 0.166667,
+      "max_control_noise": 0.04374,
+      "frames": 36,
+      "sim_seconds": 1.2,
+      "wall_seconds": 2.0448,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Bolt_charge_frames.csv"
+    },
+    {
+      "effect": "Bolt_release",
+      "peak_percent": 3.86685,
+      "peak_sim_seconds": 0.166667,
+      "max_control_noise": 0.04215,
+      "frames": 150,
+      "sim_seconds": 4.999997,
+      "wall_seconds": 8.0969,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Bolt_release_frames.csv"
+    },
+    {
+      "effect": "CrimsonNight_charge",
+      "peak_percent": 11.06115,
+      "peak_sim_seconds": 0.5,
+      "max_control_noise": 0.04446,
+      "frames": 33,
+      "sim_seconds": 1.1,
+      "wall_seconds": 1.809,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\CrimsonNight_charge_frames.csv"
+    },
+    {
+      "effect": "CrimsonNight_slash1",
+      "peak_percent": 8.0651,
+      "peak_sim_seconds": 0.4,
+      "max_control_noise": 0.12442,
+      "frames": 29,
+      "sim_seconds": 0.966667,
+      "wall_seconds": 1.6858,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\CrimsonNight_slash1_frames.csv"
+    },
+    {
+      "effect": "CrimsonNight_slash2",
+      "peak_percent": 31.13947,
+      "peak_sim_seconds": 0.5,
+      "max_control_noise": 0.19878,
+      "frames": 29,
+      "sim_seconds": 0.966667,
+      "wall_seconds": 1.6023,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\CrimsonNight_slash2_frames.csv"
+    },
+    {
+      "effect": "CrimsonNight_slash3",
+      "peak_percent": 8.03655,
+      "peak_sim_seconds": 0.2,
+      "max_control_noise": 0.2621,
+      "frames": 29,
+      "sim_seconds": 0.966667,
+      "wall_seconds": 1.5858,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\CrimsonNight_slash3_frames.csv"
+    },
+    {
+      "effect": "CrimsonNight_wave",
+      "peak_percent": 37.90914,
+      "peak_sim_seconds": 0.533333,
+      "max_control_noise": 0.09848,
+      "frames": 120,
+      "sim_seconds": 3.999998,
+      "wall_seconds": 6.4697,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\CrimsonNight_wave_frames.csv"
+    },
+    {
+      "effect": "Heal",
+      "peak_percent": 12.62066,
+      "peak_sim_seconds": 0.8,
+      "max_control_noise": 0.04244,
+      "frames": 242,
+      "sim_seconds": 8.066661,
+      "wall_seconds": 13.3429,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Heal_frames.csv"
+    },
+    {
+      "effect": "Shield",
+      "peak_percent": 3.59578,
+      "peak_sim_seconds": 0.666667,
+      "max_control_noise": 0.04389,
+      "frames": 242,
+      "sim_seconds": 8.066661,
+      "wall_seconds": 13.2543,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Shield_frames.csv"
+    },
+    {
+      "effect": "Shock_release",
+      "peak_percent": 11.99634,
+      "peak_sim_seconds": 0.466667,
+      "max_control_noise": 0.05179,
+      "frames": 150,
+      "sim_seconds": 4.999997,
+      "wall_seconds": 8.1892,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Shock_release_frames.csv"
+    },
+    {
+      "effect": "Shock_warning",
+      "peak_percent": 2.33512,
+      "peak_sim_seconds": 0.3,
+      "max_control_noise": 0.05011,
+      "frames": 36,
+      "sim_seconds": 1.2,
+      "wall_seconds": 2.1201,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Shock_warning_frames.csv"
+    },
+    {
+      "effect": "StarTide_charge",
+      "peak_percent": 11.89887,
+      "peak_sim_seconds": 0.833334,
+      "max_control_noise": 0.05695,
+      "frames": 33,
+      "sim_seconds": 1.1,
+      "wall_seconds": 1.8139,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\StarTide_charge_frames.csv"
+    },
+    {
+      "effect": "StarTide_slash1",
+      "peak_percent": 12.32841,
+      "peak_sim_seconds": 0.433333,
+      "max_control_noise": 0.31684,
+      "frames": 29,
+      "sim_seconds": 0.966667,
+      "wall_seconds": 1.6468,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\StarTide_slash1_frames.csv"
+    },
+    {
+      "effect": "StarTide_slash2",
+      "peak_percent": 23.27011,
+      "peak_sim_seconds": 0.433333,
+      "max_control_noise": 0.59018,
+      "frames": 29,
+      "sim_seconds": 0.966667,
+      "wall_seconds": 1.6067,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\StarTide_slash2_frames.csv"
+    },
+    {
+      "effect": "StarTide_slash3",
+      "peak_percent": 10.59042,
+      "peak_sim_seconds": 0.2,
+      "max_control_noise": 1.00704,
+      "frames": 29,
+      "sim_seconds": 0.966667,
+      "wall_seconds": 1.6612,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\StarTide_slash3_frames.csv"
+    },
+    {
+      "effect": "StarTide_wave",
+      "peak_percent": 40.15702,
+      "peak_sim_seconds": 0.533333,
+      "max_control_noise": 0.22536,
+      "frames": 120,
+      "sim_seconds": 3.999998,
+      "wall_seconds": 6.4403,
+      "status": "FAIL",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\StarTide_wave_frames.csv"
+    },
+    {
+      "effect": "Steamlock_muzzle",
+      "peak_percent": 6.85764,
+      "peak_sim_seconds": 0.1,
+      "max_control_noise": 0.03974,
+      "frames": 93,
+      "sim_seconds": 3.099998,
+      "wall_seconds": 5.1029,
+      "status": "PASS",
+      "csv": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_175215\\User\\Saved\\M5Tests\\20260929_175218_m5_vs3_r3_b\\Steamlock_muzzle_frames.csv"
+    }
+  ],
+  "prerequisites": [
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.1897189989686012
+    },
+    {
+      "name": "StarTide real heavy charge held",
+      "status": "PASS",
+      "evidence_level": "B actual action prerequisite",
+      "expected": "held=1 after 1.1s",
+      "actual": "weapon=2 held=1 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=158.238 Y=-6500.380 Z=122.223",
+      "elapsed_seconds": 56.878627099096775
+    },
+    {
+      "name": "CrimsonNight real heavy charge held",
+      "status": "PASS",
+      "evidence_level": "B actual action prerequisite",
+      "expected": "held=1 after 1.1s",
+      "actual": "weapon=2 held=1 buffered=0 swing=0.000 hitstop=0.000 contact=0 castKind=-1 castTime=0.000 draw=0.000 mp=100.00 shield=0.00 center=X=257.036 Y=-6499.904 Z=122.412",
+      "elapsed_seconds": 73.60036489740014
+    },
+    {
+      "name": "Bolt aiming active",
+      "status": "PASS",
+      "evidence_level": "B action prerequisite",
+      "expected": "selected spell aiming",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 0.0\n按住左键选目标，松开发射；右键取消",
+      "elapsed_seconds": 99.4402222968638
+    },
+    {
+      "name": "Shock aiming active",
+      "status": "PASS",
+      "evidence_level": "B action prerequisite",
+      "expected": "selected spell aiming",
+      "actual": "1 魔力弹 0.0   2 冲击 0.0\n3 治疗 0.0   4 护盾 0.0\n按住左键选目标，松开发射；右键取消",
+      "elapsed_seconds": 124.7878556996584
+    },
+    {
+      "name": "R5 heal actually damaged first",
+      "status": "PASS",
+      "evidence_level": "B NPC punch prerequisite",
+      "expected": "health<100",
+      "actual": "魔导枪 11 / 45 | 生命 70\n松开左键单发 · 按住0.8秒蓄力光箭 0%\n右键瞄准  R装弹  Q切换  B武器库",
+      "elapsed_seconds": 147.11374459788203
+    }
+  ]
+}

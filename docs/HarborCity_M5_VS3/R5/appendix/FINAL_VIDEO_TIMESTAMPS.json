@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "frames": 7099,
+  "frame_pts_nonmonotonic": [],
+  "packet_dts_nonmonotonic": [],
+  "first_pts": "0.000000",
+  "last_pts": "236.868000",
+  "note": "Full decode returned 0; null-muxer default timebase produced repeated DTS warnings. Actual MP4 frame PTS and packet DTS separately tested."
+}

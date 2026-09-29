@@ -1,0 +1,10 @@
+{
+  "method": 3,
+  "ceiling0_63": {
+    "lufs": -18.57,
+    "true_peak_db": -0.46,
+    "status": "FAIL"
+  },
+  "next_ceiling": 0.4,
+  "reason": "Measured decoded AAC true peaks still overshoot; tune same oversampled limiter ceiling, preserving previous measurements."
+}

@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "view": "B_Armory",
+      "before": "camera=X=170.000 Y=-6240.000 Z=208.150 P=-15.302966 Y=-123.178512 R=0.000000",
+      "after": "camera=X=170.000 Y=-6240.000 Z=208.150 P=-15.302966 Y=-123.178512 R=0.000000",
+      "camera_equal": true
+    },
+    {
+      "view": "B_Afternoon_FP",
+      "before": "camera=X=0.000 Y=-6500.000 Z=155.606 P=-5.000000 Y=90.000000 R=0.000000",
+      "after": "camera=X=0.000 Y=-6500.000 Z=155.606 P=-5.000000 Y=90.000000 R=0.000000",
+      "camera_equal": true
+    },
+    {
+      "view": "B_Dusk_TP",
+      "before": "camera=X=170.000 Y=-6240.000 Z=208.150 P=-15.302966 Y=-123.178512 R=0.000000",
+      "after": "camera=X=170.000 Y=-6240.000 Z=208.150 P=-15.302966 Y=-123.178512 R=0.000000",
+      "camera_equal": true
+    }
+  ],
+  "before_executable": "Candidate_20260928_225009_194_f9a7d9e2",
+  "after_executable": "Candidate_20260929_165508_714_fce88b68"
+}

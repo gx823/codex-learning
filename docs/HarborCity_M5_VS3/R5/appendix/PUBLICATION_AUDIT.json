@@ -1,0 +1,17 @@
+{
+  "status": "PASS_EXPLICIT_WHITELIST",
+  "text_count": 64,
+  "image_count": 13,
+  "html_local_references": 15,
+  "browser_render": "NOT_RUN_TOOL_UNAVAILABLE",
+  "excluded": [
+    "all private source/asset backups",
+    "purchased sources and derivatives",
+    "Selestia source and original Unity YAML",
+    "private BGM and standalone paid audio",
+    "game package and saves",
+    "invalid C-OS mobile/jump comparisons",
+    "raw frame sequences"
+  ],
+  "candidate_exe_sha256": "2C6E92F039C7098F8661D9F912DD66BB9898AEB18675330B92761DBD73B26268"
+}

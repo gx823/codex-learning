@@ -1,0 +1,100 @@
+{
+  "status": "INVALID_ROI",
+  "samples": [
+    {
+      "view": "B_Armory",
+      "part": "body",
+      "box": [
+        946,
+        362,
+        953,
+        369
+      ],
+      "median_srgb": [
+        204,
+        204,
+        190
+      ],
+      "target": [
+        225,
+        215,
+        195
+      ],
+      "tolerance": 15,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    },
+    {
+      "view": "B_Armory",
+      "part": "metal",
+      "box": [
+        931,
+        403,
+        936,
+        408
+      ],
+      "median_srgb": [
+        188,
+        181,
+        161
+      ],
+      "target": [
+        215,
+        190,
+        130
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    },
+    {
+      "view": "B_Afternoon_FP",
+      "part": "body",
+      "box": [
+        1294,
+        875,
+        1301,
+        882
+      ],
+      "median_srgb": [
+        105,
+        216,
+        237
+      ],
+      "target": [
+        225,
+        215,
+        195
+      ],
+      "tolerance": 15,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    },
+    {
+      "view": "B_Afternoon_FP",
+      "part": "metal",
+      "box": [
+        1233,
+        815,
+        1238,
+        820
+      ],
+      "median_srgb": [
+        124,
+        117,
+        121
+      ],
+      "target": [
+        215,
+        190,
+        130
+      ],
+      "tolerance": 20,
+      "status": "FAIL",
+      "scope": "manual small displayed-region sample; full object colour segmentation NOT_RUN"
+    }
+  ],
+  "dusk": "NOT_MEASURED: gun too small in required whole-character frame for trustworthy material-only ROI; image retained.",
+  "warning": "Do not treat shader BaseColor constants as screen RGB acceptance. Swatch placement requires visual review.",
+  "reason": "Afternoon FP body ROI selected cyan crystal; metal ROI not confidently selected. Superseded as measurements, failed selection retained. Preview rows independently unchanged."
+}

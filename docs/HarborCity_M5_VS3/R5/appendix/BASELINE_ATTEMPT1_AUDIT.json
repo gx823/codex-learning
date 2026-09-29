@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE_WITH_FIXTURE_FAILURES",
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R5\\m5_vs3_r3_b_20260929_121909",
+  "checks": 87,
+  "failures": 6,
+  "exit_code": 0,
+  "causes": [
+    "Consecutive conditional ToggleWeapon steps had no neutral frame when multiple cycles were required; some fist/sword cases used the wrong weapon.",
+    "The x-forward route at (0,-6500) collided with a house; speed minima on that route are confounded."
+  ],
+  "usable": "Screenshots show original full-body attack and root displacement, but all12 cases require correct fixture/weapon before applying the production proposal.",
+  "next": "Correct diagnostics only: explicit key-up gaps, weapon assertion, capsule-swept clear ground corridor. Repeat in editor-game and label evidence separately."
+}

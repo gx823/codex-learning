@@ -1,0 +1,62 @@
+[
+  {
+    "title": "A 移动出招：跑剑通过，横向跑拳未达标",
+    "file": "review/final/01_mobile_R5.jpg",
+    "caption": "剑地面最低320cm/s，空中400cm/s；规定横向1.2m跑拳0/10。R4同机位跑跳对比NOT_RUN，有效证据为最终包数值与原生录像。"
+  },
+  {
+    "title": "B 跑步长发：改善但未达标",
+    "file": "review/final/02_hair_compare.jpg",
+    "caption": "左侧是B修正前的A中间Shipping，右侧最终包；同机位、正常速度。30FPS跑步100%/9.65cm → 8%/0.72cm，仍超过5%帧占比。"
+  },
+  {
+    "title": "B 最大骨骼代理重叠附近帧",
+    "file": "review/final/02_hair_worst_proxy_frames.jpg",
+    "caption": "三帧按30FPS数值最大值附近时间提取。它们不是精确网格穿入量的证明；慢放另有背面、侧面和3/4正面。"
+  },
+  {
+    "title": "A/C 重击与剑气",
+    "file": "review/final/03_wave.jpg",
+    "caption": "修正了移动根运动和站定横向冲步。双人10/10完整入画与8m剑气全程取景未通过完整验证。"
+  },
+  {
+    "title": "C 冲击三阶段",
+    "file": "review/final/04_shock_triptych.jpg",
+    "caption": "最终独立包原生录像：预告、光柱与爆发实际出现；左侧目标未始终完整入画。慢放那次两目标命中0，单列FAIL。"
+  },
+  {
+    "title": "C 实际治疗",
+    "file": "review/final/05_heal.jpg",
+    "caption": "最终独立包中法阵、绿十字可见；数值诊断先受伤至70再施法。R4严格同机位治疗对比NOT_RUN。"
+  },
+  {
+    "title": "C 第一人称峰值",
+    "file": "review/final/06_fp_peaks.jpg",
+    "caption": "最终Shipping配对渲染诊断：11项数值通过、9失败。30Hz模拟不等于墙钟30FPS主视口，控制噪声失败保留。"
+  },
+  {
+    "title": "C 其余效果",
+    "file": "review/final/07_effects.jpg",
+    "caption": "独立包录像保留射击、拳击、飞行、火盆和拾取。炉火、Dash及所有效果逐项标准机位清晰度仍未完整验收。"
+  },
+  {
+    "title": "D 魔导枪三处同机位",
+    "file": "review/final/08_gun_three_views.jpg",
+    "caption": "R4最终候选按同脚本复拍，与R5相机位置/角度逐项相同。细节恢复，但主体偏灰、金属偏暗，屏幕色未达标。"
+  },
+  {
+    "title": "D Blender材质对照",
+    "file": "review/final/08_gun_blender_compare.jpg",
+    "caption": "原贴图明暗、法线与粗糙度已接回；仅展示渲染图，购买素材派生工程不进入审阅包。"
+  },
+  {
+    "title": "B 持枪与ADS发梢",
+    "file": "review/final/09_hair_idle.jpg",
+    "caption": "最终持枪1秒发梢最大偏移8.41cm，ADS14.63cm，施法26.05cm，均未达到5cm要求。风和外力为0，物理保持启用。"
+  },
+  {
+    "title": "第五节 真实坐标输入",
+    "file": "review/final/10_os_armory.jpg",
+    "caption": "SendInput已发送，截图仍显示武器库；关闭后跑跳无有效画面，C-OS判PARTIAL。人工实点仍PENDING。"
+  }
+]
