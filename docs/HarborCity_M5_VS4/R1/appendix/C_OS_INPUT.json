@@ -1,0 +1,9 @@
+{
+  "status": "BLOCKED",
+  "date": "2026-10-01",
+  "reason": "No desktop/computer-use keyboard or pointer tool exposed in this session; discovery repeated after Repair 1 editor acceptance. Standalone engine-action tests do not substitute for real OS input.",
+  "real_os_bow_shots": 0,
+  "armory_mouse_close": "NOT_RUN",
+  "engine_action_is_not_os_input": true,
+  "manual_retest": "Start final EXE, B equip Starbow, click Close B, hold LMB >=0.8s then release ten times; V and RMB check both views and ADS. P pauses."
+}

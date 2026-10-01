@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>海湾漫游 VS4 R1 审阅</title>
+<style>body{margin:0;background:#f4f6f6;color:#202728;font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:0}main{max-width:1120px;margin:auto;padding:24px}h1{font-size:28px}h2{font-size:22px}a{color:#086b78;overflow-wrap:anywhere}section{padding:22px 0;border-bottom:1px solid #cbd4d4}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}figure{margin:0;min-width:0}img{width:100%;height:auto;display:block}figcaption{font-size:14px;margin:8px 0 18px}p{max-width:90ch}code{overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid #cbd4d4;padding:9px;text-align:left;overflow-wrap:anywhere}.bad{color:#973d32;font-weight:700}@media(max-width:680px){main{padding:16px}.grid{grid-template-columns:1fr}h1{font-size:24px}table{font-size:12px}}</style><main>
+<h1>海湾漫游 · M5-VS4 R1</h1><p class="bad">PARTIAL · 星弓与新地图观感仍待用户验收</p>
+<p>最终 Shipping 已生成并独立实测。旧港町保持默认，P 菜单进入新王都白模预览。星弓测试见下方；扩图已按用户要求留到 R2，本轮未修改预览关卡。</p>
+<p><a href="../TEST_REPORT.md">测试结论</a> · <a href="../BOW_ANIM_MAP.md">动作与录像时间点</a> · <a href="../MANUAL_RETEST.md">人工复测</a> · <a href="https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r1-20261001-214751-102-bc437d0e">Release</a></p>
+<section><h2>星弓</h2>
+<p>FP 轴夹角最大 0.203 度，画面轴线误差最大 1.14 px。靶面精度、接触、交接及遮挡分别验收，详见测试报告。</p>
+<p>TP 轴夹角最大 0.127 度，画面轴线误差最大 1.67 px。靶面精度、接触、交接及遮挡分别验收，详见测试报告。</p>
+<p>A6 TP 20m ten shots：PASS，10</p>
+<p>A6 FP 20m ten shots：PASS，10</p>
+<p>A6 ADS handoff：PASS，pixels=0.00000 degrees=0.01766</p>
+<p>本候选距离夹具：PASS。首次候选的距离、命中与中央遮挡失败保留在历史附录，不混入新候选统计。</p><p>28 + 28 条同步轨道和原箭已导入；运行状态接入 20 段 Exouch、4 段 Ventyra、10 段 Mixamo。原作运行时手部误差见测试报告；手指蒙皮穿插仍需画面验收。</p>
+<div class="grid">
+<figure><a href="VS4_A6_FP_FULL.jpg"><img loading="lazy" src="VS4_A6_FP_FULL.jpg" alt="VS4_A6_FP_FULL"></a><figcaption>最终独立包实际画面；细项结论见验收报告。</figcaption></figure>
+<figure><a href="VS4_A6_FP_FULL_geometry_mask.jpg"><img loading="lazy" src="VS4_A6_FP_FULL_geometry_mask.jpg" alt="VS4_A6_FP_FULL_geometry_mask"></a><figcaption>满弓成对深度掩膜：红色为手/袖子，绿色为弦。准星中央 192 x 108 px 的原始像素计数见报告。</figcaption></figure>
+<figure><a href="VS4_A6_FP_FULL_string_positive_mask.jpg"><img loading="lazy" src="VS4_A6_FP_FULL_string_positive_mask.jpg" alt="VS4_A6_FP_FULL_string_positive_mask"></a><figcaption>同一次捕获的弦参考姿态正控：确认深度差分确实能检测弓弦；不是正常游戏满弓姿态。</figcaption></figure>
+<figure><a href="VS4_A6_FP_IDLE.jpg"><img loading="lazy" src="VS4_A6_FP_IDLE.jpg" alt="VS4_A6_FP_IDLE"></a><figcaption>最终独立包实际画面；细项结论见验收报告。</figcaption></figure>
+<figure><a href="VS4_A6_TP_FULL.jpg"><img loading="lazy" src="VS4_A6_TP_FULL.jpg" alt="VS4_A6_TP_FULL"></a><figcaption>最终独立包实际画面；细项结论见验收报告。</figcaption></figure>
+<figure><a href="VS4_A6_TP_IDLE.jpg"><img loading="lazy" src="VS4_A6_TP_IDLE.jpg" alt="VS4_A6_TP_IDLE"></a><figcaption>最终独立包实际画面；细项结论见验收报告。</figcaption></figure>
+<figure><a href="VS4_R6_FP_REFERENCE.jpg"><img loading="lazy" src="VS4_R6_FP_REFERENCE.jpg" alt="VS4_R6_FP_REFERENCE"></a><figcaption>R6 与本轮满弓画面参考。未证明精确同机位，不能作像素对齐验收。</figcaption></figure>
+<figure><a href="VS4_R6_TP_REFERENCE.jpg"><img loading="lazy" src="VS4_R6_TP_REFERENCE.jpg" alt="VS4_R6_TP_REFERENCE"></a><figcaption>R6 与本轮满弓画面参考。未证明精确同机位，不能作像素对齐验收。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Draw.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Draw.jpg" alt="VS4_AUTHOR_MATCH_Draw"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Draw；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Draw_Idle.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Draw_Idle.jpg" alt="VS4_AUTHOR_MATCH_Draw_Idle"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Draw_Idle；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Draw_Cancel.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Draw_Cancel.jpg" alt="VS4_AUTHOR_MATCH_Draw_Cancel"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Draw_Cancel；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Release.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Release.jpg" alt="VS4_AUTHOR_MATCH_Release"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Release；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_ReloadFromRelease.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_ReloadFromRelease.jpg" alt="VS4_AUTHOR_MATCH_ReloadFromRelease"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：ReloadFromRelease；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Walk_Fw.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Walk_Fw.jpg" alt="VS4_AUTHOR_MATCH_Walk_Fw"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Walk_Fw；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Walk_Sprint_Fw.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Walk_Sprint_Fw.jpg" alt="VS4_AUTHOR_MATCH_Walk_Sprint_Fw"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Walk_Sprint_Fw；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Equip.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Equip.jpg" alt="VS4_AUTHOR_MATCH_Equip"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Equip；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_AUTHOR_MATCH_Unequip.jpg"><img loading="lazy" src="VS4_AUTHOR_MATCH_Unequip.jpg" alt="VS4_AUTHOR_MATCH_Unequip"></a><figcaption>关闭对准修正，按相同引擎帧关联原作动作时间：Unequip；骨骼数值对照另见报告。</figcaption></figure>
+<figure><a href="VS4_BOW_FP_30S_SHEET.jpg"><img loading="lazy" src="VS4_BOW_FP_30S_SHEET.jpg" alt="VS4_BOW_FP_30S_SHEET"></a><figcaption>最终包录像定点缩略图；保持原始播放时间。</figcaption></figure>
+<figure><a href="VS4_BOW_TP_30S_SHEET.jpg"><img loading="lazy" src="VS4_BOW_TP_30S_SHEET.jpg" alt="VS4_BOW_TP_30S_SHEET"></a><figcaption>最终包录像定点缩略图；保持原始播放时间。</figcaption></figure>
+<figure><a href="VS4_BOW_FP_SLOW025_SHEET.jpg"><img loading="lazy" src="VS4_BOW_FP_SLOW025_SHEET.jpg" alt="VS4_BOW_FP_SLOW025_SHEET"></a><figcaption>最终包录像定点缩略图；保持原始播放时间。</figcaption></figure>
+<figure><a href="VS4_BOW_TP_SLOW025_SHEET.jpg"><img loading="lazy" src="VS4_BOW_TP_SLOW025_SHEET.jpg" alt="VS4_BOW_TP_SLOW025_SHEET"></a><figcaption>最终包录像定点缩略图；保持原始播放时间。</figcaption></figure>
+<figure><a href="VS4_BOW_AUTHOR_COMPARE_SHEET.jpg"><img loading="lazy" src="VS4_BOW_AUTHOR_COMPARE_SHEET.jpg" alt="VS4_BOW_AUTHOR_COMPARE_SHEET"></a><figcaption>最终包录像定点缩略图；保持原始播放时间。</figcaption></figure>
+</div></section><section><h2>扩图留到 R2</h2><p>预览仍为 500 x 450 m Landscape、104 个临时体块、7 个地标体量、3 个桥位，高差 32.2 m；本轮不改动。旧截图和录像保留为历史证据。</p><p>City Pack / Highlands Castle 已由用户添加到 VFXStaging，安装盘点见 ASSETS；两个个人档许可已确认，迁移均 0 资产 / 0 字节。未使用未购买的 Seaside Town。</p><div class="grid">
+</div></section><section><h2>收尾修正</h2>
+<p>C1 FP_fist_combo: PASS；10 个会话采样、30 个命中窗口，最慢恢复 0.05000 s；0 次缺少最终完成标记。</p>
+<p>C1 TP_fist_combo: PASS；10 个会话采样、30 个命中窗口，最慢恢复 0.05001 s；0 次缺少最终完成标记。</p>
+<p>C2 光箭最终包峰值：Arrow_charge_frames 17.86989%；Arrow_release_frames 14.59520%。魔导枪命中结果单列于测试报告。</p><div class="grid">
+<figure><a href="Arrow_charge_peak_with.jpg"><img loading="lazy" src="Arrow_charge_peak_with.jpg" alt="Arrow_charge_peak_with"></a><figcaption>C2 最终包原生配对捕获的峰值帧；不是正常视口截图。</figcaption></figure>
+<figure><a href="Arrow_release_peak_with.jpg"><img loading="lazy" src="Arrow_release_peak_with.jpg" alt="Arrow_release_peak_with"></a><figcaption>C2 最终包原生配对捕获的峰值帧；不是正常视口截图。</figcaption></figure>
+</div></section><section><h2>录像</h2><p>本轮四段星弓画面来自同一新独立包，另交作者相机与游戏并排短片。旧图录像与白模截图不重拍，不冒充新候选证据。全部 BGM 静音，保留原生音效。</p><table><tr><th>文件</th><th>秒 / FPS</th><th>音频</th></tr>
+<tr><td><a href="https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r1-20261001-214751-102-bc437d0e/VS4_BOW_FP_30S.mp4">VS4_BOW_FP_30S.mp4</a></td><td>30.70 / 30.003</td><td>PASS</td></tr>
+<tr><td><a href="https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r1-20261001-214751-102-bc437d0e/VS4_BOW_TP_30S.mp4">VS4_BOW_TP_30S.mp4</a></td><td>30.73 / 30.002</td><td>PASS</td></tr>
+<tr><td><a href="https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r1-20261001-214751-102-bc437d0e/VS4_BOW_FP_SLOW025.mp4">VS4_BOW_FP_SLOW025.mp4</a></td><td>12.30 / 30.010</td><td>PASS</td></tr>
+<tr><td><a href="https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r1-20261001-214751-102-bc437d0e/VS4_BOW_TP_SLOW025.mp4">VS4_BOW_TP_SLOW025.mp4</a></td><td>12.34 / 29.996</td><td>PASS</td></tr>
+<tr><td><a href="https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r1-20261001-214751-102-bc437d0e/VS4_BOW_AUTHOR_COMPARE.mp4">VS4_BOW_AUTHOR_COMPARE.mp4</a></td><td>1.30 / 30.069</td><td>PASS</td></tr>
+</table></section><section><h2>边界与复测</h2><p>C-OS：BLOCKED，未暴露真实键鼠工具。新图性能、七区 3 km / 30 分钟探索：NOT_RUN。旧接送、倒地问题保留。请按人工复测检查搭箭、握弓、靠墙镜头及预览往返。</p><p>完整技术证据和源码差异在附录；公开内容不包含购买素材、派生资产、私人音乐、独立付费音效、完整游戏包或存档。</p></section></main></html>

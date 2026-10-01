@@ -1,0 +1,1881 @@
+{
+  "package": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\builds\\20261001_214751_102_bc437d0e_package\\package.json",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS4\\Candidate_20261001_214751_102_bc437d0e\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "exe_sha256": "84B51E766AD007454A207359818D7BCCFB14ACEDE42EC4449EA994F73C21C2CE",
+  "full_regression_count": 1,
+  "runs": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_full_20261001_224611",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_full_20261001_224611\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-M5Test=m5_full",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_full_20261001_224611",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_full_20261001_224611\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:46:11.350734+08:00",
+        "ac_line": 1,
+        "battery_percent": 97,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.16
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.34
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_full_20261001_224611\\User\\Saved\\M5Tests\\20261001_224615_m5_full\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 235,
+          "failures": 3,
+          "failed": [
+            {
+              "name": "Pickup fixture has legal curb and NPC-walkable door",
+              "status": "FAIL",
+              "evidence_level": "A-fixture",
+              "expected": "read-only safety queries choose A parking fixture; no condition override",
+              "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+              "elapsed_seconds": 93.50797310099006
+            },
+            {
+              "name": "Real passenger boarding on current town curb",
+              "status": "FAIL",
+              "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+              "expected": "driving, passenger attached through normal Tick",
+              "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.998 Y=-6360.922 Z=22.641 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_fade_seconds\": 1,\r\n\t\"named_post_removal_cooldown_seconds\": 60,\r\n\t\"coffee_stage\": 2,\r\n\t\"ride_stage\": 1,\r\n\t\"pickup_curb_y\": -6500,\r\n\t\"pickup_max_body_gap_cm\": 65,\r\n\t\"pickup_parallel_tolerance_degrees\": 15,\r\n\t\"actual_pickup_body_gap_cm\": 24.996839955734686,\r\n\t\"actual_body_world_min\": \"X=-5904.060 Y=-6475.003 Z=18.860\",\r\n\t\"actual_body_world_max\": \"X=-5432.471 Y=-6246.835 Z=145.100\",\r\n\t\"can_pickup_at_curb\": true,\r\n\t\"named_respawn_seconds\":\r\n\t{\r\n\t\t\"M5_Contact\": 0,\r\n\t\t\"M5_Harbor\": 0,\r\n\t\t\"M3_LinXia\": 0,\r\n\t\t\"M3_ChenBo\": 0,\r\n\t\t\"M3_ANing\": 0,\r\n\t\t\"VS2_Citizen00\": 0,\r\n\t\t\"VS2_Citizen01\": 0,\r\n\t\t\"VS2_Citizen02\": 0,\r\n\t\t\"VS2_Citizen03\": 0,\r\n\t\t\"VS2_Citizen04\": 0,\r\n\t\t\"VS2_Citizen05\": 0,\r\n\t\t\"VS2_Citizen06\": 0,\r\n\t\t\"VS2_Citizen07\": 0,\r\n\t\t\"VS2_Citizen08\": 0,\r\n\t\t\"VS2_Citizen09\": 0,\r\n\t\t\"VS2_Citizen10\": 0,\r\n\t\t\"VS2_Citizen11\": 0\r\n\t}\r\n}",
+              "elapsed_seconds": 108.05443540215492
+            },
+            {
+              "name": "Ride completed by normal parking/dropoff condition",
+              "status": "FAIL",
+              "evidence_level": "B-Action + A travel placement; not continuous route proof",
+              "expected": "Complete; no direct quest mutation",
+              "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+              "elapsed_seconds": 116.87589280307293
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r2_matrix_20261001_221627",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r2_matrix_20261001_221627\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-M5Test=m5_vs3_r2_matrix",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r2_matrix_20261001_221627",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r2_matrix_20261001_221627\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:16:26.5281173+08:00",
+        "ac_line": 1,
+        "battery_percent": 86,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.51
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.38
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r2_matrix_20261001_221627\\User\\Saved\\M5Tests\\20261001_221630_m5_vs3_r2_matrix\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 140,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4bowfinal",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_215732",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T21:57:31.3569927+08:00",
+        "ac_line": 1,
+        "battery_percent": 97,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.54
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.41
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 189,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220234",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220234\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_220234",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220234\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+        "-R3BowDiagnostic",
+        "-R3BowFinal"
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:02:34.2928939+08:00",
+        "ac_line": 1,
+        "battery_percent": 98,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.54
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.4
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220234\\User\\Saved\\M5Tests\\20261001_220238_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 37,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220350",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220350\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4arcanepeak",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_220350",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220350\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "WAITING_HOST",
+      "exit_code": null,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:03:49.9143281+08:00",
+        "ac_line": 1,
+        "battery_percent": 98,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.54
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.38
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_220350\\User\\Saved\\M5Tests\\20261001_220355_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 5,
+          "failures": 1,
+          "failed": [
+            {
+              "name": "Test interrupted",
+              "status": "FAIL",
+              "evidence_level": "A",
+              "expected": "sequence finishes",
+              "actual": "EndPlay before completion",
+              "elapsed_seconds": 26.504960797727108
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4arcanepeak",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_221555",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:15:54.1985098+08:00",
+        "ac_line": 1,
+        "battery_percent": 86,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.51
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.38
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\\Saved\\M5Tests\\20261001_221558_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 5,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222148",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222148\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4previewtravel",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_222148",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222148\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:21:47.4175891+08:00",
+        "ac_line": 1,
+        "battery_percent": 89,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.41
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.38
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222148\\User\\Saved\\M5Tests\\20261001_222151_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 3,
+          "failures": 0,
+          "failed": []
+        },
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222148\\User\\Saved\\M5Tests\\20261001_222154_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_CapitalPreview",
+          "checks": 5,
+          "failures": 0,
+          "failed": []
+        },
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222148\\User\\Saved\\M5Tests\\20261001_222200_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 4,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4bowreference",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_222222",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-M5PublicCapture",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+        "-R1GateCapture",
+        "-HCM4RecordSeconds=42",
+        "-HCM3RecordDelay=6"
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:22:22.0638714+08:00",
+        "ac_line": 1,
+        "battery_percent": 90,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.41
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.38
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\User\\Saved\\M5Tests\\20261001_222225_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 5,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222456",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222456\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_222456",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222456\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:24:55.2842075+08:00",
+        "ac_line": 1,
+        "battery_percent": 91,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.4
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.35
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222456\\User\\Saved\\M5Tests\\20261001_222459_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222654",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222654\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_222654",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222654\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:26:54.298071+08:00",
+        "ac_line": 1,
+        "battery_percent": 91,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.4
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.35
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222654\\User\\Saved\\M5Tests\\20261001_222657_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222853",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222853\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_222853",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222853\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:28:52.9373613+08:00",
+        "ac_line": 1,
+        "battery_percent": 92,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.4
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.35
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222853\\User\\Saved\\M5Tests\\20261001_222856_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223052",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223052\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_223052",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223052\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:30:51.5711414+08:00",
+        "ac_line": 1,
+        "battery_percent": 93,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.4
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.35
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223052\\User\\Saved\\M5Tests\\20261001_223055_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223250",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223250\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_223250",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223250\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:32:50.2462855+08:00",
+        "ac_line": 1,
+        "battery_percent": 93,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.4
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.35
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223250\\User\\Saved\\M5Tests\\20261001_223253_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223449",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223449\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_223449",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223449\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:34:48.8168737+08:00",
+        "ac_line": 1,
+        "battery_percent": 94,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.4
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.35
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223449\\User\\Saved\\M5Tests\\20261001_223452_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223648",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223648\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_223648",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223648\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:36:47.4688886+08:00",
+        "ac_line": 1,
+        "battery_percent": 95,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.42
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.35
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223648\\User\\Saved\\M5Tests\\20261001_223651_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223846",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223846\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_223846",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223846\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:38:46.1519171+08:00",
+        "ac_line": 1,
+        "battery_percent": 95,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.43
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.34
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_223846\\User\\Saved\\M5Tests\\20261001_223849_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224045",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224045\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_224045",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224045\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:40:44.8259327+08:00",
+        "ac_line": 1,
+        "battery_percent": 95,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.43
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.34
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224045\\User\\Saved\\M5Tests\\20261001_224048_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224244",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224244\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=r6apilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_224244",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224244\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:42:43.4500917+08:00",
+        "ac_line": 1,
+        "battery_percent": 96,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.3
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.34
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_224244\\User\\Saved\\M5Tests\\20261001_224247_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 32,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230134",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230134\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4bowpilot",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_230134",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230134\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T23:01:33.5421887+08:00",
+        "ac_line": 1,
+        "battery_percent": 99,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.29
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230134\\User\\Saved\\M5Tests\\20261001_230137_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 26,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230224",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230224\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4bowfilmfp",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_230224",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230224\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-M5PublicCapture",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+        "-R1GateCapture",
+        "-HCM4RecordSeconds=42",
+        "-HCM3RecordDelay=6"
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T23:02:23.4716413+08:00",
+        "ac_line": 1,
+        "battery_percent": 99,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.26
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230224\\User\\Saved\\M5Tests\\20261001_230227_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 4,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230407",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230407\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4bowfilmtp",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_230407",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230407\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-M5PublicCapture",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+        "-R1GateCapture",
+        "-HCM4RecordSeconds=42",
+        "-HCM3RecordDelay=6"
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T23:04:06.809374+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.23
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230407\\User\\Saved\\M5Tests\\20261001_230410_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 4,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230547",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230547\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4bowslowfp",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_230547",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230547\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-M5PublicCapture",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+        "-R1GateCapture",
+        "-HCM4RecordSeconds=25",
+        "-HCM3RecordDelay=6"
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T23:05:46.7954256+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.21
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230547\\User\\Saved\\M5Tests\\20261001_230550_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 4,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230651",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230651\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-R4Case=vs4bowslowtp",
+        "-M5Test=m5_vs3_r3_b",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_230651",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230651\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-M5PublicCapture",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0\"",
+        "-R1GateCapture",
+        "-HCM4RecordSeconds=25",
+        "-HCM3RecordDelay=6"
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T23:06:51.3056274+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.19
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230651\\User\\Saved\\M5Tests\\20261001_230655_m5_vs3_r3_b\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 4,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225547",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225547\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-M5Test=m5_vs2_perf",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_perf_20261001_225547",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225547\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=2",
+        "-ExecCmds=\"sg.ViewDistanceQuality 2,sg.AntiAliasingQuality 2,sg.ShadowQuality 2,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 2,sg.TextureQuality 2,sg.EffectsQuality 2,sg.FoliageQuality 2,sg.ShadingQuality 2,sg.LandscapeQuality 2,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:55:46.3422869+08:00",
+        "ac_line": 1,
+        "battery_percent": 98,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.3
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225547\\User\\Saved\\M5Tests\\20261001_225550_m5_vs2_perf\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 16,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225811",
+      "arguments": [
+        "-UserDir=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225811\\User\"",
+        "-M5PublicCapture",
+        "-R3WindowGuard",
+        "-M5Test=m5_vs2_perf",
+        "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+        "-unattended",
+        "-windowed",
+        "-ResX=1920",
+        "-ResY=1080",
+        "-language=en",
+        "-nosplash",
+        "-M1AutoQuit",
+        "-HCM1SaveSlot=HarborCity_M5_VS1_Test_VS3_perf_20261001_225811",
+        "-abslog=\"D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225811\\game.log\"",
+        "-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC",
+        "-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen",
+        "-R2MatrixCaps=20,30,60,0",
+        "-HCM5VS3QA",
+        "-R1Trace",
+        "-M5Quality=3",
+        "-ExecCmds=\"sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 3,sg.ReflectionQuality 3,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,sg.ShadingQuality 3,sg.LandscapeQuality 3,r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0,r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality\""
+      ],
+      "exit": "EXITED",
+      "exit_code": 0,
+      "map_check": "MATCH_OR_MENU_TRAVEL",
+      "host": {
+        "time": "2026-10-01T22:58:10.5299369+08:00",
+        "ac_line": 1,
+        "battery_percent": 99,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.29
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "parts": [
+        {
+          "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225811\\User\\Saved\\M5Tests\\20261001_225814_m5_vs2_perf\\results.json",
+          "status": "COMPLETE",
+          "map": "L_HarborTown",
+          "checks": 16,
+          "failures": 0,
+          "failed": []
+        }
+      ]
+    }
+  ],
+  "final_case_runs": {
+    "-R4Case=vs4bowfinal": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732",
+    "-R4Case=vs4arcanepeak": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555",
+    "-R4Case=vs4bowreference": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222"
+  },
+  "statistics_policy": "All failed/interrupted runs retained in this ledger. A6, source comparison and C2 metrics use only the latest attempt of that case, requiring COMPLETE and normal process exit; no fallback to an earlier pass. Only one explicitly named whole ten-session sprint group aggregates."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "source_files": 389,
+  "source_inventory_sha256": "f5a1bd531c0a276d4934f74d12d680a35aff9ee3520ae337ffdd600270e8b98b",
+  "exe_sha256": "84b51e766ad007454a207359818d7bccfb14acede42ec4449ea994f73c21c2ce",
+  "scope": "Source/config/project byte hashes and exact final EXE rechecked; no source contents or keys copied."
+}

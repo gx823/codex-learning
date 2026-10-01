@@ -1,0 +1,224 @@
+[
+  {
+    "file": "review_repair1/VS4_A6_FP_FULL.jpg",
+    "sha256": "0ec94eb845c963a040d7deab07d7530d0f877fff163badca8a0838c3cc71d7c0",
+    "bytes": 257865,
+    "caption": "最终独立包实际画面；细项结论见验收报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\VS4_A6_FP_FULL.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_A6_FP_FULL_geometry_mask.jpg",
+    "sha256": "ba2ebe50e93b0015703bcb5db692e5c1b192a967d5631fdb7acfbd445f648e99",
+    "bytes": 19634,
+    "caption": "满弓成对深度掩膜：红色为手/袖子，绿色为弦。准星中央 192 x 108 px 的原始像素计数见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\VS4_A6_FP_FULL_geometry_mask.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_A6_FP_FULL_string_positive_mask.jpg",
+    "sha256": "3d2c75f816f449e102b86850cea4d8c60e5df965968e768158fb67b2bf0e3ad1",
+    "bytes": 27186,
+    "caption": "同一次捕获的弦参考姿态正控：确认深度差分确实能检测弓弦；不是正常游戏满弓姿态。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\VS4_A6_FP_FULL_string_positive_mask.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_A6_FP_IDLE.jpg",
+    "sha256": "e44d93898113de98ab236e70608823889b21549e4199a135747caf5a737a7386",
+    "bytes": 275233,
+    "caption": "最终独立包实际画面；细项结论见验收报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\VS4_A6_FP_IDLE.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_A6_TP_FULL.jpg",
+    "sha256": "6ae24f4f55fd8a1a07ec8f2734fb36a9afe4f6de90925de0d18b40f94f8ca70e",
+    "bytes": 248591,
+    "caption": "最终独立包实际画面；细项结论见验收报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\VS4_A6_TP_FULL.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_A6_TP_IDLE.jpg",
+    "sha256": "4a986a9319cb1f930e12262552faaa6f54ebf3bd3f15eab9fa675f67a4da6652",
+    "bytes": 258901,
+    "caption": "最终独立包实际画面；细项结论见验收报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\VS4_A6_TP_IDLE.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_PREFLIGHT_FP_FULL.jpg",
+    "sha256": "bf0636803945bf9d6dcca01e95a05bd767915624661bd55a8d13ce219af79156",
+    "bytes": 362015,
+    "caption": "最终独立包实际画面；细项结论见验收报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230134\\User\\Saved\\M5Tests\\20261001_230137_m5_vs3_r3_b\\VS4_PREFLIGHT_FP_FULL.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_PREFLIGHT_TP_FULL.jpg",
+    "sha256": "e628a10bfa49bb5c5bca558d65ce8926ccbc775451433150a4eb6764538e7aae",
+    "bytes": 366922,
+    "caption": "最终独立包实际画面；细项结论见验收报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230134\\User\\Saved\\M5Tests\\20261001_230137_m5_vs3_r3_b\\VS4_PREFLIGHT_TP_FULL.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_PREFLIGHT_FP_RELEASE.jpg",
+    "sha256": "5f0f459b5becf46db2c3b9b360f6c7f618f7be5d224bc4e04354d1f4179170fc",
+    "bytes": 371122,
+    "caption": "最终独立包实际画面；细项结论见验收报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230134\\User\\Saved\\M5Tests\\20261001_230137_m5_vs3_r3_b\\VS4_PREFLIGHT_FP_RELEASE.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/Arrow_charge_peak_with.jpg",
+    "sha256": "9d74a41ec65b9f7d4ff3e0d60c1d09a76c09241792da9b221c8331151efc695d",
+    "bytes": 222084,
+    "caption": "C2 最终包原生配对捕获的峰值帧；不是正常视口截图。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\\Saved\\M5Tests\\20261001_221558_m5_vs3_r3_b\\Arrow_charge_peak_with.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/Arrow_release_peak_with.jpg",
+    "sha256": "08bba9c42057031d1a8543c07d24dbecd26f0f3be9ea1250f98dbf3c60da4f08",
+    "bytes": 225052,
+    "caption": "C2 最终包原生配对捕获的峰值帧；不是正常视口截图。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\\Saved\\M5Tests\\20261001_221558_m5_vs3_r3_b\\Arrow_release_peak_with.png",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_R6_FP_REFERENCE.jpg",
+    "sha256": "b67bbee02830d97a5819d11669cee577b45afeb76476fb6df180d4e1ef3b4db1",
+    "bytes": 128332,
+    "caption": "R6 与本轮满弓画面参考。未证明精确同机位，不能作像素对齐验收。",
+    "source": [
+      "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\review\\R6_BOW_FP_DRAW.png",
+      "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_PREFLIGHT_FP_FULL.jpg"
+    ],
+    "scope": "Historical R6 reference versus final VS4 package; NOT verified identical camera"
+  },
+  {
+    "file": "review_repair1/VS4_R6_TP_REFERENCE.jpg",
+    "sha256": "1229707864c7df6ffb8c39b9b8cb3a9c1135cb74366169a1843faeacae45a685",
+    "bytes": 145611,
+    "caption": "R6 与本轮满弓画面参考。未证明精确同机位，不能作像素对齐验收。",
+    "source": [
+      "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS3\\R6\\review\\R6_BOW_TP_DRAW.png",
+      "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_PREFLIGHT_TP_FULL.jpg"
+    ],
+    "scope": "Historical R6 reference versus final VS4 package; NOT verified identical camera"
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Draw.jpg",
+    "sha256": "2c0fb7dd459c6b59a7a7eb4bb3f75ddc1f9eb5c0f16b99ce0842e737bb889e9a",
+    "bytes": 83365,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Draw；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Draw.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Draw_Idle.jpg",
+    "sha256": "262716e23588f792bad7b1cb3a79894a188d3ff73266acec03554c5a0255787a",
+    "bytes": 82429,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Draw_Idle；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Draw_Idle.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Draw_Cancel.jpg",
+    "sha256": "e13a93327b3585a886d2ab82fd2f8acac6f6ebb812cf7d0999ab07a59b635436",
+    "bytes": 85206,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Draw_Cancel；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Draw_Cancel.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Release.jpg",
+    "sha256": "f4b0cfa2002dd9086d1792a06bcbd6061a17bc68ad3b99084dd138d5959423f9",
+    "bytes": 82244,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Release；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Release.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_ReloadFromRelease.jpg",
+    "sha256": "dc9e35de3e3a750073d6433b376c2fecaa488650f7e84ac964465d45acc62b9a",
+    "bytes": 86502,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：ReloadFromRelease；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_ReloadFromRelease.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Walk_Fw.jpg",
+    "sha256": "f50b43c49f5bfffc4a8f55f6d1f3f6f107ae622bc917138725dbaf3ccbfb9ace",
+    "bytes": 85127,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Walk_Fw；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Walk_Fw.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Walk_Sprint_Fw.jpg",
+    "sha256": "525c0a8495768cfafd95617a357316f8a2b7c37d72b080ba4b521958f132bd3f",
+    "bytes": 83894,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Walk_Sprint_Fw；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Walk_Sprint_Fw.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Equip.jpg",
+    "sha256": "6c560990af34bb489b5c3b1c87db5f5d767e94d99ee0a4660566864ebf2942a9",
+    "bytes": 82950,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Equip；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Equip.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_AUTHOR_MATCH_Unequip.jpg",
+    "sha256": "8d2752f752a78c4fd76b7dcd758b89839e14fd22548c0f623594d416793cc963",
+    "bytes": 82723,
+    "caption": "关闭对准修正，按相同引擎帧关联原作动作时间：Unequip；骨骼数值对照另见报告。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\MATCH_Unequip.jpg",
+    "scope": "Same engine-frame capture request and source-pose sample; world-time mismatch bounded to 50ms. Not precise presentation timestamps or pixel-identical skin proof. Quantitative hand positions use sampled source transforms separately."
+  },
+  {
+    "file": "review_repair1/VS4_BOW_FP_30S_SHEET.jpg",
+    "sha256": "0362bc2499f13363ce3ba0cfac88226688d346e5a39acca3be63c1ba310a0998",
+    "bytes": 151312,
+    "caption": "最终包录像定点缩略图；保持原始播放时间。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_FP_30S.mp4",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_BOW_TP_30S_SHEET.jpg",
+    "sha256": "f759d5a7d9ad2b74c6d462c968caf7dbce3ad5f0e44acca49547f5199747c03e",
+    "bytes": 153884,
+    "caption": "最终包录像定点缩略图；保持原始播放时间。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_TP_30S.mp4",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_BOW_FP_SLOW025_SHEET.jpg",
+    "sha256": "c63de189240ba6c1e2764b3b633ae7cd1ca9a5d8837253ab6221a7a800ee78e3",
+    "bytes": 166138,
+    "caption": "最终包录像定点缩略图；保持原始播放时间。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_FP_SLOW025.mp4",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_BOW_TP_SLOW025_SHEET.jpg",
+    "sha256": "53a841e65ed7270256d5f4bf49950759d5005b565cfada878ee37f95ef616b71",
+    "bytes": 166702,
+    "caption": "最终包录像定点缩略图；保持原始播放时间。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_TP_SLOW025.mp4",
+    "scope": "Final standalone package"
+  },
+  {
+    "file": "review_repair1/VS4_BOW_AUTHOR_COMPARE_SHEET.jpg",
+    "sha256": "8e61ec076fa9c36aa967fadb8c747840313470d300c110dc6cf612e0c375c38f",
+    "bytes": 82015,
+    "caption": "最终包录像定点缩略图；保持原始播放时间。",
+    "source": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_AUTHOR_COMPARE.mp4",
+    "scope": "Final standalone package"
+  }
+]

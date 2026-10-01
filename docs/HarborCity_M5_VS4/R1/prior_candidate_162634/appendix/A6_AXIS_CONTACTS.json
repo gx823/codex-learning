@@ -1,0 +1,257 @@
+{
+  "axis_rows": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "5",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.134235",
+      "axis_px": "1.416472",
+      "actual_ray_cm": "2993.597"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "5",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.133736",
+      "axis_px": "1.463621",
+      "actual_ray_cm": "5718.534"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "5",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.133036",
+      "axis_px": "1.375995",
+      "actual_ray_cm": "2367.682"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "10",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.133603",
+      "axis_px": "1.421115",
+      "actual_ray_cm": "3309.695"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "10",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.133649",
+      "axis_px": "1.450165",
+      "actual_ray_cm": "5199.679"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "10",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.132888",
+      "axis_px": "1.408327",
+      "actual_ray_cm": "2897.330"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "20",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.132608",
+      "axis_px": "1.491336",
+      "actual_ray_cm": "4171.802"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "20",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.133446",
+      "axis_px": "1.372130",
+      "actual_ray_cm": "2256.071"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "20",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.133763",
+      "axis_px": "1.549837",
+      "actual_ray_cm": "3928.839"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "40",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.132967",
+      "axis_px": "1.673281",
+      "actual_ray_cm": "6000.000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "40",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.133565",
+      "axis_px": "1.442186",
+      "actual_ray_cm": "4240.141"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "40",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.131484",
+      "axis_px": "1.628302",
+      "actual_ray_cm": "4245.966"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "5",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.127308",
+      "axis_px": "0.470004",
+      "actual_ray_cm": "477.342"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "5",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.064037",
+      "axis_px": "0.527905",
+      "actual_ray_cm": "496.716"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "5",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.059454",
+      "axis_px": "0.508247",
+      "actual_ray_cm": "497.446"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "10",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.629179",
+      "axis_px": "7.053106",
+      "actual_ray_cm": "975.453"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "10",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.645532",
+      "axis_px": "7.199205",
+      "actual_ray_cm": "998.706"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "10",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.643159",
+      "axis_px": "7.153966",
+      "actual_ray_cm": "995.020"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "20",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.993579",
+      "axis_px": "10.164647",
+      "actual_ray_cm": "1975.941"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "20",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.998222",
+      "axis_px": "10.138305",
+      "actual_ray_cm": "1996.128"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "20",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.998249",
+      "axis_px": "10.163727",
+      "actual_ray_cm": "1998.486"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "40",
+      "initial_offset_deg": "0",
+      "axis_deg": "1.242273",
+      "axis_px": "12.016341",
+      "actual_ray_cm": "6000.000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "40",
+      "initial_offset_deg": "-30",
+      "axis_deg": "1.180260",
+      "axis_px": "11.587308",
+      "actual_ray_cm": "3998.300"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "40",
+      "initial_offset_deg": "30",
+      "axis_deg": "1.182146",
+      "axis_px": "11.561549",
+      "actual_ray_cm": "4025.259"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "VS4_A6_TP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.002315 rest=0.000001 palm=0.000003",
+      "elapsed_seconds": 17.28605480119586
+    },
+    {
+      "name": "VS4_A6_TP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.004736 rest=0.000058 palm=0.000002",
+      "elapsed_seconds": 21.220312401652336
+    },
+    {
+      "name": "VS4_A6_FP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.262258 rest=0.014124 palm=0.025846",
+      "elapsed_seconds": 108.75887129828334
+    },
+    {
+      "name": "VS4_A6_FP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.189508 rest=0.000033 palm=0.061620",
+      "elapsed_seconds": 112.69111010059714
+    }
+  ],
+  "range_fixture_status": "FAIL: TP actual rays do not stably hit the intended distance target; FP front 40m ray is 60m. Nominal distance labels are fixture intent, not proof of target hit. Preserve all rows; do not claim range matrix PASS.",
+  "source_comparison_runtime": "NOT_RUN",
+  "finger_skin_penetration": "NOT_RUN"
+}

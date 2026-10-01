@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "time": "2026-10-01T23:34:18.9349916+08:00",
+  "movies": 5,
+  "source_pairs": 9,
+  "review_images": 27,
+  "source_video_temporary_frames": 0,
+  "candidate_frames": 0,
+  "native_task_processes": 0,
+  "deleted_input_stills": [
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Draw.jpg",
+      "bytes": 307646
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_Draw.jpg",
+      "bytes": 66302
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Draw_Idle.jpg",
+      "bytes": 302034
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_Draw_Idle.jpg",
+      "bytes": 59607
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Draw_Cancel.jpg",
+      "bytes": 305787
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Release.jpg",
+      "bytes": 307399
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_Release.jpg",
+      "bytes": 60989
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_ReloadFromRelease.jpg",
+      "bytes": 314404
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_ReloadFromRelease.jpg",
+      "bytes": 64074
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Walk_Fw.jpg",
+      "bytes": 290885
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_Walk_Fw.jpg",
+      "bytes": 68829
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Walk_Sprint_Fw.jpg",
+      "bytes": 287314
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_Walk_Sprint_Fw.jpg",
+      "bytes": 63159
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Equip.jpg",
+      "bytes": 318817
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_Equip.jpg",
+      "bytes": 60294
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\GAME_Unequip.jpg",
+      "bytes": 314446
+    },
+    {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\source_comparison\\AUTHOR_EVALUATED_Unequip.jpg",
+      "bytes": 61931
+    }
+  ],
+  "captures": [
+    {
+      "capture": "20261001_222249_0A4BA6D8",
+      "retained_keyframes": 8,
+      "removed_frames": 1120,
+      "removed_bytes": 350710474,
+      "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4"
+    },
+    {
+      "capture": "20261001_230250_238E4816",
+      "retained_keyframes": 8,
+      "removed_frames": 1119,
+      "removed_bytes": 350590424,
+      "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4"
+    },
+    {
+      "capture": "20261001_230433_D07C9911",
+      "retained_keyframes": 8,
+      "removed_frames": 1120,
+      "removed_bytes": 356029307,
+      "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4"
+    },
+    {
+      "capture": "20261001_230614_1500B9E8",
+      "retained_keyframes": 8,
+      "removed_frames": 567,
+      "removed_bytes": 183104781,
+      "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4"
+    },
+    {
+      "capture": "20261001_230717_477FB020",
+      "retained_keyframes": 8,
+      "removed_frames": 568,
+      "removed_bytes": 185397076,
+      "status": "TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4"
+    }
+  ],
+  "scope": "Offline format/hash and bounded frame-cleanup checks; not another game test or visual approval. Launcher and VFXStaging were not inspected."
+}

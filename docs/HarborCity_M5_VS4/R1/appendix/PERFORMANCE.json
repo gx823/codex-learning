@@ -1,0 +1,714 @@
+{
+  "runs": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225547\\User\\Saved\\M5Tests\\20261001_225550_m5_vs2_perf\\results.json",
+      "host": {
+        "time": "2026-10-01T22:55:46.3422869+08:00",
+        "ac_line": 1,
+        "battery_percent": 98,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.3
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "quality": "-M5Quality=2",
+      "scope": "Old default harbor only; NOT B5 complete-capital benchmark",
+      "samples": [
+        {
+          "phase": "setup",
+          "frames": 1,
+          "average_fps": 3.655180505606499,
+          "p99_ms": 273.5843
+        },
+        {
+          "phase": "world_settle",
+          "frames": 296,
+          "average_fps": 98.52046557976182,
+          "p99_ms": 32.731
+        },
+        {
+          "phase": "M4 R2 await initial game focus",
+          "frames": 1,
+          "average_fps": 45.85410142010152,
+          "p99_ms": 21.8083
+        },
+        {
+          "phase": "Town runtime references",
+          "frames": 240,
+          "average_fps": 119.56207996969499,
+          "p99_ms": 9.9305
+        },
+        {
+          "phase": "Warmup route",
+          "frames": 1762,
+          "average_fps": 117.44888568836602,
+          "p99_ms": 10.0619
+        },
+        {
+          "phase": "B start walk",
+          "frames": 12,
+          "average_fps": 116.49410976657492,
+          "p99_ms": 9.1839
+        },
+        {
+          "phase": "South approach walk",
+          "frames": 1401,
+          "average_fps": 116.6845730151675,
+          "p99_ms": 10.261
+        },
+        {
+          "phase": "Market approach walk",
+          "frames": 1388,
+          "average_fps": 115.65675681022063,
+          "p99_ms": 10.2992
+        },
+        {
+          "phase": "B stop before flight",
+          "frames": 229,
+          "average_fps": 114.14569177273742,
+          "p99_ms": 10.2857
+        },
+        {
+          "phase": "FlightToggle press",
+          "frames": 11,
+          "average_fps": 100.36587925072308,
+          "p99_ms": 11.0287
+        },
+        {
+          "phase": "FlightToggle release",
+          "frames": 110,
+          "average_fps": 109.3088945144325,
+          "p99_ms": 10.7368
+        },
+        {
+          "phase": "B climb",
+          "frames": 780,
+          "average_fps": 111.41644772739515,
+          "p99_ms": 10.7692
+        },
+        {
+          "phase": "High aerial hover",
+          "frames": 465,
+          "average_fps": 116.04144740967914,
+          "p99_ms": 9.9955
+        },
+        {
+          "phase": "B forward flight",
+          "frames": 11,
+          "average_fps": 102.68531431974712,
+          "p99_ms": 9.401
+        },
+        {
+          "phase": "Town aerial traversal",
+          "frames": 588,
+          "average_fps": 117.54386810122693,
+          "p99_ms": 10.2465
+        },
+        {
+          "phase": "B end route",
+          "frames": 120,
+          "average_fps": 119.12060405264177,
+          "p99_ms": 9.6611
+        },
+        {
+          "phase": "Wait for actual stamina landing",
+          "frames": 1903,
+          "average_fps": 118.87740821313207,
+          "p99_ms": 10.1048
+        },
+        {
+          "phase": "A six-adult spell stress fixture",
+          "frames": 110,
+          "average_fps": 109.46254982660635,
+          "p99_ms": 10.2966
+        },
+        {
+          "phase": "A aim actual ground ray into crowd before timing",
+          "frames": 45,
+          "average_fps": 112.20372606133505,
+          "p99_ms": 10.2547
+        },
+        {
+          "phase": "Begin measured multiple-spell AI response",
+          "frames": 6,
+          "average_fps": 113.79757687026317,
+          "p99_ms": 9.6711
+        },
+        {
+          "phase": "ToggleWeapon press",
+          "frames": 22,
+          "average_fps": 108.99614549994551,
+          "p99_ms": 10.2579
+        },
+        {
+          "phase": "ToggleWeapon release",
+          "frames": 120,
+          "average_fps": 108.50057717786201,
+          "p99_ms": 10.6039
+        },
+        {
+          "phase": "B charge and release heavy wave in crowd workload",
+          "frames": 111,
+          "average_fps": 110.69416309677992,
+          "p99_ms": 10.304
+        },
+        {
+          "phase": "Let heavy wave cross real crowd",
+          "frames": 109,
+          "average_fps": 108.43060918504747,
+          "p99_ms": 10.6831
+        },
+        {
+          "phase": "Spell4 press",
+          "frames": 12,
+          "average_fps": 112.38575285811017,
+          "p99_ms": 9.7664
+        },
+        {
+          "phase": "Spell4 release",
+          "frames": 88,
+          "average_fps": 109.7268760895536,
+          "p99_ms": 10.8426
+        },
+        {
+          "phase": "Snapshot crowd health immediately before shock",
+          "frames": 6,
+          "average_fps": 107.22480753147047,
+          "p99_ms": 9.6715
+        },
+        {
+          "phase": "Spell2 press",
+          "frames": 11,
+          "average_fps": 106.50514032536353,
+          "p99_ms": 10.5964
+        },
+        {
+          "phase": "Spell2 release",
+          "frames": 34,
+          "average_fps": 111.03882701195823,
+          "p99_ms": 10.0953
+        },
+        {
+          "phase": "B hold AoE in six-NPC workload",
+          "frames": 79,
+          "average_fps": 112.25543767471528,
+          "p99_ms": 10.7761
+        },
+        {
+          "phase": "B let actual AoE land",
+          "frames": 66,
+          "average_fps": 109.14084328168657,
+          "p99_ms": 11.4294
+        },
+        {
+          "phase": "Spell1 press",
+          "frames": 12,
+          "average_fps": 113.16687115291577,
+          "p99_ms": 9.6905
+        },
+        {
+          "phase": "Spell1 release",
+          "frames": 33,
+          "average_fps": 109.22710897687959,
+          "p99_ms": 10.0433
+        },
+        {
+          "phase": "B hold and release actual bolt",
+          "frames": 77,
+          "average_fps": 109.89051764713271,
+          "p99_ms": 10.8529
+        },
+        {
+          "phase": "R3 fallback light-arrow remote slot for measured load",
+          "frames": 87,
+          "average_fps": 107.63326451815001,
+          "p99_ms": 10.8558
+        },
+        {
+          "phase": "R3 aim at one of six adults",
+          "frames": 219,
+          "average_fps": 107.79883732801039,
+          "p99_ms": 10.7867
+        },
+        {
+          "phase": "R3 real fallback light-arrow fire within workload",
+          "frames": 364,
+          "average_fps": 108.62920242440087,
+          "p99_ms": 10.9728
+        },
+        {
+          "phase": "R3 actual arrow flight",
+          "frames": 305,
+          "average_fps": 107.39351914970813,
+          "p99_ms": 11.0805
+        },
+        {
+          "phase": "R6 starbow equip inside measured workload",
+          "frames": 83,
+          "average_fps": 102.87984229387838,
+          "p99_ms": 19.0331
+        },
+        {
+          "phase": "R6 real starbow load aim",
+          "frames": 191,
+          "average_fps": 108.26892277183407,
+          "p99_ms": 10.6487
+        },
+        {
+          "phase": "R6 starbow continuous charged shots",
+          "frames": 463,
+          "average_fps": 108.69481264453565,
+          "p99_ms": 10.7261
+        },
+        {
+          "phase": "R6 native arrow flight in timed workload",
+          "frames": 215,
+          "average_fps": 106.74745711420911,
+          "p99_ms": 10.7493
+        },
+        {
+          "phase": "Measure ordinary NPC reactions to spells",
+          "frames": 883,
+          "average_fps": 110.30929840300493,
+          "p99_ms": 10.8411
+        },
+        {
+          "phase": "Calm armory performance fixture",
+          "frames": 669,
+          "average_fps": 111.41001598692097,
+          "p99_ms": 10.4918
+        },
+        {
+          "phase": "Armory press",
+          "frames": 17,
+          "average_fps": 70.51653778732378,
+          "p99_ms": 38.6816
+        },
+        {
+          "phase": "Armory release",
+          "frames": 287,
+          "average_fps": 95.17997970378133,
+          "p99_ms": 22.365
+        },
+        {
+          "phase": "Check measured preview is actually open",
+          "frames": 10,
+          "average_fps": 91.53359969610844,
+          "p99_ms": 11.8429
+        },
+        {
+          "phase": "Armory real preview render performance",
+          "frames": 1082,
+          "average_fps": 90.14811343368774,
+          "p99_ms": 13.0658
+        }
+      ],
+      "checks": [
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "PASS",
+          "evidence_level": "B-Action spells + A crowd placement and wall-frame readback",
+          "expected": "uncapped; at least two shock-step damage recipients before resets; mean>=60 p99<=25; ordinary NPC reactions, not forced six attackers",
+          "actual": "frames=3596 mean_fps=108.837 p99_ms=11.013 wall_seconds=33.040 npcs=6 damaged=6",
+          "elapsed_seconds": 115.12195290252566
+        },
+        {
+          "name": "Armory performance preview active",
+          "status": "PASS",
+          "evidence_level": "B Armory Action; A runtime readback",
+          "expected": "paused UI with real preview",
+          "actual": "",
+          "elapsed_seconds": 123.37969950214028
+        },
+        {
+          "name": "Armory real preview render performance",
+          "status": "PASS",
+          "evidence_level": "A wall-frame measurement + B movement",
+          "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+          "actual": "frames=1082 mean_fps=90.148 p99_ms=13.091 wall_seconds=12.002",
+          "elapsed_seconds": 135.38238560035825
+        }
+      ]
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\perf_20261001_225811\\User\\Saved\\M5Tests\\20261001_225814_m5_vs2_perf\\results.json",
+      "host": {
+        "time": "2026-10-01T22:58:10.5299369+08:00",
+        "ac_line": 1,
+        "battery_percent": 99,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 60.27
+          },
+          {
+            "Name": "D",
+            "free_GiB": 127.29
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.93
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+      "quality": "-M5Quality=3",
+      "scope": "Old default harbor only; NOT B5 complete-capital benchmark",
+      "samples": [
+        {
+          "phase": "setup",
+          "frames": 1,
+          "average_fps": 4.014427853706221,
+          "p99_ms": 249.1015
+        },
+        {
+          "phase": "world_settle",
+          "frames": 208,
+          "average_fps": 69.28678416217372,
+          "p99_ms": 39.9285
+        },
+        {
+          "phase": "M4 R2 await initial game focus",
+          "frames": 1,
+          "average_fps": 46.16783856030212,
+          "p99_ms": 21.6601
+        },
+        {
+          "phase": "Town runtime references",
+          "frames": 164,
+          "average_fps": 81.47881667519627,
+          "p99_ms": 15.0385
+        },
+        {
+          "phase": "Warmup route",
+          "frames": 1198,
+          "average_fps": 79.82051657253155,
+          "p99_ms": 15.0445
+        },
+        {
+          "phase": "B start walk",
+          "frames": 8,
+          "average_fps": 78.54935059324397,
+          "p99_ms": 13.1683
+        },
+        {
+          "phase": "South approach walk",
+          "frames": 893,
+          "average_fps": 74.37248631094437,
+          "p99_ms": 15.8642
+        },
+        {
+          "phase": "Market approach walk",
+          "frames": 919,
+          "average_fps": 76.56540235414701,
+          "p99_ms": 15.9065
+        },
+        {
+          "phase": "B stop before flight",
+          "frames": 157,
+          "average_fps": 78.29415683227228,
+          "p99_ms": 16.2741
+        },
+        {
+          "phase": "FlightToggle press",
+          "frames": 8,
+          "average_fps": 72.72423153213593,
+          "p99_ms": 14.1539
+        },
+        {
+          "phase": "FlightToggle release",
+          "frames": 74,
+          "average_fps": 73.9820297649701,
+          "p99_ms": 16.9734
+        },
+        {
+          "phase": "B climb",
+          "frames": 535,
+          "average_fps": 76.31548169668744,
+          "p99_ms": 15.7812
+        },
+        {
+          "phase": "High aerial hover",
+          "frames": 322,
+          "average_fps": 80.4433276756525,
+          "p99_ms": 14.5811
+        },
+        {
+          "phase": "B forward flight",
+          "frames": 9,
+          "average_fps": 80.25882579554332,
+          "p99_ms": 14.3289
+        },
+        {
+          "phase": "Town aerial traversal",
+          "frames": 408,
+          "average_fps": 81.44721317280913,
+          "p99_ms": 15.0322
+        },
+        {
+          "phase": "B end route",
+          "frames": 84,
+          "average_fps": 83.54765627937222,
+          "p99_ms": 14.9553
+        },
+        {
+          "phase": "Wait for actual stamina landing",
+          "frames": 1301,
+          "average_fps": 81.29062723254383,
+          "p99_ms": 14.9991
+        },
+        {
+          "phase": "A six-adult spell stress fixture",
+          "frames": 75,
+          "average_fps": 74.30101321815025,
+          "p99_ms": 18.003
+        },
+        {
+          "phase": "A aim actual ground ray into crowd before timing",
+          "frames": 31,
+          "average_fps": 75.81284205959525,
+          "p99_ms": 15.2139
+        },
+        {
+          "phase": "Begin measured multiple-spell AI response",
+          "frames": 4,
+          "average_fps": 76.84062102589914,
+          "p99_ms": 13.3822
+        },
+        {
+          "phase": "ToggleWeapon press",
+          "frames": 16,
+          "average_fps": 76.07198501762255,
+          "p99_ms": 14.1566
+        },
+        {
+          "phase": "ToggleWeapon release",
+          "frames": 82,
+          "average_fps": 73.35300804136824,
+          "p99_ms": 15.6663
+        },
+        {
+          "phase": "B charge and release heavy wave in crowd workload",
+          "frames": 76,
+          "average_fps": 75.23852592680004,
+          "p99_ms": 15.6565
+        },
+        {
+          "phase": "Let heavy wave cross real crowd",
+          "frames": 74,
+          "average_fps": 73.87497399401254,
+          "p99_ms": 15.2288
+        },
+        {
+          "phase": "Spell4 press",
+          "frames": 8,
+          "average_fps": 75.48651056056282,
+          "p99_ms": 14.8578
+        },
+        {
+          "phase": "Spell4 release",
+          "frames": 60,
+          "average_fps": 74.74118063411166,
+          "p99_ms": 16.2466
+        },
+        {
+          "phase": "Snapshot crowd health immediately before shock",
+          "frames": 4,
+          "average_fps": 75.23011009926613,
+          "p99_ms": 13.8412
+        },
+        {
+          "phase": "Spell2 press",
+          "frames": 8,
+          "average_fps": 73.96135149577587,
+          "p99_ms": 14.9739
+        },
+        {
+          "phase": "Spell2 release",
+          "frames": 23,
+          "average_fps": 74.66943354793762,
+          "p99_ms": 15.2827
+        },
+        {
+          "phase": "B hold AoE in six-NPC workload",
+          "frames": 54,
+          "average_fps": 75.86317542460198,
+          "p99_ms": 15.5263
+        },
+        {
+          "phase": "B let actual AoE land",
+          "frames": 45,
+          "average_fps": 73.44031138692029,
+          "p99_ms": 15.7828
+        },
+        {
+          "phase": "Spell1 press",
+          "frames": 8,
+          "average_fps": 76.01340116262497,
+          "p99_ms": 13.8046
+        },
+        {
+          "phase": "Spell1 release",
+          "frames": 23,
+          "average_fps": 74.8502994011976,
+          "p99_ms": 14.5172
+        },
+        {
+          "phase": "B hold and release actual bolt",
+          "frames": 53,
+          "average_fps": 74.9253644412137,
+          "p99_ms": 14.6084
+        },
+        {
+          "phase": "R3 fallback light-arrow remote slot for measured load",
+          "frames": 60,
+          "average_fps": 73.87488549392748,
+          "p99_ms": 15.5165
+        },
+        {
+          "phase": "R3 aim at one of six adults",
+          "frames": 147,
+          "average_fps": 72.13287641327074,
+          "p99_ms": 16.5858
+        },
+        {
+          "phase": "R3 real fallback light-arrow fire within workload",
+          "frames": 243,
+          "average_fps": 72.8323933308906,
+          "p99_ms": 16.7599
+        },
+        {
+          "phase": "R3 actual arrow flight",
+          "frames": 207,
+          "average_fps": 72.64744667914307,
+          "p99_ms": 16.4732
+        },
+        {
+          "phase": "R6 starbow equip inside measured workload",
+          "frames": 59,
+          "average_fps": 72.60407178401495,
+          "p99_ms": 15.7385
+        },
+        {
+          "phase": "R6 real starbow load aim",
+          "frames": 129,
+          "average_fps": 71.87236938074376,
+          "p99_ms": 15.9659
+        },
+        {
+          "phase": "R6 starbow continuous charged shots",
+          "frames": 312,
+          "average_fps": 72.92030245658682,
+          "p99_ms": 15.8359
+        },
+        {
+          "phase": "R6 native arrow flight in timed workload",
+          "frames": 146,
+          "average_fps": 72.39168542817848,
+          "p99_ms": 16.135
+        },
+        {
+          "phase": "Measure ordinary NPC reactions to spells",
+          "frames": 591,
+          "average_fps": 73.79565122601922,
+          "p99_ms": 15.7646
+        },
+        {
+          "phase": "Calm armory performance fixture",
+          "frames": 446,
+          "average_fps": 74.24276334894456,
+          "p99_ms": 16.0772
+        },
+        {
+          "phase": "Armory press",
+          "frames": 14,
+          "average_fps": 63.45488267192194,
+          "p99_ms": 30.3336
+        },
+        {
+          "phase": "Armory release",
+          "frames": 201,
+          "average_fps": 66.70414931003684,
+          "p99_ms": 20.1044
+        },
+        {
+          "phase": "Check measured preview is actually open",
+          "frames": 7,
+          "average_fps": 64.88673094160843,
+          "p99_ms": 15.7126
+        },
+        {
+          "phase": "Armory real preview render performance",
+          "frames": 771,
+          "average_fps": 64.23360383734048,
+          "p99_ms": 18.2392
+        }
+      ],
+      "checks": [
+        {
+          "name": "Multiple spells and six NPC AI performance",
+          "status": "PASS",
+          "evidence_level": "B-Action spells + A crowd placement and wall-frame readback",
+          "expected": "uncapped; at least two shock-step damage recipients before resets; mean>=60 p99<=25; ordinary NPC reactions, not forced six attackers",
+          "actual": "frames=2432 mean_fps=73.337 p99_ms=16.445 wall_seconds=33.162 npcs=6 damaged=6",
+          "elapsed_seconds": 115.24720220267773
+        },
+        {
+          "name": "Armory performance preview active",
+          "status": "PASS",
+          "evidence_level": "B Armory Action; A runtime readback",
+          "expected": "paused UI with real preview",
+          "actual": "",
+          "elapsed_seconds": 123.48034790158272
+        },
+        {
+          "name": "Armory real preview render performance",
+          "status": "PASS",
+          "evidence_level": "A wall-frame measurement + B movement",
+          "expected": "1080p uncapped, mean>=60fps p99<=25ms, no capture",
+          "actual": "frames=771 mean_fps=64.234 p99_ms=18.426 wall_seconds=12.003",
+          "elapsed_seconds": 135.48320150002837
+        }
+      ]
+    }
+  ],
+  "capital_B5": "NOT_RUN: B2/B3 not complete",
+  "exploration30min": "NOT_RUN: full seven-district walk/drive/flight route not implemented; old R6 0m FAIL retained"
+}

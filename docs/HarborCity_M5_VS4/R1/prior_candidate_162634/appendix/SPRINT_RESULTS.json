@@ -1,0 +1,885 @@
+{
+  "groups": [
+    {
+      "case": "FP_ADS",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 400.0,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "case": "FP_fist_combo",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 12,
+      "max_window_recovery_s": 0.050000000000000044,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 552.5,
+      "hits": 4,
+      "shots": 0
+    },
+    {
+      "case": "FP_heavy",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 4,
+      "max_window_recovery_s": 0.0,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 234.133,
+      "hits": 4,
+      "shots": 0
+    },
+    {
+      "case": "FP_hipfire10",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 650.0,
+      "hits": 12,
+      "shots": 40
+    },
+    {
+      "case": "FP_reload",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 400.0,
+      "hits": 2,
+      "shots": 4
+    },
+    {
+      "case": "FP_spell1",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 400.0,
+      "hits": 4,
+      "shots": 0
+    },
+    {
+      "case": "FP_sword_combo",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 12,
+      "max_window_recovery_s": 0.05000999999999989,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 552.5,
+      "hits": 4,
+      "shots": 0
+    },
+    {
+      "case": "TP_ADS",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 400.0,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "case": "TP_fist_combo",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 12,
+      "max_window_recovery_s": 0.050000000000000044,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 552.5,
+      "hits": 4,
+      "shots": 0
+    },
+    {
+      "case": "TP_heavy",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 4,
+      "max_window_recovery_s": 0.050000000000000044,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 234.133,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "case": "TP_hipfire10",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 650.0,
+      "hits": 12,
+      "shots": 40
+    },
+    {
+      "case": "TP_reload",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 400.0,
+      "hits": 2,
+      "shots": 4
+    },
+    {
+      "case": "TP_spell1",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 0,
+      "max_window_recovery_s": null,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 400.0,
+      "hits": 4,
+      "shots": 0
+    },
+    {
+      "case": "TP_sword_combo",
+      "sessions": 4,
+      "incomplete_sessions": 1,
+      "acceptance_status": "NOT_ACCEPTED_INCOMPLETE_TERMINAL_EVIDENCE",
+      "windows": 12,
+      "max_window_recovery_s": 0.050000000000000266,
+      "missing_recovery": 0,
+      "sprint_all": true,
+      "minimum_action_speed": 552.5,
+      "hits": 4,
+      "shots": 0
+    }
+  ],
+  "trials": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\FP_ADS_01.csv",
+      "case": "FP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\FP_fist_combo_01.csv",
+      "case": "FP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.050000000000000044,
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\FP_heavy_01.csv",
+      "case": "FP_heavy",
+      "window_recovery_s": [
+        0.0
+      ],
+      "minimum_action_speed": 234.133,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\FP_hipfire10_01.csv",
+      "case": "FP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 2,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\FP_reload_01.csv",
+      "case": "FP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\FP_spell1_01.csv",
+      "case": "FP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\FP_sword_combo_01.csv",
+      "case": "FP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.04999999999999982,
+        0.050000000000000266
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\TP_ADS_01.csv",
+      "case": "TP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\TP_fist_combo_01.csv",
+      "case": "TP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.050000000000000044,
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\TP_heavy_01.csv",
+      "case": "TP_heavy",
+      "window_recovery_s": [
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 234.134,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\TP_hipfire10_01.csv",
+      "case": "TP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\TP_reload_01.csv",
+      "case": "TP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\TP_spell1_01.csv",
+      "case": "TP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173620\\User\\Saved\\M5Tests\\20261001_173623_m5_vs3_r3_b\\TP_sword_combo_01.csv",
+      "case": "TP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.050000000000000044,
+        0.050000000000000266
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\FP_ADS_01.csv",
+      "case": "FP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\FP_fist_combo_01.csv",
+      "case": "FP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.050000000000000044,
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\FP_heavy_01.csv",
+      "case": "FP_heavy",
+      "window_recovery_s": [
+        0.0
+      ],
+      "minimum_action_speed": 234.134,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\FP_hipfire10_01.csv",
+      "case": "FP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\FP_reload_01.csv",
+      "case": "FP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\FP_spell1_01.csv",
+      "case": "FP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\FP_sword_combo_01.csv",
+      "case": "FP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.050000000000000044,
+        0.05000999999999989
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\TP_ADS_01.csv",
+      "case": "TP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\TP_fist_combo_01.csv",
+      "case": "TP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.050000000000000044,
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\TP_heavy_01.csv",
+      "case": "TP_heavy",
+      "window_recovery_s": [
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 234.133,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\TP_hipfire10_01.csv",
+      "case": "TP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 2,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\TP_reload_01.csv",
+      "case": "TP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\TP_spell1_01.csv",
+      "case": "TP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173818\\User\\Saved\\M5Tests\\20261001_173821_m5_vs3_r3_b\\TP_sword_combo_01.csv",
+      "case": "TP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.04999999999999982,
+        0.04999999999999982
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\FP_ADS_01.csv",
+      "case": "FP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\FP_fist_combo_01.csv",
+      "case": "FP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.050000000000000044,
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\FP_heavy_01.csv",
+      "case": "FP_heavy",
+      "window_recovery_s": [
+        0.0
+      ],
+      "minimum_action_speed": 234.133,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\FP_hipfire10_01.csv",
+      "case": "FP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 4,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\FP_reload_01.csv",
+      "case": "FP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\FP_spell1_01.csv",
+      "case": "FP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\FP_sword_combo_01.csv",
+      "case": "FP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.050000000000000044,
+        0.04999999999999982
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\TP_ADS_01.csv",
+      "case": "TP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\TP_fist_combo_01.csv",
+      "case": "TP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.04999999999999982,
+        0.04999999999999982
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\TP_heavy_01.csv",
+      "case": "TP_heavy",
+      "window_recovery_s": [
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 234.133,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\TP_hipfire10_01.csv",
+      "case": "TP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 3,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\TP_reload_01.csv",
+      "case": "TP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\TP_spell1_01.csv",
+      "case": "TP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\results.json",
+      "run_status": "COMPLETE",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174016\\User\\Saved\\M5Tests\\20261001_174019_m5_vs3_r3_b\\TP_sword_combo_01.csv",
+      "case": "TP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.04999999999999982,
+        0.050000000000000266
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\FP_ADS_01.csv",
+      "case": "FP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\FP_fist_combo_01.csv",
+      "case": "FP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.050000000000000044,
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\FP_heavy_01.csv",
+      "case": "FP_heavy",
+      "window_recovery_s": [
+        0.0
+      ],
+      "minimum_action_speed": 234.133,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\FP_hipfire10_01.csv",
+      "case": "FP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 5,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\FP_reload_01.csv",
+      "case": "FP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\FP_spell1_01.csv",
+      "case": "FP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\FP_sword_combo_01.csv",
+      "case": "FP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.050000000000000044,
+        0.04999999999999982
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\TP_ADS_01.csv",
+      "case": "TP_ADS",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\TP_fist_combo_01.csv",
+      "case": "TP_fist_combo",
+      "window_recovery_s": [
+        0.04999999999999999,
+        0.050000000000000044,
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\TP_heavy_01.csv",
+      "case": "TP_heavy",
+      "window_recovery_s": [
+        0.050000000000000044
+      ],
+      "minimum_action_speed": 234.133,
+      "sprint_all": true,
+      "hits": 0,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\TP_hipfire10_01.csv",
+      "case": "TP_hipfire10",
+      "window_recovery_s": [],
+      "minimum_action_speed": 650.0,
+      "sprint_all": true,
+      "hits": 6,
+      "shots": 10
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\TP_reload_01.csv",
+      "case": "TP_reload",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 1
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\TP_spell1_01.csv",
+      "case": "TP_spell1",
+      "window_recovery_s": [],
+      "minimum_action_speed": 400.0,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\results.json",
+      "run_status": "RUNNING",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_174214\\User\\Saved\\M5Tests\\20261001_174218_m5_vs3_r3_b\\TP_sword_combo_01.csv",
+      "case": "TP_sword_combo",
+      "window_recovery_s": [
+        0.0,
+        0.04999999999999982,
+        0.04999999999999982
+      ],
+      "minimum_action_speed": 552.5,
+      "sprint_all": true,
+      "hits": 1,
+      "shots": 0
+    }
+  ],
+  "scope": "Requested ten independent sessions only, no replacements. All samples retained, including incomplete terminal evidence; aggregate observations do not establish acceptance PASS when any session lacks COMPLETE."
+}

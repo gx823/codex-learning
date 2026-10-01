@@ -1,0 +1,744 @@
+{
+  "axis_rows": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "5",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.125503",
+      "axis_px": "0.867473",
+      "actual_ray_cm": "491.096",
+      "target_ray_hit": "1",
+      "target_chest_cm": "499.545",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "5",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.123770",
+      "axis_px": "0.855983",
+      "actual_ray_cm": "492.208",
+      "target_ray_hit": "1",
+      "target_chest_cm": "496.489",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "5",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.122181",
+      "axis_px": "0.845848",
+      "actual_ray_cm": "478.385",
+      "target_ray_hit": "1",
+      "target_chest_cm": "499.439",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "10",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.121997",
+      "axis_px": "1.176594",
+      "actual_ray_cm": "990.587",
+      "target_ray_hit": "1",
+      "target_chest_cm": "999.974",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "10",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.125468",
+      "axis_px": "1.185890",
+      "actual_ray_cm": "992.913",
+      "target_ray_hit": "1",
+      "target_chest_cm": "998.157",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "10",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.120982",
+      "axis_px": "1.192553",
+      "actual_ray_cm": "994.927",
+      "target_ray_hit": "1",
+      "target_chest_cm": "999.003",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "20",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.126568",
+      "axis_px": "1.520921",
+      "actual_ray_cm": "1977.497",
+      "target_ray_hit": "1",
+      "target_chest_cm": "1999.619",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "20",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.125146",
+      "axis_px": "1.364297",
+      "actual_ray_cm": "1993.330",
+      "target_ray_hit": "1",
+      "target_chest_cm": "1999.252",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "20",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.123526",
+      "axis_px": "1.442468",
+      "actual_ray_cm": "1994.095",
+      "target_ray_hit": "1",
+      "target_chest_cm": "1997.715",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "40",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.126380",
+      "axis_px": "1.673178",
+      "actual_ray_cm": "3976.104",
+      "target_ray_hit": "1",
+      "target_chest_cm": "3998.512",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "40",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.126418",
+      "axis_px": "1.460914",
+      "actual_ray_cm": "3993.430",
+      "target_ray_hit": "1",
+      "target_chest_cm": "3999.868",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "distance_m": "40",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.127374",
+      "axis_px": "1.639951",
+      "actual_ray_cm": "3990.829",
+      "target_ray_hit": "1",
+      "target_chest_cm": "3994.551",
+      "correction_deg": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "5",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.100683",
+      "axis_px": "1.047803",
+      "actual_ray_cm": "476.598",
+      "target_ray_hit": "1",
+      "target_chest_cm": "500.000",
+      "correction_deg": "4.211769"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "5",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.163456",
+      "axis_px": "1.041897",
+      "actual_ray_cm": "494.206",
+      "target_ray_hit": "1",
+      "target_chest_cm": "500.000",
+      "correction_deg": "4.206788"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "5",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.175995",
+      "axis_px": "1.046625",
+      "actual_ray_cm": "497.326",
+      "target_ray_hit": "1",
+      "target_chest_cm": "500.000",
+      "correction_deg": "4.205926"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "10",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.194103",
+      "axis_px": "1.094272",
+      "actual_ray_cm": "976.660",
+      "target_ray_hit": "1",
+      "target_chest_cm": "1000.000",
+      "correction_deg": "4.916227"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "10",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.195019",
+      "axis_px": "1.098884",
+      "actual_ray_cm": "993.899",
+      "target_ray_hit": "1",
+      "target_chest_cm": "1000.000",
+      "correction_deg": "4.931780"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "10",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.195120",
+      "axis_px": "1.099312",
+      "actual_ray_cm": "997.134",
+      "target_ray_hit": "1",
+      "target_chest_cm": "1000.000",
+      "correction_deg": "4.936037"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "20",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.199414",
+      "axis_px": "1.124641",
+      "actual_ray_cm": "1976.831",
+      "target_ray_hit": "1",
+      "target_chest_cm": "2000.000",
+      "correction_deg": "5.324133"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "20",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.199300",
+      "axis_px": "1.123736",
+      "actual_ray_cm": "1993.564",
+      "target_ray_hit": "1",
+      "target_chest_cm": "2000.000",
+      "correction_deg": "5.331869"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "20",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.200785",
+      "axis_px": "1.131988",
+      "actual_ray_cm": "1996.795",
+      "target_ray_hit": "1",
+      "target_chest_cm": "1999.911",
+      "correction_deg": "5.326783"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "40",
+      "initial_offset_deg": "0",
+      "axis_deg": "0.202876",
+      "axis_px": "1.143434",
+      "actual_ray_cm": "3977.123",
+      "target_ray_hit": "1",
+      "target_chest_cm": "3999.952",
+      "correction_deg": "5.537234"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "40",
+      "initial_offset_deg": "-30",
+      "axis_deg": "0.201208",
+      "axis_px": "1.135015",
+      "actual_ray_cm": "3993.220",
+      "target_ray_hit": "1",
+      "target_chest_cm": "4000.000",
+      "correction_deg": "5.535040"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "distance_m": "40",
+      "initial_offset_deg": "30",
+      "axis_deg": "0.202534",
+      "axis_px": "1.142347",
+      "actual_ray_cm": "3995.868",
+      "target_ray_hit": "1",
+      "target_chest_cm": "3999.353",
+      "correction_deg": "5.530792"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "VS4_A6_TP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.002315 rest=0.000001 palm=0.000003",
+      "elapsed_seconds": 17.30210170149803
+    },
+    {
+      "name": "VS4_A6_TP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.004781 rest=0.000232 palm=0.000002",
+      "elapsed_seconds": 21.229416400194168
+    },
+    {
+      "name": "VS4_A6_FP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.262258 rest=0.014122 palm=0.022470",
+      "elapsed_seconds": 153.6074865013361
+    },
+    {
+      "name": "VS4_A6_FP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.189547 rest=0.000037 palm=0.064597",
+      "elapsed_seconds": 157.5522204004228
+    }
+  ],
+  "static_impacts": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "1",
+      "error_cm": "0.006798",
+      "horizontal_cm": "-0.002887",
+      "vertical_cm": "-0.006154",
+      "longitudinal_cm": "-0.000266",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "2",
+      "error_cm": "0.006798",
+      "horizontal_cm": "-0.002987",
+      "vertical_cm": "-0.006107",
+      "longitudinal_cm": "-0.000271",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "3",
+      "error_cm": "0.006796",
+      "horizontal_cm": "-0.001778",
+      "vertical_cm": "-0.006559",
+      "longitudinal_cm": "-0.000204",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "4",
+      "error_cm": "0.006798",
+      "horizontal_cm": "-0.003265",
+      "vertical_cm": "-0.005963",
+      "longitudinal_cm": "-0.000287",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "5",
+      "error_cm": "0.006799",
+      "horizontal_cm": "-0.003538",
+      "vertical_cm": "-0.005806",
+      "longitudinal_cm": "-0.000300",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "6",
+      "error_cm": "0.006797",
+      "horizontal_cm": "-0.002715",
+      "vertical_cm": "-0.006232",
+      "longitudinal_cm": "-0.000255",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "7",
+      "error_cm": "0.006798",
+      "horizontal_cm": "-0.003086",
+      "vertical_cm": "-0.006057",
+      "longitudinal_cm": "-0.000276",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "8",
+      "error_cm": "0.006798",
+      "horizontal_cm": "-0.003258",
+      "vertical_cm": "-0.005967",
+      "longitudinal_cm": "-0.000285",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "9",
+      "error_cm": "0.006799",
+      "horizontal_cm": "-0.003377",
+      "vertical_cm": "-0.005901",
+      "longitudinal_cm": "-0.000291",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "TP",
+      "shot": "10",
+      "error_cm": "0.006797",
+      "horizontal_cm": "-0.002523",
+      "vertical_cm": "-0.006311",
+      "longitudinal_cm": "-0.000243",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "1",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "2",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "3",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "4",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "5",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "6",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "7",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "8",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "9",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "view": "FP",
+      "shot": "10",
+      "error_cm": "0.006792",
+      "horizontal_cm": "-0.006324",
+      "vertical_cm": "-0.002478",
+      "longitudinal_cm": "-0.000027",
+      "surface_delta_x": "0.000000",
+      "surface_delta_y": "0.000000",
+      "surface_delta_z": "0.000000"
+    }
+  ],
+  "reticle_coverage": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+      "box_width": 192,
+      "box_height": 108,
+      "box_hands_sleeves": 0,
+      "box_string": 0,
+      "box_combined": 0,
+      "vertical_strip_hands_reference": 2194,
+      "translation_cm": 0,
+      "mask_valid": true,
+      "all_hand_pixels": 43990,
+      "all_string_pixels": 0,
+      "string_positive_control_pixels": 17749,
+      "depth_control_noise": 0,
+      "color_box_reference": 806,
+      "scope": "paired native scene depth; hands hidden and four string bones collapsed; same camera and first-person projection; arrow/bow body retained; reference-pose string positive control; exact full-pose restoration verified"
+    }
+  ],
+  "range_fixture_status": "PASS",
+  "source_comparison_runtime": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_222222\\User\\Saved\\M5Tests\\20261001_222225_m5_vs3_r3_b\\results.json",
+      "status": "COMPLETE",
+      "samples": 2775,
+      "clips": [
+        {
+          "clip": "Draw",
+          "samples": 306,
+          "left_cm": 0.008254,
+          "right_cm": 0.002986,
+          "fingers_cm": 0.010133,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Draw_Cancel",
+          "samples": 39,
+          "left_cm": 0.006224,
+          "right_cm": 0.002085,
+          "fingers_cm": 0.008567,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Draw_Idle",
+          "samples": 200,
+          "left_cm": 0.007599,
+          "right_cm": 0.001798,
+          "fingers_cm": 0.008658,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "EmptyFromRelease",
+          "samples": 11,
+          "left_cm": 0.00462,
+          "right_cm": 0.001646,
+          "fingers_cm": 0.006022,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "EmptyIdle",
+          "samples": 221,
+          "left_cm": 0.006979,
+          "right_cm": 0.002558,
+          "fingers_cm": 0.008601,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Equip",
+          "samples": 46,
+          "left_cm": 0.006903,
+          "right_cm": 0.010561,
+          "fingers_cm": 0.010678,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Equip_Empty",
+          "samples": 43,
+          "left_cm": 0.069437,
+          "right_cm": 0.167858,
+          "fingers_cm": 0.170859,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Idle",
+          "samples": 1170,
+          "left_cm": 0.008495,
+          "right_cm": 0.003232,
+          "fingers_cm": 0.010297,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Release",
+          "samples": 34,
+          "left_cm": 0.092905,
+          "right_cm": 0.033644,
+          "fingers_cm": 0.093032,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "ReloadFromEmpty",
+          "samples": 38,
+          "left_cm": 0.005925,
+          "right_cm": 0.031996,
+          "fingers_cm": 0.042261,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "ReloadFromRelease",
+          "samples": 106,
+          "left_cm": 0.006443,
+          "right_cm": 0.152149,
+          "fingers_cm": 0.154329,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Unequip",
+          "samples": 143,
+          "left_cm": 0.008528,
+          "right_cm": 0.014621,
+          "fingers_cm": 0.015218,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Walk_Bw",
+          "samples": 102,
+          "left_cm": 0.012558,
+          "right_cm": 0.008115,
+          "fingers_cm": 0.014436,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Walk_Fw",
+          "samples": 56,
+          "left_cm": 0.006302,
+          "right_cm": 0.002018,
+          "fingers_cm": 0.008492,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Walk_R",
+          "samples": 54,
+          "left_cm": 0.006845,
+          "right_cm": 0.003612,
+          "fingers_cm": 0.008532,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Walk_Sprint_Bw",
+          "samples": 60,
+          "left_cm": 0.006336,
+          "right_cm": 0.006882,
+          "fingers_cm": 0.008493,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Walk_Sprint_Fw",
+          "samples": 59,
+          "left_cm": 0.006913,
+          "right_cm": 0.010101,
+          "fingers_cm": 0.012185,
+          "correction_deg": 0.0
+        },
+        {
+          "clip": "Walk_Sprint_R",
+          "samples": 87,
+          "left_cm": 0.006455,
+          "right_cm": 0.001789,
+          "fingers_cm": 0.007638,
+          "correction_deg": 0.0
+        }
+      ],
+      "missing_clips": [],
+      "method": "Displayed runtime world bone positions compared with synchronized native source clip/blend, shared authored-camera basis; aim correction disabled only in isolated QA case. Rendered skin penetration is separate."
+    }
+  ],
+  "finger_skin_penetration": "NOT_RUN"
+}

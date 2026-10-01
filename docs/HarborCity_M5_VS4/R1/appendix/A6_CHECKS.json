@@ -1,0 +1,1518 @@
+{
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_215732\\User\\Saved\\M5Tests\\20261001_215739_m5_vs3_r3_b\\results.json",
+  "status": "COMPLETE",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "controller, character, car; old town also requires switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.2901856005191803
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_215732",
+      "elapsed_seconds": 3.300825398415327
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.3155280984938145
+    },
+    {
+      "name": "VS4 starbow catalog wiring",
+      "status": "PASS",
+      "evidence_level": "ENGINE_ACTION_NOT_OS; preflight, not final acceptance",
+      "expected": "equipped",
+      "actual": "星弓 · Ventyra",
+      "elapsed_seconds": 11.324960101395845
+    },
+    {
+      "name": "VS4_A6_TP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.002315 rest=0.000001 palm=0.000003",
+      "elapsed_seconds": 17.30210170149803
+    },
+    {
+      "name": "VS4_A6_TP_IDLE actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_TP_IDLE.png bytes=2465182 pending=0",
+      "elapsed_seconds": 18.518953699618578
+    },
+    {
+      "name": "VS4_A6_TP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.004781 rest=0.000232 palm=0.000002",
+      "elapsed_seconds": 21.229416400194168
+    },
+    {
+      "name": "VS4_A6_TP_FULL actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_TP_FULL.png bytes=2454696 pending=0",
+      "elapsed_seconds": 22.44826490059495
+    },
+    {
+      "name": "A6 TP 5m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=491.096 chest=499.545",
+      "elapsed_seconds": 26.981637500226498
+    },
+    {
+      "name": "A6 TP 5m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.59301 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.125503 axis_px=0.867473 arrow=-24018.858040,8.632331,1955.911796|21.069264,-170.551590,3.205350|1.000000,1.000000,1.000000 aim=X=-24057.400 Y=267.818 Z=1966.879 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 27.010467000305653
+    },
+    {
+      "name": "A6 TP 5m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=492.208 chest=496.489",
+      "elapsed_seconds": 31.615921799093485
+    },
+    {
+      "name": "A6 TP 5m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.59113 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.123770 axis_px=0.855983 arrow=-24009.837984,17.292163,1955.423888|15.365610,158.405783,-1.502954|1.000000,1.000000,1.000000 aim=X=-23916.022 Y=260.406 Z=1946.012 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 31.63913580030203
+    },
+    {
+      "name": "A6 TP 5m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=478.385 chest=499.439",
+      "elapsed_seconds": 36.252043299376965
+    },
+    {
+      "name": "A6 TP 5m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.59374 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.122181 axis_px=0.845848 arrow=-24019.602406,-3.462205,1955.969447|15.077483,-138.686759,7.156988|1.000000,1.000000,1.000000 aim=X=-24180.053 Y=190.896 Z=1983.766 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 36.27315729856491
+    },
+    {
+      "name": "A6 TP 10m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=990.587 chest=999.974",
+      "elapsed_seconds": 40.893786899745464
+    },
+    {
+      "name": "A6 TP 10m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58969 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.121997 axis_px=1.176594 arrow=-24015.751224,11.292651,1956.194507|31.807628,-178.180514,1.962894|1.000000,1.000000,1.000000 aim=X=-24029.654 Y=754.662 Z=1970.887 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 40.915821101516485
+    },
+    {
+      "name": "A6 TP 10m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=992.913 chest=998.157",
+      "elapsed_seconds": 45.52969419956207
+    },
+    {
+      "name": "A6 TP 10m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58531 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.125468 axis_px=1.185890 arrow=-24007.958321,18.809779,1955.539230|15.478110,150.217702,-2.694830|1.000000,1.000000,1.000000 aim=X=-23648.377 Y=668.349 Z=1913.822 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 45.55331449955702
+    },
+    {
+      "name": "A6 TP 10m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=994.927 chest=999.003",
+      "elapsed_seconds": 50.16452360153198
+    },
+    {
+      "name": "A6 TP 10m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.59351 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.120982 axis_px=1.192553 arrow=-24019.435150,0.235197,1956.728101|14.970592,-147.624118,5.813149|1.000000,1.000000,1.000000 aim=X=-24404.147 Y=641.384 Z=2022.096 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 50.18882169947028
+    },
+    {
+      "name": "A6 TP 20m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=1977.497 chest=1999.619",
+      "elapsed_seconds": 54.791755601763725
+    },
+    {
+      "name": "A6 TP 20m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58494 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.126568 axis_px=1.520921 arrow=-24015.552692,11.877927,1956.665817|11.988710,-0.266729,178.904680|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 54.81686510145664
+    },
+    {
+      "name": "A6 TP 20m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=1993.330 chest=1999.252",
+      "elapsed_seconds": 59.41879620030522
+    },
+    {
+      "name": "A6 TP 20m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58345 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.125146 axis_px=1.364297 arrow=-24008.395202,19.863172,1955.780885|13.227843,149.360764,-2.194126|1.000000,1.000000,1.000000 aim=X=-23138.305 Y=1522.617 Z=1871.988 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 59.44596989825368
+    },
+    {
+      "name": "A6 TP 20m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=1994.095 chest=1997.715",
+      "elapsed_seconds": 64.04316350072622
+    },
+    {
+      "name": "A6 TP 20m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58885 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.123526 axis_px=1.442468 arrow=-24019.006564,1.190758,1957.209491|17.571037,-148.178887,6.489537|1.000000,1.000000,1.000000 aim=X=-24886.762 Y=1505.526 Z=2126.719 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 64.07269940152764
+    },
+    {
+      "name": "A6 TP 40m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=3976.104 chest=3998.512",
+      "elapsed_seconds": 68.66955089941621
+    },
+    {
+      "name": "A6 TP 40m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58549 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.126380 axis_px=1.673178 arrow=-24018.426507,11.296941,1957.060721|-2.367820,0.086575,177.257051|1.000000,1.000000,1.000000 aim=X=-24008.192 Y=3727.109 Z=2186.827 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 68.69908770173788
+    },
+    {
+      "name": "A6 TP 40m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=3993.430 chest=3999.868",
+      "elapsed_seconds": 73.2984934002161
+    },
+    {
+      "name": "A6 TP 40m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58638 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.126418 axis_px=1.460914 arrow=-24007.678870,18.427586,1956.077178|9.587072,149.660050,-1.160559|1.000000,1.000000,1.000000 aim=X=-22132.559 Y=3249.630 Z=1839.952 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 73.33010509982705
+    },
+    {
+      "name": "A6 TP 40m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=3990.829 chest=3994.551",
+      "elapsed_seconds": 77.9207036010921
+    },
+    {
+      "name": "A6 TP 40m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=1.58274 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.127374 axis_px=1.639951 arrow=-24020.572870,0.008363,1957.693374|22.915148,-147.079425,8.298463|1.000000,1.000000,1.000000 aim=X=-25868.902 Y=3220.431 Z=2417.004 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 77.95321869850159
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29060 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.148063 axis_px=1.695847 arrow=-24015.578500,13.642184,1956.531161|14.203822,-0.318447,178.888900|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 82.14400190114975
+    },
+    {
+      "name": "A6 TP shot1 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00709",
+      "elapsed_seconds": 83.14465560019016
+    },
+    {
+      "name": "A6 TP shot1 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 83.17919300124049
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28811 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.148167 axis_px=1.696795 arrow=-24015.892161,12.821687,1956.650105|13.162138,-0.293372,178.901945|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.164 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 86.25608510151505
+    },
+    {
+      "name": "A6 TP shot2 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00696",
+      "elapsed_seconds": 87.26073719933629
+    },
+    {
+      "name": "A6 TP shot2 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 87.29572829976678
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28369 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.148316 axis_px=1.707698 arrow=-24015.934824,12.792137,1956.490735|12.922352,-0.288313,178.899015|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 90.37300869822502
+    },
+    {
+      "name": "A6 TP shot3 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00711",
+      "elapsed_seconds": 91.37519929930568
+    },
+    {
+      "name": "A6 TP shot3 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 91.41130670160055
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29367 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.148368 axis_px=1.698454 arrow=-24015.519642,13.493983,1956.524484|14.444389,-0.324139,178.886994|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 94.49599390104413
+    },
+    {
+      "name": "A6 TP shot4 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00726",
+      "elapsed_seconds": 95.50000600144267
+    },
+    {
+      "name": "A6 TP shot4 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 95.54081879928708
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28535 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.148749 axis_px=1.721403 arrow=-24018.580952,13.367031,1956.445331|3.487280,-0.076264,178.939571|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 98.61498840153217
+    },
+    {
+      "name": "A6 TP shot5 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00679",
+      "elapsed_seconds": 99.61704000085592
+    },
+    {
+      "name": "A6 TP shot5 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 99.65447200089693
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29148 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.148836 axis_px=1.702816 arrow=-24015.925224,13.234758,1956.510375|13.060552,-0.291585,178.897603|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 102.74280840158463
+    },
+    {
+      "name": "A6 TP shot6 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00702",
+      "elapsed_seconds": 103.74897630140185
+    },
+    {
+      "name": "A6 TP shot6 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 103.78772779926658
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29060 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.148729 axis_px=1.702017 arrow=-24016.439844,12.989020,1956.685528|11.281174,-0.249774,178.915896|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 106.87046889960766
+    },
+    {
+      "name": "A6 TP shot7 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00701",
+      "elapsed_seconds": 107.87257630005479
+    },
+    {
+      "name": "A6 TP shot7 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 107.91228879988194
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28461 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.147623 axis_px=1.695645 arrow=-24015.238292,13.124183,1956.492045|15.329391,-0.345326,178.878858|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 110.98133569955826
+    },
+    {
+      "name": "A6 TP shot8 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00725",
+      "elapsed_seconds": 111.98265739902854
+    },
+    {
+      "name": "A6 TP shot8 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 112.02405609935522
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28454 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.149460 axis_px=1.713280 arrow=-24015.820266,13.047405,1956.481602|13.465031,-0.301066,178.894480|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.164 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 115.09869410097599
+    },
+    {
+      "name": "A6 TP shot9 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00726",
+      "elapsed_seconds": 116.1035503000021
+    },
+    {
+      "name": "A6 TP shot9 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 116.1456236988306
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28872 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.146461 axis_px=1.704991 arrow=-24017.976475,13.301701,1956.473821|5.383682,-0.117967,178.935750|1.000000,1.000000,1.000000 aim=X=-24015.858 Y=1736.163 Z=2012.496 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 119.21815299987793
+    },
+    {
+      "name": "A6 TP shot10 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00688",
+      "elapsed_seconds": 120.21827080100775
+    },
+    {
+      "name": "A6 TP shot10 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 120.2612954005599
+    },
+    {
+      "name": "A6 TP 20m ten shots",
+      "status": "PASS",
+      "evidence_level": "single final A6 run only",
+      "expected": "10/10",
+      "actual": "10",
+      "elapsed_seconds": 120.32077629864216
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 122.93250950053334
+    },
+    {
+      "name": "A6 TP static board shot1",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006798 horizontal=-0.002887 vertical=-0.006154 longitudinal=-0.000266 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 123.58529150113463
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 123.63023540005088
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 125.79914769902825
+    },
+    {
+      "name": "A6 TP static board shot2",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006798 horizontal=-0.002987 vertical=-0.006107 longitudinal=-0.000271 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 126.45029579848051
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 126.49587979912758
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 128.66132970154285
+    },
+    {
+      "name": "A6 TP static board shot3",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006796 horizontal=-0.001778 vertical=-0.006559 longitudinal=-0.000204 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 129.3123718984425
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 129.35940020158887
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 131.52240090072155
+    },
+    {
+      "name": "A6 TP static board shot4",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006798 horizontal=-0.003265 vertical=-0.005963 longitudinal=-0.000287 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 132.1759329997003
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 132.22230029851198
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 134.38362339884043
+    },
+    {
+      "name": "A6 TP static board shot5",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006799 horizontal=-0.003538 vertical=-0.005806 longitudinal=-0.000300 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 135.04057230055332
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 135.08901320025325
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 137.24829630181193
+    },
+    {
+      "name": "A6 TP static board shot6",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006797 horizontal=-0.002715 vertical=-0.006232 longitudinal=-0.000255 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 137.9030794017017
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 137.9550619982183
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 140.11703750118613
+    },
+    {
+      "name": "A6 TP static board shot7",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006798 horizontal=-0.003086 vertical=-0.006057 longitudinal=-0.000276 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 140.77290960028768
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 140.83146100118756
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 142.9893577992916
+    },
+    {
+      "name": "A6 TP static board shot8",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006798 horizontal=-0.003258 vertical=-0.005967 longitudinal=-0.000285 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 143.64539369940758
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 143.69579200074077
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 145.8503139987588
+    },
+    {
+      "name": "A6 TP static board shot9",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006799 horizontal=-0.003377 vertical=-0.005901 longitudinal=-0.000291 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 146.50726480036974
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 146.55808690190315
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481800",
+      "elapsed_seconds": 148.7211133018136
+    },
+    {
+      "name": "A6 TP static board shot10",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006797 horizontal=-0.002523 vertical=-0.006311 longitudinal=-0.000243 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 149.37318919971585
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 149.42601529881358
+    },
+    {
+      "name": "VS4_A6_FP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.262258 rest=0.014122 palm=0.022470",
+      "elapsed_seconds": 153.6074865013361
+    },
+    {
+      "name": "VS4_A6_FP_IDLE actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_FP_IDLE.png bytes=2535633 pending=0",
+      "elapsed_seconds": 154.83328700065613
+    },
+    {
+      "name": "VS4_A6_FP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.189547 rest=0.000037 palm=0.064597",
+      "elapsed_seconds": 157.5522204004228
+    },
+    {
+      "name": "VS4_A6_FP_FULL actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_FP_FULL.png bytes=2419807 pending=0",
+      "elapsed_seconds": 158.7650378011167
+    },
+    {
+      "name": "A6 FP 5m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=476.598 chest=500.000",
+      "elapsed_seconds": 163.29287780076265
+    },
+    {
+      "name": "A6 FP 5m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.59278 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.100683 axis_px=1.047803 arrow=-23997.297475,4.931108,1956.517991|68.651446,-1.835302,178.454074|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=476.476 Z=1962.598 correction_deg=4.21177 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 163.34837330132723
+    },
+    {
+      "name": "A6 FP 5m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=494.206 chest=500.000",
+      "elapsed_seconds": 167.93984140083194
+    },
+    {
+      "name": "A6 FP 5m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58646 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.163456 axis_px=1.041897 arrow=-23995.830684,1.811437,1956.207017|68.374649,-20.868174,-169.765811|1.000000,1.000000,1.000000 aim=X=-23754.080 Y=425.946 Z=1925.062 correction_deg=4.20679 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 167.99892190098763
+    },
+    {
+      "name": "A6 FP 5m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=497.326 chest=500.000",
+      "elapsed_seconds": 172.5736274011433
+    },
+    {
+      "name": "A6 FP 5m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58527 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.175995 axis_px=1.046625 arrow=-24000.698475,6.620331,1956.911809|68.181067,18.234129,167.778484|1.000000,1.000000,1.000000 aim=X=-24248.396 Y=430.234 Z=1996.424 correction_deg=4.20593 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 172.6404190994799
+    },
+    {
+      "name": "A6 FP 10m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=976.660 chest=1000.000",
+      "elapsed_seconds": 177.22370989993215
+    },
+    {
+      "name": "A6 FP 10m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58634 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.194103 axis_px=1.094272 arrow=-23997.273727,5.038991,1956.565092|68.661458,-2.965939,177.405444|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=976.660 Z=1973.792 correction_deg=4.91623 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 177.28824000060558
+    },
+    {
+      "name": "A6 FP 10m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=993.899 chest=1000.000",
+      "elapsed_seconds": 181.8778875991702
+    },
+    {
+      "name": "A6 FP 10m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58818 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.195019 axis_px=1.098884 arrow=-23995.788618,1.842518,1956.217185|68.442576,-21.480118,-170.257349|1.000000,1.000000,1.000000 aim=X=-23504.561 Y=858.126 Z=1895.942 correction_deg=4.93178 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 181.94556149840355
+    },
+    {
+      "name": "A6 FP 10m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=997.134 chest=1000.000",
+      "elapsed_seconds": 186.53304480016232
+    },
+    {
+      "name": "A6 FP 10m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58974 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.195120 axis_px=1.099312 arrow=-24000.704308,6.670642,1956.925032|68.157026,17.592801,167.259324|1.000000,1.000000,1.000000 aim=X=-24497.467 Y=861.638 Z=2039.571 correction_deg=4.93604 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 186.59917160123587
+    },
+    {
+      "name": "A6 FP 20m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=1976.831 chest=2000.000",
+      "elapsed_seconds": 191.19274400174618
+    },
+    {
+      "name": "A6 FP 20m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58726 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.199414 axis_px=1.124641 arrow=-23997.263118,5.341106,1956.658591|68.594178,-5.722748,174.533803|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.32413 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 191.26106169819832
+    },
+    {
+      "name": "A6 full FP bow and hands occupancy",
+      "status": "PASS",
+      "evidence_level": "paired native scene captures at 1080p",
+      "expected": "3..25%; noise<=.5%",
+      "actual": "X=13.461 Y=0.000 Z=0.000",
+      "elapsed_seconds": 191.62661420181394
+    },
+    {
+      "name": "A6 central reticle box hands sleeves and string",
+      "status": "PASS",
+      "evidence_level": "paired scene depth isolates hands/sleeves and four string bones; arrow and bow body retained; mask requires positive silhouettes and zero depth-control noise; vertical strip is reference only",
+      "expected": "zero pixels in 192x108 central box",
+      "actual": "X=13.461 Y=0.000 Z=0.000",
+      "elapsed_seconds": 191.69039250165224
+    },
+    {
+      "name": "A6 FP 20m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=1993.564 chest=2000.000",
+      "elapsed_seconds": 196.27964859828353
+    },
+    {
+      "name": "A6 FP 20m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.59088 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.199300 axis_px=1.123736 arrow=-23995.670258,2.027973,1956.263658|68.559642,-23.448553,-172.288025|1.000000,1.000000,1.000000 aim=X=-23004.802 Y=1723.733 Z=1861.014 correction_deg=5.33187 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 196.34524830058217
+    },
+    {
+      "name": "A6 FP 20m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=1996.795 chest=1999.911",
+      "elapsed_seconds": 200.93701250106096
+    },
+    {
+      "name": "A6 FP 20m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58598 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.200785 axis_px=1.131988 arrow=-24000.819345,6.893585,1957.027964|67.956030,15.370550,164.950450|1.000000,1.000000,1.000000 aim=X=-24994.330 Y=1722.230 Z=2153.418 correction_deg=5.32678 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 201.00120839849114
+    },
+    {
+      "name": "A6 FP 40m offset0 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=3977.123 chest=3999.952",
+      "elapsed_seconds": 205.59966069832444
+    },
+    {
+      "name": "A6 FP 40m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.59300 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.202876 axis_px=1.143434 arrow=-23997.260093,5.809714,1956.805699|68.378251,-9.863801,170.126969|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=3969.947 Z=2212.159 correction_deg=5.53723 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 205.66849970072508
+    },
+    {
+      "name": "A6 FP 40m offset-30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=3993.220 chest=4000.000",
+      "elapsed_seconds": 210.26028579846025
+    },
+    {
+      "name": "A6 FP 40m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.59070 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.201208 axis_px=1.135015 arrow=-23995.512923,2.289747,1956.337942|68.661641,-26.108055,-175.101756|1.000000,1.000000,1.000000 aim=X=-22004.556 Y=3456.210 Z=1836.906 correction_deg=5.53504 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 210.33007980138063
+    },
+    {
+      "name": "A6 FP 40m offset30 intended static target",
+      "status": "PASS",
+      "evidence_level": "A fixture validation, separate from bow result",
+      "expected": "camera ray hits target; nominal distance +/-100cm including capsule surface",
+      "actual": "target=1 ray=3995.868 chest=3999.353",
+      "elapsed_seconds": 214.92837249860168
+    },
+    {
+      "name": "A6 FP 40m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; B EnhancedInput tracking; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=1.58710 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.202534 axis_px=1.142347 arrow=-24001.035803,7.278324,1957.206638|67.514042,11.663984,160.988948|1.000000,1.000000,1.000000 aim=X=-25983.133 Y=3434.886 Z=2458.851 correction_deg=5.53079 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 214.99661950021982
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28936 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.076767 axis_px=0.490074 arrow=-23997.154863,5.434892,1957.205732|68.576842,-5.341843,174.913284|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04518 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 219.18426360189915
+    },
+    {
+      "name": "A6 FP shot1 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 220.18726909905672
+    },
+    {
+      "name": "A6 FP shot1 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32482 degrees=0.00609",
+      "elapsed_seconds": 220.2603835016489
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28409 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.070023 axis_px=0.453471 arrow=-23997.153111,5.435249,1957.214776|68.576816,-5.322857,174.932217|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04301 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 223.33716540038586
+    },
+    {
+      "name": "A6 FP shot2 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 224.34055750072002
+    },
+    {
+      "name": "A6 FP shot2 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32417 degrees=0.00613",
+      "elapsed_seconds": 224.41106100007892
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29088 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.079017 axis_px=0.502193 arrow=-23997.155433,5.434787,1957.202777|68.576852,-5.348170,174.906969|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04587 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 227.50543310120702
+    },
+    {
+      "name": "A6 FP shot3 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 228.50482340157032
+    },
+    {
+      "name": "A6 FP shot3 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32389 degrees=0.00667",
+      "elapsed_seconds": 228.57978539913893
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29292 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.080340 axis_px=0.509362 arrow=-23997.155928,5.434546,1957.200237|68.576897,-5.351969,174.903182|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04674 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 231.6749426983297
+    },
+    {
+      "name": "A6 FP shot4 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 232.6729589998722
+    },
+    {
+      "name": "A6 FP shot4 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32394 degrees=0.00678",
+      "elapsed_seconds": 232.74712650105357
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29454 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.082033 axis_px=0.518557 arrow=-23997.156426,5.434388,1957.197680|68.576916,-5.356761,174.898407|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04745 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 235.83799229934812
+    },
+    {
+      "name": "A6 FP shot5 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 236.84438160061836
+    },
+    {
+      "name": "A6 FP shot5 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32494 degrees=0.00646",
+      "elapsed_seconds": 236.91951509937644
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.29257 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.081534 axis_px=0.515789 arrow=-23997.156051,5.434686,1957.199552|68.576862,-5.355246,174.899909|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04659 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 240.00415860116482
+    },
+    {
+      "name": "A6 FP shot6 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 241.0088065005839
+    },
+    {
+      "name": "A6 FP shot6 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32450 degrees=0.00663",
+      "elapsed_seconds": 241.08613520115614
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28039 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.063205 axis_px=0.416426 arrow=-23997.151584,5.435350,1957.222690|68.576831,-5.303772,174.951251|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04152 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 244.1712503992021
+    },
+    {
+      "name": "A6 FP shot7 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 245.17776580154896
+    },
+    {
+      "name": "A6 FP shot7 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32397 degrees=0.00672",
+      "elapsed_seconds": 245.26042990013957
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28131 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.067805 axis_px=0.441377 arrow=-23997.152404,5.435515,1957.218392|68.576771,-5.316553,174.938498|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04192 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 248.3407262004912
+    },
+    {
+      "name": "A6 FP shot8 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 249.34816659986973
+    },
+    {
+      "name": "A6 FP shot8 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32357 degrees=0.00647",
+      "elapsed_seconds": 249.42880630120635
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28471 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.072035 axis_px=0.464412 arrow=-23997.153500,5.435302,1957.212749|68.576794,-5.328460,174.926629|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04326 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 252.52093990147114
+    },
+    {
+      "name": "A6 FP shot9 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 253.52640549838543
+    },
+    {
+      "name": "A6 FP shot9 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32383 degrees=0.00666",
+      "elapsed_seconds": 253.6132005006075
+    },
+    {
+      "name": "A6 shot starts on intended 20m target",
+      "status": "PASS",
+      "evidence_level": "A fixture; normal projectile and target collision unchanged",
+      "expected": "ray hits static target at 20m +/-100cm",
+      "actual": "phase=4 clip=Draw_Idle time=1.28802 secondary= secondary_time=0.00000 secondary_weight=0.00000 empty=0 held=1 charge=1.00000 axis_deg=0.076075 axis_px=0.486229 arrow=-23997.154556,5.435063,1957.207267|68.576813,-5.339834,174.915280|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1976.089 Z=2027.510 correction_deg=5.04461 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 256.70887710154057
+    },
+    {
+      "name": "A6 FP shot10 NPC hit",
+      "status": "PASS",
+      "evidence_level": "NPC hit rate only; static board separately measures precision",
+      "expected": "real NPC damage",
+      "actual": "hit=1 impact_error_reference=0.00729",
+      "elapsed_seconds": 257.7103856988251
+    },
+    {
+      "name": "A6 FP shot10 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.32392 degrees=0.00676",
+      "elapsed_seconds": 257.7931752987206
+    },
+    {
+      "name": "A6 FP 20m ten shots",
+      "status": "PASS",
+      "evidence_level": "single final A6 run only",
+      "expected": "10/10",
+      "actual": "10",
+      "elapsed_seconds": 257.8770599998534
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 260.48997170105577
+    },
+    {
+      "name": "A6 FP static board shot1",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 261.1408367007971
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 261.2238734997809
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 263.4072115011513
+    },
+    {
+      "name": "A6 FP static board shot2",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 264.0624021999538
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 264.14571350067854
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 266.33462750166655
+    },
+    {
+      "name": "A6 FP static board shot3",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 266.99116529896855
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 267.07562030106783
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 269.26202319934964
+    },
+    {
+      "name": "A6 FP static board shot4",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 269.91200559958816
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 269.9989874996245
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 272.1899324990809
+    },
+    {
+      "name": "A6 FP static board shot5",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 272.84034299850464
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 272.9289206005633
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 275.1224487014115
+    },
+    {
+      "name": "A6 FP static board shot6",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 275.78046889975667
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 275.86933660134673
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 278.0570802986622
+    },
+    {
+      "name": "A6 FP static board shot7",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 278.7116847001016
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 278.8006987012923
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 280.9905534014106
+    },
+    {
+      "name": "A6 FP static board shot8",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 281.6447435989976
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 281.73906759917736
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 283.9334460012615
+    },
+    {
+      "name": "A6 FP static board shot9",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 284.58654199913144
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 284.6747156009078
+    },
+    {
+      "name": "A6 static board camera ray",
+      "status": "PASS",
+      "evidence_level": "ordinary camera Visibility trace",
+      "expected": "20m static board",
+      "actual": "distance=2000.00000 actor=StaticMeshActor_2147481103",
+      "elapsed_seconds": 286.871830701828
+    },
+    {
+      "name": "A6 FP static board shot10",
+      "status": "PASS",
+      "evidence_level": "independent static mesh board; actual launch-to-impact surface point motion",
+      "expected": "impact<=5cm; surface displacement<=0.001cm",
+      "actual": "error=0.006792 horizontal=-0.006324 vertical=-0.002478 longitudinal=-0.000027 surface_delta=X=0.000 Y=0.000 Z=0.000",
+      "elapsed_seconds": 287.5247359983623
+    },
+    {
+      "name": "A6 retained arrows ignore collision",
+      "status": "PASS",
+      "evidence_level": "both camera and arrow use Visibility; real retained arrow components",
+      "expected": "no collision and Visibility ignore",
+      "actual": "arrows=1 ignored=1",
+      "elapsed_seconds": 287.61326529830694
+    },
+    {
+      "name": "A6 ADS handoff",
+      "status": "PASS",
+      "evidence_level": "actual ADS world FOV with FP95",
+      "expected": "<=8px and <=1degree",
+      "actual": "pixels=0.00000 degrees=0.01766",
+      "elapsed_seconds": 291.42725490033627
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_TP_IDLE.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_TP_IDLE.png bytes=2465182 pending=0",
+      "elapsed_seconds": 291.63781049847603
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_TP_FULL.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_TP_FULL.png bytes=2454696 pending=0",
+      "elapsed_seconds": 291.730580098927
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_FP_IDLE.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_FP_IDLE.png bytes=2535633 pending=0",
+      "elapsed_seconds": 291.81673090159893
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_FP_FULL.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_215732/User/Saved/M5Tests/20261001_215739_m5_vs3_r3_b/VS4_A6_FP_FULL.png bytes=2419807 pending=0",
+      "elapsed_seconds": 291.9027904011309
+    }
+  ]
+}

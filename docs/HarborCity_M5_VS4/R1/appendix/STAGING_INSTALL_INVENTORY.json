@@ -1,0 +1,49 @@
+{
+  "time": "2026-10-01T23:11:01.1081149+08:00",
+  "content_root": "C:\\Users\\HP\\Documents\\Unreal Projects\\VFXStaging\\Content",
+  "scope": "One read-only filesystem metadata enumeration. No launcher operation, project load, asset migration, content modification or engine update.",
+  "top_directories": [
+    "Fantastic_City_Pack",
+    "Fantastic_Highlands_Castle",
+    "Vefects"
+  ],
+  "candidate_directories": [
+    {
+      "directory": "C:\\Users\\HP\\Documents\\Unreal Projects\\VFXStaging\\Content\\Fantastic_City_Pack",
+      "relative": "Fantastic_City_Pack",
+      "files": 1081,
+      "bytes": 3401966253,
+      "GiB": 3.168328,
+      "zero_byte_files": 0,
+      "temporary_files": 0
+    },
+    {
+      "directory": "C:\\Users\\HP\\Documents\\Unreal Projects\\VFXStaging\\Content\\Fantastic_Highlands_Castle",
+      "relative": "Fantastic_Highlands_Castle",
+      "files": 385,
+      "bytes": 558817181,
+      "GiB": 0.520439,
+      "zero_byte_files": 0,
+      "temporary_files": 0
+    },
+    {
+      "directory": "C:\\Users\\HP\\Documents\\Unreal Projects\\VFXStaging\\Content\\Fantastic_City_Pack\\meshes\\modular\\city_structure",
+      "relative": "Fantastic_City_Pack\\meshes\\modular\\city_structure",
+      "files": 13,
+      "bytes": 1580922,
+      "GiB": 0.001472,
+      "zero_byte_files": 0,
+      "temporary_files": 0
+    },
+    {
+      "directory": "C:\\Users\\HP\\Documents\\Unreal Projects\\VFXStaging\\Content\\Fantastic_Highlands_Castle\\meshes\\city_wall",
+      "relative": "Fantastic_Highlands_Castle\\meshes\\city_wall",
+      "files": 3,
+      "bytes": 1015580,
+      "GiB": 0.000946,
+      "zero_byte_files": 0,
+      "temporary_files": 0
+    }
+  ],
+  "installation_status": "Filesystem presence only; launcher completion and in-editor usability are not asserted from a directory count."
+}

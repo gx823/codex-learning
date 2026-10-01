@@ -1,0 +1,650 @@
+{
+  "scope": "All machine-recorded failed authoring/runtime assertions plus map mismatch; narrative calibration and visual failures also preserved in BOW_APPROACHES.md. Final video failures remain in FINAL_MEDIA.json.",
+  "runs": [
+    {
+      "id": "20261001_125716_167_BowImport",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 30, in <module>\n    arm=import_asset('SK_Exouch','Native/Arms',skeletal());bow=import_asset('SK_BowTracks','Native/BowTracks',skeletal())\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 20, in import_asset\n    return load(path)\n           ^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 9, in load\n    a=A.load_asset(path);assert a,path;return a\n                         ^^^^^^^^^^^^^\nAssertionError: /Game/HarborCity/M5VS4/Bow/Native/Arms/SK_Exouch\n",
+      "evidence": "editor/20261001_125716_167_BowImport/author_result.json"
+    },
+    {
+      "id": "20261001_130246_222_BowImportRoot",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 33, in <module>\n    seq=import_asset(prefix+row['export'],dest,skeletal(mesh.get_editor_property('skeleton')))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 20, in import_asset\n    return load(path)\n           ^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 9, in load\n    a=A.load_asset(path);assert a,path;return a\n                         ^^^^^^^^^^^^^\nAssertionError: /Game/HarborCity/M5VS4/Bow/Native/Arms/Animations/A_FP_Default\n",
+      "evidence": "editor/20261001_130246_222_BowImportRoot/author_result.json"
+    },
+    {
+      "id": "20261001_131346_017_BowRetargetBoundedReach",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_retarget.py\", line 31, in <module>\n    solver=tc.get_solver_controller(stretch);ss=solver.get_solver_settings()\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get_solver_settings'\n",
+      "evidence": "editor/20261001_131346_017_BowRetargetBoundedReach/author_result.json"
+    },
+    {
+      "id": "20261001_134625_494_BowMaterials",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 45, in <module>\n    dither=ME.create_material_expression(mat,U.MaterialExpressionMaterialFunctionCall);dither.set_editor_property('material_function',load('/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA'))\n                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_bow_import.py\", line 9, in load\n    a=A.load_asset(path);assert a,path;return a\n                         ^^^^^^^^^^^^^\nAssertionError: /Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA\n",
+      "evidence": "editor/20261001_134625_494_BowMaterials/author_result.json"
+    },
+    {
+      "id": "20261001_142617_554_CameraFadeMaterials",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 72, in <module>\n    if material:fade(material)\n                ^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  [Previous line repeated 3 more times]\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 29, in fade\n    assert not result.get_editor_property('use_material_attributes'),key\nAssertionError: /Game/HarborCity/M5VS2/HeroLightChroma/Review_c65c8f5c593f/Materials/Core/M_VrmMToonBaseOpaque.M_VrmMToonBaseOpaque\n",
+      "evidence": "editor/20261001_142617_554_CameraFadeMaterials/author_result.json"
+    },
+    {
+      "id": "20261001_142927_209_CameraFadeAttributes",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 89, in <module>\n    if material:fade(material)\n                ^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  [Previous line repeated 3 more times]\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 41, in fade\n    assert E.connect_material_expressions(original_attributes,attribute_output,old,'MaterialAttributes')\nAssertionError\n",
+      "evidence": "editor/20261001_142927_209_CameraFadeAttributes/author_result.json"
+    },
+    {
+      "id": "20261001_143122_132_CameraFadeNativePins",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 89, in <module>\n    if material:fade(material)\n                ^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  [Previous line repeated 3 more times]\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 49, in fade\n    assert E.connect_material_expressions(parameter,'',inverse,'Input')\nAssertionError\n",
+      "evidence": "editor/20261001_143122_132_CameraFadeNativePins/author_result.json"
+    },
+    {
+      "id": "20261001_143332_758_CameraFadeQueriedInputs",
+      "status": "FAIL",
+      "stage": "editor authoring",
+      "reason": "Traceback (most recent call last):\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 89, in <module>\n    if material:fade(material)\n                ^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 22, in fade\n    E.set_material_instance_parent(result,fade(source.get_editor_property('parent')))\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  [Previous line repeated 3 more times]\n  File \"D:/科研学习/codex学习/tools/ue_m5_vs4_camera_materials.py\", line 64, in fade\n    setter.set_editor_property('attribute_set_types',[U.Guid(*[((v+2**31)%2**32)-2**31 for v in values])])\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: call() takes at most 0 arguments (4 given)\n",
+      "evidence": "editor/20261001_143332_758_CameraFadeQueriedInputs/author_result.json"
+    },
+    {
+      "id": "20261001_163513_m5_full",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "status": "FAIL",
+          "evidence_level": "A-fixture",
+          "expected": "read-only safety queries choose A parking fixture; no condition override",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+          "elapsed_seconds": 93.86056269705296
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "status": "FAIL",
+          "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+          "expected": "driving, passenger attached through normal Tick",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5680.009 Y=-6360.922 Z=22.640 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_fade_seconds\": 1,\r\n\t\"named_post_removal_cooldown_seconds\": 60,\r\n\t\"coffee_stage\": 2,\r\n\t\"ride_stage\": 1,\r\n\t\"pickup_curb_y\": -6500,\r\n\t\"pickup_max_body_gap_cm\": 65,\r\n\t\"pickup_parallel_tolerance_degrees\": 15,\r\n\t\"actual_pickup_body_gap_cm\": 24.996727758360066,\r\n\t\"actual_body_world_min\": \"X=-5904.072 Y=-6475.003 Z=18.859\",\r\n\t\"actual_body_world_max\": \"X=-5432.483 Y=-6246.835 Z=145.098\",\r\n\t\"can_pickup_at_curb\": true,\r\n\t\"named_respawn_seconds\":\r\n\t{\r\n\t\t\"M5_Contact\": 0,\r\n\t\t\"M5_Harbor\": 0,\r\n\t\t\"M3_LinXia\": 0,\r\n\t\t\"M3_ChenBo\": 0,\r\n\t\t\"M3_ANing\": 0,\r\n\t\t\"VS2_Citizen00\": 0,\r\n\t\t\"VS2_Citizen01\": 0,\r\n\t\t\"VS2_Citizen02\": 0,\r\n\t\t\"VS2_Citizen03\": 0,\r\n\t\t\"VS2_Citizen04\": 0,\r\n\t\t\"VS2_Citizen05\": 0,\r\n\t\t\"VS2_Citizen06\": 0,\r\n\t\t\"VS2_Citizen07\": 0,\r\n\t\t\"VS2_Citizen08\": 0,\r\n\t\t\"VS2_Citizen09\": 0,\r\n\t\t\"VS2_Citizen10\": 0,\r\n\t\t\"VS2_Citizen11\": 0\r\n\t}\r\n}",
+          "elapsed_seconds": 108.41302109882236
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "status": "FAIL",
+          "evidence_level": "B-Action + A travel placement; not continuous route proof",
+          "expected": "Complete; no direct quest mutation",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "elapsed_seconds": 117.22798399999738
+        }
+      ],
+      "evidence": "m5_full_20261001_163506/User/Saved/M5Tests/20261001_163513_m5_full/results.json"
+    },
+    {
+      "id": "20261001_224615_m5_full",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Pickup fixture has legal curb and NPC-walkable door",
+          "status": "FAIL",
+          "evidence_level": "A-fixture",
+          "expected": "read-only safety queries choose A parking fixture; no condition override",
+          "actual": "xOffset=0 curb=1 exit=0 walk=0; xOffset=-240 curb=1 exit=0 walk=0; xOffset=240 curb=1 exit=0 walk=0; xOffset=-320 curb=1 exit=0 walk=0; xOffset=320 curb=1 exit=0 walk=0; ",
+          "elapsed_seconds": 93.50797310099006
+        },
+        {
+          "name": "Real passenger boarding on current town curb",
+          "status": "FAIL",
+          "evidence_level": "B-Action Interact + A parking fixture; A-read-only clearance query",
+          "expected": "driving, passenger attached through normal Tick",
+          "actual": "driving=1 npc=X=-6000.000 Y=-5900.000 Z=88.946 car=X=-5679.998 Y=-6360.922 Z=22.641 safeDoor=0 door=X=0.000 Y=0.000 Z=0.000 safeNPCStand=0 npcState={\r\n\t\"stable_id\": \"M3_ANing\",\r\n\t\"health\": 100,\r\n\t\"max_health\": 100,\r\n\t\"dead\": false,\r\n\t\"corpse_present\": false,\r\n\t\"ragdoll_simulating\": false,\r\n\t\"pre_death_reaction_pending\": false,\r\n\t\"pre_ragdoll_pose_seconds_at_handover\": 0,\r\n\t\"pre_ragdoll_montage\": \"None\",\r\n\t\"physics_asset\": \"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/PHYS_NPC_Humanoid.PHYS_NPC_Humanoid\",\r\n\t\"physics_bodies\": 20,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_remaining_seconds\": 0,\r\n\t\"corpse_opacity_parameter\": 1,\r\n\t\"mesh_collision_enabled\": 1,\r\n\t\"mesh_pawn_response\": 0,\r\n\t\"mesh_vehicle_response\": 0,\r\n\t\"mesh_visibility_response\": 2,\r\n\t\"capsule_collision_enabled\": 3,\r\n\t\"capsule_body_collision_enabled_unfiltered\": 3,\r\n\t\"capsule_actual_body_valid\": true,\r\n\t\"capsule_physics_state_created\": true,\r\n\t\"actor_collision_enabled\": true,\r\n\t\"mesh_affects_navigation\": false,\r\n\t\"capsule_affects_navigation\": false,\r\n\t\"controller_present\": true,\r\n\t\"controller_tick\": true,\r\n\t\"panic_entries\": 0,\r\n\t\"panic_recoveries\": 0,\r\n\t\"panic_path_attempts\": 0,\r\n\t\"panic_path_failures\": 0,\r\n\t\"living_physical_active\": false,\r\n\t\"m4_r1_reaction\": \"{\\r\\n\\t\\\"counter_preference\\\": true,\\r\\n\\t\\\"counter_active\\\": false,\\r\\n\\t\\\"counter_montage_active\\\": false,\\r\\n\\t\\\"counter_animation\\\": \\\"/Game/HarborCity/M5VS2/NPC/AvatarSample_V/Runtime_482e422cac/Animation/MM_Attack_01_NPCV.MM_Attack_01_NPCV\\\",\\r\\n\\t\\\"counter_starts\\\": 0,\\r\\n\\t\\\"counter_hits\\\": 0,\\r\\n\\t\\\"counter_misses\\\": 0,\\r\\n\\t\\\"counter_interruptions\\\": 0,\\r\\n\\t\\\"counter_sweeps\\\": 0,\\r\\n\\t\\\"counter_occluded\\\": 0,\\r\\n\\t\\\"counter_path_requests\\\": 0,\\r\\n\\t\\\"counter_path_failures\\\": 0,\\r\\n\\t\\\"threat_refreshes\\\": 0,\\r\\n\\t\\\"counter_damage\\\": 15,\\r\\n\\t\\\"counter_cooldown_seconds\\\": 1.1000000238418579,\\r\\n\\t\\\"low_health_flee_threshold\\\": 35,\\r\\n\\t\\\"threat_actor\\\": \\\"None\\\",\\r\\n\\t\\\"threat_remaining_seconds\\\": 0\\r\\n}\",\r\n\t\"panic_remaining_seconds\": 0,\r\n\t\"damage_events\": 0,\r\n\t\"reaction_plays\": 0,\r\n\t\"last_hit_direction\": \"None\",\r\n\t\"last_hit_bone\": \"None\",\r\n\t\"last_damage\": 0\r\n} world={\r\n\t\"ragdolls\": 0,\r\n\t\"ragdoll_cap\": 8,\r\n\t\"corpse_lifetime_seconds\": 60,\r\n\t\"corpse_fade_seconds\": 1,\r\n\t\"named_post_removal_cooldown_seconds\": 60,\r\n\t\"coffee_stage\": 2,\r\n\t\"ride_stage\": 1,\r\n\t\"pickup_curb_y\": -6500,\r\n\t\"pickup_max_body_gap_cm\": 65,\r\n\t\"pickup_parallel_tolerance_degrees\": 15,\r\n\t\"actual_pickup_body_gap_cm\": 24.996839955734686,\r\n\t\"actual_body_world_min\": \"X=-5904.060 Y=-6475.003 Z=18.860\",\r\n\t\"actual_body_world_max\": \"X=-5432.471 Y=-6246.835 Z=145.100\",\r\n\t\"can_pickup_at_curb\": true,\r\n\t\"named_respawn_seconds\":\r\n\t{\r\n\t\t\"M5_Contact\": 0,\r\n\t\t\"M5_Harbor\": 0,\r\n\t\t\"M3_LinXia\": 0,\r\n\t\t\"M3_ChenBo\": 0,\r\n\t\t\"M3_ANing\": 0,\r\n\t\t\"VS2_Citizen00\": 0,\r\n\t\t\"VS2_Citizen01\": 0,\r\n\t\t\"VS2_Citizen02\": 0,\r\n\t\t\"VS2_Citizen03\": 0,\r\n\t\t\"VS2_Citizen04\": 0,\r\n\t\t\"VS2_Citizen05\": 0,\r\n\t\t\"VS2_Citizen06\": 0,\r\n\t\t\"VS2_Citizen07\": 0,\r\n\t\t\"VS2_Citizen08\": 0,\r\n\t\t\"VS2_Citizen09\": 0,\r\n\t\t\"VS2_Citizen10\": 0,\r\n\t\t\"VS2_Citizen11\": 0\r\n\t}\r\n}",
+          "elapsed_seconds": 108.05443540215492
+        },
+        {
+          "name": "Ride completed by normal parking/dropoff condition",
+          "status": "FAIL",
+          "evidence_level": "B-Action + A travel placement; not continuous route proof",
+          "expected": "Complete; no direct quest mutation",
+          "actual": "一杯海风 · 已完成\n咖啡已交给陈伯\n\n顺路看海 · 进行中\n开车到阿宁身旁，靠边停稳  153 m",
+          "elapsed_seconds": 116.87589280307293
+        }
+      ],
+      "evidence": "m5_full_20261001_224611/User/Saved/M5Tests/20261001_224615_m5_full/results.json"
+    },
+    {
+      "id": "20261001_165737_m5_vs3_r2_matrix",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Armory catalog defaults",
+          "status": "FAIL",
+          "evidence_level": "A-runtime configuration",
+          "expected": "R3 four data entries; StarTide/Arcane",
+          "actual": "5",
+          "elapsed_seconds": 6.230402201414108
+        }
+      ],
+      "evidence": "m5_vs3_r2_matrix_20261001_165734/User/Saved/M5Tests/20261001_165737_m5_vs3_r2_matrix/results.json"
+    },
+    {
+      "id": "20261001_153207_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Test interrupted",
+          "status": "FAIL",
+          "evidence_level": "A",
+          "expected": "sequence finishes",
+          "actual": "EndPlay before completion",
+          "elapsed_seconds": 39.006424497812986
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_152953/User/Saved/M5Tests/20261001_153207_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_154130_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Test interrupted",
+          "status": "FAIL",
+          "evidence_level": "A",
+          "expected": "sequence finishes",
+          "actual": "EndPlay before completion",
+          "elapsed_seconds": 6.5534863993525505
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_154106/User/Saved/M5Tests/20261001_154130_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_154141_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Test interrupted",
+          "status": "FAIL",
+          "evidence_level": "A",
+          "expected": "sequence finishes",
+          "actual": "EndPlay before completion",
+          "elapsed_seconds": 6.910859197378159
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_154106/User/Saved/M5Tests/20261001_154141_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_154153_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Preview snapshot restored",
+          "status": "FAIL",
+          "evidence_level": "A travel return; on-disk save untouched",
+          "expected": "restored by ordinary validation; memory snapshot released",
+          "actual": "存档不兼容或车辆未停稳，保留当前游戏。",
+          "elapsed_seconds": 4.421376399695873
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_154106/User/Saved/M5Tests/20261001_154153_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_164355_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "A6 TP shot1 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 73.96021600067616
+        },
+        {
+          "name": "A6 TP shot2 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 77.37931070104241
+        },
+        {
+          "name": "A6 TP shot3 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 80.79908800125122
+        },
+        {
+          "name": "A6 TP shot4 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 84.2114593014121
+        },
+        {
+          "name": "A6 TP shot5 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 87.62865110114217
+        },
+        {
+          "name": "A6 TP shot6 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 91.05010360106826
+        },
+        {
+          "name": "A6 TP shot7 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 94.46901020035148
+        },
+        {
+          "name": "A6 TP shot8 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 97.88995499908924
+        },
+        {
+          "name": "A6 TP shot9 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 101.31719810143113
+        },
+        {
+          "name": "A6 TP shot10 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.03757",
+          "elapsed_seconds": 104.72865980118513
+        },
+        {
+          "name": "A6 TP 20m ten shots",
+          "status": "FAIL",
+          "evidence_level": "single final A6 run only",
+          "expected": "10/10",
+          "actual": "0",
+          "elapsed_seconds": 104.83187510073185
+        },
+        {
+          "name": "A6 central 10 percent strip hands",
+          "status": "FAIL",
+          "evidence_level": "hand-only difference; string geometry/visual check separate",
+          "expected": "zero hand pixels",
+          "actual": "X=13.372 Y=0.000 Z=3572.000",
+          "elapsed_seconds": 141.5241415016353
+        },
+        {
+          "name": "A6 FP 40m offset0 axis",
+          "status": "FAIL",
+          "evidence_level": "A actual mesh/camera projection; not OS input",
+          "expected": "<=1 degree",
+          "actual": "phase=4 clip=Draw_Idle time=0.88333 empty=0 held=1 charge=1.00000 axis_deg=1.242273 axis_px=12.016341 arrow=-23996.009300,5.968498,1957.793582|67.950923,-25.105417,164.313136|1.000000,1.000000,1.000000 aim=X=-22878.674 Y=5869.846 Z=2509.585 correction_deg=3.99920 fp_fov=95.000 world_fov=90.000\n",
+          "elapsed_seconds": 153.22881869971752
+        },
+        {
+          "name": "A6 FP 40m offset-30 axis",
+          "status": "FAIL",
+          "evidence_level": "A actual mesh/camera projection; not OS input",
+          "expected": "<=1 degree",
+          "actual": "phase=4 clip=Draw_Idle time=0.88094 empty=0 held=1 charge=1.00000 axis_deg=1.180260 axis_px=11.587308 arrow=-23995.250434,2.623356,1957.099655|68.625063,-26.571322,-176.613377|1.000000,1.000000,1.000000 aim=X=-22002.016 Y=3460.610 Z=1836.812 correction_deg=3.99918 fp_fov=95.000 world_fov=90.000\n",
+          "elapsed_seconds": 157.154303599149
+        },
+        {
+          "name": "A6 FP 40m offset30 axis",
+          "status": "FAIL",
+          "evidence_level": "A actual mesh/camera projection; not OS input",
+          "expected": "<=1 degree",
+          "actual": "phase=4 clip=Draw_Idle time=0.88577 empty=0 held=1 charge=1.00000 axis_deg=1.182146 axis_px=11.561549 arrow=-24001.135348,7.569387,1958.020483|67.405254,11.246686,159.515985|1.000000,1.000000,1.000000 aim=X=-25997.623 Y=3459.985 Z=2463.989 correction_deg=3.99921 fp_fov=95.000 world_fov=90.000\n",
+          "elapsed_seconds": 161.08660370111465
+        },
+        {
+          "name": "A6 FP shot2 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 169.04069269821048
+        },
+        {
+          "name": "A6 FP shot3 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 172.45962049812078
+        },
+        {
+          "name": "A6 FP shot4 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 175.87611779943109
+        },
+        {
+          "name": "A6 FP shot5 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 179.28757540136576
+        },
+        {
+          "name": "A6 FP shot6 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 182.70872059836984
+        },
+        {
+          "name": "A6 FP shot7 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 186.12315259873867
+        },
+        {
+          "name": "A6 FP shot8 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 189.54068019986153
+        },
+        {
+          "name": "A6 FP shot9 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 192.95894449949265
+        },
+        {
+          "name": "A6 FP shot10 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=0 impact_error=0.53247",
+          "elapsed_seconds": 196.39283899962902
+        },
+        {
+          "name": "A6 FP 20m ten shots",
+          "status": "FAIL",
+          "evidence_level": "single final A6 run only",
+          "expected": "10/10",
+          "actual": "1",
+          "elapsed_seconds": 196.50281110033393
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_174218_m5_vs3_r3_b",
+      "status": "INCOMPLETE",
+      "native_status": "RUNNING",
+      "stage": "runtime",
+      "failures": [],
+      "evidence": "m5_vs3_r3_b_20261001_174214/User/Saved/M5Tests/20261001_174218_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_174746_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Test interrupted",
+          "status": "FAIL",
+          "evidence_level": "A",
+          "expected": "sequence finishes",
+          "actual": "EndPlay before completion",
+          "elapsed_seconds": 5.5463281981647015
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_174742/User/Saved/M5Tests/20261001_174746_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_181450_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "A6 TP shot2 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=12.05128",
+          "elapsed_seconds": 123.31831340119243
+        },
+        {
+          "name": "A6 TP shot6 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=11.79634",
+          "elapsed_seconds": 139.80393270030618
+        },
+        {
+          "name": "A6 central 10 percent strip hands",
+          "status": "FAIL",
+          "evidence_level": "hand-only difference; string geometry/visual check separate",
+          "expected": "zero hand pixels",
+          "actual": "X=13.459 Y=0.000 Z=2820.000",
+          "elapsed_seconds": 198.15023460239172
+        },
+        {
+          "name": "A6 FP shot2 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=8.39173",
+          "elapsed_seconds": 230.71484849974513
+        },
+        {
+          "name": "A6 FP shot3 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=7.26739",
+          "elapsed_seconds": 234.8509034998715
+        },
+        {
+          "name": "A6 FP shot4 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=10.63008",
+          "elapsed_seconds": 238.99057580158114
+        },
+        {
+          "name": "A6 FP shot5 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=7.69687",
+          "elapsed_seconds": 243.13295460119843
+        },
+        {
+          "name": "A6 FP shot6 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=10.46490",
+          "elapsed_seconds": 247.28748179972172
+        },
+        {
+          "name": "A6 FP shot7 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=8.19136",
+          "elapsed_seconds": 251.44828210026026
+        },
+        {
+          "name": "A6 FP shot8 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=15.76682",
+          "elapsed_seconds": 255.6047220006585
+        },
+        {
+          "name": "A6 FP shot9 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=8.14043",
+          "elapsed_seconds": 259.7562792003155
+        },
+        {
+          "name": "A6 FP shot10 exact impact",
+          "status": "FAIL",
+          "evidence_level": "actual collision impact versus launch camera trace",
+          "expected": "real hit; aim error<=5cm",
+          "actual": "hit=1 impact_error=12.44300",
+          "elapsed_seconds": 263.9036682024598
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_181304/User/Saved/M5Tests/20261001_181450_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_182114_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "A6 source-camera runtime hands",
+          "status": "FAIL",
+          "evidence_level": "actual displayed bone world positions after mesh mount, source-camera mount with source scale 1; independent of OS input",
+          "expected": "same sampled source clip and blend, correction off; hands and fingers <=1.5cm",
+          "actual": "samples=2362 left=1.468694 right=8.135662 fingers=10.156187",
+          "elapsed_seconds": 64.52856599912047
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_182036/User/Saved/M5Tests/20261001_182114_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_204022_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "A6 central reticle box hands sleeves and string",
+          "status": "FAIL",
+          "evidence_level": "paired difference hides hands/sleeves and entire bow including string; arrow retained; vertical strip is reference only",
+          "expected": "zero pixels in 192x108 central box",
+          "actual": "X=13.461 Y=0.000 Z=809.000",
+          "elapsed_seconds": 197.07028299942613
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_203956/User/Saved/M5Tests/20261001_204022_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_211632_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "A6 central reticle box hands sleeves and string",
+          "status": "FAIL",
+          "evidence_level": "paired scene depth isolates hands/sleeves and four string bones; arrow and bow body retained; mask requires positive silhouettes and zero depth-control noise; vertical strip is reference only",
+          "expected": "zero pixels in 192x108 central box",
+          "actual": "X=13.458 Y=0.000 Z=-1.000",
+          "elapsed_seconds": 196.53660489991307
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_211559/User/Saved/M5Tests/20261001_211632_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_213052_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "A6 central reticle box hands sleeves and string",
+          "status": "FAIL",
+          "evidence_level": "paired scene depth isolates hands/sleeves and four string bones; arrow and bow body retained; mask requires positive silhouettes and zero depth-control noise; vertical strip is reference only",
+          "expected": "zero pixels in 192x108 central box",
+          "actual": "X=13.461 Y=0.000 Z=-1.000",
+          "elapsed_seconds": 211.59915329888463
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_212946/User/Saved/M5Tests/20261001_213052_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_220355_m5_vs3_r3_b",
+      "status": "FAIL",
+      "native_status": "COMPLETE",
+      "stage": "runtime",
+      "failures": [
+        {
+          "name": "Test interrupted",
+          "status": "FAIL",
+          "evidence_level": "A",
+          "expected": "sequence finishes",
+          "actual": "EndPlay before completion",
+          "elapsed_seconds": 26.504960797727108
+        }
+      ],
+      "evidence": "m5_vs3_r3_b_20261001_220350/User/Saved/M5Tests/20261001_220355_m5_vs3_r3_b/results.json"
+    },
+    {
+      "id": "20261001_154418_editor_build",
+      "status": "FAIL",
+      "stage": "build",
+      "exit_code": 6,
+      "evidence": "builds/20261001_154418_editor_build/command.json"
+    },
+    {
+      "id": "m5_vs3_r3_b_20261001_170328",
+      "status": "FAIL_MAP_MISMATCH",
+      "stage": "final capital screenshot fixture",
+      "reason": "Native assertions zero FAIL but actual map L_HarborTown; Shipping ignores command-line map. Original run retained.",
+      "evidence": "appendix/CAPITAL_CAPTURE_FAILURE.md"
+    }
+  ]
+}

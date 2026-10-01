@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS4\\Candidate_20261001_162634_899_a993e2fd\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "exe_sha256": "3b793dd02887616b9e66c3526105fdb85c5353dcad227480f29d8e1018508aa2",
+  "candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS4\\Candidate_20261001_162634_899_a993e2fd",
+  "engine": "UE 5.8.2",
+  "completed": "2026-10-01T16:34:01.4240608+08:00",
+  "stages": [
+    {
+      "name": "EditorBuild",
+      "status": "PASS"
+    },
+    {
+      "name": "GameBuild",
+      "status": "PASS"
+    },
+    {
+      "name": "CookStagePakPackageArchive",
+      "status": "PASS"
+    },
+    {
+      "name": "CookedMapAudit",
+      "status": "PASS"
+    },
+    {
+      "name": "VerifyArchiveFiles",
+      "status": "PASS"
+    }
+  ],
+  "default_map": "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown.L_HarborTown",
+  "cooked_maps": [
+    "/Game/HarborCity/M5VS3/Town_169edc3f2e92/L_HarborTown",
+    "/Game/HarborCity/M5VS4/Capital/B1_a2068f5977b2/L_CapitalPreview"
+  ],
+  "source_inputs_stable": true,
+  "content_inputs_stable": true,
+  "loose_private_files": 0,
+  "native_encryption": [
+    {
+      "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+      "target": "/Game/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp",
+      "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim.",
+      "private_report_sha256": "91e4cb193c50644f35f2f8e48ac750d54d3dde68389ebca0e8a26a9548e9bff8",
+      "native_calls": [
+        {
+          "label": "pak_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "7f7979d6dd325c5a99cb3b069a9aa1e6d7098563e8a74540193075f3a290c199"
+        },
+        {
+          "label": "list_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "2e489f1d4eead2382e080048acd05a9582dcb8ddfe5fd779cbbd7606b5ae8f0f"
+        },
+        {
+          "label": "utoc_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "67c43a554797d4d7b501ea6d2945fa1919ea9d7546d9ef67bb5132d87b140754"
+        },
+        {
+          "label": "extract_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "5d723b1743ea5acdbe9d23d89c9454cf913ac5fd2cc2f60605b22b25c3c77823"
+        },
+        {
+          "label": "extract_no_key",
+          "exit_code": 1,
+          "redacted_native_log_sha256": "10b6a869d64e3ab6115ac1f615eddcfc6073c09449b00d1261bf91ff915fc05c"
+        }
+      ],
+      "targets": [
+        {
+          "filename": "../../../HarborCity/Content/HarborCity/M5VS2/HeroSelestia/Animation/GASMotion/Batch_1d6685a10359/SKM_Selestia_Warp.uasset",
+          "chunk_type": "ExportBundleData",
+          "bytes": 7433875,
+          "with_key": "PASS_POSITIVE_CONTROL",
+          "without_key": "PASS_DIRECT_EXTRACTION_REFUSED"
+        }
+      ]
+    },
+    {
+      "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+      "target": "/Game/HarborCity/M5VS4/Bow/Arrow/SM_ExouchArrow",
+      "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim.",
+      "private_report_sha256": "1255d06cda085525e65e0a94fbdf00574bc0f645f0ac786d7f79b0f6d7446a65",
+      "native_calls": [
+        {
+          "label": "pak_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "26afb77d6945737787b83dcd9d794b9cf800d4b4c96c6c2fb40830680e0ae4c5"
+        },
+        {
+          "label": "list_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "c19714e2d8ac59e0f6e8ecbe97bf5c520bf5b4af1180e9ab53e5c5aaf7632fe3"
+        },
+        {
+          "label": "utoc_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "fef5f1c7ab41bf3e967eb06058e595009963590e59c848798fd2d01e1f536106"
+        },
+        {
+          "label": "extract_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "6bad9cc2c032df2826c3d913e74375f796a21118e89582ad9d138126b572dfa5"
+        },
+        {
+          "label": "extract_no_key",
+          "exit_code": 1,
+          "redacted_native_log_sha256": "f1fc390696973bac057275189b49c674d7f5434459e1083436ebbbb4a8ec7f88"
+        },
+        {
+          "label": "extract_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "63b131721e2866163fc3d850fe2bd206bce8394ac7b87b18f1a22d666dce6333"
+        },
+        {
+          "label": "extract_no_key",
+          "exit_code": 1,
+          "redacted_native_log_sha256": "47f66bf380eafdc3b6470bd8cbb75a552524613051fce96f82f86f9e76166f23"
+        }
+      ],
+      "targets": [
+        {
+          "filename": "../../../HarborCity/Content/HarborCity/M5VS4/Bow/Arrow/SM_ExouchArrow.uasset",
+          "chunk_type": "ExportBundleData",
+          "bytes": 32704,
+          "with_key": "PASS_POSITIVE_CONTROL",
+          "without_key": "PASS_DIRECT_EXTRACTION_REFUSED"
+        },
+        {
+          "filename": "../../../HarborCity/Content/HarborCity/M5VS4/Bow/Arrow/SM_ExouchArrow.ubulk",
+          "chunk_type": "BulkData",
+          "bytes": 1548,
+          "with_key": "PASS_POSITIVE_CONTROL",
+          "without_key": "PASS_DIRECT_EXTRACTION_REFUSED"
+        }
+      ]
+    },
+    {
+      "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+      "target": "/Game/HarborCity/M5VS4/Bow/FP/A_FP_Draw_Idle",
+      "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim.",
+      "private_report_sha256": "4d7d9344888118b05ffa76258d7868fbbb68d13341a342fa1aa95d8114344e89",
+      "native_calls": [
+        {
+          "label": "pak_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "eee1c4318c044e8f2abc10d2433f53ea0a9b0c0381ff2dd0b0f3434c9ec39064"
+        },
+        {
+          "label": "list_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "f504e25e16023ccfd222b007bb346c13cebb2c76c4e919d2cc6058be815221c0"
+        },
+        {
+          "label": "utoc_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "6d726c497e53b8cadd5c4fe6caf1895be380a1ad5123737453d9ee4138e46687"
+        },
+        {
+          "label": "extract_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "0b1a6a1953b8e79f37a9718d6419592d61e40954746c6243e4f33a8530f05a30"
+        },
+        {
+          "label": "extract_no_key",
+          "exit_code": 1,
+          "redacted_native_log_sha256": "534e0a45f7833ca58067f0e068100b9d7ae6bd036c80f4a14024b6a5eb8420b9"
+        }
+      ],
+      "targets": [
+        {
+          "filename": "../../../HarborCity/Content/HarborCity/M5VS4/Bow/FP/A_FP_Draw_Idle.uasset",
+          "chunk_type": "ExportBundleData",
+          "bytes": 24974,
+          "with_key": "PASS_POSITIVE_CONTROL",
+          "without_key": "PASS_DIRECT_EXTRACTION_REFUSED"
+        }
+      ]
+    },
+    {
+      "status": "PASS_BOUNDED_DIRECT_EXTRACTION_CHECK",
+      "target": "/Game/HarborCity/M5VS4/Bow/Native/BowTracks/Animations/A_Bow_Draw_Idle",
+      "claim_scope": "Only bound container flags and one asset direct extraction without supplied keys. No absolute anti-extraction or legal-compliance claim.",
+      "private_report_sha256": "c8296cd61bab3f2f3626c4477a74b2a5f1c36ed25a0ffb28c5b7e4b2221bdc08",
+      "native_calls": [
+        {
+          "label": "pak_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "041c71a85a20ca1b8d559e302052c8c36563789bad93591fae0947363116fe42"
+        },
+        {
+          "label": "list_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "6acc09a099cf84944562953f39adce6212fd1a7430778a12a6d81a4ed3a0e7d8"
+        },
+        {
+          "label": "utoc_info",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "a1826e1047903ebc772f929f406dcc226f8f4709972899da8a32acf6762bd9ad"
+        },
+        {
+          "label": "extract_with_key",
+          "exit_code": 0,
+          "redacted_native_log_sha256": "3d1a2d13c90d6903e6ce3130e6566fafab7b11f9afc8118b6e58a4a51d0a99e3"
+        },
+        {
+          "label": "extract_no_key",
+          "exit_code": 1,
+          "redacted_native_log_sha256": "6a58b73c083fa102a0eece75cd52bc8823da77fde31b9953003869887b1c0193"
+        }
+      ],
+      "targets": [
+        {
+          "filename": "../../../HarborCity/Content/HarborCity/M5VS4/Bow/Native/BowTracks/Animations/A_Bow_Draw_Idle.uasset",
+          "chunk_type": "ExportBundleData",
+          "bytes": 2020,
+          "with_key": "PASS_POSITIVE_CONTROL",
+          "without_key": "PASS_DIRECT_EXTRACTION_REFUSED"
+        }
+      ]
+    }
+  ],
+  "package_manifest_sha256": "3292a074d819762331de8f7dadfa887d57723864e2c756d0b1dc6a561d4ab1fc",
+  "milestone": "M5_VS4",
+  "metadata_note": "Scope verified from the unique M5_VS4 path, frozen inputs and actual two-map cooked registry."
+}

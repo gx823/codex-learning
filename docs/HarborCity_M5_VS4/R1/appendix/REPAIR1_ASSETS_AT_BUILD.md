@@ -1,0 +1,24 @@
+# Assets / Final Review Addendum
+
+Pre-package Repair 1 gate on 2026-10-01 21:46: editor A6 COMPLETE 189/0 and nine-action 96 Hz source-pose comparison PASS (maximum palm 0.151999 cm). New Shipping tests remain NOT_RUN until the new candidate exists. Corrected author references evaluate the original constraints before reflecting frozen in-memory render geometry; earlier active-IK mirrored references remain historical invalid references, not new delivery evidence.
+
+Updated after the user's 2026-10-01 confirmation: both FANTASTIC purchases are Personal tier. Repair 1 changes project source and adds separate retarget assets. The OLD immutable Shipping package is unchanged; its pre-test notice is preserved byte-for-byte as prior_candidate_162634/appendix/ASSETS_AT_BUILD.md (SHA256 1CEC45AB7E9D90A48A80B04385B489B56F8B8F0250B1CEBC4517E4904DA9458F). New repaired-package acceptance is NOT_RUN.
+
+Repair 1 adds 28 source-preserving 96 Hz sequences under `/Game/HarborCity/M5VS4/Bow/Native/Arms96/Animations` and 28 native IK Retargeter results under `/Game/HarborCity/M5VS4/Bow/FP96`. Combined editor asset bytes: 72,714,270. Original 24 Hz assets are retained. Subframe validation at 192 Hz passes the 1.5 cm hand/finger limit (worst about 0.38 cm); this is offline engine evidence, not packaged runtime or skin-penetration acceptance. All 56 added files are private derived purchased assets and must remain excluded from public files. The original source animation clips are also cooked privately for the isolated runtime comparison; they require the same encrypted package boundary.
+
+| Asset | Source and Use | State |
+|---|---|---|
+| Exouch first-person bow | Existing purchased original, read-only; Blender 5.2.2 LTS, authored 24 FPS. Mirrored arms, Bow tracks, original weighted arrow extraction. | 28 + 28 imported; 20 gameplay states wired. Prior candidate A6 FAIL retained; Repair 1 editor source-hand comparison PASS, new package NOT_RUN |
+| Ventyra | Existing purchased silver-blue bow and five native animations; original files and R6 assets preserved. Measured scale 0.950161, original emissive textures. | 4/5 used; final package rendered, not whole-bow acceptance |
+| Mixamo Pro Longbow | Existing authorized local pack, 40 FBXs. VS4 selects idle, equip, disarm, reload, overdraw, recoil and four aim-walk clips. | 10 imported and wired; prior candidate A6 FAIL retained; Repair 1 package NOT_RUN |
+| FANTASTIC City Pack | Personal tier confirmed by user on 2026-10-01; user added to VFXStaging, installation started about 20:15. | Read-only installation inventory pending delivery; migration deferred to R2, migrated bytes/assets 0/0 |
+| FANTASTIC Highlands Castle | Personal tier confirmed by user on 2026-10-01; user added to VFXStaging, queued after City. Planned castle hill, walls, gates and lighthouse. | Read-only installation inventory pending delivery; migration deferred to R2, migrated bytes/assets 0/0 |
+| FANTASTIC Village Pack | Existing approved local assets. Reserved for farms, timber docks and props. | Existing assets preserved |
+
+Missing Exouch external textures: ArrowColor.png, BowColor.png and Leather_008_Normal.jpg. Reference renders use node-color substitutes. The extracted arrow retains original material partitions with private silver/blue material instances; no substitute primitive geometry.
+
+Seaside Town, Interior Pack and Nature Pack are not authorized purchases for this task and are not used. Harbor boat availability and final alternatives remain NOT_RUN until expansion assets can be inspected.
+
+All originals, derived meshes/animations, paid audio and game archives remain local. Public delivery may contain rendered images/video and reports, never these asset files. No new license tier is inferred from a recommendation.
+
+B1 preview uses a native Landscape plus temporary block/bridge massing, not final architecture. The map is unchanged during Repair 1; old harbor remains default. City/Castle migration totals remain 0 assets / 0 bytes; user-started installation is not yet a verified completed inventory. Do not operate the launcher or open VFXStaging this round. Twenty local camera-fade material derivatives preserve original materials; no paid source/derivative is added to the public review bundle.

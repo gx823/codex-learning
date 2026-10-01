@@ -1,0 +1,686 @@
+{
+  "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_164352\\User\\Saved\\M5Tests\\20261001_164355_m5_vs3_r3_b\\results.json",
+  "status": "COMPLETE",
+  "checks": [
+    {
+      "name": "Runtime actors",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "controller, character, car; old town also requires switch",
+      "actual": "PC=1 character=1 car=1 lamp=1",
+      "elapsed_seconds": 3.2658496014773846
+    },
+    {
+      "name": "Isolated save slot",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "HarborCity_M2_V1_Test_*",
+      "actual": "HarborCity_M5_VS1_Test_VS3_m5_vs3_r3_b_20261001_164352",
+      "elapsed_seconds": 3.266493298113346
+    },
+    {
+      "name": "R2 initial real application focus",
+      "status": "PASS",
+      "evidence_level": "A-runtime prerequisite",
+      "expected": "actual application activation before any test input; no focus override",
+      "actual": "focused=1",
+      "elapsed_seconds": 3.2783589996397495
+    },
+    {
+      "name": "VS4 starbow catalog wiring",
+      "status": "PASS",
+      "evidence_level": "ENGINE_ACTION_NOT_OS; preflight, not final acceptance",
+      "expected": "equipped",
+      "actual": "星弓 · Ventyra",
+      "elapsed_seconds": 11.288195200264454
+    },
+    {
+      "name": "VS4_A6_TP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.002315 rest=0.000001 palm=0.000003",
+      "elapsed_seconds": 17.28605480119586
+    },
+    {
+      "name": "VS4_A6_TP_IDLE actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_TP_IDLE.png bytes=2468580 pending=0",
+      "elapsed_seconds": 18.515767700970173
+    },
+    {
+      "name": "VS4_A6_TP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.004736 rest=0.000058 palm=0.000002",
+      "elapsed_seconds": 21.220312401652336
+    },
+    {
+      "name": "VS4_A6_TP_FULL actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_TP_FULL.png bytes=2294640 pending=0",
+      "elapsed_seconds": 22.41088629886508
+    },
+    {
+      "name": "A6 TP 5m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88945 empty=0 held=1 charge=1.00000 axis_deg=0.134235 axis_px=1.416472 arrow=-24013.465714,17.378613,1955.799424|30.010247,172.495049,-0.569909|1.000000,1.000000,1.000000 aim=X=-23681.509 Y=2731.902 Z=1905.817 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 26.23593920096755
+    },
+    {
+      "name": "A6 TP 5m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88538 empty=0 held=1 charge=1.00000 axis_deg=0.133736 axis_px=1.463621 arrow=-24002.156866,22.477258,1954.870961|14.337608,140.972555,-3.659952|1.000000,1.000000,1.000000 aim=X=-20647.286 Y=4308.195 Z=1557.628 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 30.166169799864292
+    },
+    {
+      "name": "A6 TP 5m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88355 empty=0 held=1 charge=1.00000 axis_deg=0.133036 axis_px=1.375995 arrow=-24020.219673,7.803661,1956.281635|4.495992,-156.085285,2.397052|1.000000,1.000000,1.000000 aim=X=-24867.466 Y=1940.507 Z=2020.445 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 34.08469219878316
+    },
+    {
+      "name": "A6 TP 10m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88385 empty=0 held=1 charge=1.00000 axis_deg=0.133603 axis_px=1.421115 arrow=-24016.651111,16.891141,1955.979669|23.335299,176.521251,0.725852|1.000000,1.000000,1.000000 aim=X=-23825.418 Y=3062.057 Z=1959.936 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 38.021948501467705
+    },
+    {
+      "name": "A6 TP 10m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88373 empty=0 held=1 charge=1.00000 axis_deg=0.133649 axis_px=1.450165 arrow=-24002.727962,22.686768,1955.040815|14.520819,144.845297,-3.177801|1.000000,1.000000,1.000000 aim=X=-21226.777 Y=4093.747 Z=1636.009 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 41.94868469983339
+    },
+    {
+      "name": "A6 TP 10m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88441 empty=0 held=1 charge=1.00000 axis_deg=0.132888 axis_px=1.408327 arrow=-24020.391852,6.011625,1956.779892|10.007651,-152.583303,3.891430|1.000000,1.000000,1.000000 aim=X=-25207.570 Y=2361.010 Z=2103.872 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 45.88572429865599
+    },
+    {
+      "name": "A6 TP 20m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88702 empty=0 held=1 charge=1.00000 axis_deg=0.132608 axis_px=1.491336 arrow=-24015.676122,15.345670,1956.362470|-55.121326,176.459242,3.292827|1.000000,1.000000,1.000000 aim=X=-23910.285 Y=3926.632 Z=2061.598 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 49.81455609947443
+    },
+    {
+      "name": "A6 TP 20m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88746 empty=0 held=1 charge=1.00000 axis_deg=0.133446 axis_px=1.372130 arrow=-24005.707327,21.637763,1955.193768|11.641039,149.525916,-1.736590|1.000000,1.000000,1.000000 aim=X=-23004.842 Y=1748.898 Z=1873.743 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 53.73525070026517
+    },
+    {
+      "name": "A6 TP 20m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88713 empty=0 held=1 charge=1.00000 axis_deg=0.133763 axis_px=1.549837 arrow=-24022.039727,4.430051,1957.207229|15.981938,-149.953437,5.759726|1.000000,1.000000,1.000000 aim=X=-25770.817 Y=3219.526 Z=2271.881 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 57.66089979931712
+    },
+    {
+      "name": "A6 TP 40m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88151 empty=0 held=1 charge=1.00000 axis_deg=0.132967 axis_px=1.673281 arrow=-24014.606327,15.348058,1956.913139|-19.712514,0.743535,177.166803|1.000000,1.000000,1.000000 aim=X=-23957.587 Y=5747.061 Z=2299.201 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 61.5768279992044
+    },
+    {
+      "name": "A6 TP 40m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88860 empty=0 held=1 charge=1.00000 axis_deg=0.133565 axis_px=1.442186 arrow=-24005.548816,21.381999,1955.618107|8.856212,149.734103,-0.955054|1.000000,1.000000,1.000000 aim=X=-22008.713 Y=3463.245 Z=1845.439 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 65.50011130049825
+    },
+    {
+      "name": "A6 TP 40m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=2 degrees",
+      "actual": "phase=4 clip=Draw_Idle time=0.88602 empty=0 held=1 charge=1.00000 axis_deg=0.131484 axis_px=1.628302 arrow=-24021.411390,3.338668,1957.614480|23.098448,-147.006257,8.370861|1.000000,1.000000,1.000000 aim=X=-25994.723 Y=3439.669 Z=2451.431 correction_deg=0.00000 fp_fov=90.000 world_fov=90.000\n",
+      "elapsed_seconds": 69.4330074004829
+    },
+    {
+      "name": "A6 TP shot1 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 73.96021600067616
+    },
+    {
+      "name": "A6 TP shot1 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 73.98252819851041
+    },
+    {
+      "name": "A6 TP shot2 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 77.37931070104241
+    },
+    {
+      "name": "A6 TP shot2 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 77.40277240052819
+    },
+    {
+      "name": "A6 TP shot3 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 80.79908800125122
+    },
+    {
+      "name": "A6 TP shot3 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 80.82308039814234
+    },
+    {
+      "name": "A6 TP shot4 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 84.2114593014121
+    },
+    {
+      "name": "A6 TP shot4 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 84.23947079852223
+    },
+    {
+      "name": "A6 TP shot5 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 87.62865110114217
+    },
+    {
+      "name": "A6 TP shot5 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 87.65548419952393
+    },
+    {
+      "name": "A6 TP shot6 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 91.05010360106826
+    },
+    {
+      "name": "A6 TP shot6 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 91.07674890011549
+    },
+    {
+      "name": "A6 TP shot7 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 94.46901020035148
+    },
+    {
+      "name": "A6 TP shot7 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 94.49624900147319
+    },
+    {
+      "name": "A6 TP shot8 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 97.88995499908924
+    },
+    {
+      "name": "A6 TP shot8 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 97.91973960027099
+    },
+    {
+      "name": "A6 TP shot9 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 101.31719810143113
+    },
+    {
+      "name": "A6 TP shot9 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 101.34764130041003
+    },
+    {
+      "name": "A6 TP shot10 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.03757",
+      "elapsed_seconds": 104.72865980118513
+    },
+    {
+      "name": "A6 TP shot10 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=0.00000 degrees=0.00000",
+      "elapsed_seconds": 104.75802589952946
+    },
+    {
+      "name": "A6 TP 20m ten shots",
+      "status": "FAIL",
+      "evidence_level": "single final A6 run only",
+      "expected": "10/10",
+      "actual": "0",
+      "elapsed_seconds": 104.83187510073185
+    },
+    {
+      "name": "VS4_A6_FP_IDLE contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.262258 rest=0.014124 palm=0.025846",
+      "elapsed_seconds": 108.75887129828334
+    },
+    {
+      "name": "VS4_A6_FP_IDLE actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_FP_IDLE.png bytes=2364182 pending=0",
+      "elapsed_seconds": 109.97604329884052
+    },
+    {
+      "name": "VS4_A6_FP_FULL contacts",
+      "status": "PASS",
+      "evidence_level": "actual rendered transforms and measured mesh landmarks; finger penetration separate NOT_RUN",
+      "expected": "nock/string<=1cm; shaft/rest<=1cm; grip/palm<=1.5cm",
+      "actual": "nock=0.189508 rest=0.000033 palm=0.061620",
+      "elapsed_seconds": 112.69111010059714
+    },
+    {
+      "name": "VS4_A6_FP_FULL actual screenshot after settle",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty PNG and screenshot request processed after .8 seconds",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_FP_FULL.png bytes=2272344 pending=0",
+      "elapsed_seconds": 113.87883019819856
+    },
+    {
+      "name": "A6 FP 5m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88946 empty=0 held=1 charge=1.00000 axis_deg=0.127308 axis_px=0.470004 arrow=-23997.161115,5.039596,1957.221484|68.614647,-0.979373,179.285687|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=477.220 Z=1962.581 correction_deg=3.99893 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 117.70560859888792
+    },
+    {
+      "name": "A6 FP 5m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88039 empty=0 held=1 charge=1.00000 axis_deg=0.064037 axis_px=0.527905 arrow=-23995.632478,1.886639,1956.891894|68.279059,-20.115326,-169.041913|1.000000,1.000000,1.000000 aim=X=-23752.820 Y=428.128 Z=1925.047 correction_deg=3.99886 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 121.63215589895844
+    },
+    {
+      "name": "A6 FP 5m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88327 empty=0 held=1 charge=1.00000 axis_deg=0.059454 axis_px=0.508247 arrow=-24000.610610,6.735633,1957.608151|68.204258,19.091836,168.610002|1.000000,1.000000,1.000000 aim=X=-24248.456 Y=430.338 Z=1996.405 correction_deg=3.99888 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 125.56178029999137
+    },
+    {
+      "name": "A6 FP 10m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88268 empty=0 held=1 charge=1.00000 axis_deg=0.629179 axis_px=7.053106 arrow=-23997.182331,5.277428,1957.295653|68.622083,-2.643937,177.132032|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=975.453 Z=1973.791 correction_deg=3.99905 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 129.48368329927325
+    },
+    {
+      "name": "A6 FP 10m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88317 empty=0 held=1 charge=1.00000 axis_deg=0.645532 axis_px=7.199205 arrow=-23995.558380,2.058856,1956.931659|68.381349,-21.229427,-170.614711|1.000000,1.000000,1.000000 aim=X=-23502.155 Y=862.293 Z=1895.802 correction_deg=3.99906 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 133.4087922014296
+    },
+    {
+      "name": "A6 FP 10m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88589 empty=0 held=1 charge=1.00000 axis_deg=0.643159 axis_px=7.153966 arrow=-24000.721157,6.883427,1957.676172|68.138511,17.920356,166.980103|1.000000,1.000000,1.000000 aim=X=-24496.417 Y=859.819 Z=2039.285 correction_deg=3.99908 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 137.3379237987101
+    },
+    {
+      "name": "A6 FP 20m offset0 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88133 empty=0 held=1 charge=1.00000 axis_deg=0.993579 axis_px=10.164647 arrow=-23997.193285,5.658944,1957.424379|68.540871,-5.875742,173.479667|1.000000,1.000000,1.000000 aim=X=-24000.000 Y=1975.199 Z=2027.486 correction_deg=3.99914 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 141.26911240071058
+    },
+    {
+      "name": "A6 full FP bow and hands occupancy",
+      "status": "PASS",
+      "evidence_level": "paired native scene captures at 1080p",
+      "expected": "3..25%; noise<=.5%",
+      "actual": "X=13.372 Y=0.000 Z=3572.000",
+      "elapsed_seconds": 141.48458730056882
+    },
+    {
+      "name": "A6 central 10 percent strip hands",
+      "status": "FAIL",
+      "evidence_level": "hand-only difference; string geometry/visual check separate",
+      "expected": "zero hand pixels",
+      "actual": "X=13.372 Y=0.000 Z=3572.000",
+      "elapsed_seconds": 141.5241415016353
+    },
+    {
+      "name": "A6 FP 20m offset-30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88941 empty=0 held=1 charge=1.00000 axis_deg=0.998222 axis_px=10.138305 arrow=-23995.416057,2.326680,1957.005146|68.521890,-23.662671,-173.403092|1.000000,1.000000,1.000000 aim=X=-23003.517 Y=1725.959 Z=1861.048 correction_deg=3.99918 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 145.3825029991567
+    },
+    {
+      "name": "A6 FP 20m offset30 axis",
+      "status": "PASS",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88612 empty=0 held=1 charge=1.00000 axis_deg=0.998249 axis_px=10.163727 arrow=-24000.895253,7.163673,1957.811178|67.891579,15.221458,163.895391|1.000000,1.000000,1.000000 aim=X=-24995.162 Y=1723.671 Z=2153.803 correction_deg=3.99916 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 149.30819790065289
+    },
+    {
+      "name": "A6 FP 40m offset0 axis",
+      "status": "FAIL",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88333 empty=0 held=1 charge=1.00000 axis_deg=1.242273 axis_px=12.016341 arrow=-23996.009300,5.968498,1957.793582|67.950923,-25.105417,164.313136|1.000000,1.000000,1.000000 aim=X=-22878.674 Y=5869.846 Z=2509.585 correction_deg=3.99920 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 153.22881869971752
+    },
+    {
+      "name": "A6 FP 40m offset-30 axis",
+      "status": "FAIL",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88094 empty=0 held=1 charge=1.00000 axis_deg=1.180260 axis_px=11.587308 arrow=-23995.250434,2.623356,1957.099655|68.625063,-26.571322,-176.613377|1.000000,1.000000,1.000000 aim=X=-22002.016 Y=3460.610 Z=1836.812 correction_deg=3.99918 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 157.154303599149
+    },
+    {
+      "name": "A6 FP 40m offset30 axis",
+      "status": "FAIL",
+      "evidence_level": "A actual mesh/camera projection; not OS input",
+      "expected": "<=1 degree",
+      "actual": "phase=4 clip=Draw_Idle time=0.88577 empty=0 held=1 charge=1.00000 axis_deg=1.182146 axis_px=11.561549 arrow=-24001.135348,7.569387,1958.020483|67.405254,11.246686,159.515985|1.000000,1.000000,1.000000 aim=X=-25997.623 Y=3459.985 Z=2463.989 correction_deg=3.99921 fp_fov=95.000 world_fov=90.000\n",
+      "elapsed_seconds": 161.08660370111465
+    },
+    {
+      "name": "A6 FP shot1 exact impact",
+      "status": "PASS",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=1 impact_error=0.53247",
+      "elapsed_seconds": 165.6219124980271
+    },
+    {
+      "name": "A6 FP shot1 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.26781 degrees=0.06268",
+      "elapsed_seconds": 165.67013740167022
+    },
+    {
+      "name": "A6 FP shot2 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 169.04069269821048
+    },
+    {
+      "name": "A6 FP shot2 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27785 degrees=0.07268",
+      "elapsed_seconds": 169.08801089972258
+    },
+    {
+      "name": "A6 FP shot3 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 172.45962049812078
+    },
+    {
+      "name": "A6 FP shot3 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27809 degrees=0.07273",
+      "elapsed_seconds": 172.5132823996246
+    },
+    {
+      "name": "A6 FP shot4 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 175.87611779943109
+    },
+    {
+      "name": "A6 FP shot4 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27760 degrees=0.07266",
+      "elapsed_seconds": 175.92572740092874
+    },
+    {
+      "name": "A6 FP shot5 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 179.28757540136576
+    },
+    {
+      "name": "A6 FP shot5 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27756 degrees=0.07263",
+      "elapsed_seconds": 179.34412100166082
+    },
+    {
+      "name": "A6 FP shot6 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 182.70872059836984
+    },
+    {
+      "name": "A6 FP shot6 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27747 degrees=0.07261",
+      "elapsed_seconds": 182.76108120009303
+    },
+    {
+      "name": "A6 FP shot7 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 186.12315259873867
+    },
+    {
+      "name": "A6 FP shot7 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27758 degrees=0.07262",
+      "elapsed_seconds": 186.17520520091057
+    },
+    {
+      "name": "A6 FP shot8 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 189.54068019986153
+    },
+    {
+      "name": "A6 FP shot8 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27773 degrees=0.07270",
+      "elapsed_seconds": 189.59267039969563
+    },
+    {
+      "name": "A6 FP shot9 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 192.95894449949265
+    },
+    {
+      "name": "A6 FP shot9 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27838 degrees=0.07278",
+      "elapsed_seconds": 193.0156254991889
+    },
+    {
+      "name": "A6 FP shot10 exact impact",
+      "status": "FAIL",
+      "evidence_level": "actual collision impact versus launch camera trace",
+      "expected": "real hit; aim error<=5cm",
+      "actual": "hit=0 impact_error=0.53247",
+      "elapsed_seconds": 196.39283899962902
+    },
+    {
+      "name": "A6 FP shot10 handoff",
+      "status": "PASS",
+      "evidence_level": "launch transform and actual first-person projection",
+      "expected": "<=1 degree; FP<=8px / TP<=2cm",
+      "actual": "pixels=0.00000 cm=1.27704 degrees=0.07253",
+      "elapsed_seconds": 196.4483365006745
+    },
+    {
+      "name": "A6 FP 20m ten shots",
+      "status": "FAIL",
+      "evidence_level": "single final A6 run only",
+      "expected": "10/10",
+      "actual": "1",
+      "elapsed_seconds": 196.50281110033393
+    },
+    {
+      "name": "A6 ADS handoff",
+      "status": "PASS",
+      "evidence_level": "actual ADS world FOV with FP95",
+      "expected": "<=8px and <=1degree",
+      "actual": "pixels=0.00000 degrees=0.37030",
+      "elapsed_seconds": 200.0233405008912
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_TP_IDLE.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_TP_IDLE.png bytes=2468580 pending=0",
+      "elapsed_seconds": 200.2331225015223
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_TP_FULL.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_TP_FULL.png bytes=2294640 pending=0",
+      "elapsed_seconds": 200.28906619921327
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_FP_IDLE.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_FP_IDLE.png bytes=2364182 pending=0",
+      "elapsed_seconds": 200.3424112983048
+    },
+    {
+      "name": "M3 final screenshot file VS4_A6_FP_FULL.png",
+      "status": "PASS",
+      "evidence_level": "A",
+      "expected": "actual nonempty requested PNG before test completion/normal exit",
+      "actual": "file=D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R1/m5_vs3_r3_b_20261001_164352/User/Saved/M5Tests/20261001_164355_m5_vs3_r3_b/VS4_A6_FP_FULL.png bytes=2272344 pending=0",
+      "elapsed_seconds": 200.39365309849381
+    }
+  ]
+}

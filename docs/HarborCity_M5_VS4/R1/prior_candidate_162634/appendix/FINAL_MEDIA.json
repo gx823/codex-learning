@@ -1,0 +1,177 @@
+{
+  "files": [
+    {
+      "name": "VS4_BOW_FP_30S.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review\\VS4_BOW_FP_30S.mp4",
+      "size": 23072195,
+      "sha256": "49602ecf42182c54707e9ba50efb7e1a17ddd6742d5f30d6ab3d84507799cd3f",
+      "decode": "PASS",
+      "duration": 30.734,
+      "average_fps": 30.00227783020403,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.33,
+      "true_peak_db": -1.42,
+      "exe_sha256": "3B793DD02887616B9E66C3526105FDB85C5353DCAD227480F29D8E1018508AA2"
+    },
+    {
+      "name": "VS4_BOW_TP_30S.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review\\VS4_BOW_TP_30S.mp4",
+      "size": 22904997,
+      "sha256": "cdaca03fab669088f3a574493b807ed8b551a4b319f2027010d41bbbaf30c513",
+      "decode": "PASS",
+      "duration": 30.733,
+      "average_fps": 30.004230531419832,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.25,
+      "true_peak_db": -1.46,
+      "exe_sha256": "3B793DD02887616B9E66C3526105FDB85C5353DCAD227480F29D8E1018508AA2"
+    },
+    {
+      "name": "VS4_BOW_FP_SLOW025.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review\\VS4_BOW_FP_SLOW025.mp4",
+      "size": 5729191,
+      "sha256": "446bdcd38dadf63896e3a0c2a9d1496624c2169ad1f321c1ebaf4a8a882d55b1",
+      "decode": "PASS",
+      "duration": 12.305,
+      "average_fps": 29.995122744269224,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.11,
+      "true_peak_db": -1.46,
+      "exe_sha256": "3B793DD02887616B9E66C3526105FDB85C5353DCAD227480F29D8E1018508AA2"
+    },
+    {
+      "name": "VS4_BOW_TP_SLOW025.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review\\VS4_BOW_TP_SLOW025.mp4",
+      "size": 4459308,
+      "sha256": "d105199d9c56274f5b159cab1cec0b864b043982800b35c0366fa78b097fbffb",
+      "decode": "PASS",
+      "duration": 12.269083,
+      "average_fps": 30.00163052339801,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.48,
+      "true_peak_db": -1.39,
+      "exe_sha256": "3B793DD02887616B9E66C3526105FDB85C5353DCAD227480F29D8E1018508AA2"
+    },
+    {
+      "name": "VS4_CAMERA_OLD_CAFE_PARTIAL.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review\\VS4_CAMERA_OLD_CAFE_PARTIAL.mp4",
+      "size": 19943777,
+      "sha256": "935c469a1900b3d98109547e83a1c573b6a41a1fd046a043872c409d7ab242ca",
+      "decode": "PASS",
+      "duration": 19.984,
+      "average_fps": 29.957489372343087,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.12,
+      "true_peak_db": -1.49,
+      "exe_sha256": "3B793DD02887616B9E66C3526105FDB85C5353DCAD227480F29D8E1018508AA2"
+    },
+    {
+      "name": "VS4_CAPITAL_FLIGHT_PARTIAL.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review\\VS4_CAPITAL_FLIGHT_PARTIAL.mp4",
+      "size": 38897759,
+      "sha256": "41bb4405254e255334725d0c80aa64cb4904fb7da7b0354bb5454b02ccf5c24a",
+      "decode": "PASS",
+      "duration": 74.107313,
+      "average_fps": 29.994195542716756,
+      "fps_status": "PASS",
+      "audio_status": "FAIL_SILENT_NATIVE_CAPTURE",
+      "integrated_lufs": null,
+      "true_peak_db": null,
+      "exe_sha256": "3B793DD02887616B9E66C3526105FDB85C5353DCAD227480F29D8E1018508AA2"
+    },
+    {
+      "name": "VS4_MAIN_PARTIAL.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review\\VS4_MAIN_PARTIAL.mp4",
+      "size": 205218248,
+      "sha256": "4d52534e4912e9c345cff6d5a20f5450395e5e913ebd9dd6e8de2c3e2920ec7e",
+      "decode": "PASS",
+      "duration": 283.591313,
+      "average_fps": 29.99312326979705,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.09,
+      "true_peak_db": -1.37,
+      "exe_sha256": "3B793DD02887616B9E66C3526105FDB85C5353DCAD227480F29D8E1018508AA2"
+    }
+  ],
+  "source_bindings": {
+    "bow_fp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_171444_CF385823\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_171417",
+      "duration": 37.306,
+      "capture_fps": 30.022181567184685,
+      "capture_audio": "PASS"
+    },
+    "bow_tp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_171628_63CD075C\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_171602",
+      "duration": 37.309833,
+      "capture_fps": 30.018892872675917,
+      "capture_audio": "PASS"
+    },
+    "bow_slow_fp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_171808_59436550\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_171741",
+      "duration": 18.904,
+      "capture_fps": 30.04665430768779,
+      "capture_audio": "PASS"
+    },
+    "bow_slow_tp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_172244_C4B0E161\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_172218",
+      "duration": 18.869083,
+      "capture_fps": 30.049142271877326,
+      "capture_audio": "PASS"
+    },
+    "capital_flight_1": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_172343_616CDAE7\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_172319",
+      "duration": 25.103604,
+      "capture_fps": 30.035535145201095,
+      "capture_audio": "FAIL_SILENT_NATIVE_CAPTURE"
+    },
+    "capital_flight_2": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_172500_5BE37D9D\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_172435",
+      "duration": 25.071563,
+      "capture_fps": 30.034030590836785,
+      "capture_audio": "FAIL_SILENT_NATIVE_CAPTURE"
+    },
+    "capital_flight_3": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_172615_FF6A6060\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_172551",
+      "duration": 25.103063,
+      "capture_fps": 30.03617167719672,
+      "capture_audio": "FAIL_SILENT_NATIVE_CAPTURE"
+    },
+    "capital_flight_4": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_172733_D8E59230\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_172708",
+      "duration": 25.106292,
+      "capture_fps": 30.032320592234175,
+      "capture_audio": "FAIL_SILENT_NATIVE_CAPTURE"
+    },
+    "old_town_review": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_172841_C42DFE80\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_172823",
+      "duration": 182.235292,
+      "capture_fps": 29.988702572558214,
+      "capture_audio": "PASS"
+    },
+    "old_cafe_camera": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_173500_DD64DB02\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_173442",
+      "duration": 26.5505,
+      "capture_fps": 30.01827725144518,
+      "capture_audio": "PASS"
+    }
+  },
+  "main_content_status": "PARTIAL: whitebox flight + old-map gameplay + starbow; not the requested seven-district walk/interiors/quest tour",
+  "flight_scope": "Four independent ordinary-stamina sessions, concatenated at native speed. No 30-minute continuity claim.",
+  "audio_scope": "Native game audio only; public BGM muted. Silent whitebox clips remain silent and explicitly FAIL, never replaced with invented audio."
+}

@@ -1,0 +1,107 @@
+{
+  "files": [
+    {
+      "name": "VS4_BOW_FP_30S.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_FP_30S.mp4",
+      "size": 22973513,
+      "sha256": "62e164e6e816aab396f279c29e2e7849f430f549e282bd95c42baef97ad20188",
+      "decode": "PASS",
+      "duration": 30.701,
+      "average_fps": 30.00293188259439,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.33,
+      "true_peak_db": -1.36,
+      "exe_sha256": "84B51E766AD007454A207359818D7BCCFB14ACEDE42EC4449EA994F73C21C2CE"
+    },
+    {
+      "name": "VS4_BOW_TP_30S.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_TP_30S.mp4",
+      "size": 22805337,
+      "sha256": "8e8dccac20704d069c2921ac4c3219d77ea5372e180ae931ba1be15bad65e8b7",
+      "decode": "PASS",
+      "duration": 30.734,
+      "average_fps": 30.00227783020403,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.31,
+      "true_peak_db": -1.46,
+      "exe_sha256": "84B51E766AD007454A207359818D7BCCFB14ACEDE42EC4449EA994F73C21C2CE"
+    },
+    {
+      "name": "VS4_BOW_FP_SLOW025.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_FP_SLOW025.mp4",
+      "size": 5763641,
+      "sha256": "11d5ceb2e16fdb2b87191f76c8b51c6b6f3fcfe29b337f886d194169a2824090",
+      "decode": "PASS",
+      "duration": 12.3,
+      "average_fps": 30.009759271307743,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.08,
+      "true_peak_db": -1.4,
+      "exe_sha256": "84B51E766AD007454A207359818D7BCCFB14ACEDE42EC4449EA994F73C21C2CE"
+    },
+    {
+      "name": "VS4_BOW_TP_SLOW025.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_TP_SLOW025.mp4",
+      "size": 4430244,
+      "sha256": "0eaa54987b5a7d5a48719deddb2ec495fd2c5d32fc5a6f4cacf0b9e32fb74166",
+      "decode": "PASS",
+      "duration": 12.338,
+      "average_fps": 29.995946493717064,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.47,
+      "true_peak_db": -1.43,
+      "exe_sha256": "84B51E766AD007454A207359818D7BCCFB14ACEDE42EC4449EA994F73C21C2CE"
+    },
+    {
+      "name": "VS4_BOW_AUTHOR_COMPARE.mp4",
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\review_repair1\\VS4_BOW_AUTHOR_COMPARE.mp4",
+      "size": 526249,
+      "sha256": "d0c5b40afe41fa68dba950ff75d5e5ceb8f15765da165698d313458e194747ea",
+      "decode": "PASS",
+      "duration": 1.295021,
+      "average_fps": 30.06939090208173,
+      "fps_status": "PASS",
+      "audio_status": "PASS",
+      "integrated_lufs": -18.01,
+      "true_peak_db": -2.2,
+      "scope": "Author original per-clip poses versus recorded game. Same engine-frame clip time; game has 0.08s component-pose crossfades, author renders unblended clips. Numerical runtime source-blend checks are separate.",
+      "exe_sha256": "84b51e766ad007454a207359818d7bccfb14acede42ec4449ea994f73c21c2ce"
+    }
+  ],
+  "source_bindings": {
+    "bow_fp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_230250_238E4816\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230224",
+      "duration": 37.268271,
+      "capture_fps": 30.02553780661971,
+      "capture_audio": "PASS"
+    },
+    "bow_tp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_230433_D07C9911\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230407",
+      "duration": 37.307,
+      "capture_fps": 30.021355905961965,
+      "capture_audio": "PASS"
+    },
+    "bow_slow_fp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_230614_1500B9E8\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230547",
+      "duration": 18.875292,
+      "capture_fps": 30.039267202937342,
+      "capture_audio": "PASS"
+    },
+    "bow_slow_tp": {
+      "path": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\recordings\\20261001_230717_477FB020\\capture.mp4",
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_230651",
+      "duration": 18.906146,
+      "capture_fps": 30.04315318125785,
+      "capture_audio": "PASS"
+    }
+  },
+  "scope": "Repair 1: four new standalone bow videos. Source-camera comparison is separate. Existing capital and old-town media is retained historical evidence, not recaptured or rebound.",
+  "audio_scope": "Native game audio only; public BGM muted."
+}

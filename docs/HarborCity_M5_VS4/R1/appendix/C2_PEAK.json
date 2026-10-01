@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\\Saved\\M5Tests\\20261001_221558_m5_vs3_r3_b\\results.json",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\\Saved\\M5Tests\\20261001_221558_m5_vs3_r3_b\\Arrow_charge_frames.csv",
+      "frames": 33,
+      "peak_percent": 17.86989,
+      "peak_sim_seconds": 0.266667,
+      "max_control_noise": 0.14931
+    },
+    {
+      "run": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\\Saved\\M5Tests\\20261001_221558_m5_vs3_r3_b\\results.json",
+      "file": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R1\\m5_vs3_r3_b_20261001_221555\\User\\Saved\\M5Tests\\20261001_221558_m5_vs3_r3_b\\Arrow_release_frames.csv",
+      "frames": 150,
+      "peak_percent": 14.5952,
+      "peak_sim_seconds": 0.133333,
+      "max_control_noise": 0.15996
+    }
+  ],
+  "method": "Paired 30 Hz complete-lifecycle native scene captures; not real-time viewport FPS"
+}
