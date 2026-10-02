@@ -31,4 +31,6 @@ D 是本轮必做，未取消：High/60/VSync 关的新用户默认值、P 画�
 
 公开白名单仅文档、文本源码 diff、测量摘要、JPG 及渲染后的 MP4。购买原件、派生资产、几何导出、私人音乐、加密配置与存档不上传。根工作区既有无关修改保留，使用原发布工作树并在推送前核对 git status。全部本轮文本源码差异在 `appendix/SOURCE_CHANGES.patch`。
 
-GitHub 提交与 Release 的实际校验回执保存在本地 `github/gate_publication.json`，发布状态以该回执和远端验证为准，不预填 PASS。断点在 `WORK_CHECKPOINT.json`。审阅通过前不再启动游戏、不打包、不跑完整回归；后续占焦点测试前仍须提醒保持接电、不要操作电脑。Esc 立即停止，暂停只用 P。
+GitHub 文档与 23 张 JPG 已推送，59 文件清单核对一致（首个样板提交 `83f8419542f455796a92bfdbec28cf2d815fe7e3`）。Release 仍 BLOCKED_UPLOAD：Python API 两次 ProxyError 后，Git 推送与系统 HTTP 只读核验成功，但 99,320,727 字节录像上传在 300 s 超时。随后只读确认远端附件为 starter、digest 为空，不能算上传成功；草稿未公开，不再重复上传。本地完整视频仍可审阅，SHA-256 为 `8980bfe22ea180a8df2e28e6ea99b00892ed865da860be71fbdd1bcb3a0ab194`。没有修改网络或账号设置。
+
+实际回执在本地 `github/docs_publication.json`、`github/gate_publication.json`，旧失败记录在 `github/PUBLICATION_ATTEMPTS.md`。断点在 `WORK_CHECKPOINT.json`；后续还需完成 Release 上传，不把本次阶段门当作 R2 最终交付。审阅通过前不再启动游戏、不打包、不跑完整回归；后续占焦点测试前仍须提醒保持接电、不要操作电脑。Esc 立即停止，暂停只用 P。

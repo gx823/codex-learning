@@ -14,7 +14,9 @@
   "roof_coverage_latest": "appendix/ROOF_COVERAGE_09.json PASS 41.195947 percent at 0.03125 m; earlier 05/06 PASS was measurement error, 07 old map FAIL 38.637 percent, all original files retained.",
   "placement_audit": "appendix/BUILDING_PLACEMENT_05.json: native ground 89/89 PASS max 0.393139 cm; road overlap 0 and appearance-repeat 0 in static audit. Runtime whole-scene collision NOT_RUN.",
   "capture_failure": "appendix/CAPTURE_FAILURE_02.md; 6 incomplete PNGs are local diagnostics only, do not splice into final gate",
-  "remaining_sample_work": [],
+  "remaining_sample_work": [
+    "Complete gate Release upload later when transport is usable; no additional retries this turn."
+  ],
   "full_regression_runs": 0,
   "sample_author_run": "editor/20261002_122120_635_accessible_fill_live_refs",
   "private_plan": "E:\\GameDev\\Assets\\HarborCity\\M5_VS4\\R2\\sample_plan.json",
@@ -24,7 +26,7 @@
   "prior_walk": "m5_vs3_r3_b_20261002_120229: prior 82-building map, retain but DO NOT deliver after refill.",
   "last_source_patch_sha256": "228901cea604fed9b394c58a71ef039d4a1357f70548883307d0ddf2132c1b23",
   "gate_artifacts_ready": true,
-  "publication_receipt": "github/gate_publication.json (local): verify PUBLISHED_VERIFIED and remote commit/assets; never infer success from this checkpoint.",
+  "publication_receipt": "github/docs_publication.json: docs pushed and verified. github/gate_publication.json: BLOCKED_UPLOAD, release draft only; not a published release.",
   "final_bridge_capture": "m5_vs3_r3_b_20261002_123226: 2 PNGs, 10 checks, 0 failures, normal editor-game exit; added bridge camera, original V04 retained.",
   "final_walk_run": "m5_vs3_r3_b_20261002_123523",
   "final_walk_recording": "recordings/20261002_123626_AFC8FA97",
@@ -38,5 +40,18 @@
     "Complete B2 detail, B4 camera, B5 performance and C",
     "Finish mandatory D runtime UI/persistence/startup diagnosis and final-package four-state thermal acceptance",
     "New unique Shipping, one final full regression, required captures and release"
-  ]
+  ],
+  "publication": {
+    "docs": "PUSHED_VERIFIED",
+    "initial_gate_commit": "83f8419542f455796a92bfdbec28cf2d815fe7e3",
+    "release": "BLOCKED_UPLOAD",
+    "release_id": 401550033,
+    "tag": "harborcity-m5-vs4-r2-sample-gate-20261002",
+    "remote_video_asset_id": 604833708,
+    "remote_video_state": "starter",
+    "remote_video_digest": null,
+    "local_video_sha256": "8980bfe22ea180a8df2e28e6ea99b00892ed865da860be71fbdd1bcb3a0ab194",
+    "cause": "Two Python ProxyErrors; standard Git push succeeded. System HTTP MP4 upload timed out at 300 s; read-only remote check confirmed incomplete asset. No more uploads this turn.",
+    "resume_warning": "Do not treat starter or expected tag URL as a published video. Recheck remote state before any later upload; preserve local MP4 and old failures."
+  }
 }
