@@ -1,0 +1,584 @@
+{
+  "kind": "EDITOR_GAME_NOT_SHIPPING",
+  "images": [
+    {
+      "file": "R2_GATE_V01_AFTERNOON.jpg",
+      "bytes": 486625,
+      "sha256": "d8392d40a7f76b31e814bf99805a63e0a47ce86457c7c15dea19608c361a418d",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V01_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "49ca72a66e7c23c01e58f11aa358d3e6d4cdffe05e0d5d7ee10173a0c69ce0bc"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_V01_DUSK.jpg",
+      "bytes": 454672,
+      "sha256": "cefda0490f955ba797396ba08f43efc53246760469630d47c40a8fbda8c75aa1",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V01_DUSK.png"
+      ],
+      "source_sha256": [
+        "00581816c132c1387da7e9027b878b96385baf8be4913029b5cf022df554d479"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_V02_AFTERNOON.jpg",
+      "bytes": 494581,
+      "sha256": "6d7b4a482d52069ab2154aa41711de7331ce45825f9be5bc706e5f3b25d4edfa",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V02_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "22188680907cfe7501c20a2a1e55b04e9175d90687a9a32f877caa18f79d99a9"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_V02_DUSK.jpg",
+      "bytes": 409193,
+      "sha256": "01b064e344ef02a489300cb5a00c4274e7a1602390aa199c11d8901c4c8620b5",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V02_DUSK.png"
+      ],
+      "source_sha256": [
+        "ccd0dd76678e4d4d665a8493cca24ac07f0a3ecb5ae1d01383b0bceaea2b2a61"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_V10_AFTERNOON.jpg",
+      "bytes": 460924,
+      "sha256": "9b2a5c060e167881bd13735ebdc5ef92a2628eb4fcfe8a6261cf3a12fe4cf0b7",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V10_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "5e2e890ef86738ab58ff56202a9af93d29df284b7fcbeccb500a22b63a7f45be"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_V10_DUSK.jpg",
+      "bytes": 455279,
+      "sha256": "fc568899f5facc2bbdce5b8f8fb51ff0a9297ab1b0384a1fcbb250e26d682fc5",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V10_DUSK.png"
+      ],
+      "source_sha256": [
+        "37d54b6a440d057f7100639ddfea4450dcbd4aee4829d7a0e4396934ef17f387"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_V04_AFTERNOON.jpg",
+      "bytes": 496175,
+      "sha256": "a7e6015b603983711c9dfac6923fa8a51e6ca6837810e8b9e999cd8daefdb642",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V04_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "f0f9c1b2171b3b934ba4c972b860b0b092ee5926c57c61c554fbd86a77845b97"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_V04_DUSK.jpg",
+      "bytes": 414098,
+      "sha256": "a832598e4b9570ea7b344e772cb79599c4e7263b2d89ede570d3ce19fd68f194",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V04_DUSK.png"
+      ],
+      "source_sha256": [
+        "3037580298c5f107228f015f3f64637fe5fb66d396a9a56f3bf21780f41b75af"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_STREET_1_AFTERNOON.jpg",
+      "bytes": 478172,
+      "sha256": "ef44aba17ed43468678daf9e6b4945c459df74027b196c0e09deac0ad6f8bf7c",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_1_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "8310db4889252e74de4b0cfabe6c34d10ddb4ac59d120c3aa6804c211ab7f102"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_STREET_1_DUSK.jpg",
+      "bytes": 400050,
+      "sha256": "6580db15c8ad418e0a1c35846e3284248e1de05afca9acd6cfef09a10406e009",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_1_DUSK.png"
+      ],
+      "source_sha256": [
+        "8b5f129a742ae7aa9ef66b446c0f33e5c523504d114f2dd9681ec9143cbc6be0"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_STREET_2_AFTERNOON.jpg",
+      "bytes": 441253,
+      "sha256": "3249a4d82ae4298fbd5574bef446ef03f71bb124905d6e6137b677c1fb94f1fa",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_2_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "ed402c5ef73f9e9f423216797ff8f7256f540aabf992fa98e56ebc264b9b0dfd"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_STREET_2_DUSK.jpg",
+      "bytes": 325531,
+      "sha256": "ab289299d4b7b7d34bea17614a04f993b0072a59533582e60bfc5ac8aa53cced",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_2_DUSK.png"
+      ],
+      "source_sha256": [
+        "41a9876a7be6ceb4eb1ea4cfe262eaf3c90c44323c6c949e7faa347ed3969687"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_PLAZA_NIGHT.jpg",
+      "bytes": 424368,
+      "sha256": "efbb126c39e33c3deba1109d397a5267fa495b60409b876b60d9897b0e5d24f2",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_PLAZA_NIGHT.png"
+      ],
+      "source_sha256": [
+        "01af4ecbe0c1949ffb97f3f6d322934022745e2cf19716ad930236a7759347aa"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_BRIDGE_AFTERNOON.jpg",
+      "bytes": 476880,
+      "sha256": "59cff2dbd2d5e067d0baad95219407ed2705530dfd117a0399823ae0fc28ab20",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_BRIDGE_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "075d9d7ee8990065517b5a416c42002be196741af3af44225f4fa732d922f7d7"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_BRIDGE_DUSK.jpg",
+      "bytes": 482603,
+      "sha256": "7d62de11dde5553237f273a1dc294e3ad2cde4a4227aeda92eca54c76316e8fd",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_BRIDGE_DUSK.png"
+      ],
+      "source_sha256": [
+        "4f661139c5ba3ca2b00b370ea322f1a09fd8820986bf6df89115b34f73764a4f"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_EDGE_1.jpg",
+      "bytes": 283766,
+      "sha256": "f091a108a7efcc313adda4d36b095dcc96555d47e56ef24b48435614c0b5218d",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_EDGE_1.png"
+      ],
+      "source_sha256": [
+        "5cf23b430e935af109d42b53017c92e0863b2b5b1d9a6ffe3119cfe6cfbd0b46"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_EDGE_2.jpg",
+      "bytes": 408542,
+      "sha256": "c9ccc5bd2485853a8803ff14a67abd63186458ac061f2bfd1a1b1140edcd1800",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_EDGE_2.png"
+      ],
+      "source_sha256": [
+        "3107b5712708494150e85ceac59c849448238b376a1cde0d62b32ffd3e74bd91"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_EDGE_3.jpg",
+      "bytes": 293811,
+      "sha256": "2bbcb15bf60097519ebe840dd2aa22b24db1e4bccda7ca9971029bfe050b0958",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_EDGE_3.png"
+      ],
+      "source_sha256": [
+        "c9efe68a2776318c0e0ff3a30474de0d21dec488c6ea40d31a198377d9bc743c"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_EDGE_4.jpg",
+      "bytes": 235307,
+      "sha256": "3c70ce8069fda9c642ef0df12f724e2b080ae85db1815c142a1b450e1e935bb5",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_EDGE_4.png"
+      ],
+      "source_sha256": [
+        "a5940efad93d74aa3fdc84ea674e80c142deec53a163feb7bcc56f02a662de04"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_OVERHEAD_ANNOTATED.jpg",
+      "bytes": 457361,
+      "sha256": "f7422620b6c2e32c940b3304290b73d04e2296ff09ab22c1fe1524a2d7ba1f0c",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_OVERHEAD.png"
+      ],
+      "source_sha256": [
+        "4da612e7953faf39a6356dc07000bc939a6ba3b8026ad6854ad9d0f4c462581a"
+      ],
+      "method": "Native orthographic screenshot; yellow original street-block/plaza boundary plus real stone bridge span (a road, excluded from density denominator) and editor label only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_GATE_SCALE_COMPARISON.jpg",
+      "bytes": 172028,
+      "sha256": "5e7e7cf4294cf877cb431223e5536e0f29c241dfa5b2053326a68865a7d29e24",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_SCALE_City.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_SCALE_Castle.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_SCALE_Village.png"
+      ],
+      "source_sha256": [
+        "0f68aa0666ea88d7ace0ca47188e616587e5336029fd8b628ecb01e827ca2080",
+        "290ee9fa3471fe65a0392411172a0b3bfffd55e7a5e8763fa299a235736682b0",
+        "eccd2b4593eba178668f4e4cced8fa20b15b2d7ffb9a9b7a5eca787831ebaaf0"
+      ],
+      "method": "Three complete native views resized equally, no cropping or perspective manipulation; labels added",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_FIXED_12_AFTERNOON.jpg",
+      "bytes": 465375,
+      "sha256": "bc9325c9a2ebe9867be8357660d56bbf308aacae709aa261eba1ccfa2c4aa5af",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V01_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V02_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V03_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V04_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V05_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V06_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V07_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V08_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V09_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V10_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V11_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V12_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "49ca72a66e7c23c01e58f11aa358d3e6d4cdffe05e0d5d7ee10173a0c69ce0bc",
+        "22188680907cfe7501c20a2a1e55b04e9175d90687a9a32f877caa18f79d99a9",
+        "b71486ed856c4dc3cc1905066d15397176fd76a790e765a7d791314434eee784",
+        "f0f9c1b2171b3b934ba4c972b860b0b092ee5926c57c61c554fbd86a77845b97",
+        "db05edca798452afe4f9f524b285cbd19b74808d688d9383807f38e11510d5ea",
+        "6234a7a6722a04cf00c2db75bde55dfddad91f1fff38760fd45ff1397ce011c4",
+        "a0706926af8cc662120e67b77fa1fae3eda3408bc127201d9c0afa8b49dbb2a4",
+        "2603b768fc8b3e4e7051cda17a0106d712b4675d82f45d6c3a31c7e2f85fa126",
+        "586ec484704565078fd122db7e9cabd002adbf97fd4d51d820aa259327aec3f5",
+        "5e2e890ef86738ab58ff56202a9af93d29df284b7fcbeccb500a22b63a7f45be",
+        "6aa1f37310ed00cec2b5cb46b49764811154e8d6bb3c0a8db7300aa78589d214",
+        "dd854f7d2533c7670f81b1f720daf510119ca0324e99e3e83aa49ebf3bbed124"
+      ],
+      "method": "Native fixed camera views, equal resize and labels; sample-exterior whitebox intentionally retained",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_FIXED_12_DUSK.jpg",
+      "bytes": 486217,
+      "sha256": "26474bc89da302d6cee36cb1058c4bfbd080b2d50878f96d06e941d60f3c7acc",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V01_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V02_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V03_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V04_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V05_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V06_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V07_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V08_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V09_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V10_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V11_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V12_DUSK.png"
+      ],
+      "source_sha256": [
+        "00581816c132c1387da7e9027b878b96385baf8be4913029b5cf022df554d479",
+        "ccd0dd76678e4d4d665a8493cca24ac07f0a3ecb5ae1d01383b0bceaea2b2a61",
+        "9c6d1a28d5afc40fbc090dc2a792ea9132ff1fbfe32f388dbf81ebe1b3c3ad7e",
+        "3037580298c5f107228f015f3f64637fe5fb66d396a9a56f3bf21780f41b75af",
+        "62cf954a019062c293417ece84e7197d1d27a5bf3702d006cdf37228acbf545d",
+        "5b870854ec6a7892bd5bb0540fa512d6080ef6e9a878dd2aa612d361a40778ee",
+        "985a646a7cb9f7a6d3bacfebf90367dbabd9ea266e481b5144fc3f495bf0ca2f",
+        "0471a0c9a603ff0095617d824386ed4249ff0aa768a2d56b3ec98a82de253fb4",
+        "edea5d852b34f9d8ee7a95508bc8bd3ea1f23e714cfa859e616e5fb72fcd527c",
+        "37d54b6a440d057f7100639ddfea4450dcbd4aee4829d7a0e4396934ef17f387",
+        "1333dfd8964355050b298c3de6334b1e9eebd4acbe14cfac389ceab2c216ac69",
+        "82bfa835f29edb77a643a7447b5eaea9de65e3dcbb94cb57336f5423ff3fa06c"
+      ],
+      "method": "Native fixed camera views, equal resize and labels; sample-exterior whitebox intentionally retained",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_V01_AFTERNOON.jpg",
+      "bytes": 385722,
+      "sha256": "c054a3ab7292fa4784a9af656261c92d59a57015f6e697f5459892afdb883fb7",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_V01_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V01_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "7817e17ca94746d485db60a1810b05594b7bd271f0b0165e8ab9e1ac09796d54",
+        "64efdd2ee2e4c47643338f5effe92f5f97e5df623a82447146ae4fa57052bfb4"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_V01_DUSK.jpg",
+      "bytes": 315390,
+      "sha256": "a44cfe58c36957b1b84bad61abdd3cd987bd30bfa33078bc0a2616b4e8ad599b",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_V01_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V01_DUSK.png"
+      ],
+      "source_sha256": [
+        "a076e63bfc7cc8140e741853a0b6d205d078d8cadabafdef083fa861bf95db68",
+        "122cd5943b4ac5775ffccec97bda5eef86f6f5bfb153e93ed1ac02342843cb8a"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_V02_AFTERNOON.jpg",
+      "bytes": 388779,
+      "sha256": "5e6c397e9269d9d2dee8a7f27c641ea5eacbacfa5a43521d12ec035c76c22344",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_V02_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V02_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "e2f37918fbfd7d1b222ce016d191d0d80fc69c550cf9ec3cbf96d54c0829878e",
+        "eee3387cb0393dd5d96352605bb85e36cfb5a3c8fe3e1cfd893abdd6f012c7e9"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_V02_DUSK.jpg",
+      "bytes": 305836,
+      "sha256": "69c7d25c9ec6eb3484b7aa1e52047e19a56baa454c81c9db2b84063fe16c7ec3",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_V02_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V02_DUSK.png"
+      ],
+      "source_sha256": [
+        "88be7780a157fa8c96ab27f5e72e771f44a6fc0151207f01e83ee47824c2bd2b",
+        "1fe2be148cd3e809b40337ef0fec3ec26185cd98734732e3473ff325222aa7c3"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_V10_AFTERNOON.jpg",
+      "bytes": 342693,
+      "sha256": "a9cb4d3212fc7faffc188e14f0f8f72fe411c830bc8a70f80de585f740108d8d",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_V10_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V10_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "99f9cf5940f7803896349c2610ab954c89bd7bd3e1e90ba77fbded4ff8595afc",
+        "5e2e890ef86738ab58ff56202a9af93d29df284b7fcbeccb500a22b63a7f45be"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_V10_DUSK.jpg",
+      "bytes": 279391,
+      "sha256": "6cad0e84e602d22153e32fdee6f38852938d79f5faaa4f488fb073711518b0ce",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_V10_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_V10_DUSK.png"
+      ],
+      "source_sha256": [
+        "b8b195801b20c7290cd23e4f855b69c78f9dfb80fc11bdfe3428fdd20fe7fa1b",
+        "37d54b6a440d057f7100639ddfea4450dcbd4aee4829d7a0e4396934ef17f387"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_BRIDGE_AFTERNOON.jpg",
+      "bytes": 352569,
+      "sha256": "71ff9d85f6b7460947d5d0410b81a4158da36b1d5fe38e292d446186b4bc8d4b",
+      "sources": [
+        "m5_vs3_r3_b_20261002_123226\\User\\Saved\\M5Tests\\20261002_123352_m5_vs3_r3_b\\R2_GATE_BRIDGE_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_BRIDGE_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "f28f6bbfa8ea935914bfb925b07a672c03142b05928ab43dc6a89bc8953af8c1",
+        "075d9d7ee8990065517b5a416c42002be196741af3af44225f4fa732d922f7d7"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_BRIDGE_DUSK.jpg",
+      "bytes": 297143,
+      "sha256": "4ad8a164a3a53039b65662f6eaed1a93d574b1cd47697c140244d1899a682bbe",
+      "sources": [
+        "m5_vs3_r3_b_20261002_123226\\User\\Saved\\M5Tests\\20261002_123352_m5_vs3_r3_b\\R2_GATE_BRIDGE_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_BRIDGE_DUSK.png"
+      ],
+      "source_sha256": [
+        "f3ea55f328553e239ce8671f7e8984c7c63bc0270a458b42ac104d192ddc1bde",
+        "4f661139c5ba3ca2b00b370ea322f1a09fd8820986bf6df89115b34f73764a4f"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_STREET_1_AFTERNOON.jpg",
+      "bytes": 391066,
+      "sha256": "5eaa80e59e42d40b9a6fb55ab5847df19978423d2bf81ea4b0be0b459ddd2fd8",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_STREET_1_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_1_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "3610ddb879bb54fb7e9aba3b01baabf111f836aaa7ac02e5215a03f9738c4b68",
+        "8310db4889252e74de4b0cfabe6c34d10ddb4ac59d120c3aa6804c211ab7f102"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_STREET_1_DUSK.jpg",
+      "bytes": 297608,
+      "sha256": "39bc931bafb2060d6958fae97b15144dfe7e3c7035cca7b8862d8fc0101c8a50",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_STREET_1_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_1_DUSK.png"
+      ],
+      "source_sha256": [
+        "b99732115e65c945dd45de942a6a4b22d6f3e996297098ba87f6c1d111094934",
+        "8b5f129a742ae7aa9ef66b446c0f33e5c523504d114f2dd9681ec9143cbc6be0"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_STREET_2_AFTERNOON.jpg",
+      "bytes": 334156,
+      "sha256": "b32043b501a3944debfe640d19450cfdf369f46c88de24011467959f95a0016c",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_STREET_2_AFTERNOON.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_2_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "8eda82e651a624d443305a09d2628678a243b3fd733d194fbceb76ede0ba33aa",
+        "ed402c5ef73f9e9f423216797ff8f7256f540aabf992fa98e56ebc264b9b0dfd"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "COMPARE_STREET_2_DUSK.jpg",
+      "bytes": 271384,
+      "sha256": "d2bf662b18dabdd5512c9bfb1ddb11fd96e3793c94f23fd26ce920ff852e43a7",
+      "sources": [
+        "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\R2_GATE_STREET_2_DUSK.png",
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_GATE_STREET_2_DUSK.png"
+      ],
+      "source_sha256": [
+        "152190a2f9290f72863959f61d57726f9144499b6a4608749b657fac5bde72ea",
+        "41a9876a7be6ceb4eb1ea4cfe262eaf3c90c44323c6c949e7faa347ed3969687"
+      ],
+      "method": "Complete v1/v2 native frames at identical coordinates, equally resized; labels only",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_V1COORD_V01_AFTERNOON.jpg",
+      "bytes": 455575,
+      "sha256": "51de5ed57d014985f6c59c9d9611212edd3746ebae26bd9361f04f6cd0a4becd",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V01_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "64efdd2ee2e4c47643338f5effe92f5f97e5df623a82447146ae4fa57052bfb4"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_V1COORD_V01_DUSK.jpg",
+      "bytes": 468171,
+      "sha256": "c4ceb4ab344b33c3e3b18f11492cd5b740c50fb15aba81c2084ec2bd20f166e7",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V01_DUSK.png"
+      ],
+      "source_sha256": [
+        "122cd5943b4ac5775ffccec97bda5eef86f6f5bfb153e93ed1ac02342843cb8a"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_V1COORD_V02_AFTERNOON.jpg",
+      "bytes": 457940,
+      "sha256": "816361115854d7a6d6ea99cef6fcf8a1a0488778db21db6b9ad11bb4847323c5",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V02_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "eee3387cb0393dd5d96352605bb85e36cfb5a3c8fe3e1cfd893abdd6f012c7e9"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    },
+    {
+      "file": "R2_V1COORD_V02_DUSK.jpg",
+      "bytes": 494241,
+      "sha256": "0b337f1fa9f1801dae8888f5c3ca8f76c618b511253091312891081a59be6375",
+      "sources": [
+        "m5_vs3_r3_b_20261002_161704\\User\\Saved\\M5Tests\\20261002_161728_m5_vs3_r3_b\\R2_V1COORD_V02_DUSK.png"
+      ],
+      "source_sha256": [
+        "1fe2be148cd3e809b40337ef0fec3ec26185cd98734732e3473ff325222aa7c3"
+      ],
+      "method": "JPEG encoding only; scene pixels unretouched",
+      "kind": "EDITOR_GAME"
+    }
+  ]
+}

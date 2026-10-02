@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "map": "/Game/HarborCity/M5VS4/Capital/R2_2bb269f1978c/L_CapitalR2",
+  "cell_m": 0.03125,
+  "water_mask_cell_m": 0.25,
+  "method": "Native saved roof triangle union; same sample boundary; road centre lines with actual painted width (sample main carriageway + 7m total footways, other roads + 1m), 32m-radius paved market plaza, and saved native submerged terrain excluded. Other frontage aprons stay in denominator.",
+  "sample_boundary": "Unchanged 54m plaza radius + 60m corridor for tavern, central bridge and market-port roads to x=115m",
+  "correction": "v1 results retained; v2 physical plaza and road widths changed with the new map, not inferred from roof placement",
+  "water_exclusion_m2": 55.2822265625,
+  "terrain_evidence": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS4\\R2\\editor\\20261002_161325_156_v2_native_ground_03",
+  "roof_evidence": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS4\\R2\\editor\\20261002_161517_026_v2_roof_geometry_02",
+  "district_m2": 16179.20703125,
+  "roof_union_m2": 8090.5166015625,
+  "roof_coverage": 0.5000564357657169,
+  "required_min": 0.4,
+  "roof_meshes": 15,
+  "roof_instances": 777,
+  "version": "sample_v2"
+}

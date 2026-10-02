@@ -51,8 +51,19 @@
     "tools/hc_vs4_r2_walk_audit.py",
     "tools/hc_vs4_r2_gate_summary.py",
     "tools/hc_vs4_r2_prepare_publication.py",
-    "tools/publish_m5_vs4_r2_gate.py"
+    "tools/publish_m5_vs4_r2_gate.py",
+    "tools/hc_vs4_r2_log_gate.ps1",
+    "tools/sample_m5_vs4_r2_host.ps1",
+    "tools/hc_vs4_r2_v2_plan.py",
+    "tools/hc_vs4_r2_v2_materials.py",
+    "tools/ue_m5_vs4_r2_v2_probe.py",
+    "tools/ue_m5_vs4_r2_bridge_profile.py",
+    "tools/ue_m5_vs4_r2_v2_author.py",
+    "tools/publish_m5_vs4_r2_gate_video.ps1",
+    "tools/hc_r3_window_guard.ps1",
+    "tools/ue_m5_vs4_r2_v2_material_refresh.py",
+    "tools/hc_vs4_r2_prepare_v2_publication.py"
   ],
-  "sha256": "228901cea604fed9b394c58a71ef039d4a1357f70548883307d0ddf2132c1b23",
+  "sha256": "242edaff06704f58ca8cde10bee7729e00a77623c874c4b6a4c5b57f06ded11b",
   "excluded": "All binary assets, private geometry JSON, purchased derivatives, crypto config, saves and user settings"
 }

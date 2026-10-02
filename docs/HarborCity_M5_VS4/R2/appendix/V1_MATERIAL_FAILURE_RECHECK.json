@@ -1,0 +1,12 @@
+{
+  "status": "FAIL_RENDER_ASSETS",
+  "log": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R2\\m5_vs3_r3_b_20261002_123523\\game.log",
+  "time": "2026-10-02T15:18:18.3654263+08:00",
+  "hits": [
+    {
+      "line": 1737,
+      "text": "[2026.10.02-04.35.56:679][  0]LogMaterial: Warning: [AssetLog] D:\\科研学习\\codex学习\\HarborCity\\Content\\HarborCity\\M5VS4\\Capital\\R2_15dcffc04d60\\Materials\\M_R2_HarborWater.uasset: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game."
+    }
+  ],
+  "scope": "Material/package errors only; optional profiling DLL notices are not missing game assets"
+}

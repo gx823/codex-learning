@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE_EDITOR_CAPTURE_USER_REVIEW",
+  "map": "/Game/HarborCity/M5VS4/Capital/R2_2bb269f1978c/L_CapitalR2",
+  "run": "m5_vs3_r3_b_20261002_161704",
+  "checks": 106,
+  "failures": 0,
+  "native_pngs": 43,
+  "asset_log_scan": "PASS_LOG_SCAN_ONLY",
+  "ground": "editor/20261002_161325_156_v2_native_ground_03/author_result.json",
+  "roof": "appendix/ROOF_COVERAGE_11.json",
+  "placement": "appendix/BUILDING_PLACEMENT_08.json",
+  "shipping": "NOT_RUN",
+  "full_regression_runs": 0,
+  "originals_modified": false
+}

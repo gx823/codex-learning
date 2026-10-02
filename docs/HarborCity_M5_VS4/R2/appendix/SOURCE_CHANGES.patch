@@ -52,7 +52,7 @@
 
 --- /dev/null
 +++ b/HarborCity/Source/HarborCity/M1/HCM1TestM5VS4R2Gate.cpp
-@@ -0,0 +1,110 @@
+@@ -0,0 +1,117 @@
 +#include "HCM1TestRunner.h"
 +#include "HCM1Character.h"
 +#include "HCM1PlayerController.h"
@@ -70,7 +70,8 @@
 +bool AHCM1TestRunner::AddM5VS4R2GateTests()
 +{
 +    FString Kind;FParse::Value(FCommandLine::Get(),TEXT("R4Case="),Kind);
-+    if(Kind!=TEXT("vs4r2gate")&&Kind!=TEXT("vs4r2walk")&&Kind!=TEXT("vs4r2scale")&&Kind!=TEXT("vs4r2bridge"))return false;
++    const bool V2 = Kind==TEXT("vs4r2v2");
++    if(!V2&&Kind!=TEXT("vs4r2gate")&&Kind!=TEXT("vs4r2walk")&&Kind!=TEXT("vs4r2scale")&&Kind!=TEXT("vs4r2bridge"))return false;
 +    auto Camera=MakeShared<TWeakObjectPtr<ACameraActor>>();
 +    AddStep(TEXT("R2 gate warmup and map identity"),15,[this,Camera]{
 +        Check(TEXT("R2 actual map"),GetWorld()->GetMapName()==TEXT("L_CapitalR2"),TEXT("L_CapitalR2"),GetWorld()->GetMapName(),TEXT("EDITOR_GAME only; not packaged acceptance"));
@@ -91,7 +92,7 @@
 +        for(int32 D=0;D<2;++D){AddStep(TEXT("R2 additional bridge viewpoint"),4,[Time,View,D]{Time(D?TEXT("Dusk"):TEXT("Afternoon"));View(FVector(140,-9,28),FVector(129,28,4));});Shot(FString::Printf(TEXT("R2_GATE_BRIDGE_%s"),D?TEXT("DUSK"):TEXT("AFTERNOON")));}
 +        return true;
 +    }
-+    if(Kind==TEXT("vs4r2scale")||Kind==TEXT("vs4r2gate"))
++    if(V2||Kind==TEXT("vs4r2scale")||Kind==TEXT("vs4r2gate"))
 +    {
 +        AddStep(TEXT("R2 scale afternoon"),3,[Time]{Time(TEXT("Afternoon"));});
 +        for(FName Pack : {FName(TEXT("City")),FName(TEXT("Castle")),FName(TEXT("Village"))})
@@ -143,20 +144,26 @@
 +    }
 +    AddStep(TEXT("R2 actual overhead"),3,[Camera,View,Time]{Time(TEXT("Afternoon"));Camera->Get()->GetCameraComponent()->SetProjectionMode(ECameraProjectionMode::Orthographic);Camera->Get()->GetCameraComponent()->SetOrthoWidth(70000);View(FVector(0,0,850),FVector(0,0,0));});Shot(TEXT("R2_GATE_OVERHEAD"));
 +    AddStep(TEXT("R2 perspective"),.1,[Camera]{Camera->Get()->GetCameraComponent()->SetProjectionMode(ECameraProjectionMode::Perspective);});
-+    const FVector At[]={FVector(-45,35,35),FVector(-57,112,36),FVector(144,96,32),FVector(75,50,30),FVector(-149,17,36),FVector(-83,-87,70),FVector(-232,101,35),FVector(43,-95,48),FVector(147,-46,38),FVector(7,134,32),FVector(197,97,45),FVector(-73,-153,75)};
-+    const FVector To[]={FVector(-10,0,8),FVector(-28,82,10),FVector(174,62,8),FVector(118,28,8),FVector(-125,-10,15),FVector(-17,-147,48),FVector(-206,139,15),FVector(110,-100,10),FVector(40,-135,36),FVector(-10,0,12),FVector(-10,0,15),FVector(158,64,8)};
++    const FVector At[]={V2?FVector(-35,15,13):FVector(-45,35,35),V2?FVector(-35.6,62.4,8):FVector(-57,112,36),FVector(144,96,32),FVector(75,50,30),FVector(-149,17,36),FVector(-83,-87,70),FVector(-232,101,35),FVector(43,-95,48),FVector(147,-46,38),FVector(7,134,32),FVector(197,97,45),FVector(-73,-153,75)};
++    const FVector To[]={V2?FVector(-6,-22,14):FVector(-10,0,8),V2?FVector(-25.9,43.5,8):FVector(-28,82,10),FVector(174,62,8),FVector(118,28,8),FVector(-125,-10,15),FVector(-17,-147,48),FVector(-206,139,15),FVector(110,-100,10),FVector(40,-135,36),FVector(-10,0,12),FVector(-10,0,15),FVector(158,64,8)};
 +    const TCHAR* IDs[]={TEXT("V01"),TEXT("V02"),TEXT("V03"),TEXT("V04"),TEXT("V05"),TEXT("V06"),TEXT("V07"),TEXT("V08"),TEXT("V09"),TEXT("V10"),TEXT("V11"),TEXT("V12")};
 +    for(int32 D=0;D<2;++D)
 +    {
 +        AddStep(TEXT("R2 review time"),3,[Time,D]{Time(D?TEXT("Dusk"):TEXT("Afternoon"));});
-+        for(int32 I=0;I<12;++I){AddStep(TEXT("R2 fixed view within R1 allowance"),3,[View,At,To,I]{View(At[I],To[I]);});Shot(FString::Printf(TEXT("R2_GATE_%s_%s"),IDs[I],D?TEXT("DUSK"):TEXT("AFTERNOON")));}
++        for(int32 I=0;I<12;++I){AddStep(TEXT("R2 fixed view; v2 V01/V02 reposition authorized"),3,[View,At,To,I]{View(At[I],To[I]);});Shot(FString::Printf(TEXT("R2_GATE_%s_%s"),IDs[I],D?TEXT("DUSK"):TEXT("AFTERNOON")));}
++        if(V2)
++        {
++            AddStep(TEXT("R2 v2 original V01 coordinates"),3,[View]{View(FVector(-45,35,35),FVector(-10,0,8));});Shot(FString::Printf(TEXT("R2_V1COORD_V01_%s"),D?TEXT("DUSK"):TEXT("AFTERNOON")));
++            AddStep(TEXT("R2 v2 original V02 coordinates"),3,[View]{View(FVector(-57,112,36),FVector(-28,82,10));});Shot(FString::Printf(TEXT("R2_V1COORD_V02_%s"),D?TEXT("DUSK"):TEXT("AFTERNOON")));
++            AddStep(TEXT("R2 v2 bridge view"),3,[View]{View(FVector(140,-9,28),FVector(129,28,4));});Shot(FString::Printf(TEXT("R2_GATE_BRIDGE_%s"),D?TEXT("DUSK"):TEXT("AFTERNOON")));
++        }
 +        for(int32 I=0;I<2;++I)
 +        {
 +            AddStep(TEXT("R2 hero street view"),3,[this,Place,View,I]{Place(I?FVector2D(61,5):FVector2D(-29,49),I?30:110);const FVector P=Character->GetActorLocation()/100;const FVector Offset=FRotator(0,(I?30:110)+225,0).Vector()*4;View(P+Offset+FVector(0,0,1.45),P+FVector(0,0,.55));});
 +            Shot(FString::Printf(TEXT("R2_GATE_STREET_%d_%s"),I+1,D?TEXT("DUSK"):TEXT("AFTERNOON")));
 +        }
 +    }
-+    AddStep(TEXT("R2 night plaza"),4,[View,Time]{Time(TEXT("Night"));View(FVector(-45,35,35),FVector(-10,0,8));});Shot(TEXT("R2_GATE_PLAZA_NIGHT"));
++    AddStep(TEXT("R2 night plaza"),4,[View,Time,V2]{Time(TEXT("Night"));View(V2?FVector(-35,15,13):FVector(-45,35,35),V2?FVector(-6,-22,14):FVector(-10,0,8));});Shot(TEXT("R2_GATE_PLAZA_NIGHT"));
 +    const FVector Edge[]={FVector(-350,0,100.8),FVector(350,0,100.8),FVector(0,-325,100.8),FVector(0,325,100.8)};
 +    const FVector Look[]={FVector(-800,0,20),FVector(800,0,20),FVector(0,-800,20),FVector(0,800,20)};
 +    AddStep(TEXT("R2 perimeter afternoon"),3,[Time]{Time(TEXT("Afternoon"));});
@@ -237,26 +244,85 @@
 
 --- a/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.cpp
 +++ b/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.cpp
-@@ -75,6 +75,8 @@
+@@ -42,6 +42,18 @@
+     auto* Dome = FindUnique<AStaticMeshActor>(GetWorld(),TEXT("HC_VS2_Rev2_SkyDome"));
+     if (!Sun || !Moon || !Sky || !Post || !Dome || !Dome->GetStaticMeshComponent()->GetMaterial(0)) return false;
+     NightLights.Reset(); NightIntensities.Reset();
++    CapitalWindowMaterials.Reset();
++    if (bCapitalLighting)
++        for (TActorIterator<AActor> It(GetWorld()); It; ++It)
++            if (It->ActorHasTag(TEXT("HC_R2_WindowLighting")))
++            {
++                TArray<UStaticMeshComponent*> Components; It->GetComponents(Components);
++                for (auto* Component : Components)
++                    for (int32 Slot = 0; Slot < Component->GetNumMaterials(); ++Slot)
++                        if (auto* Material = Component->GetMaterial(Slot))
++                            if (Material->GetName().Contains(TEXT("R2_WindowLit")))
++                                if (auto* Dynamic = Component->CreateDynamicMaterialInstance(Slot)) CapitalWindowMaterials.Add(Dynamic);
++            }
+     for (TActorIterator<AActor> It(GetWorld()); It; ++It)
+         if (It->ActorHasTag(TEXT("HC_VS2_Rev2_NightLight")) || It->ActorHasTag(TEXT("HC_VS2_Rev2_WindowLight")))
+         {
+@@ -75,7 +87,17 @@
      Moon->GetLightComponent()->SetIntensity(Night ? (VS3?1.25f:.7f) : 0.f);
      Moon->GetLightComponent()->SetLightColor(FLinearColor(.50f,.65f,1.f),true);
      Sky->GetLightComponent()->SetIntensity(Night ? (VS3?1.1f:.8f) : Dusk ? .75f : 1.1f);
 +    const float MapSky = Night ? MapSkyIntensityOverride.Z : Dusk ? MapSkyIntensityOverride.Y : MapSkyIntensityOverride.X;
 +    if (FMath::IsFinite(MapSky) && MapSky >= 0) Sky->GetLightComponent()->SetIntensity(MapSky);
      Sky->GetLightComponent()->SetLightColor(Night ? FLinearColor(.65f,.72f,1.f) : Dusk ? FLinearColor(.65f,.53f,.70f) : FLinearColor::White);
++    if (bCapitalLighting && Dusk)
++    {
++        Sun->GetLightComponent()->SetIntensity(4.5f);
++        Sun->GetLightComponent()->SetLightColor(FLinearColor(1.f,.62f,.32f),true);
++        Sky->GetLightComponent()->SetLightColor(FLinearColor(.55f,.68f,.90f));
++    }
++    for (const auto& Material : CapitalWindowMaterials)
++        Material->SetVectorParameterValue(TEXT("Emission Color"), (Dusk || Night) ? FLinearColor(3.2f,1.65f,.55f) : FLinearColor::Black);
      FPostProcessSettings& P = Post->Settings;
      P.bOverride_AutoExposureMethod = true; P.AutoExposureMethod = EAutoExposureMethod::AEM_Manual;
+     P.bOverride_AutoExposureBias = true; P.AutoExposureBias = Night ? .7f : .35f;
+@@ -85,6 +107,13 @@
+     DomeMaterial->SetVectorParameterValue(TEXT("SkyHorizon"), Night ? FLinearColor(.035f,.055f,.12f) : Dusk ? FLinearColor(1.f,.32f,.19f) : FLinearColor(.68f,.82f,1.f));
+     DomeMaterial->SetVectorParameterValue(TEXT("CloudLight"), Night ? FLinearColor(.11f,.16f,.29f) : Dusk ? FLinearColor(1.f,.65f,.40f) : FLinearColor(1.f,.97f,.90f));
+     DomeMaterial->SetVectorParameterValue(TEXT("CloudShade"), Night ? FLinearColor(.025f,.04f,.095f) : Dusk ? FLinearColor(.40f,.22f,.37f) : FLinearColor(.58f,.71f,.89f));
++    if (bCapitalLighting && Dusk)
++    {
++        // Sky capture illuminates the streets too; keep its shadows blue, not magenta.
++        DomeMaterial->SetVectorParameterValue(TEXT("SkyZenith"),FLinearColor(.08f,.14f,.28f));
++        DomeMaterial->SetVectorParameterValue(TEXT("SkyHorizon"),FLinearColor(1.f,.43f,.22f));
++        DomeMaterial->SetVectorParameterValue(TEXT("CloudShade"),FLinearColor(.18f,.24f,.32f));
++    }
+     // This authored shader uses the parameter as cloud opacity, not covered sky area.
+     DomeMaterial->SetScalarParameterValue(TEXT("CloudCoverage"), 1.f);
+     DomeMaterial->SetScalarParameterValue(TEXT("StarStrength"), Night ? 1.f : 0.f);
+@@ -99,6 +128,7 @@
+ {
+     auto J = MakeShared<FJsonObject>();
+     J->SetBoolField(TEXT("bound"), bBound); J->SetStringField(TEXT("period"),CurrentPeriod.ToString());
++    J->SetBoolField(TEXT("capital_lighting"),bCapitalLighting);J->SetNumberField(TEXT("capital_window_materials"),CapitalWindowMaterials.Num());
+     if (Sun) { J->SetNumberField(TEXT("sun_intensity"),Sun->GetLightComponent()->Intensity); J->SetArrayField(TEXT("sun_color"),RGBA(Sun->GetLightComponent()->GetLightColor())); J->SetArrayField(TEXT("sun_rotation"),Angles(Sun->GetActorRotation())); }
+     if (Moon) { J->SetNumberField(TEXT("moon_intensity"),Moon->GetLightComponent()->Intensity); J->SetArrayField(TEXT("moon_color"),RGBA(Moon->GetLightComponent()->GetLightColor())); J->SetArrayField(TEXT("moon_rotation"),Angles(Moon->GetActorRotation())); }
+     if (Sky) { J->SetNumberField(TEXT("sky_intensity"),Sky->GetLightComponent()->Intensity); J->SetArrayField(TEXT("sky_color"),RGBA(Sky->GetLightComponent()->GetLightColor())); J->SetBoolField(TEXT("sky_realtime"),Sky->GetLightComponent()->IsRealTimeCaptureEnabled()); }
 
 --- a/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.h
 +++ b/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.h
-@@ -19,6 +19,7 @@
+@@ -19,6 +19,8 @@
      UFUNCTION(BlueprintPure, Category="HarborCity|VS2|Time") FString GetLightingDiagnostics() const;
      UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Time") FName InitialPeriod = TEXT("Afternoon");
      UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category="Time") FName CurrentPeriod;
 +    UPROPERTY(EditAnywhere, Category="Time|Map") FVector MapSkyIntensityOverride = FVector(-1);
++    UPROPERTY(EditAnywhere, Category="Time|Map") bool bCapitalLighting = false;
  protected:
      virtual void BeginPlay() override;
  private:
+@@ -29,6 +31,7 @@
+     UPROPERTY(Transient) TObjectPtr<APostProcessVolume> Post;
+     UPROPERTY(Transient) TObjectPtr<UMaterialInstanceDynamic> DomeMaterial;
+     UPROPERTY(Transient) TArray<TObjectPtr<UPointLightComponent>> NightLights;
++    UPROPERTY(Transient) TArray<TObjectPtr<UMaterialInstanceDynamic>> CapitalWindowMaterials;
+     TArray<float> NightIntensities;
+     bool bBound = false;
+ };
 
 --- /dev/null
 +++ b/HarborCity/Source/HarborCity/M5VS4/HCM5VS4GraphicsSettings.cpp
@@ -1028,7 +1094,7 @@
 +    assert U.get_editor_subsystem(U.LevelEditorSubsystem).load_level(C['map'])
 +    geometry={};instances=[]
 +    for a in U.get_editor_subsystem(U.EditorActorSubsystem).get_all_level_actors():
-+        if 'HC_VS4_R2_Sample' not in list(map(str,a.tags)):continue
++        if not {'HC_VS4_R2_Sample','HC_VS4_R2_V2'}.intersection(map(str,a.tags)):continue
 +        for c in a.get_components_by_class(U.InstancedStaticMeshComponent):
 +            sm=c.static_mesh
 +            if not sm or '/Fantastic_City_Pack/meshes/modular/roof/' not in sm.get_path_name():continue
@@ -1293,7 +1359,7 @@
 
 --- /dev/null
 +++ b/tools/run_m5_vs4_r2.ps1
-@@ -0,0 +1,239 @@
+@@ -0,0 +1,252 @@
 +#requires -Version 7.0
 +[CmdletBinding()]
 +param(
@@ -1323,6 +1389,7 @@
 +$root=Split-Path $PSScriptRoot -Parent
 +. (Join-Path $PSScriptRoot 'hc_r3_window_guard.ps1')
 +. (Join-Path $PSScriptRoot 'hc_vs4_r2_stop_guard.ps1')
++. (Join-Path $PSScriptRoot 'hc_vs4_r2_log_gate.ps1')
 +$baseDoc=Join-Path $root 'docs/HarborCity_M5_VS3'
 +$doc=Join-Path $root 'docs/HarborCity_M5_VS4/R2'
 +$hostCheck=& (Join-Path $PSScriptRoot 'hc_r5_host_status.ps1') | ConvertFrom-Json
@@ -1440,6 +1507,7 @@
 +$started=Get-Date
 +if(Test-HCVS4R2Stopped){throw 'USER_ABORTED: no launch after Escape'}
 +$proc=Start-Process -WindowStyle Normal -FilePath $Executable -ArgumentList $argsList.ToArray() -WorkingDirectory (Split-Path $Executable -Parent) -PassThru
++$sampler=Start-Process -FilePath (Join-Path $PSHOME 'pwsh.exe') -WindowStyle Hidden -ArgumentList @('-NoProfile','-File',('"'+(Join-Path $PSScriptRoot 'sample_m5_vs4_r2_host.ps1')+'"'),'-OwnerProcessId',$proc.Id,'-Run',('"'+$run+'"'),'-Quality',$Quality) -PassThru
 +$rec=[ordered]@{status='RUNNING';pid=$proc.Id;executable=$Executable;kind=if($editor){'EDITOR_GAME'}else{'STANDALONE_PACKAGE'};input_layer='ENGINE_ACTION_NOT_OS';arguments=$argsList.ToArray();started=$started.ToString('o');map=$map}
 +$rec['host']=$hostCheck; $rec['battery_authorization']='R2 requires AC=1; no battery exception'; $rec | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $run 'launch.json') -Encoding utf8
 +if($CapitalPreview){$rec['map_override_scope']='Isolated User Saved/Config Engine.ini GameDefaultMap; immutable package unchanged. Shipping ignores command-line map override.';$rec|ConvertTo-Json -Depth 5|Set-Content (Join-Path $run 'launch.json') -Encoding utf8}
@@ -1453,11 +1521,16 @@
 +$everForeground=$false;$lostForegroundSince=$null
 +$lastHostSample=$started
 +$lastLoopSample=$started
++$lastAssetScan=$started
 +$adapter=[Collections.Generic.List[string]]::new();$adapter.Add('timestamp, gpu_name, memory_used_MiB, gpu_util_percent')
 +while(-not $proc.WaitForExit(250) -and ((Get-Date)-$started).TotalSeconds -lt $limit){
 + $now=Get-Date
 + if(($now-$lastLoopSample).TotalSeconds -gt 15){$rec.status='HOST_INTERRUPTED';$rec.observation_gap_seconds=($now-$lastLoopSample).TotalSeconds;break}
 + $lastLoopSample=$now
++ if(($now-$lastAssetScan).TotalSeconds -ge 3){
++  $lastAssetScan=$now
++  if(-not (Test-HCVS4R2AssetLog -LogPath (Join-Path $run 'game.log') -EvidencePath (Join-Path $run 'asset_log_gate.json'))){$rec.status='FAIL_RENDER_ASSETS';[void]$proc.CloseMainWindow();break}
++ }
 + if(Test-HCVS4R2Stopped -Run $run){$rec.status='USER_ABORTED';break}
 + if(((Get-Date)-$lastHostSample).TotalSeconds -ge 30){
 +  $lastHostSample=Get-Date;$currentHost=& (Join-Path $PSScriptRoot 'hc_r5_host_status.ps1') | ConvertFrom-Json
@@ -1469,9 +1542,11 @@
 +  $r=New-Object HCR3WindowGuard+RECT
 +  [HCR3WindowGuard]::WindowClass($_) -eq 'UnrealWindow' -and [HCR3WindowGuard]::IsWindowVisible($_) -and [HCR3WindowGuard]::GetClientRect($_,[ref]$r) -and ($r.R-$r.L) -ge 64 -and ($r.B-$r.T) -ge 64
 + })
-+ if(-not (Test-HCR3Window -KeepForeground:($readyWindows.Count -gt 0) -GameProcessId $proc.Id -EvidencePath (Join-Path $run 'window_guard.jsonl'))){$rec.status='BLOCKED_WINDOW';break}
++ if(-not (Test-HCR3Window -KeepForeground:($readyWindows.Count -gt 0) -AsyncWindowPosition -GameProcessId $proc.Id -EvidencePath (Join-Path $run 'window_guard.jsonl'))){$rec.status='BLOCKED_WINDOW';break}
 + $gameWindows=@([HCR3WindowGuard]::Windows($proc.Id)|Where-Object {[HCR3WindowGuard]::WindowClass($_) -eq 'UnrealWindow' -and [HCR3WindowGuard]::IsWindowVisible($_)})
-+ if($gameWindows.Count -and -not $initialFocusSet){
++ $engineReady=$false
++ if(-not $initialFocusSet -and (Test-Path -LiteralPath (Join-Path $run 'game.log'))){$engineReady=Select-String -LiteralPath (Join-Path $run 'game.log') -Pattern 'Game Engine Initialized' -Quiet}
++ if($gameWindows.Count -and -not $initialFocusSet -and $engineReady){
 +  if(Test-HCVS4R2Stopped -Run $run){$rec.status='USER_ABORTED';break}
 +  [void][HCR3WindowGuard]::SetForegroundWindow($gameWindows[0]);$initialFocusSet=$true
 + }
@@ -1511,6 +1586,10 @@
 + }
 +}
 +$proc.Refresh();$rec.exit_code=if($proc.HasExited){$proc.ExitCode}else{$null}
++[void]$sampler.WaitForExit(15000)
++if(-not $sampler.HasExited){$sampler.Kill();[void]$sampler.WaitForExit(5000)}
++if(-not (Test-HCVS4R2AssetLog -LogPath (Join-Path $run 'game.log') -EvidencePath (Join-Path $run 'asset_log_gate.json'))){$rec.status='FAIL_RENDER_ASSETS'}
++if(Select-String -LiteralPath (Join-Path $run 'game.log') -Pattern 'DXGI_ERROR_DEVICE_HUNG|GPU Crash dump Triggered' -Quiet){$rec.gpu_fault='DEVICE_HUNG: inspect thermal_samples.jsonl; no automatic restart chain';$rec.quality=$Quality}
 +$rec.ended=(Get-Date).ToString('o');$rec | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $run 'exit.json') -Encoding utf8
 +[ordered]@{status=$rec.status;pid=$proc.Id;run=$run;mode=$Mode;exit_code=$rec.exit_code;ended=$rec.ended;recording=if($RecordSeconds -gt 0){'ENCODING_PENDING'}else{'NOT_REQUESTED'}} | ConvertTo-Json | Set-Content -LiteralPath $activePath -Encoding utf8
 +$rec | ConvertTo-Json -Depth 5
@@ -1645,7 +1724,7 @@
 
 --- /dev/null
 +++ b/tools/hc_vs4_r2_source_patch.py
-@@ -0,0 +1,31 @@
+@@ -0,0 +1,34 @@
 +"""Mechanical, text-only R2 diff against the saved R1 Repair 1 baseline."""
 +from pathlib import Path
 +import difflib,json,hashlib
@@ -1668,6 +1747,9 @@
 +tool_names+=['hc_vs4_r2_placement_report.py']
 +tool_names+=['hc_vs4_r2_fill_parcels.py']
 +tool_names+=['hc_vs4_r2_service_routes.py','hc_vs4_r2_view_audit.py','ue_m5_vs4_r2_detail_probe.py','hc_vs4_r2_scene_polish.py','ue_m5_vs4_r2_scene_polish.py','ue_m5_vs4_r2_scale_probe.py','hc_vs4_r2_gate_media.py','hc_vs4_r2_walk_audit.py','hc_vs4_r2_gate_summary.py','hc_vs4_r2_prepare_publication.py','publish_m5_vs4_r2_gate.py']
++tool_names+=['hc_vs4_r2_log_gate.ps1','sample_m5_vs4_r2_host.ps1','hc_vs4_r2_v2_plan.py','hc_vs4_r2_v2_materials.py','ue_m5_vs4_r2_v2_probe.py','ue_m5_vs4_r2_bridge_profile.py','ue_m5_vs4_r2_v2_author.py','publish_m5_vs4_r2_gate_video.ps1','hc_r3_window_guard.ps1']
++tool_names+=['ue_m5_vs4_r2_v2_material_refresh.py']
++tool_names+=['hc_vs4_r2_prepare_v2_publication.py']
 +for name in tool_names:
 +    path=W/'tools'/name
 +    if not path.exists():continue
@@ -1698,14 +1780,16 @@
 
 --- /dev/null
 +++ b/tools/hc_vs4_r2_roof_coverage.py
-@@ -0,0 +1,45 @@
+@@ -0,0 +1,49 @@
 +"""Projected roof union from saved UE triangles, 0.25m cells."""
 +from pathlib import Path
 +import argparse,json,math,numpy as np
 +from scipy.spatial.transform import Rotation
 +from PIL import Image,ImageDraw
 +P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');D=Path('D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R2')
-+plan=json.loads((P/'sample_plan.json').read_text('utf-8'));selection=json.loads((P/'roof_selection.json').read_text('utf-8'));g=json.loads(Path(selection['file']).read_text('utf-8'))
++checkpoint=json.loads((D/'WORK_CHECKPOINT.json').read_text('utf-8'))
++plan=json.loads(Path(checkpoint.get('private_plan',str(P/'sample_plan.json'))).read_text('utf-8'));selection=json.loads((P/'roof_selection.json').read_text('utf-8'));g=json.loads(Path(selection['file']).read_text('utf-8'))
++v2=plan.get('phase')=='sample_v2';assert plan['map']==g['map']
 +ap=argparse.ArgumentParser();ap.add_argument('--samples-per-metre',type=int,choices=[4,8,16,32],default=16);args=ap.parse_args()
 +RES=args.samples_per_metre;LO=(-100,-70);SZ=(265*RES,220*RES)
 +def pix(p):return ((p[0]-LO[0])*RES,(p[1]-LO[1])*RES)
@@ -1728,7 +1812,7 @@
 +        if area>.01:draw.polygon([pix(p) for p in pts],fill=1)
 +roofmask=np.array(roofs);roadmask=np.zeros_like(roofmask);zone=circle((-10,0),54)
 +for r in plan['roads']:
-+    roadmask|=strip(r['points'],r['width_m']+(7 if r['id'] in plan['sample_road_ids'] else 0))
++    roadmask|=strip(r['points'],r['width_m']+(7 if r['id'] in plan['sample_road_ids'] else 1 if v2 else 0))
 +    if r['id'] in plan['sample_road_ids']:zone|=strip([p for p in r['points'] if p[0]<115],60)
 +terrain_selection=json.loads((P/'terrain_selection.json').read_text('utf-8'))
 +terrain=json.loads(Path(terrain_selection['file']).read_text('utf-8'))
@@ -1736,12 +1820,14 @@
 +watermask=np.zeros_like(roofmask)
 +factor=RES//4
 +for x,y in terrain['submerged_cells']:watermask[y*factor:(y+1)*factor,x*factor:(x+1)*factor]=True
-+plaza=circle((-10,0),23);district_before_water=zone&~roadmask&~plaza;district=district_before_water&~watermask
++plaza=circle((-10,0),32 if v2 else 23);district_before_water=zone&~roadmask&~plaza;district=district_before_water&~watermask
 +coverage=np.count_nonzero(roofmask&district)/np.count_nonzero(district)
 +r=dict(status='PASS' if coverage>=.4 else 'FAIL',map=g['map'],cell_m=1/RES,water_mask_cell_m=.25,method='Union of native saved instance roof triangle projections, excluding authored paving widths (main carriageway plus 7m total footways, 2.4m service lanes), central plaza, and saved Landscape collision terrain below the actual water plane; no AABB substitution',sample_boundary='Unchanged 54m plaza radius + 60m corridor for tavern, central bridge and market-port roads to x=115m',
 +    correction='01-04 failed; 05 retained but superseded as a measurement defect: independent rectangular segments left wedges at bends. Continuous shared-vertex ribbons now match native paving. Same centre lines, widths and endpoints; no deliberate sample shrink.',water_exclusion_m2=np.count_nonzero(district_before_water&watermask)/(RES*RES),terrain_evidence=terrain_selection['run'],roof_evidence=selection['run'],
 +    district_m2=np.count_nonzero(district)/(RES*RES),roof_union_m2=np.count_nonzero(roofmask&district)/(RES*RES),roof_coverage=coverage,required_min=.4,roof_meshes=len(g['meshes']),roof_instances=len(g['instances']))
 +number=1
++if v2:
++    r.update(version='sample_v2',method='Native saved roof triangle union; same sample boundary; road centre lines with actual painted width (sample main carriageway + 7m total footways, other roads + 1m), 32m-radius paved market plaza, and saved native submerged terrain excluded. Other frontage aprons stay in denominator.',correction='v1 results retained; v2 physical plaza and road widths changed with the new map, not inferred from roof placement')
 +while (D/('appendix/ROOF_COVERAGE_%02d.json'%number)).exists():number+=1
 +target=D/('appendix/ROOF_COVERAGE_%02d.json'%number);target.write_text(json.dumps(r,indent=2),'utf-8');print(json.dumps(r))
 
@@ -1829,7 +1915,7 @@
 
 --- /dev/null
 +++ b/tools/ue_m5_vs4_r2_terrain_audit.py
-@@ -0,0 +1,34 @@
+@@ -0,0 +1,35 @@
 +"""Read saved Landscape collision heights; never modifies the map."""
 +from pathlib import Path
 +import json,re,sys,traceback
@@ -1838,7 +1924,8 @@
 +from hc_vs4_capital_layout import canal_x
 +m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line())
 +OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent;P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')
-+plan=json.loads((P/'sample_plan.json').read_text('utf-8'));R=dict(status='RUNNING',map=plan['map'],method='Saved Landscape complex collision height; read-only editor query')
++checkpoint=json.loads((DOC/'WORK_CHECKPOINT.json').read_text('utf-8'))
++plan=json.loads(Path(checkpoint.get('private_plan',str(P/'sample_plan.json'))).read_text('utf-8'));R=dict(status='RUNNING',map=plan['map'],method='Saved Landscape complex collision height; read-only editor query')
 +try:
 +    assert U.get_editor_subsystem(U.LevelEditorSubsystem).load_level(plan['map'])
 +    world=U.get_editor_subsystem(U.UnrealEditorSubsystem).get_editor_world()
@@ -1867,16 +1954,17 @@
 
 --- /dev/null
 +++ b/tools/hc_vs4_r2_placement_report.py
-@@ -0,0 +1,36 @@
+@@ -0,0 +1,39 @@
 +"""Conservative offline road/parcel audit; not a gameplay collision test."""
 +from pathlib import Path
 +import json,math,numpy as np
 +from PIL import Image,ImageDraw
 +P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');D=Path('D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R2')
-+plan=json.loads((P/'sample_plan.json').read_text('utf-8'))
++checkpoint=json.loads((D/'WORK_CHECKPOINT.json').read_text('utf-8'))
++plan=json.loads(Path(checkpoint.get('private_plan',str(P/'sample_plan.json'))).read_text('utf-8'))
 +sel=json.loads((P/'terrain_selection.json').read_text('utf-8'))
 +terrain=json.loads((Path(sel['run'])/'author_result.json').read_text('utf-8'))
-+assert terrain['status']=='PASS' and len(terrain['buildings'])==len(plan['buildings'])
++assert terrain['status']=='PASS' and len(terrain['buildings'])==len(plan['buildings']) and terrain['map']==plan['map']
 +SZ=(1060,880)
 +def pix(p):return ((p[0]+100)*4,(p[1]+70)*4)
 +def polygon(points):
@@ -1895,12 +1983,14 @@
 +for b,t in zip(plan['buildings'],terrain['buildings']):
 +    assert b['id']==t['id']
 +    base=polygon(b['corners']);hits=[dict(road=name,area_m2=np.count_nonzero(base&mask)/16) for name,mask in roads if np.count_nonzero(base&mask)>4]
-+    repeats=[dict(id=o['id'],distance_m=math.dist(b['center'],o['center'])) for o in plan['buildings'] if o['id']!=b['id'] and o['prefab']==b['prefab'] and o['roof_variant']==b['roof_variant'] and math.dist(b['center'],o['center'])<25]
++    repeats=[dict(id=o['id'],distance_m=math.dist(b['center'],o['center'])) for o in plan['buildings'] if o['id']!=b['id'] and o['prefab']==b['prefab'] and o['roof_variant']==b['roof_variant'] and o.get('wall_variant')==b.get('wall_variant') and math.dist(b['center'],o['center'])<25]
 +    rows.append(dict(id=b['id'],prefab=b['prefab'].rsplit('/',1)[1],roof_variant=b['roof_variant'],ground=t['ground'],max_abs_gap_cm=t['max_abs_gap_cm'],planned_road_overlaps=hits,appearance_repeats_within_25m=repeats))
 +r=dict(status='FAIL' if any(x['ground']=='FAIL' or x['planned_road_overlaps'] or x['appearance_repeats_within_25m'] for x in rows) else 'NOT_RUN_RUNTIME_COLLISION',
 +    map=plan['map'],method='Ground: saved native Landscape collision heights. Road: 0.25m raster of planned foundation rectangles and carriage/service lanes, ignores <=0.25m2 raster edge contact; broad-phase candidates require saved mesh/runtime confirmation. Roof overhangs are not foundation area.',
 +    terrain_run=sel['run'],building_count=len(rows),ground_fail=sum(x['ground']=='FAIL' for x in rows),road_overlap_candidates=sum(bool(x['planned_road_overlaps']) for x in rows),repeat_fail=sum(bool(x['appearance_repeats_within_25m']) for x in rows),buildings=rows)
 +i=1
++if plan.get('phase')=='sample_v2':
++    r['version']='sample_v2';r['planned_row_count']=len(plan['rows']);r['planned_gap_m']=plan['row_gap_m'];r['planned_wall_variants']=len(set(b['wall_variant'] for b in plan['buildings']));r['appearance_definition']='prefab x wall material x roof material; geometry-only variety needs visual review'
 +while (D/('appendix/BUILDING_PLACEMENT_%02d.json'%i)).exists():i+=1
 +out=D/('appendix/BUILDING_PLACEMENT_%02d.json'%i);out.write_text(json.dumps(r,indent=2),'utf-8')
 +print(json.dumps({k:v for k,v in r.items() if k!='buildings'}))
@@ -2124,7 +2214,7 @@
 +    color=node(U.MaterialExpressionConstant3Vector,constant=U.LinearColor(.025,.15,.21,1))
 +    rough=node(U.MaterialExpressionConstant,r=.56);specular=node(U.MaterialExpressionConstant,r=.12)
 +    for n,prop in ((color,U.MaterialProperty.MP_BASE_COLOR),(rough,U.MaterialProperty.MP_ROUGHNESS),(specular,U.MaterialProperty.MP_SPECULAR)):ME.connect_material_property(n,'',prop)
-+    world=node(U.MaterialExpressionWorldPosition);mask=node(U.MaterialExpressionComponentMask,r=True,g=True,b=False,a=False);ME.connect_material_expressions(world,'',mask,'Input')
++    world=node(U.MaterialExpressionWorldPosition);mask=node(U.MaterialExpressionComponentMask,r=True,g=True,b=False,a=False);assert ME.connect_material_expressions(world,'',mask,'')
 +    size=node(U.MaterialExpressionConstant,r=800.);uv=node(U.MaterialExpressionDivide);ME.connect_material_expressions(mask,'',uv,'A');ME.connect_material_expressions(size,'',uv,'B')
 +    pan=node(U.MaterialExpressionPanner,speed_x=.012,speed_y=-.008);ME.connect_material_expressions(uv,'',pan,'Coordinate')
 +    texture=A.load_asset('/Game/HarborCity/M5VS2/World/StyleReview_8c9df1201dc2/Textures/T_Water_Normal_Mips');assert texture
@@ -2199,7 +2289,7 @@
 
 --- /dev/null
 +++ b/tools/hc_vs4_r2_gate_media.py
-@@ -0,0 +1,65 @@
+@@ -0,0 +1,77 @@
 +"""Mechanical JPEG export and transparent sample-boundary annotation of native frames."""
 +from pathlib import Path
 +import argparse,hashlib,io,json,math
@@ -2208,8 +2298,8 @@
 +from scipy.ndimage import binary_erosion
 +from hc_vs4_capital_layout import canal_x
 +W=Path('D:/科研学习/codex学习');D=W/'docs/HarborCity_M5_VS4/R2'
-+ap=argparse.ArgumentParser();ap.add_argument('--gate-run',required=True);ap.add_argument('--scale-run',required=True);ap.add_argument('--fixed-run',required=True);ap.add_argument('--bridge-run');a=ap.parse_args()
-+dest=D/'gate';dest.mkdir(exist_ok=True);rows=[]
++ap=argparse.ArgumentParser();ap.add_argument('--gate-run',required=True);ap.add_argument('--scale-run',required=True);ap.add_argument('--fixed-run',required=True);ap.add_argument('--bridge-run');ap.add_argument('--v2',action='store_true');a=ap.parse_args()
++dest=D/('gate/v2' if a.v2 else 'gate');dest.mkdir(parents=True,exist_ok=True);rows=[]
 +font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',23)
 +def source(run,name):
 +    found=list((D/run).rglob(name+'.png'));assert len(found)==1
@@ -2232,7 +2322,7 @@
 +for i in range(1,5):
 +    p=source(a.gate_run,'R2_EDGE_'+str(i));write(Image.open(p),p.stem,[p])
 +p=source(a.gate_run,'R2_GATE_OVERHEAD');im=Image.open(p).convert('RGB');w,h=im.size
-+plan=json.loads((Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')/'sample_plan.json').read_text('utf-8'))
++plan=json.loads((Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')/('v2/sample_plan.json' if a.v2 else 'sample_plan.json')).read_text('utf-8'))
 +mask=Image.new('1',(w,h));draw=ImageDraw.Draw(mask)
 +def px(x,y):return (w/2+y*w/700,h/2-x*w/700)
 +cx,cy=px(-10,0);radius=54*w/700;draw.ellipse((cx-radius,cy-radius,cx+radius,cy+radius),fill=1)
@@ -2263,7 +2353,19 @@
 +        prefix='R2_GATE' if a.fixed_run==a.gate_run else 'VS4_B1'
 +        p=source(a.fixed_run,prefix+'_V%02d_%s'%(i+1,tod));sources.append(p);frame=Image.open(p).convert('RGB');frame.thumbnail((480,270));x=(i%4)*480;y=(i//4)*400;sheet.paste(frame,(x,y));dr.text((x+12,y+283),'V%02d | EDITOR - GAME'%(i+1),font=font,fill='white')
 +    write(sheet,'R2_FIXED_12_'+tod,sources,'Native fixed camera views, equal resize and labels; sample-exterior whitebox intentionally retained')
-+(D/'appendix/GATE_MEDIA.json').write_text(json.dumps(dict(kind='EDITOR_GAME_NOT_SHIPPING',images=rows),ensure_ascii=False,indent=2),'utf-8')
++if a.v2:
++    for part in ('V01','V02','V10','BRIDGE','STREET_1','STREET_2'):
++        for tod in ('AFTERNOON','DUSK'):
++            old=source('m5_vs3_r3_b_20261002_123226' if part=='BRIDGE' else 'm5_vs3_r3_b_20261002_122609','R2_GATE_'+part+'_'+tod)
++            new=source(a.gate_run,('R2_V1COORD_' if part in ('V01','V02') else 'R2_GATE_')+part+'_'+tod)
++            sheet=Image.new('RGB',(1920,585),(24,29,33));dr=ImageDraw.Draw(sheet)
++            for i,p in enumerate((old,new)):
++                frame=Image.open(p).convert('RGB');frame.thumbnail((960,540));sheet.paste(frame,(i*960,0));dr.text((i*960+15,551),('v1' if i==0 else 'v2')+' | same camera | '+part+' '+tod,font=font,fill='white')
++            write(sheet,'COMPARE_'+part+'_'+tod,[old,new],'Complete v1/v2 native frames at identical coordinates, equally resized; labels only')
++    for part in ('V01','V02'):
++        for tod in ('AFTERNOON','DUSK'):
++            p=source(a.gate_run,'R2_V1COORD_'+part+'_'+tod);write(Image.open(p),p.stem,[p])
++(D/('appendix/GATE_MEDIA_V2.json' if a.v2 else 'appendix/GATE_MEDIA.json')).write_text(json.dumps(dict(kind='EDITOR_GAME_NOT_SHIPPING',images=rows),ensure_ascii=False,indent=2),'utf-8')
 +print(json.dumps(dict(images=len(rows),max_bytes=max(r['bytes'] for r in rows))))
 
 --- /dev/null
@@ -2444,3 +2546,766 @@
 +    try:run()
 +    except Exception as e:
 +        STATE.update(status='INCOMPLETE',error=str(e) if isinstance(e,(RuntimeError,AssertionError)) else type(e).__name__);save();print(json.dumps(STATE,ensure_ascii=False));raise SystemExit(1)
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_log_gate.ps1
+@@ -0,0 +1,8 @@
++function Test-HCVS4R2AssetLog {
++ param([Parameter(Mandatory)][string]$LogPath,[Parameter(Mandatory)][string]$EvidencePath)
++ if(-not (Test-Path -LiteralPath $LogPath)){return $true}
++ $patterns=@('Failed to compile Material','Default Material will be used','Failed to load.*(/Game/|/Engine/|\.uasset|\.umap)','Can.t find file.*(/Game/|/Engine/)','Unable to find package','Failed to find object.*(/Game/|/Engine/)','Missing cached shader map.*using default')
++ $hits=@(Select-String -LiteralPath $LogPath -Pattern $patterns | ForEach-Object {[ordered]@{line=$_.LineNumber;text=$_.Line}})
++ [ordered]@{status=if($hits.Count){'FAIL_RENDER_ASSETS'}else{'PASS_LOG_SCAN_ONLY'};log=$LogPath;time=(Get-Date -Format o);hits=$hits;scope='Material/package errors only; optional profiling DLL notices are not missing game assets'} | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $EvidencePath -Encoding utf8
++ return $hits.Count -eq 0
++}
+
+--- /dev/null
++++ b/tools/sample_m5_vs4_r2_host.ps1
+@@ -0,0 +1,24 @@
++#requires -Version 7.0
++param([Parameter(Mandatory)][int]$OwnerProcessId,[Parameter(Mandatory)][string]$Run,[Parameter(Mandatory)][string]$Quality)
++$ErrorActionPreference='Stop'
++$doc=[IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot -Parent) 'docs/HarborCity_M5_VS4/R2'))
++$resolved=[IO.Path]::GetFullPath($Run)
++if(-not $resolved.StartsWith($doc+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'Sampler output outside R2'}
++$smi=(Get-Command nvidia-smi -ErrorAction Stop).Source
++$out=Join-Path $resolved 'thermal_samples.jsonl'
++while(Get-Process -Id $OwnerProcessId -ErrorAction SilentlyContinue){
++ $start=Get-Date
++ $row=[ordered]@{time=$start.ToString('o');quality=$Quality;pid=$OwnerProcessId;gpu=$null;cpu_total_percent=$null}
++ try {
++  $p=[Diagnostics.Process]::new();$p.StartInfo.FileName=$smi
++  $p.StartInfo.Arguments='--query-gpu=timestamp,name,utilization.gpu,power.draw,temperature.gpu,memory.used --format=csv,noheader,nounits'
++  $p.StartInfo.UseShellExecute=$false;$p.StartInfo.CreateNoWindow=$true;$p.StartInfo.RedirectStandardOutput=$true;$p.StartInfo.RedirectStandardError=$true
++  [void]$p.Start()
++  if($p.WaitForExit(2000)){$row.gpu=$p.StandardOutput.ReadToEnd().Trim();$row.gpu_exit=$p.ExitCode}else{$p.Kill();$row.gpu_error='SAMPLER_TIMEOUT_2S'}
++  $p.Dispose()
++ } catch {$row.gpu_error=$_.Exception.GetType().Name}
++ try {$cpu=Get-CimInstance Win32_PerfFormattedData_PerfOS_Processor -Filter "Name='_Total'" -OperationTimeoutSec 2;$row.cpu_total_percent=[double]$cpu.PercentProcessorTime} catch {$row.cpu_error=$_.Exception.GetType().Name}
++ $row.sample_duration_ms=[math]::Round(((Get-Date)-$start).TotalMilliseconds,2)
++ $row|ConvertTo-Json -Compress -Depth 4|Add-Content -LiteralPath $out -Encoding utf8
++ Start-Sleep -Milliseconds 2000
++}
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_v2_plan.py
+@@ -0,0 +1,161 @@
++"""Contiguous row-house parcels and continuous Landscape paint, not runtime evidence."""
++from pathlib import Path
++import argparse,json,math,uuid
++import numpy as np
++from PIL import Image,ImageDraw
++from hc_vs4_capital_layout import build,curve,elevation,canal_x,coast,smooth
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');V=P/'v2';V.mkdir(exist_ok=True)
++ap=argparse.ArgumentParser();ap.add_argument('--full',action='store_true');args=ap.parse_args()
++cat=json.loads((P/'15dcffc04d60_prefab_geometry.json').read_text('utf-8'));cat={p['package'].split('/')[-1]:p for p in cat}
++selection=V/'selection.json'
++if not selection.exists():selection.write_text(json.dumps({'map':'/Game/HarborCity/M5VS4/Capital/R2_'+uuid.uuid4().hex[:12]+'/L_CapitalR2','source_map':'/Game/HarborCity/M5VS4/Capital/R2_15dcffc04d60/L_CapitalR2'},indent=2),'utf-8')
++sel=json.loads(selection.read_text('utf-8'));base=build();roads=base['roads']
++roads.append(dict(id='tavern_street',width_m=6,points=curve([(-15,27),(-29,49),(-37,70),(-28,91),(-5,99),(14,83)])))
++sample_ids=['central_bridge','tavern_street','market_port']
++RES=3;LO=(-245,-210);SIZE=(1350,1245)
++def pix(p):return ((p[0]-LO[0])*RES,(p[1]-LO[1])*RES)
++def polygon(points):
++    im=Image.new('1',SIZE);ImageDraw.Draw(im).polygon([pix(p) for p in points],fill=1);return np.asarray(im).copy()
++def line(points,width):
++    im=Image.new('1',SIZE);d=ImageDraw.Draw(im);p=[pix(v) for v in points];w=round(width*RES)
++    d.line(p,fill=1,width=w)
++    for x,y in p:d.ellipse((x-w/2,y-w/2,x+w/2,y+w/2),fill=1)
++    return np.asarray(im).copy()
++def circle(x,y,r):
++    im=Image.new('1',SIZE);a,b=pix((x,y));ImageDraw.Draw(im).ellipse((a-r*RES,b-r*RES,a+r*RES,b+r*RES),fill=1);return np.asarray(im).copy()
++roadmask=np.zeros((SIZE[1],SIZE[0]),bool)
++for r in roads:roadmask|=line(r['points'],r['width_m']+1.3)
++water=line([(canal_x(y),y) for y in range(-205,123)],36)
++zone=circle(-10,0,54)
++for r in roads:
++    if r['id'] in sample_ids:zone|=line([p for p in r['points'] if p[0]<=115],60)
++plaza=circle(-10,0,29)
++occupied=np.zeros_like(zone);rows=[];buildings=[]
++styles=['16x8_Ext_01','16x8_Ext_02','16x8_Ext_03','16x8_Ext_04','16x8_Ext_05','16x8_Ext_06','16x8_Ext_07','16x8_Ext_08','16x8_Ext_10','16x8_Ext_11','L_Ext_01','L_Ext_02','L_Ext_04','L_Ext_06','T_Ext_01','T_Ext_02','T_Ext_03']
++def trans(origin,yaw,x,y):
++    a=math.radians(yaw);return [origin[0]+math.cos(a)*x-math.sin(a)*y,origin[1]+math.sin(a)*x+math.cos(a)*y]
++def add_row(front,yaw,count,street,phase,family='large'):
++    global occupied
++    index=len(rows);choices=[]
++    for i in range(count):
++        name=styles[(index*3+i*5)%len(styles)]
++        if i in (0,count-1) and index%3==0:name=['L_Ext_01','T_Ext_03','L_Ext_04','T_Ext_02'][(index+i)%4]
++        if family=='medium':name='8x8_Ext_01'
++        if family=='small':name='4x4_Ext_01'
++        if len(buildings)<22 and i==1 and family=='large':name='16x8_Int_Bar_01'
++        choices.append(name)
++    depth=4 if family=='small' else 8 if family=='medium' else 16
++    widths=[12 if s[0] in 'LT' else 4 if s.startswith('4x4') else 8 for s in choices];total=sum(widths)+.05*(count-1)
++    origin=trans(front,yaw,0,-total/2)
++    corners=[trans(origin,yaw,x,y) for x,y in ((0,0),(depth,0),(depth,total),(0,total))]
++    mask=polygon(corners)
++    if not mask.any() or (mask&(occupied|roadmask|water|plaza)).any():return False
++    if phase=='sample' and np.count_nonzero(mask&zone)<np.count_nonzero(mask)*.88:return False
++    if any(not(-208<x<170 and -178<y<161) or x>coast(y)-15 or math.dist((x,y),(-17,-147))<48 or math.dist((x,y),(-12,-97))<26 for x,y in corners):return False
++    rid='V2_ROW_%03d'%(len(rows)+1);z=5 if math.dist(front,(-10,0))<54 else elevation(*front,False)
++    row=dict(id=rid,origin=origin,front_center=list(front),yaw=yaw,width=total,depth=depth,ground_z_m=z,street=street,count=count,phase=phase,corners=corners)
++    rows.append(row);occupied|=mask;offset=0
++    for i,(style,width) in enumerate(zip(choices,widths)):
++        prefab=cat['BP_BLD_03_'+style];o=trans(origin,yaw,0,offset)
++        doors=[c['transform']['translation'] for c in prefab['components'] if 'SM_MOD_Door_03_frame.' in c['mesh'] and c['transform']['translation'][2]<30 and c['transform']['translation'][0]<100]
++        d=doors[0] if doors else [-20,width*50,0]
++        wall=(index*2+i)%6;roof=(index+i)%4
++        buildings.append(dict(id='V2_B%03d'%(len(buildings)+1),row=rid,row_index=i,prefab=prefab['package'],origin=o,yaw=yaw,scale=1,ground_z_m=z,front=trans(o,yaw,d[0]/100,d[1]/100),center=trans(o,yaw,depth/2,width/2),corners=[trans(o,yaw,x,y) for x,y in ((0,0),(depth,0),(depth,width),(0,width))],shape=style,footprint_shape=style.split('_')[0],width=width,depth=depth,wall_variant=wall,roof_variant=roof,appearance=(style,wall,roof),street=street,phase=phase,end_of_row=i in (0,count-1)))
++        offset+=width+.05
++    return True
++for angle in (20,80,140,200,260,320):
++    a=math.radians(angle);add_row((-10+32*math.cos(a),32*math.sin(a)),angle,3,'plaza','sample')
++def road_stations(r,step):
++    pts=r['points'];distance=0;out=[]
++    for i in range(1,len(pts)-1):
++        distance+=math.dist(pts[i-1],pts[i])
++        if distance<step:continue
++        distance=0;a=pts[max(0,i-4)];b=pts[min(len(pts)-1,i+4)];out.append((pts[i],math.atan2(b[1]-a[1],b[0]-a[0])))
++    return out
++def fill(selected,phase):
++    for family,count in (('large',4),('large',3),('medium',4),('medium',3),('small',4),('small',3)):
++        for r in selected:
++            for point,tangent in road_stations(r,4):
++                if math.dist(point,(-10,0))<34 or (phase=='sample' and point[0]>108):continue
++                for side in (-1,1):
++                    a=tangent+side*math.pi/2;offset=r['width_m']/2+4.5
++                    front=(point[0]+math.cos(a)*offset,point[1]+math.sin(a)*offset)
++                    add_row(front,math.degrees(a),count,r['id'],phase,family)
++                    if family=='small':
++                        rear=(point[0]+math.cos(a)*28,point[1]+math.sin(a)*28)
++                        add_row(rear,math.degrees(a)+180,count,r['id']+'_court',phase,family)
++fill([r for name in sample_ids for r in roads if r['id']==name],'sample')
++if args.full:fill([r for r in roads if r['id'] not in sample_ids],'full')
++# Close parcels share a terrace so the one-metre Landscape triangles cannot
++# interpolate between incompatible foundation levels at a common corner.
++parents=list(range(len(rows)))
++def leader(i):
++    while parents[i]!=i:parents[i]=parents[parents[i]];i=parents[i]
++    return i
++def point_segment_distance(p,a,b):
++    dx=b[0]-a[0];dy=b[1]-a[1];t=max(0,min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/max(1e-9,dx*dx+dy*dy)))
++    return math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy)
++for i,r in enumerate(rows):
++    for j in range(i):
++        other=rows[j]
++        distance=min(point_segment_distance(p,c[k],c[(k+1)%4]) for pts,c in ((r['corners'],other['corners']),(other['corners'],r['corners'])) for p in pts for k in range(4))
++        if distance<4:parents[leader(i)]=leader(j)
++for i,r in enumerate(rows):
++    cluster=[rows[j] for j in range(len(rows)) if leader(i)==leader(j)]
++    r['terrace_id']=leader(i)
++    r['terrace_z_m']=5 if any(math.dist(t['front_center'],(-10,0))<54 for t in cluster) else float(np.median([t['ground_z_m'] for t in cluster]))
++for r in rows:r['ground_z_m']=r['terrace_z_m']
++row_index={r['id']:r for r in rows}
++for b in buildings:b['ground_z_m']=row_index[b['row']]['ground_z_m']
++assigned=[]
++for b in buildings:
++    previous=next((a for a in reversed(assigned) if a['row']==b['row']),None)
++    candidates=[((b['wall_variant']+w)%6,(b['roof_variant']+r)%4) for w in range(6) for r in range(4)]
++    pair=next((pair for pair in candidates if (not previous or pair[0]!=previous['wall_variant']) and all(a['prefab']!=b['prefab'] or (a['wall_variant'],a['roof_variant'])!=pair or math.dist(a['center'],b['center'])>=25 for a in assigned)),None)
++    assert pair is not None,b['id']
++    b['wall_variant'],b['roof_variant']=pair;b['appearance']=(b['shape'],*pair);assigned.append(b)
++# Same continuous paint atlas covers roads, thresholds, courtyards and plaza.
++N=4096;paint=Image.new('RGB',(N,N));draw=ImageDraw.Draw(paint)
++def uv(p):return ((p[0]+250)/500*N,(p[1]+225)/450*N)
++def paint_line(points,width,color):
++    p=[uv(v) for v in points];w=round(width/500*N);draw.line(p,fill=color,width=w)
++    for x,y in p:draw.ellipse((x-w/2,y-w/2,x+w/2,y+w/2),fill=color)
++cx,cy=uv((-10,0));rx,ry=54/500*N,54/450*N;draw.ellipse((cx-rx,cy-ry,cx+rx,cy+ry),fill=(0,255,0))
++for r in roads:
++    if r['id'] in sample_ids:paint_line([p for p in r['points'] if p[0]<=115],60,(0,255,0))
++for r in roads:paint_line(r['points'],r['width_m']+(7 if r['id'] in sample_ids else 1),(255,0,0))
++cx,cy=uv((-10,0));rx,ry=32/500*N,32/450*N;draw.ellipse((cx-rx,cy-ry,cx+rx,cy+ry),fill=(255,0,0))
++for row in rows:
++    o=row['origin'];a=row['yaw'];w=row['width']
++    depth=row['depth'];yard=[trans(o,a,x,y) for x,y in ((depth-1,-.7),(depth+6,-.7),(depth+6,w+.7),(depth-1,w+.7))]
++    front=[trans(o,a,x,y) for x,y in ((-7,-4),(depth+2,-4),(depth+2,w+4),(-7,w+4))]
++    draw.polygon([uv(p) for p in yard],fill=(0,255,0));draw.polygon([uv(p) for p in front],fill=(255,0,0))
++for side in (-1,1):paint_line([(canal_x(y)+side*13,y) for y in range(-205,123)],6,(255,0,0))
++for x,y,w,h in ((-194,154,35,21),(-185,-161,31,22),(-150,145,28,20)):
++    draw.rectangle((*uv((x-w/2,y-h/2)),*uv((x+w/2,y+h/2))),fill=(0,0,255))
++paint_path=V/('full_paint.png' if args.full else 'sample_paint.png');paint.save(paint_path)
++xs=np.linspace(-250,250,505);ys=np.linspace(-225,225,505);X,Y=np.meshgrid(xs,ys)
++Z=np.array([[elevation(x,y) for x in xs] for y in ys]);nearest=np.full(X.shape,np.inf);target=Z.copy()
++for r in rows:
++    a=math.radians(-r['yaw']);dx=X-r['origin'][0];dy=Y-r['origin'][1];px=np.cos(a)*dx-np.sin(a)*dy;py=np.sin(a)*dx+np.cos(a)*dy
++    d=np.maximum.reduce([-px,px-r['depth'],-py,py-r['width'],np.zeros_like(X)]);hit=d<nearest;target[hit]=r['ground_z_m'];nearest[hit]=d[hit]
++t=np.clip((nearest-1.2)/4,0,1);weight=1-t*t*(3-2*t);Z=Z*(1-weight)+target*weight
++# A flat quayside at 2.8m, water at 0.8m; the canal bed remains below it.
++CX=111+17*np.sin((Y+30)/75)+8*np.sin(Y/33);D=np.abs(X-CX);canal_zone=(Y>-205)&(Y<122)
++t=np.clip((D-17)/10,0,1);w=(1-t*t*(3-2*t))*canal_zone
++bank=np.where(D<9,-2.8,2.8);Z=Z*(1-w)+bank*w
++for bridge in base['bridges']:
++    dx=np.abs(X-bridge['x']);dy=np.abs(Y-bridge['y']);inside=(dx>=17)&(dx<32)&(dy<6)
++    t=np.clip((dx-18)/14,0,1);w=1-t*t*(3-2*t);Z=np.where(inside,Z*(1-w)+2.8*w,Z)
++# Fountain plaza has one continuous collision surface, no coplanar discs.
++rad=np.hypot(X+10,Y);t=np.clip((rad-26)/7,0,1);w=1-t*t*(3-2*t);Z=Z*(1-w)+5*w
++# Foundation samples win over neighboring plaza and bank blends.
++Z=np.where(nearest<=1.2,target,Z)
++heights=np.rint(32768+Z*128).astype(int).ravel().tolist()
++data=dict(status='PLAN_NOT_ENGINE_EVIDENCE',map=sel['map'],source_map=sel['source_map'],phase='full' if args.full else 'sample_v2',scales=dict(City=1,Castle=.97,Village=1.12),rows=rows,buildings=buildings,roads=roads,sample_road_ids=sample_ids,bridges=base['bridges'],height_values=heights,paint_path=str(paint_path),wall_colors=['Grey stone','Red brick','Warm ivory','Pale blue','Sage plaster','White plaster'],row_gap_m=.05,views=base['viewpoints'])
++dest=V/('full_plan.json' if args.full else 'sample_plan.json');dest.write_text(json.dumps(data,separators=(',',':')),'utf-8')
++image=np.full((*occupied.shape,3),238,np.uint8);image[zone]=[220,231,212];image[roadmask]=[140,142,149];image[water]=[85,159,181];image[occupied]=[131,80,73]
++im=Image.fromarray(image);d=ImageDraw.Draw(im)
++for r in rows:d.text(pix(r['front_center']),r['id'][-3:],fill='white')
++im.save(V/'plan_diagnostic.png')
++print(json.dumps(dict(file=str(dest),map=sel['map'],rows=len(rows),buildings=len(buildings),appearances=len(set(tuple(b['appearance']) for b in buildings)),prefab_geometry_variants=len(set(b['prefab'] for b in buildings)),footprint_shapes=sorted(set(b['footprint_shape'] for b in buildings)))))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_v2_materials.py
+@@ -0,0 +1,81 @@
++"""Private capital v2 materials, with checked material graph connections."""
++import unreal as U
++A=U.EditorAssetLibrary;ME=U.MaterialEditingLibrary;AT=U.AssetToolsHelpers.get_asset_tools()
++
++def graph(root,name):
++    path=root+'/Materials/'+name
++    m=A.load_asset(path) if A.does_asset_exist(path) else AT.create_asset(name,root+'/Materials',U.Material,U.MaterialFactoryNew())
++    assert m,path
++    for expression in list(ME.get_material_expressions(m)):ME.delete_material_expression(m,expression)
++    assert ME.get_num_material_expressions(m)==0,name
++    return m
++
++def node(m,cls,**values):
++    n=ME.create_material_expression(m,cls);assert n
++    for k,v in values.items():n.set_editor_property(k,v)
++    return n
++
++def link(a,b,pin='',out=''):
++    assert ME.connect_material_expressions(a,out,b,pin),(a.get_class().get_name(),b.get_class().get_name(),pin)
++
++def output(n,prop,out=''):assert ME.connect_material_property(n,out,prop)
++def scalar(m,v):return node(m,U.MaterialExpressionConstant,r=v)
++def color(m,v):return node(m,U.MaterialExpressionConstant3Vector,constant=U.LinearColor(*v,1))
++def op(m,cls,a,b):
++    n=node(m,cls);link(a,n,'A');link(b,n,'B');return n
++def finish(m):
++    assert sum(isinstance(e,U.MaterialExpressionSingleLayerWaterMaterialOutput) for e in ME.get_material_expressions(m))<=1
++    ME.set_base_material_usage(m,U.MaterialUsage.MATUSAGE_INSTANCED_STATIC_MESHES,True)
++    ME.recompile_material(m);assert A.save_loaded_asset(m,False);return m
++
++def world_xy(m):
++    w=node(m,U.MaterialExpressionWorldPosition);xy=node(m,U.MaterialExpressionComponentMask,r=True,g=True,b=False,a=False);link(w,xy);return xy
++
++def texture(m,path,uv,normal=False,mask=False):
++    asset=A.load_asset(path);assert asset,path
++    n=node(m,U.MaterialExpressionTextureSample,texture=asset,sampler_type=U.MaterialSamplerType.SAMPLERTYPE_NORMAL if normal else U.MaterialSamplerType.SAMPLERTYPE_MASKS if mask else U.MaterialSamplerType.SAMPLERTYPE_COLOR)
++    link(uv,n,'UVs');return n
++
++def landscape(root,paint_path):
++    task=U.AssetImportTask();task.filename=paint_path;task.destination_path=root+'/Textures';task.destination_name='T_V2_GroundPaint';task.automated=True;task.replace_existing=True;task.save=False
++    AT.import_asset_tasks([task]);paint=A.load_asset(root+'/Textures/T_V2_GroundPaint');assert paint
++    paint.set_editor_property('srgb',False);paint.set_editor_property('compression_settings',U.TextureCompressionSettings.TC_MASKS);assert A.save_loaded_asset(paint,False)
++    paint.set_editor_property('address_x',U.TextureAddress.TA_CLAMP);paint.set_editor_property('address_y',U.TextureAddress.TA_CLAMP);assert A.save_loaded_asset(paint,False)
++    m=graph(root,'M_V2_ContinuousGround');xy=world_xy(m)
++    offset=op(m,U.MaterialExpressionAdd,xy,node(m,U.MaterialExpressionConstant2Vector,r=25000,g=22500))
++    uv=op(m,U.MaterialExpressionDivide,offset,node(m,U.MaterialExpressionConstant2Vector,r=50000,g=45000))
++    masks=texture(m,paint.get_path_name(),uv,mask=True);tiling=op(m,U.MaterialExpressionDivide,xy,scalar(m,350))
++    village='/Game/HarborCity/M5VS2/Environment/Village_15dcffc04d60/textures/'
++    grass=texture(m,'/Game/Fantastic_Highlands_Castle/textures/T_ENV_grass_castle_BC',tiling)
++    muted=node(m,U.MaterialExpressionDesaturation);pins=list(map(str,ME.get_material_expression_input_names(muted)));assert len(pins)==2,pins
++    link(grass,muted,pins[0],'RGB');link(scalar(m,.55),muted,pins[1])
++    grass=op(m,U.MaterialExpressionMultiply,muted,color(m,(.62,.68,.47)))
++    stone=texture(m,village+'T_stonebrick_02_BC',tiling);dirt=texture(m,village+'T_ENV_TERRAIN_gravel_BC',tiling)
++    def mix(a,b,channel):
++        n=node(m,U.MaterialExpressionLinearInterpolate);link(a,n,'A','RGB' if isinstance(a,U.MaterialExpressionTextureSample) else '');link(b,n,'B','RGB' if isinstance(b,U.MaterialExpressionTextureSample) else '');link(masks,n,'Alpha',channel);return n
++    base=mix(grass,dirt,'G');base=mix(base,dirt,'B');base=mix(base,stone,'R');output(base,U.MaterialProperty.MP_BASE_COLOR)
++    output(scalar(m,.88),U.MaterialProperty.MP_ROUGHNESS)
++    normal=texture(m,village+'T_stonebrick_01_N',tiling,normal=True)
++    n=node(m,U.MaterialExpressionLinearInterpolate);link(color(m,(0,0,1)),n,'A');link(normal,n,'B','RGB');link(masks,n,'Alpha','R');output(n,U.MaterialProperty.MP_NORMAL)
++    return finish(m)
++
++def water(root):
++    model=next(getattr(U.MaterialShadingModel,n) for n in dir(U.MaterialShadingModel) if n.replace('_','').upper()=='MSMSINGLELAYERWATER')
++    m=graph(root,'M_R2_HarborWater_V2');m.set_editor_property('shading_model',model)
++    output(color(m,(.012,.105,.13)),U.MaterialProperty.MP_BASE_COLOR);output(scalar(m,.28),U.MaterialProperty.MP_ROUGHNESS);output(scalar(m,.5),U.MaterialProperty.MP_SPECULAR)
++    xy=world_xy(m);uv=op(m,U.MaterialExpressionDivide,xy,scalar(m,900));p=node(m,U.MaterialExpressionPanner,speed_x=.012,speed_y=-.008);link(uv,p,'Coordinate')
++    n=texture(m,'/Game/HarborCity/M5VS2/World/StyleReview_8c9df1201dc2/Textures/T_Water_Normal_Mips',p,normal=True)
++    normal=node(m,U.MaterialExpressionMultiply);link(n,normal,'A','RGB');link(color(m,(.22,.22,1)),normal,'B');output(normal,U.MaterialProperty.MP_NORMAL)
++    custom=node(m,U.MaterialExpressionSingleLayerWaterMaterialOutput)
++    pins=list(map(str,ME.get_material_expression_input_names(custom)));assert len(pins)==4,pins
++    for pin,value in zip(pins,(color(m,(.0008,.0030,.0038)),color(m,(.004,.0013,.0008)),scalar(m,.25),color(m,(1,1,1)))):link(value,custom,pin)
++    return finish(m)
++
++def tint(root,name,source,values):
++    path=root+'/Materials/'+name;m=A.load_asset(path) if A.does_asset_exist(path) else A.duplicate_asset(source.split('.')[0],path);assert m,path
++    names=set(map(str,ME.get_vector_parameter_names(m)))
++    for key,v in values.items():
++        assert key in names,(source,key,names)
++        ME.set_material_instance_vector_parameter_value(m,key,U.LinearColor(*v,1));actual=ME.get_material_instance_vector_parameter_value(m,key)
++        assert max(abs(x-y) for x,y in zip((actual.r,actual.g,actual.b),v))<1e-5
++    ME.update_material_instance(m);assert A.save_loaded_asset(m,False);return m.get_path_name()
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_v2_probe.py
+@@ -0,0 +1,28 @@
++"""Read-only v2 module/material probe. Geometry metadata remains private."""
++from pathlib import Path
++import json,re,traceback
++import unreal as U
++A=U.EditorAssetLibrary;ME=U.MaterialEditingLibrary
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');R={'status':'RUNNING'}
++try:
++    rows=json.loads((DOC/'editor/20261002_004739_325_B0_migrate/author_result.json').read_text('utf-8'))['assets']
++    meshes=[];materials=[]
++    names=['SM_MOD_Bridge_03','SM_MOD_Bridge_03_extension','SM_MOD_Bridge_03_railing','SM_MOD_CityWall_03_wall','SM_MOD_citywall_straight_castle','SM_MOD_citywall_gate_castle','SM_MOD_wall_big_windows_castle','SM_MOD_wall_big_door_castle','SM_MOD_wall_small_window_castle','SM_MOD_roof_sloped_castle','SM_MOD_roof_ridge_castle','SM_MOD_railing_01_straight_castle','SM_MOD_Railing_03_straight_01','SM_MOD_WallCover_03_straight_01','SM_FX_godray','SM_ENV_mountain_city_01']
++    for row in rows:
++        name=row['package'].rsplit('/',1)[-1]
++        if name in names:
++            a=A.load_asset(row['package']);assert isinstance(a,U.StaticMesh),name
++            box=a.get_bounding_box();meshes.append(dict(name=name,path=row['package'],minimum=[box.min.x,box.min.y,box.min.z],maximum=[box.max.x,box.max.y,box.max.z],materials=[a.get_material(i).get_path_name() if a.get_material(i) else None for i in range(a.get_num_sections(0))]))
++        if name.startswith(('MI_MOD_wall_city_','MI_ENV_MOD_city_wall_bricks','MI_MOD_doorsAndWindows','MI_CLR_mountains','MI_MOD_glass','MI_FX_godray')):
++            a=A.load_asset(row['package']);d=dict(name=name,path=row['package'],vectors={},scalars={},textures={})
++            for n in ME.get_vector_parameter_names(a):
++                c=ME.get_material_instance_vector_parameter_value(a,n);d['vectors'][str(n)]=[c.r,c.g,c.b,c.a]
++            for n in ME.get_scalar_parameter_names(a):d['scalars'][str(n)]=ME.get_material_instance_scalar_parameter_value(a,n)
++            for n in ME.get_texture_parameter_names(a):
++                t=ME.get_material_instance_texture_parameter_value(a,n);d['textures'][str(n)]=t.get_path_name() if t else None
++            materials.append(d)
++    private=P/'v2_module_material_probe.json';private.write_text(json.dumps(dict(meshes=meshes,materials=materials),indent=2),'utf-8')
++    R.update(status='PASS',mesh_count=len(meshes),material_count=len(materials),private_report=str(private),originals_modified=False)
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_bridge_profile.py
+@@ -0,0 +1,26 @@
++"""Read original bridge deck and rail geometry; keep vertex-derived data private."""
++from pathlib import Path
++import json,re,traceback,unreal as U
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');R={'status':'RUNNING'}
++try:
++    rows=json.loads((DOC/'editor/20261002_004739_325_B0_migrate/author_result.json').read_text('utf-8'))['assets'];report=[];Q=U.GeometryScript_MeshQueries
++    for row in rows:
++        name=row['package'].rsplit('/',1)[-1]
++        wanted=name.startswith('SM_MOD_Bridge_03') or name in ('SM_MOD_BorderStone_03_straight','SM_PROP_fence_city_01','SM_ENV_ivy_city_01','SM_MOD_Window_03_01_01','SM_ENV_cliff_castle_01','SM_FX_godray_castle')
++        if not wanted:continue
++        sm=U.EditorAssetLibrary.load_asset(row['package']);b=sm.get_bounding_box();r=dict(name=name,min=[b.min.x,b.min.y,b.min.z],max=[b.max.x,b.max.y,b.max.z])
++        if name.startswith('SM_MOD_Bridge_03'):
++            d=U.DynamicMesh();assert U.GeometryScript_AssetUtils.copy_mesh_from_static_mesh_v2(sm,d,U.GeometryScriptCopyMeshFromAssetOptions(),U.GeometryScriptMeshReadLOD(),False)[-1]==U.GeometryScriptOutcomePins.SUCCESS
++            verts=[]
++            for i in range(getattr(Q,next(n for n in dir(Q) if n.startswith('get_num_vertex')))(d)):
++                p,ok=Q.get_vertex_position(d,i)
++                if ok:verts.append([p.x,p.y,p.z])
++            r['longitudinal_profile']=[]
++            for y in range(int(b.min.y)//100*100,int(b.max.y)+101,100):
++                v=[p[2] for p in verts if abs(p[1]-y)<30]
++                if v:r['longitudinal_profile'].append([y,min(v),max(v)])
++        report.append(r)
++    (P/'v2/bridge_profiles.json').write_text(json.dumps(report,indent=2),'utf-8');R.update(status='PASS',meshes=len(report),private_report=str(P/'v2/bridge_profiles.json'))
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_v2_author.py
+@@ -0,0 +1,233 @@
++"""Author a separate v2 sample with attached streets and checked private materials."""
++from pathlib import Path
++import json,math,random,re,sys,traceback
++import unreal as U
++sys.path.insert(0,str(Path(__file__).parent))
++from hc_vs4_capital_layout import elevation,coast,canal_x,smooth
++from hc_vs4_r2_materials import instancing_material
++from hc_vs4_r2_v2_materials import landscape,water,tint
++A=U.EditorAssetLibrary;E=U.get_editor_subsystem(U.EditorActorSubsystem);L=U.get_editor_subsystem(U.LevelEditorSubsystem)
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');PLAN=json.loads((P/'v2/sample_plan.json').read_text('utf-8'));MAP=PLAN['map'];ROOT=MAP.rsplit('/',1)[0];TAG='HC_VS4_R2_V2'
++CAT={p['package']:p for p in json.loads((P/'15dcffc04d60_prefab_geometry.json').read_text('utf-8'))}
++ASSET={r['package'].split('/')[-1]:r['package'] for r in json.loads((DOC/'editor/20261002_004739_325_B0_migrate/author_result.json').read_text('utf-8'))['assets']}
++R=dict(status='RUNNING',map=MAP,phase='sample_v2',original_assets_modified=False,buildings=[],props=[],material_usage_copies=[],instances=0,visual='NOT_RUN')
++cache={};groups={};material_cache={};rng=random.Random(41002)
++
++def load(path):
++    path=ASSET.get(path,path)
++    if path not in cache:cache[path]=A.load_asset(path);assert cache[path],path
++    return cache[path]
++
++def spawn(name,cls,pos=(0,0,0),yaw=0):
++    a=E.spawn_actor_from_class(cls,U.Vector(*[v*100 for v in pos]),U.Rotator(yaw=yaw),False);assert a
++    a.set_actor_label('HC_VS4_R2_V2_'+name);a.tags=[U.Name(TAG)];return a
++
++def inst(path,t,mats=None,collision=True):
++    sm=load(path);path=sm.get_path_name();mats=mats if mats is not None else [sm.get_material(i).get_path_name() if sm.get_material(i) else None for i in range(sm.get_num_sections(0))]
++    key=(path,tuple(mats),collision)
++    if key not in groups:
++        a=spawn('ISM_%04d'%len(groups),U.HCM2InstancedProp);c=a.get_editor_property('instances');c.set_static_mesh(sm);c.set_collision_profile_name('BlockAll' if collision else 'NoCollision')
++        for i,mat in enumerate(mats):
++            if mat:c.set_material(i,instancing_material(load(mat),ROOT,material_cache,R['material_usage_copies']))
++        if any(mat and 'R2_WindowLit' in mat for mat in mats):a.tags=[U.Name(TAG),U.Name('HC_R2_WindowLighting')]
++        groups[key]=c
++    groups[key].add_instance(t,False);R['instances']+=1
++
++def asset(name,pos,scale=1,yaw=0,collision=True,mats=None,pitch=0):
++    s=(scale,)*3 if isinstance(scale,(float,int)) else scale
++    inst(name,U.Transform(location=U.Vector(*[v*100 for v in pos]),rotation=U.Rotator(pitch=pitch,yaw=yaw),scale=U.Vector(*s)),mats,collision)
++
++def point(origin,yaw,x,y):
++    a=math.radians(yaw);return (origin[0]+math.cos(a)*x-math.sin(a)*y,origin[1]+math.sin(a)*x+math.cos(a)*y)
++
++def ground(x,y):
++    fx=max(0,min(504,(x+250)/500*504));fy=max(0,min(504,(y+225)/450*504));ix=min(503,int(fx));iy=min(503,int(fy));u=fx-ix;v=fy-iy;h=PLAN['height_values']
++    return ((h[iy*505+ix]*(1-u)+h[iy*505+ix+1]*u)*(1-v)+(h[(iy+1)*505+ix]*(1-u)+h[(iy+1)*505+ix+1]*u)*v-32768)/128
++
++def segment(name,a,b,width=1,height=1,centered=False,nominal=4,collision=True,mats=None):
++    dx,dy,dz=b[0]-a[0],b[1]-a[1],b[2]-a[2];horizontal=math.hypot(dx,dy);length=math.hypot(horizontal,dz)
++    pos=tuple((x+y)/2 for x,y in zip(a,b)) if centered else a
++    asset(name,pos,(length/nominal,width,height),math.degrees(math.atan2(dy,dx)),collision,mats,math.degrees(math.atan2(dz,horizontal)))
++
++def light(name,pos,color,intensity=40,radius=950):
++    a=spawn(name,U.PointLight,pos);c=a.point_light_component;c.set_mobility(U.ComponentMobility.MOVABLE);c.set_intensity(0);c.set_attenuation_radius(radius);c.set_cast_shadows(False);c.set_light_color(U.LinearColor(*color))
++    a.tags=[U.Name(TAG),U.Name('HC_VS2_Rev2_NightLight'),U.Name('HC_VS2_Rev2_OnIntensity='+str(intensity))]
++
++def mark(pack,pos,yaw):
++    a=spawn('Scale_'+pack,U.TargetPoint,pos,yaw);a.tags=[U.Name(TAG),U.Name('R2Scale_'+pack)]
++
++def facade_window(pos,yaw):
++    global window_total,window_lit
++    sm=load('SM_MOD_Window_03_01_01');mats=[sm.get_material(i).get_path_name() if sm.get_material(i) else None for i in range(sm.get_num_sections(0))]
++    window_total+=1
++    if (round(pos[0]*100)*71+round(pos[1]*100)*13+round(pos[2]*100)*29)%100<55:
++        mats=[windows if v and 'MI_MOD_doorsAndWindows' in v else v for v in mats];window_lit+=1
++    asset('SM_MOD_Window_03_01_01',pos,1,yaw,False,mats)
++
++try:
++    assert MAP.startswith('/Game/HarborCity/M5VS4/Capital/R2_') and MAP!=PLAN['source_map']
++    if not A.does_asset_exist(MAP):assert A.duplicate_asset(PLAN['source_map'],MAP)
++    assert L.load_level(MAP)
++    # Keep the original fountain, perimeter terrain and Village scale house in the copy.
++    removed=0
++    for a in list(E.get_all_level_actors()):
++        label=a.get_actor_label();tags=list(map(str,a.tags));meshes=[c.static_mesh.get_path_name() for c in a.get_components_by_class(U.InstancedStaticMeshComponent) if c.static_mesh]
++        keep=any(any(v in mesh for v in ('FountainWater','OuterCoastTerrain','SM_PROP_statue','SM_RuneBolt','Village_')) for mesh in meshes)
++        remove=TAG in tags or (('HC_VS4_R2_Sample' in tags or 'HC_VS4_R2_Polish' in tags) and not keep)
++        if label.startswith('HC_VS4_B1_B1_Block_'):
++            p=a.get_actor_location();remove=any(math.dist((p.x/100,p.y/100),b['center'])<26 for b in PLAN['buildings']) or (-75<p.x/100<115 and -38<p.y/100<123)
++        if label.startswith(('HC_VS4_B1_Road_','HC_VS4_B1_BridgePlaceholder_')):remove=True
++        if label in ('HC_VS4_B1_Landmark_plaza','HC_VS4_B1_Landmark_market','HC_VS4_B1_Landmark_canal','HC_VS4_B1_Landmark_castle'):remove=True
++        if remove:assert E.destroy_actor(a);removed+=1
++    R['removed_from_copy']=removed
++    mat=landscape(ROOT,PLAN['paint_path']);wm=water(ROOT)
++    for a in list(E.get_all_level_actors()):
++        if a.get_class().get_name()=='Landscape':assert E.destroy_actor(a)
++        if a.get_actor_label()=='HC_VS4_B1_Water':
++            p=a.get_actor_location();p.z=80;a.set_actor_location(p,False,False);a.static_mesh_component.set_material(0,wm)
++        for c in a.get_components_by_class(U.StaticMeshComponent):
++            if c.static_mesh and c.static_mesh.get_name()=='OuterCoastTerrain':c.set_material(0,mat)
++        if isinstance(a,U.HCM5VS2CornerTimeDirector):
++            a.set_editor_property('capital_lighting',True);a.set_editor_property('map_sky_intensity_override',U.Vector(1.1,1.25,1.5))
++    world=U.get_editor_subsystem(U.UnrealEditorSubsystem).get_editor_world()
++    assert U.HCM5VS4WorldAuthoring.create_capital_landscape(world,mat,PLAN['height_values'])
++    wall_colors=[(.65,.66,.64),(.65,.25,.18),(.88,.76,.52),(.39,.64,.78),(.43,.67,.49),(.9,.88,.8)]
++    walls=[tint(ROOT,'MI_R2_Wall_%d'%i,ASSET['MI_ENV_MOD_city_wall_bricks_01_01'] if i==1 else ASSET['MI_MOD_wall_city_01'],{'Base Color Tint':c}) for i,c in enumerate(wall_colors)]
++    roofs=[tint(ROOT,'MI_R2_Roof_%d'%i,ASSET['MI_MOD_rooftiles_city_02_01'],{'Base Color Tint':c}) for i,c in enumerate(((.32,.10,.055),(.055,.20,.16),(.12,.23,.34),(.34,.27,.10)))]
++    windows=tint(ROOT,'MI_R2_WindowLit_City',ASSET['MI_MOD_doorsAndWindows_city'],{'Emission Color':(0,0,0)})
++    window_total=0;window_lit=0
++    for bi,b in enumerate(PLAN['buildings']):
++        prefab=CAT[b['prefab']];root=U.Transform(location=U.Vector(b['origin'][0]*100,b['origin'][1]*100,b['ground_z_m']*100),rotation=U.Rotator(yaw=b['yaw']))
++        for ci,c in enumerate(prefab['components']):
++            t=c['transform'];local=U.Transform(location=U.Vector(*t['translation']),rotation=U.Quat(*t['rotation']).rotator(),scale=U.Vector(*t['scale']))
++            if '_Int_' in b['prefab'] and '/door/SM_MOD_Door_03_0' in c['mesh'] and t['translation'][2]<30:
++                angle=local.rotation.rotator();angle.yaw+=75;local.rotation=angle.quaternion()
++            mats=[walls[b['wall_variant']] if v and 'MI_MOD_wall_city_' in v else roofs[b['roof_variant']] if v and 'MI_MOD_rooftiles_city' in v else v for v in c['materials']]
++            if '/window/SM_MOD_Window_' in c['mesh'] and any(v and 'MI_MOD_doorsAndWindows' in v for v in mats):
++                window_total+=1
++                if (bi*71+ci*13)%100<55:mats=[windows if v and 'MI_MOD_doorsAndWindows' in v else v for v in mats];window_lit+=1
++            inst(c['mesh'],U.MathLibrary.compose_transforms(local,root),mats,c['collision']!='CollisionEnabled.NO_COLLISION')
++        fx,fy=b['front'];z=b['ground_z_m'];yaw=b['yaw'];side=(-math.sin(math.radians(yaw)),math.cos(math.radians(yaw)))
++        asset('SM_PROP_sign_city_%02d'%(1+bi%14),(fx,fy,z+2.7),.72,yaw+90,False)
++        asset('SM_PROP_lantern_city_03',(fx+side[0]*1.3,fy+side[1]*1.3,z+2.8),.8,yaw+90,False)
++        q=point(b['origin'],yaw,-.4,.9);asset('SM_PROP_planter_city_01',(*q,z),.65,yaw,False);asset('SM_ENV_flower_city_0'+str(1+bi%3),(*q,z+.5),.55,yaw,False)
++        wall_top=max((c['transform']['translation'][2]/100+1 for c in prefab['components'] if '/window/SM_MOD_Window_' in c['mesh']),default=7)
++        window_heights=[h for h in (2.5,5.7,9.7,13.7) if h<wall_top]
++        if b['end_of_row']:
++            end=0 if b['row_index']==0 else b['width'];out_y=end+(-.46 if end==0 else .46)
++            for xx in (3,7,11):
++                if xx>b['depth']-1:continue
++                q=point(b['origin'],yaw,xx,out_y)
++                for zz in window_heights:facade_window((*q,z+zz),yaw+(180 if end==0 else 0))
++            q=point(b['origin'],yaw,min(3,b['depth']/2),out_y);asset('SM_ENV_ivy_city_01',(*q,z+5.6),1.3,yaw+(180 if end==0 else 0),False)
++        if b['depth']>=4:
++            for yy in range(2,int(b['width']),4):
++                q=point(b['origin'],yaw,b['depth']+.46,yy)
++                for zz in window_heights:facade_window((*q,z+zz),yaw-90)
++            q=point(b['origin'],yaw,b['depth']+.47,1);asset('SM_ENV_ivy_city_01',(*q,z+5.5),1.4,yaw-90,False)
++        if '_Int_' in b['prefab']:
++            q=point(b['origin'],yaw,7,4);light('Interior_'+b['id'],(*q,z+2.8),(1,.75,.4),40,700)
++        R['buildings'].append(dict(id=b['id'],row=b['row'],prefab=b['prefab'],wall=b['wall_variant'],roof=b['roof_variant'],planned_corner_error_cm=[round((ground(x,y)-z)*100,3) for x,y in b['corners']]))
++    R['window_assignment']=dict(total=window_total,lit=window_lit,fraction=window_lit/max(1,window_total),runtime_daylight_off=True)
++    # Eight distinct entrance groups; no identical group within 15 metres.
++    combos=[['SM_PROP_cart_city_01','SM_PROP_sack_city_01'],['SM_PROP_planter_city_01','SM_ENV_flower_city_02'],['SM_PROP_bench_city_01','SM_PROP_basket_city_02'],['SM_PROP_bulletinboard_city_01','SM_PROP_lantern_city_03'],['SM_PROP_crate_city_01','SM_PROP_crate_city_02'],['SM_PROP_cart_city_02','SM_PROP_barrel_city_02'],['SM_PROP_basket_city_01','SM_PROP_sack_city_02'],['SM_PROP_lantern_city_01','SM_PROP_planter_base_city_02']]
++    for bi,b in enumerate(PLAN['buildings']):
++        q=point(b['origin'],b['yaw'],-2.3,b['width']-1.7)
++        choices=[(bi+i)%len(combos) for i in range(len(combos))]
++        chosen=next((i for i in choices if all(p['combination']!=i or math.dist(q,p['xy'])>=15 for p in R['props'])),None)
++        if chosen is None:continue
++        for j,name in enumerate(combos[chosen]):
++            assert name in ASSET,name
++            xy=point(q,b['yaw'],0,j*.9);asset(name,(*xy,ground(*xy)),.8,b['yaw']+90,True)
++        R['props'].append(dict(combination=chosen,xy=q,building=b['id']))
++    # Paved rear courts have defined garden/fence edges, not a grass field.
++    for ri,row in enumerate(PLAN['rows']):
++        o=row['origin'];yaw=row['yaw'];depth=row['depth'];width=row['width'];z=row['ground_z_m']
++        for distance in range(2,int(width),2):
++            q=point(o,yaw,depth+5.4,distance);asset('SM_PROP_fence_city_01',(*q,ground(*q)),1,yaw+90)
++        for distance in range(3,int(width),9):
++            q=point(o,yaw,depth+3,distance);asset('SM_PROP_planter_city_01',(*q,ground(*q)),1,yaw,False);asset('SM_ENV_flower_city_01',(*q,ground(*q)+.7),.8,yaw,False)
++        q=point(o,yaw,depth+3,width*.6);asset('SM_ENV_tree_castle_0'+str(1+ri%2),(*q,ground(*q)),.38+ri%3*.07,ri*39,False)
++        # A continuous source curb from doorstep apron to the street, interrupted at road junctions later audited.
++        for start in range(0,int(width),4):
++            q1=point(o,yaw,-4,start);q2=point(o,yaw,-4,min(width,start+4))
++            segment('SM_MOD_BorderStone_03_straight',(*q1,ground(*q1)+.07),(*q2,ground(*q2)+.07),collision=False)
++    # Canal quays are vertical stone modules, with a two-metre drop to water.
++    for side in (-1,1):
++        for y in range(-202,118,4):
++            p1=(canal_x(y)+side*9.6,y,-1.25);p2=(canal_x(y+4)+side*9.6,y+4,-1.25)
++            if any(abs(y-b['y'])<7 for b in PLAN['bridges']):continue
++            segment('SM_MOD_wall_big_castle',p1,p2,width=2.5,height=.69,centered=True,collision=True)
++            segment('SM_MOD_Railing_03_straight_01',(p1[0],p1[1],2.86),(p2[0],p2[1],2.86))
++    for bridge in PLAN['bridges']:
++        x,y=bridge['x'],bridge['y'];deck=3.867288818
++        asset('SM_MOD_Bridge_03',(x,y,deck-14),1,90)
++        for side in (-1,1):asset('SM_MOD_Bridge_03_extension',(x+side*12,y,deck-14),1,-side*90)
++        def deck_height(dx):
++            t=max(0,min(6,abs(dx)-12));return deck-(.0279477*t+.024974*t*t)
++        for side in (-1,1):
++            for dx in range(-18,18,2):
++                segment('SM_MOD_railing_01_straight_castle',(x+dx,y+side*4,deck_height(dx)),(x+dx+2,y+side*4,deck_height(dx+2)),centered=True)
++    # The plaza's outer ring is occupied by market clusters and warm light.
++    for i,angle in enumerate(range(0,360,30)):
++        a=math.radians(angle);x=-10+24*math.cos(a);y=24*math.sin(a);z=ground(x,y)
++        asset('SM_PROP_marketstall_city_0'+str(1+i%2),(x,y,z),1,angle+90)
++        q=(-10+28*math.cos(a+.06),28*math.sin(a+.06));asset('SM_ENV_tree_castle_0'+str(1+i%2),(*q,ground(*q)),.65,angle,False)
++        q=(-10+20*math.cos(a+.1),20*math.sin(a+.1));asset('SM_PROP_bench_city_01',(*q,ground(*q)),1,angle+90)
++        asset('SM_PROP_lantern_city_01',(x,y,z),1,angle,False);light('Plaza_'+str(i),(x,y,z+3),(1,.69,.34),55,1250)
++    # Castle: source curtain walls, a main hall and gatehouse joining the towers.
++    s=.97;castle_z=34
++    for x,y,levels in ((-17,-150,3),(-40,-132,2),(6,-132,2),(-40,-167,2),(6,-167,2)):
++        asset('SM_MOD_tower_segment_base_castle',(x,y,castle_z),s)
++        for j in range(levels):asset('SM_MOD_tower_segment_window_castle',(x,y,castle_z+(j+1)*6*s),s)
++        asset('SM_MOD_tower_segment_top_deco_castle',(x,y,castle_z+(levels+1)*6*s),s);asset('SM_MOD_tower_roof_castle',(x,y,castle_z+(levels+1)*6*s),s)
++        asset('SM_MOD_tower_roof_deco_flag_castle',(x,y,castle_z+(levels+1)*6*s),s)
++    for a,b in (((-40,-132,34),(6,-132,34)),((-40,-167,34),(6,-167,34)),((-40,-167,34),(-40,-132,34)),((6,-167,34),(6,-132,34))):
++        n=round(math.dist(a,b)/(8*s))
++        for i in range(n):
++            p=tuple(a[j]+(b[j]-a[j])*i/n for j in range(3));q=tuple(a[j]+(b[j]-a[j])*(i+1)/n for j in range(3))
++            name='SM_MOD_citywall_gate_castle' if a[1]==-132 and i==n//2 else 'SM_MOD_citywall_straight_castle'
++            segment(name,p,q,s,s,centered=True,nominal=8)
++    for level in range(2):
++        for x in (-26,-22,-18,-14,-10):
++            for y,yaw in ((-143,0),(-157,180)):asset('SM_MOD_wall_big_windows_castle',(x,y,34+level*6*s),s,yaw)
++        for y in (-145,-149,-153,-157):
++            for x,yaw in ((-28,90),(-8,-90)):asset('SM_MOD_wall_big_windows_castle',(x,y,34+level*6*s),s,yaw)
++    for x in (-26,-22,-18,-14,-10):
++        for y,yaw in ((-150,0),(-150,180)):asset('SM_MOD_roof_sloped_castle',(x,y,34+12*s),(s,1.75,s),yaw)
++        asset('SM_MOD_roof_ridge_castle',(x,-150,34+15.4*s),s)
++    for i in range(36):
++        a=i*math.tau/36;x=-17+43*math.cos(a);y=-147+37*math.sin(a)
++        asset('SM_ENV_cliff_castle_0'+str(1+i%2),(x,y,20),(1.15,1.0,2.3),math.degrees(a)+90,False)
++    for x,y in ((-38,-132),(5,-132),(-17,-149)):asset('SM_PROP_flag_castle_01',(x,y,45),1,20,False)
++    asset('SM_FX_godray_castle',(-17,-148,66),(1.4,1.4,2),0,False)
++    asset('SM_MOD_wall_small_door_castle',(-17,-138,34),s);mark('Castle',(-17,-137.7,34),90)
++    # Naturally coloured, distant mountain silhouettes; no near blue cones.
++    for i,(x,y,yaw) in enumerate(((-880,-640,15),(-1080,-90,75),(-900,510,140),(-460,790,210),(140,-930,10))):
++        for j in range(5):asset('SM_ENV_cliff_castle_0'+str(1+j%2),(x+(j-2)*65,y+(j%2)*25,20),(10,8,8+(2-abs(j-2))*2),yaw+j*33,False)
++    trees=0
++    for cx,cy,count in ((-325,-80,100),(-325,175,90),(-80,340,90),(-140,-350,100),(-490,5,90)):
++        for i in range(count):
++            x=cx+rng.gauss(0,45);y=cy+rng.gauss(0,38)
++            if x>coast(y)-25:continue
++            xx=max(-250,min(250,x));yy=max(-225,min(225,y));d=max(abs(x)/950,abs(y)/850);z=elevation(xx,yy)*(1-smooth((d-.68)/.25))-8*smooth((d-.68)/.25)
++            asset('SM_ENV_tree_castle_0'+str(1+i%2),(x,y,z),rng.uniform(.65,1.2),rng.uniform(0,360),False);trees+=1
++    # Source street lanterns, warm pools and cool crystals retain the requested contrast.
++    for r in PLAN['roads']:
++        if r['id'] not in PLAN['sample_road_ids']:continue
++        distance=0
++        for i in range(1,len(r['points'])):
++            p=r['points'][i];prev=r['points'][i-1];distance+=math.dist(p,prev)
++            if distance<16 or p[0]>112:continue
++            distance=0;a=math.atan2(p[1]-prev[1],p[0]-prev[0]);side=(-1 if i%2 else 1);q=(p[0]-math.sin(a)*(r['width_m']/2+1)*side,p[1]+math.cos(a)*(r['width_m']/2+1)*side)
++            z=ground(*q);asset('SM_PROP_lantern_city_01',(*q,z),1,0,False);light('Street_'+r['id']+'_'+str(i),(*q,z+3.1),(1,.77,.49),40)
++    village=json.loads((DOC/'WORK_CHECKPOINT.json').read_text('utf-8'))['village_root']
++    asset(village+'/meshes/props/vehicles/SM_PROP_rowboat',(canal_x(31)+7,31,.9),1.12,0)
++    b=next(b for b in PLAN['buildings'] if b['id']=='V2_B004');mark('City',(*b['front'],b['ground_z_m']+.05),b['yaw']+180)
++    mark('Village',(-83,74+2.99*1.12,elevation(-83,74)),90)
++    assert L.save_current_level()
++    R.update(status='PASS',groups=len(groups),rows=len(PLAN['rows']),building_count=len(PLAN['buildings']),appearances=len(set(tuple(b['appearance']) for b in PLAN['buildings'])),prefab_geometry_variants=len(set(b['prefab'] for b in PLAN['buildings'])),outer_trees=trees,render_log_gate='NOT_RUN')
++    cp=json.loads((DOC/'WORK_CHECKPOINT.json').read_text('utf-8'));cp.update(status='V2_AUTHORED_RENDER_NOT_RUN',map=MAP,v1_map=PLAN['source_map'],v2_author_run=str(OUT),private_plan=str(P/'v2/sample_plan.json'));(DOC/'WORK_CHECKPOINT.json').write_text(json.dumps(cp,indent=2),'utf-8')
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/publish_m5_vs4_r2_gate_video.ps1
+@@ -0,0 +1,54 @@
++#requires -Version 7.0
++$ErrorActionPreference='Stop'
++$root=Split-Path $PSScriptRoot -Parent
++$doc=Join-Path $root 'docs/HarborCity_M5_VS4/R2'
++$file=Join-Path $doc 'gate/VS4_R2_GATE_WALK_EDITOR_65S_PUBLIC_1080P.mp4'
++$repo='gx823/codex-learning';$api='https://api.github.com/repos/'+$repo
++$env:GIT_TERMINAL_PROMPT='0';$env:GCM_INTERACTIVE='Never'
++$raw="protocol=https`nhost=github.com`npath=$repo.git`n`n" | git -C $root credential fill 2>$null
++if($LASTEXITCODE -ne 0){throw 'Existing Git credential unavailable; no login attempted'}
++$secret=($raw|Where-Object {$_ -like 'password=*'}|Select-Object -First 1).Substring(9)
++if(-not $secret){throw 'No existing credential'}
++$headers=@{Authorization="Bearer $secret";Accept='application/vnd.github+json';'X-GitHub-Api-Version'='2022-11-28';'User-Agent'='HarborCity-Authorized-Gate'}
++$raw=$null;$secret=$null
++$state=[ordered]@{status='RUNNING';file=(Split-Path $file -Leaf);started=(Get-Date -Format o);attempts=@()}
++function Save-Receipt {$state|ConvertTo-Json -Depth 8|Set-Content -LiteralPath (Join-Path $doc 'github/gate_video_v2_publication.json') -Encoding utf8}
++function Api([string]$method,[string]$path,$body=$null){
++ $a=@{Method=$method;Uri=($api+$path);Headers=$headers;TimeoutSec=120;MaximumRedirection=0}
++ if($null -ne $body){$a.Body=($body|ConvertTo-Json -Compress);$a.ContentType='application/json'}
++ Invoke-RestMethod @a
++}
++try {
++ $hash=(Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash.ToLowerInvariant();$size=(Get-Item -LiteralPath $file).Length
++ $state.sha256=$hash;$state.bytes=$size;Save-Receipt
++ $release=Api GET '/releases/401550033'
++ if($release.tag_name -ne 'harborcity-m5-vs4-r2-sample-gate-20261002'){throw 'Unexpected release'}
++ for($attempt=1;$attempt -le 3;$attempt++){
++  $all=Api GET "/releases/$($release.id)/assets?per_page=100"
++  foreach($asset in $all){
++   if($asset.state -eq 'starter' -and $asset.name -in @('VS4_R2_GATE_WALK_EDITOR_65S.mp4',$state.file)){
++    Api DELETE "/releases/assets/$($asset.id)"|Out-Null
++   }
++  }
++  $matches=@($all|Where-Object {$_.name -eq $state.file -and $_.state -eq 'uploaded'})
++  if($matches.Count -gt 1){throw 'Duplicate uploaded asset'}
++  if($matches.Count -eq 1){$uploaded=$matches[0];break}
++  Write-Output "Uploading compressed gate video, attempt $attempt / 3, timeout 1800 s"
++  try {
++   $url="https://uploads.github.com/repos/$repo/releases/$($release.id)/assets?name=$([Uri]::EscapeDataString($state.file))"
++   $uploaded=Invoke-RestMethod -Method Post -Uri $url -Headers $headers -ContentType 'video/mp4' -InFile $file -TimeoutSec 1800 -MaximumRedirection 0
++   $state.attempts+=@{attempt=$attempt;status='HTTP_SUCCESS';time=(Get-Date -Format o)};Save-Receipt;break
++  } catch {
++   $state.attempts+=@{attempt=$attempt;status='HTTP_FAILED';error_type=$_.Exception.GetType().Name;time=(Get-Date -Format o)};Save-Receipt
++   if($attempt -eq 3){throw 'Three upload attempts failed'}
++  }
++ }
++ $verified=Api GET "/releases/assets/$($uploaded.id)"
++ if($verified.state -ne 'uploaded' -or $verified.size -ne $size -or $verified.digest -ne "sha256:$hash"){throw 'Remote size/digest verification failed'}
++ $body=$release.body+"`n`nPublic compressed walk: 1080p H.264, approximately 5 Mbps; native audio is silent because this walk has no city sound sources (accepted by user). Local master retained. Editor -game footage, not Shipping acceptance."
++ if($release.draft){$release=Api PATCH "/releases/$($release.id)" @{draft=$false;prerelease=$true;make_latest='false';body=$body}}
++ $check=Api GET '/releases/tags/harborcity-m5-vs4-r2-sample-gate-20261002'
++ if($check.draft){throw 'Release still draft'}
++ $state.status='PUBLISHED_VERIFIED';$state.release_url=$check.html_url;$state.asset=@{id=$verified.id;size=$verified.size;digest=$verified.digest;url=$verified.browser_download_url};Save-Receipt
++ Write-Output ($state|ConvertTo-Json -Depth 8)
++} catch {$state.status='INCOMPLETE';$state.error_type=$_.Exception.GetType().Name;Save-Receipt;Write-Output 'Gate video publication incomplete; receipt preserved';exit 1}
+
+--- /dev/null
++++ b/tools/hc_r3_window_guard.ps1
+@@ -0,0 +1,63 @@
++# Only inspect/restore windows belonging to the explicitly supplied UE process.
++if(-not ('HCR3WindowGuard' -as [type])) {
++Add-Type @'
++using System;
++using System.Collections.Generic;
++using System.Text;
++using System.Runtime.InteropServices;
++public static class HCR3WindowGuard {
++ [StructLayout(LayoutKind.Sequential)] public struct RECT { public int L,T,R,B; }
++ public delegate bool EnumProc(IntPtr h,IntPtr p);
++ [DllImport("user32.dll")] static extern bool EnumWindows(EnumProc c,IntPtr p);
++ [DllImport("user32.dll")] static extern uint GetWindowThreadProcessId(IntPtr h,out uint p);
++ [DllImport("user32.dll",CharSet=CharSet.Unicode)] static extern int GetClassName(IntPtr h,StringBuilder b,int n);
++ public static string WindowClass(IntPtr h){var b=new StringBuilder(128);GetClassName(h,b,128);return b.ToString();}
++ [DllImport("user32.dll")] public static extern bool SetWindowPos(IntPtr h,IntPtr after,int x,int y,int w,int z,uint f);
++ [DllImport("user32.dll")] public static extern bool IsWindow(IntPtr h);
++ [DllImport("user32.dll")] public static extern bool IsIconic(IntPtr h);
++ [DllImport("user32.dll")] public static extern bool IsWindowVisible(IntPtr h);
++ [DllImport("user32.dll")] public static extern bool GetClientRect(IntPtr h,out RECT r);
++ [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr h,int c);
++ [DllImport("user32.dll")] public static extern bool ShowWindowAsync(IntPtr h,int c);
++ [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h);
++ [DllImport("user32.dll")] public static extern IntPtr GetForegroundWindow();
++ [DllImport("user32.dll")] public static extern short GetAsyncKeyState(int k);
++ public static IntPtr[] Windows(int pid) {
++  var a=new List<IntPtr>(); EnumWindows((h,p)=>{uint id;GetWindowThreadProcessId(h,out id);if(id==pid)a.Add(h);return true;},IntPtr.Zero);return a.ToArray();
++ }
++}
++'@
++}
++function Test-HCR3Window {
++ param([int]$GameProcessId,[string]$EvidencePath,[switch]$KeepForeground,[switch]$AsyncWindowPosition)
++ $observed=@()
++ foreach($handle in [HCR3WindowGuard]::Windows($GameProcessId)) {
++  if(-not [HCR3WindowGuard]::IsWindow($handle)){continue}
++  if([HCR3WindowGuard]::WindowClass($handle) -ne 'UnrealWindow'){continue}
++  $rect=New-Object HCR3WindowGuard+RECT
++  if(-not [HCR3WindowGuard]::GetClientRect($handle,[ref]$rect)){continue}
++  $width=$rect.R-$rect.L;$height=$rect.B-$rect.T
++  if($KeepForeground){
++   # An initializing UE window can block synchronous SetWindowPos for shader/DDC work.
++   $flags=if($AsyncWindowPosition){0x4053}else{0x53}
++   [void][HCR3WindowGuard]::SetWindowPos($handle,[IntPtr](-1),0,0,0,0,$flags)
++  }
++  # Ignore utility/message windows; a minimized main window may keep its size.
++  if(-not [HCR3WindowGuard]::IsWindowVisible($handle) -and $width -eq 0 -and $height -eq 0){continue}
++  if([HCR3WindowGuard]::IsIconic($handle) -or $width -lt 64 -or $height -lt 64 -or -not [HCR3WindowGuard]::IsWindowVisible($handle)) {
++   [void][HCR3WindowGuard]::ShowWindowAsync($handle,9)
++   [void][HCR3WindowGuard]::SetForegroundWindow($handle)
++   Start-Sleep -Seconds 1
++   # Startup can replace a splash/initial viewport while the one-second restore wait runs.
++   # A destroyed handle is not a minimized live game window. Inspect its successor next poll.
++   if(-not [HCR3WindowGuard]::IsWindow($handle)){continue}
++   [void][HCR3WindowGuard]::GetClientRect($handle,[ref]$rect)
++   $ok= -not [HCR3WindowGuard]::IsIconic($handle) -and [HCR3WindowGuard]::IsWindowVisible($handle) -and ($rect.R-$rect.L) -ge 64 -and ($rect.B-$rect.T) -ge 64
++   $row=[ordered]@{time=(Get-Date).ToString('o');pid=$GameProcessId;handle=$handle.ToInt64();before=@($width,$height);after=@(($rect.R-$rect.L),($rect.B-$rect.T));status=if($ok){'RESTORED_WAITED_1S'}else{'BLOCKED_WINDOW'}}
++   if($EvidencePath){$row|ConvertTo-Json -Compress|Add-Content -LiteralPath $EvidencePath -Encoding utf8}
++   $observed+=$row
++   if(-not $ok){return $false}
++  }
++ }
++ return $true
++}
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_v2_material_refresh.py
+@@ -0,0 +1,17 @@
++"""Refresh only v2 authored ground/water materials, preserving the saved placement."""
++from pathlib import Path
++import json,re,sys,traceback,unreal as U
++sys.path.insert(0,str(Path(__file__).parent))
++from hc_vs4_r2_v2_materials import landscape,water
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');plan=json.loads((P/'v2/sample_plan.json').read_text('utf-8'));R={'status':'RUNNING','map':plan['map']}
++try:
++    root=plan['map'].rsplit('/',1)[0];L=U.get_editor_subsystem(U.LevelEditorSubsystem);assert L.load_level(plan['map'])
++    ground=landscape(root,plan['paint_path']);sea=water(root)
++    for a in U.get_editor_subsystem(U.EditorActorSubsystem).get_all_level_actors():
++        if a.get_class().get_name()=='Landscape':a.set_editor_property('landscape_material',ground)
++        if a.get_actor_label()=='HC_VS4_B1_Water':a.static_mesh_component.set_material(0,sea)
++    assert L.save_current_level()
++    R.update(status='PASS',ground_nodes=U.MaterialEditingLibrary.get_num_material_expressions(ground),water_nodes=U.MaterialEditingLibrary.get_num_material_expressions(sea),water_outputs=sum(isinstance(e,U.MaterialExpressionSingleLayerWaterMaterialOutput) for e in U.MaterialEditingLibrary.get_material_expressions(sea)),render='NOT_RUN')
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_prepare_v2_publication.py
+@@ -0,0 +1,24 @@
++"""Prepare a strictly allowlisted v2 review update in the existing publish checkout."""
++from pathlib import Path
++import argparse,hashlib,json,re,shutil,subprocess
++W=Path('D:/科研学习/codex学习');D=W/'docs/HarborCity_M5_VS4/R2';G=D/'github';WT=W/'.publish/harborcity-m5-vs3-r1-gate-20260926'
++ap=argparse.ArgumentParser();ap.add_argument('--run',required=True);args=ap.parse_args();run=(D/args.run).resolve();assert run.parent==D.resolve()
++exit_report=json.loads((run/'exit.json').read_text('utf-8-sig'));assert exit_report['status']=='EXITED' and exit_report['exit_code']==0 and exit_report['kind']=='EDITOR_GAME'
++scan=json.loads((run/'asset_log_gate.json').read_text('utf-8-sig'));assert scan['status']=='PASS_LOG_SCAN_ONLY' and not scan['hits']
++found=list(run.rglob('results.json'));assert len(found)==1;r=json.loads(found[0].read_text('utf-8-sig'));assert r['status']=='COMPLETE' and r['failures']==0 and r['map']=='L_CapitalR2'
++media=json.loads((D/'appendix/GATE_MEDIA_V2.json').read_text('utf-8'))
++summary=dict(status='COMPLETE_EDITOR_CAPTURE_USER_REVIEW',map=exit_report['map'],run=args.run,checks=len(r['checks']),failures=r['failures'],native_pngs=len(list(run.rglob('R2_*.png'))),asset_log_scan=scan['status'],ground='editor/20261002_161325_156_v2_native_ground_03/author_result.json',roof='appendix/ROOF_COVERAGE_11.json',placement='appendix/BUILDING_PLACEMENT_08.json',shipping='NOT_RUN',full_regression_runs=0,originals_modified=False)
++(D/'appendix/V2_SUMMARY.json').write_text(json.dumps(summary,indent=2),'utf-8')
++files=[D/name for name in ('STATUS.md','TEST_REPORT.md','LAYOUT.md','CONTROLS.md','ASSETS.md','WORK_CHECKPOINT.json','REQUEST_V2.md','gate/v2/README.md','appendix/V2_SUMMARY.json','appendix/GATE_MEDIA_V2.json','appendix/FAILURE_HISTORY.md','appendix/V1_MATERIAL_FAILURE_RECHECK.json','appendix/SOURCE_CHANGES.patch','appendix/SOURCE_CHANGES.json')]
++files+=sorted((D/'appendix').glob('ROOF_COVERAGE_*.json'))+sorted((D/'appendix').glob('BUILDING_PLACEMENT_*.json'))
++files+=[D/'gate/v2'/row['file'] for row in media['images']]
++before=subprocess.check_output(['git','status','--porcelain'],cwd=WT).decode('utf-8');assert not before,'Inspect publishing worktree changes first'
++rows=[]
++for src in files:
++    assert src.is_file() and src.suffix.lower() in ('.md','.json','.jpg','.patch')
++    if src.suffix.lower()=='.jpg':assert src.stat().st_size<=500000
++    else:assert not re.search(r'(?:signingprivateexponent|encryptionkey)\s*=\s*["\']?[a-z0-9+/]{32,}',src.read_text('utf-8-sig').lower())
++    rel=src.relative_to(W);target=WT/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,target)
++    rows.append(dict(path=rel.as_posix(),sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
++(G/'V2_PUBLICATION_FILES.json').write_text(json.dumps(rows,indent=2),'utf-8')
++print(json.dumps(dict(status='PREPARED_NOT_PUSHED',files=len(rows),base=subprocess.check_output(['git','rev-parse','HEAD'],cwd=WT).decode().strip(),summary=summary)))
