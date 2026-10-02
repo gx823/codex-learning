@@ -1,0 +1,2446 @@
+--- a/HarborCity/Source/HarborCity/M1/HCM1HUD.cpp
++++ b/HarborCity/Source/HarborCity/M1/HCM1HUD.cpp
+@@ -1,6 +1,7 @@
+ #include "HCM1HUD.h"
+ #include "M5VS3/HCM5VS3Armory.h"
+ #include "M5VS3/SHCM5VS3Armory.h"
++#include "M5VS4/SHCM5VS4GraphicsPanel.h"
+ 
+ #include "HCM1PlayerController.h"
+ #include "HCM1Character.h"
+@@ -145,6 +146,10 @@
+                             SNew(SVerticalBox)
+                             + SVerticalBox::Slot().AutoHeight().HAlign(HAlign_Center).Padding(0, 0, 0, 24)
+                             [SNew(STextBlock).Text(FText::FromString(TEXT("已暂停"))).Font(Heading)]
++                            +SVerticalBox::Slot().AutoHeight().Padding(0,5)
++                            [SNew(SButton).HAlign(HAlign_Center).ContentPadding(10)
++                                .OnClicked_Lambda([this]{bGraphicsOpen=true;return FReply::Handled();})
++                                [SNew(STextBlock).Text(FText::FromString(TEXT("画面"))).Font(Body)]]
+                             + SVerticalBox::Slot().AutoHeight().Padding(0, 5)
+                             [SNew(SButton).HAlign(HAlign_Center).ContentPadding(10).OnClicked(this, &SHCM1Overlay::FootViewClicked)
+                                 [SNew(STextBlock).Text(this, &SHCM1Overlay::FootViewText).Font(Body)]]
+@@ -190,10 +195,20 @@
+             ]
+             +SOverlay::Slot().HAlign(HAlign_Fill).VAlign(VAlign_Fill)
+             [SNew(SHCM5VS3Armory).Controller(Controller)]
++            +SOverlay::Slot().HAlign(HAlign_Fill).VAlign(VAlign_Fill)
++            [SNew(SHCM5VS4GraphicsPanel).Controller(Controller).Font(Body)
++                .Visibility_Lambda([this]{return bGraphicsOpen&&Controller.IsValid()&&Controller->IsPauseMenuOpen()?EVisibility::Visible:EVisibility::Collapsed;})
++                .OnBack_Lambda([this]{bGraphicsOpen=false;})]
+             ]
+         ];
+     }
++    virtual void Tick(const FGeometry& Geometry,double Time,float Delta) override
++    {
++        SCompoundWidget::Tick(Geometry,Time,Delta);
++        if(!Controller.IsValid()||!Controller->IsPauseMenuOpen()||(Controller->GetArmory()&&Controller->GetArmory()->IsOpen()))bGraphicsOpen=false;
++    }
+ private:
++    bool bGraphicsOpen=false;
+     UHCM5VS3Abilities* Abilities() const {auto* H=Controller.IsValid()?Controller->GetControlledCharacter():nullptr;return H?H->GetAbilities():nullptr;}
+     TWeakObjectPtr<AHCM1PlayerController> Controller;
+     EVisibility ControlsVisibility() const
+@@ -270,7 +285,7 @@
+         return PC && PC->GetCombatComponent() ? FText::FromString(PC->GetCombatComponent()->GetHUDText()) : FText::GetEmpty();
+     }
+     EVisibility PauseVisibility() const
+-    { return Controller.IsValid() && Controller->IsPauseMenuOpen() && !(Controller->GetArmory()&&Controller->GetArmory()->IsOpen()) ? EVisibility::Visible : EVisibility::Collapsed; }
++    { return !bGraphicsOpen && Controller.IsValid() && Controller->IsPauseMenuOpen() && !(Controller->GetArmory()&&Controller->GetArmory()->IsOpen()) ? EVisibility::Visible : EVisibility::Collapsed; }
+     EVisibility QuestVisibility() const
+     { return Controller.IsValid() && !Controller->GetQuestHUDText().IsEmpty() ? EVisibility::HitTestInvisible : EVisibility::Collapsed; }
+     EVisibility DialogueVisibility() const
+
+--- /dev/null
++++ b/HarborCity/Source/HarborCity/M1/HCM1TestM5VS4R2Gate.cpp
+@@ -0,0 +1,110 @@
++#include "HCM1TestRunner.h"
++#include "HCM1Character.h"
++#include "HCM1PlayerController.h"
++#include "M5VS2/HCM5VS2CornerTimeDirector.h"
++#include "Camera/CameraActor.h"
++#include "Camera/CameraComponent.h"
++#include "Components/CapsuleComponent.h"
++#include "GameFramework/CharacterMovementComponent.h"
++#include "EngineUtils.h"
++#include "Misc/CommandLine.h"
++#include "Misc/Parse.h"
++#include "Misc/FileHelper.h"
++#include "UnrealClient.h"
++
++bool AHCM1TestRunner::AddM5VS4R2GateTests()
++{
++    FString Kind;FParse::Value(FCommandLine::Get(),TEXT("R4Case="),Kind);
++    if(Kind!=TEXT("vs4r2gate")&&Kind!=TEXT("vs4r2walk")&&Kind!=TEXT("vs4r2scale")&&Kind!=TEXT("vs4r2bridge"))return false;
++    auto Camera=MakeShared<TWeakObjectPtr<ACameraActor>>();
++    AddStep(TEXT("R2 gate warmup and map identity"),15,[this,Camera]{
++        Check(TEXT("R2 actual map"),GetWorld()->GetMapName()==TEXT("L_CapitalR2"),TEXT("L_CapitalR2"),GetWorld()->GetMapName(),TEXT("EDITOR_GAME only; not packaged acceptance"));
++        *Camera=GetWorld()->SpawnActor<ACameraActor>();Camera->Get()->GetCameraComponent()->SetFieldOfView(60);
++    });
++    auto View=[this,Camera](FVector At,FVector Target){Camera->Get()->SetActorLocation(At*100);Camera->Get()->SetActorRotation((Target-At).Rotation());PC->SetViewTarget(Camera->Get());};
++    auto Shot=[this](const FString& Name){AddStep(Name,.2,[this,Name]{const FString File=RunDirectory/(Name+TEXT(".png"));M3CaptureFiles.AddUnique(File);M3LastCaptureFrame=GFrameCounter;FScreenshotRequest::RequestScreenshot(File,false,false,false,FIntRect(),true);});AddM3CaptureCompletion(Name);};
++    auto Time=[this](FName Name){for(TActorIterator<AHCM5VS2CornerTimeDirector> It(GetWorld());It;++It)Check(TEXT("R2 time binding"),It->SetTimeOfDay(Name),Name.ToString(),It->GetLightingDiagnostics(),TEXT("Production time director; exposure unchanged"));};
++    auto Place=[this](FVector2D XY,float Yaw){
++        FHitResult Hit;FCollisionQueryParams Params(SCENE_QUERY_STAT(R2GateGround),true,Character);
++        const bool Found=GetWorld()->LineTraceSingleByChannel(Hit,FVector(XY.X*100,XY.Y*100,10000),FVector(XY.X*100,XY.Y*100,-1000),ECC_WorldStatic,Params);
++        Check(TEXT("R2 fixture floor"),Found,TEXT("collidable floor"),Hit.ImpactPoint.ToString(),TEXT("Fixture only"));
++        if(Found)PlaceCharacter(Hit.ImpactPoint+FVector(0,0,Character->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+2),Yaw);
++        PC->SetControlRotation(FRotator(0,Yaw,0));
++    };
++    if(Kind==TEXT("vs4r2bridge"))
++    {
++        for(int32 D=0;D<2;++D){AddStep(TEXT("R2 additional bridge viewpoint"),4,[Time,View,D]{Time(D?TEXT("Dusk"):TEXT("Afternoon"));View(FVector(140,-9,28),FVector(129,28,4));});Shot(FString::Printf(TEXT("R2_GATE_BRIDGE_%s"),D?TEXT("DUSK"):TEXT("AFTERNOON")));}
++        return true;
++    }
++    if(Kind==TEXT("vs4r2scale")||Kind==TEXT("vs4r2gate"))
++    {
++        AddStep(TEXT("R2 scale afternoon"),3,[Time]{Time(TEXT("Afternoon"));});
++        for(FName Pack : {FName(TEXT("City")),FName(TEXT("Castle")),FName(TEXT("Village"))})
++        {
++            AddStep(TEXT("R2 actual door scale"),3,[this,View,Pack]{
++                AActor* Marker=nullptr;const FName Tag(*FString::Printf(TEXT("R2Scale_%s"),*Pack.ToString()));
++                for(TActorIterator<AActor> It(GetWorld());It;++It)if(It->ActorHasTag(Tag)){Marker=*It;break;}
++                Check(TEXT("R2 scale marker"),Marker!=nullptr,TEXT("real authored door"),Pack.ToString(),TEXT("Editor game scene, unchanged hero scale"));
++                if(!Marker)return;
++                const FVector Door=Marker->GetActorLocation();const FVector Out=Marker->GetActorForwardVector();const FVector Side=FRotationMatrix(Marker->GetActorRotation()).GetUnitAxis(EAxis::Y);
++                const FVector Feet=Door+Out*110;
++                PlaceCharacter(Feet+FVector(0,0,Character->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+2),Marker->GetActorRotation().Yaw+180);
++                PC->SetControlRotation(FRotator(0,Marker->GetActorRotation().Yaw+180,0));
++                View((Feet+Out*330+Side*180+FVector(0,0,245))/100,(Door+FVector(0,0,125))/100);
++            });
++            AddStep(TEXT("R2 scale settled feet"),.1,[this,Pack]{
++                const FName Tag(*FString::Printf(TEXT("R2Scale_%s"),*Pack.ToString()));
++                for(TActorIterator<AActor> It(GetWorld());It;++It)if(It->ActorHasTag(Tag)){
++                    const double FeetZ=Character->GetActorLocation().Z-Character->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
++                    Check(TEXT("R2 scale grounded at door"),FMath::Abs(FeetZ-It->GetActorLocation().Z)<=15,TEXT("feet within 15cm of door sill"),FString::Printf(TEXT("%s feet_z=%.3f sill_z=%.3f"),*Pack.ToString(),FeetZ,It->GetActorLocation().Z),TEXT("Actual settled character; not a suspended fixture"));break;
++                }
++            });
++            Shot(FString::Printf(TEXT("R2_SCALE_%s"),*Pack.ToString()));
++        }
++        if(Kind==TEXT("vs4r2scale"))return true;
++    }
++    if(Kind==TEXT("vs4r2walk"))
++    {
++        auto CSV=MakeShared<FString>(TEXT("real_seconds,dt,x_cm,y_cm,z_cm,speed_cm_s\n"));auto Start=MakeShared<double>(0);
++        auto GoalIndex=MakeShared<int32>(0);auto Distance=MakeShared<double>(0);auto Last=MakeShared<FVector>();
++        const TArray<FVector2D> Goals={{-37,70},{-29,49},{-15,27},{-22,10},{-20,-12},{5,-12},{30,-5},{61,5},{94,25},{115,28}};
++        AddStep(TEXT("R2 walk fixture and afternoon"),4,[Time,Place]{Time(TEXT("Afternoon"));Place(FVector2D(-28,91),-110);});
++        AddStep(TEXT("R2 capture readiness"),.2,[this]{PC->Tags.AddUnique(TEXT("R1GateRecordingReady"));});
++        AddStep(TEXT("R2 approximately-one-minute ordinary movement"),65,[this,Camera,CSV,Start,GoalIndex,Distance,Last,Goals]{
++            *Start=FPlatformTime::Seconds();*Last=Character->GetActorLocation();PC->SetViewTarget(Camera->Get());
++            R5FrameSample=[this,Camera,CSV,Start,GoalIndex,Distance,Last,Goals](float Dt){
++                const FVector P=Character->GetActorLocation();*Distance+=FVector::Dist2D(P,*Last);*Last=P;
++                FVector2D Delta=Goals[FMath::Min(*GoalIndex,Goals.Num()-1)]*100-FVector2D(P.X,P.Y);
++                if(Delta.Size()<110&&*GoalIndex<Goals.Num()-1){++*GoalIndex;Delta=Goals[*GoalIndex]*100-FVector2D(P.X,P.Y);}
++                const bool Arrived=*GoalIndex==Goals.Num()-1&&Delta.Size()<110;
++                const float Yaw=Arrived?PC->GetControlRotation().Yaw:FMath::RadiansToDegrees(FMath::Atan2(Delta.Y,Delta.X));PC->SetControlRotation(FRotator(0,Yaw,0));
++                if(Arrived)Release(TEXT("Move"));else Hold(TEXT("Move"),FInputActionValue(FVector2D(0,1)));
++                const FVector Side=FRotator(0,Yaw+225,0).Vector()*400;const FVector At=P+Side+FVector(0,0,145);
++                Camera->Get()->SetActorLocation(At);Camera->Get()->SetActorRotation((P+FVector(0,0,55)-At).Rotation());
++                *CSV+=FString::Printf(TEXT("%.6f,%.6f,%.3f,%.3f,%.3f,%.3f\n"),FPlatformTime::Seconds()-*Start,Dt,P.X,P.Y,P.Z,Character->GetVelocity().Size2D());
++            };
++        },[this,CSV,Distance,GoalIndex]{Release(TEXT("Move"));R5FrameSample=nullptr;FFileHelper::SaveStringToFile(*CSV,*(RunDirectory/TEXT("R2_GATE_WALK.csv")));Check(TEXT("R2 sample walk distance"),*Distance>12000,TEXT(">120m actual movement in approximately one minute"),FString::Printf(TEXT("%.2fm waypoint=%d"),*Distance/100,*GoalIndex),TEXT("B engine movement input, not OS input"));const double BridgeDistance=FVector2D::Distance(FVector2D(Character->GetActorLocation()),FVector2D(11500,2800));Check(TEXT("R2 walk reaches bridge"),BridgeDistance<1200,TEXT("within 12m of central bridge waypoint"),FString::Printf(TEXT("%.3fm"),BridgeDistance/100),TEXT("Actual character location; no final teleport"));});
++        return true;
++    }
++    AddStep(TEXT("R2 actual overhead"),3,[Camera,View,Time]{Time(TEXT("Afternoon"));Camera->Get()->GetCameraComponent()->SetProjectionMode(ECameraProjectionMode::Orthographic);Camera->Get()->GetCameraComponent()->SetOrthoWidth(70000);View(FVector(0,0,850),FVector(0,0,0));});Shot(TEXT("R2_GATE_OVERHEAD"));
++    AddStep(TEXT("R2 perspective"),.1,[Camera]{Camera->Get()->GetCameraComponent()->SetProjectionMode(ECameraProjectionMode::Perspective);});
++    const FVector At[]={FVector(-45,35,35),FVector(-57,112,36),FVector(144,96,32),FVector(75,50,30),FVector(-149,17,36),FVector(-83,-87,70),FVector(-232,101,35),FVector(43,-95,48),FVector(147,-46,38),FVector(7,134,32),FVector(197,97,45),FVector(-73,-153,75)};
++    const FVector To[]={FVector(-10,0,8),FVector(-28,82,10),FVector(174,62,8),FVector(118,28,8),FVector(-125,-10,15),FVector(-17,-147,48),FVector(-206,139,15),FVector(110,-100,10),FVector(40,-135,36),FVector(-10,0,12),FVector(-10,0,15),FVector(158,64,8)};
++    const TCHAR* IDs[]={TEXT("V01"),TEXT("V02"),TEXT("V03"),TEXT("V04"),TEXT("V05"),TEXT("V06"),TEXT("V07"),TEXT("V08"),TEXT("V09"),TEXT("V10"),TEXT("V11"),TEXT("V12")};
++    for(int32 D=0;D<2;++D)
++    {
++        AddStep(TEXT("R2 review time"),3,[Time,D]{Time(D?TEXT("Dusk"):TEXT("Afternoon"));});
++        for(int32 I=0;I<12;++I){AddStep(TEXT("R2 fixed view within R1 allowance"),3,[View,At,To,I]{View(At[I],To[I]);});Shot(FString::Printf(TEXT("R2_GATE_%s_%s"),IDs[I],D?TEXT("DUSK"):TEXT("AFTERNOON")));}
++        for(int32 I=0;I<2;++I)
++        {
++            AddStep(TEXT("R2 hero street view"),3,[this,Place,View,I]{Place(I?FVector2D(61,5):FVector2D(-29,49),I?30:110);const FVector P=Character->GetActorLocation()/100;const FVector Offset=FRotator(0,(I?30:110)+225,0).Vector()*4;View(P+Offset+FVector(0,0,1.45),P+FVector(0,0,.55));});
++            Shot(FString::Printf(TEXT("R2_GATE_STREET_%d_%s"),I+1,D?TEXT("DUSK"):TEXT("AFTERNOON")));
++        }
++    }
++    AddStep(TEXT("R2 night plaza"),4,[View,Time]{Time(TEXT("Night"));View(FVector(-45,35,35),FVector(-10,0,8));});Shot(TEXT("R2_GATE_PLAZA_NIGHT"));
++    const FVector Edge[]={FVector(-350,0,100.8),FVector(350,0,100.8),FVector(0,-325,100.8),FVector(0,325,100.8)};
++    const FVector Look[]={FVector(-800,0,20),FVector(800,0,20),FVector(0,-800,20),FVector(0,800,20)};
++    AddStep(TEXT("R2 perimeter afternoon"),3,[Time]{Time(TEXT("Afternoon"));});
++    for(int32 I=0;I<4;++I){AddStep(TEXT("R2 maximum flight outward view"),3,[View,Edge,Look,I]{View(Edge[I],Look[I]);});Shot(FString::Printf(TEXT("R2_EDGE_%d"),I+1));}
++    return true;
++}
+
+--- a/HarborCity/Source/HarborCity/M1/HCM1TestM5VS4World.cpp
++++ b/HarborCity/Source/HarborCity/M1/HCM1TestM5VS4World.cpp
+@@ -19,6 +19,7 @@
+ 
+ bool AHCM1TestRunner::AddM5VS4WorldTests()
+ {
++    if(AddM5VS4R2GateTests())return true;
+     FString Kind;FParse::Value(FCommandLine::Get(),TEXT("R4Case="),Kind);
+     const bool FlightLeg=Kind==TEXT("vs4capitalflight1")||Kind==TEXT("vs4capitalflight2")||Kind==TEXT("vs4capitalflight3")||Kind==TEXT("vs4capitalflight4");
+     if(!FlightLeg&&Kind!=TEXT("vs4capital")&&Kind!=TEXT("vs4capitalfilm")&&Kind!=TEXT("vs4oldviews")&&Kind!=TEXT("vs4previewtravel"))return false;
+@@ -80,7 +81,8 @@
+         for(int32 I=0;I<7;++I)AddStep(TEXT("VS4 B1 flight district route"),10,[this,Goals,I]{PC->SetControlRotation(FRotator(-14,(Goals[I]-Character->GetActorLocation()).Rotation().Yaw,0));Hold(TEXT("Move"),FInputActionValue(FVector2D(0,1)));},[this]{Release(TEXT("Move"));});
+         AddStep(TEXT("VS4 B1 film end"),3,[]{});return true;
+     }
+-    const FVector Positions[]={FVector(-45,35,30),FVector(-57,109,32),FVector(144,96,32),FVector(75,50,30),FVector(-149,17,36),FVector(-83,-87,70),FVector(-232,101,35),FVector(43,-95,48),FVector(147,-46,38),FVector(7,134,32),FVector(197,97,45),FVector(-73,-153,75)};
++    FVector Positions[]={FVector(-45,35,30),FVector(-57,109,32),FVector(144,96,32),FVector(75,50,30),FVector(-149,17,36),FVector(-83,-87,70),FVector(-232,101,35),FVector(43,-95,48),FVector(147,-46,38),FVector(7,134,32),FVector(197,97,45),FVector(-73,-153,75)};
++    if(GetWorld()->GetMapName()==TEXT("L_CapitalR2")){Positions[0]=FVector(-45,35,35);Positions[1]=FVector(-57,112,36);}
+     const FVector Targets[]={FVector(-10,0,8),FVector(-28,82,10),FVector(174,62,8),FVector(118,28,8),FVector(-125,-10,15),FVector(-17,-147,48),FVector(-206,139,15),FVector(110,-100,10),FVector(40,-135,36),FVector(-10,0,12),FVector(-10,0,15),FVector(158,64,8)};
+     for(int32 Dusk=0;Dusk<2;++Dusk)
+     {
+
+--- a/HarborCity/Source/HarborCity/M1/HCM1TestRunner.h
++++ b/HarborCity/Source/HarborCity/M1/HCM1TestRunner.h
+@@ -67,6 +67,7 @@
+     bool AddM5VS3R6Tests();
+     bool AddM5VS4BowTests();
+     bool AddM5VS4WorldTests();
++    bool AddM5VS4R2GateTests();
+     void AddM5VS3R6Coverage();
+     bool AddM5VS3R6Review();
+     bool AddM5VS3R5AcceptanceTests();
+
+--- a/HarborCity/Source/HarborCity/M3/HCM3Recording.cpp
++++ b/HarborCity/Source/HarborCity/M3/HCM3Recording.cpp
+@@ -35,7 +35,11 @@
+ 
+ namespace
+ {
+-FString RecordingRoot(){return FString(TEXT("D:/\u79d1\u7814\u5b66\u4e60/codex\u5b66\u4e60/docs/HarborCity_M5_VS4/R1/recordings"));}
++FString RecordingRoot()
++{
++    const FString Root=TEXT("D:/\u79d1\u7814\u5b66\u4e60/codex\u5b66\u4e60/docs/HarborCity_M5_VS4/");
++    return Root+(FParse::Param(FCommandLine::Get(),TEXT("VS4R2Capture"))?TEXT("R2/recordings"):TEXT("R1/recordings"));
++}
+ bool ParseVS2RecordingSettings(float& Seconds, float& Delay, FString& Slot)
+ {
+ #if !UE_BUILD_SHIPPING
+@@ -124,6 +128,11 @@
+     FVector InitialPlayerLocation = FVector::ZeroVector;
+     FVector InitialPlayerVelocity = FVector::ZeroVector;
+ };
++
++bool AHCM3Recording::HasRecordingRequest() const
++{
++    return Recording.IsValid() && Recording->Seconds > 0 && !Recording->bStopped;
++}
+ 
+ AHCM3Recording::AHCM3Recording()
+ {
+
+--- a/HarborCity/Source/HarborCity/M3/HCM3Recording.h
++++ b/HarborCity/Source/HarborCity/M3/HCM3Recording.h
+@@ -17,6 +17,7 @@
+     virtual void Tick(float DeltaSeconds) override;
+     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
+     bool HasCapturedFirstFrame() const;
++    bool HasRecordingRequest() const;
+     FString GetCaptureDirectory() const;
+     /** End the explicitly isolated R1 gameplay recording before report writing.
+      * Prevents an idle tail; no effect on ordinary play or prior recording modes. */
+
+--- a/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.cpp
++++ b/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.cpp
+@@ -75,6 +75,8 @@
+     Moon->GetLightComponent()->SetIntensity(Night ? (VS3?1.25f:.7f) : 0.f);
+     Moon->GetLightComponent()->SetLightColor(FLinearColor(.50f,.65f,1.f),true);
+     Sky->GetLightComponent()->SetIntensity(Night ? (VS3?1.1f:.8f) : Dusk ? .75f : 1.1f);
++    const float MapSky = Night ? MapSkyIntensityOverride.Z : Dusk ? MapSkyIntensityOverride.Y : MapSkyIntensityOverride.X;
++    if (FMath::IsFinite(MapSky) && MapSky >= 0) Sky->GetLightComponent()->SetIntensity(MapSky);
+     Sky->GetLightComponent()->SetLightColor(Night ? FLinearColor(.65f,.72f,1.f) : Dusk ? FLinearColor(.65f,.53f,.70f) : FLinearColor::White);
+     FPostProcessSettings& P = Post->Settings;
+     P.bOverride_AutoExposureMethod = true; P.AutoExposureMethod = EAutoExposureMethod::AEM_Manual;
+
+--- a/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.h
++++ b/HarborCity/Source/HarborCity/M5VS2/HCM5VS2CornerTimeDirector.h
+@@ -19,6 +19,7 @@
+     UFUNCTION(BlueprintPure, Category="HarborCity|VS2|Time") FString GetLightingDiagnostics() const;
+     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Time") FName InitialPeriod = TEXT("Afternoon");
+     UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category="Time") FName CurrentPeriod;
++    UPROPERTY(EditAnywhere, Category="Time|Map") FVector MapSkyIntensityOverride = FVector(-1);
+ protected:
+     virtual void BeginPlay() override;
+ private:
+
+--- /dev/null
++++ b/HarborCity/Source/HarborCity/M5VS4/HCM5VS4GraphicsSettings.cpp
+@@ -0,0 +1,85 @@
++#include "HCM5VS4GraphicsSettings.h"
++#include "M1/HCM1PlayerController.h"
++#include "M3/HCM3Recording.h"
++#include "M5VS3/HCM5VS3QA.h"
++#include "Engine/Engine.h"
++#include "Engine/GameInstance.h"
++#include "Engine/GameViewportClient.h"
++#include "Engine/World.h"
++#include "EngineUtils.h"
++#include "Framework/Application/SlateApplication.h"
++#include "GameFramework/GameUserSettings.h"
++#include "Widgets/SWindow.h"
++
++void UHCM5VS4GraphicsSettings::Initialize(FSubsystemCollectionBase& Collection)
++{
++    Super::Initialize(Collection);
++    // Core ticker continues while the world is paused. Never save temporary caps.
++    TickHandle = FTSTicker::GetCoreTicker().AddTicker(
++        FTickerDelegate::CreateUObject(this, &ThisClass::UpdateLimit), .1f);
++}
++
++void UHCM5VS4GraphicsSettings::Deinitialize()
++{
++    FTSTicker::GetCoreTicker().RemoveTicker(TickHandle);
++    if (bTemporaryOverride && GEngine)
++        if (auto* Settings = UGameUserSettings::GetGameUserSettings())
++            GEngine->SetMaxFPS(Settings->GetFrameRateLimit());
++    Super::Deinitialize();
++}
++
++float UHCM5VS4GraphicsSettings::ResolveLimit(float UserLimit, bool Paused, bool Background)
++{
++    const float Temporary = Background ? 10.f : Paused ? 30.f : 0.f;
++    if (Temporary <= 0) return UserLimit;
++    return UserLimit > 0 ? FMath::Min(UserLimit, Temporary) : Temporary;
++}
++
++bool UHCM5VS4GraphicsSettings::UpdateLimit(float DeltaSeconds)
++{
++    UWorld* World = GetWorld();
++    auto* Settings = UGameUserSettings::GetGameUserSettings();
++    if (!GEngine || !Settings || !World || !World->IsGameWorld()) return true;
++    bool Bypass = HCM5VS3LocalQA() || GIsAutomationTesting;
++    for (TActorIterator<AHCM3Recording> It(World); !Bypass && It; ++It)
++        Bypass = It->HasRecordingRequest();
++    if (Bypass)
++    {
++        if (bTemporaryOverride) GEngine->SetMaxFPS(Settings->GetFrameRateLimit());
++        bTemporaryOverride = false; LastApplied = -1.f;
++        return true;
++    }
++    const auto* PC = Cast<AHCM1PlayerController>(GetGameInstance()->GetFirstLocalPlayerController());
++    const auto Window = World->GetGameViewport() ? World->GetGameViewport()->GetWindow() : nullptr;
++    const bool Background = (FSlateApplication::IsInitialized() && !FSlateApplication::Get().IsActive())
++        || (Window.IsValid() && Window->IsWindowMinimized());
++    const bool Paused = World->IsPaused() || (PC && (PC->IsPauseMenuOpen() || PC->IsDialogueOpen()));
++    const float Requested = Settings->GetFrameRateLimit();
++    const float Desired = ResolveLimit(Requested, Paused, Background);
++    if (!FMath::IsNearlyEqual(LastApplied, Desired) || !FMath::IsNearlyEqual(GEngine->GetMaxFPS(), Desired))
++    {
++        GEngine->SetMaxFPS(Desired);
++        LastApplied = Desired;
++    }
++    bTemporaryOverride = !FMath::IsNearlyEqual(Desired, Requested);
++    return true;
++}
++
++void UHCM5VS4GraphicsSettings::ApplyUserSelection(int32 Quality, float FrameLimit, bool VSync)
++{
++    auto* Settings = UGameUserSettings::GetGameUserSettings();
++    if (!Settings) return;
++    if (Quality >= 0 && Quality <= 3)
++    {
++        float Normalized, Current, Minimum, Maximum;
++        Settings->GetResolutionScaleInformationEx(Normalized, Current, Minimum, Maximum);
++        Settings->SetOverallScalabilityLevel(Quality);
++        Settings->SetResolutionScaleValueEx(Current);
++    }
++    if (FrameLimit == 0 || FrameLimit == 30 || FrameLimit == 60 || FrameLimit == 90 || FrameLimit == 120)
++        Settings->SetFrameRateLimit(FrameLimit);
++    Settings->SetVSyncEnabled(VSync);
++    Settings->ApplyNonResolutionSettings();
++    Settings->SaveSettings();
++    UpdateLimit(0);
++}
+
+--- /dev/null
++++ b/HarborCity/Source/HarborCity/M5VS4/HCM5VS4GraphicsSettings.h
+@@ -0,0 +1,22 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Containers/Ticker.h"
++#include "Subsystems/GameInstanceSubsystem.h"
++#include "HCM5VS4GraphicsSettings.generated.h"
++
++UCLASS()
++class HARBORCITY_API UHCM5VS4GraphicsSettings : public UGameInstanceSubsystem
++{
++    GENERATED_BODY()
++public:
++    virtual void Initialize(FSubsystemCollectionBase& Collection) override;
++    virtual void Deinitialize() override;
++    void ApplyUserSelection(int32 Quality, float FrameLimit, bool VSync);
++    static float ResolveLimit(float UserLimit, bool Paused, bool Background);
++    float GetAppliedLimit() const { return LastApplied; }
++private:
++    bool UpdateLimit(float DeltaSeconds);
++    FTSTicker::FDelegateHandle TickHandle;
++    float LastApplied = -1.f;
++    bool bTemporaryOverride = false;
++};
+
+--- /dev/null
++++ b/HarborCity/Source/HarborCity/M5VS4/HCM5VS4GraphicsSettingsTests.cpp
+@@ -0,0 +1,20 @@
++#include "HCM5VS4GraphicsSettings.h"
++#if WITH_DEV_AUTOMATION_TESTS
++#include "Misc/AutomationTest.h"
++
++IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHCVS4GraphicsPolicyTest, "HarborCity.VS4.Graphics.FrameLimitPolicy",
++    EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
++
++bool FHCVS4GraphicsPolicyTest::RunTest(const FString& Parameters)
++{
++    for (const float Limit : {0.f, 24.f, 30.f, 60.f, 90.f, 120.f})
++    {
++        TestEqual(TEXT("Active play preserves the user limit"), UHCM5VS4GraphicsSettings::ResolveLimit(Limit,false,false),Limit);
++        TestEqual(TEXT("Pause cannot raise a lower user limit"), UHCM5VS4GraphicsSettings::ResolveLimit(Limit,true,false),Limit>0?FMath::Min(Limit,30.f):30.f);
++        TestEqual(TEXT("Background cap takes priority over pause"), UHCM5VS4GraphicsSettings::ResolveLimit(Limit,true,true),10.f);
++        TestEqual(TEXT("Background also caps unpaused play"), UHCM5VS4GraphicsSettings::ResolveLimit(Limit,false,true),10.f);
++    }
++    TestEqual(TEXT("A custom cap below ten is not raised"),UHCM5VS4GraphicsSettings::ResolveLimit(5,true,true),5.f);
++    return true;
++}
++#endif
+
+--- a/HarborCity/Source/HarborCity/M5VS4/HCM5VS4WorldAuthoring.cpp
++++ b/HarborCity/Source/HarborCity/M5VS4/HCM5VS4WorldAuthoring.cpp
+@@ -3,6 +3,7 @@
+ #include "Landscape.h"
+ #include "LandscapeInfo.h"
+ #include "Engine/World.h"
++#include "EngineUtils.h"
+ #include "Materials/MaterialInterface.h"
+ #endif
+ 
+@@ -25,3 +26,23 @@
+     return nullptr;
+ #endif
+ }
++
++TArray<float> UHCM5VS4WorldAuthoring::SampleCapitalTerrainHeights(UObject* EditorWorld,const TArray<FVector>& Locations)
++{
++    TArray<float> Result;
++#if WITH_EDITOR
++    auto* World=Cast<UWorld>(EditorWorld);
++    if(!World||World->IsGameWorld()||!World->GetPathName().StartsWith(TEXT("/Game/HarborCity/M5VS4/Capital/R2_"))||Locations.Num()>100000)return Result;
++    ALandscape* Landscape=nullptr;
++    for(TActorIterator<ALandscape> It(World);It;++It){if(Landscape)return {};Landscape=*It;}
++    if(!Landscape)return Result;
++    Result.Reserve(Locations.Num());
++    for(const FVector& Location:Locations)
++    {
++        const TOptional<float> Height=Landscape->GetHeightAtLocation(Location);
++        if(!Height.IsSet()||!FMath::IsFinite(Height.GetValue()))return {};
++        Result.Add(Height.GetValue());
++    }
++#endif
++    return Result;
++}
+
+--- a/HarborCity/Source/HarborCity/M5VS4/HCM5VS4WorldAuthoring.h
++++ b/HarborCity/Source/HarborCity/M5VS4/HCM5VS4WorldAuthoring.h
+@@ -11,4 +11,6 @@
+ public:
+     UFUNCTION(BlueprintCallable, Category="HarborCity|VS4|Authoring")
+     static AActor* CreateCapitalLandscape(UObject* EditorWorld,UMaterialInterface* Material,const TArray<int32>& Heights);
++    UFUNCTION(BlueprintCallable, Category="HarborCity|VS4|Authoring")
++    static TArray<float> SampleCapitalTerrainHeights(UObject* EditorWorld,const TArray<FVector>& Locations);
+ };
+
+--- /dev/null
++++ b/HarborCity/Source/HarborCity/M5VS4/SHCM5VS4GraphicsPanel.cpp
+@@ -0,0 +1,71 @@
++#include "SHCM5VS4GraphicsPanel.h"
++#include "HCM5VS4GraphicsSettings.h"
++#include "M1/HCM1PlayerController.h"
++#include "Engine/GameInstance.h"
++#include "GameFramework/GameUserSettings.h"
++#include "Styling/CoreStyle.h"
++#include "Widgets/Input/SButton.h"
++#include "Widgets/Input/SCheckBox.h"
++#include "Widgets/Input/SComboBox.h"
++#include "Widgets/Layout/SBorder.h"
++#include "Widgets/Layout/SBox.h"
++#include "Widgets/SBoxPanel.h"
++#include "Widgets/Text/STextBlock.h"
++
++void SHCM5VS4GraphicsPanel::Apply(int32 Quality, float Limit, bool VSync)
++{
++    if (Controller.IsValid())
++        if (auto* Settings = Controller->GetGameInstance()->GetSubsystem<UHCM5VS4GraphicsSettings>())
++            Settings->ApplyUserSelection(Quality, Limit, VSync);
++}
++
++void SHCM5VS4GraphicsPanel::Construct(const FArguments& Args)
++{
++    Controller = Args._Controller;
++    for (const TCHAR* Label : {TEXT("低"), TEXT("中"), TEXT("高"), TEXT("极高")})
++        QualityOptions.Add(MakeShared<FString>(Label));
++    for (const TCHAR* Label : {TEXT("30"), TEXT("60"), TEXT("90"), TEXT("120"), TEXT("不限")})
++        FrameOptions.Add(MakeShared<FString>(Label));
++    const FSlateFontInfo Font = Args._Font;
++    auto Entry = [Font](TSharedPtr<FString> Value) -> TSharedRef<SWidget>
++        { return SNew(STextBlock).Text(FText::FromString(*Value)).Font(Font); };
++    ChildSlot
++    [SNew(SBorder).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush"))
++        .BorderBackgroundColor(FLinearColor(.005f,.015f,.025f,.8f)).HAlign(HAlign_Center).VAlign(VAlign_Center)
++        [SNew(SBox).WidthOverride(420)
++            [SNew(SBorder).Padding(26).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush"))
++                .BorderBackgroundColor(FLinearColor(.03f,.07f,.09f,1))
++                [SNew(SVerticalBox)
++                    +SVerticalBox::Slot().AutoHeight().Padding(0,0,0,20)
++                    [SNew(STextBlock).Text(FText::FromString(TEXT("画面"))).Font(Font)]
++                    +SVerticalBox::Slot().AutoHeight().Padding(0,8)
++                    [SNew(SHorizontalBox)
++                        +SHorizontalBox::Slot().FillWidth(1).VAlign(VAlign_Center)
++                        [SNew(STextBlock).Text(FText::FromString(TEXT("画质"))).Font(Font)]
++                        +SHorizontalBox::Slot().FillWidth(1)
++                        [SNew(SComboBox<TSharedPtr<FString>>).OptionsSource(&QualityOptions).OnGenerateWidget_Lambda(Entry)
++                            .OnSelectionChanged_Lambda([this](TSharedPtr<FString> Item,ESelectInfo::Type Type)
++                            {if(Type==ESelectInfo::Direct)return;auto* S=UGameUserSettings::GetGameUserSettings();if(S)Apply(QualityOptions.IndexOfByKey(Item),-1,S->IsVSyncEnabled());})
++                            [SNew(STextBlock).Font(Font).Text_Lambda([this]{auto* S=UGameUserSettings::GetGameUserSettings();int32 Q=S?S->GetOverallScalabilityLevel():-1;return FText::FromString(QualityOptions.IsValidIndex(Q)?*QualityOptions[Q]:TEXT("自定义"));})]]]
++                    +SVerticalBox::Slot().AutoHeight().Padding(0,8)
++                    [SNew(SHorizontalBox)
++                        +SHorizontalBox::Slot().FillWidth(1).VAlign(VAlign_Center)
++                        [SNew(STextBlock).Text(FText::FromString(TEXT("帧率上限"))).Font(Font)]
++                        +SHorizontalBox::Slot().FillWidth(1)
++                        [SNew(SComboBox<TSharedPtr<FString>>).OptionsSource(&FrameOptions).OnGenerateWidget_Lambda(Entry)
++                            .OnSelectionChanged_Lambda([this](TSharedPtr<FString> Item,ESelectInfo::Type Type)
++                            {if(Type==ESelectInfo::Direct)return;const float Limits[]={30,60,90,120,0};int32 I=FrameOptions.IndexOfByKey(Item);auto* S=UGameUserSettings::GetGameUserSettings();if(S&&I>=0&&I<5)Apply(-1,Limits[I],S->IsVSyncEnabled());})
++                            [SNew(STextBlock).Font(Font).Text_Lambda([]{auto* S=UGameUserSettings::GetGameUserSettings();float V=S?S->GetFrameRateLimit():0;return FText::FromString(V>0?FString::Printf(TEXT("%.0f"),V):TEXT("不限"));})]]]
++                    +SVerticalBox::Slot().AutoHeight().Padding(0,8)
++                    [SNew(SCheckBox).IsChecked_Lambda([]{auto* S=UGameUserSettings::GetGameUserSettings();return S&&S->IsVSyncEnabled()?ECheckBoxState::Checked:ECheckBoxState::Unchecked;})
++                        .OnCheckStateChanged_Lambda([this](ECheckBoxState State){Apply(-1,-1,State==ECheckBoxState::Checked);})
++                        [SNew(STextBlock).Text(FText::FromString(TEXT("垂直同步"))).Font(Font)]]
++                    +SVerticalBox::Slot().AutoHeight().Padding(0,20,0,0)
++                    [SNew(SButton).ContentPadding(10).HAlign(HAlign_Center)
++                        .OnClicked_Lambda([Back=Args._OnBack]{Back.ExecuteIfBound();return FReply::Handled();})
++                        [SNew(STextBlock).Text(FText::FromString(TEXT("返回"))).Font(Font)]]
++                ]
++            ]
++        ]
++    ];
++}
+
+--- /dev/null
++++ b/HarborCity/Source/HarborCity/M5VS4/SHCM5VS4GraphicsPanel.h
+@@ -0,0 +1,19 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Widgets/SCompoundWidget.h"
++class AHCM1PlayerController;
++
++class SHCM5VS4GraphicsPanel : public SCompoundWidget
++{
++public:
++    SLATE_BEGIN_ARGS(SHCM5VS4GraphicsPanel) {}
++        SLATE_ARGUMENT(TWeakObjectPtr<AHCM1PlayerController>, Controller)
++        SLATE_ARGUMENT(FSlateFontInfo, Font)
++        SLATE_EVENT(FSimpleDelegate, OnBack)
++    SLATE_END_ARGS()
++    void Construct(const FArguments& Args);
++private:
++    TWeakObjectPtr<AHCM1PlayerController> Controller;
++    TArray<TSharedPtr<FString>> QualityOptions, FrameOptions;
++    void Apply(int32 Quality, float Limit, bool VSync);
++};
+
+--- /dev/null
++++ b/HarborCity/Config/DefaultGameUserSettings.ini
+@@ -0,0 +1,18 @@
++[ScalabilityGroups]
++sg.ResolutionQuality=100
++sg.ViewDistanceQuality=2
++sg.AntiAliasingQuality=2
++sg.ShadowQuality=2
++sg.GlobalIlluminationQuality=2
++sg.ReflectionQuality=2
++sg.PostProcessQuality=2
++sg.TextureQuality=2
++sg.EffectsQuality=2
++sg.FoliageQuality=2
++sg.ShadingQuality=2
++sg.LandscapeQuality=2
++
++[/Script/Engine.GameUserSettings]
++Version=5
++bUseVSync=False
++FrameRateLimit=60.000000
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_migrate.py
+@@ -0,0 +1,63 @@
++"""Read original staging assets and migrate a bounded, map-free package set."""
++from pathlib import Path
++import hashlib,json,re,traceback
++import unreal as U
++
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line())
++OUT=Path(m[1] or m[2]);SRC=Path('C:/Users/HP/Documents/Unreal Projects/VFXStaging/Content')
++DST=Path('D:/科研学习/codex学习/HarborCity/Content')
++PACKS=('Fantastic_City_Pack','Fantastic_Highlands_Castle')
++R=dict(status='RUNNING',visual='NOT_RUN_NULLRHI',engine=U.SystemLibrary.get_engine_version(),assets=[],missing=[],migration='NOT_RUN')
++def save():(OUT/'author_result.json').write_text(json.dumps(R,ensure_ascii=False,indent=2),'utf-8')
++def digest(path):
++    with path.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
++def inventory():
++    return {p.relative_to(SRC).as_posix():dict(bytes=p.stat().st_size,sha256=digest(p)) for pack in PACKS for p in (SRC/pack).rglob('*') if p.is_file()}
++try:
++    assert Path(U.Paths.project_content_dir()).resolve()==SRC.resolve(),'Must load original staging project'
++    before=inventory();(OUT/'original_inventory.json').write_text(json.dumps(before,indent=2),'utf-8')
++    registry=U.AssetRegistryHelpers.get_asset_registry();registry.search_all_assets(True)
++    paths=['/Game/'+pack for pack in PACKS];registry.scan_paths_synchronous(paths,force_rescan=True)
++    selected=[];excluded=[]
++    for root in paths:
++        for data in registry.get_assets_by_path(root,recursive=True):
++            package=str(data.package_name);parts=package.split('/');kind=str(data.asset_class_path.asset_name)
++            if any(p.lower() in ('maps','build','demo') for p in parts) or kind in ('World','MapBuildDataRegistry'):
++                excluded.append(package);continue
++            selected.append((package,data,kind))
++    assert len(selected)>500 and all(not (DST/pack).exists() for pack in PACKS),'Do not overwrite existing migrated folders'
++    known={row[0] for row in selected}
++    options=U.AssetRegistryDependencyOptions(include_soft_package_references=True,include_hard_package_references=True)
++    for index,(package,data,kind) in enumerate(selected):
++        row=dict(package=package,kind=kind)
++        dependencies=[str(p) for p in registry.get_dependencies(package,options)]
++        row['dependencies']=dependencies
++        for dep in dependencies:
++            if dep.startswith('/Game/') and dep not in known:R['missing'].append(dict(package=package,dependency=dep))
++        obj=data.get_asset();row['loaded']=bool(obj)
++        if not obj:R['missing'].append(dict(package=package,reason='load failed'))
++        if obj and isinstance(obj,U.StaticMesh):
++            box=obj.get_bounding_box();row['bounds_cm']=dict(min=[box.min.x,box.min.y,box.min.z],max=[box.max.x,box.max.y,box.max.z])
++            row['materials']=[str(x.material_interface.get_path_name()) if x.material_interface else None for x in obj.static_materials]
++        R['assets'].append(row)
++        if index%100==0:save();U.SystemLibrary.collect_garbage()
++    R['excluded']=excluded
++    # Missing demo-only dependencies are disclosed before migration, never silently imported.
++    unresolved=[r for r in R['missing'] if r.get('reason') or r.get('dependency') not in excluded]
++    assert not unresolved,'Unresolved package dependencies; inspect report'
++    migration=U.MigrationOptions();migration.prompt=False;migration.ignore_dependencies=True
++    migration.asset_conflict=U.AssetMigrationConflict.SKIP
++    U.AssetToolsHelpers.get_asset_tools().migrate_packages([U.Name(p) for p,_,_ in selected],str(DST),migration)
++    R['migration']='CALLED_ASSETTOOLS'
++    copied=[]
++    for package,_,kind in selected:
++        rel=package.removeprefix('/Game/')+'.uasset';path=DST/rel
++        assert path.exists(),rel
++        copied.append(dict(path=rel,bytes=path.stat().st_size,sha256=digest(path),kind=kind))
++    assert before==inventory(),'Original purchased files changed'
++    R['originals_unchanged']=True;R['copied']=copied
++    R['totals']={pack:dict(assets=sum(x['path'].startswith(pack+'/') for x in copied),bytes=sum(x['bytes'] for x in copied if x['path'].startswith(pack+'/'))) for pack in PACKS}
++    R['status']='PASS'
++except Exception:
++    R['status']='FAIL';R['error']=traceback.format_exc();U.log_error(R['error'])
++save()
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_catalog.py
+@@ -0,0 +1,75 @@
++"""Verify migrated assets in HarborCity and inspect real prefab geometry privately."""
++from pathlib import Path
++import hashlib,json,re,traceback
++import unreal as U
++
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line())
++OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++PRIVATE=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')
++PREVIOUS=json.loads((DOC/'editor/20261002_005915_477_B0_catalog/author_result.json').read_text('utf-8'))
++TOKEN=PREVIOUS['map'].split('/R2_')[1].split('/')[0]
++MAP='/Game/HarborCity/M5VS4/Capital/R2_'+TOKEN+'/L_CapitalR2'
++SOURCE='/Game/HarborCity/M5VS4/Capital/B1_a2068f5977b2/L_CapitalPreview'
++A=U.EditorAssetLibrary;E=U.get_editor_subsystem(U.EditorActorSubsystem);L=U.get_editor_subsystem(U.LevelEditorSubsystem)
++R=dict(status='RUNNING',map=MAP,source_map=SOURCE,prefabs=[],missing=[],source_map_preserved=True,visual='NOT_RUN_NULLRHI')
++def save():(OUT/'author_result.json').write_text(json.dumps(R,ensure_ascii=False,indent=2),'utf-8')
++def vec(v):return [v.x,v.y,v.z]
++def transform(t):
++    q=t.rotation
++    return dict(translation=vec(t.translation),rotation=[q.x,q.y,q.z,q.w],scale=vec(t.scale3d))
++try:
++    migration=json.loads((DOC/'editor/20261002_004739_325_B0_migrate/author_result.json').read_text('utf-8'))
++    assert migration['originals_unchanged']
++    registry=U.AssetRegistryHelpers.get_asset_registry();registry.search_all_assets(True)
++    for row in migration['assets']:
++        if not A.does_asset_exist(row['package']):R['missing'].append(row['package'])
++        for dep in row['dependencies']:
++            if dep.startswith('/Game/') and not A.does_asset_exist(dep):R['missing'].append(dep)
++    assert not R['missing']
++    # Existing Village helper enforces a static-only dependency closure in a new namespace.
++    village='/Game/HarborCity/M5VS2/Environment/Village_'+TOKEN
++    roots=['/Game/Fantastic_Village_Pack/meshes/props/vehicles/SM_PROP_rowboat',
++           '/Game/Fantastic_Village_Pack/meshes/props/vehicles/SM_PROP_rowboat_paddle_01',
++           '/Game/Fantastic_Village_Pack/meshes/buildings/SM_BLD_door_v01_01',
++           '/Game/Fantastic_Village_Pack/meshes/buildings/SM_BLD_door_v02_01',
++           '/Game/Fantastic_Village_Pack/meshes/buildings/SM_BLD_door_v03_01',
++           '/Game/Fantastic_Village_Pack/meshes/buildings/SM_BLD_door_v04_01']
++    vr=PREVIOUS['village_copy']
++    for row in vr['assets'] if 'assets' in vr else []:
++        assert A.does_asset_exist(row['destination'])
++    R['village_copy']=vr;assert vr['status']=='PASS',str(vr)
++    assert A.does_asset_exist(MAP);assert L.load_level(MAP)
++    assert L.save_current_level()
++    world=U.get_editor_subsystem(U.UnrealEditorSubsystem).get_editor_world()
++    gm=world.get_world_settings().get_editor_property('default_game_mode');R['game_mode']=str(gm)
++    if gm:
++        pawn_class=U.get_default_object(gm).get_editor_property('default_pawn_class')
++        pawn=U.get_default_object(pawn_class);mesh=pawn.get_editor_property('mesh')
++        R['hero']=dict(pawn_class=pawn_class.get_path_name(),mesh=mesh.get_skinned_asset().get_path_name(),scale=vec(mesh.get_editor_property('relative_scale3d')),capsule_half_height=pawn.get_editor_property('capsule_component').get_scaled_capsule_half_height())
++    geometry=[]
++    prefabs=[x['package'] for x in migration['assets'] if '/02_BLD_complete/' in x['package'] and x['kind']=='Blueprint']
++    for package in prefabs:
++        actor=E.spawn_actor_from_class(A.load_blueprint_class(package),U.Vector(),U.Rotator(),True);assert actor,package
++        children=actor.get_all_child_actors(True)
++        components=[];lights=0
++        for current in [actor]+list(children):
++            lights+=len(current.get_components_by_class(U.LightComponent))
++            for c in current.get_components_by_class(U.StaticMeshComponent):
++                sm=c.static_mesh
++                if not sm:continue
++                components.append(dict(mesh=sm.get_path_name(),transform=transform(c.get_world_transform()),materials=[c.get_material(i).get_path_name() if c.get_material(i) else None for i in range(c.get_num_materials())],collision=str(c.get_collision_enabled())))
++        center,extent=actor.get_actor_bounds(False,True)
++        item=dict(package=package,center=vec(center),extent=vec(extent),components=components,lights=lights,children=len(children))
++        geometry.append(item);R['prefabs'].append({k:v for k,v in item.items() if k!='components'})
++        assert components,package
++        assert E.destroy_actor(actor);save()
++    geometry_file=PRIVATE/(TOKEN+'_prefab_geometry.json');geometry_file.write_text(json.dumps(geometry,indent=2),'utf-8')
++    R['private_geometry']=str(geometry_file)
++    R['village_root']=village
++    R['loaded_asset_count']=len(migration['assets']);R['status']='PASS'
++    assert L.save_current_level()
++    checkpoint=dict(status='B0_ENGINE_VERIFY_COMPLETE_B1_COPY_ONLY',map=MAP,source_map=SOURCE,private_geometry=str(geometry_file),village_root=village,editor_run=str(OUT),next='Measure door clearances and build the sample area; do not package or change default map before user gate.',D='IMPLEMENTED_NOT_RUNTIME_VERIFIED',full_regression_runs=0)
++    (DOC/'WORK_CHECKPOINT.json').write_text(json.dumps(checkpoint,ensure_ascii=False,indent=2),'utf-8')
++except Exception:
++    R['status']='FAIL';R['error']=traceback.format_exc();U.log_error(R['error'])
++save()
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_measure.py
+@@ -0,0 +1,37 @@
++"""Read-only source geometry probe; purchased vertices remain private."""
++from pathlib import Path
++import unreal as U,json,re,traceback
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line())
++OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++C=json.loads((DOC/'WORK_CHECKPOINT.json').read_text('utf-8'));PRIVATE=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')
++A=U.EditorAssetLibrary;Q=U.GeometryScript_MeshQueries
++R=dict(status='RUNNING',measurements=[])
++def xyz(v):return [v.x,v.y,v.z]
++try:
++    prior=json.loads(Path(C['editor_run'],'author_result.json').read_text('utf-8'))
++    hero=A.load_asset(prior['hero']['mesh']);b=hero.get_imported_bounds()
++    R['hero']=dict(**prior['hero'],imported_origin=xyz(b.origin),imported_extent=xyz(b.box_extent),standing_height_cm=2*b.box_extent.z*prior['hero']['scale'][2])
++    paths=[
++      '/Game/Fantastic_City_Pack/meshes/modular/door/SM_MOD_Door_03_frame',
++      '/Game/Fantastic_City_Pack/meshes/modular/door/SM_MOD_Door_03_01',
++      '/Game/Fantastic_Highlands_Castle/meshes/walls/SM_MOD_wall_small_door_castle',
++      '/Game/Fantastic_Highlands_Castle/meshes/walls/SM_MOD_door_small_castle',
++      C['village_root']+'/meshes/buildings/SM_BLD_door_v01_01',
++      C['village_root']+'/meshes/buildings/SM_BLD_door_v02_01',
++      '/Game/Fantastic_City_Pack/meshes/modular/city_structure/SM_MOD_Bridge_03']
++    private=[]
++    for path in paths:
++        mesh=A.load_asset(path);assert mesh,path
++        d=U.DynamicMesh();assert U.GeometryScript_AssetUtils.copy_mesh_from_static_mesh_v2(mesh,d,U.GeometryScriptCopyMeshFromAssetOptions(),U.GeometryScriptMeshReadLOD(),False)[-1]==U.GeometryScriptOutcomePins.SUCCESS
++        vertices=[];triangles=[]
++        for i in range(getattr(Q,next(n for n in dir(Q) if n.startswith('get_num_vertex')))(d)):
++            v,ok=Q.get_vertex_position(d,i);vertices.append(xyz(v) if ok else None)
++        for i in range(getattr(Q,next(n for n in dir(Q) if n.startswith('get_num_triangle')))(d)):
++            t,ok=Q.get_triangle_indices(d,i)
++            if ok:triangles.append([t.x,t.y,t.z])
++        b=mesh.get_bounding_box();row=dict(path=path,minimum=xyz(b.min),maximum=xyz(b.max),vertices=vertices,triangles=triangles)
++        private.append(row);R['measurements'].append({k:v for k,v in row.items() if k not in ('vertices','triangles')})
++    file=PRIVATE/'scale_geometry.json';file.write_text(json.dumps(private),'utf-8');R['private_geometry']=str(file)
++    R['status']='PASS'
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_sample_author.py
+@@ -0,0 +1,261 @@
++"""Author only the R2 review sample and B1 perimeter in the saved copy."""
++from pathlib import Path
++import json,math,re,sys,traceback
++import unreal as U
++sys.path.insert(0,str(Path(__file__).parent))
++from hc_vs4_capital_layout import elevation,coast,canal_x,build,smooth
++from hc_vs4_r2_materials import instancing_material
++from hc_vs4_r2_scene_polish import polish
++A=U.EditorAssetLibrary;E=U.get_editor_subsystem(U.EditorActorSubsystem);L=U.get_editor_subsystem(U.LevelEditorSubsystem);AT=U.AssetToolsHelpers.get_asset_tools()
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');PLAN=json.loads((P/'sample_plan.json').read_text('utf-8'))
++MAP=PLAN['map'];ROOT=MAP.rsplit('/',1)[0];TAG='HC_VS4_R2_Sample'
++BRIDGES=build()['bridges']
++CAT={p['package']:p for p in json.loads((P/'15dcffc04d60_prefab_geometry.json').read_text('utf-8'))}
++MIG=json.loads((DOC/'editor/20261002_004739_325_B0_migrate/author_result.json').read_text('utf-8'))
++ASSET={r['package'].split('/')[-1]:r['package'] for r in MIG['assets']}
++R=dict(status='RUNNING',map=MAP,buildings=[],groups=0,instances=0,visual='NOT_RUN',source_assets_modified=False)
++cache={};groups={};material_cache={};R['material_usage_copies']=[]
++def load(p):
++    if p not in cache:cache[p]=A.load_asset(p);assert cache[p],p
++    return cache[p]
++def spawn(name,cls,pos=(0,0,0),yaw=0):
++    a=E.spawn_actor_from_class(cls,U.Vector(*pos),U.Rotator(yaw=yaw),False);assert a,name
++    a.set_actor_label('HC_VS4_R2_'+name);a.tags=[U.Name(TAG)];return a
++def inst(path,t,materials=None,collision=True):
++    asset=load(path);mats=materials or [asset.get_material(i).get_path_name() for i in range(asset.get_num_sections(0)) if asset.get_material(i)]
++    key=(path,tuple(mats),collision)
++    if key not in groups:
++        a=spawn('ISM_%03d'%len(groups),U.HCM2InstancedProp);c=a.get_editor_property('instances');c.set_static_mesh(asset)
++        c.set_collision_profile_name('BlockAll' if collision else 'NoCollision')
++        for i,mat in enumerate(mats):
++            if mat:c.set_material(i,instancing_material(load(mat),ROOT,material_cache,R['material_usage_copies']))
++        groups[key]=c
++    groups[key].add_instance(t,False);R['instances']+=1
++def asset(name,pos,scale=1,yaw=0,collision=True):
++    path=ASSET.get(name,name);s=(scale,scale,scale) if isinstance(scale,(float,int)) else scale
++    inst(path,U.Transform(location=U.Vector(*[v*100 for v in pos]),rotation=U.Rotator(yaw=yaw),scale=U.Vector(*s)),collision=collision)
++def ground(x,y):
++    z=elevation(x,y)
++    pad=max(abs(x+83)-5.5,abs(y-74)-5.5,0);vw=1-smooth(pad/2)
++    if vw:z=z*(1-vw)+elevation(-83,74)*vw
++    nearest=None
++    for b in PLAN['buildings']:
++        a=math.radians(-b['yaw']);dx=x-b['origin'][0];dy=y-b['origin'][1];px=math.cos(a)*dx-math.sin(a)*dy;py=math.sin(a)*dx+math.cos(a)*dy
++        name=b['prefab'];sx,sy=(16,8) if '16x8' in name else (8,8) if '8x8' in name else (4,4) if '4x4' in name else (16,12)
++        d=max(-px,px-sx,-py,py-sy,0)
++        if nearest is None or d<nearest[0]:nearest=(d,b['ground_z_m'])
++    # Neighboring falloffs must not overwrite the parcel containing this vertex.
++    if nearest:
++        w=1-smooth((nearest[0]-.9)/1.8);z=z*(1-w)+nearest[1]*w
++    return z
++def import_surface(name,vertices,faces,material,collision=True):
++    src=P/(name+'.obj');lines=['# R2 original terrain or paving geometry; cm, not architecture']
++    lines+=['v %.5f %.5f %.5f'%(x,-y,z) for x,y,z in vertices]
++    lines+=['vt %.5f %.5f'%(x/350,y/350) for x,y,z in vertices]
++    lines+=['f '+' '.join('%d/%d'%(i+1,i+1) for i in reversed(t)) for t in faces]
++    src.write_text('\n'.join(lines)+'\n','utf-8')
++    task=U.AssetImportTask();task.filename=str(src);task.destination_path=ROOT+'/Geometry';task.destination_name=name;task.factory=U.FbxFactory();task.automated=True;task.replace_existing=True;task.save=False
++    opts=U.FbxImportUI();opts.automated_import_should_detect_type=False;opts.import_mesh=True;opts.import_as_skeletal=False;opts.mesh_type_to_import=U.FBXImportType.FBXIT_STATIC_MESH;opts.original_import_type=U.FBXImportType.FBXIT_STATIC_MESH;opts.import_materials=False;opts.import_textures=False;opts.import_animations=False
++    data=opts.static_mesh_import_data;data.combine_meshes=True;data.auto_generate_collision=False;data.generate_lightmap_u_vs=False;data.build_nanite=False;data.import_mesh_lo_ds=False;data.convert_scene=False;data.convert_scene_unit=False;data.import_uniform_scale=1
++    task.options=opts;AT.import_asset_tasks([task]);sm=A.load_asset(ROOT+'/Geometry/'+name);assert sm
++    sm.get_editor_property('body_setup').set_editor_property('collision_trace_flag',U.CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE)
++    sm.set_material(0,material);assert A.save_loaded_asset(sm,False)
++    inst(sm.get_path_name(),U.Transform(),[material.get_path_name()],collision)
++def ribbon(name,points,width,material):
++    vertices=[];faces=[]
++    for i,(x,y) in enumerate(points):
++        a=points[max(0,i-1)];b=points[min(len(points)-1,i+1)];dx=b[0]-a[0];dy=b[1]-a[1];ln=max(.001,math.hypot(dx,dy))
++        for side in (1,-1):
++            px=x-dy/ln*width/2*side;py=y+dx/ln*width/2*side;z=ground(px,py)+.045
++            for bridge in BRIDGES:
++                bdx=abs(px-bridge['x']);bdy=abs(py-bridge['y'])
++                if bdx<26 and bdy<7:z=max(z,elevation(bridge['x'],bridge['y'],False)+1.49-smooth((bdx-12)/6)-.4*smooth((bdx-18)/8))
++            vertices.append((px*100,py*100,z*100))
++        omit=any(abs(x-b['x'])<18 and abs(y-b['y'])<7 for b in BRIDGES)
++        if i and not omit:k=i*2;faces.extend(((k-2,k-1,k+1),(k-2,k+1,k)))
++    import_surface(name,vertices,faces,material)
++def disc(name,x,y,r,z,material,collision=True):
++    v=[(x*100,y*100,z*100)]+[((x+r*math.cos(i*math.tau/96))*100,(y+r*math.sin(i*math.tau/96))*100,z*100) for i in range(96)]
++    import_surface(name,v,[(0,i+1,(i+1)%96+1) for i in range(96)],material,collision)
++def mark(pack,pos,yaw):
++    a=spawn('ScaleDoor_'+pack,U.TargetPoint,[v*100 for v in pos],yaw);a.tags=[U.Name(TAG),U.Name('R2Scale_'+pack)]
++
++def glow_material(name,color):
++    path=ROOT+'/Materials/'+name;ME=U.MaterialEditingLibrary
++    mat=load(path) if A.does_asset_exist(path) else AT.create_asset(name,ROOT+'/Materials',U.Material,U.MaterialFactoryNew())
++    ME.delete_all_material_expressions(mat);mat.set_editor_property('two_sided',True)
++    c=ME.create_material_expression(mat,U.MaterialExpressionConstant3Vector);c.constant=U.LinearColor(*color,1)
++    ME.connect_material_property(c,'',U.MaterialProperty.MP_BASE_COLOR);ME.connect_material_property(c,'',U.MaterialProperty.MP_EMISSIVE_COLOR)
++    ME.set_base_material_usage(mat,U.MaterialUsage.MATUSAGE_INSTANCED_STATIC_MESHES,True);ME.recompile_material(mat);assert A.save_loaded_asset(mat,False);return mat
++
++def road_curbs(r,material):
++    vertices=[];faces=[];width=r['width_m']+7;points=r['points']
++    for side in (-1,1):
++        start=len(vertices)
++        for i,(x,y) in enumerate(points):
++            a=points[max(0,i-1)];b=points[min(len(points)-1,i+1)];dx,dy=b[0]-a[0],b[1]-a[1];ln=max(.001,math.hypot(dx,dy))
++            for d,h in ((width/2-.1,.04),(width/2-.1,.18),(width/2+.1,.18),(width/2+.1,.04)):
++                px=x-dy/ln*d*side;py=y+dx/ln*d*side;vertices.append((px*100,py*100,(ground(px,py)+h)*100))
++            if i and not any(abs(x-b['x'])<26 and abs(y-b['y'])<9 for b in BRIDGES):
++                k=start+i*4
++                for j in range(3):faces.extend(((k-4+j,k-3+j,k+j+1),(k-4+j,k+j+1,k+j)))
++    import_surface('Curbs_'+r['id'],vertices,faces,material)
++def fountain_water():
++    ME=U.MaterialEditingLibrary;path=ROOT+'/Materials/M_FountainWater'
++    mat=load(path) if A.does_asset_exist(path) else AT.create_asset('M_FountainWater',ROOT+'/Materials',U.Material,U.MaterialFactoryNew())
++    ME.delete_all_material_expressions(mat);mat.set_editor_property('blend_mode',U.BlendMode.BLEND_TRANSLUCENT);mat.set_editor_property('two_sided',True)
++    def node(cls,**kw):
++        n=ME.create_material_expression(mat,cls)
++        for k,v in kw.items():n.set_editor_property(k,v)
++        return n
++    color=node(U.MaterialExpressionConstant3Vector,constant=U.LinearColor(.035,.32,.47,1))
++    alpha=node(U.MaterialExpressionConstant,r=.55);rough=node(U.MaterialExpressionConstant,r=.2)
++    ME.connect_material_property(color,'',U.MaterialProperty.MP_BASE_COLOR);ME.connect_material_property(alpha,'',U.MaterialProperty.MP_OPACITY);ME.connect_material_property(rough,'',U.MaterialProperty.MP_ROUGHNESS)
++    coord=node(U.MaterialExpressionTextureCoordinate,u_tiling=8.,v_tiling=8.)
++    panner=node(U.MaterialExpressionPanner,speed_x=.12,speed_y=-.8);ME.connect_material_expressions(coord,'',panner,'Coordinate')
++    zero=node(U.MaterialExpressionConstant,r=0.);uvw=node(U.MaterialExpressionAppendVector);ME.connect_material_expressions(panner,'',uvw,'A');ME.connect_material_expressions(zero,'',uvw,'B')
++    noise=node(U.MaterialExpressionNoise,scale=1.,levels=1,output_min=.15,output_max=.8);ME.connect_material_expressions(uvw,'',noise,'Position')
++    glow=node(U.MaterialExpressionMultiply);ME.connect_material_expressions(color,'',glow,'A');ME.connect_material_expressions(noise,'',glow,'B');ME.connect_material_property(glow,'',U.MaterialProperty.MP_EMISSIVE_COLOR)
++    ME.set_base_material_usage(mat,U.MaterialUsage.MATUSAGE_INSTANCED_STATIC_MESHES,True);ME.recompile_material(mat);assert A.save_loaded_asset(mat,False)
++    disc('FountainWaterBasin',-10,0,1.65,6.89,mat,False)
++    verts=[];faces=[]
++    for jet in range(8):
++        angle=jet*math.tau/8;start=len(verts)
++        for k in range(33):
++            t=k/32;r=.52+1.08*t;z=7.7+1.8*t-2.61*t*t
++            for j in range(8):
++                ph=j*math.tau/8;rr=r+.032*math.cos(ph)
++                verts.append(((-10+rr*math.cos(angle))*100,rr*math.sin(angle)*100,(z+.032*math.sin(ph))*100))
++        for k in range(32):
++            for j in range(8):
++                a=start+k*8+j;b=start+k*8+(j+1)%8;faces.extend(((a,b,b+8),(a,b+8,a+8)))
++    import_surface('FountainWaterJets',verts,faces,mat,False)
++try:
++    assert MAP.startswith('/Game/HarborCity/M5VS4/Capital/R2_');assert L.load_level(MAP)
++    actors=list(E.get_all_level_actors());land=next(a for a in actors if a.get_class().get_name()=='Landscape')
++    grass=land.get_editor_property('landscape_material')
++    road=load(ROOT+'/Geometry/Road_market_port').get_material(0) if A.does_asset_exist(ROOT+'/Geometry/Road_market_port') else next(a for a in actors if a.get_actor_label().endswith('Road_market_port')).static_mesh_component.get_material(0)
++    for a in actors:
++        label=a.get_actor_label();remove=TAG in list(map(str,a.tags)) or label.startswith('HC_VS4_B1_Road_') or 'BridgePlaceholder_' in label
++        if label.startswith('HC_VS4_B1_B1_Block_'):
++            p=a.get_actor_location();remove=any(math.dist((p.x/100,p.y/100),b['center'])<23 for b in PLAN['buildings']) or (-75<p.x/100<110 and -38<p.y/100<123)
++        remove=remove or label in ('HC_VS4_B1_Landmark_plaza','HC_VS4_B1_Landmark_market','HC_VS4_B1_Landmark_canal','HC_VS4_B1_Landmark_castle')
++        if remove:assert E.destroy_actor(a)
++    world=U.get_editor_subsystem(U.UnrealEditorSubsystem).get_editor_world()
++    # Flatten actual building parcels with a narrow soil transition, preserving district heights.
++    heights=[round(32768+ground(-250+x*500/504,-225+y*450/504)*128) for y in range(505) for x in range(505)]
++    assert E.destroy_actor(land);assert U.HCM5VS4WorldAuthoring.create_capital_landscape(world,grass,heights)
++    for r in PLAN['roads']:ribbon('Road_'+r['id'],r['points'],r['width_m']+(7 if r['id'] in PLAN['sample_road_ids'] else 0),road)
++    for r in PLAN['roads']:
++        if r['id'] in PLAN['sample_road_ids']:road_curbs(r,load(ASSET['MI_MOD_stoneStack_city']))
++    disc('PlazaPaving',-10,0,23,5.07,road)
++    roofmats=[ASSET['MI_MOD_rooftiles_city_01_01'],ASSET['MI_MOD_rooftiles_city_01_02']]
++    for name,color in (('Sage',(.035,.16,.12,1)),('Ochre',(.20,.15,.045,1))):
++        path=ROOT+'/Materials/MI_Roof_'+name
++        mat=load(path) if A.does_asset_exist(path) else A.duplicate_asset(ASSET['MI_MOD_rooftiles_city_02_01'],path)
++        # UE 5.8.2's setter always returns false; verify the stored value instead.
++        U.MaterialEditingLibrary.set_material_instance_vector_parameter_value(mat,'Base Color Tint',U.LinearColor(*color))
++        actual=U.MaterialEditingLibrary.get_material_instance_vector_parameter_value(mat,'Base Color Tint')
++        assert max(abs(x-y) for x,y in zip((actual.r,actual.g,actual.b,actual.a),color))<.00001
++        U.MaterialEditingLibrary.update_material_instance(mat);assert A.save_loaded_asset(mat,False);roofmats.append(path)
++    for b in PLAN['buildings']:
++        p=CAT[b['prefab']];root=U.Transform(location=U.Vector(b['origin'][0]*100,b['origin'][1]*100,b['ground_z_m']*100),rotation=U.Rotator(yaw=b['yaw']))
++        for c in p['components']:
++            t=c['transform'];local=U.Transform(location=U.Vector(*t['translation']),rotation=U.Quat(*t['rotation']).rotator(),scale=U.Vector(*t['scale']))
++            if '_Int_' in b['prefab'] and '/door/SM_MOD_Door_03_0' in c['mesh'] and t['translation'][2]<30:
++                angle=local.rotation.rotator();angle.yaw+=75;local.rotation=angle.quaternion()
++            combined=U.MathLibrary.compose_transforms(local,root);mats=list(c['materials'])
++            mats=[roofmats[b['roof_variant']] if mat and 'MI_MOD_rooftiles_city' in mat else mat for mat in mats]
++            inst(c['mesh'],combined,mats,c['collision']!='CollisionEnabled.NO_COLLISION')
++        # Every shop entrance gets a grouped sign, lantern and planter, away from the carriageway.
++        a=math.radians(b['yaw']);fx,fy=b['front'];z=b['ground_z_m'];side=(-math.sin(a),math.cos(a))
++        asset('SM_PROP_sign_city_%02d'%(1+len(R['buildings'])%14),(fx,fy,z+2.7),.72,b['yaw']+90,False)
++        asset('SM_PROP_lantern_city_03',(fx+side[0]*1.25,fy+side[1]*1.25,z+2.8),.8,b['yaw']+90,False)
++        flower=ASSET['SM_ENV_flower_city_01'];asset(flower,(fx+side[0]*1.4,fy+side[1]*1.4,z+.04),.65,b['yaw'],False)
++        R['buildings'].append(dict(id=b['id'],prefab=b['prefab'],shape=b['shape'],roof_variant=b['roof_variant'],corners_cm=[round((ground(x,y)-z)*100,4) for x,y in b['corners']],door_faces_street=True))
++    # Three real masonry bridge modules, with their deck at street elevation.
++    for i,b in enumerate(BRIDGES):
++        x,y=b['x'],b['y'];deck=elevation(x,y,False)+1.49
++        asset('SM_MOD_Bridge_03',(x,y,deck-14),1,90)
++        for side in (-1,1):asset('SM_MOD_Bridge_03_extension',(x+side*12,y,deck-14),1,-side*90)
++        for side in (-1,1):
++            for start in (0,12):asset('SM_MOD_Bridge_03_railing',(x+start,y+side*4,deck),1,90)
++            for end in (-1,1):asset('SM_MOD_Bridge_03_railing_extension_'+('L' if side*end>0 else 'R'),(x+end*12,y+side*4,deck+.8),1,-end*90)
++    # Castle silhouette uses source tower segments and roof modules, not whitebox primitives.
++    s=.97
++    for i,(x,y,levels) in enumerate(((-17,-147,3),(-37,-137,2),(3,-137,2),(-37,-162,2),(3,-162,2))):
++        z=ground(x,y);asset('SM_MOD_tower_segment_base_castle',(x,y,z),s)
++        for j in range(levels):asset('SM_MOD_tower_segment_window_castle',(x,y,z+(j+1)*6*s),s)
++        asset('SM_MOD_tower_segment_top_deco_castle',(x,y,z+(levels+1)*6*s),s)
++        asset('SM_MOD_tower_roof_castle',(x,y,z+(levels+1)*6*s),s)
++    for x in range(-31,1,4):asset('SM_MOD_wall_big_windows_castle',(x,-155,34),s)
++    # Terrain ring has a submerged, curved shoreline. Its inner edge exactly meets B1.
++    vertices=[];faces=[];nx=201;ys=sorted(set(list(range(-900,901,10))+[-225,225]));ny=len(ys)
++    for j,y in enumerate(ys):
++        for i in range(nx):
++            x=-1000+i*10;xx=max(-250,min(250,x));yy=max(-225,min(225,y));z=elevation(xx,yy)
++            d=max(abs(x)/950,abs(y)/850);z=z*(1-smooth((d-.68)/.25))-8*smooth((d-.68)/.25)
++            if x>coast(y)-8:z=-6
++            vertices.append((x*100,y*100,z*100))
++    for j in range(ny-1):
++        for i in range(nx-1):
++            x=-1000+i*10;y=ys[j]
++            if -250<=x<250 and -225<=y<225:continue
++            a=j*nx+i;faces.extend(((a,a+1,a+nx+1),(a,a+nx+1,a+nx)))
++    import_surface('OuterCoastTerrain',vertices,faces,grass)
++    for i,(x,y,yaw) in enumerate(((-390,-310,15),(-570,-130,75),(-550,250,140),(-280,390,210),(60,-440,10))):
++        asset('SM_ENV_mountain_city_01',(x,y,-20),2.4,yaw,False)
++    for i in range(48):
++        a=i*math.tau/48;x=-20+250*math.cos(a);y=228*math.sin(a)
++        if x<170:asset('SM_ENV_cliff_castle_0'+str(1+i%2),(x,y,ground(max(-249,min(249,x)),max(-224,min(224,y)))-5),2.2,i*29)
++    # Source trees retain their authored wind materials.
++    for i in range(90):
++        a=i*2.399963;x=-30+(285+i%9*8)*math.cos(a);y=(255+i%7*8)*math.sin(a)
++        if x<150:asset('SM_ENV_tree_castle_0'+str(1+i%2),(x,y,elevation(max(-250,min(250,x)),max(-225,min(225,y)))),.8+i%3*.12,i*53)
++    crystal=glow_material('M_BlueCrystal',(.04,.28,.65))
++    for r in PLAN['roads']:
++        if r['id'] not in PLAN['sample_road_ids']:continue
++        d=0;last=r['points'][0];idx=0
++        for p in r['points'][1:]:
++            d+=math.dist(last,p);last=p
++            if d<8 or p[0]>110:continue
++            d=0;idx+=1;x,y=p;z=ground(x,y);side=-1 if idx%2 else 1
++            asset('SM_PROP_barrel_city_01',(x+side*4.9,y,z),.8,idx*47)
++            asset('SM_PROP_crate_city_01' if 'SM_PROP_crate_city_01' in ASSET else 'SM_PROP_barrel_city_02',(x+side*5.9,y+.7,z),.7,idx*31)
++            if idx%2:
++                asset('SM_PROP_lantern_city_01',(x+side*4.6,y+1.5,z),1)
++                inst('/Game/HarborCity/M5VS3/Combat/SM_MagicBolt',U.Transform(location=U.Vector((x+side*4.6)*100,(y+1.5)*100,(z+3.22)*100),rotation=U.Rotator(pitch=90),scale=U.Vector(1,2.5,2.5)),[crystal.get_path_name()],False)
++                light=spawn('StreetLight_'+r['id']+'_'+str(idx),U.PointLight,((x+side*4.6)*100,(y+1.5)*100,(z+3.1)*100));c=light.point_light_component;c.set_mobility(U.ComponentMobility.MOVABLE);c.set_intensity(0);c.set_attenuation_radius(1000);c.set_cast_shadows(False);c.set_light_color(U.LinearColor(.45,.72,1))
++                light.tags=[U.Name(TAG),U.Name('HC_VS2_Rev2_NightLight'),U.Name('HC_VS2_Rev2_OnIntensity=35')]
++    for i,(x,y) in enumerate(((-23,79),(-18,82),(-12,86))):asset('SM_PROP_marketstall_city_0'+str(1+i%2),(x,y,ground(x,y)),1,20+i*20)
++    asset('SM_PROP_bulletinboard_city_01',(-21,-17,ground(-21,-17)),1,20)
++    asset('SM_PROP_statue_base_city_02',(-10,0,5.07),1)
++    asset('SM_PROP_statue_city_01',(-10,0,7.07),.8)
++    for a in E.get_all_level_actors():
++        if a.get_actor_label().startswith('HC_VS4_B1_Light_'):
++            a.tags=[U.Name('HC_VS2_Rev2_NightLight'),U.Name('HC_VS2_Rev2_OnIntensity=25')]
++        if isinstance(a,U.HCM5VS2CornerTimeDirector):a.set_editor_property('map_sky_intensity_override',U.Vector(1.1,1.35,1.5))
++    fountain_water()
++    rune=glow_material('M_PlazaRune',(.025,.13,.19))
++    inst('/Game/HarborCity/M5VS3/Combat/SM_RuneBolt',U.Transform(location=U.Vector(-1000,0,509),rotation=U.Rotator(pitch=90),scale=U.Vector(18,18,18)),[rune.get_path_name()],False)
++    city=next(b for b in PLAN['buildings'] if b['shape']=='16x8' and b['street']=='plaza')
++    mark('City',(*city['front'],city['ground_z_m']+.05),city['yaw']+180)
++    asset('SM_MOD_wall_small_door_castle',(-17,-139,34),.97)
++    mark('Castle',(-17,-138.7,34),90)
++    vh=json.loads((P/'village_house_selection.json').read_text('utf-8'));vr=vh['destination'];vz=elevation(-83,74)
++    root=U.Transform(location=U.Vector(-8300,7400,vz*100),scale=U.Vector(1.12,1.12,1.12))
++    for c in vh['house']['components']:
++        if not c.get('component_class_allowlist_pass') or not c.get('static_mesh') or c['static_mesh']=='None':continue
++        t=c['template_to_actor_transform'];local=U.Transform(location=U.Vector(*t['location_cm']),rotation=U.Quat(*t['quaternion_xyzw']).rotator(),scale=U.Vector(*t['scale']))
++        sm=c['static_mesh'].replace('/Game/Fantastic_Village_Pack',vr);mats=[m.replace('/Game/Fantastic_Village_Pack',vr) for m in c['effective_materials']]
++        inst(sm,U.MathLibrary.compose_transforms(local,root),mats,c['collision_enabled']!=0)
++    mark('Village',(-83,74+2.99*1.12,vz),90)
++    village=json.loads((DOC/'WORK_CHECKPOINT.json').read_text('utf-8'))['village_root']
++    asset(village+'/meshes/props/vehicles/SM_PROP_rowboat',(181,63,1.0),1.12,25)
++    polish(ROOT,PLAN,R)
++    assert L.save_current_level()
++    R.update(status='PASS',groups=len(groups),appearance_count=len(set((b['prefab'],b['roof_variant']) for b in R['buildings'])),shape_count=len(set(b['shape'] for b in R['buildings'])))
++    checkpoint=json.loads((DOC/'WORK_CHECKPOINT.json').read_text('utf-8'));checkpoint.update(status='SAMPLE_ENGINE_AUTHORED_NOT_VISUAL_REVIEWED',sample_author_run=str(OUT),private_plan=str(P/'sample_plan.json'));(DOC/'WORK_CHECKPOINT.json').write_text(json.dumps(checkpoint,indent=2),'utf-8')
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_roof_audit.py
+@@ -0,0 +1,40 @@
++"""Private roof projection export from the saved map, never public asset data."""
++from pathlib import Path
++import unreal as U,json,re,traceback
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');C=json.loads((DOC/'WORK_CHECKPOINT.json').read_text('utf-8'));R=dict(status='RUNNING',map=C['map'])
++Q=U.GeometryScript_MeshQueries
++def xyz(p):return [p.x,p.y,p.z]
++try:
++    assert U.get_editor_subsystem(U.LevelEditorSubsystem).load_level(C['map'])
++    geometry={};instances=[]
++    for a in U.get_editor_subsystem(U.EditorActorSubsystem).get_all_level_actors():
++        if 'HC_VS4_R2_Sample' not in list(map(str,a.tags)):continue
++        for c in a.get_components_by_class(U.InstancedStaticMeshComponent):
++            sm=c.static_mesh
++            if not sm or '/Fantastic_City_Pack/meshes/modular/roof/' not in sm.get_path_name():continue
++            path=sm.get_path_name()
++            if path not in geometry:
++                d=U.DynamicMesh();assert U.GeometryScript_AssetUtils.copy_mesh_from_static_mesh_v2(sm,d,U.GeometryScriptCopyMeshFromAssetOptions(),U.GeometryScriptMeshReadLOD(),False)[-1]==U.GeometryScriptOutcomePins.SUCCESS
++                verts=[];tris=[]
++                for i in range(getattr(Q,next(n for n in dir(Q) if n.startswith('get_num_vertex')))(d)):
++                    p,ok=Q.get_vertex_position(d,i);verts.append(xyz(p) if ok else None)
++                for i in range(getattr(Q,next(n for n in dir(Q) if n.startswith('get_num_triangle')))(d)):
++                    t,ok=Q.get_triangle_indices(d,i)
++                    if ok:tris.append([t.x,t.y,t.z])
++                geometry[path]=dict(vertices=verts,triangles=tris)
++            for i in range(c.get_instance_count()):
++                t=c.get_instance_transform(i,True);q=t.rotation
++                instances.append(dict(mesh=path,translation=xyz(t.translation),rotation=[q.x,q.y,q.z,q.w],scale=xyz(t.scale3d)))
++    file=P/(OUT.name+'_saved_roof_geometry.json');file.write_text(json.dumps(dict(map=C['map'],meshes=geometry,instances=instances)),'utf-8')
++    (P/'roof_selection.json').write_text(json.dumps(dict(file=str(file),run=str(OUT))),'utf-8')
++    R['roof_parameters']=[]
++    for name in ('01_01','01_02','02_01','02_02'):
++        mat=U.EditorAssetLibrary.load_asset('/Game/Fantastic_City_Pack/materials/MI_MOD_rooftiles_city_'+name)
++        params={}
++        for n in U.MaterialEditingLibrary.get_vector_parameter_names(mat):
++            col=U.MaterialEditingLibrary.get_material_instance_vector_parameter_value(mat,n);params[str(n)]=[col.r,col.g,col.b,col.a]
++        R['roof_parameters'].append(dict(name=name,parameters=params))
++    R.update(status='PASS',mesh_count=len(geometry),instances=len(instances),private_file=str(file))
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_sample_plan.py
+@@ -0,0 +1,110 @@
++"""Street-fronted sample parcels. Geometry and derivatives stay local."""
++from pathlib import Path
++import json,math,sys
++import numpy as np
++from PIL import Image,ImageDraw
++sys.path.insert(0,str(Path(__file__).parent))
++from hc_vs4_capital_layout import build,curve,elevation,canal_x
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')
++prefabs=json.loads((P/'15dcffc04d60_prefab_geometry.json').read_text('utf-8'))
++lookup={p['package'].split('/')[-1]:p for p in prefabs}
++roads=build()['roads']
++roads.append(dict(id='tavern_street',width_m=6,points=curve([(-15,27),(-29,49),(-37,70),(-28,91),(-5,99),(14,83)])))
++sample_roads=[r for r in roads if r['id'] in ('central_bridge','tavern_street','market_port')]
++RES=4;LO=(-100,-70);SZ=(1060,880)
++def pix(p):return ((p[0]-LO[0])*RES,(p[1]-LO[1])*RES)
++def poly(points):
++    im=Image.new('1',SZ);ImageDraw.Draw(im).polygon([pix(p) for p in points],fill=1);return np.asarray(im).copy()
++def circle(center,r):
++    im=Image.new('1',SZ);x,y=pix(center);ImageDraw.Draw(im).ellipse((x-r*RES,y-r*RES,x+r*RES,y+r*RES),fill=1);return np.asarray(im).copy()
++def ribbon(points,width):
++    im=Image.new('1',SZ);ImageDraw.Draw(im).line([pix(p) for p in points],fill=1,width=round(width*RES),joint='curve');return np.asarray(im).copy()
++roadmask=np.zeros((SZ[1],SZ[0]),bool)
++for r in roads:roadmask|=ribbon(r['points'],r['width_m']+1)
++plazamask=circle((-10,0),23)
++canalmask=ribbon([(canal_x(y),y) for y in range(-70,150)],19)
++zone=circle((-10,0),54)
++for r in sample_roads:
++    pts=[p for p in r['points'] if p[0]<115]
++    zone|=ribbon(pts,60)
++zone&=~canalmask
++occupied=np.zeros_like(zone);footprints=np.zeros_like(zone);buildings=[]
++names=['BP_BLD_03_16x8_Ext_01','BP_BLD_03_16x8_Ext_03','BP_BLD_03_16x8_Ext_06','BP_BLD_03_16x8_Ext_09',
++       'BP_BLD_03_8x8_Ext_01','BP_BLD_03_L_Ext_01','BP_BLD_03_L_Ext_06','BP_BLD_03_T_Ext_01',
++       'BP_BLD_03_16x8_Ext_04','BP_BLD_03_4x4_Ext_01','BP_BLD_03_16x8_Int_Bar_01','BP_BLD_03_16x8_Int_Bakery_01']
++def points_at(road,spacing=3):
++    pts=road['points'];acc=0
++    for a,b in zip(pts,pts[1:]):
++        acc+=math.dist(a,b)
++        if acc>=spacing:
++            acc=0;yield b,math.atan2(b[1]-a[1],b[0]-a[0])
++def place(name,front,yaw,road,streetpoint):
++    global occupied,footprints
++    p=lookup[name];a=math.radians(yaw);co,si=math.cos(a),math.sin(a)
++    # Authored City front doors are on -X; select a real ground-floor door.
++    doors=[c for c in p['components'] if 'SM_MOD_Door_03_frame.' in c['mesh'] and c['transform']['translation'][2]<30]
++    doors=[d for d in doors if d['transform']['translation'][0]<100]
++    if not doors:return False
++    door=doors[0]['transform']['translation'];origin=(front[0]-(co*door[0]-si*door[1])/100,front[1]-(si*door[0]+co*door[1])/100)
++    def world(x,y):return [origin[0]+(co*x-si*y)/100,origin[1]+(si*x+co*y)/100]
++    c=p['center'];e=p['extent'];box=[world(c[0]+sx*(e[0]+20),c[1]+sy*(e[1]+20)) for sx,sy in ((-1,-1),(1,-1),(1,1),(-1,1))]
++    mask=poly(box)
++    if (mask&(occupied|roadmask|plazamask|canalmask)).any() or np.count_nonzero(mask&zone)<np.count_nonzero(mask)*.94:return False
++    center=world(c[0],c[1])
++    variants=[v for v in range(4 if 'service' in road else 3) if not any(b['prefab']==p['package'] and b['roof_variant']==v and math.dist(center,b['center'])<25 for b in buildings)]
++    if not variants:return False
++    sx,sy=(1600,800) if '16x8' in name else (800,800) if '8x8' in name else (400,400) if '4x4' in name else (1600,1200)
++    footprint=[world(0,0),world(sx,0),world(sx,sy),world(0,sy)]
++    occupied|=mask;footprints|=poly(footprint)
++    buildings.append(dict(id=f'R2_B{len(buildings)+1:03}',prefab=p['package'],origin=list(origin),yaw=yaw,scale=1.0,center=center,
++        front=list(front),street=road,street_point=list(streetpoint),corners=footprint,shape='16x8' if '16x8' in name else '8x8' if '8x8' in name else '4x4' if '4x4' in name else 'L' if '_L_' in name else 'T',
++        ground_z_m=elevation(*front,False),envelope=box,roof_variant=variants[len(buildings)%len(variants)]))
++    return True
++# Plaza edges first, then both sides of the curved market and bridge streets.
++for group in ([n for n in names if '4x4' not in n and '8x8' not in n],[n for n in names if '8x8' in n],[n for n in names if '4x4' in n]):
++    for i in range(96):
++        a=i*math.tau/96;front=(-10+27*math.cos(a),27*math.sin(a));yaw=math.degrees(a)
++        for j in range(len(group)):
++            if place(group[(i+j)%len(group)],front,yaw,'plaza',(-10+22*math.cos(a),22*math.sin(a))):break
++    for r in sample_roads:
++        for i,(point,tangent) in enumerate(points_at(r,1)):
++            if point[0]>104 or math.dist(point,(-10,0))<25:continue
++            for side in (-1,1):
++                outward=tangent+side*math.pi/2;offset=r['width_m']/2+4
++                front=(point[0]+math.cos(outward)*offset,point[1]+math.sin(outward)*offset)
++                for j in range(len(group)):
++                    if place(group[(i+j)%len(group)],front,math.degrees(outward),r['id'],point):break
++# Rear parcels face service lanes. They fill the same original review boundary.
++rear_names=['BP_BLD_03_8x8_Ext_01','BP_BLD_03_4x4_Ext_01']
++rear_roads=[]
++ring=[(-10+53*math.cos(i*math.tau/180),53*math.sin(i*math.tau/180)) for i in range(181)]
++rear_roads.append(dict(id='plaza_service_lane',width_m=2.4,points=ring))
++for i in range(360):
++    a=i*math.tau/360;front=(-10+50.2*math.cos(a),50.2*math.sin(a));street=(-10+53*math.cos(a),53*math.sin(a))
++    for name in rear_names:
++        if place(name,front,math.degrees(a)+180,'plaza_service_lane',street):break
++for r in sample_roads:
++    for side in (-1,1):
++        pts=[];dense=dict(r);dense['points']=[p for a,b in zip(r['points'],r['points'][1:]) for p in (a,((a[0]+b[0])/2,(a[1]+b[1])/2))]+[r['points'][-1]];stations=list(points_at(dense,.4))
++        for point,tangent in stations:
++            outward=tangent+side*math.pi/2
++            pts.append((point[0]+math.cos(outward)*29,point[1]+math.sin(outward)*29))
++            if point[0]>94 or math.dist(point,(-10,0))<48:continue
++            front=(point[0]+math.cos(outward)*26,point[1]+math.sin(outward)*26)
++            for name in rear_names:
++                if place(name,front,math.degrees(outward)+180,r['id']+'_service_'+str(side),pts[-1]):break
++        rear_roads.append(dict(id=r['id']+'_service_'+str(side),width_m=2.4,points=pts))
++roads.extend(rear_roads)
++district=zone&~(roadmask|plazamask|canalmask)
++coverage=np.count_nonzero(footprints&district)/np.count_nonzero(district)
++data=dict(status='PLAN_NOT_ENGINE_EVIDENCE',map='/Game/HarborCity/M5VS4/Capital/R2_15dcffc04d60/L_CapitalR2',scales=dict(City=1.0,Castle=.97,Village=1.12),
++    buildings=buildings,roads=roads,sample_road_ids=[r['id'] for r in sample_roads],coverage_method='0.25m raster of conservative base footprints; final roof projection still required',
++    provisional_coverage=coverage,district_area_m2=np.count_nonzero(district)/RES**2,buildings_area_m2=np.count_nonzero(footprints&district)/RES**2,
++    views=build()['viewpoints'],gate_phase=True)
++(P/'sample_plan.json').write_text(json.dumps(data,indent=2),'utf-8')
++rgb=np.full((*zone.shape,3),245,np.uint8);rgb[zone]=[208,226,211];rgb[roadmask]=[126,129,136];rgb[plazamask]=[211,204,186];rgb[canalmask]=[90,166,204];rgb[footprints]=[145,69,80]
++im=Image.fromarray(rgb);draw=ImageDraw.Draw(im)
++for b in buildings:
++    x,y=pix(b['center']);draw.text((x,y),b['id'][3:],fill='white')
++im.save(P/'sample_plan_diagnostic.png')
++print(json.dumps(dict(buildings=len(buildings),appearances=len(set(b['prefab'] for b in buildings)),shapes=len(set(b['shape'] for b in buildings)),coverage=coverage,area=data['district_area_m2'])))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_scale_analyze.py
+@@ -0,0 +1,29 @@
++"""Local-only geometry measurements and diagnostic projections."""
++from pathlib import Path
++import json,numpy as np
++import matplotlib
++matplotlib.use('Agg')
++import matplotlib.pyplot as plt
++from matplotlib.collections import PolyCollection
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')
++rows=json.loads((P/'scale_geometry.json').read_text('utf-8'))
++fig,axs=plt.subplots(2,4,figsize=(16,8))
++for ax,row in zip(axs.flat,rows):
++    vertices=np.array(row['vertices']);tri=vertices[np.array(row['triangles'])]
++    axes=[1,2] if 'Bridge' in row['path'] else [0,2]
++    ax.add_collection(PolyCollection(tri[:,:,axes],facecolors='#b8b4a6',edgecolors='#403b3b',linewidths=.15))
++    ax.autoscale();ax.set_aspect('equal');ax.set_title(row['path'].split('/')[-1],fontsize=8)
++fig.tight_layout();fig.savefig(P/'scale_diagnostic.png',dpi=100);plt.close(fig)
++def center_clearance(row):
++    v=np.array(row['vertices']);tri=v[np.array(row['triangles'])];intervals=[]
++    for t in tri:
++        zz=[]
++        for p,q in zip(t,np.roll(t,-1,axis=0)):
++            if (p[0]<0<q[0]) or (q[0]<0<p[0]):zz.append(p[2]+(q[2]-p[2])*(-p[0])/(q[0]-p[0]))
++        if len(zz)>=2:intervals.append((min(zz),max(zz)))
++    # Front-projected opening, sampling at 1 mm through the centreline.
++    z=np.arange(0,max(v[:,2]),.1);occupied=np.zeros(len(z),bool)
++    for a,b in intervals:occupied|=(z>=a)&(z<=b)
++    free=np.where(~occupied)[0];groups=np.split(free,np.where(np.diff(free)>1)[0]+1)
++    return [[float(z[g[0]]),float(z[g[-1]])] for g in groups if len(g)>10]
++print(json.dumps({r['path'].split('/')[-1]:center_clearance(r) for r in rows if 'frame' in r['path'] or 'wall_small_door' in r['path']},indent=2))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_preflight.ps1
+@@ -0,0 +1,19 @@
++#requires -Version 7.0
++$ErrorActionPreference='Stop'
++$root=Split-Path $PSScriptRoot -Parent
++$doc=Join-Path $root 'docs/HarborCity_M5_VS4/R2'
++$receipt=Join-Path $doc 'appendix/PREFLIGHT.json'
++if(Test-Path -LiteralPath $receipt){throw 'R2 already initialized: resume existing checkpoint'}
++$disks=@(Get-PSDrive -Name C,D,E|ForEach-Object {@{name=$_.Name;free_GiB=[math]::Round($_.Free/1GB,2)}})
++if(@($disks|Where-Object {$_.name -in 'D','E' -and $_.free_GiB -lt 30}).Count){throw 'WAITING_DISK'}
++foreach($dir in 'appendix','gate','editor','local_baseline'){New-Item -ItemType Directory -Path (Join-Path $doc $dir) -Force|Out-Null}
++Copy-Item -LiteralPath (Join-Path $root 'HarborCity/Source') -Destination (Join-Path $doc 'local_baseline/Source') -Recurse
++Copy-Item -LiteralPath (Join-Path $root 'HarborCity/Config') -Destination (Join-Path $doc 'local_baseline/Config') -Recurse
++Copy-Item -LiteralPath (Join-Path $root 'HarborCity/HarborCity.uproject') -Destination (Join-Path $doc 'local_baseline/HarborCity.uproject')
++Copy-Item -LiteralPath 'C:/Users/HP/.codex/attachments/0bdfa658-6f6e-42ea-81dc-b8572aee3899/已粘贴的文本.txt' -Destination (Join-Path $doc 'REQUEST.md')
++$user=Join-Path $env:LOCALAPPDATA 'HarborCity/Saved/Config/Windows/GameUserSettings.ini'
++$hostState=& (Join-Path $PSScriptRoot 'hc_r5_host_status.ps1')|ConvertFrom-Json
++$record=[ordered]@{time=(Get-Date -Format o);disk=$disks;host=$hostState;git=@(& git -C $root status --short);baseline='local_baseline (private)';user_settings_path=$user;user_settings_sha256=(Get-FileHash -LiteralPath $user).Hash;user_settings_observed='High / FrameRateLimit=0 / VSync=False; preserved, differs from reported 60';desktop='BLOCKED_TOOL_UNAVAILABLE';full_regression_runs=0;gate='NOT_RUN';D='MANDATORY; final-package measurements after user sample-area gate'}
++$record|ConvertTo-Json -Depth 8|Set-Content -LiteralPath $receipt -Encoding utf8
++New-Item -ItemType Directory -Path 'E:/GameDev/Assets/HarborCity/M5_VS4/R2' -Force|Out-Null
++$record|ConvertTo-Json -Depth 3
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_stop_guard.ps1
+@@ -0,0 +1,12 @@
++function Set-HCVS4R2Stop {
++ param([string]$Reason,[string]$Run='')
++ $stop=Join-Path (Split-Path $PSScriptRoot -Parent) 'docs/HarborCity_M5_VS4/R2/STOP_DESKTOP_CHAIN'
++ if(-not (Test-Path -LiteralPath $stop)){@{reason=$Reason;run=$Run;time=(Get-Date -Format o)}|ConvertTo-Json|Set-Content -LiteralPath $stop -Encoding utf8}
++}
++function Test-HCVS4R2Stopped {
++ param([string]$Run='')
++ $stop=Join-Path (Split-Path $PSScriptRoot -Parent) 'docs/HarborCity_M5_VS4/R2/STOP_DESKTOP_CHAIN'
++ if(Test-Path -LiteralPath $stop){return $true}
++ if(('HCR3WindowGuard' -as [type]) -and ([HCR3WindowGuard]::GetAsyncKeyState(27) -band 0x8001)){Set-HCVS4R2Stop 'OS Escape pressed' $Run;return $true}
++ return $false
++}
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_author_run.ps1
+@@ -0,0 +1,29 @@
++#requires -Version 7.0
++param([Parameter(Mandatory)][string]$ScriptPath,[Parameter(Mandatory)][ValidatePattern('^[A-Za-z0-9_]+$')][string]$Phase,[switch]$Staging)
++$ErrorActionPreference='Stop'
++$root=Split-Path $PSScriptRoot -Parent
++. (Join-Path $PSScriptRoot 'hc_r3_window_guard.ps1')
++. (Join-Path $PSScriptRoot 'hc_vs4_r2_stop_guard.ps1')
++if(Test-HCVS4R2Stopped){throw 'USER_STOPPED'}
++if(Get-CimInstance Win32_Process -Filter "Name='UnrealEditor.exe' OR Name='UnrealEditor-Cmd.exe' OR Name='HarborCity-Win64-Shipping.exe'"){throw 'Existing engine/game: close normally before authoring'}
++$script=[IO.Path]::GetFullPath($ScriptPath)
++if([IO.Path]::GetDirectoryName($script) -ine $PSScriptRoot -or [IO.Path]::GetFileName($script) -notmatch '^ue_m5_vs4_r2_[A-Za-z0-9_]+\.py$'){throw 'R2 project author script required'}
++$project=if($Staging){'C:/Users/HP/Documents/Unreal Projects/VFXStaging/VFXStaging.uproject'}else{Join-Path $root 'HarborCity/HarborCity.uproject'}
++$run=Join-Path $root ('docs/HarborCity_M5_VS4/R2/editor/'+(Get-Date -Format 'yyyyMMdd_HHmmss_fff')+'_'+$Phase)
++New-Item -ItemType Directory -Path $run|Out-Null
++$arguments=@(('"'+$project+'"'),'-run=pythonscript',('-script="'+$script+'"'),('-M5EvidenceDir="'+$run+'"'),('-UserDir="'+$run+'/User"'),'-unattended','-nop4','-nosplash','-NullRHI','-language=en','-EnablePlugins=PythonScriptPlugin,EditorScriptingUtilities,GeometryScripting,CascadeToNiagaraConverter','-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC','-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen',('-abslog="'+$run+'/editor.log"'))
++$proc=Start-Process -FilePath 'E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe' -ArgumentList $arguments -WorkingDirectory ([IO.Path]::GetDirectoryName($project)) -WindowStyle Hidden -PassThru
++$record=[ordered]@{status='RUNNING';project=$project;phase=$Phase;script=$script;pid=$proc.Id;arguments=$arguments;visual='NOT_RUN_NULLRHI';start=(Get-Date -Format o)}
++$record|ConvertTo-Json -Depth 4|Set-Content -LiteralPath ($run+'/commandlet.json') -Encoding utf8
++Write-Output "R2 author evidence: $run"
++$deadline=(Get-Date).AddMinutes(10)
++while(-not $proc.WaitForExit(2000)){
++ if(Test-HCVS4R2Stopped -Run $run){$proc.CloseMainWindow()|Out-Null;if(-not $proc.WaitForExit(10000)){$proc.Kill()};$record.status='USER_ABORTED';break}
++ if((Get-Date) -gt $deadline){$proc.CloseMainWindow()|Out-Null;if(-not $proc.WaitForExit(10000)){$proc.Kill();[void]$proc.WaitForExit(10000)};$record.status='TIMEOUT';break}
++}
++$proc.Refresh();$record.exit_code=$proc.ExitCode;$record.end=(Get-Date -Format o)
++$report=$run+'/author_result.json'
++if($record.status -notin @('USER_ABORTED','TIMEOUT')){$record.status=if($proc.ExitCode -eq 0 -and (Test-Path -LiteralPath $report) -and (Get-Content -LiteralPath $report -Raw|ConvertFrom-Json).status -eq 'PASS'){'PASS'}else{'FAIL'}}
++$record|ConvertTo-Json -Depth 4|Set-Content -LiteralPath ($run+'/commandlet.json') -Encoding utf8
++Write-Output $record.status
++if($record.status -ne 'PASS'){exit 1}
+
+--- /dev/null
++++ b/tools/build_m5_vs4_r2.ps1
+@@ -0,0 +1,10 @@
++#requires -Version 7.0
++param([ValidateSet('Editor','Game')][string]$Target='Editor',[ValidateSet('Development','Shipping')][string]$Configuration='Development')
++$ErrorActionPreference='Stop'
++if(Get-CimInstance Win32_Process -Filter "Name='UnrealEditor.exe' OR Name='UnrealEditor-Cmd.exe' OR Name='HarborCity-Win64-Shipping.exe'"){throw 'Close current editor/game normally before compiling'}
++$root=Split-Path $PSScriptRoot -Parent
++$python='C:/Users/HP/.codex/runtimes/scientific-skills/Scripts/python.exe'
++& $python (Join-Path $PSScriptRoot 'm5_refresh_changed_source_times.py')
++if($LASTEXITCODE -ne 0){throw 'Source timestamp preflight failed'}
++& (Join-Path $PSScriptRoot 'build.ps1') -Target $Target -Configuration $Configuration -EngineRoot 'E:/UE_5.8' -PythonPath $python -LogRoot (Join-Path $root 'docs/HarborCity_M5_VS4/R2/builds') -MaxParallelActions 4 -CacheRoot 'D:/GameDev/Cache/Unreal/HarborCity'
++exit $LASTEXITCODE
+
+--- /dev/null
++++ b/tools/run_m5_vs4_r2.ps1
+@@ -0,0 +1,239 @@
++#requires -Version 7.0
++[CmdletBinding()]
++param(
++ [ValidateSet('m5_vs3_r3_b','m5_vs3_r3_baseline','m5_full','perf','m5_vs3_r2_armory','m5_vs3_r2_matrix','m5_vs3_r2_showcase','m5_vs3_r2_reopen','m5_vs3_r1_falls','m4_melee','m4_r2_combat','soak')][string]$Mode='m5_vs3_r3_b',
++ [string]$Executable='',
++ [string]$R4Case='',
++ [switch]$CapitalPreview,
++ [ValidatePattern('^(20|30|60|0)(,(20|30|60|0))*$')][string]$MatrixCaps='20,30,60,0',
++ [ValidateSet('High','Epic')][string]$Quality='High',
++ [ValidateRange(0,360)][int]$RecordSeconds=0,
++ [switch]$Followup,
++ [switch]$SprintOnly,
++ [switch]$WeaponCloseups,
++ [switch]$CoverageOnly,
++ [switch]$HairDiagnostic,
++ [switch]$BowDiagnostic,
++ [switch]$BowFinal,
++ [switch]$BowSave,
++ [switch]$R3Showcase,
++ [switch]$Slow,
++ [string]$SeedSaveFile='',
++ [string]$ReuseTestSlot='',
++ [string]$ReuseUserDirectory=''
++)
++$ErrorActionPreference='Stop'
++if($RecordSeconds -gt 0){foreach($drive in @('D','E')){$free=(Get-PSDrive -Name $drive).Free;if($free -lt 30GB){throw ('Recording paused: '+$drive+': has only '+[math]::Round($free/1GB,2)+' GiB; 30 GiB required.')};Write-Output ('Recording free space '+$drive+': '+[math]::Round($free/1GB,2)+' GiB')}}
++$root=Split-Path $PSScriptRoot -Parent
++. (Join-Path $PSScriptRoot 'hc_r3_window_guard.ps1')
++. (Join-Path $PSScriptRoot 'hc_vs4_r2_stop_guard.ps1')
++$baseDoc=Join-Path $root 'docs/HarborCity_M5_VS3'
++$doc=Join-Path $root 'docs/HarborCity_M5_VS4/R2'
++$hostCheck=& (Join-Path $PSScriptRoot 'hc_r5_host_status.ps1') | ConvertFrom-Json
++if($hostCheck.ac_line -ne 1 -or -not $hostCheck.input_desktop.available){throw 'WAITING_HOST: AC=1 and active unlocked Default input desktop required'}
++if(Test-Path -LiteralPath (Join-Path $doc 'PAUSE_FOR_REBUILD')){throw 'Remaining jobs paused between runs: inspect recorded visual failure before rebuilding.'}
++if(Test-Path -LiteralPath (Join-Path $doc 'final/MEDIA_WORKFLOW_UPGRADE_PENDING')){throw 'Current step completed; media workflow upgrade must finish before another launch.'}
++if(Test-Path -LiteralPath (Join-Path $doc 'STOP_DESKTOP_CHAIN')){throw 'Desktop test chain paused; inspect focus/stop condition before a new launch.'}
++if(Get-CimInstance Win32_Process -Filter "Name='UnrealEditor.exe' OR Name='UnrealEditor-Cmd.exe' OR Name='HarborCity.exe' OR Name='HarborCity-Win64-Shipping.exe'"){throw 'Existing engine/game must finish normally first.'}
++$stamp=Get-Date -Format 'yyyyMMdd_HHmmss'
++$run=Join-Path $doc ($Mode+'_'+$stamp)
++New-Item -ItemType Directory -Path $run | Out-Null
++$project=Join-Path $root 'HarborCity/HarborCity.uproject'
++$editor= -not $Executable
++if($editor){$Executable='E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe'}
++elseif(-not ([IO.Path]::GetFullPath($Executable).StartsWith('E:\GameDev\Builds\HarborCity\M5_VS4\Candidate_',[StringComparison]::OrdinalIgnoreCase))){throw 'Only VS4 candidate executables are allowed.'}
++$argsList=[Collections.Generic.List[string]]::new()
++$capitalMap=''
++if($CapitalPreview){
++ $capitalMap=(Get-Content -LiteralPath (Join-Path $doc 'WORK_CHECKPOINT.json') -Raw|ConvertFrom-Json).map
++ if($capitalMap -notmatch '^/Game/HarborCity/M5VS4/Capital/R2_[a-f0-9]+/L_CapitalR2$'){throw 'Invalid authored capital preview map'}
++}
++$isolatedUser=Join-Path $run 'User'
++if($ReuseUserDirectory){
++ $resolvedUser=[IO.Path]::GetFullPath($ReuseUserDirectory)
++ if(-not $resolvedUser.StartsWith(([IO.Path]::GetFullPath($doc)+'\'),[StringComparison]::OrdinalIgnoreCase) -or (Split-Path $resolvedUser -Leaf) -ne 'User' -or -not (Test-Path -LiteralPath $resolvedUser)){throw 'Reuse must be an existing isolated R2 User directory'}
++ $isolatedUser=$resolvedUser
++}
++foreach($platform in $(if($ReuseUserDirectory){@()}else{@('Windows','WindowsEditor')})){
++ $cfg=Join-Path $isolatedUser ('Saved/Config/'+$platform)
++ New-Item -ItemType Directory -Path $cfg -Force|Out-Null
++ $engineConfig=@'
++[/Script/Engine.UserInterfaceSettings]
++bAllowHighDPIInGameMode=True
++bAllowHighDpiWhenUnattended=True
++[DevOptions.Shaders]
++NumUnusedShaderCompilingThreads=23
++NumUnusedShaderCompilingThreadsDuringGame=23
++ShaderCompilerCoreCountThreshold=128
++PercentageUnusedShaderCompilingThreads=100
++'@
++ if($capitalMap){$engineConfig+="`n[/Script/EngineSettings.GameMapsSettings]`nGameDefaultMap=$capitalMap`n"}
++ $engineConfig | Set-Content -LiteralPath (Join-Path $cfg 'Engine.ini') -Encoding utf8
++ @'
++[/Script/Engine.GameUserSettings]
++ResolutionSizeX=1920
++ResolutionSizeY=1080
++LastUserConfirmedResolutionSizeX=1920
++LastUserConfirmedResolutionSizeY=1080
++FullscreenMode=2
++LastConfirmedFullscreenMode=2
++PreferredFullscreenMode=2
++Version=5
++bUseVSync=False
++FrameRateLimit=0.000000
++'@ | Set-Content -LiteralPath (Join-Path $cfg 'GameUserSettings.ini') -Encoding utf8
++}
++$argsList.Add('-UserDir="'+$isolatedUser+'"')
++$argsList.Add('-M5PublicCapture')
++$argsList.Add('-VS4R2Capture')
++$argsList.Add('-R3WindowGuard')
++if($R4Case -in @('pairs','shield')){$argsList.Add('-R4RealTimeSteps')}
++if($R4Case -eq 'r5fppeaks' -and -not $editor){$argsList.Add('-R5PeakFrames')}
++if($R4Case -eq 'r5showcase'){$argsList.Add('-R3Showcase');$argsList.Add('-R4Showcase');$argsList.Add('-R5Showcase')}
++if($R4Case -eq 'hipfire'){$argsList.Add('-R4HipFire')}
++if($R4Case){if($R4Case -notmatch '^[A-Za-z0-9_]+$'){throw 'Invalid R4 case'};$argsList.Add('-R4Case='+$R4Case)}
++if($editor){$argsList.Insert(0,'"'+$project+'"')}
++if($Mode.StartsWith('reverse')){
++ $map='/Game/HarborCity/Maps/L_M1_Playground';$test=if($Mode -eq 'reverse_legacy'){'reverse_diagnostic_legacy'}else{'reverse_diagnostic'}
++ $slot='HarborCity_M1_R2_Test_M4_VS2_'+$Mode+'_'+$stamp
++ $argsList.Add('-M1Test='+$test);$argsList.Add('-M5VS2ReverseTrace')
++ }elseif($Mode -in @('m4_melee','m4_r2_combat')){
++ $map='/Game/HarborCity/Maps/L_M2_SeafrontStreet'
++ $legacyMode=if($Mode -eq 'm4_melee'){'melee'}else{'r2_combat'}
++ $slot='HarborCity_M2_V1_Test_M4_R2_R5_'+$legacyMode+'_'+$stamp
++ $argsList.Add('-M4Test='+$legacyMode)
++}else{
++ $selection=Get-Content (Join-Path $baseDoc 'town_selection.json') -Raw | ConvertFrom-Json
++ $map=$selection.map
++ if($map -notmatch '^/Game/HarborCity/(M5VS2/Part3|M5VS3)/Town_[a-f0-9]+/L_HarborTown$'){throw 'Invalid saved town selection.'}
++ $slot='HarborCity_M5_VS1_Test_VS3_'+$Mode+'_'+$stamp
++ $test=if($Mode.StartsWith('m5_')){$Mode}else{'m5_vs2_'+$Mode};$argsList.Add('-M5Test='+$test)
++}
++if($ReuseTestSlot){if($ReuseTestSlot -notmatch '^HarborCity_M5_VS1_Test_VS3_[A-Za-z0-9_]+$' -or $ReuseTestSlot.Length -gt 100){throw 'Invalid isolated slot'};$slot=$ReuseTestSlot}
++if($SeedSaveFile){
++ $seed=[IO.Path]::GetFullPath($SeedSaveFile)
++ if(-not $seed.StartsWith(([IO.Path]::GetFullPath($doc)+'\'),[StringComparison]::OrdinalIgnoreCase) -or [IO.Path]::GetFileName($seed) -cne ($slot+'.sav') -or -not (Test-Path -LiteralPath $seed -PathType Leaf) -or $ReuseUserDirectory){throw 'Seed must be the exact prior isolated R3 test slot, copied into a fresh User directory'}
++ $saveDirectory=Join-Path $isolatedUser 'Saved/SaveGames';New-Item -ItemType Directory -Path $saveDirectory -Force|Out-Null
++ Copy-Item -LiteralPath $seed -Destination (Join-Path $saveDirectory ($slot+'.sav'))
++}
++if($Mode -eq 'm5_save_probe'){$argsList.Add('-M5VS3SaveDiagnostics')}
++if($CapitalPreview){
++ $map=$capitalMap
++}
++$argsList.Add($map)
++if($editor){$argsList.Add('-game')}
++foreach($a in @('-unattended','-windowed','-ResX=1920','-ResY=1080','-language=en','-nosplash','-M1AutoQuit',('-HCM1SaveSlot='+$slot),('-abslog="'+(Join-Path $run 'game.log')+'"'),'-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC','-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen')){$argsList.Add($a)}
++$q=if($Quality -eq 'Epic'){3}else{2}
++$argsList.Add('-R2MatrixCaps='+$MatrixCaps);$argsList.Add('-HCM5VS3QA');$argsList.Add('-R1Trace');$argsList.Add('-M5Quality='+$q)
++if($RecordSeconds -gt 0){$argsList.Add('-M5PublicCapture')}
++$exec='sg.ViewDistanceQuality '+$q+',sg.AntiAliasingQuality '+$q+',sg.ShadowQuality '+$q+',sg.GlobalIlluminationQuality '+$q+',sg.ReflectionQuality '+$q+',sg.PostProcessQuality '+$q+',sg.TextureQuality '+$q+',sg.EffectsQuality '+$q+',sg.FoliageQuality '+$q+',sg.ShadingQuality '+$q+',sg.LandscapeQuality '+$q+',r.ScreenPercentage 100,r.VSync 0,t.MaxFPS 0'
++if($Mode -eq 'perf'){$exec+=',r.ScreenPercentage,r.VSync,t.MaxFPS,sg.FoliageQuality,sg.ShadingQuality,sg.LandscapeQuality'}
++$argsList.Add('-ExecCmds="'+$exec+'"')
++if($RecordSeconds -gt 0){$argsList.Add('-R1GateCapture');$argsList.Add('-HCM4RecordSeconds='+$RecordSeconds);$argsList.Add('-HCM3RecordDelay=6')}
++if($Mode -eq 'm5_vs3_r3_baseline'){$argsList.Add('-R3Baseline')}
++if($Followup){$argsList.Add('-R3Followup')}
++if($HairDiagnostic){$argsList.Add('-R3HairDiagnostic')}
++if($BowDiagnostic -or $BowFinal){$argsList.Add('-R3BowDiagnostic')}
++if($BowFinal){$argsList.Add('-R3BowFinal')}
++if($R3Showcase){$argsList.Add('-R3Showcase');$argsList.Add('-R4Showcase')}
++if($BowSave){$argsList.Add('-R3BowSave')}
++if($SprintOnly){$argsList.Add('-R3SprintOnly')}
++if($WeaponCloseups){$argsList.Add('-R3WeaponCloseups')}
++if($CoverageOnly){$argsList.Add('-R3CoverageOnly')}
++if($Slow){$argsList.Add('-R3Slow');$argsList.Add('-R5Slow')}
++$started=Get-Date
++if(Test-HCVS4R2Stopped){throw 'USER_ABORTED: no launch after Escape'}
++$proc=Start-Process -WindowStyle Normal -FilePath $Executable -ArgumentList $argsList.ToArray() -WorkingDirectory (Split-Path $Executable -Parent) -PassThru
++$rec=[ordered]@{status='RUNNING';pid=$proc.Id;executable=$Executable;kind=if($editor){'EDITOR_GAME'}else{'STANDALONE_PACKAGE'};input_layer='ENGINE_ACTION_NOT_OS';arguments=$argsList.ToArray();started=$started.ToString('o');map=$map}
++$rec['host']=$hostCheck; $rec['battery_authorization']='R2 requires AC=1; no battery exception'; $rec | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $run 'launch.json') -Encoding utf8
++if($CapitalPreview){$rec['map_override_scope']='Isolated User Saved/Config Engine.ini GameDefaultMap; immutable package unchanged. Shipping ignores command-line map override.';$rec|ConvertTo-Json -Depth 5|Set-Content (Join-Path $run 'launch.json') -Encoding utf8}
++$activePath=Join-Path $doc 'ACTIVE_RUN.json'
++[ordered]@{status='RUNNING';pid=$proc.Id;run=$run;mode=$Mode;started=$started.ToString('o');resume='Check this PID and exit.json before starting anything; never repeat a completed run because the chat disconnected.'} | ConvertTo-Json | Set-Content -LiteralPath $activePath -Encoding utf8
++$limit=if($R4Case -eq 'r5fppeaks'){3600}elseif($R4Case -in @('r5a','r6a','r6regression','r6soak')){2400}elseif($Mode -eq 'soak'){2400}elseif($Mode -in @('m5_vs3_r2_matrix','m5_vs3_r2_showcase','m5_full')){1800}else{600}
++$memory=[Collections.Generic.List[object]]::new()
++$networkSampled=$editor
++if($editor){@{status='NOT_RUN';reason='Editor capture skips synchronous network enumeration; not firewall acceptance'}|ConvertTo-Json|Set-Content -LiteralPath (Join-Path $run 'network_sample.json') -Encoding utf8}
++$lastForeground=$null;$initialFocusSet=$false
++$everForeground=$false;$lostForegroundSince=$null
++$lastHostSample=$started
++$lastLoopSample=$started
++$adapter=[Collections.Generic.List[string]]::new();$adapter.Add('timestamp, gpu_name, memory_used_MiB, gpu_util_percent')
++while(-not $proc.WaitForExit(250) -and ((Get-Date)-$started).TotalSeconds -lt $limit){
++ $now=Get-Date
++ if(($now-$lastLoopSample).TotalSeconds -gt 15){$rec.status='HOST_INTERRUPTED';$rec.observation_gap_seconds=($now-$lastLoopSample).TotalSeconds;break}
++ $lastLoopSample=$now
++ if(Test-HCVS4R2Stopped -Run $run){$rec.status='USER_ABORTED';break}
++ if(((Get-Date)-$lastHostSample).TotalSeconds -ge 30){
++  $lastHostSample=Get-Date;$currentHost=& (Join-Path $PSScriptRoot 'hc_r5_host_status.ps1') | ConvertFrom-Json
++  @{time=$lastHostSample.ToString('o');ac_line=$currentHost.ac_line;unlocked=$currentHost.input_desktop.available}|ConvertTo-Json -Compress|Add-Content -LiteralPath (Join-Path $run 'host_samples.jsonl')
++  if($currentHost.ac_line -ne 1 -or -not $currentHost.input_desktop.available){$rec.status='WAITING_HOST';[void]$proc.CloseMainWindow();[void]$proc.WaitForExit(5000);break}
++ }
++ # Do not expose UE's zero-sized startup window before it creates a swapchain.
++ $readyWindows=@([HCR3WindowGuard]::Windows($proc.Id)|Where-Object {
++  $r=New-Object HCR3WindowGuard+RECT
++  [HCR3WindowGuard]::WindowClass($_) -eq 'UnrealWindow' -and [HCR3WindowGuard]::IsWindowVisible($_) -and [HCR3WindowGuard]::GetClientRect($_,[ref]$r) -and ($r.R-$r.L) -ge 64 -and ($r.B-$r.T) -ge 64
++ })
++ if(-not (Test-HCR3Window -KeepForeground:($readyWindows.Count -gt 0) -GameProcessId $proc.Id -EvidencePath (Join-Path $run 'window_guard.jsonl'))){$rec.status='BLOCKED_WINDOW';break}
++ $gameWindows=@([HCR3WindowGuard]::Windows($proc.Id)|Where-Object {[HCR3WindowGuard]::WindowClass($_) -eq 'UnrealWindow' -and [HCR3WindowGuard]::IsWindowVisible($_)})
++ if($gameWindows.Count -and -not $initialFocusSet){
++  if(Test-HCVS4R2Stopped -Run $run){$rec.status='USER_ABORTED';break}
++  [void][HCR3WindowGuard]::SetForegroundWindow($gameWindows[0]);$initialFocusSet=$true
++ }
++ $hasFocus=[HCR3WindowGuard]::GetForegroundWindow() -in $gameWindows
++ if($hasFocus -ne $lastForeground){@{seconds=((Get-Date)-$started).TotalSeconds;game_foreground=$hasFocus}|ConvertTo-Json -Compress|Add-Content -LiteralPath (Join-Path $run 'focus_events.jsonl');$lastForeground=$hasFocus}
++ if($hasFocus){$everForeground=$true;$lostForegroundSince=$null}
++ elseif($everForeground -and $gameWindows.Count -gt 0 -and $R4Case -ne 'os'){
++  if($null -eq $lostForegroundSince){$lostForegroundSince=Get-Date}
++  if(((Get-Date)-$lostForegroundSince).TotalSeconds -ge 2){
++   if(Test-HCVS4R2Stopped -Run $run){$rec.status='USER_ABORTED';break}
++   $rec.status='BLOCKED_FOCUS';$rec.focus_stop='Actual game window lost foreground for two seconds; no repeated focus stealing or further test jobs.'
++   [void]$proc.CloseMainWindow();[void]$proc.WaitForExit(5000);break
++  }
++ }
++ $proc.Refresh()
++ $memory.Add([ordered]@{seconds=((Get-Date)-$started).TotalSeconds;private_bytes=$proc.PrivateMemorySize64;working_set_bytes=$proc.WorkingSet64;process_peak_working_set_bytes=$proc.PeakWorkingSet64})
++ if(-not $networkSampled -and ((Get-Date)-$started).TotalSeconds -ge 10){
++  $networkSampled=$true
++  try {
++   $listeners=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object OwningProcess -eq $proc.Id | Select-Object LocalAddress,LocalPort)
++   [ordered]@{status='SAMPLED';pid=$proc.Id;tcp_listeners=$listeners;scope='One runtime TCP-listener sample, not proof that Windows showed no firewall dialog.'}|ConvertTo-Json -Depth 4|Set-Content -LiteralPath (Join-Path $run 'network_sample.json') -Encoding utf8
++  } catch {[ordered]@{status='NOT_RUN';reason='Runtime TCP listener query unavailable'}|ConvertTo-Json|Set-Content -LiteralPath (Join-Path $run 'network_sample.json') -Encoding utf8}
++ }
++ if($Mode -eq 'perf'){$sample=& nvidia-smi --query-gpu=timestamp,name,memory.used,utilization.gpu --format=csv,noheader,nounits;foreach($line in $sample){$adapter.Add($line)}}
++}
++$memory | ConvertTo-Json -Depth 3 | Set-Content (Join-Path $run 'memory_samples.json') -Encoding utf8
++if($Mode -eq 'perf'){$adapter | Set-Content (Join-Path $run 'adapter_samples.csv') -Encoding utf8}
++if(Test-HCVS4R2Stopped -Run $run){$rec.status='USER_ABORTED'}
++if($rec.status -eq 'RUNNING'){$rec.status=if($proc.HasExited){'EXITED'}else{'TIMEOUT'}}
++if(-not $proc.HasExited){
++ [void]$proc.CloseMainWindow()
++ if(-not $proc.WaitForExit(10000)){
++  $owned=Get-CimInstance Win32_Process -Filter ('ProcessId='+$proc.Id)
++  if($owned -and $owned.ExecutablePath -ieq $Executable.Replace('/','\') -and $owned.CommandLine.Contains($isolatedUser)){
++   $proc.Kill();[void]$proc.WaitForExit(10000);$rec.forced_owned_process_cleanup=$true
++  }else{throw 'Owned process identity changed; refusing forced cleanup'}
++ }
++}
++$proc.Refresh();$rec.exit_code=if($proc.HasExited){$proc.ExitCode}else{$null}
++$rec.ended=(Get-Date).ToString('o');$rec | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $run 'exit.json') -Encoding utf8
++[ordered]@{status=$rec.status;pid=$proc.Id;run=$run;mode=$Mode;exit_code=$rec.exit_code;ended=$rec.ended;recording=if($RecordSeconds -gt 0){'ENCODING_PENDING'}else{'NOT_REQUESTED'}} | ConvertTo-Json | Set-Content -LiteralPath $activePath -Encoding utf8
++$rec | ConvertTo-Json -Depth 5
++if($rec.status -ne 'EXITED' -or $rec.exit_code -ne 0){throw ('R2 run failed: '+$rec.status+'; exit='+$rec.exit_code+'; evidence='+$run)}
++if($CapitalPreview -and $rec.status -eq 'EXITED'){
++ $mapReports=@(Get-ChildItem -LiteralPath (Join-Path $isolatedUser 'Saved/M5Tests') -Recurse -Filter results.json|ForEach-Object{Get-Content -LiteralPath $_.FullName -Raw|ConvertFrom-Json})
++ if(-not $mapReports.Count -or @($mapReports|Where-Object map -ne 'L_CapitalR2').Count){throw 'FAIL_MAP_MISMATCH: retained evidence is not a capital-map run.'}
++}
++
++if($RecordSeconds -gt 0 -and $proc.HasExited -and $rec.status -ne 'USER_ABORTED'){
++ if($proc.ExitCode -ne 0 -and -not @(Get-ChildItem -LiteralPath (Join-Path $doc 'recordings') -Filter capture.json -Recurse | Where-Object LastWriteTime -ge $started).Count){
++  $active=Get-Content -LiteralPath $activePath -Raw | ConvertFrom-Json;$active.recording='NOT_STARTED_PROCESS_FAILED';$active|ConvertTo-Json|Set-Content -LiteralPath $activePath -Encoding utf8
++  throw ('Engine exited '+$proc.ExitCode+' before a completed capture. Inspect the bounded error lines in '+(Join-Path $run 'game.log'))
++ }
++ try {
++  & (Join-Path $PSScriptRoot 'complete_m5_vs4_r2_capture.ps1') -Started $started -Executable $Executable
++  $active=Get-Content -LiteralPath $activePath -Raw | ConvertFrom-Json;$active.recording='ENCODED_AND_DECODE_VERIFIED';$active|ConvertTo-Json|Set-Content -LiteralPath $activePath -Encoding utf8
++ } catch {
++  $active=Get-Content -LiteralPath $activePath -Raw | ConvertFrom-Json;$active.recording='FAILED_PRESERVE_SOURCE_FRAMES';$active|ConvertTo-Json|Set-Content -LiteralPath $activePath -Encoding utf8
++  throw
++ }
++}
+
+--- /dev/null
++++ b/tools/complete_m5_vs4_r2_capture.ps1
+@@ -0,0 +1,19 @@
++#requires -Version 7.0
++param([Parameter(Mandatory=$true)][datetime]$Started,[Parameter(Mandatory=$true)][string]$Executable)
++$ErrorActionPreference='Stop'
++$workspace=Split-Path $PSScriptRoot -Parent
++$root=Join-Path $workspace 'docs/HarborCity_M5_VS4/R2/recordings'
++$python='C:/Users/HP/.codex/runtimes/scientific-skills/Scripts/python.exe'
++if(-not (Test-Path -LiteralPath $python)){throw 'Existing media Python unavailable; no automatic install'}
++$captures=@(Get-ChildItem -LiteralPath $root -Filter capture.json -Recurse | Where-Object {$_.LastWriteTime -ge $Started -and $_.Directory.Parent.FullName -eq [IO.Path]::GetFullPath($root)})
++if($captures.Count -ne 1){throw "Expected exactly one completed recording; found $($captures.Count). Preserve frames for diagnosis."}
++$capture=$captures[0]
++$output=Join-Path $capture.Directory.FullName 'capture.mp4'
++if(Test-Path -LiteralPath $output){throw 'Existing MP4 retained; refusing overwrite'}
++$env:PYTHONIOENCODING='utf-8'
++& $python (Join-Path $PSScriptRoot 'encode_m5_vs4_r2_capture.py') $capture.FullName $output
++if($LASTEXITCODE -ne 0){throw 'Encoding/decode verification failed; frames retained, no further recording should start.'}
++$qa=Get-Content -LiteralPath (Join-Path $capture.Directory.FullName 'capture.qa.json') -Raw | ConvertFrom-Json
++if($qa.decode_validation -ne 'PASS_FULL_VIDEO_AND_AUDIO_DECODE'){throw 'Missing playback decode verification'}
++if($qa.audio_signal_status -eq 'FAIL_SILENT_NATIVE_CAPTURE'){Write-Warning 'Native audio was silent: recording audio FAIL preserved; MP4 decodes correctly and temporary frames were cleaned.'}
++[ordered]@{executable=$Executable;capture=$capture.FullName;video=$output;started=$Started.ToString('o');temporary_frames_removed=$qa.temporary_frames_removed} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $capture.Directory.FullName 'run_binding.json') -Encoding utf8
+
+--- /dev/null
++++ b/tools/encode_m5_vs4_r2_capture.py
+@@ -0,0 +1,82 @@
++"""Preserve measured native JPEG/PNG frame timestamps and actual master-submix audio."""
++from pathlib import Path
++import argparse,json,subprocess,shutil
++from PIL import Image
++from encode_m4_r2_playthrough import inspect_pcm_wav,make_timeline
++W=Path('D:/科研学习/codex学习');D=W/'docs/HarborCity_M5_VS4/R2'
++ap=argparse.ArgumentParser();ap.add_argument('capture');ap.add_argument('output');ap.add_argument('--trim-leading',type=int,default=0);ap.add_argument('--verify-existing',action='store_true');ap.add_argument('--salvage-interrupted',action='store_true');a=ap.parse_args()
++c=Path(a.capture).resolve();out=Path(a.output).resolve()
++assert c.is_relative_to(D.resolve()) and out.is_relative_to(D.resolve()) and (not out.exists() or a.verify_existing)
++r=json.loads(c.read_text('utf-8-sig'))
++source_frames=list(r.get('frames',[]))
++salvage=a.salvage_interrupted and r['status']=='FAIL' and r['stop_reason']=='viewport_geometry_changed'
++assert (r['status']=='CAPTURED_PENDING_REVIEW' or salvage) and r['write_failures']==0
++assert (r['capture_geometry_valid'] is True or salvage) and (r['width'],r['height'])==(1920,1080)
++assert r['requested_size']==r['output_size']==dict(width=1920,height=1080)
++complete_reasons=('m5_gameplay_sequence_finished','duration_reached','vs2_gameplay_sequence_finished','test_complete','r2_gameplay_sequence_finished')
++partial_reasons=('pause_or_focus_lost','pause_observed','pause_key_pressed','application_focus_lost','gameplay_focus_lost')
++assert r['stop_reason'] in complete_reasons+partial_reasons or salvage
++if out.name=='M5_VS3_PLAYTHROUGH.mp4':
++ assert not salvage
++ validation=json.loads((D/'standalone_validation.json').read_text('utf-8-sig'))
++ assert validation['status']=='COMPLETE'
++ demo=next(x for x in validation['runs'] if x['mode']=='m5_vs3_demo' and x.get('capture') and Path(x['capture']).resolve()==c)
++ assert Path(demo['capture']).resolve()==c and demo['launch']['kind']=='STANDALONE_PACKAGE'
++ assert '-M5PublicCapture' in demo['launch']['arguments']
++ assert demo['result_status']=='COMPLETE'
++wav=c.parent/r['audio_file'];audio=inspect_pcm_wav(wav)
++# Silence is a test failure, not a reason to retain gigabytes of frames forever.
++# Preserve the actual recorded track, never substitute sound or claim audible SFX.
++leading_trim={'count':a.trim_leading,'reason':'explicitly inspected initial frames only; keyframes and timing metadata retained'}
++assert 0 <= a.trim_leading <= 2
++if a.trim_leading:r['frames']=r['frames'][a.trim_leading:]
++t=make_timeline(r,audio);lines=['ffconcat version 1.0'];frames=r['frames']
++if out.name=='M5_VS3_PLAYTHROUGH.mp4':assert 240<=t['duration_seconds']<=360
++for i,f in enumerate(frames):
++ p=(c.parent/f['file']).resolve();assert p.is_relative_to(c.parent) and p.is_file() and p.suffix.lower() in ('.jpg','.png')
++ if salvage or i in (0,len(frames)-1):
++  with Image.open(p) as im:assert im.size==(r['width'],r['height'])
++ lines+=['file '+"'"+p.as_posix().replace("'","'\\''")+"'",'option framerate 1000']
++ if i+1<len(frames):lines+=['duration %.6f'%((t['relative_microseconds'][i+1]-t['relative_microseconds'][i])/1e6)]
++concat=out.with_suffix('.ffconcat');concat.write_text('\n'.join(lines)+'\n','utf-8')
++ff=W/'video_build/manga_mad_project_20260827/qa_tools/ffmpeg-master-latest-win64-gpl-shared/bin/ffmpeg.exe'
++filters='atrim=start_sample=%d:end_sample=%d,asetpts=PTS-STARTPTS,adelay=%dS:all=1'%(t['audio_trim_start_sample'],t['audio_trim_end_sample'],t['audio_delay_samples'])
++cmd=[str(ff),'-hide_banner','-nostdin','-v','warning','-safe','0','-f','concat','-i',str(concat),'-i',str(wav),'-map','0:v:0','-map','1:a:0','-af',filters,'-t',str(t['duration_seconds']),'-fps_mode:v','vfr','-enc_time_base:v','1:1000','-c:v','libx264','-threads','2','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',str(out)]
++log=out.with_suffix('.encode.log')
++if not a.verify_existing:
++ with log.open('wb') as f:subprocess.run(cmd,stderr=f,stdout=f,check=True)
++probe=json.loads(subprocess.check_output([str(ff.with_name('ffprobe.exe')),'-v','error','-show_streams','-show_format','-of','json',str(out)]))
++assert any(s['codec_type']=='audio' for s in probe['streams'])
++# Targeted visual probes can legitimately be shorter than ten seconds. The
++# named final playthrough keeps its independent 240--360 second check above.
++# Never strand already encoded short probes and their temporary frames here.
++assert 0<t['duration_seconds']<=360
++result={'status':'ENCODED','audio_signal_status':'PASS' if audio['signal_present'] else 'FAIL_SILENT_NATIVE_CAPTURE','video':str(out),'capture':str(c),'duration_seconds':t['duration_seconds'],'actual_capture_fps':len(frames)/t['duration_seconds'],'audio':audio,'probe':probe,'timing':'native wall timestamps, VFR; no interpolation, synthetic replacement, speed change or extra terminal freeze','visual':'USER_REVIEW','listening':'NOT_RUN'}
++result['leading_trim']=leading_trim
++result['capture_stop_reason']=r['stop_reason']
++result['capture_completeness']='PARTIAL_FAILED_GEOMETRY_CAPTURE' if salvage else ('COMPLETE' if r['stop_reason'] in complete_reasons else 'PARTIAL_INTERRUPTED')
++result['original_capture_status']=r['status']
++result['salvage_scope']='Each retained frame dimension validated; only pre-failure pixels encoded; original failed capture metadata unchanged' if salvage else 'not applicable'
++result['capture_metadata_note']='Native viewport frame timestamps and submix sound. Consult attached launch/results for executable binding. Setup is A fixture; gameplay is B input; this video is not OS mouse proof.'
++if out.name=='M5_VS3_PLAYTHROUGH.mp4':result['recording_executable']=demo['launch']['executable']
++out.with_name(out.stem+'.qa.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),'utf-8')
++# Decode every compressed packet before deleting source frames. A readable header
++# alone does not prove that the produced video/audio can actually be played.
++decode=subprocess.run([str(ff),'-nostdin','-v','error','-xerror','-threads','2','-i',str(out),'-map','0:v:0','-map','0:a:0','-fps_mode','passthrough','-enc_time_base:v','1:1000','-f','null','-'],capture_output=True)
++if decode.returncode or decode.stderr:raise RuntimeError('MP4 decode verification failed; temporary frames retained')
++paths=[(c.parent/f['file']).resolve() for f in source_frames]
++# Resolve and validate every file before any deletion. PPM cleanup requires a
++# separate explicit user confirmation and is intentionally never performed here.
++assert c.parent.parent.resolve()==(D/'recordings').resolve()
++assert all(p.parent==c.parent and p.suffix.lower() in ('.jpg','.png') and p.is_file() for p in paths)
++keydir=c.parent/'keyframes';keydir.mkdir(exist_ok=True)
++for i in sorted({round(k*(len(paths)-1)/7) for k in range(8)}):shutil.copy2(paths[i],keydir/paths[i].name)
++total=sum(p.stat().st_size for p in paths)
++for p in paths:p.unlink()
++concat.unlink()
++assert wav.resolve().parent==c.parent and wav.suffix.lower()=='.wav'
++wav.unlink() # recorded submix intermediate, never a source music asset
++result.update(decode_validation='PASS_FULL_VIDEO_AND_AUDIO_DECODE',temporary_frames_removed=len(paths),temporary_bytes_removed=total,retained_keyframes=8,output_bytes=out.stat().st_size)
++out.with_name(out.stem+'.qa.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),'utf-8')
++(c.parent/'frame_cleanup.json').write_text(json.dumps(dict(status='TEMPORARY_JPEG_PNG_REMOVED_AFTER_VERIFIED_MP4',video=str(out),frames=len(paths),bytes=total,ppm_deleted=0,audio_intermediate_removed=True,retained='capture metadata, 8 keyframes, MP4 and QA'),ensure_ascii=False,indent=2),'utf-8')
++print(json.dumps({k:result[k] for k in ('status','video','duration_seconds','actual_capture_fps')}))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_source_patch.py
+@@ -0,0 +1,31 @@
++"""Mechanical, text-only R2 diff against the saved R1 Repair 1 baseline."""
++from pathlib import Path
++import difflib,json,hashlib
++W=Path('D:/科研学习/codex学习');D=W/'docs/HarborCity_M5_VS4/R2';B=D/'local_baseline';P=W/'HarborCity'
++pieces=[];files=[]
++for root in ('Source', 'Config'):
++    old={x.relative_to(B).as_posix():x for x in (B/root).rglob('*') if x.is_file() and x.suffix.lower() in ('.h','.cpp','.cs','.ini')}
++    new={x.relative_to(P).as_posix():x for x in (P/root).rglob('*') if x.is_file() and x.suffix.lower() in ('.h','.cpp','.cs','.ini')}
++    for rel in sorted(old.keys()|new.keys()):
++        if 'crypto' in rel.lower() or 'encryption' in rel.lower():continue
++        a=old[rel].read_text('utf-8-sig') if rel in old else ''
++        b=new[rel].read_text('utf-8-sig') if rel in new else ''
++        if a==b:continue
++        if any(secret in b.lower() for secret in ('encryptionkey=', 'signingprivateexponent=')):raise RuntimeError('Secret-bearing configuration refused')
++        target='HarborCity/'+rel
++        pieces.append(''.join(difflib.unified_diff(a.splitlines(True),b.splitlines(True),fromfile='a/'+target if rel in old else '/dev/null',tofile='b/'+target)))
++        files.append(target)
++tool_names=['ue_m5_vs4_r2_migrate.py','ue_m5_vs4_r2_catalog.py','ue_m5_vs4_r2_measure.py','ue_m5_vs4_r2_sample_author.py','ue_m5_vs4_r2_roof_audit.py','hc_vs4_r2_sample_plan.py','hc_vs4_r2_scale_analyze.py','hc_vs4_r2_preflight.ps1','hc_vs4_r2_stop_guard.ps1','ue_m5_vs4_r2_author_run.ps1','build_m5_vs4_r2.ps1','run_m5_vs4_r2.ps1','complete_m5_vs4_r2_capture.ps1','encode_m5_vs4_r2_capture.py','hc_vs4_r2_source_patch.py']
++tool_names+=['hc_vs4_r2_contact.py','hc_vs4_r2_roof_coverage.py','hc_vs4_r2_materials.py','ue_m5_vs4_r2_village_house.py','test_m5_vs4_r2_graphics_policy.ps1','ue_m5_vs4_r2_terrain_audit.py']
++tool_names+=['hc_vs4_r2_placement_report.py']
++tool_names+=['hc_vs4_r2_fill_parcels.py']
++tool_names+=['hc_vs4_r2_service_routes.py','hc_vs4_r2_view_audit.py','ue_m5_vs4_r2_detail_probe.py','hc_vs4_r2_scene_polish.py','ue_m5_vs4_r2_scene_polish.py','ue_m5_vs4_r2_scale_probe.py','hc_vs4_r2_gate_media.py','hc_vs4_r2_walk_audit.py','hc_vs4_r2_gate_summary.py','hc_vs4_r2_prepare_publication.py','publish_m5_vs4_r2_gate.py']
++for name in tool_names:
++    path=W/'tools'/name
++    if not path.exists():continue
++    b=path.read_text('utf-8-sig');target='tools/'+name
++    pieces.append(''.join(difflib.unified_diff([],b.splitlines(True),fromfile='/dev/null',tofile='b/'+target)));files.append(target)
++out=D/'appendix/SOURCE_CHANGES.patch';out.parent.mkdir(exist_ok=True);out.write_text('\n'.join(pieces),'utf-8')
++report=dict(status='GENERATED_TEXT_DIFF_NOT_TEST_RESULT',baseline='R1 Repair 1 pre-R2 local source/config snapshot',files=files,sha256=hashlib.sha256(out.read_bytes()).hexdigest(),excluded='All binary assets, private geometry JSON, purchased derivatives, crypto config, saves and user settings')
++(D/'appendix/SOURCE_CHANGES.json').write_text(json.dumps(report,indent=2),'utf-8')
++print(json.dumps(dict(files=len(files),bytes=out.stat().st_size,sha256=report['sha256'])))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_contact.py
+@@ -0,0 +1,14 @@
++"""Small local QA contact sheet; never alters source captures."""
++from pathlib import Path
++import sys,math
++from PIL import Image,ImageOps,ImageDraw
++root=Path(sys.argv[1]).resolve();out=Path(sys.argv[2]).resolve()
++allowed=Path('D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R2').resolve()
++assert root.is_relative_to(allowed) and out.is_relative_to(allowed)
++files=sorted(root.rglob('R2_*.png'));assert files
++w,h=480,290;sheet=Image.new('RGB',(w*3,h*math.ceil(len(files)/3)),(28,30,34));draw=ImageDraw.Draw(sheet)
++for i,p in enumerate(files):
++    im=Image.open(p).convert('RGB');im.thumbnail((480,260));x=(i%3)*w;y=(i//3)*h
++    sheet.paste(im,(x,y));draw.text((x+5,y+264),p.stem,fill='white')
++out.parent.mkdir(parents=True,exist_ok=True);sheet.save(out,quality=85)
++print(str(out));print(len(files))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_roof_coverage.py
+@@ -0,0 +1,45 @@
++"""Projected roof union from saved UE triangles, 0.25m cells."""
++from pathlib import Path
++import argparse,json,math,numpy as np
++from scipy.spatial.transform import Rotation
++from PIL import Image,ImageDraw
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');D=Path('D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R2')
++plan=json.loads((P/'sample_plan.json').read_text('utf-8'));selection=json.loads((P/'roof_selection.json').read_text('utf-8'));g=json.loads(Path(selection['file']).read_text('utf-8'))
++ap=argparse.ArgumentParser();ap.add_argument('--samples-per-metre',type=int,choices=[4,8,16,32],default=16);args=ap.parse_args()
++RES=args.samples_per_metre;LO=(-100,-70);SZ=(265*RES,220*RES)
++def pix(p):return ((p[0]-LO[0])*RES,(p[1]-LO[1])*RES)
++def circle(c,r):
++    im=Image.new('1',SZ);x,y=pix(c);ImageDraw.Draw(im).ellipse((x-r*RES,y-r*RES,x+r*RES,y+r*RES),fill=1);return np.array(im)
++def strip(points,width):
++    im=Image.new('1',SZ);draw=ImageDraw.Draw(im)
++    left=[];right=[]
++    for i,p in enumerate(points):
++        a=points[max(0,i-1)];b=points[min(len(points)-1,i+1)]
++        dx,dy=b[0]-a[0],b[1]-a[1];ln=max(.001,math.hypot(dx,dy));nx,ny=-dy/ln*width/2,dx/ln*width/2
++        left.append(pix((p[0]+nx,p[1]+ny)));right.append(pix((p[0]-nx,p[1]-ny)))
++    for i in range(1,len(points)):draw.polygon([left[i-1],left[i],right[i],right[i-1]],fill=1)
++    return np.array(im)
++roofs=Image.new('1',SZ);draw=ImageDraw.Draw(roofs)
++for t in g['instances']:
++    mesh=g['meshes'][t['mesh']];v=Rotation.from_quat(t['rotation']).apply(np.array(mesh['vertices'])*np.array(t['scale']))+np.array(t['translation']);v/=100
++    for ids in mesh['triangles']:
++        pts=v[ids,:2];area=abs(np.linalg.det(np.array([pts[1]-pts[0],pts[2]-pts[0]])))/2
++        if area>.01:draw.polygon([pix(p) for p in pts],fill=1)
++roofmask=np.array(roofs);roadmask=np.zeros_like(roofmask);zone=circle((-10,0),54)
++for r in plan['roads']:
++    roadmask|=strip(r['points'],r['width_m']+(7 if r['id'] in plan['sample_road_ids'] else 0))
++    if r['id'] in plan['sample_road_ids']:zone|=strip([p for p in r['points'] if p[0]<115],60)
++terrain_selection=json.loads((P/'terrain_selection.json').read_text('utf-8'))
++terrain=json.loads(Path(terrain_selection['file']).read_text('utf-8'))
++assert terrain['map']==g['map'] and terrain['grid']==dict(origin_m=[-100,-70],cell_m=.25,size=[1060,880])
++watermask=np.zeros_like(roofmask)
++factor=RES//4
++for x,y in terrain['submerged_cells']:watermask[y*factor:(y+1)*factor,x*factor:(x+1)*factor]=True
++plaza=circle((-10,0),23);district_before_water=zone&~roadmask&~plaza;district=district_before_water&~watermask
++coverage=np.count_nonzero(roofmask&district)/np.count_nonzero(district)
++r=dict(status='PASS' if coverage>=.4 else 'FAIL',map=g['map'],cell_m=1/RES,water_mask_cell_m=.25,method='Union of native saved instance roof triangle projections, excluding authored paving widths (main carriageway plus 7m total footways, 2.4m service lanes), central plaza, and saved Landscape collision terrain below the actual water plane; no AABB substitution',sample_boundary='Unchanged 54m plaza radius + 60m corridor for tavern, central bridge and market-port roads to x=115m',
++    correction='01-04 failed; 05 retained but superseded as a measurement defect: independent rectangular segments left wedges at bends. Continuous shared-vertex ribbons now match native paving. Same centre lines, widths and endpoints; no deliberate sample shrink.',water_exclusion_m2=np.count_nonzero(district_before_water&watermask)/(RES*RES),terrain_evidence=terrain_selection['run'],roof_evidence=selection['run'],
++    district_m2=np.count_nonzero(district)/(RES*RES),roof_union_m2=np.count_nonzero(roofmask&district)/(RES*RES),roof_coverage=coverage,required_min=.4,roof_meshes=len(g['meshes']),roof_instances=len(g['instances']))
++number=1
++while (D/('appendix/ROOF_COVERAGE_%02d.json'%number)).exists():number+=1
++target=D/('appendix/ROOF_COVERAGE_%02d.json'%number);target.write_text(json.dumps(r,indent=2),'utf-8');print(json.dumps(r))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_materials.py
+@@ -0,0 +1,23 @@
++"""UE-only private material usage copies; originals remain untouched."""
++import unreal as U,hashlib
++A=U.EditorAssetLibrary;ME=U.MaterialEditingLibrary
++def instancing_material(source,root,cache,report):
++    key=source.get_path_name()
++    if key in cache:return cache[key]
++    usage=U.MaterialUsage.MATUSAGE_INSTANCED_STATIC_MESHES
++    if ME.has_material_usage(source,usage):cache[key]=source;return source
++    path=root+'/Materials/ISM_'+source.get_name()+'_'+hashlib.sha256(key.encode()).hexdigest()[:8]
++    result=A.load_asset(path) if A.does_asset_exist(path) else A.duplicate_asset(key.split('.')[0],path)
++    assert result,key
++    cache[key]=result
++    if isinstance(result,U.MaterialInstanceConstant):
++        parent=instancing_material(source.get_editor_property('parent'),root,cache,report)
++        ME.set_material_instance_parent(result,parent)
++        ME.set_material_usage_override(result,usage,True,True)
++        ME.update_material_instance(result)
++    else:
++        assert isinstance(result,U.Material)
++        ME.set_base_material_usage(result,usage,True);ME.recompile_material(result)
++    assert ME.has_material_usage(result,usage);assert A.save_loaded_asset(result,False)
++    report.append(dict(source=key,derived=result.get_path_name(),usage='InstancedStaticMeshes',render_validation='NOT_RUN'))
++    return result
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_village_house.py
+@@ -0,0 +1,23 @@
++"""One approved source prefab for the in-world scale comparison."""
++from pathlib import Path
++import unreal as U,json,re,hashlib,traceback
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')
++R=dict(status='RUNNING')
++try:
++    if (P/'village_house_selection.json').exists():raise RuntimeError('Selection already exists; preserve and reuse it')
++    data=json.loads(U.HCM5VS2VillageEditor.probe_village_houses());assert data['status']=='PASS'
++    (P/'village_house_probe.json').write_text(json.dumps(data,indent=2),'utf-8')
++    # Whole BPs contain lights/particles. Copy only audited native static templates;
++    # do not instantiate, execute, or relabel the rejected BP as safe.
++    choices=[h for h in data['houses'] if all(s.startswith('COMPONENT_CLASS_NOT_ALLOWLISTED:') for s in h['rejection_reasons']) and any('SM_BLD_door_v02_01.' in c.get('static_mesh','') for c in h['components'])]
++    assert choices,'No audited v02 door house'
++    house=min(choices,key=lambda h:h['static_mesh_component_count'])
++    roots=sorted({c['static_mesh'].split('.')[0] for c in house['components'] if c.get('component_class_allowlist_pass') and c.get('static_mesh','None')!='None'})
++    roots+=['/Game/Fantastic_Village_Pack/meshes/props/deco/SM_PROP_well']
++    token=hashlib.sha256(str(OUT).encode()).hexdigest()[:12];dest='/Game/HarborCity/M5VS2/Environment/Village_'+token
++    copied=json.loads(U.HCM5VS2VillageEditor.copy_village_selection(roots,dest,True));assert copied['status']=='PASS',str(copied)
++    selected=dict(house=house,copy=copied,destination=dest,scale=1.12,scope='Native static mesh SCS templates only; source BP rejection unchanged; lights/particles omitted, no BP execution')
++    (P/'village_house_selection.json').write_text(json.dumps(selected,indent=2),'utf-8')
++    R.update(status='PASS',private_selection=str(P/'village_house_selection.json'),packages=copied['package_count'],source_bytes=copied['source_bytes'],scale=1.12)
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/test_m5_vs4_r2_graphics_policy.ps1
+@@ -0,0 +1,24 @@
++#requires -Version 7.0
++$ErrorActionPreference='Stop'
++$root=Split-Path $PSScriptRoot -Parent
++. (Join-Path $PSScriptRoot 'hc_r3_window_guard.ps1')
++. (Join-Path $PSScriptRoot 'hc_vs4_r2_stop_guard.ps1')
++if(Test-HCVS4R2Stopped){throw 'USER_STOPPED'}
++if(Get-CimInstance Win32_Process -Filter "Name='UnrealEditor.exe' OR Name='UnrealEditor-Cmd.exe' OR Name='HarborCity-Win64-Shipping.exe'"){throw 'One engine at a time'}
++$run=Join-Path $root ('docs/HarborCity_M5_VS4/R2/policy_'+(Get-Date -Format 'yyyyMMdd_HHmmss_fff'))
++New-Item -ItemType Directory -Path $run|Out-Null
++$args=@(('"'+$root+'/HarborCity/HarborCity.uproject"'),'-NullRHI','-unattended','-nosplash','-nosound','-nop4','-ExecCmds="Automation RunTests HarborCity.VS4.Graphics.FrameLimitPolicy"','-TestExit="Automation Test Queue Empty"',('-ReportExportPath="'+$run+'/report"'),('-UserDir="'+$run+'/User"'),('-abslog="'+$run+'/engine.log"'),'-LocalDataCachePath=D:/GameDev/Cache/Unreal/HarborCity/DDC','-ZenDataPath=D:/GameDev/Cache/Unreal/HarborCity/Zen')
++$p=Start-Process -WindowStyle Hidden -FilePath 'E:/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe' -ArgumentList $args -PassThru
++$start=Get-Date
++$record=[ordered]@{status='RUNNING';pid=$p.Id;scope='NULLRHI_LOGIC_ONLY_NOT_UI_OR_THERMAL';arguments=$args;started=$start.ToString('o')}
++$record|ConvertTo-Json -Depth 4|Set-Content -LiteralPath ($run+'/launch.json') -Encoding utf8
++Write-Output $run
++while(-not $p.WaitForExit(1000)){
++ if(Test-HCVS4R2Stopped -Run $run){$record.status='USER_ABORTED';$p.Kill();break}
++ if(((Get-Date)-$start).TotalSeconds -gt 240){$record.status='FAIL_TIMEOUT';$p.Kill();break}
++}
++$p.WaitForExit();$p.Refresh();$record.exit_code=$p.ExitCode
++if($record.status -eq 'RUNNING'){$record.status=if($p.ExitCode -eq 0 -and (Test-Path -LiteralPath ($run+'/report/index.json'))){'COMPLETED_REVIEW_REPORT'}else{'FAIL'}}
++$record.ended=(Get-Date -Format o);$record|ConvertTo-Json -Depth 4|Set-Content -LiteralPath ($run+'/exit.json') -Encoding utf8
++Write-Output $record.status
++if($record.status -notlike 'COMPLETED*'){exit 1}
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_terrain_audit.py
+@@ -0,0 +1,34 @@
++"""Read saved Landscape collision heights; never modifies the map."""
++from pathlib import Path
++import json,re,sys,traceback
++import unreal as U
++sys.path.insert(0,str(Path(__file__).parent))
++from hc_vs4_capital_layout import canal_x
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line())
++OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent;P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')
++plan=json.loads((P/'sample_plan.json').read_text('utf-8'));R=dict(status='RUNNING',map=plan['map'],method='Saved Landscape complex collision height; read-only editor query')
++try:
++    assert U.get_editor_subsystem(U.LevelEditorSubsystem).load_level(plan['map'])
++    world=U.get_editor_subsystem(U.UnrealEditorSubsystem).get_editor_world()
++    query=U.HCM5VS4WorldAuthoring.sample_capital_terrain_heights
++    locations=[U.Vector(x*100,y*100,0) for b in plan['buildings'] for x,y in b['corners']]
++    heights=query(world,locations);assert len(heights)==len(locations)
++    rows=[]
++    for i,b in enumerate(plan['buildings']):
++        gaps=[b['ground_z_m']*100-h for h in heights[i*4:i*4+4]]
++        rows.append(dict(id=b['id'],corners_xy_m=b['corners'],base_z_cm=b['ground_z_m']*100,terrain_z_cm=list(heights[i*4:i*4+4]),gaps_cm=gaps,max_abs_gap_cm=max(map(abs,gaps)),ground='PASS' if max(map(abs,gaps))<=15 else 'FAIL'))
++    actors=U.get_editor_subsystem(U.EditorActorSubsystem).get_all_level_actors()
++    water=next(a for a in actors if a.get_actor_label()=='HC_VS4_B1_Water');water_z=water.get_actor_location().z
++    cells=[];locations=[]
++    for iy in range(880):
++        y=-70+iy*.25
++        if not -205<y<122:continue
++        for ix in range(max(0,int((canal_x(y)-10+100)*4)),min(1060,int((canal_x(y)+10+100)*4)+1)):
++            x=-100+ix*.25;cells.append([ix,iy]);locations.append(U.Vector(x*100,y*100,0))
++    heights=query(world,locations);assert len(heights)==len(locations)
++    submerged=[cell for cell,h in zip(cells,heights) if h<water_z]
++    private=P/(OUT.name+'_terrain_audit.json');private.write_text(json.dumps(dict(map=plan['map'],water_z_cm=water_z,submerged_cells=submerged,grid=dict(origin_m=[-100,-70],cell_m=.25,size=[1060,880]))),'utf-8')
++    (P/'terrain_selection.json').write_text(json.dumps(dict(file=str(private),run=str(OUT))),'utf-8')
++    R.update(status='PASS',building_ground='PASS' if all(r['ground']=='PASS' for r in rows) else 'FAIL',buildings=rows,max_abs_gap_cm=max(r['max_abs_gap_cm'] for r in rows),water_z_cm=water_z,submerged_cells=len(submerged),private_file=str(private),road_overlap='NOT_RUN',visual='NOT_RUN')
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_placement_report.py
+@@ -0,0 +1,36 @@
++"""Conservative offline road/parcel audit; not a gameplay collision test."""
++from pathlib import Path
++import json,math,numpy as np
++from PIL import Image,ImageDraw
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');D=Path('D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R2')
++plan=json.loads((P/'sample_plan.json').read_text('utf-8'))
++sel=json.loads((P/'terrain_selection.json').read_text('utf-8'))
++terrain=json.loads((Path(sel['run'])/'author_result.json').read_text('utf-8'))
++assert terrain['status']=='PASS' and len(terrain['buildings'])==len(plan['buildings'])
++SZ=(1060,880)
++def pix(p):return ((p[0]+100)*4,(p[1]+70)*4)
++def polygon(points):
++    im=Image.new('1',SZ);ImageDraw.Draw(im).polygon([pix(p) for p in points],fill=1);return np.array(im)
++roads=[]
++for r in plan['roads']:
++    mask=np.zeros((SZ[1],SZ[0]),bool)
++    left=[];right=[];points=r['points']
++    for i,p in enumerate(points):
++        a=points[max(0,i-1)];b=points[min(len(points)-1,i+1)]
++        dx,dy=b[0]-a[0],b[1]-a[1];ln=max(.001,math.hypot(dx,dy));nx,ny=-dy/ln*r['width_m']/2,dx/ln*r['width_m']/2
++        left.append((p[0]+nx,p[1]+ny));right.append((p[0]-nx,p[1]-ny))
++    for i in range(1,len(points)):mask|=polygon([left[i-1],left[i],right[i],right[i-1]])
++    roads.append((r['id'],mask))
++rows=[]
++for b,t in zip(plan['buildings'],terrain['buildings']):
++    assert b['id']==t['id']
++    base=polygon(b['corners']);hits=[dict(road=name,area_m2=np.count_nonzero(base&mask)/16) for name,mask in roads if np.count_nonzero(base&mask)>4]
++    repeats=[dict(id=o['id'],distance_m=math.dist(b['center'],o['center'])) for o in plan['buildings'] if o['id']!=b['id'] and o['prefab']==b['prefab'] and o['roof_variant']==b['roof_variant'] and math.dist(b['center'],o['center'])<25]
++    rows.append(dict(id=b['id'],prefab=b['prefab'].rsplit('/',1)[1],roof_variant=b['roof_variant'],ground=t['ground'],max_abs_gap_cm=t['max_abs_gap_cm'],planned_road_overlaps=hits,appearance_repeats_within_25m=repeats))
++r=dict(status='FAIL' if any(x['ground']=='FAIL' or x['planned_road_overlaps'] or x['appearance_repeats_within_25m'] for x in rows) else 'NOT_RUN_RUNTIME_COLLISION',
++    map=plan['map'],method='Ground: saved native Landscape collision heights. Road: 0.25m raster of planned foundation rectangles and carriage/service lanes, ignores <=0.25m2 raster edge contact; broad-phase candidates require saved mesh/runtime confirmation. Roof overhangs are not foundation area.',
++    terrain_run=sel['run'],building_count=len(rows),ground_fail=sum(x['ground']=='FAIL' for x in rows),road_overlap_candidates=sum(bool(x['planned_road_overlaps']) for x in rows),repeat_fail=sum(bool(x['appearance_repeats_within_25m']) for x in rows),buildings=rows)
++i=1
++while (D/('appendix/BUILDING_PLACEMENT_%02d.json'%i)).exists():i+=1
++out=D/('appendix/BUILDING_PLACEMENT_%02d.json'%i);out.write_text(json.dumps(r,indent=2),'utf-8')
++print(json.dumps({k:v for k,v in r.items() if k!='buildings'}))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_fill_parcels.py
+@@ -0,0 +1,71 @@
++"""Add real street-facing parcels within the original continuous sample boundary."""
++from pathlib import Path
++import hashlib,json,math,sys
++import numpy as np
++from PIL import Image,ImageDraw
++from scipy.spatial import cKDTree
++from hc_vs4_capital_layout import elevation,canal_x
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');file=P/'sample_plan.json';raw=file.read_bytes();plan=json.loads(raw)
++if '--drop-unreachable' in sys.argv:
++    failed=json.loads((P/'service_route_report.json').read_text('utf-8'))['failed']
++    added={b['id'] for b in json.loads((P/'fill_report.json').read_text('utf-8'))['additions']}
++    assert failed and set(failed)<=added
++    keep=P/('sample_plan_unreachable_'+hashlib.sha256(raw).hexdigest()[:12]+'.json')
++    if not keep.exists():keep.write_bytes(raw)
++    plan['buildings']=[b for b in plan['buildings'] if b['id'] not in failed]
++    plan['continuous_boundary_fill'].update(dropped_unreachable=failed,added=len(added)-len(failed))
++    file.write_text(json.dumps(plan,indent=2),'utf-8')
++    print(json.dumps(dict(dropped=failed,buildings=len(plan['buildings']))));raise SystemExit(0)
++backup=P/('sample_plan_before_fill_'+hashlib.sha256(raw).hexdigest()[:12]+'.json')
++assert not plan.get('continuous_boundary_fill'),'Already applied; inspect before another layout change'
++if not backup.exists():backup.write_bytes(raw)
++catalog=json.loads((P/'15dcffc04d60_prefab_geometry.json').read_text('utf-8'));lookup={p['package'].rsplit('/',1)[1]:p for p in catalog}
++R=8;LO=(-100,-70);SZ=(265*R,220*R)
++def pixel(p):return ((p[0]-LO[0])*R,(p[1]-LO[1])*R)
++def ribbon(points,width):
++    im=Image.new('1',SZ);d=ImageDraw.Draw(im);left=[];right=[]
++    for i,p in enumerate(points):
++        a=points[max(0,i-1)];b=points[min(len(points)-1,i+1)];dx,dy=b[0]-a[0],b[1]-a[1];ln=max(.001,math.hypot(dx,dy));nx,ny=-dy/ln*width/2,dx/ln*width/2
++        left.append(pixel((p[0]+nx,p[1]+ny)));right.append(pixel((p[0]-nx,p[1]-ny)))
++    for i in range(1,len(points)):d.polygon([left[i-1],left[i],right[i],right[i-1]],fill=1)
++    return np.array(im)
++def disk(c,r):
++    im=Image.new('1',SZ);x,y=pixel(c);ImageDraw.Draw(im).ellipse((x-r*R,y-r*R,x+r*R,y+r*R),fill=1);return np.array(im)
++zone=disk((-10,0),54);blocked=disk((-10,0),23)
++main=[r for r in plan['roads'] if 'service' not in r['id']]
++for road in plan['roads']:
++    blocked|=ribbon(road['points'],road['width_m']+(7 if road['id'] in plan['sample_road_ids'] else 0))
++    if road['id'] in plan['sample_road_ids']:zone|=ribbon([p for p in road['points'] if p[0]<115],60)
++blocked|=ribbon([(canal_x(y),y) for y in range(-70,150)],20)
++im=Image.new('1',SZ);d=ImageDraw.Draw(im)
++for b in plan['buildings']:d.polygon([pixel(p) for p in b['envelope']],fill=1)
++blocked|=np.array(im)
++points=[p for r in main if r['id'] in plan['sample_road_ids'] for p in r['points']];tree=cKDTree(points)
++fronts=[(x,y) for y in range(-48,138,2) for x in range(-65,146,2)];dist,index=tree.query(fronts)
++candidates=sorted([(d,p,points[i]) for p,d,i in zip(fronts,dist,index) if 7<d<30],key=lambda v:(v[0],v[1][1],v[1][0]))
++additions=[];area=0
++names=['BP_BLD_03_16x8_Ext_04','BP_BLD_03_16x8_Ext_09','BP_BLD_03_16x8_Ext_03','BP_BLD_03_8x8_Ext_01','BP_BLD_03_4x4_Ext_01']
++for name in names:
++    p=lookup[name];doors=[c for c in p['components'] if 'SM_MOD_Door_03_frame.' in c['mesh'] and c['transform']['translation'][2]<30 and c['transform']['translation'][0]<100]
++    if not doors:continue
++    door=doors[0]['transform']['translation'];sx,sy=(1600,800) if '16x8' in name else (800,800) if '8x8' in name else (400,400)
++    for distance,front,street in candidates:
++        yaw=math.degrees(math.atan2(front[1]-street[1],front[0]-street[0]));a=math.radians(yaw);co,si=math.cos(a),math.sin(a)
++        origin=[front[0]-(co*door[0]-si*door[1])/100,front[1]-(si*door[0]+co*door[1])/100]
++        def world(x,y):return [origin[0]+(co*x-si*y)/100,origin[1]+(si*x+co*y)/100]
++        c=p['center'];e=p['extent'];box=[world(c[0]+xx*(e[0]+30),c[1]+yy*(e[1]+30)) for xx,yy in ((-1,-1),(1,-1),(1,1),(-1,1))]
++        pp=np.array([pixel(q) for q in box]);low=np.floor(pp.min(axis=0)).astype(int);high=np.ceil(pp.max(axis=0)).astype(int)+1
++        if (low<0).any() or (high>np.array(SZ)).any():continue
++        stamp=Image.new('1',tuple(high-low));ImageDraw.Draw(stamp).polygon([tuple(q-low) for q in pp],fill=1);mask=np.array(stamp);s=np.s_[low[1]:high[1],low[0]:high[0]]
++        if (mask&(blocked[s]|~zone[s])).any():continue
++        center=world(c[0],c[1]);variants=[v for v in range(4) if not any(b['prefab']==p['package'] and b['roof_variant']==v and math.dist(center,b['center'])<25 for b in plan['buildings'])]
++        if not variants:continue
++        b=dict(id='R2_B%03d'%(len(plan['buildings'])+1),prefab=p['package'],origin=origin,yaw=yaw,scale=1.0,center=center,front=list(front),street='service_fill',street_point=list(street),corners=[world(0,0),world(sx,0),world(sx,sy),world(0,sy)],shape='16x8' if sx==1600 else '8x8' if sx==800 else '4x4',ground_z_m=elevation(*front,False),envelope=box,roof_variant=variants[len(plan['buildings'])%len(variants)])
++        plan['buildings'].append(b);additions.append(b);blocked[s]|=mask;area+=sx*sy/10000
++        if area>=512:break
++    if area>=512:break
++report=dict(status='PLAN_ONLY' if area>=400 else 'INSUFFICIENT_SPACE',added=len(additions),new_buildings=len(plan['buildings']),base_area_m2=area,backup=str(backup),additions=additions)
++(P/'fill_report.json').write_text(json.dumps(report,indent=2),'utf-8')
++if area>=400:
++    plan['continuous_boundary_fill']=dict(added=len(additions),backup=str(backup),native_coverage='NOT_RUN');file.write_text(json.dumps(plan,indent=2),'utf-8')
++print(json.dumps({k:v for k,v in report.items() if k!='additions'}))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_service_routes.py
+@@ -0,0 +1,53 @@
++"""Route service lanes around existing foundations; preserve sample parcels and boundary."""
++from pathlib import Path
++import json,math,heapq,hashlib
++import numpy as np
++from scipy.ndimage import distance_transform_edt
++from PIL import Image,ImageDraw
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');file=P/'sample_plan.json';data=file.read_bytes();plan=json.loads(data)
++backup=P/('sample_plan_before_routes_'+hashlib.sha256(data).hexdigest()[:12]+'.json')
++if not backup.exists():backup.write_bytes(data)
++CELL=.5;LO=(-100,-70);SZ=(530,440);WIDTH=2.4
++def cell(p):return (round((p[0]-LO[0])/CELL),round((p[1]-LO[1])/CELL))
++def world(p):return (p[0]*CELL+LO[0],p[1]*CELL+LO[1])
++im=Image.new('1',SZ);draw=ImageDraw.Draw(im)
++for b in plan['buildings']:draw.polygon([cell(p) for p in b['corners']],fill=1)
++blocked=distance_transform_edt(~np.array(im))*CELL<1.7
++base=[r for r in plan['roads'] if 'service' not in r['id']]
++targets=Image.new('1',SZ);draw=ImageDraw.Draw(targets)
++for r in base:
++    if r['id'] in plan['sample_road_ids']:draw.line([cell(p) for p in r['points']],fill=1,width=3)
++target=np.array(targets)&~blocked;heuristic=distance_transform_edt(~target)
++steps=[(dx,dy,math.hypot(dx,dy)) for dx,dy in ((-1,0),(1,0),(0,-1),(0,1),(-1,-1),(-1,1),(1,-1),(1,1))]
++def route(start):
++    if not (0<=start[0]<SZ[0] and 0<=start[1]<SZ[1]) or blocked[start[1],start[0]]:return None
++    costs={start:0.};previous={};queue=[(heuristic[start[1],start[0]],0.,start)]
++    while queue:
++        _,g,p=heapq.heappop(queue)
++        if g>costs.get(p,math.inf):continue
++        if target[p[1],p[0]]:
++            path=[p]
++            while p!=start:p=previous[p];path.append(p)
++            return list(reversed(path))
++        for dx,dy,d in steps:
++            q=(p[0]+dx,p[1]+dy)
++            if not (0<=q[0]<SZ[0] and 0<=q[1]<SZ[1]) or blocked[q[1],q[0]]:continue
++            if dx and dy and (blocked[p[1],q[0]] or blocked[q[1],p[0]]):continue
++            ng=g+d
++            if ng<costs.get(q,math.inf):costs[q]=ng;previous[q]=p;heapq.heappush(queue,(ng+heuristic[q[1],q[0]],ng,q))
++    return None
++new=[];failed=[]
++for b in plan['buildings']:
++    if 'service' not in b['street']:continue
++    a=math.radians(b['yaw']);start=(b['front'][0]-math.cos(a)*2.8,b['front'][1]-math.sin(a)*2.8)
++    path=route(cell(start))
++    if path is None:failed.append(b['id']);continue
++    # Keep dense points so each swept paving edge remains inside checked clearance.
++    points=[world(p) for p in path]
++    if len(points)<2:continue
++    new.append(dict(id='service_access_'+b['id'],width_m=WIDTH,points=points))
++report=dict(status='PASS' if not failed else 'FAIL',buildings=len(plan['buildings']),routes=len(new),failed=failed,previous_service_roads=len(plan['roads'])-len(base),footprint_clearance_m=1.7,source_backup=str(backup))
++(P/'service_route_report.json').write_text(json.dumps(report,indent=2),'utf-8')
++if not failed:
++    plan['roads']=base+new;file.write_text(json.dumps(plan,indent=2),'utf-8')
++print(json.dumps(report))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_view_audit.py
+@@ -0,0 +1,28 @@
++"""Roof-only sightline diagnostic within R1's fixed five-metre camera allowance."""
++from pathlib import Path
++import json,numpy as np
++from scipy.spatial.transform import Rotation
++P=Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2');sel=json.loads((P/'roof_selection.json').read_text('utf-8'));g=json.loads(Path(sel['file']).read_text('utf-8'))
++tri=[]
++for t in g['instances']:
++    mesh=g['meshes'][t['mesh']];v=(Rotation.from_quat(t['rotation']).apply(np.array(mesh['vertices'])*t['scale'])+t['translation'])/100
++    tri.append(v[np.array(mesh['triangles'])])
++tri=np.concatenate(tri);lo=tri.min(axis=1);hi=tri.max(axis=1)
++def clear(at,to):
++    active=(lo<=np.maximum(at,to)).all(axis=1)&(hi>=np.minimum(at,to)).all(axis=1);v=tri[active]
++    if not len(v):return True
++    ray=to-at;e1=v[:,1]-v[:,0];e2=v[:,2]-v[:,0];h=np.cross(np.broadcast_to(ray,e2.shape),e2);a=np.einsum('ij,ij->i',e1,h)
++    valid=np.abs(a)>1e-8;f=np.zeros_like(a);f[valid]=1/a[valid];s=at-v[:,0];u=f*np.einsum('ij,ij->i',s,h);q=np.cross(s,e1);b=f*np.einsum('j,ij->i',ray,q);d=f*np.einsum('ij,ij->i',e2,q)
++    return not np.any(valid&(u>=0)&(b>=0)&(u+b<=1)&(d>.001)&(d<.999))
++base=np.array([-45,35,30]);targets=[[-10,0,8],[-10,10,5.2],[0,0,5.2],[-20,0,5.2],[-10,-10,5.2],[-20,-10,5.2],[0,10,5.2]]
++rows=[]
++for z in (0,3,4,5):
++    for x in (-5,-4,-3,0,3,4,5):
++        for y in (-5,-4,-3,0,3,4,5):
++            off=np.array([x,y,z])
++            if np.linalg.norm(off)>5.0001:continue
++            at=base+off;visibility=[clear(at,np.array(t)) for t in targets]
++            rows.append(dict(camera=at.tolist(),delta_m=float(np.linalg.norm(off)),clear_count=sum(visibility),fountain_clear=visibility[0],targets_clear=visibility))
++rows.sort(key=lambda r:(-r['clear_count'],-r['fountain_clear'],-r['camera'][2],r['delta_m']))
++report=dict(status='DIAGNOSTIC_NOT_VISUAL_ACCEPTANCE',map=g['map'],scope='Roof triangles only; not walls or complete rendered occlusion',top_candidates=rows[:8],current=next(r for r in rows if r['camera']==[-45,38,34]))
++(P/'view_sightlines.json').write_text(json.dumps(report,indent=2),'utf-8');print(json.dumps(report))
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_detail_probe.py
+@@ -0,0 +1,15 @@
++"""Read-only dimensions and material slots for already migrated details."""
++from pathlib import Path
++import json,re,traceback
++import unreal as U
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++catalog=json.loads((DOC/'editor/20261002_004739_325_B0_migrate/author_result.json').read_text('utf-8'))
++names={r['package'].rsplit('/',1)[1]:r['package'] for r in catalog['assets']};R=dict(status='RUNNING',meshes=[])
++try:
++    for name in ('SM_MOD_Bridge_03_railing_extension_L','SM_MOD_Bridge_03_railing_extension_R','SM_MOD_Bridge_03_railing','SM_MOD_Bridge_03_extension','SM_PROP_lantern_city_01','SM_PROP_lantern_city_03','SM_PROP_lantern_orb_city'):
++        sm=U.EditorAssetLibrary.load_asset(names[name]);assert sm
++        b=sm.get_bounding_box();mats=[sm.get_material(i).get_path_name() if sm.get_material(i) else None for i in range(sm.get_num_sections(0))]
++        R['meshes'].append(dict(name=name,path=names[name],minimum=[b.min.x,b.min.y,b.min.z],maximum=[b.max.x,b.max.y,b.max.z],materials=mats))
++    R['status']='PASS'
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_scene_polish.py
+@@ -0,0 +1,65 @@
++"""Local R2-only water, exterior planting and interior fill; no exposure changes."""
++import math,unreal as U
++from hc_vs4_capital_layout import elevation,coast,smooth
++from hc_vs4_r2_materials import instancing_material
++
++def polish(root,plan,report):
++    A=U.EditorAssetLibrary;ME=U.MaterialEditingLibrary;AT=U.AssetToolsHelpers.get_asset_tools();E=U.get_editor_subsystem(U.EditorActorSubsystem)
++    tag='HC_VS4_R2_Polish'
++    actors=list(E.get_all_level_actors())
++    # The scale door must stand on the flat castle terrace, not its descending approach.
++    for a in actors:
++        if 'R2Scale_Castle' in list(map(str,a.tags)):
++            a.set_actor_location(U.Vector(-1700,-13870,3400),False,False)
++        for c in a.get_components_by_class(U.InstancedStaticMeshComponent):
++            if not c.static_mesh or c.static_mesh.get_name()!='SM_MOD_wall_small_door_castle':continue
++            for i in range(c.get_instance_count()):
++                t=c.get_instance_transform(i,True)
++                if abs(t.translation.x+1700)<1 and abs(t.translation.y+12600)<1:
++                    t.translation=U.Vector(-1700,-13900,3400)
++                    assert c.update_instance_transform(i,t,True,True,True)
++    for a in actors:
++        if tag in list(map(str,a.tags)):assert E.destroy_actor(a)
++    actors=list(E.get_all_level_actors())
++    path=root+'/Materials/M_R2_HarborWater'
++    mat=A.load_asset(path) if A.does_asset_exist(path) else AT.create_asset('M_R2_HarborWater',root+'/Materials',U.Material,U.MaterialFactoryNew())
++    ME.delete_all_material_expressions(mat)
++    def node(cls,**kw):
++        n=ME.create_material_expression(mat,cls)
++        for k,v in kw.items():n.set_editor_property(k,v)
++        return n
++    color=node(U.MaterialExpressionConstant3Vector,constant=U.LinearColor(.025,.15,.21,1))
++    rough=node(U.MaterialExpressionConstant,r=.56);specular=node(U.MaterialExpressionConstant,r=.12)
++    for n,prop in ((color,U.MaterialProperty.MP_BASE_COLOR),(rough,U.MaterialProperty.MP_ROUGHNESS),(specular,U.MaterialProperty.MP_SPECULAR)):ME.connect_material_property(n,'',prop)
++    world=node(U.MaterialExpressionWorldPosition);mask=node(U.MaterialExpressionComponentMask,r=True,g=True,b=False,a=False);ME.connect_material_expressions(world,'',mask,'Input')
++    size=node(U.MaterialExpressionConstant,r=800.);uv=node(U.MaterialExpressionDivide);ME.connect_material_expressions(mask,'',uv,'A');ME.connect_material_expressions(size,'',uv,'B')
++    pan=node(U.MaterialExpressionPanner,speed_x=.012,speed_y=-.008);ME.connect_material_expressions(uv,'',pan,'Coordinate')
++    texture=A.load_asset('/Game/HarborCity/M5VS2/World/StyleReview_8c9df1201dc2/Textures/T_Water_Normal_Mips');assert texture
++    normal=node(U.MaterialExpressionTextureSample,texture=texture,sampler_type=U.MaterialSamplerType.SAMPLERTYPE_NORMAL);ME.connect_material_expressions(pan,'',normal,'UVs')
++    strength=node(U.MaterialExpressionConstant3Vector,constant=U.LinearColor(.25,.25,1,1));scaled=node(U.MaterialExpressionMultiply)
++    ME.connect_material_expressions(normal,'RGB',scaled,'A');ME.connect_material_expressions(strength,'',scaled,'B');ME.connect_material_property(scaled,'',U.MaterialProperty.MP_NORMAL)
++    ME.recompile_material(mat);assert A.save_loaded_asset(mat,False)
++    sea=next(a for a in actors if a.get_actor_label()=='HC_VS4_B1_Water')
++    sea.set_actor_scale3d(U.Vector(20000,20000,1));sea.static_mesh_component.set_material(0,mat)
++    lights=0
++    for b in plan['buildings']:
++        if '_Int_' not in b['prefab']:continue
++        angle=math.radians(b['yaw']);co,si=math.cos(angle),math.sin(angle)
++        x=b['origin'][0]+co*7-si*4;y=b['origin'][1]+si*7+co*4
++        light=E.spawn_actor_from_class(U.PointLight,U.Vector(x*100,y*100,(b['ground_z_m']+2.8)*100),U.Rotator(),False)
++        light.set_actor_label('HC_VS4_R2_InteriorFill_'+b['id']);light.tags=[U.Name(tag)]
++        c=light.point_light_component;c.set_mobility(U.ComponentMobility.MOVABLE);c.set_intensity(30);c.set_attenuation_radius(750);c.set_cast_shadows(False);c.set_light_color(U.LinearColor(1,.79,.53));lights+=1
++    cache={};usage=[];tree_count=0
++    for variant in (1,2):
++        mesh=next(c.static_mesh for a in actors for c in a.get_components_by_class(U.InstancedStaticMeshComponent) if c.static_mesh and c.static_mesh.get_name()=='SM_ENV_tree_castle_0'+str(variant))
++        group=E.spawn_actor_from_class(U.HCM2InstancedProp,U.Vector(),U.Rotator(),False);group.tags=[U.Name(tag)];group.set_actor_label('HC_VS4_R2_OuterTrees_'+str(variant));c=group.get_editor_property('instances');c.set_static_mesh(mesh);c.set_collision_profile_name('NoCollision')
++        for slot in range(mesh.get_num_sections(0)):
++            source=mesh.get_material(slot)
++            if source:c.set_material(slot,instancing_material(source,root,cache,usage))
++        for i in range(variant-1,180,2):
++            a=i*2.399963;r=430+i%11*16;x=-30+r*math.cos(a);y=r*.9*math.sin(a)
++            if x>coast(y)-20:continue
++            xx=max(-250,min(250,x));yy=max(-225,min(225,y));d=max(abs(x)/950,abs(y)/850)
++            z=elevation(xx,yy)*(1-smooth((d-.68)/.25))-8*smooth((d-.68)/.25)
++            s=1.+i%4*.12;c.add_instance(U.Transform(location=U.Vector(x*100,y*100,z*100),rotation=U.Rotator(yaw=i*53),scale=U.Vector(s,s,s)),False);tree_count+=1
++    report['local_polish']=dict(water_width_m=20000,water_roughness=.56,water_specular=.12,water_displacement=False,interior_fill_lights=lights,outer_trees=tree_count,exposure_changed=False,original_assets_modified=False)
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_scene_polish.py
+@@ -0,0 +1,12 @@
++from pathlib import Path
++import json,re,sys,traceback,unreal as U
++sys.path.insert(0,str(Path(__file__).parent))
++from hc_vs4_r2_scene_polish import polish
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());OUT=Path(m[1] or m[2]);DOC=OUT.parent.parent
++plan=json.loads(Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2/sample_plan.json').read_text('utf-8'));R=dict(status='RUNNING',map=plan['map'])
++try:
++    assert plan['map'].startswith('/Game/HarborCity/M5VS4/Capital/R2_')
++    L=U.get_editor_subsystem(U.LevelEditorSubsystem);assert L.load_level(plan['map'])
++    polish(plan['map'].rsplit('/',1)[0],plan,R);assert L.save_current_level();R['status']='PASS'
++except Exception:R.update(status='FAIL',error=traceback.format_exc());U.log_error(R['error'])
++(OUT/'author_result.json').write_text(json.dumps(R,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/ue_m5_vs4_r2_scale_probe.py
+@@ -0,0 +1,20 @@
++"""Read-only native terrain heights at the three saved door markers."""
++from pathlib import Path
++import json,re,traceback
++import unreal as U
++m=re.search(r'-M5EvidenceDir=(?:"([^"]+)"|(\S+))',U.SystemLibrary.get_command_line());out=Path(m[1] or m[2]);doc=out.parent.parent
++r=dict(status='RUNNING',doors=[])
++try:
++    level=json.loads((doc/'WORK_CHECKPOINT.json').read_text('utf-8-sig'))['map']
++    assert U.get_editor_subsystem(U.LevelEditorSubsystem).load_level(level)
++    world=U.get_editor_subsystem(U.UnrealEditorSubsystem).get_editor_world()
++    for a in U.get_editor_subsystem(U.EditorActorSubsystem).get_all_level_actors():
++        tags=list(map(str,a.tags));tags=[t for t in tags if t.startswith('R2Scale_')]
++        if not tags:continue
++        p=a.get_actor_location();f=p+a.get_actor_forward_vector()*110
++        h=U.HCM5VS4WorldAuthoring.sample_capital_terrain_heights(world,[p,f])
++        r['doors'].append(dict(pack=tags[0],door=[p.x,p.y,p.z],feet=[f.x,f.y,f.z],terrain_cm=list(h)))
++    assert len(r['doors'])==3
++    r['status']='PASS'
++except Exception:r.update(status='FAIL',error=traceback.format_exc())
++(out/'author_result.json').write_text(json.dumps(r,indent=2),'utf-8')
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_gate_media.py
+@@ -0,0 +1,65 @@
++"""Mechanical JPEG export and transparent sample-boundary annotation of native frames."""
++from pathlib import Path
++import argparse,hashlib,io,json,math
++import numpy as np
++from PIL import Image,ImageDraw,ImageFont
++from scipy.ndimage import binary_erosion
++from hc_vs4_capital_layout import canal_x
++W=Path('D:/科研学习/codex学习');D=W/'docs/HarborCity_M5_VS4/R2'
++ap=argparse.ArgumentParser();ap.add_argument('--gate-run',required=True);ap.add_argument('--scale-run',required=True);ap.add_argument('--fixed-run',required=True);ap.add_argument('--bridge-run');a=ap.parse_args()
++dest=D/'gate';dest.mkdir(exist_ok=True);rows=[]
++font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',23)
++def source(run,name):
++    found=list((D/run).rglob(name+'.png'));assert len(found)==1
++    return found[0]
++def write(im,name,sources,note='JPEG encoding only; scene pixels unretouched'):
++    im=im.convert('RGB')
++    for q in range(94,39,-2):
++        buf=io.BytesIO();im.save(buf,format='JPEG',quality=q,optimize=True)
++        if buf.tell()<=500000:break
++    assert buf.tell()<=500000
++    p=dest/(name+'.jpg');p.write_bytes(buf.getvalue())
++    rows.append(dict(file=p.name,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),sources=[str(x.relative_to(D)) for x in sources],source_sha256=[hashlib.sha256(x.read_bytes()).hexdigest() for x in sources],method=note,kind='EDITOR_GAME'))
++for part in ['V01','V02','V10','V04','STREET_1','STREET_2']:
++    for tod in ['AFTERNOON','DUSK']:
++        name='R2_GATE_'+part+'_'+tod;p=source(a.gate_run,name);write(Image.open(p),name,[p])
++p=source(a.gate_run,'R2_GATE_PLAZA_NIGHT');write(Image.open(p),p.stem,[p])
++if a.bridge_run:
++    for tod in ['AFTERNOON','DUSK']:
++        p=source(a.bridge_run,'R2_GATE_BRIDGE_'+tod);write(Image.open(p),p.stem,[p])
++for i in range(1,5):
++    p=source(a.gate_run,'R2_EDGE_'+str(i));write(Image.open(p),p.stem,[p])
++p=source(a.gate_run,'R2_GATE_OVERHEAD');im=Image.open(p).convert('RGB');w,h=im.size
++plan=json.loads((Path('E:/GameDev/Assets/HarborCity/M5_VS4/R2')/'sample_plan.json').read_text('utf-8'))
++mask=Image.new('1',(w,h));draw=ImageDraw.Draw(mask)
++def px(x,y):return (w/2+y*w/700,h/2-x*w/700)
++cx,cy=px(-10,0);radius=54*w/700;draw.ellipse((cx-radius,cy-radius,cx+radius,cy+radius),fill=1)
++for road in plan['roads']:
++    if road['id'] not in plan['sample_road_ids']:continue
++    points=[p for p in road['points'] if p[0]<115]
++    left=[];right=[]
++    for i,point in enumerate(points):
++        u=points[max(0,i-1)];v=points[min(len(points)-1,i+1)]
++        dx,dy=v[0]-u[0],v[1]-u[1];length=max(.001,math.hypot(dx,dy));nx,ny=-dy/length*30,dx/length*30
++        left.append(px(point[0]+nx,point[1]+ny));right.append(px(point[0]-nx,point[1]-ny))
++    for i in range(1,len(points)):draw.polygon([left[i-1],left[i],right[i],right[i-1]],fill=1)
++# The stone bridge is part of the visual sample but, as a road, is excluded
++# from the street-block density denominator. Outline its real 36 x 8 m span.
++bridge_x=canal_x(28)
++draw.polygon([px(bridge_x+x,28+y) for x,y in [(-18,-4),(18,-4),(18,4),(-18,4)]],fill=1)
++m=np.array(mask);edge=m&~binary_erosion(m,iterations=4);pixels=np.array(im);pixels[edge]=[255,223,67];im=Image.fromarray(pixels)
++draw=ImageDraw.Draw(im);draw.rectangle((24,24,655,67),fill=(25,31,36));draw.text((35,33),'EDITOR - GAME | Yellow outline: sample area',font=font,fill='white')
++write(im,'R2_GATE_OVERHEAD_ANNOTATED',[p],'Native orthographic screenshot; yellow original street-block/plaza boundary plus real stone bridge span (a road, excluded from density denominator) and editor label only')
++scale=Image.new('RGB',(1920,420),(24,29,33));dr=ImageDraw.Draw(scale);sources=[]
++for i,(pack,label) in enumerate([('City','City 1.00 | door / hero 1.390'),('Castle','Castle 0.97 | door / hero 1.399'),('Village','Village 1.12 | door / hero 1.401')]):
++    p=source(a.scale_run,'R2_SCALE_'+pack);sources.append(p)
++    frame=Image.open(p).convert('RGB');frame.thumbnail((640,360));scale.paste(frame,(i*640,0));dr.text((i*640+14,378),label,font=font,fill='white')
++write(scale,'R2_GATE_SCALE_COMPARISON',sources,'Three complete native views resized equally, no cropping or perspective manipulation; labels added')
++for tod in ['AFTERNOON','DUSK']:
++    sheet=Image.new('RGB',(1920,1200),(24,29,33));dr=ImageDraw.Draw(sheet);sources=[]
++    for i in range(12):
++        prefix='R2_GATE' if a.fixed_run==a.gate_run else 'VS4_B1'
++        p=source(a.fixed_run,prefix+'_V%02d_%s'%(i+1,tod));sources.append(p);frame=Image.open(p).convert('RGB');frame.thumbnail((480,270));x=(i%4)*480;y=(i//4)*400;sheet.paste(frame,(x,y));dr.text((x+12,y+283),'V%02d | EDITOR - GAME'%(i+1),font=font,fill='white')
++    write(sheet,'R2_FIXED_12_'+tod,sources,'Native fixed camera views, equal resize and labels; sample-exterior whitebox intentionally retained')
++(D/'appendix/GATE_MEDIA.json').write_text(json.dumps(dict(kind='EDITOR_GAME_NOT_SHIPPING',images=rows),ensure_ascii=False,indent=2),'utf-8')
++print(json.dumps(dict(images=len(rows),max_bytes=max(r['bytes'] for r in rows))))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_walk_audit.py
+@@ -0,0 +1,25 @@
++"""Bounded native walk telemetry and encoded keyframe review, no invented media."""
++from pathlib import Path
++import csv,json,math,sys
++from PIL import Image,ImageDraw
++D=Path('D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R2');run=D/sys.argv[1];record=D/'recordings'/sys.argv[2]
++assert run.is_dir() and record.is_dir()
++files=list(run.rglob('R2_GATE_WALK.csv'));assert len(files)==1
++rows=list(csv.DictReader(files[0].open(encoding='utf-8-sig')));v=[{k:float(x) for k,x in r.items()} for r in rows]
++dist=sum(math.hypot(b['x_cm']-a['x_cm'],b['y_cm']-a['y_cm']) for a,b in zip(v,v[1:]))/100
++stalled=longest=0.;segments=[]
++for a,b in zip(v,v[1:]):
++    seconds=b['real_seconds']-a['real_seconds']
++    if a['speed_cm_s']<10:stalled+=seconds;longest=max(longest,stalled)
++    elif stalled:segments.append(stalled);stalled=0
++if stalled:segments.append(stalled)
++q=json.loads((record/'capture.qa.json').read_text('utf-8'));result=json.loads(next(run.rglob('results.json')).read_text('utf-8-sig'))
++r=dict(run=run.name,recording=record.name,kind='EDITOR_GAME_ENGINE_INPUT_NOT_OS',native_status=result['status'],checks=len(result['checks']),failures=[c for c in result['checks'] if c['status']=='FAIL'],duration_seconds=v[-1]['real_seconds'],distance_m=dist,end_xyz_cm=[v[-1][k] for k in ('x_cm','y_cm','z_cm')],longest_below_10cm_s_seconds=longest,stopped_segments_seconds=segments,end_distance_to_bridge_m=math.hypot(v[-1]['x_cm']/100-115,v[-1]['y_cm']/100-28),video_seconds=q['duration_seconds'],video_fps=q['actual_capture_fps'],audio_status=q['audio_signal_status'],decode=q['decode_validation'],temporary_frames_removed=q['temporary_frames_removed'],visual='USER_REVIEW')
++r['route_status']='PASS' if not r['failures'] and dist>120 and longest<=3 and r['end_distance_to_bridge_m']<12 else 'FAIL'
++out=D/'appendix'/('WALK_'+run.name.rsplit('_',2)[-2]+'_'+run.name.rsplit('_',1)[-1]+'.json');out.write_text(json.dumps(r,indent=2),'utf-8')
++keys=sorted((record/'keyframes').glob('*.jpg'));assert len(keys)==8
++sheet=Image.new('RGB',(1440,580*2),(25,29,32));draw=ImageDraw.Draw(sheet)
++for i,p in enumerate(keys):
++    im=Image.open(p);im.thumbnail((480,270));x=i%3*480;y=i//3*380;sheet.paste(im,(x,y));draw.text((x+10,y+280),p.name,fill='white')
++contact=D/'local_qa'/('walk_'+run.name+'.jpg');sheet.save(contact,quality=85)
++print(json.dumps(r));print(str(contact))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_gate_summary.py
+@@ -0,0 +1,22 @@
++"""Small provenance summary, not a replacement for original per-run reports."""
++from pathlib import Path
++import argparse,hashlib,json
++D=Path('D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R2')
++ap=argparse.ArgumentParser();ap.add_argument('runs',nargs='+');a=ap.parse_args();rows=[]
++for name in a.runs:
++    root=D/name;files=list(root.rglob('results.json'));assert len(files)==1
++    raw=files[0].read_bytes();r=json.loads(raw.decode('utf-8-sig'));exit_record=json.loads((root/'exit.json').read_text('utf-8-sig'))
++    assert exit_record['kind']=='EDITOR_GAME' and r['map']=='L_CapitalR2'
++    rows.append(dict(run=name,kind=exit_record['kind'],status=r['status'],map=r['map'],engine=r['engine'],checks=len(r['checks']),passed=sum(c['status']=='PASS' for c in r['checks']),failures=[c for c in r['checks'] if c['status']=='FAIL'],exit_code=exit_record['exit_code'],start=exit_record['started'],end=exit_record['ended'],host=exit_record['host'],source=str(files[0].relative_to(D)),source_sha256=hashlib.sha256(raw).hexdigest(),scope='Independent batch, never pooled into regression totals'))
++config=Path('C:/Users/HP/AppData/Local/HarborCity/Saved/Config/Windows/GameUserSettings.ini')
++digest=hashlib.sha256(config.read_bytes()).hexdigest().upper()
++assert digest=='8D9E1B2A2C2B7C64E3314F438D9592B61ECA5E1A0A119343C6F5908B96702AAB'
++baseline=D/'local_baseline';project=D.parents[2]/'HarborCity';frozen=[]
++for folder in ('M5VS4','M5VS3'):
++    for before in (baseline/'Source/HarborCity'/folder).glob('*Bow*'):
++        if before.is_file():
++            after=project/before.relative_to(baseline);assert before.read_bytes()==after.read_bytes(),str(after)
++            frozen.append(after.name)
++result=dict(status='EDITOR_GATE_EVIDENCE_ONLY',runs=rows,user_settings_sha256=digest,user_settings_untouched=True,frozen_bow_source_identical=frozen,full_regression_runs=0,shipping_candidates=0,art='USER_REVIEW',D_final_thermal='NOT_RUN')
++(D/'appendix/GATE_RUNS.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),'utf-8')
++print(json.dumps(dict(runs=len(rows),checks=[(r['run'],r['checks'],len(r['failures'])) for r in rows],frozen_bow_files=len(frozen))))
+
+--- /dev/null
++++ b/tools/hc_vs4_r2_prepare_publication.py
+@@ -0,0 +1,30 @@
++"""Copy an explicit text/JPEG gate allowlist into the existing publishing checkout."""
++from pathlib import Path
++import argparse,hashlib,json,re,shutil,subprocess
++W=Path('D:/科研学习/codex学习');D=W/'docs/HarborCity_M5_VS4/R2';G=D/'github';G.mkdir(exist_ok=True)
++WT=W/'.publish/harborcity-m5-vs3-r1-gate-20260926'
++ap=argparse.ArgumentParser();ap.add_argument('--recording',required=True);a=ap.parse_args()
++record=(D/'recordings'/a.recording).resolve();assert record.parent==(D/'recordings').resolve()
++q=json.loads((record/'capture.qa.json').read_text('utf-8'));assert q['decode_validation']=='PASS_FULL_VIDEO_AND_AUDIO_DECODE'
++assert 58<q['duration_seconds']<70 and q['actual_capture_fps']>=29.5
++video=D/'gate/VS4_R2_GATE_WALK_EDITOR_65S.mp4'
++if not video.exists():shutil.copy2(record/'capture.mp4',video)
++assert hashlib.sha256(video.read_bytes()).digest()==hashlib.sha256((record/'capture.mp4').read_bytes()).digest()
++text_files=['STATUS.md','TEST_REPORT.md','CONTROLS.md','LAYOUT.md','ASSETS.md','WORK_CHECKPOINT.json','REQUEST.md','REQUEST_D.md','gate/README.md','gate/VS4_R2_GATE_WALK_EDITOR_65S.txt','appendix/PREFLIGHT.json','appendix/CAPTURE_FAILURE_02.md','appendix/FAILURE_HISTORY.md','appendix/GATE_MEDIA.json','appendix/GATE_RUNS.json','appendix/SOURCE_CHANGES.patch','appendix/SOURCE_CHANGES.json']
++files=[D/f for f in text_files]+sorted((D/'appendix').glob('ROOF_COVERAGE_*.json'))+sorted((D/'appendix').glob('BUILDING_PLACEMENT_*.json'))+sorted((D/'appendix').glob('WALK_*.json'))+sorted((D/'gate').glob('*.jpg'))+[W/'docs/PROGRESS.md']
++before=subprocess.check_output(['git','status','--porcelain'],cwd=WT).decode('utf-8');assert not before,'Publishing worktree changed: inspect before proceeding'
++base=subprocess.check_output(['git','rev-parse','HEAD'],cwd=WT).decode().strip();rows=[]
++for source in files:
++    assert source.is_file() and source.suffix.lower() in ('.md','.json','.patch','.jpg','.txt')
++    if source.suffix.lower()=='.jpg':assert source.stat().st_size<=500000
++    if source.suffix.lower() in ('.md','.json','.patch','.txt'):
++        text=source.read_text('utf-8-sig').lower()
++        assert not re.search(r'(?:signingprivateexponent|encryptionkey)\s*=\s*["\']?[a-z0-9+/]{32,}',text)
++    rel=source.relative_to(W);target=WT/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,target)
++    rows.append(dict(path=rel.as_posix(),sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
++(G/'PUBLICATION_FILES.json').write_text(json.dumps(rows,indent=2),'utf-8')
++assets=[]
++for p in [video,video.with_suffix('.txt')]:assets.append(dict(path=str(p),name=p.name,size=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
++plan=dict(repository='gx823/codex-learning',worktree=str(WT),base_commit=base,release_tag='harborcity-m5-vs4-r2-sample-gate-20261002',release_name='HarborCity M5-VS4 R2: capital sample gate (editor preview)',release_body='Sample-area review only. Editor -game, UE 5.8.2, not a Shipping build. Continuous approximately 65-second walk, native timestamps, public BGM muted. Captured native audio is silent and explicitly recorded as FAIL, with no replacement audio. See the accompanying text and docs/HarborCity_M5_VS4/R2/gate for scene images and limitations. D graphics controls are implemented; final-package thermal acceptance is NOT_RUN. Waiting for user art approval before full-city work. No purchased assets, derivatives, private music, saves or full game package are included.',release_assets=assets)
++(G/'upload_plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2),'utf-8')
++print(json.dumps(dict(files=len(rows),base=base,video_bytes=video.stat().st_size)))
+
+--- /dev/null
++++ b/tools/publish_m5_vs4_r2_gate.py
+@@ -0,0 +1,86 @@
++"""Explicit R2 gate publication, strict public whitelist and no interactive login."""
++from pathlib import Path
++from urllib.parse import urlsplit
++import base64,datetime,hashlib,json,mimetypes,os,re,subprocess
++import requests
++W=Path('D:/科研学习/codex学习');D=W/'docs/HarborCity_M5_VS4/R2';G=D/'github'
++P=json.loads((G/'upload_plan.json').read_text('utf-8'));WT=Path(P['worktree']);REPO='gx823/codex-learning'
++assert P['repository']==REPO
++ROWS=json.loads((G/'PUBLICATION_FILES.json').read_text('utf-8'))
++STATE={'status':'PREPARED','repository':REPO,'assets':[]}
++def save():(G/'gate_publication.json').write_text(json.dumps(STATE,ensure_ascii=False,indent=2)+'\n','utf-8')
++def git(*args):return subprocess.check_output(['git','-c','gc.auto=0','-c','maintenance.auto=false',*args],cwd=WT)
++def run():
++    for row in ROWS:
++        path=WT/row['path'];assert row['path'].startswith('docs/HarborCity_M5_VS4/R2/') or row['path']=='docs/PROGRESS.md'
++        assert path.suffix.lower() in ('.md','.json','.patch','.jpg','.txt','.csv')
++        assert hashlib.sha256(path.read_bytes()).hexdigest()==row['sha256']
++        if path.suffix.lower()=='.jpg':assert path.stat().st_size<=500000
++    credential=subprocess.run(['git','credential','fill'],cwd=W,input=f'protocol=https\nhost=github.com\npath={REPO}.git\n\n',capture_output=True,text=True,env=dict(os.environ,GIT_TERMINAL_PROMPT='0',GCM_INTERACTIVE='Never'))
++    if credential.returncode:raise RuntimeError('Existing credential unavailable; no login attempted')
++    fields=dict(x.split('=',1) for x in credential.stdout.splitlines() if '=' in x);token=fields.get('password');assert token
++    session=requests.Session();session.headers.update({'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'HarborCity-Authorized-Gate'});del credential,fields,token
++    api_root='https://api.github.com/repos/'+REPO
++    def api(method,path,allow404=False,**kwargs):
++        url=path if path.startswith('https://') else api_root+path
++        parsed=urlsplit(url);assert parsed.scheme=='https' and parsed.hostname in ('api.github.com','uploads.github.com')
++        response=session.request(method,url,allow_redirects=False,timeout=(30,900),**kwargs)
++        if allow404 and response.status_code==404:return None
++        if not 200<=response.status_code<300:raise RuntimeError(f'GitHub {method} {parsed.path}: HTTP {response.status_code}')
++        return response.json()
++    base=P['base_commit'];remote=api('GET','/git/ref/heads/main')['object']['sha']
++    prior=json.loads((G/'docs_publication.json').read_text('utf-8')) if (G/'docs_publication.json').exists() else None
++    if not prior or prior['status']!='PUSHED_VERIFIED':
++        assert remote==base,'Remote changed; never force'
++        dirty=git('status','--porcelain').decode('utf-8');STATE['git_status_before']=dirty;save()
++        if dirty:
++            # Repository-wide JPEG ignore stays untouched; only this validated
++            # public allowlist may bypass it, never the asset/source directories.
++            git('add','-f','--',*[r['path'] for r in ROWS]);staged=set(filter(None,git('diff','--cached','--name-only','-z').decode('utf-8').split('\0')))
++            assert staged==set(r['path'] for r in ROWS)
++            git('commit','-m','Present HarborCity M5-VS4 R2 capital sample gate and D implementation status')
++        local=git('rev-parse','HEAD').decode().strip();tree=git('rev-parse','HEAD^{tree}').decode().strip();assert git('rev-parse','HEAD^').decode().strip()==base
++        parent=api('GET','/git/commits/'+base);entries=[]
++        for row in ROWS:
++            raw=git('show','HEAD:'+row['path']);blob=api('POST','/git/blobs',json={'content':base64.b64encode(raw).decode('ascii'),'encoding':'base64'})
++            assert blob['sha']==git('rev-parse','HEAD:'+row['path']).decode().strip()
++            entries.append(dict(path=row['path'],mode='100644',type='blob',sha=blob['sha']))
++        created=api('POST','/git/trees',json={'base_tree':parent['tree']['sha'],'tree':entries});assert created['sha']==tree
++        headers,message=git('cat-file','commit',local).decode('utf-8').split('\n\n',1)
++        def identity(prefix):
++            row=next(x for x in headers.splitlines() if x.startswith(prefix+' '));m=re.fullmatch(prefix+r' (.*) <([^>]+)> (\d+) ([+-]\d{4})',row);assert m
++            zone=m[4];minutes=(int(zone[1:3])*60+int(zone[3:]))*(1 if zone[0]=='+' else -1)
++            dt=datetime.datetime.fromtimestamp(int(m[3]),datetime.timezone(datetime.timedelta(minutes=minutes)))
++            return dict(name=m[1],email=m[2],date=dt.isoformat())
++        commit=api('POST','/git/commits',json=dict(message=message,tree=tree,parents=[base],author=identity('author'),committer=identity('committer')))
++        assert commit['sha']==local and api('GET','/git/ref/heads/main')['object']['sha']==base
++        api('PATCH','/git/refs/heads/main',json={'sha':local,'force':False});assert api('GET','/git/ref/heads/main')['object']['sha']==local
++        prior=dict(status='PUSHED_VERIFIED',commit=local,tree=tree,url='https://github.com/'+REPO+'/commit/'+local)
++        (G/'docs_publication.json').write_text(json.dumps(prior,indent=2),'utf-8')
++    assert api('GET','/git/ref/heads/main')['object']['sha']==prior['commit']
++    STATE.update(status='DOCS_PUSHED',commit=prior['commit']);save()
++    release=api('GET','/releases/tags/'+P['release_tag'],allow404=True)
++    if release is None:
++        matches=[r for r in api('GET','/releases?per_page=100') if r['tag_name']==P['release_tag']];assert len(matches)<=1
++        if matches:release=matches[0]
++    if release is None:release=api('POST','/releases',json=dict(tag_name=P['release_tag'],target_commitish=prior['commit'],name=P['release_name'],body=P['release_body'],draft=True,prerelease=True,make_latest='false'))
++    assert release['target_commitish']==prior['commit']
++    STATE['release_url']=release['html_url'];save()
++    existing={r['name']:r for r in api('GET',f"/releases/{release['id']}/assets?per_page=100")}
++    for item in P['release_assets']:
++        path=Path(item['path']).resolve();assert path.is_relative_to((D/'gate').resolve()) and path.name==item['name'] and path.suffix.lower() in ('.mp4','.txt')
++        assert path.stat().st_size==item['size'] and hashlib.sha256(path.read_bytes()).hexdigest()==item['sha256']
++        asset=existing.get(path.name)
++        if asset is None:
++            assert release['draft'],'Never overwrite published release assets'
++            print(json.dumps(dict(stage='upload',file=path.name,bytes=item['size'])),flush=True)
++            with path.open('rb') as f:asset=api('POST',release['upload_url'].split('{',1)[0],params={'name':path.name},data=f,headers={'Content-Type':mimetypes.guess_type(path.name)[0] or 'application/octet-stream','Content-Length':str(item['size'])})
++        assert asset['state']=='uploaded' and asset['size']==item['size'] and asset.get('digest')=='sha256:'+item['sha256']
++        STATE['assets'].append({k:asset[k] for k in ('id','name','size','digest','browser_download_url')});save()
++    if release['draft']:release=api('PATCH',f"/releases/{release['id']}",json=dict(draft=False,prerelease=True,make_latest='false'))
++    check=api('GET','/releases/tags/'+P['release_tag']);assert not check['draft'] and check['prerelease']
++    STATE.update(status='PUBLISHED_VERIFIED',release_url=check['html_url']);save();print(json.dumps(STATE,ensure_ascii=False))
++if __name__=='__main__':
++    try:run()
++    except Exception as e:
++        STATE.update(status='INCOMPLETE',error=str(e) if isinstance(e,(RuntimeError,AssertionError)) else type(e).__name__);save();print(json.dumps(STATE,ensure_ascii=False));raise SystemExit(1)

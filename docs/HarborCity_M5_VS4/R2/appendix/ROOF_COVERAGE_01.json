@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "map": "/Game/HarborCity/M5VS4/Capital/R2_15dcffc04d60/L_CapitalR2",
+  "cell_m": 0.25,
+  "method": "Union of native saved instance roof triangle projections, excluding road and central plaza masks; no AABB substitution",
+  "sample_boundary": "54m plaza radius + 60m corridor for tavern, central bridge and market-port roads to x=115m",
+  "district_m2": 18245.875,
+  "roof_union_m2": 5161.5,
+  "roof_coverage": 0.28288585776237096,
+  "required_min": 0.4,
+  "roof_meshes": 11,
+  "roof_instances": 276
+}

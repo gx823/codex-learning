@@ -1,0 +1,165 @@
+{
+  "status": "EDITOR_GATE_EVIDENCE_ONLY",
+  "runs": [
+    {
+      "run": "m5_vs3_r3_b_20261002_122609",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "map": "L_CapitalR2",
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "checks": 94,
+      "passed": 94,
+      "failures": [],
+      "exit_code": 0,
+      "start": "2026-10-02T12:26:10.0694472+08:00",
+      "end": "2026-10-02T12:30:00.5768264+08:00",
+      "host": {
+        "time": "2026-10-02T12:26:08.8304927+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 56.95
+          },
+          {
+            "Name": "D",
+            "free_GiB": 124.53
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.91
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "source": "m5_vs3_r3_b_20261002_122609\\User\\Saved\\M5Tests\\20261002_122639_m5_vs3_r3_b\\results.json",
+      "source_sha256": "3dddf09b44d16e7f663bbca62655a400600f940705cac1868af95edcc7f9b989",
+      "scope": "Independent batch, never pooled into regression totals"
+    },
+    {
+      "run": "m5_vs3_r3_b_20261002_123226",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "map": "L_CapitalR2",
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "checks": 10,
+      "passed": 10,
+      "failures": [],
+      "exit_code": 0,
+      "start": "2026-10-02T12:32:26.2887859+08:00",
+      "end": "2026-10-02T12:34:55.0851450+08:00",
+      "host": {
+        "time": "2026-10-02T12:32:25.0014538+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 56.71
+          },
+          {
+            "Name": "D",
+            "free_GiB": 124.42
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.91
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "source": "m5_vs3_r3_b_20261002_123226\\User\\Saved\\M5Tests\\20261002_123352_m5_vs3_r3_b\\results.json",
+      "source_sha256": "68e0225ec7c3ec522b8578a3d7e4ec47b9d081ee2c40df0ee792c3e867401346",
+      "scope": "Independent batch, never pooled into regression totals"
+    },
+    {
+      "run": "m5_vs3_r3_b_20261002_123523",
+      "kind": "EDITOR_GAME",
+      "status": "COMPLETE",
+      "map": "L_CapitalR2",
+      "engine": "5.8.2-56702186+++UE5+Release-5.8",
+      "checks": 8,
+      "passed": 8,
+      "failures": [],
+      "exit_code": 0,
+      "start": "2026-10-02T12:35:23.1732671+08:00",
+      "end": "2026-10-02T12:37:35.1188754+08:00",
+      "host": {
+        "time": "2026-10-02T12:35:22.0664914+08:00",
+        "ac_line": 1,
+        "battery_percent": 100,
+        "foreground_pid": 26432,
+        "foreground_process": "ChatGPT",
+        "games": [],
+        "disks": [
+          {
+            "Name": "C",
+            "free_GiB": 56.2
+          },
+          {
+            "Name": "D",
+            "free_GiB": 124.41
+          },
+          {
+            "Name": "E",
+            "free_GiB": 181.91
+          }
+        ],
+        "input_desktop": {
+          "name": "Default",
+          "opened": true,
+          "open_error": 0,
+          "wts_valid": true,
+          "session_flags": 1,
+          "session_state": 0,
+          "query_error": 0,
+          "available": true
+        }
+      },
+      "source": "m5_vs3_r3_b_20261002_123523\\User\\Saved\\M5Tests\\20261002_123601_m5_vs3_r3_b\\results.json",
+      "source_sha256": "1f014fab892b64f5ce8547cc866fdeccb1bf92fb971a999a8c15e07975645ebb",
+      "scope": "Independent batch, never pooled into regression totals"
+    }
+  ],
+  "user_settings_sha256": "8D9E1B2A2C2B7C64E3314F438D9592B61ECA5E1A0A119343C6F5908B96702AAB",
+  "user_settings_untouched": true,
+  "frozen_bow_source_identical": [
+    "HCM5VS4BowAuthoring.cpp",
+    "HCM5VS4BowAuthoring.h",
+    "HCM5VS4BowPresentation.cpp",
+    "HCM5VS4BowProjection.h",
+    "HCM5VS4BowState.cpp",
+    "HCM5VS4BowState.h",
+    "HCM5VS3Bow.cpp",
+    "HCM5VS3BowPose.h"
+  ],
+  "full_regression_runs": 0,
+  "shipping_candidates": 0,
+  "art": "USER_REVIEW",
+  "D_final_thermal": "NOT_RUN"
+}

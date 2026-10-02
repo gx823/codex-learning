@@ -1,0 +1,880 @@
+{
+  "status": "FAIL",
+  "map": "/Game/HarborCity/M5VS4/Capital/R2_15dcffc04d60/L_CapitalR2",
+  "method": "Ground: saved native Landscape collision heights. Road: 0.25m raster of planned foundation rectangles and carriage/service lanes, ignores <=0.25m2 raster edge contact; broad-phase candidates require saved mesh/runtime confirmation. Roof overhangs are not foundation area.",
+  "terrain_run": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS4\\R2\\editor\\20261002_080859_042_terrain_readonly",
+  "building_count": 82,
+  "ground_fail": 5,
+  "road_overlap_candidates": 22,
+  "repeat_fail": 0,
+  "buildings": [
+    {
+      "id": "R2_B001",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 9.37700964666692,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_-1",
+          "area_m2": 11.5625
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B002",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 9.921717656365502,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_-1",
+          "area_m2": 21.5625
+        },
+        {
+          "road": "central_bridge_service_1",
+          "area_m2": 14.625
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B003",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 6.298465781575317,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_-1",
+          "area_m2": 11.625
+        },
+        {
+          "road": "central_bridge_service_1",
+          "area_m2": 22.6875
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B004",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 0,
+      "ground": "FAIL",
+      "max_abs_gap_cm": 17.59994700872835,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B005",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 1,
+      "ground": "FAIL",
+      "max_abs_gap_cm": 28.99891407187971,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_1",
+          "area_m2": 19.4375
+        },
+        {
+          "road": "tavern_street_service_1",
+          "area_m2": 11.875
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B006",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 2,
+      "ground": "FAIL",
+      "max_abs_gap_cm": 23.136057984455533,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_1",
+          "area_m2": 24.0
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B007",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 14.518653889153029,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B008",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 13.487920475189185,
+      "planned_road_overlaps": [
+        {
+          "road": "central_bridge_service_-1",
+          "area_m2": 19.9375
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B009",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 0,
+      "ground": "FAIL",
+      "max_abs_gap_cm": 29.757102850992908,
+      "planned_road_overlaps": [
+        {
+          "road": "central_bridge_service_-1",
+          "area_m2": 23.4375
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B010",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 4.303072860201439,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B011",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.6365883946402278,
+      "planned_road_overlaps": [
+        {
+          "road": "plaza_service_lane",
+          "area_m2": 38.9375
+        },
+        {
+          "road": "tavern_street_service_-1",
+          "area_m2": 33.625
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B012",
+      "prefab": "BP_BLD_03_16x8_Int_Bar_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.2413848867223578,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B013",
+      "prefab": "BP_BLD_03_16x8_Ext_09",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.45094215406004423,
+      "planned_road_overlaps": [
+        {
+          "road": "tavern_street_service_-1",
+          "area_m2": 24.3125
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B014",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.5317790447916764,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B015",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.4384274239461092,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B016",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.8300433662724913,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B017",
+      "prefab": "BP_BLD_03_16x8_Ext_03",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 4.552069578043415,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B018",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 11.48028919134822,
+      "planned_road_overlaps": [
+        {
+          "road": "plaza_service_lane",
+          "area_m2": 10.875
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B019",
+      "prefab": "BP_BLD_03_T_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 8.649061248986413,
+      "planned_road_overlaps": [
+        {
+          "road": "plaza_service_lane",
+          "area_m2": 9.0625
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B020",
+      "prefab": "BP_BLD_03_16x8_Int_Bar_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 4.615141264574277,
+      "planned_road_overlaps": [
+        {
+          "road": "plaza_service_lane",
+          "area_m2": 41.6875
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B021",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.862332395344083,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B022",
+      "prefab": "BP_BLD_03_16x8_Int_Bar_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 3.7970662623545195,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B023",
+      "prefab": "BP_BLD_03_16x8_Int_Bar_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.4575450894673736,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B024",
+      "prefab": "BP_BLD_03_16x8_Ext_04",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.9895928249880512,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B025",
+      "prefab": "BP_BLD_03_16x8_Ext_03",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.320174160466536,
+      "planned_road_overlaps": [
+        {
+          "road": "plaza_service_lane",
+          "area_m2": 41.5625
+        },
+        {
+          "road": "market_port_service_1",
+          "area_m2": 26.9375
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B026",
+      "prefab": "BP_BLD_03_16x8_Ext_09",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.9189054807662274,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B027",
+      "prefab": "BP_BLD_03_16x8_Ext_03",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.068396700630899,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B028",
+      "prefab": "BP_BLD_03_16x8_Ext_09",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.2971821186592933,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B029",
+      "prefab": "BP_BLD_03_8x8_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 9.780446401815936,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B030",
+      "prefab": "BP_BLD_03_8x8_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.3448354930515052,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B031",
+      "prefab": "BP_BLD_03_8x8_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.613597628100763,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B032",
+      "prefab": "BP_BLD_03_8x8_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.667995893705779,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B033",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.7893956108076168,
+      "planned_road_overlaps": [
+        {
+          "road": "plaza_service_lane",
+          "area_m2": 8.9375
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B034",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.2877469163650517,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B035",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.9768554583857849,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B036",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.7290264574610319,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B037",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.169469138521663,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B038",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.4442358538468056,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B039",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.3724443608568322,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B040",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.4689207051672497,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B041",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.5484496189412766,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B042",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.14212087576891,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B043",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.38816894161021764,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B044",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.308460517469996,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_1",
+          "area_m2": 8.8125
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B045",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.773773347435565,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_1",
+          "area_m2": 0.3125
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B046",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.5800180607927246,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_1",
+          "area_m2": 10.1875
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B047",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.8240048151643578,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B048",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.2834670852791987,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B049",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.37751319633673575,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B050",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.5352535876037905,
+      "planned_road_overlaps": [
+        {
+          "road": "central_bridge_service_1",
+          "area_m2": 8.375
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B051",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.9201902262821022,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B052",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.6924903451143223,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B053",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.3084262233057302,
+      "planned_road_overlaps": [
+        {
+          "road": "market_port_service_-1",
+          "area_m2": 6.5
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B054",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.6970993677026058,
+      "planned_road_overlaps": [
+        {
+          "road": "tavern_street_service_1",
+          "area_m2": 8.3125
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B055",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.2207519656540171,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B056",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.5748187800598998,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B057",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.1287460283385258,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B058",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.4104646458330876,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B059",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.0032083868709378,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B060",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 2.097385167025209,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B061",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 5.1304830768963825,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B062",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 10.456690438634382,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B063",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 5.404857753659826,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B064",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 8.604621029243503,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B065",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "FAIL",
+      "max_abs_gap_cm": 15.709930054813185,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B066",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 10.78760620446974,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B067",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 10.916914273904695,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B068",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 6.665607318234834,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B069",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 7.461295133534122,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B070",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 10.15921603108552,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B071",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 3.8262691896095475,
+      "planned_road_overlaps": [
+        {
+          "road": "central_bridge_service_-1",
+          "area_m2": 1.75
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B072",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.8668420287997378,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B073",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 0,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.0825517580057067,
+      "planned_road_overlaps": [
+        {
+          "road": "central_bridge_service_1",
+          "area_m2": 9.25
+        }
+      ],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B074",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.37816243205014644,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B075",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.5084382424553269,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B076",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.724248595150982,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B077",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.078893897112323,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B078",
+      "prefab": "BP_BLD_03_8x8_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.7438127000963277,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B079",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.7171613457167609,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B080",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 2,
+      "ground": "PASS",
+      "max_abs_gap_cm": 1.214263618111886,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B081",
+      "prefab": "BP_BLD_03_4x4_Ext_01",
+      "roof_variant": 3,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.4603182990636583,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    },
+    {
+      "id": "R2_B082",
+      "prefab": "BP_BLD_03_8x8_Ext_01",
+      "roof_variant": 1,
+      "ground": "PASS",
+      "max_abs_gap_cm": 0.8212041730736814,
+      "planned_road_overlaps": [],
+      "appearance_repeats_within_25m": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "run": "m5_vs3_r3_b_20261002_123523",
+  "recording": "20261002_123626_AFC8FA97",
+  "kind": "EDITOR_GAME_ENGINE_INPUT_NOT_OS",
+  "native_status": "COMPLETE",
+  "checks": 8,
+  "failures": [],
+  "duration_seconds": 65.010961,
+  "distance_m": 251.46041992604555,
+  "end_xyz_cm": [
+    11232.449,
+    2758.195,
+    605.244
+  ],
+  "longest_below_10cm_s_seconds": 0.048424,
+  "stopped_segments_seconds": [
+    0.048424
+  ],
+  "end_distance_to_bridge_m": 2.70797333122022,
+  "video_seconds": 64.98410100000001,
+  "video_fps": 29.991951415931716,
+  "audio_status": "FAIL_SILENT_NATIVE_CAPTURE",
+  "decode": "PASS_FULL_VIDEO_AND_AUDIO_DECODE",
+  "temporary_frames_removed": 1949,
+  "visual": "USER_REVIEW",
+  "route_status": "PASS"
+}

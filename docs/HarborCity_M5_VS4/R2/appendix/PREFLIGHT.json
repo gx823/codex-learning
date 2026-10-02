@@ -1,0 +1,96 @@
+{
+  "time": "2026-10-02T00:45:57.6683524+08:00",
+  "disk": [
+    {
+      "name": "C",
+      "free_GiB": 60.23
+    },
+    {
+      "name": "D",
+      "free_GiB": 127.12
+    },
+    {
+      "name": "E",
+      "free_GiB": 181.93
+    }
+  ],
+  "host": {
+    "time": "2026-10-02T00:45:57.448511+08:00",
+    "ac_line": 1,
+    "battery_percent": 49,
+    "foreground_pid": 22208,
+    "foreground_process": "ShellExperienceHost",
+    "games": [],
+    "disks": [
+      {
+        "Name": "C",
+        "free_GiB": 60.23
+      },
+      {
+        "Name": "D",
+        "free_GiB": 127.11
+      },
+      {
+        "Name": "E",
+        "free_GiB": 181.93
+      }
+    ],
+    "input_desktop": {
+      "name": "Default",
+      "opened": true,
+      "open_error": 0,
+      "wts_valid": true,
+      "session_flags": 1,
+      "session_state": 0,
+      "query_error": 0,
+      "available": true
+    }
+  },
+  "git": [
+    " M .gitignore",
+    " D video_build/confession_subtitles.ass",
+    " D video_build/generate_ltx_clips.py",
+    " D video_build/generate_ltx_clips_optimized.py",
+    " D video_build/make_confession_short.py",
+    " D video_build/make_confession_short_v2.py",
+    " D video_build/make_dialogue_v3.py",
+    " D video_build/make_kokoro_dialogue.py",
+    " D video_build/make_original_bgm.py",
+    "?? .agents/",
+    "?? .publish/",
+    "?? AGENTS.md",
+    "?? AGENTS.template.md",
+    "?? HarborCity/",
+    "?? MANIFEST.sha256",
+    "?? PACKAGE_VALIDATION.md",
+    "?? PROMPTS.md",
+    "?? README.md",
+    "?? SOURCES.md",
+    "?? assets/",
+    "?? cleanup_records/",
+    "?? docs/",
+    "?? requirements/",
+    "?? spec/",
+    "?? tmp/",
+    "?? tools/",
+    "?? video_build/analyze_song_safe.py",
+    "?? video_build/build_manga_story_mad.py",
+    "?? video_build/extract_manga_page_index.py",
+    "?? video_build/extract_selected_manga_pages.py",
+    "?? video_build/mad_project_20260827/",
+    "?? video_build/make_panel_catalog.py",
+    "?? video_build/manga_mad_project_20260827/",
+    "?? video_build/mix_mad_audio.py",
+    "?? video_build/prepare_mad_music_edits.py",
+    "?? video_build/rezero_story_video_20260911_v1/",
+    "?? \"\\346\\230\\237\\347\\251\\271\\351\\202\\256\\345\\267\\256-\\351\\241\\271\\347\\233\\256\\346\\200\\273\\347\\273\\223.pdf\""
+  ],
+  "baseline": "local_baseline (private)",
+  "user_settings_path": "C:\\Users\\HP\\AppData\\Local\\HarborCity\\Saved\\Config\\Windows\\GameUserSettings.ini",
+  "user_settings_sha256": "8D9E1B2A2C2B7C64E3314F438D9592B61ECA5E1A0A119343C6F5908B96702AAB",
+  "user_settings_observed": "High / FrameRateLimit=0 / VSync=False; preserved, differs from reported 60",
+  "desktop": "BLOCKED_TOOL_UNAVAILABLE",
+  "full_regression_runs": 0,
+  "gate": "NOT_RUN",
+  "D": "MANDATORY; final-package measurements after user sample-area gate"
+}

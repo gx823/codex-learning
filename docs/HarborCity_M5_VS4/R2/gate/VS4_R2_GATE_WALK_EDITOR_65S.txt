@@ -1,0 +1,31 @@
+HarborCity / M5-VS4 R2 sample gate
+
+File: VS4_R2_GATE_WALK_EDITOR_65S.mp4
+Source: UE 5.8.2 editor -game, NOT a Shipping build.
+Map: /Game/HarborCity/M5VS4/Capital/R2_15dcffc04d60/L_CapitalR2
+Run: m5_vs3_r3_b_20261002_123523
+Recording: 20261002_123626_AFC8FA97
+1920 x 1080, H.264/AAC, native variable timestamps, normal speed.
+Duration: 64.984101 seconds. Actual captured frame rate: 29.991951 FPS.
+Continuous route: market/tavern, around the plaza fountain, street to the bridge.
+Measured movement: 251.460420 m; final distance to bridge waypoint: 2.707973 m.
+Longest measured speed below 10 cm/s: 0.048424 seconds.
+Map revision: 89 City buildings, 20 appearances, 4 shapes, roof coverage 41.195947%.
+Camera: 4 m, 45 degrees behind/alongside, above the hero's waist.
+Movement: production engine Move action, not OS keyboard input.
+Setup teleport is before recording; no teleport along the recorded route.
+Host: AC=1, unlocked Windows, guarded visible game window; isolated UserDir.
+High, 1080p, screen percentage 100, VSync off, uncapped QA configuration.
+
+LIMITATIONS
+Native captured audio is completely silent: FAIL_SILENT_NATIVE_CAPTURE.
+No old audio, synthetic replacement or private BGM was inserted.
+Private BGM is disabled with M5PublicCapture.
+This sample gate does not claim final gameplay, audio or performance acceptance.
+Areas outside the sample remain whitebox. Some fixed views are roof-heavy;
+bridge-approach railing support/detail still needs visual refinement.
+
+Full video/audio packet decode: PASS. No interpolation or speed change.
+1949 temporary JPEG frames were deleted after verified MP4; 8 keyframes retained locally.
+No raw purchased assets, derived asset files, geometry exports or saves are included.
+Wait for user visual approval before full-city work and final package/D thermal tests.

@@ -1,0 +1,37 @@
+{
+  "run": "m5_vs3_r3_b_20261002_115311",
+  "recording": "20261002_115400_6EDC8079",
+  "kind": "EDITOR_GAME_ENGINE_INPUT_NOT_OS",
+  "native_status": "COMPLETE",
+  "checks": 7,
+  "failures": [
+    {
+      "name": "R2 sample walk distance",
+      "status": "FAIL",
+      "evidence_level": "B engine movement input, not OS input",
+      "expected": ">120m actual movement in 60s",
+      "actual": "97.13m waypoint=3",
+      "elapsed_seconds": 85.89341679960489
+    }
+  ],
+  "duration_seconds": 60.008344,
+  "distance_m": 97.1282024996206,
+  "end_xyz_cm": [
+    -1038.378,
+    143.254,
+    629.27
+  ],
+  "longest_below_10cm_s_seconds": 35.264347,
+  "stopped_segments_seconds": [
+    0.035358,
+    35.264347
+  ],
+  "end_distance_to_bridge_m": 128.16755524679402,
+  "video_seconds": 59.975542999999995,
+  "video_fps": 30.01223348657302,
+  "audio_status": "FAIL_SILENT_NATIVE_CAPTURE",
+  "decode": "PASS_FULL_VIDEO_AND_AUDIO_DECODE",
+  "temporary_frames_removed": 1800,
+  "visual": "USER_REVIEW",
+  "route_status": "FAIL"
+}

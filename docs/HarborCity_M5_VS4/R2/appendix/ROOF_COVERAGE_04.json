@@ -1,0 +1,17 @@
+{
+  "status": "FAIL",
+  "map": "/Game/HarborCity/M5VS4/Capital/R2_15dcffc04d60/L_CapitalR2",
+  "cell_m": 0.25,
+  "method": "Union of native saved instance roof triangle projections, excluding authored paving widths (main carriageway plus 7m total footways, 2.4m service lanes), central plaza, and saved Landscape collision terrain below the actual water plane; no AABB substitution",
+  "sample_boundary": "Unchanged 54m plaza radius + 60m corridor for tavern, central bridge and market-port roads to x=115m",
+  "correction": "Earlier runs omitted canal water from the denominator; all earlier FAIL files retained",
+  "water_exclusion_m2": 7.625,
+  "terrain_evidence": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS4\\R2\\editor\\20261002_080859_042_terrain_readonly",
+  "roof_evidence": "D:\\\u79d1\u7814\u5b66\u4e60\\codex\u5b66\u4e60\\docs\\HarborCity_M5_VS4\\R2\\editor\\20261002_020434_455_roof_audit_82",
+  "district_m2": 14050.0,
+  "roof_union_m2": 5570.625,
+  "roof_coverage": 0.39648576512455513,
+  "required_min": 0.4,
+  "roof_meshes": 11,
+  "roof_instances": 441
+}
