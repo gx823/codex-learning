@@ -2,6 +2,8 @@
 
 ## 最终候选143049
 
+- 2026-10-05恢复发布：Python API创建本地提交后发生ProxyError，失败回执另存；普通Git HTTPS无force推送原codex分支成功，远端核验为935dc7d5e407670439860e133e45cd9312e5d63d。三个最终视频上传后大小/摘要通过。ZIP首次即时元数据检查不一致，Release保持草稿；随后一次只读GET出现EOF，重试后在01:47:14确认远端30437755字节/SHA256 dd4db76f48028b2ce89f326173d0cd4c9e731ff8af2f40f7e7b0b78916537fdf与本地一致，没有重传ZIP。01:48的续传复核仍失败；随后复现临时Api包装函数返回单个嵌套System.Object[]，4项被计为1项，筛选错附件。直接GET四附件全部一致；包装函数改为显式逐项输出，并增加名称核对后继续。没有放宽摘要要求，不能把后续成功覆盖成首次核验通过。两个旧回执分别保留于github/final_release_before_zip_recheck_20261005.json和final_release_before_array_fix_20261005.json。
+
 - 最终文档发布首次ConnectionError，第二次拒绝`Remote changed`；只读fetch核对发现main停在ebc5220，已发布v2实际在原codex/harborcity-m5-vs3-r2-gate-20260927分支7e92dc7。是新发布脚本错误假定main，不是用户历史被改。改为验证并推进原发布分支，绝不force、不回退main、不合并无关改动；原始两次失败仍记录于此。
 
 - 首次公开压缩：编码器默认时间基导致VFR帧被合并，飞行29.55、避障28.61FPS低于母版29.77/29.24。保留`*_PUBLIC.before_timebase.mp4`及旧回执；重新压缩仅使用passthrough与1ms时间基，不插帧、不改速度，最终帧数须等于母版。

@@ -1,4 +1,8 @@
-# M5-VS4 R2 / PUBLICATION_RESUMED
+# M5-VS4 R2 / DELIVERED_WITH_KNOWN_FAILURES
+
+v2图片：`gate/v2/README.md`，图片提交 `7175742d30ad0ac5df513a19429c7d4626103c65`。最终审阅内容提交 `935dc7d5e407670439860e133e45cd9312e5d63d`；[最终Release](https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r2-20261004)已于2026-10-05 01:52发布，五份附件的名称/大小/SHA-256全部核验通过。公开回执 `appendix/FINAL_PUBLICATION.json`。可玩审阅候选已交付，不是全部验收通过；新地图与星弓观感保持PENDING。
+
+三段公开视频、审阅ZIP与校验清单均只上传一次；先前的连接失败和附件列表嵌套误报保留。ZIP是发布前冻结快照，不因追加发布回执而重新生成或覆盖；本页顶部和公开回执为最新发布状态。已停止桌面操作，不启动游戏或追加测试，交还用户试玩。以下恢复/暂停段均为历史。
 
 2026-10-05：用户恢复，接电/100%/Windows解锁、无游戏。仅继续离线发布：归档旧暂停记录与准备版ZIP，刷新132文件源码附录，严格白名单推送原codex发布分支并上传Release。最终EXE、测试、图片和视频不重做；已知FAIL全部保留，完整回归额度1/1不追加。以下暂停段为历史。
 

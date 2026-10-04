@@ -1,0 +1,120 @@
+{
+  "status": "PUBLISHED_VERIFIED",
+  "published_at": "2026-10-05T01:52:43.3391394+08:00",
+  "repository": "gx823/codex-learning",
+  "branch": "codex/harborcity-m5-vs3-r2-gate-20260927",
+  "artifact_commit": "935dc7d5e407670439860e133e45cd9312e5d63d",
+  "artifact_commit_url": "https://github.com/gx823/codex-learning/commit/935dc7d5e407670439860e133e45cd9312e5d63d",
+  "release_tag": "harborcity-m5-vs4-r2-20261004",
+  "release_url": "https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r2-20261004",
+  "release_id": 403126534,
+  "assets": [
+    {
+      "digest": "sha256:3ed9a69f696ecd29aadc6c7f8baf57a0c8c162c49fd8af80255f3b330b356003",
+      "status": "VERIFIED",
+      "name": "VS4_R2_MAIN_PUBLIC.mp4",
+      "size": 157811024,
+      "url": "https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_MAIN_PUBLIC.mp4",
+      "id": 610265749
+    },
+    {
+      "digest": "sha256:8d8602a19a905d8da601b0539d9d8f0ce966cd7e4b34f064f9a80469b6e06f48",
+      "status": "VERIFIED",
+      "name": "VS4_R2_FLIGHT_PUBLIC.mp4",
+      "size": 38596661,
+      "url": "https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_FLIGHT_PUBLIC.mp4",
+      "id": 610290321
+    },
+    {
+      "digest": "sha256:4bb5a305b66e0f77ae4c3e5e3ad89029464fdddebc36653194ad5e02045b7585",
+      "status": "VERIFIED",
+      "name": "VS4_R2_CAMERA_PUBLIC.mp4",
+      "size": 22713721,
+      "url": "https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_CAMERA_PUBLIC.mp4",
+      "id": 610295533
+    },
+    {
+      "digest": "sha256:dd4db76f48028b2ce89f326173d0cd4c9e731ff8af2f40f7e7b0b78916537fdf",
+      "status": "VERIFIED",
+      "name": "VS4_R2_REVIEW.zip",
+      "size": 30437755,
+      "url": "https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_REVIEW.zip",
+      "id": 610298864
+    },
+    {
+      "digest": "sha256:78e71b7f2f6e92c2e49d5639e4b80d4a87afc690511cabc52bd01e2e75d9e7da",
+      "status": "VERIFIED",
+      "name": "VS4_R2_CHECKSUMS.txt",
+      "size": 523,
+      "url": "https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_CHECKSUMS.txt",
+      "id": 610315439
+    }
+  ],
+  "upload_attempts": [
+    {
+      "status": "HTTP_SUCCESS",
+      "ended": "2026-10-05T01:36:54.1126926+08:00",
+      "asset_id": 610265749,
+      "name": "VS4_R2_MAIN_PUBLIC.mp4",
+      "started": "2026-10-05T01:23:45.619841+08:00",
+      "attempt": 1,
+      "timeout_seconds": 1800
+    },
+    {
+      "status": "HTTP_SUCCESS",
+      "ended": "2026-10-05T01:39:57.2895372+08:00",
+      "asset_id": 610290321,
+      "name": "VS4_R2_FLIGHT_PUBLIC.mp4",
+      "started": "2026-10-05T01:37:01.722002+08:00",
+      "attempt": 1,
+      "timeout_seconds": 1800
+    },
+    {
+      "status": "HTTP_SUCCESS",
+      "ended": "2026-10-05T01:41:51.9687727+08:00",
+      "asset_id": 610295533,
+      "name": "VS4_R2_CAMERA_PUBLIC.mp4",
+      "started": "2026-10-05T01:40:05.1808412+08:00",
+      "attempt": 1,
+      "timeout_seconds": 1800
+    },
+    {
+      "status": "HTTP_SUCCESS",
+      "ended": "2026-10-05T01:44:44.4784589+08:00",
+      "asset_id": 610298864,
+      "name": "VS4_R2_REVIEW.zip",
+      "started": "2026-10-05T01:42:10.1510063+08:00",
+      "attempt": 1,
+      "timeout_seconds": 1800
+    },
+    {
+      "started": "2026-10-05T01:52:24.6106236+08:00",
+      "asset_id": 610315439,
+      "name": "VS4_R2_CHECKSUMS.txt",
+      "status": "HTTP_SUCCESS",
+      "timeout_seconds": 1800,
+      "attempt": 1,
+      "ended": "2026-10-05T01:52:27.5664866+08:00"
+    }
+  ],
+  "review_zip_note": "Immutable pre-upload review snapshot; later publication metadata is in STATUS and this receipt. Known failures and user review remain open.",
+  "archive_audit": {
+    "jpgs_over_500000_bytes": 0,
+    "jpgs": 70,
+    "entries": 89,
+    "unexpected_extensions": 0
+  },
+  "final_exe_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+  "full_regression": {
+    "runs_allowed": 1,
+    "sounds": "25/27",
+    "failures": 7,
+    "checks": 257,
+    "systems": "29/31",
+    "runs_used": 1
+  },
+  "acceptance": "REVIEW_CANDIDATE_WITH_KNOWN_FAILURES",
+  "user_art_review": "PENDING",
+  "uploaded_scope": "Text documentation/source diff, JPEG screenshots, compressed native-game MP4. No purchased or derived assets, music source, saves, full game or engine.",
+  "publication_failure_history": "Retained API connection failures and temporary PowerShell nested-array verification errors; all assets verified after correction, no artifact reupload."
+}

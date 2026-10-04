@@ -2,6 +2,8 @@
 
 以下均为最终 Shipping 候选画面，不是作者演示地图或编辑器图。新王都已设默认，可返回旧港町参考；这是带已知缺陷的可玩候选，不是全部验收通过。
 
+已发布：[视频与审阅ZIP](https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r2-20261004)。[主片](https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_MAIN_PUBLIC.mp4)、[飞行俯瞰](https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_FLIGHT_PUBLIC.mp4)、[镜头避障](https://github.com/gx823/codex-learning/releases/download/harborcity-m5-vs4-r2-20261004/VS4_R2_CAMERA_PUBLIC.mp4)均来自本次最终候选。完整游戏只留本机。
+
 主要未过项：城外尽头仍生硬、公会室内过暗、部分机位屋顶遮挡；接送与完整回归仍有失败，High60功耗降幅未达到35%。详细数据见[测试报告](../TEST_REPORT.md)，录像核验见[媒体附录](../appendix/FINAL_MEDIA_REVIEW.md)。新地图与星弓观感留给用户试玩确认。
 
 ![新旧地图俯视](screenshots/COMPARE_OLD_CAPITAL_OVERHEAD.jpg)
