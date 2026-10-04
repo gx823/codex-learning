@@ -1,0 +1,1043 @@
+{
+  "status": "EXPORTED_NOT_ART_APPROVAL",
+  "candidate": "E:\\GameDev\\Builds\\HarborCity\\M5_VS4\\Candidate_20261004_143049_637_b8a6e373\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+  "images": [
+    {
+      "file": "final/screenshots/R2_EDGE_1.jpg",
+      "bytes": 387469,
+      "sha256": "629cdcbf6a9d0bc8ae92252efa3d2aa0adafab445e5ff95d6951e5886e5caf49",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_EDGE_1.png"
+      ],
+      "source_sha256": [
+        "a02f83baa5e6ba1a29898dd3f50806b02d3c9982d81613869fed3df7409f9be7"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_EDGE_2.jpg",
+      "bytes": 408482,
+      "sha256": "965dc9fbd7c74fa13348a7fe072c8e48bbabcf93f99afb3a6abddbd3116ee745",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_EDGE_2.png"
+      ],
+      "source_sha256": [
+        "e78233a946f841119bb9e7e6e7ec196e423ffc7f129a91f5040861a147113173"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_EDGE_3.jpg",
+      "bytes": 352632,
+      "sha256": "5665f2222dd02d49ec86f9f5e4cf1304b20d5a1bb572458c37fb053225c2a7a9",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_EDGE_3.png"
+      ],
+      "source_sha256": [
+        "517e1b9c1deee00efd39c2dd3f2955653e12a2e3678b9901ddca9f25e7a31d43"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_EDGE_4.jpg",
+      "bytes": 361398,
+      "sha256": "7f057851f906a9c34bc3582590855f102defd65d5e19251231f784f0f7cc5943",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_EDGE_4.png"
+      ],
+      "source_sha256": [
+        "970bf06c259854d3445e7cb10ec6dbecc601076ff0cdff4d8bd1cc8b47cd1dbb"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_FINAL_MINIMAP.jpg",
+      "bytes": 461883,
+      "sha256": "39e8c25de6e7c1f8ade569dcabbbfb25765e9eda5701207d6b8dc01ff240d876",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_FINAL_MINIMAP.png"
+      ],
+      "source_sha256": [
+        "10dea6c152a2b1ddd6af5d71a99a24b1b4cfcb878ef599b472f71dffc0c83837"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_FINAL_V02_NIGHT.jpg",
+      "bytes": 437737,
+      "sha256": "32cb232f0619c74554aa395e0335e467970eabc20871ca72822aedd7511bbed3",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_FINAL_V02_NIGHT.png"
+      ],
+      "source_sha256": [
+        "bcf36f6c0b258bc106a889fefb2b3922cfe571bf062ca2909ee4a8d5410df111"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_FINAL_V03_NIGHT.jpg",
+      "bytes": 468478,
+      "sha256": "e31335bb32a8e326ea287bce88abe3c636a19bcf8798a785df0e2972512a9bbc",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_FINAL_V03_NIGHT.png"
+      ],
+      "source_sha256": [
+        "0fb7801263be4e9868e884bc71aa12e81be23c2a0c4d38dfed73901663240ec6"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_FINAL_V06_NIGHT.jpg",
+      "bytes": 414619,
+      "sha256": "864d779e648d55e24e857a25e1399bc6a5be73bc933514d2ffe23b4d4aaad9f6",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_FINAL_V06_NIGHT.png"
+      ],
+      "source_sha256": [
+        "3203beb950151caf8daa9581a190b1fbbffa4e74b6bce54334ba43235e9b5438"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_BRIDGE_AFTERNOON.jpg",
+      "bytes": 467482,
+      "sha256": "b2356312f0458453b4effacd50eac15813516e4f6cd028462815e9d1af5062f4",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_BRIDGE_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "312a8f7f78415017ea591f6c6d16d58f686f9504b304cfef2b5c7896ce8289e5"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_BRIDGE_DUSK.jpg",
+      "bytes": 449002,
+      "sha256": "aa0f88d6fee069f58d93c96cb9907b892a17c5cfd9eaffa6ace37f6f8bb44fee",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_BRIDGE_DUSK.png"
+      ],
+      "source_sha256": [
+        "ca83ae427c139f6233541e712ecd680595d862fb684090afc79eaeff76d122e3"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_OVERHEAD.jpg",
+      "bytes": 460890,
+      "sha256": "9e9dc83ae68ed162a61ee298a68aac3be75f84959e136f1ef7ea98b48972928a",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_OVERHEAD.png"
+      ],
+      "source_sha256": [
+        "16d047802bd741d9fce168a60dd9c9cd4274285ef4904c337a18a0d7030e3a89"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_PLAZA_NIGHT.jpg",
+      "bytes": 453780,
+      "sha256": "cba831e6c27a066b0f795f0fd5c7fa000c4d5e94e821534cb6f5fe1ae7767f09",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_PLAZA_NIGHT.png"
+      ],
+      "source_sha256": [
+        "bfecb29d3414950cb945dbd0dd8ad5475d776c749ddac9f1e63b60fbb121e290"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_STREET_1_AFTERNOON.jpg",
+      "bytes": 483199,
+      "sha256": "9f783db0febe2185b0a1a20757335e616c586b984270958d6bb6202f5bbac7e1",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_STREET_1_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "63ad91c24dda59309db08bd34b7fef186736779811eb8fc614e013560fea22fc"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_STREET_1_DUSK.jpg",
+      "bytes": 400947,
+      "sha256": "302575ec8a85a1766887b7e37518234c75848f04e63047e5ac28e1507363caa5",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_STREET_1_DUSK.png"
+      ],
+      "source_sha256": [
+        "b7b3a9370c417a2b06a86a46121e76dae7cbe84beda2c43ba55bf3a2e023028c"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_STREET_2_AFTERNOON.jpg",
+      "bytes": 426257,
+      "sha256": "20bdff371d54f0f85467ea7bcfc6d95e7ed066cd9188004cf3661f33a5d62264",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_STREET_2_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "8e4ea2559fd971ae6a852e5f08b5626e9f949b28f4eb80c19615c5802cd0fe92"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_STREET_2_DUSK.jpg",
+      "bytes": 312238,
+      "sha256": "f28837b4261991b68caef9552b0cb1296c5b036a422df53a9ecdadd8a53050e1",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_STREET_2_DUSK.png"
+      ],
+      "source_sha256": [
+        "5c13c1ce958990f909b1fe3d7e3f34e0e8e2307bf481d1cf1378aa7b74f87794"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V01_AFTERNOON.jpg",
+      "bytes": 427179,
+      "sha256": "99d620c914babc58bca09a512f386a29fba7453e03b6e80899a0c8f6c73a2d9f",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V01_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "9ad87ffb1573f06e1cad598a15f084a6e7137706ef5e35873149a6d3711e4c32"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V01_DUSK.jpg",
+      "bytes": 478071,
+      "sha256": "2489970edb0ba127a1edc31632cb6e40b0ec0bc515c3128c5cdf84e0d4c70c11",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V01_DUSK.png"
+      ],
+      "source_sha256": [
+        "57a727049b59987f9f84e38e1c361085c691cd61cca2833fc61a773622d01445"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V02_AFTERNOON.jpg",
+      "bytes": 419583,
+      "sha256": "b214ef94e7f934e817bde784c8dbfde8845af04dee17e74fd7f18c0ad90c5aab",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V02_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "29e2af6cfa519b60ed9c2f61dadeb7a86c20baee5d44ab76eb086c537d4cd98a"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V02_DUSK.jpg",
+      "bytes": 417573,
+      "sha256": "5c9762d1dd6586d6f77e480aeb44bcb8fe59cc3537ab1236f017ff3b8cd5e8b5",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V02_DUSK.png"
+      ],
+      "source_sha256": [
+        "6c0d3fedb97790cda60f5ad8cbb136503135d26af9290a9ff269a07043961265"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V03_AFTERNOON.jpg",
+      "bytes": 455726,
+      "sha256": "786e88a5bc9c4c0d25958644f9b519d86d55dc40c14589fef57ca82e391e9e64",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V03_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "eaad8c7ba0475e899685918e1d3dc276e26016117a56d57c7e76ee15bf5b2ab8"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V03_DUSK.jpg",
+      "bytes": 474619,
+      "sha256": "4562951c46126b6e6d6acc02a15856b4f8c4f6d770d1bdf07f48fd85a7acc709",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V03_DUSK.png"
+      ],
+      "source_sha256": [
+        "9a61add757077d57bddd9f682989e9d6360b1d04159d288e86a87d77e58b0735"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V04_AFTERNOON.jpg",
+      "bytes": 465389,
+      "sha256": "85c13ef0349a1f9bb98ecaf3ff8642ba96f814ead5062f587d33e1f95cf429a3",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V04_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "4ac49f92410f429b509a7f36f373b5f0193199a5972659c86b544020b507df6c"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V04_DUSK.jpg",
+      "bytes": 474156,
+      "sha256": "4ab75df8e21648240d2462a0ce438436eb47f2cc5b1b58e1fb9f17249cfea758",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V04_DUSK.png"
+      ],
+      "source_sha256": [
+        "c49a6d3c4d5df9b580de3b2224daf866fecc6daf7a6097d9d36bd67b6f9a17af"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V05_AFTERNOON.jpg",
+      "bytes": 493572,
+      "sha256": "d16cac47e31e97cbe5839079a70240ba6c923680ce229b63b6bb89f39daec244",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V05_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "0212a6b6e275dfa3261356cc53787ee23bb591d9fe3f4f4d3ca8ab6235ba88ad"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V05_DUSK.jpg",
+      "bytes": 450591,
+      "sha256": "07037ff348664e318387a5bba856bb5a6d90c98dda220e23780be5371aa2fdd2",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V05_DUSK.png"
+      ],
+      "source_sha256": [
+        "9b11f7ab1de0b3735ba009aff7747114c72321f6a718c0ae5021309aee06c678"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V06_AFTERNOON.jpg",
+      "bytes": 411889,
+      "sha256": "7c711bf3c3fc5860a3d281fe2b98b5275df4176ef421fb2250119b639fbfca12",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V06_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "a8a12b0b5661653b7bb57add291880371f94c951ae3b4cc7280e39d683083970"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V06_DUSK.jpg",
+      "bytes": 437375,
+      "sha256": "4f99f7ea9f22eb3668f349c2e984a94beaa83aade19ee6fb9531331e5c5659c2",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V06_DUSK.png"
+      ],
+      "source_sha256": [
+        "f8bf4bf2fa6592499f104b40795ab505fd874ca58d3b435364d6b8e0772add11"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V07_AFTERNOON.jpg",
+      "bytes": 459230,
+      "sha256": "41026bd5e3402aaa193b4d9c2ccbf45d2dd4c608a24f2477032d1f6b472ba22f",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V07_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "09023c1befbb48bd00f50d232f7d5ea3d3f728b24340a530cfebebdbf5a97be5"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V07_DUSK.jpg",
+      "bytes": 410834,
+      "sha256": "fce8162b3d18c48d2cefc1ad7ce059fdacb48cf73489f23bf889ad4dc2376a99",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V07_DUSK.png"
+      ],
+      "source_sha256": [
+        "4a2b5127e77bd76fc4aca980d2a25c892405c37e3a4d7b865d68ecbfccaa2790"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V08_AFTERNOON.jpg",
+      "bytes": 465765,
+      "sha256": "d272c1647b9fd1e19d81b147f841ede4bf2ee00313e356bbc0f08c7a93b1abae",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V08_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "e10db2884ef4107902df09f177eceae4ba91b7b32d9b18a07dd853625440758d"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V08_DUSK.jpg",
+      "bytes": 450494,
+      "sha256": "0f4322cb1f864f35a0eb819c8f579d1272d343a9fb590c1d212ad8b3a75a3474",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V08_DUSK.png"
+      ],
+      "source_sha256": [
+        "92586ff501020e6bc6d339688a20213f8b6edfdb77301268a9fb2842e60f558d"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V09_AFTERNOON.jpg",
+      "bytes": 495102,
+      "sha256": "13b5fc9e6faeaf9f56799af66ef224d5b4336867a41cf596fa33989d8c742caf",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V09_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "fc535787607e937070ab8106cc917be56823424fe7414bc85a5f7e8ebbb5d8e0"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V09_DUSK.jpg",
+      "bytes": 443466,
+      "sha256": "f12fb6ff6065b5682ba9a266169004dfb8fc54be708fd29f8e45af465cc502a6",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V09_DUSK.png"
+      ],
+      "source_sha256": [
+        "ab111ee34e76381376add1979c039f579483e9b4ff822ec542a83cb951f649e5"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V10_AFTERNOON.jpg",
+      "bytes": 486221,
+      "sha256": "4ed674542882724c4a3fa1d2fe5f542b69c84e47fd4f36607f71391ce9d15235",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V10_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "c6ca93bf6e8582b5f650b635e3a60701c355a5d4a735cc156381ed4bd5d02f6d"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V10_DUSK.jpg",
+      "bytes": 473907,
+      "sha256": "bb1d3881694e9b6d372e9547e03a96cf5116865c548220ecfef49bec95a14308",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V10_DUSK.png"
+      ],
+      "source_sha256": [
+        "92c860642d3e56893da43ae4a495a577b87d13a55aef8ecffe84a0e48873d4a7"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V11_AFTERNOON.jpg",
+      "bytes": 485726,
+      "sha256": "4ec9dabaaebcfc76167a27e294d7769f62947427ec81933daaffd9c7374ef584",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V11_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "34acd0e185fbd9e8378ed26440aef221ad49b9a18a11695469e9315b19244683"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V11_DUSK.jpg",
+      "bytes": 498020,
+      "sha256": "87e7c4b8e53d420299dfc39d29b58a6efdc46f15c41c937dc27fbb627474912d",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V11_DUSK.png"
+      ],
+      "source_sha256": [
+        "f2a1c726b3a56a7aeca7deceb75f4227576124cc3615cb077004b1b60c8f3560"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V12_AFTERNOON.jpg",
+      "bytes": 457180,
+      "sha256": "c41f43298491d84bdec581428fd38397dfc5b45bdd99180c581d2696ee523a26",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V12_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "376dcb5471a4318c0c50e503f793acff3fabe338d71b06e7587cc5d69a640d1c"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_GATE_V12_DUSK.jpg",
+      "bytes": 497961,
+      "sha256": "0a3dcb255e96e9c5516c1fb8ba91ad3d00bf7a228990922d5e76b3f803ad024e",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V12_DUSK.png"
+      ],
+      "source_sha256": [
+        "93e4042ebe67d0184f3dd27f96185a1728f7b4e84eb1e91bd42106a4ac8e4de1"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_SCALE_Castle.jpg",
+      "bytes": 320361,
+      "sha256": "9ca3df4cf2ec8d953bb931a41f55aaee0e7e4e893478b247123be15d7499ceaa",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_SCALE_Castle.png"
+      ],
+      "source_sha256": [
+        "a2f979d617a7b1b0dd491e2e9c41cb03850ece39a040686c71396154737ac988"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_SCALE_City.jpg",
+      "bytes": 321023,
+      "sha256": "7bbfaca193fb7a71ee8eeb133b7860530275e12fef3a21498a9e902206cf5d69",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_SCALE_City.png"
+      ],
+      "source_sha256": [
+        "fa60c46454161e318d0555c94f8d2ce490757b3f23e9115132279443552b1b65"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_SCALE_Village.jpg",
+      "bytes": 357642,
+      "sha256": "80a52d22271437aa24934b1856a447fda618cb721a0b7fb3c67a1b625d952ea0",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_SCALE_Village.png"
+      ],
+      "source_sha256": [
+        "4ded3934cb66c377780d9ddca4f2ea4b007c4511a3625faf81472d0b3c0a670d"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_V1COORD_V01_AFTERNOON.jpg",
+      "bytes": 453440,
+      "sha256": "f3e47415611a22bd7463c03b2dd16cb47fb27f287dbecdac3e5b8ba7ddfcd100",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_V1COORD_V01_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "72785bb12ac4bc7ff6b5fd2ae59c9b776db40d0044668fe5f1139eb8a161347a"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_V1COORD_V01_DUSK.jpg",
+      "bytes": 472654,
+      "sha256": "a0687f1da9b952f964cf06ebbde96582f98bb182c1051b83f18db31c7450b0b1",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_V1COORD_V01_DUSK.png"
+      ],
+      "source_sha256": [
+        "61ae7e263becca046aa1107e1854d914e3fd06e841302253ec4a10b58e024768"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_V1COORD_V02_AFTERNOON.jpg",
+      "bytes": 458210,
+      "sha256": "f3086a974e19a9f3499832cdd7e0af02d0f39308e29471e79cad06faf5086192",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_V1COORD_V02_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "5ec52f87befdf3b5b60be67094b2362d778d8c9f63c6fe541199b8d6240b7287"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_V1COORD_V02_DUSK.jpg",
+      "bytes": 494452,
+      "sha256": "e9dba843761fd35fbbce6aac757814048317f239697209cda0febf322de687cd",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_V1COORD_V02_DUSK.png"
+      ],
+      "source_sha256": [
+        "353e9e1952f81785766f4e87154975645b856f14ccded2ab2981255e10747cdd"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/VS4_OLD_01.jpg",
+      "bytes": 472373,
+      "sha256": "75692e64e9ff7abf6027dc405dbddd5326e7d1912c925af7bb0c199bf14cb08d",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_01.png"
+      ],
+      "source_sha256": [
+        "ac80cff2387600aa76e67276d4d87664ff7ec7ee16182a52c00309c3676f0dfb"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/VS4_OLD_02.jpg",
+      "bytes": 471597,
+      "sha256": "03a4c8b96e59b027d901b7bc5508e85a1603617c1a3a8f810bcc149650220ad1",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_02.png"
+      ],
+      "source_sha256": [
+        "aaf95af1e9f93c87679b7dc6ed957e49f6dbf363699bf350e39b5b7e48a0f8b1"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/VS4_OLD_03.jpg",
+      "bytes": 493767,
+      "sha256": "622d382779ea67583bb5eda695aebc41f3aefff2ed6da7f468e46f04cc115f14",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_03.png"
+      ],
+      "source_sha256": [
+        "7cc2ac2988514af7b088348bd6156419d5282d8c8d1aedbd440c9207d673c34a"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/VS4_OLD_OVERHEAD.jpg",
+      "bytes": 465745,
+      "sha256": "86b9ed7a69ce0c766c02f6e31ceaae86122d11088e9a7a2e8a9587d33fed0c86",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_OVERHEAD.png"
+      ],
+      "source_sha256": [
+        "503c3991b76b9146586d29996e5b084b0b12565e47ed8a5d0097b9f95449b4d3"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/D_GRAPHICS_UI.jpg",
+      "bytes": 237310,
+      "sha256": "a6db235d20981fa8473e6449612a4baf3f3a3da2bdce917113f49750d2b05ae2",
+      "source": [
+        "thermal_20261004_144243_506/D_GRAPHICS_UI.png"
+      ],
+      "source_sha256": [
+        "031d21f59de0cc091e35544807ede5af1efe3959b1bcd9e96f782dcad0aa2b4b"
+      ],
+      "method": "Native Shipping frame, JPEG encoding only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_FIXED_AFTERNOON_CONTACT.jpg",
+      "bytes": 494734,
+      "sha256": "d1db513d6629b684fcd6c4efcc2f806a56168eafa38acd67ae1907cd7fa7b93e",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V01_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V02_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V03_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V04_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V05_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V06_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V07_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V08_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V09_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V10_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V11_AFTERNOON.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V12_AFTERNOON.png"
+      ],
+      "source_sha256": [
+        "9ad87ffb1573f06e1cad598a15f084a6e7137706ef5e35873149a6d3711e4c32",
+        "29e2af6cfa519b60ed9c2f61dadeb7a86c20baee5d44ab76eb086c537d4cd98a",
+        "eaad8c7ba0475e899685918e1d3dc276e26016117a56d57c7e76ee15bf5b2ab8",
+        "4ac49f92410f429b509a7f36f373b5f0193199a5972659c86b544020b507df6c",
+        "0212a6b6e275dfa3261356cc53787ee23bb591d9fe3f4f4d3ca8ab6235ba88ad",
+        "a8a12b0b5661653b7bb57add291880371f94c951ae3b4cc7280e39d683083970",
+        "09023c1befbb48bd00f50d232f7d5ea3d3f728b24340a530cfebebdbf5a97be5",
+        "e10db2884ef4107902df09f177eceae4ba91b7b32d9b18a07dd853625440758d",
+        "fc535787607e937070ab8106cc917be56823424fe7414bc85a5f7e8ebbb5d8e0",
+        "c6ca93bf6e8582b5f650b635e3a60701c355a5d4a735cc156381ed4bd5d02f6d",
+        "34acd0e185fbd9e8378ed26440aef221ad49b9a18a11695469e9315b19244683",
+        "376dcb5471a4318c0c50e503f793acff3fabe338d71b06e7587cc5d69a640d1c"
+      ],
+      "method": "Twelve complete fixed-view Shipping frames resized equally; labels only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_FIXED_DUSK_CONTACT.jpg",
+      "bytes": 491701,
+      "sha256": "3d3450de4499115f4b86388b6564de95a32be898e3f4bc6c23ff8a19bb503b54",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V01_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V02_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V03_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V04_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V05_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V06_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V07_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V08_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V09_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V10_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V11_DUSK.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_V12_DUSK.png"
+      ],
+      "source_sha256": [
+        "57a727049b59987f9f84e38e1c361085c691cd61cca2833fc61a773622d01445",
+        "6c0d3fedb97790cda60f5ad8cbb136503135d26af9290a9ff269a07043961265",
+        "9a61add757077d57bddd9f682989e9d6360b1d04159d288e86a87d77e58b0735",
+        "c49a6d3c4d5df9b580de3b2224daf866fecc6daf7a6097d9d36bd67b6f9a17af",
+        "9b11f7ab1de0b3735ba009aff7747114c72321f6a718c0ae5021309aee06c678",
+        "f8bf4bf2fa6592499f104b40795ab505fd874ca58d3b435364d6b8e0772add11",
+        "4a2b5127e77bd76fc4aca980d2a25c892405c37e3a4d7b865d68ecbfccaa2790",
+        "92586ff501020e6bc6d339688a20213f8b6edfdb77301268a9fb2842e60f558d",
+        "ab111ee34e76381376add1979c039f579483e9b4ff822ec542a83cb951f649e5",
+        "92c860642d3e56893da43ae4a495a577b87d13a55aef8ecffe84a0e48873d4a7",
+        "f2a1c726b3a56a7aeca7deceb75f4227576124cc3615cb077004b1b60c8f3560",
+        "93e4042ebe67d0184f3dd27f96185a1728f7b4e84eb1e91bd42106a4ac8e4de1"
+      ],
+      "method": "Twelve complete fixed-view Shipping frames resized equally; labels only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/COMPARE_OLD_CAPITAL_OVERHEAD.jpg",
+      "bytes": 380075,
+      "sha256": "3ce9515c06f05912551c6223ff2a2f670085765c31050d67cb570647dcdb5fe1",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_OVERHEAD.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_GATE_OVERHEAD.png"
+      ],
+      "source_sha256": [
+        "503c3991b76b9146586d29996e5b084b0b12565e47ed8a5d0097b9f95449b4d3",
+        "16d047802bd741d9fce168a60dd9c9cd4274285ef4904c337a18a0d7030e3a89"
+      ],
+      "method": "Complete native frames resized equally; labels only; not identical map geometry/cameras",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/SCALE_COMPARISON.jpg",
+      "bytes": 180786,
+      "sha256": "afbe881eb3581b2baf9dd0f21c989733217f73415f61d4e56d8cee2949e55491",
+      "source": [
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_SCALE_City.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_SCALE_Castle.png",
+        "m5_vs3_r3_b_20261004_171236/User/Saved/M5Tests/20261004_171240_m5_vs3_r3_b/R2_SCALE_Village.png"
+      ],
+      "source_sha256": [
+        "fa60c46454161e318d0555c94f8d2ce490757b3f23e9115132279443552b1b65",
+        "a2f979d617a7b1b0dd491e2e9c41cb03850ece39a040686c71396154737ac988",
+        "4ded3934cb66c377780d9ddca4f2ea4b007c4511a3625faf81472d0b3c0a670d"
+      ],
+      "method": "Three complete Shipping views resized equally; labels only",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/OS_armory.jpg",
+      "bytes": 239481,
+      "sha256": "5687c3bd837e67dc5ba4fac3c675b5c0caa1aecf48b6bcf4e206fee8b9a94272",
+      "source": [
+        "os_review_20261004_161254/OS_armory.jpg"
+      ],
+      "source_sha256": [
+        "b9f8fe3eee58e94de19b9c6ef71dcfd649277cfed8e56ec93479442578138b57"
+      ],
+      "method": "Computer Use screenshot of actual Shipping window; includes window title bar, no scene retouch",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/OS_closed.jpg",
+      "bytes": 433704,
+      "sha256": "84cd159e641b8159882d8b1b548ea29963e81eb9d454d01e058fdbecdf2817f5",
+      "source": [
+        "os_review_20261004_161254/OS_closed.jpg"
+      ],
+      "source_sha256": [
+        "0f6b24a49acd93a02d8b57d25629434c1b7befd665f4fe945550891e6931a6f5"
+      ],
+      "method": "Computer Use screenshot of actual Shipping window; includes window title bar, no scene retouch",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/OS_ivory.jpg",
+      "bytes": 286308,
+      "sha256": "0141b70cdd242f66aba83090097c72e5dbd00944439b200e2e4ce3a534c4a0ce",
+      "source": [
+        "os_review_20261004_161254/OS_ivory.jpg"
+      ],
+      "source_sha256": [
+        "1cb80e1fd8ecb5f6c2e5f8cb3982d47f15f32b3beb9810ee40a61bdee2997a4c"
+      ],
+      "method": "Computer Use screenshot of actual Shipping window; includes window title bar, no scene retouch",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_NEW_SPAWN.jpg",
+      "bytes": 492959,
+      "sha256": "4408c18971f4b2d6a6a084f420011a5b529ec3d81a0d74f080d585387666b721",
+      "source": [
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Unretouched main-film frame at 1.000000s; original native playback",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_NEW_MAIN_STREET.jpg",
+      "bytes": 492002,
+      "sha256": "8b9604c28ab82322314711c704bf43e91a35c2f1052913eeffbc438a0005b412",
+      "source": [
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Unretouched main-film frame at 13.040281s; original native playback",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_NEW_CAFE_ENTRANCE.jpg",
+      "bytes": 436038,
+      "sha256": "07a8e99668da1c7432aea8b3d1add9b874adba6bca708f4bc70f5ac9b9a615b1",
+      "source": [
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Unretouched main-film frame at 103.542216s; original native playback",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_MAIN_GUN.jpg",
+      "bytes": 409561,
+      "sha256": "f2c2840dd1f0171d951d649b7180298e895c3771400ceadd781b5b87f626689c",
+      "source": [
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Unretouched main-film frame at 214.367371s; original native playback",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_MAIN_BOW.jpg",
+      "bytes": 408644,
+      "sha256": "57987cf16584d3b9ce3096bb4d8c5e91e8ec58d7f954cad6a42d88a284b61c73",
+      "source": [
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Unretouched main-film frame at 229.432693s; original native playback",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_MAIN_FILM_CONTACT.jpg",
+      "bytes": 489946,
+      "sha256": "364cc8e9e4cc6af9ec065cde17434f8c1660892f71584a250ad1940430280fcb",
+      "source": [
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Eighteen actual main-film keyframes at labeled timestamps, resized; not separate new captures",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/COMPARE_R2_NEW_SPAWN.jpg",
+      "bytes": 414443,
+      "sha256": "f73807127f7d0db61901edb06170bf8c76feec81783f381e8f93c9ed3d420e6c",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_01.png",
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "ac80cff2387600aa76e67276d4d87664ff7ec7ee16182a52c00309c3676f0dfb",
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Corresponding functional locations, different map/camera geometry; complete frames resized equally",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/COMPARE_R2_NEW_MAIN_STREET.jpg",
+      "bytes": 403346,
+      "sha256": "960123c965d4f837b2b68426bd799c3dadaee12051cd26213d9d45bb742ce21f",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_02.png",
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "aaf95af1e9f93c87679b7dc6ed957e49f6dbf363699bf350e39b5b7e48a0f8b1",
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Corresponding functional locations, different map/camera geometry; complete frames resized equally",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/COMPARE_R2_NEW_CAFE_ENTRANCE.jpg",
+      "bytes": 353801,
+      "sha256": "a6d811b92b5d50815c877dce32ecee421340edd05d15ee79f672e83ed2a30c42",
+      "source": [
+        "m5_vs3_r3_b_20261004_171637/User/Saved/M5Tests/20261004_171641_m5_vs3_r3_b/VS4_OLD_03.png",
+        "final/VS4_R2_MAIN.mp4"
+      ],
+      "source_sha256": [
+        "7cc2ac2988514af7b088348bd6156419d5282d8c8d1aedbd440c9207d673c34a",
+        "24e367513f2cc2760b14f7ad3a3575cdcac8aa4a93c734d87bb2b418e0d955b1"
+      ],
+      "method": "Corresponding functional locations, different map/camera geometry; complete frames resized equally",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_FLIGHT_CONTACT.jpg",
+      "bytes": 485857,
+      "sha256": "fce3f1397f938dd287c10979356744c50d42168884785b529c3912005c25c43b",
+      "source": [
+        "final/VS4_R2_FLIGHT.mp4"
+      ],
+      "source_sha256": [
+        "a3d6a0815278e77dc65f36d49d1f8a93f23fcdcbfc60e48890c4bb21a765e77e"
+      ],
+      "method": "Twelve actual video keyframes at labeled timestamps; complete frames resized, no retouch",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    },
+    {
+      "file": "final/screenshots/R2_CAMERA_CONTACT.jpg",
+      "bytes": 479736,
+      "sha256": "7bfadf5116b85f7e48858fdb74209558baeb2dea5046d2c0480dd8092d4bdff3",
+      "source": [
+        "final/VS4_R2_CAMERA.mp4"
+      ],
+      "source_sha256": [
+        "f9531285518a83b90fd59d78fcefcef4b301ed2c984d81d8115c6d872263363b"
+      ],
+      "method": "Twelve actual video keyframes at labeled timestamps; complete frames resized, no retouch",
+      "executable_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+      "kind": "STANDALONE_PACKAGE"
+    }
+  ]
+}

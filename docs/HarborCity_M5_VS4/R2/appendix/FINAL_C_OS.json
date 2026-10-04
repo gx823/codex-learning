@@ -1,0 +1,20 @@
+{
+  "status": "PARTIAL",
+  "run": "os_review_20261004_161254",
+  "candidate_sha256": "146B0A19BCDA3369AFAEEB611C7E238BA297B9E393B99BB6DCB4EF4572FD8AD5",
+  "actual_map": "L_CapitalR2",
+  "kind": "STANDALONE_PACKAGE",
+  "ac": 1,
+  "unlocked": true,
+  "normal_exit_code": 0,
+  "input": "Actual Computer Use keyboard/mouse, no engine test runner",
+  "successful_actions": 7,
+  "close_B_mouse": "PASS_VISUAL",
+  "starbow_ten_draw_release": "NOT_RUN",
+  "limitation": "No separate mouse down/up or duration hold API. Bounded run ended before bow setup; later click returned missing foreground process and no further input was sent.",
+  "proof": ["OS_armory.jpg", "OS_closed.jpg", "OS_ivory.jpg"],
+  "gun_color": "Afternoon FP ivory body, blue chamber and brass ring observed. Camera and screenshot resolution differ from R6; no controlled quantitative same-pixel comparison claimed.",
+  "manual_retest": "Equip starbow in B, close B, hold/release left mouse ten times and inspect automatic nocking; click Close B with mouse once.",
+  "real_user_ini_unchanged": true,
+  "user_ini_sha256": "8D9E1B2A2C2B7C64E3314F438D9592B61ECA5E1A0A119343C6F5908B96702AAB"
+}
