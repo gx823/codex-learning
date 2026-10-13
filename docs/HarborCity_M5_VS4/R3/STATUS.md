@@ -1,10 +1,15 @@
-# M5-VS4 R3 · 2026-10-12 最后一轮美术 / 进行中
-- 图：[城内地面改前/改后](progress/2026-10-12/ART_FINISH_01_CITY_GROUND_EDITOR.jpg)，编辑器画面；上一轮预览图仍在同目录。
-- 第1项：城墙内剩余裸土补草已保存、新编辑器重载PASS；道路铺装、地形高度及冻结对象未改。
-- 第2项进行中：central 1栋/PASS_SCOPED；market 1栋/SAVED_RELOADED_PENDING_WALK；canal 1栋/SAVED_RELOADED_PENDING_WALK；workshop 1栋/SAVED_RELOADED_PENDING_WALK；castle_retry 1栋/SAVED_RELOADED_PENDING_WALK；original_current 6栋/SAVED_RELOADED_PENDING_WALK；original_flat_retry 6栋/SAVED_RELOADED_PENDING_WALK；roof_north 27栋/SAVED_RELOADED_PENDING_WALK；roof_middle 24栋/SAVED_RELOADED_PENDING_WALK。各区拼图见同一progress目录（编辑器画面）。
-- 第3项空地/街面、第4项室内、第5项旋转风车、第6项城外、第7项新预览包：NOT_RUN。
-- 上轮地标8栋/七区、水面13段、观测塔草地与塔脚铺装已保留；Bar01 B008可进入但偏暗。
-- 最新普查：已识别完整城内楼395，不完整单列1；4x4原版61、8x8原版46；26种各≥3：False；未分组结构实例5209，确定分母待核实。
-- 上轮B391/B491 FAIL；B120/Row148 FLAKY；风车和王座厅检查工具需按新规则修正；空墙尚未补全。
-- 上轮预览冒烟星弓/地图PASS；主线119/120后同包120/120，原因未证实，保留FLAKY和旧FAIL。
-- 当前按REQUEST_ART_FINISH_20261012.md的1→7执行；最终镜头/穿插/接送/性能/完整回归/最终包/交付留下一轮。
+# R3 最后一轮美术 · 2026-10-12 请求
+图：`progress/2026-10-12/ART_FINISH_*_EDITOR*.jpg`（编辑器画面；本地新图不等于已上传）。
+当前：第2项施工收尾，未达项保留BLOCKED；进入第3项街面与四片空地；最终验收、完整回归和交付均 NOT_RUN。
+城内地面已保存/重载；原版补位15/18；本轮一对一替换79栋（含74栋屋顶派生）；静态保存核验不替代实走。
+确定分母：城内完整楼 398 栋；B141城外不完整楼单列排除。原版4x4=43（10.80%），8x8=41（10.30%），均≤12%。
+26种原版数量 / 城内占比（以下简称省略 Ext）：
+- 16x8_01 3 / 0.75%；16x8_02 5 / 1.26%；16x8_03 5 / 1.26%；16x8_04 6 / 1.51%；16x8_05 6 / 1.51%
+- 16x8_06 6 / 1.51%；16x8_07 6 / 1.51%；16x8_08 3 / 0.75%；16x8_09 3 / 0.75%；16x8_10 4 / 1.00%
+- 16x8_11 5 / 1.26%；16x8_Arch_01 2 / 0.50%；16x8_Arch_02 2 / 0.50%；4x4_01 43 / 10.80%；8x8_01 41 / 10.30%
+- 8x8_Arch_01 3 / 0.75%；L_01 7 / 1.76%；L_02 3 / 0.75%；L_03 3 / 0.75%；L_04 10 / 2.51%
+- L_05 2 / 0.50%；L_06 4 / 1.00%；L_07 3 / 0.75%；T_01 5 / 1.26%；T_02 6 / 1.51%
+- T_03 6 / 1.51%
+未满足：L05、16x8 Arch01、16x8 Arch02各还缺1栋；楼体扩展件/坡面/围栏候选失败保留，26种各≥3为 BLOCKED。
+B391/B491最终复试均 BLOCKED；新楼91栋实机读回PASS，14条路线实走PASS。侧墙补饰33件，大片空墙仍未清零。旧FAIL保留。
+公开同步：Original/previous district photos remote 0869a01. Roof north/middle local commit pending: GitHub connection failed twice. No network changes.
