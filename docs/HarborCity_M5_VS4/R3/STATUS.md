@@ -1,6 +1,6 @@
 # R3 最后一轮美术 · 2026-10-12 请求
 图：`progress/2026-10-12/ART_FINISH_*_EDITOR*.jpg`（编辑器画面；本地新图不等于已上传）。
-当前：第2项施工收尾，未达项保留BLOCKED；进入第3项街面与四片空地；最终验收、完整回归和交付均 NOT_RUN。
+当前：第3项保存/重载313件；市场排摊与城堡花园BLOCKED；进入第4项室内；最终验收、完整回归和交付均 NOT_RUN。
 城内地面已保存/重载；原版补位15/18；本轮一对一替换79栋（含74栋屋顶派生）；静态保存核验不替代实走。
 确定分母：城内完整楼 398 栋；B141城外不完整楼单列排除。原版4x4=43（10.80%），8x8=41（10.30%），均≤12%。
 26种原版数量 / 城内占比（以下简称省略 Ext）：
@@ -12,4 +12,4 @@
 - T_03 6 / 1.51%
 未满足：L05、16x8 Arch01、16x8 Arch02各还缺1栋；楼体扩展件/坡面/围栏候选失败保留，26种各≥3为 BLOCKED。
 B391/B491最终复试均 BLOCKED；新楼91栋实机读回PASS，14条路线实走PASS。侧墙补饰33件，大片空墙仍未清零。旧FAIL保留。
-公开同步：Original/previous district photos remote 0869a01. Roof north/middle local commit pending: GitHub connection failed twice. No network changes.
+公开同步：Only requested progress JPGs and STATUS published
