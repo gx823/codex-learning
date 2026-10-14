@@ -1,8 +1,10 @@
-# 2026-10-15 · HarborCity M5-VS4 R3 / 本地交付候选完成，正在发布
+# 2026-10-15 · HarborCity M5-VS4 R3 / 已交付审阅候选，保留FAIL
 
-最终07可运行但技术验收FAIL；存档/地图往返回归修复，完整319/2枪FAIL，同次系统31/31、音效27/27。D2仅13/76通过；穿插未清零、镜头仍失败、Epic启动7557MiB超限，城堡导航断路令30分钟探索NOT_RUN。历史FLAKY和旧FAIL全部保留。
+Release已发布并核验：https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r3-final-20261015-fc840e5a 。审阅内容提交ff74711c47f8ecce25925e70eeddf3e9c7343d51；R2发布分支，无force、不推main。审阅ZIP、四段BGM静音压缩视频和校验清单共6份，远端大小与SHA-256一致；游戏包/购买资产及派生文件/私人音乐/存档留本机。ZIP为上传前快照，最新状态见R3/appendix/PUBLICATION.json。
 
-四段最终包录像及147截图已生成，原FPS全不足29.5，无补帧/变速。文档、审阅ZIP与BGM静音压缩片沿R2发布分支提交；上传完成前不预填PASS。用户新地图美术与星弓观感PENDING，C-OS真实拉弓10次待亲测。本机仍High/60；P→画面→极高。详情docs/HarborCity_M5_VS4/R3/DELIVERY.md。
+最终07独立包可运行，技术验收FAIL：完整319/2枪FAIL，同次系统31/31、音效27/27；存档/往返回归通过。穿插未清零、D2仅13/76通过、镜头仍失败、Epic启动7557MiB超限；城堡导航断路，30分钟探索NOT_RUN。四视频均未达29.5FPS；旧FAIL/FLAKY保留，详见R3/TEST_REPORT.md。
+
+已停止桌面操作并交还试玩。用户新地图美术和星弓观感PENDING；真实按住/抬起拉弓10次及鼠标关闭武器库待亲测。High/60用户配置未改，P→画面→极高可查看高画质。最终EXE完整路径、SHA和四母版见R3/DELIVERY.md。
 
 # 2026-10-05 · M5-VS4 R2 + D / 已交付审阅候选，保留FAIL
 

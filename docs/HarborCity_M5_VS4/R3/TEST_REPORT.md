@@ -32,3 +32,5 @@
 | 未执行 | C-OS真实拉弓10次；30分钟探索；旧片逐问题精确配对；全片人工听审 | appendix/ACCEPTANCE_FINAL.md |
 
 美术与星弓观感仍PENDING。中间包/最终包、媒体路径和SHA见[交付清单](DELIVERY.md)。发布完成与否只以实际GitHub回执为准。
+
+2026-10-15 发布核验：审阅内容提交ff74711c47f8ecce25925e70eeddf3e9c7343d51，Release共6份附件远端大小与SHA-256全部一致；仅R2发布分支、无force、无main。首轮GitHub目录树POST422原回执保留，同一请求重试201且摘要完全一致后复用对象继续；原因未确证。验收状态不变。ZIP为上传前快照，最新发布记录见appendix/PUBLICATION.json。

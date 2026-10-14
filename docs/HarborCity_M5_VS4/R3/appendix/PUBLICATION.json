@@ -1,0 +1,94 @@
+{
+  "status": "PUBLISHED_VERIFIED",
+  "verified": "2026-10-15T01:22:00.587433+08:00",
+  "repository": "gx823/codex-learning",
+  "branch": "codex/harborcity-m5-vs3-r2-gate-20260927",
+  "review_content_commit": "ff74711c47f8ecce25925e70eeddf3e9c7343d51",
+  "review_content_url": "https://github.com/gx823/codex-learning/commit/ff74711c47f8ecce25925e70eeddf3e9c7343d51",
+  "release_url": "https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r3-final-20261015-fc840e5a",
+  "release_tag": "harborcity-m5-vs4-r3-final-20261015-fc840e5a",
+  "assets": [
+    {
+      "id": 641089788,
+      "name": "HarborCity_R3_Review_20261015_fc840e5a.zip",
+      "size": 64317426,
+      "digest": "sha256:535793a80ef7f3177532ab7d1e29abf5b0b2204c08ff8cc3d4236ae1e5ac72b0",
+      "browser_download_url": "https://github.com/gx823/codex-learning/releases/download/untagged-2320424dab1415b00b7a/HarborCity_R3_Review_20261015_fc840e5a.zip"
+    },
+    {
+      "id": 641090606,
+      "name": "R3_MAIN_public.mp4",
+      "size": 213497483,
+      "digest": "sha256:b77491f26b22c35626227cdd2553fad6916ca31273e231baa880040e02b97a25",
+      "browser_download_url": "https://github.com/gx823/codex-learning/releases/download/untagged-2320424dab1415b00b7a/R3_MAIN_public.mp4"
+    },
+    {
+      "id": 641092495,
+      "name": "R3_INTERIORS_public.mp4",
+      "size": 136099759,
+      "digest": "sha256:182afcc51b556b3a90dcdd7c91ea4c3b088f7479e3e64480a8c79069310b9ed0",
+      "browser_download_url": "https://github.com/gx823/codex-learning/releases/download/untagged-2320424dab1415b00b7a/R3_INTERIORS_public.mp4"
+    },
+    {
+      "id": 641093552,
+      "name": "R3_FLIGHT_public.mp4",
+      "size": 44654663,
+      "digest": "sha256:365b4466d1e5999947f231d82a69abae1c576974c97021bc7d6f83b4076f0fc7",
+      "browser_download_url": "https://github.com/gx823/codex-learning/releases/download/untagged-2320424dab1415b00b7a/R3_FLIGHT_public.mp4"
+    },
+    {
+      "id": 641093957,
+      "name": "R3_CAMERA_public.mp4",
+      "size": 36764266,
+      "digest": "sha256:c70636c0b6f0414eabf838caaaa1040d80e70b1fd452858d90cd7661a1d60b12",
+      "browser_download_url": "https://github.com/gx823/codex-learning/releases/download/untagged-2320424dab1415b00b7a/R3_CAMERA_public.mp4"
+    },
+    {
+      "id": 641094224,
+      "name": "SHA256SUMS_R3_20261015.txt",
+      "size": 560,
+      "digest": "sha256:6bb83af66bcb2f514a0404e83471d9341cd9e6bc6d7ea04857793cd9eb0e3ade",
+      "browser_download_url": "https://github.com/gx823/codex-learning/releases/download/untagged-2320424dab1415b00b7a/SHA256SUMS_R3_20261015.txt"
+    }
+  ],
+  "attempts": [
+    {
+      "name": "HarborCity_R3_Review_20261015_fc840e5a.zip",
+      "attempt": 1,
+      "status": "UPLOADED"
+    },
+    {
+      "name": "R3_MAIN_public.mp4",
+      "attempt": 1,
+      "status": "UPLOADED"
+    },
+    {
+      "name": "R3_INTERIORS_public.mp4",
+      "attempt": 1,
+      "status": "UPLOADED"
+    },
+    {
+      "name": "R3_FLIGHT_public.mp4",
+      "attempt": 1,
+      "status": "UPLOADED"
+    },
+    {
+      "name": "R3_CAMERA_public.mp4",
+      "attempt": 1,
+      "status": "UPLOADED"
+    },
+    {
+      "name": "SHA256SUMS_R3_20261015.txt",
+      "attempt": 1,
+      "status": "UPLOADED"
+    }
+  ],
+  "docs_attempts": [
+    "Initial tree POST HTTP422; branch unchanged, receipt final_docs_attempt01.json retained",
+    "Identical tree request retry HTTP201 and SHA equals local tree; existing uploaded blobs reused; branch updated with force=false and verified"
+  ],
+  "scope": "ZIP is an immutable pre-upload status snapshot bound to review_content_commit; branch status documents are updated after actual upload verification. No force push or main push. No complete game or paid assets published.",
+  "acceptance": "FAIL_WITH_BLOCKED_AND_NOT_RUN_ITEMS",
+  "user_art_and_bow_acceptance": "PENDING",
+  "desktop_handoff": "NO_MORE_GAME_OR_EDITOR_ACTIONS"
+}

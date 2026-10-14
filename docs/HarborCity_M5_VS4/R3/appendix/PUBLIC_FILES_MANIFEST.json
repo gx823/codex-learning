@@ -1,7 +1,7 @@
 {
-  "status": "REVIEWED_PUBLIC_ALLOWLIST",
-  "generated": "2026-10-15T01:06:02.342449+08:00",
-  "scope": "Text reports/audits/source diff and rendered JPG only. No full game, purchased or derived asset files, source music, native geometry, saves or recording frames.",
+  "status": "REVIEWED_PUBLIC_ALLOWLIST_WITH_VERIFIED_RELEASE_STATUS",
+  "generated": "2026-10-15T01:22:00.796575+08:00",
+  "scope": "Current branch text/JPG manifest; ZIP retains prior upload snapshot. No asset binaries or native geometry. Manifest does not hash itself.",
   "files": [
     {
       "path": "docs/HarborCity_M5_VS4/R3/appendix/ACCEPTANCE_FINAL.md",
@@ -55,8 +55,8 @@
     },
     {
       "path": "docs/HarborCity_M5_VS4/R3/appendix/STATUS_HISTORY.md",
-      "sha256": "1d13a0a0d285c42d11da594bf966bc7b63f4cfba7c16c4076a3f2f4254490bd6",
-      "bytes": 9564
+      "sha256": "2f9f7c092f7b86f1fedf0ec268cdbea5c2584132eab1989abdb808845b4250fe",
+      "bytes": 10015
     },
     {
       "path": "docs/HarborCity_M5_VS4/R3/appendix/TEST_REPORT_HISTORY_20261015.md",
@@ -70,8 +70,8 @@
     },
     {
       "path": "docs/HarborCity_M5_VS4/R3/DELIVERY.md",
-      "sha256": "e2dbfd6b6b84e353bc26e984e5801b9a8525501a10043591fa1af17330d9ba1b",
-      "bytes": 2161
+      "sha256": "71551d710628e1699cea00250a229e70281dcf71d78006067ce669f9cec2aec5",
+      "bytes": 2436
     },
     {
       "path": "docs/HarborCity_M5_VS4/R3/DIAGNOSIS.md",
@@ -1155,23 +1155,29 @@
     },
     {
       "path": "docs/HarborCity_M5_VS4/R3/STATUS.md",
-      "sha256": "32b7bf680fba85062720901d75cd1dadf7367e22a6b31f2b5287fdb92cbca404",
-      "bytes": 1443
+      "sha256": "b26586de357ba98ea26382f7941acefbe905f3f8b3024f16cef0e693689d94b2",
+      "bytes": 1556
     },
     {
       "path": "docs/HarborCity_M5_VS4/R3/TEST_REPORT.md",
-      "sha256": "5e2af2d58fa93a3a5492dd75b7336d6c7c269810cfc1311a23b93fa84fdf511a",
-      "bytes": 3322
+      "sha256": "69980cd857df56015ac16b35b9f1a3bb27474f2a38a72b123db48bac3dbfc3a6",
+      "bytes": 3735
     },
     {
       "path": "docs/HarborCity_M5_VS4/R3/WORK_CHECKPOINT.json",
-      "sha256": "a0168ec6434e8ee291cbbaf7f987d49ac0d700eabd48539f824ef3fd7d5e2397",
-      "bytes": 4912
+      "sha256": "96b4569850c1882709fb5fa78beda0b1026611e042da3454da298fc0a52570a3",
+      "bytes": 4481
     },
     {
       "path": "docs/PROGRESS.md",
-      "sha256": "9d0e278f0579b3dab2568d68e6cd95dbb4c071b721765ec8cc71f4550a0ecb24",
-      "bytes": 109844
+      "sha256": "8089f3c75b3026f829b7742960a5e79e8c5e4d466978422be9d96788edb5d234",
+      "bytes": 110281
+    },
+    {
+      "path": "docs/HarborCity_M5_VS4/R3/appendix/PUBLICATION.json",
+      "sha256": "a8a05c03c4b27191dfb1228f1e62816fe933bc4b35cdc03320d8527ecd2a5bc6",
+      "bytes": 3992
     }
-  ]
+  ],
+  "zip_snapshot_content_commit": "ff74711c47f8ecce25925e70eeddf3e9c7343d51"
 }

@@ -1,6 +1,6 @@
 # R3 本地交付清单
 
-候选可运行；验收FAIL。审阅入口 [final/README.md](final/README.md)，逐项状态 [ACCEPTANCE_FINAL](appendix/ACCEPTANCE_FINAL.md)，旧问题回应 [ISSUE_RESPONSE](appendix/ISSUE_RESPONSE_R3.md)。发布核验完成后另附PUBLICATION.json，准备阶段不预填成功。
+候选可运行；验收FAIL。审阅入口 [final/README.md](final/README.md)，逐项状态 [ACCEPTANCE_FINAL](appendix/ACCEPTANCE_FINAL.md)，旧问题回应 [ISSUE_RESPONSE](appendix/ISSUE_RESPONSE_R3.md)。已发布并核验：[Release](https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r3-final-20261015-fc840e5a)；审阅内容提交`ff74711c47f8ecce25925e70eeddf3e9c7343d51`。六附件远端大小/SHA全部一致，见[发布回执](appendix/PUBLICATION.json)。ZIP是上传前状态快照，最新状态以此分支文档为准。
 
 最终Shipping EXE：
 `E:/GameDev/Builds/HarborCity/M5_VS4/Candidate_20261014_164156_066_fc840e5a/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe`
