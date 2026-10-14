@@ -1,3 +1,9 @@
+# 2026-10-15 · HarborCity M5-VS4 R3 / 本地交付候选完成，正在发布
+
+最终07可运行但技术验收FAIL；存档/地图往返回归修复，完整319/2枪FAIL，同次系统31/31、音效27/27。D2仅13/76通过；穿插未清零、镜头仍失败、Epic启动7557MiB超限，城堡导航断路令30分钟探索NOT_RUN。历史FLAKY和旧FAIL全部保留。
+
+四段最终包录像及147截图已生成，原FPS全不足29.5，无补帧/变速。文档、审阅ZIP与BGM静音压缩片沿R2发布分支提交；上传完成前不预填PASS。用户新地图美术与星弓观感PENDING，C-OS真实拉弓10次待亲测。本机仍High/60；P→画面→极高。详情docs/HarborCity_M5_VS4/R3/DELIVERY.md。
+
 # 2026-10-05 · M5-VS4 R2 + D / 已交付审阅候选，保留FAIL
 
 最终Release已发布并核验：https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r2-20261004 。三段公开视频、审阅ZIP和校验清单共5份，名称/大小/SHA-256均一致，每份仅上传一次。审阅内容提交935dc7d5e407670439860e133e45cd9312e5d63d，后续只补发布回执与状态文档；原codex分支，不改main或用户未提交文件。完整游戏、购买原件及派生资产不上传。公开回执R2/appendix/FINAL_PUBLICATION.json；ZIP保留发布前快照，最新状态以STATUS顶部和回执为准。

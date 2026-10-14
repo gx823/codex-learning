@@ -1,0 +1,365 @@
+{
+  "status": "BLOCKED_NOT_ZERO",
+  "threshold_cm": 2,
+  "stages": [
+    {
+      "file": "B2_render_initial_fast.json",
+      "sha256": "07f4e36b18004dee130b7ca5d551d91d34343072872bfa7c7760d27f6e254fba",
+      "status": "COMPLETE_STATIC_CANDIDATE_SWEEP_NOT_FULL_ACCEPTANCE",
+      "pairs": {
+        "status": "COMPLETED_STATIC_SCOPE",
+        "pairs_narrow_phase_tested": 509015,
+        "status_counts": {
+          "FAIL": 108053,
+          "CLEAR_BACKGROUND_SURFACES": 69958,
+          "NOT_RUN_DEPTH_UNRESOLVED": 298010,
+          "PASS_SEPARATED": 25743,
+          "PASS": 7251
+        },
+        "journal": "..\\docs\\HarborCity_M5_VS4\\R3\\appendix\\final_20261013\\B2_render_initial_fast.pairs.jsonl",
+        "journal_sha256": "8b80dc63efad5f487bd70948ce7c531010cf7bd40af7e0036195170ad3ca1715",
+        "maximum_candidate_pairs": 10000000,
+        "broad_phase_complete": true,
+        "background_shell_surface_only_objects": [
+          "/Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.StaticMeshActor_355.StaticMeshComponent0#single"
+        ]
+      },
+      "coverage": {
+        "categories": {
+          "brush_component": {
+            "observed_total": 5,
+            "exported_geometry_available": 0,
+            "authored_static_geometry_available": 0,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 3,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 5,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "static_mesh_component": {
+            "observed_total": 34060,
+            "exported_geometry_available": 34059,
+            "authored_static_geometry_available": 34059,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 1,
+            "hidden_native_flags_object_slots": 35,
+            "objects_broad_phase_checked": 34024,
+            "objects_narrow_phase_checked": 34024,
+            "objects_with_unresolved_candidates": 33432,
+            "candidate_sweep_complete": true
+          },
+          "instanced_static_mesh": {
+            "observed_total": 35872,
+            "exported_geometry_available": 35872,
+            "authored_static_geometry_available": 35872,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 35872,
+            "objects_narrow_phase_checked": 35872,
+            "objects_with_unresolved_candidates": 35151,
+            "candidate_sweep_complete": true
+          },
+          "landscape_component": {
+            "observed_total": 64,
+            "exported_geometry_available": 64,
+            "authored_static_geometry_available": 64,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 64,
+            "objects_narrow_phase_checked": 64,
+            "objects_with_unresolved_candidates": 64,
+            "candidate_sweep_complete": true
+          },
+          "skeletal_mesh_component": {
+            "observed_total": 21,
+            "exported_geometry_available": 21,
+            "authored_static_geometry_available": 0,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "foliage_instance": {
+            "observed_total": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "packed_level_component": {
+            "observed_total": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          }
+        },
+        "observed_render_objects": 70022,
+        "complete_scene_enumeration_status": "NOT_RUN_COMPLETE_ENUMERATION_PROOF_MISSING",
+        "scope": "All native independent object slots including null assets and hidden flags. Empty ISMs count as components with zero instances. Enumeration is not geometry, material, dynamic-pose or overlap acceptance."
+      },
+      "limits": [
+        "Coverage denominators include all observed independent instances and missing categories; selected-pair counts never become the denominator.",
+        "Static scene export is not a current NPC/vehicle pose, actual route, source semantic proof or gameplay collision-response test.",
+        "Closed/open render topology, material WPO/opacity/Nanite and Landscape holes retain native-export limitations."
+      ]
+    },
+    {
+      "file": "B2_render_after_foliage02.json",
+      "sha256": "347da0fcdc27426b60081160082d43fc6882f7370d4209f9344e25a042103ddf",
+      "status": "COMPLETE_STATIC_CANDIDATE_SWEEP_NOT_FULL_ACCEPTANCE",
+      "pairs": {
+        "status": "COMPLETED_STATIC_SCOPE",
+        "pairs_narrow_phase_tested": 502522,
+        "status_counts": {
+          "FAIL": 105349,
+          "CLEAR_BACKGROUND_SURFACES": 69620,
+          "NOT_RUN_DEPTH_UNRESOLVED": 294971,
+          "PASS_SEPARATED": 25331,
+          "PASS": 7251
+        },
+        "journal": "..\\docs\\HarborCity_M5_VS4\\R3\\appendix\\final_20261013\\B2_render_after_foliage02.pairs.jsonl",
+        "journal_sha256": "02e87d36135fccaa864210ffa514fa950f9b3bc53415ebbf7740087be1599d59",
+        "broad_phase_complete": true
+      },
+      "coverage": {
+        "categories": {
+          "brush_component": {
+            "observed_total": 5,
+            "exported_geometry_available": 0,
+            "authored_static_geometry_available": 0,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 3,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 5,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "static_mesh_component": {
+            "observed_total": 34048,
+            "exported_geometry_available": 34047,
+            "authored_static_geometry_available": 34047,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 1,
+            "hidden_native_flags_object_slots": 35,
+            "objects_broad_phase_checked": 34012,
+            "objects_narrow_phase_checked": 34012,
+            "objects_with_unresolved_candidates": 33419,
+            "candidate_sweep_complete": true
+          },
+          "instanced_static_mesh": {
+            "observed_total": 35546,
+            "exported_geometry_available": 35546,
+            "authored_static_geometry_available": 35546,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 35546,
+            "objects_narrow_phase_checked": 35546,
+            "objects_with_unresolved_candidates": 34824,
+            "candidate_sweep_complete": true
+          },
+          "landscape_component": {
+            "observed_total": 64,
+            "exported_geometry_available": 64,
+            "authored_static_geometry_available": 64,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 64,
+            "objects_narrow_phase_checked": 64,
+            "objects_with_unresolved_candidates": 64,
+            "candidate_sweep_complete": true
+          },
+          "skeletal_mesh_component": {
+            "observed_total": 21,
+            "exported_geometry_available": 21,
+            "authored_static_geometry_available": 0,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "foliage_instance": {
+            "observed_total": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "packed_level_component": {
+            "observed_total": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          }
+        },
+        "observed_render_objects": 69684,
+        "complete_scene_enumeration_status": "NOT_RUN_COMPLETE_ENUMERATION_PROOF_MISSING",
+        "scope": "All native independent object slots including null assets and hidden flags. Empty ISMs count as components with zero instances. Enumeration is not geometry, material, dynamic-pose or overlap acceptance."
+      },
+      "limits": [
+        "Coverage denominators include all observed independent instances and missing categories; selected-pair counts never become the denominator.",
+        "Static scene export is not a current NPC/vehicle pose, actual route, source semantic proof or gameplay collision-response test.",
+        "Closed/open render topology, material WPO/opacity/Nanite and Landscape holes retain native-export limitations."
+      ]
+    },
+    {
+      "file": "B2_render_final03.json",
+      "sha256": "6e160e73ec1e6754ce0c04d91d46f52cc0166723bcf0b7b7efbe6762ce3ee42c",
+      "status": "COMPLETE_STATIC_CANDIDATE_SWEEP_NOT_FULL_ACCEPTANCE",
+      "pairs": {
+        "status": "COMPLETED_STATIC_SCOPE",
+        "pairs_narrow_phase_tested": 501997,
+        "status_counts": {
+          "FAIL": 105122,
+          "CLEAR_BACKGROUND_SURFACES": 69620,
+          "NOT_RUN_DEPTH_UNRESOLVED": 294765,
+          "PASS_SEPARATED": 25239,
+          "PASS": 7251
+        },
+        "journal": "..\\docs\\HarborCity_M5_VS4\\R3\\appendix\\final_20261013\\B2_render_final03.pairs.jsonl",
+        "journal_sha256": "8233a82f5b27fc6be49e139e2689edf031d264e770c81c21c4a1a7762ba96bbb",
+        "broad_phase_complete": true
+      },
+      "coverage": {
+        "categories": {
+          "brush_component": {
+            "observed_total": 5,
+            "exported_geometry_available": 0,
+            "authored_static_geometry_available": 0,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 3,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 5,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "static_mesh_component": {
+            "observed_total": 34048,
+            "exported_geometry_available": 34047,
+            "authored_static_geometry_available": 34047,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 1,
+            "hidden_native_flags_object_slots": 35,
+            "objects_broad_phase_checked": 34012,
+            "objects_narrow_phase_checked": 34012,
+            "objects_with_unresolved_candidates": 33418,
+            "candidate_sweep_complete": true
+          },
+          "instanced_static_mesh": {
+            "observed_total": 35546,
+            "exported_geometry_available": 35546,
+            "authored_static_geometry_available": 35546,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 35546,
+            "objects_narrow_phase_checked": 35546,
+            "objects_with_unresolved_candidates": 34825,
+            "candidate_sweep_complete": true
+          },
+          "landscape_component": {
+            "observed_total": 64,
+            "exported_geometry_available": 64,
+            "authored_static_geometry_available": 64,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 64,
+            "objects_narrow_phase_checked": 64,
+            "objects_with_unresolved_candidates": 64,
+            "candidate_sweep_complete": true
+          },
+          "skeletal_mesh_component": {
+            "observed_total": 21,
+            "exported_geometry_available": 21,
+            "authored_static_geometry_available": 0,
+            "runtime_pose_available": 0,
+            "native_nonrendered_volume_excluded": 0,
+            "null_asset_object_slots": 0,
+            "hidden_native_flags_object_slots": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "foliage_instance": {
+            "observed_total": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          },
+          "packed_level_component": {
+            "observed_total": 0,
+            "objects_broad_phase_checked": 0,
+            "objects_narrow_phase_checked": 0,
+            "objects_with_unresolved_candidates": 0,
+            "candidate_sweep_complete": true
+          }
+        },
+        "observed_render_objects": 69684,
+        "complete_scene_enumeration_status": "NOT_RUN_COMPLETE_ENUMERATION_PROOF_MISSING",
+        "scope": "All native independent object slots including null assets and hidden flags. Empty ISMs count as components with zero instances. Enumeration is not geometry, material, dynamic-pose or overlap acceptance."
+      },
+      "limits": [
+        "Coverage denominators include all observed independent instances and missing categories; selected-pair counts never become the denominator.",
+        "Static scene export is not a current NPC/vehicle pose, actual route, source semantic proof or gameplay collision-response test.",
+        "Closed/open render topology, material WPO/opacity/Nanite and Landscape holes retain native-export limitations."
+      ]
+    }
+  ],
+  "classification_status": "TRIAGE_ONLY_NO_EXEMPTIONS_ACCEPTED",
+  "classification_counts": {
+    "REQUIRES_GEOMETRY_REVIEW": 16219,
+    "GROUND_EMBED_DEPTH_REVIEW": 4059,
+    "ALLOWED_GROUND_EMBEDDING_CANDIDATE": 1817,
+    "BUILDING_BASE_E8_REVIEW": 3208,
+    "PLANT_PLANT_REVIEW": 955,
+    "SOURCE_BUILDING_ASSEMBLY_CANDIDATE": 56925,
+    "PLANT_SOLID_CONTACT_REQUIRES_FIX": 3145,
+    "BETWEEN_BUILDING_WINDOW_ROOF_REVIEW": 3759,
+    "PARTY_WALL_REVIEW": 14710,
+    "WALL_IVY_OUTSIDE_FACE_REVIEW": 123,
+    "PLANT_CONTAINER_CANDIDATE": 202
+  },
+  "accepted_exemptions": [],
+  "new_exemption_categories": [],
+  "exemptions_note": "No candidate category has been accepted as an exemption. Source assemblies, party walls, wall ivy and planter plants still require individual independence/contact checks and five photographed examples per accepted class.",
+  "changed": {
+    "ivy_instances_removed": 338,
+    "trees_bushes_moved": 158,
+    "frozen_actors_unchanged": 393,
+    "named_save_checks_after_each_batch": "45/45"
+  },
+  "conclusion": "Raw >2cm candidate pairs fell from108053 to105122. These are not confirmed independent non-exempt pairs. B2 cannot be reported as zero: unresolved narrow-phase candidates, masked foliage, posed skeletal geometry, special meshes and boat/vehicle clearances remain unaccepted.",
+  "scope": "Static rendered-mesh candidate sweep, 2cm; unresolved surfaces are not clear. No new accepted exemptions. Material/WPO/opacity and runtime actors are not fully certified."
+}

@@ -1,0 +1,6108 @@
+{
+  "status": "SCREENED_EXPORTED_CHECKPOINT_NOT_FINAL_ACCEPTANCE",
+  "counts": {
+    "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT": 266,
+    "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT": 80,
+    "OVER_15CM_CANDIDATE": 51,
+    "NOT_RUN_FOOTING_OWNERSHIP_CHANGED_OR_MISSING": 1
+  },
+  "denominator": 398,
+  "method": "Actual outer hull vertices of owned base LOD0 bottom surfaces at0.01cm tolerance; no invented AABB corner points. Upper-floor overhangs excluded. Floor-only foundation identity remains unverified. Landscape and explicitly tagged support triangles determine gaps; bounds only select candidates.",
+  "limitations": [
+    "Export precedes S5 material/camera changes; final geometry binding unverified.",
+    "Known S3 swapped building cannot inherit the old footing geometry.",
+    "Outer hull includes actual base vertices only; concave inner corners and continuous edge support are not fully sampled.",
+    "Other ground/paving/support categories not exhaustively classified; over15cm is a candidate, not a confirmed unsupported building.",
+    "Outer hull measurements do not prove absence of holes along every exterior edge.",
+    "Static exported geometry does not evaluate shader displacement or opacity."
+  ],
+  "buildings": [
+    {
+      "number": 1,
+      "id": "BP_BLD_03_16x8_Ext_0",
+      "lot_ids": [],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -198.93,
+        -198.93,
+        -198.93,
+        -198.93
+      ]
+    },
+    {
+      "number": 2,
+      "id": "BP_BLD_03_16x8_Ext_09_C_0",
+      "lot_ids": [
+        "V2_B707"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 3,
+      "id": "BP_BLD_03_16x8_Ext_09_C_1",
+      "lot_ids": [
+        "V2_B708"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 4,
+      "id": "BP_BLD_03_16x8_Ext_09_C_2",
+      "lot_ids": [
+        "V2_B729"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 5,
+      "id": "BP_BLD_03_16x8_Ext_1",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1000.0,
+        -150.0,
+        -0.0,
+        1200.0
+      ]
+    },
+    {
+      "number": 6,
+      "id": "BP_BLD_03_16x8_Ext_2",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -50.0,
+        1430.536,
+        1200.0,
+        null
+      ]
+    },
+    {
+      "number": 7,
+      "id": "BP_BLD_03_16x8_Ext_3",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        3.434,
+        61.644,
+        0.0
+      ]
+    },
+    {
+      "number": 8,
+      "id": "BP_BLD_03_16x8_Ext_4",
+      "lot_ids": [],
+      "status": "NOT_RUN_FOOTING_OWNERSHIP_CHANGED_OR_MISSING",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": []
+    },
+    {
+      "number": 9,
+      "id": "BP_BLD_03_16x8_Ext_5",
+      "lot_ids": [],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 10,
+      "id": "BP_BLD_03_16x8_Ext_6",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        64.59,
+        0.0
+      ]
+    },
+    {
+      "number": 11,
+      "id": "BP_BLD_03_16x8_Ext_Arch_01_C_0",
+      "lot_ids": [
+        "V2_B730"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        696.487,
+        -72.859,
+        0.393,
+        292.672,
+        -80.607,
+        -11.959,
+        288.041
+      ]
+    },
+    {
+      "number": 12,
+      "id": "BP_BLD_03_16x8_Ext_Arch_01_C_1",
+      "lot_ids": [
+        "V2_B731"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        700.0,
+        -73.279,
+        -0.0,
+        300.0,
+        -73.279,
+        -0.0,
+        300.0
+      ]
+    },
+    {
+      "number": 13,
+      "id": "BP_BLD_03_16x8_Ext_Arch_02_C_0",
+      "lot_ids": [
+        "V2_B733"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1101.18,
+        -88.201,
+        -14.922,
+        285.078,
+        -88.201,
+        0.59,
+        300.59
+      ]
+    },
+    {
+      "number": 14,
+      "id": "BP_BLD_03_16x8_Ext_Arch_02_C_1",
+      "lot_ids": [
+        "V2_B735"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1074.083,
+        -102.207,
+        -28.799,
+        300.005,
+        -73.076,
+        0.786,
+        300.786
+      ]
+    },
+    {
+      "number": 15,
+      "id": "BP_BLD_03_16x8_Int_01_C_1",
+      "lot_ids": [
+        "V2_B030"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        87.287,
+        87.287,
+        87.287,
+        87.287
+      ]
+    },
+    {
+      "number": 16,
+      "id": "BP_BLD_03_16x8_Int_02_C_1",
+      "lot_ids": [
+        "V2_B016"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 17,
+      "id": "BP_BLD_03_16x8_Int_04_C_1",
+      "lot_ids": [
+        "V2_B146"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        426.384,
+        99.522,
+        107.563,
+        426.384
+      ]
+    },
+    {
+      "number": 18,
+      "id": "BP_BLD_03_16x8_Int_Alchemy_01_C_1",
+      "lot_ids": [
+        "V2_B004"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 19,
+      "id": "BP_BLD_03_16x8_Int_Bar_02_C_1",
+      "lot_ids": [
+        "V2_B025"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 20,
+      "id": "BP_BLD_03_16x8_Int_Tavern_01_0",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -21.083,
+        47.093,
+        447.101,
+        -46.606,
+        353.389,
+        450.0
+      ]
+    },
+    {
+      "number": 21,
+      "id": "BP_BLD_03_16x8_Int_Woodworking_C_1",
+      "lot_ids": [
+        "V2_B209"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        400.0,
+        0.0,
+        0.0,
+        400.0
+      ]
+    },
+    {
+      "number": 22,
+      "id": "BP_BLD_03_4x4_Ext_01_C_2",
+      "lot_ids": [
+        "V2_B060"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 23,
+      "id": "BP_BLD_03_8x8_Ext_01_C_0",
+      "lot_ids": [
+        "V2_B036"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 24,
+      "id": "BP_BLD_03_8x8_Ext_01_C_1",
+      "lot_ids": [
+        "V2_B331"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 25,
+      "id": "BP_BLD_03_8x8_Ext_Arch_01_0",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -73.279,
+        -0.0,
+        300.0,
+        300.0,
+        -0.0,
+        -73.279,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "number": 26,
+      "id": "BP_BLD_03_8x8_Ext_Arch_01_C_0",
+      "lot_ids": [
+        "V2_B736"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -79.942,
+        -14.265,
+        285.735,
+        291.884,
+        -8.116,
+        -72.848,
+        300.407,
+        293.435
+      ]
+    },
+    {
+      "number": 27,
+      "id": "BP_BLD_03_8x8_Ext_Arch_01_C_1",
+      "lot_ids": [
+        "V2_B737"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -73.279,
+        -0.0,
+        300.0,
+        300.0,
+        -0.0,
+        -73.279,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "number": 28,
+      "id": "BP_BLD_03_L_Ext_0",
+      "lot_ids": [],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    },
+    {
+      "number": 29,
+      "id": "BP_BLD_03_L_Ext_03_C_0",
+      "lot_ids": [
+        "V2_B722"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 30,
+      "id": "BP_BLD_03_L_Ext_03_C_1",
+      "lot_ids": [
+        "V2_B723"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 31,
+      "id": "BP_BLD_03_L_Ext_03_C_2",
+      "lot_ids": [
+        "V2_B720"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 32,
+      "id": "BP_BLD_03_L_Ext_05_0",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        49.219,
+        49.219
+      ]
+    },
+    {
+      "number": 33,
+      "id": "BP_BLD_03_L_Ext_05_C_0",
+      "lot_ids": [
+        "V2_B750"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 34,
+      "id": "BP_BLD_03_L_Ext_07_C_0",
+      "lot_ids": [
+        "V2_B227"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.067,
+        0.067,
+        400.067,
+        0.067,
+        407.63,
+        0.067,
+        400.067
+      ]
+    },
+    {
+      "number": 35,
+      "id": "BP_BLD_03_L_Ext_07_C_1",
+      "lot_ids": [
+        "V2_B721"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -28.436,
+        -19.675,
+        400.932,
+        0.931,
+        385.743,
+        -19.695,
+        371.564
+      ]
+    },
+    {
+      "number": 36,
+      "id": "BP_BLD_03_L_Ext_07_C_2",
+      "lot_ids": [
+        "V2_B724"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -6.234,
+        0.797,
+        384.355,
+        -15.645,
+        375.848,
+        -16.289,
+        393.766
+      ]
+    },
+    {
+      "number": 37,
+      "id": "BP_BLD_03_L_Ext_1",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0
+      ]
+    },
+    {
+      "number": 38,
+      "id": "BP_BLD_03_L_Int_01_C_1",
+      "lot_ids": [
+        "V2_B017"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        498.78,
+        98.78,
+        98.78,
+        98.78,
+        98.78,
+        498.78
+      ]
+    },
+    {
+      "number": 39,
+      "id": "BP_BLD_03_L_Int_02_C_1",
+      "lot_ids": [
+        "V2_B022"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        101.321,
+        101.321,
+        101.321,
+        99.759,
+        499.759,
+        498.134
+      ]
+    },
+    {
+      "number": 40,
+      "id": "BP_BLD_03_L_Int_Blacksmith_C_1",
+      "lot_ids": [
+        "V2_B214"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        424.263,
+        424.263,
+        424.263,
+        424.263,
+        497.145
+      ]
+    },
+    {
+      "number": 41,
+      "id": "BP_BLD_03_L_Int_Tavern_01_C_1",
+      "lot_ids": [
+        "V2_B155"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        107.185,
+        107.185,
+        107.185,
+        507.185,
+        507.185,
+        107.185
+      ]
+    },
+    {
+      "number": 42,
+      "id": "BP_BLD_03_T_Ext_0",
+      "lot_ids": [],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        800.0,
+        800.0,
+        800.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 43,
+      "id": "BP_BLD_03_T_Ext_02_0",
+      "lot_ids": [],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        12.893,
+        0.0,
+        0.0,
+        0.0,
+        0.251,
+        0.0
+      ]
+    },
+    {
+      "number": 44,
+      "id": "BP_BLD_03_T_Int_01_C_1",
+      "lot_ids": [
+        "V2_B010"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        59.688,
+        59.8,
+        59.688,
+        59.688,
+        59.688,
+        459.688
+      ]
+    },
+    {
+      "number": 45,
+      "id": "BP_BLD_03_T_Int_Tailor_C_1",
+      "lot_ids": [
+        "V2_B027"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        144.802,
+        112.712,
+        101.548,
+        144.802,
+        144.802,
+        544.802
+      ]
+    },
+    {
+      "number": 46,
+      "id": "BP_R3_4x4_1F_R00_C_0",
+      "lot_ids": [
+        "V2_B575"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.261,
+        0.261,
+        0.261,
+        0.261
+      ]
+    },
+    {
+      "number": 47,
+      "id": "BP_R3_4x4_1F_R00_C_1",
+      "lot_ids": [
+        "V2_B360"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 48,
+      "id": "BP_R3_4x4_1F_R00_C_2",
+      "lot_ids": [
+        "V2_B466"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        0.291,
+        0.291,
+        1.388
+      ]
+    },
+    {
+      "number": 49,
+      "id": "BP_R3_4x4_1F_R00_C_3",
+      "lot_ids": [
+        "V2_B591"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.389,
+        0.389,
+        0.389,
+        0.389
+      ]
+    },
+    {
+      "number": 50,
+      "id": "BP_R3_4x4_1F_R00_C_4",
+      "lot_ids": [
+        "V2_B407"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.067,
+        0.067,
+        0.067,
+        0.067
+      ]
+    },
+    {
+      "number": 51,
+      "id": "BP_R3_4x4_1F_R00_C_5",
+      "lot_ids": [
+        "V2_B409"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.067,
+        0.067,
+        0.067,
+        0.067
+      ]
+    },
+    {
+      "number": 52,
+      "id": "BP_R3_4x4_1F_R90_C_0",
+      "lot_ids": [
+        "V2_B432"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 53,
+      "id": "BP_R3_4x4_1F_R90_C_1",
+      "lot_ids": [
+        "V2_B093"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 54,
+      "id": "BP_R3_4x4_1F_R90_C_10",
+      "lot_ids": [
+        "V2_B076"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        0.059,
+        0.059
+      ]
+    },
+    {
+      "number": 55,
+      "id": "BP_R3_4x4_1F_R90_C_11",
+      "lot_ids": [
+        "V2_B078"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        0.059,
+        0.059
+      ]
+    },
+    {
+      "number": 56,
+      "id": "BP_R3_4x4_1F_R90_C_12",
+      "lot_ids": [
+        "V2_B531"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 57,
+      "id": "BP_R3_4x4_1F_R90_C_13",
+      "lot_ids": [
+        "V2_B537"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 58,
+      "id": "BP_R3_4x4_1F_R90_C_14",
+      "lot_ids": [
+        "V2_B391"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.206,
+        -0.206,
+        -0.206,
+        -0.206
+      ]
+    },
+    {
+      "number": 59,
+      "id": "BP_R3_4x4_1F_R90_C_2",
+      "lot_ids": [
+        "V2_B134"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.299,
+        -0.299,
+        -0.299,
+        -0.299
+      ]
+    },
+    {
+      "number": 60,
+      "id": "BP_R3_4x4_1F_R90_C_3",
+      "lot_ids": [
+        "V2_B123"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        0.291,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 61,
+      "id": "BP_R3_4x4_1F_R90_C_4",
+      "lot_ids": [
+        "V2_B414"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        0.291,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 62,
+      "id": "BP_R3_4x4_1F_R90_C_5",
+      "lot_ids": [
+        "V2_B423"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 63,
+      "id": "BP_R3_4x4_1F_R90_C_6",
+      "lot_ids": [
+        "V2_B425"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 64,
+      "id": "BP_R3_4x4_1F_R90_C_7",
+      "lot_ids": [
+        "V2_B487"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 65,
+      "id": "BP_R3_4x4_1F_R90_C_8",
+      "lot_ids": [
+        "V2_B489"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 66,
+      "id": "BP_R3_4x4_1F_R90_C_9",
+      "lot_ids": [
+        "V2_B497"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 67,
+      "id": "BP_R3_4x4_2F_R00_C_0",
+      "lot_ids": [
+        "V2_B567"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.005,
+        -0.005,
+        -0.005,
+        -0.005
+      ]
+    },
+    {
+      "number": 68,
+      "id": "BP_R3_4x4_2F_R00_C_1",
+      "lot_ids": [
+        "V2_B491"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 69,
+      "id": "BP_R3_4x4_2F_R00_C_10",
+      "lot_ids": [
+        "V2_B535"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 70,
+      "id": "BP_R3_4x4_2F_R00_C_11",
+      "lot_ids": [
+        "V2_B539"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.204,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 71,
+      "id": "BP_R3_4x4_2F_R00_C_12",
+      "lot_ids": [
+        "V2_B056"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 72,
+      "id": "BP_R3_4x4_2F_R00_C_13",
+      "lot_ids": [
+        "V2_B063"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 73,
+      "id": "BP_R3_4x4_2F_R00_C_14",
+      "lot_ids": [
+        "V2_B459"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        59.538,
+        -0.245,
+        -0.245,
+        80.899
+      ]
+    },
+    {
+      "number": 74,
+      "id": "BP_R3_4x4_2F_R00_C_15",
+      "lot_ids": [
+        "V2_B461"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.245,
+        2.847,
+        -0.245,
+        -0.245
+      ]
+    },
+    {
+      "number": 75,
+      "id": "BP_R3_4x4_2F_R00_C_16",
+      "lot_ids": [
+        "V2_B606"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 76,
+      "id": "BP_R3_4x4_2F_R00_C_17",
+      "lot_ids": [
+        "V2_B139"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 77,
+      "id": "BP_R3_4x4_2F_R00_C_18",
+      "lot_ids": [
+        "V2_B597"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 78,
+      "id": "BP_R3_4x4_2F_R00_C_2",
+      "lot_ids": [
+        "V2_B415"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.058,
+        -0.058,
+        -0.058,
+        -0.058
+      ]
+    },
+    {
+      "number": 79,
+      "id": "BP_R3_4x4_2F_R00_C_3",
+      "lot_ids": [
+        "V2_B048"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 80,
+      "id": "BP_R3_4x4_2F_R00_C_4",
+      "lot_ids": [
+        "V2_B427"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.365,
+        -1.438,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 81,
+      "id": "BP_R3_4x4_2F_R00_C_5",
+      "lot_ids": [
+        "V2_B573"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 82,
+      "id": "BP_R3_4x4_2F_R00_C_6",
+      "lot_ids": [
+        "V2_B559"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.313,
+        0.313,
+        0.312,
+        0.313
+      ]
+    },
+    {
+      "number": 83,
+      "id": "BP_R3_4x4_2F_R00_C_7",
+      "lot_ids": [
+        "V2_B561"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.313,
+        0.313,
+        0.312,
+        0.312
+      ]
+    },
+    {
+      "number": 84,
+      "id": "BP_R3_4x4_2F_R00_C_8",
+      "lot_ids": [
+        "V2_B133"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 85,
+      "id": "BP_R3_4x4_2F_R00_C_9",
+      "lot_ids": [
+        "V2_B515"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 86,
+      "id": "BP_R3_4x4_2F_R90_C_0",
+      "lot_ids": [
+        "V2_B363"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 87,
+      "id": "BP_R3_4x4_2F_R90_C_1",
+      "lot_ids": [
+        "V2_B558"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 88,
+      "id": "BP_R3_4x4_2F_R90_C_2",
+      "lot_ids": [
+        "V2_B371"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.261,
+        0.261,
+        0.261,
+        0.261
+      ]
+    },
+    {
+      "number": 89,
+      "id": "BP_R3_4x4_2F_R90_C_3",
+      "lot_ids": [
+        "V2_B564"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.385,
+        -0.385,
+        -0.385,
+        -0.385
+      ]
+    },
+    {
+      "number": 90,
+      "id": "BP_R3_4x4_2F_R90_C_4",
+      "lot_ids": [
+        "V2_B061"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 91,
+      "id": "BP_R3_4x4_2F_R90_C_5",
+      "lot_ids": [
+        "V2_B075"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        0.291,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 92,
+      "id": "BP_R3_4x4_2F_R90_C_6",
+      "lot_ids": [
+        "V2_B549"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 93,
+      "id": "BP_R3_4x4_2F_R90_C_7",
+      "lot_ids": [
+        "V2_B399"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 94,
+      "id": "BP_R3_4x4_2F_R90_C_8",
+      "lot_ids": [
+        "V2_B401"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 95,
+      "id": "BP_R3_4x4_3F_Profile45_C_0",
+      "lot_ids": [
+        "V2_B052"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.116,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 96,
+      "id": "BP_R3_4x4_3F_Profile45_C_1",
+      "lot_ids": [
+        "V2_B058"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 97,
+      "id": "BP_R3_4x4_3F_Profile45_C_10",
+      "lot_ids": [
+        "V2_B339"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.284,
+        -0.284,
+        -0.284,
+        -0.284
+      ]
+    },
+    {
+      "number": 98,
+      "id": "BP_R3_4x4_3F_Profile45_C_11",
+      "lot_ids": [
+        "V2_B379"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.204,
+        -0.204,
+        -0.204,
+        -0.204
+      ]
+    },
+    {
+      "number": 99,
+      "id": "BP_R3_4x4_3F_Profile45_C_12",
+      "lot_ids": [
+        "V2_B419"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 100,
+      "id": "BP_R3_4x4_3F_Profile45_C_13",
+      "lot_ids": [
+        "V2_B471"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 101,
+      "id": "BP_R3_4x4_3F_Profile45_C_14",
+      "lot_ids": [
+        "V2_B483"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.1,
+        0.092
+      ]
+    },
+    {
+      "number": 102,
+      "id": "BP_R3_4x4_3F_Profile45_C_15",
+      "lot_ids": [
+        "V2_B396"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.206,
+        -0.206,
+        -0.206,
+        -0.206
+      ]
+    },
+    {
+      "number": 103,
+      "id": "BP_R3_4x4_3F_Profile45_C_16",
+      "lot_ids": [
+        "V2_B452"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 104,
+      "id": "BP_R3_4x4_3F_Profile45_C_17",
+      "lot_ids": [
+        "V2_B602"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 105,
+      "id": "BP_R3_4x4_3F_Profile45_C_18",
+      "lot_ids": [
+        "V2_B437"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.261,
+        0.261,
+        0.261,
+        0.261
+      ]
+    },
+    {
+      "number": 106,
+      "id": "BP_R3_4x4_3F_Profile45_C_19",
+      "lot_ids": [
+        "V2_B434"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 107,
+      "id": "BP_R3_4x4_3F_Profile45_C_2",
+      "lot_ids": [
+        "V2_B445"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 108,
+      "id": "BP_R3_4x4_3F_Profile45_C_20",
+      "lot_ids": [
+        "V2_B361"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 109,
+      "id": "BP_R3_4x4_3F_Profile45_C_3",
+      "lot_ids": [
+        "V2_B545"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 110,
+      "id": "BP_R3_4x4_3F_Profile45_C_4",
+      "lot_ids": [
+        "V2_B096"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 111,
+      "id": "BP_R3_4x4_3F_Profile45_C_5",
+      "lot_ids": [
+        "V2_B137"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 112,
+      "id": "BP_R3_4x4_3F_Profile45_C_6",
+      "lot_ids": [
+        "V2_B358"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 113,
+      "id": "BP_R3_4x4_3F_Profile45_C_7",
+      "lot_ids": [
+        "V2_B526"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 114,
+      "id": "BP_R3_4x4_3F_Profile45_C_8",
+      "lot_ids": [
+        "V2_B620"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.312,
+        0.312,
+        -19.533,
+        0.313
+      ]
+    },
+    {
+      "number": 115,
+      "id": "BP_R3_4x4_3F_Profile45_C_9",
+      "lot_ids": [
+        "V2_B118"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 116,
+      "id": "BP_R3_4x4_3F_Profile60_C_0",
+      "lot_ids": [
+        "V2_B059"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 117,
+      "id": "BP_R3_4x4_3F_Profile60_C_1",
+      "lot_ids": [
+        "V2_B446"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 118,
+      "id": "BP_R3_4x4_3F_Profile60_C_10",
+      "lot_ids": [
+        "V2_B420"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 119,
+      "id": "BP_R3_4x4_3F_Profile60_C_11",
+      "lot_ids": [
+        "V2_B472"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        -0.097,
+        0.034
+      ]
+    },
+    {
+      "number": 120,
+      "id": "BP_R3_4x4_3F_Profile60_C_12",
+      "lot_ids": [
+        "V2_B484"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 121,
+      "id": "BP_R3_4x4_3F_Profile60_C_13",
+      "lot_ids": [
+        "V2_B397"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.206,
+        -0.206,
+        -0.206,
+        -0.206
+      ]
+    },
+    {
+      "number": 122,
+      "id": "BP_R3_4x4_3F_Profile60_C_14",
+      "lot_ids": [
+        "V2_B438"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.261,
+        0.261,
+        0.261,
+        0.261
+      ]
+    },
+    {
+      "number": 123,
+      "id": "BP_R3_4x4_3F_Profile60_C_15",
+      "lot_ids": [
+        "V2_B574"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.261,
+        0.261,
+        0.261,
+        0.261
+      ]
+    },
+    {
+      "number": 124,
+      "id": "BP_R3_4x4_3F_Profile60_C_16",
+      "lot_ids": [
+        "V2_B130"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1.46,
+        0.187,
+        0.187,
+        0.187
+      ]
+    },
+    {
+      "number": 125,
+      "id": "BP_R3_4x4_3F_Profile60_C_2",
+      "lot_ids": [
+        "V2_B546"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.014,
+        0.0,
+        0.0,
+        -0.117
+      ]
+    },
+    {
+      "number": 126,
+      "id": "BP_R3_4x4_3F_Profile60_C_3",
+      "lot_ids": [
+        "V2_B083"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 127,
+      "id": "BP_R3_4x4_3F_Profile60_C_4",
+      "lot_ids": [
+        "V2_B097"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 128,
+      "id": "BP_R3_4x4_3F_Profile60_C_5",
+      "lot_ids": [
+        "V2_B523"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 129,
+      "id": "BP_R3_4x4_3F_Profile60_C_6",
+      "lot_ids": [
+        "V2_B568"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.294,
+        -0.251
+      ]
+    },
+    {
+      "number": 130,
+      "id": "BP_R3_4x4_3F_Profile60_C_7",
+      "lot_ids": [
+        "V2_B119"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 131,
+      "id": "BP_R3_4x4_3F_Profile60_C_8",
+      "lot_ids": [
+        "V2_B341"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.284,
+        -0.284,
+        -0.284,
+        -0.284
+      ]
+    },
+    {
+      "number": 132,
+      "id": "BP_R3_4x4_3F_Profile60_C_9",
+      "lot_ids": [
+        "V2_B380"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.204,
+        -0.204,
+        -0.204,
+        -0.204
+      ]
+    },
+    {
+      "number": 133,
+      "id": "BP_R3_4x4_3F_Profile75_C_0",
+      "lot_ids": [
+        "V2_B098"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 134,
+      "id": "BP_R3_4x4_3F_Profile75_C_1",
+      "lot_ids": [
+        "V2_B524"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 135,
+      "id": "BP_R3_4x4_3F_Profile75_C_2",
+      "lot_ids": [
+        "V2_B618"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.313,
+        -168.81,
+        0.312,
+        0.312
+      ]
+    },
+    {
+      "number": 136,
+      "id": "BP_R3_4x4_3F_Profile75_C_3",
+      "lot_ids": [
+        "V2_B124"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.374,
+        2.292,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 137,
+      "id": "BP_R3_4x4_3F_Profile75_C_4",
+      "lot_ids": [
+        "V2_B342"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.284,
+        -0.284,
+        -0.284,
+        -0.284
+      ]
+    },
+    {
+      "number": 138,
+      "id": "BP_R3_4x4_3F_Profile75_C_5",
+      "lot_ids": [
+        "V2_B381"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.204,
+        -0.204,
+        -0.204,
+        -0.204
+      ]
+    },
+    {
+      "number": 139,
+      "id": "BP_R3_4x4_3F_Profile75_C_6",
+      "lot_ids": [
+        "V2_B421"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 140,
+      "id": "BP_R3_4x4_3F_Profile75_C_7",
+      "lot_ids": [
+        "V2_B485"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 141,
+      "id": "BP_R3_4x4_3F_Profile75_C_8",
+      "lot_ids": [
+        "V2_B398"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.283,
+        -0.206,
+        -0.206,
+        -0.206
+      ]
+    },
+    {
+      "number": 142,
+      "id": "BP_R3_4x4_3F_Profile75_C_9",
+      "lot_ids": [
+        "V2_B555"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 143,
+      "id": "BP_R3_4x4_3F_Profile85_C_0",
+      "lot_ids": [
+        "V2_B110"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 144,
+      "id": "BP_R3_4x4_3F_Profile85_C_1",
+      "lot_ids": [
+        "V2_B444"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 145,
+      "id": "BP_R3_4x4_3F_Profile85_C_10",
+      "lot_ids": [
+        "V2_B607"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.263,
+        0.291,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 146,
+      "id": "BP_R3_4x4_3F_Profile85_C_11",
+      "lot_ids": [
+        "V2_B382"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.204,
+        -0.204,
+        -0.204,
+        -0.204
+      ]
+    },
+    {
+      "number": 147,
+      "id": "BP_R3_4x4_3F_Profile85_C_12",
+      "lot_ids": [
+        "V2_B474"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 148,
+      "id": "BP_R3_4x4_3F_Profile85_C_13",
+      "lot_ids": [
+        "V2_B486"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 149,
+      "id": "BP_R3_4x4_3F_Profile85_C_14",
+      "lot_ids": [
+        "V2_B395"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.206,
+        -0.206,
+        -0.206,
+        -0.206
+      ]
+    },
+    {
+      "number": 150,
+      "id": "BP_R3_4x4_3F_Profile85_C_15",
+      "lot_ids": [
+        "V2_B447"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.357,
+        -0.324
+      ]
+    },
+    {
+      "number": 151,
+      "id": "BP_R3_4x4_3F_Profile85_C_16",
+      "lot_ids": [
+        "V2_B587"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.271,
+        -0.271,
+        -0.271,
+        -0.271
+      ]
+    },
+    {
+      "number": 152,
+      "id": "BP_R3_4x4_3F_Profile85_C_17",
+      "lot_ids": [
+        "V2_B601"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 153,
+      "id": "BP_R3_4x4_3F_Profile85_C_18",
+      "lot_ids": [
+        "V2_B436"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.261,
+        0.261,
+        0.261,
+        0.261
+      ]
+    },
+    {
+      "number": 154,
+      "id": "BP_R3_4x4_3F_Profile85_C_19",
+      "lot_ids": [
+        "V2_B104"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.081,
+        0.11
+      ]
+    },
+    {
+      "number": 155,
+      "id": "BP_R3_4x4_3F_Profile85_C_2",
+      "lot_ids": [
+        "V2_B544"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 156,
+      "id": "BP_R3_4x4_3F_Profile85_C_3",
+      "lot_ids": [
+        "V2_B087"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        0.059,
+        0.059
+      ]
+    },
+    {
+      "number": 157,
+      "id": "BP_R3_4x4_3F_Profile85_C_4",
+      "lot_ids": [
+        "V2_B099"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 158,
+      "id": "BP_R3_4x4_3F_Profile85_C_5",
+      "lot_ids": [
+        "V2_B357"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 159,
+      "id": "BP_R3_4x4_3F_Profile85_C_6",
+      "lot_ids": [
+        "V2_B525"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 160,
+      "id": "BP_R3_4x4_3F_Profile85_C_7",
+      "lot_ids": [
+        "V2_B619"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -181.186,
+        0.312,
+        0.312,
+        0.313
+      ]
+    },
+    {
+      "number": 161,
+      "id": "BP_R3_4x4_3F_Profile85_C_8",
+      "lot_ids": [
+        "V2_B117"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.378,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 162,
+      "id": "BP_R3_4x4_3F_Profile85_C_9",
+      "lot_ids": [
+        "V2_B127"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        0.291,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 163,
+      "id": "BP_R3_4x4_3F_R90_C_0",
+      "lot_ids": [
+        "V2_B565"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.005,
+        -0.005,
+        -0.005,
+        -0.005
+      ]
+    },
+    {
+      "number": 164,
+      "id": "BP_R3_4x4_3F_R90_C_1",
+      "lot_ids": [
+        "V2_B094"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 165,
+      "id": "BP_R3_4x4_3F_R90_C_10",
+      "lot_ids": [
+        "V2_B547"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 166,
+      "id": "BP_R3_4x4_3F_R90_C_11",
+      "lot_ids": [
+        "V2_B403"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 167,
+      "id": "BP_R3_4x4_3F_R90_C_12",
+      "lot_ids": [
+        "V2_B592"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 168,
+      "id": "BP_R3_4x4_3F_R90_C_13",
+      "lot_ids": [
+        "V2_B594"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 169,
+      "id": "BP_R3_4x4_3F_R90_C_2",
+      "lot_ids": [
+        "V2_B136"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.299,
+        -0.299,
+        -0.299,
+        -0.299
+      ]
+    },
+    {
+      "number": 170,
+      "id": "BP_R3_4x4_3F_R90_C_3",
+      "lot_ids": [
+        "V2_B375"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.204,
+        -0.204,
+        -0.204,
+        -0.204
+      ]
+    },
+    {
+      "number": 171,
+      "id": "BP_R3_4x4_3F_R90_C_4",
+      "lot_ids": [
+        "V2_B377"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.204,
+        -0.204,
+        -0.204,
+        -0.204
+      ]
+    },
+    {
+      "number": 172,
+      "id": "BP_R3_4x4_3F_R90_C_5",
+      "lot_ids": [
+        "V2_B478"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.296,
+        -0.175
+      ]
+    },
+    {
+      "number": 173,
+      "id": "BP_R3_4x4_3F_R90_C_6",
+      "lot_ids": [
+        "V2_B582"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 174,
+      "id": "BP_R3_4x4_3F_R90_C_7",
+      "lot_ids": [
+        "V2_B616"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.313,
+        0.313,
+        0.312,
+        0.313
+      ]
+    },
+    {
+      "number": 175,
+      "id": "BP_R3_4x4_3F_R90_C_8",
+      "lot_ids": [
+        "V2_B088"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.189,
+        0.189,
+        0.189,
+        0.189
+      ]
+    },
+    {
+      "number": 176,
+      "id": "BP_R3_4x4_3F_R90_C_9",
+      "lot_ids": [
+        "V2_B064"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 177,
+      "id": "BP_R3_4x4_4F_R00_C_0",
+      "lot_ids": [
+        "V2_B431"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 178,
+      "id": "BP_R3_4x4_4F_R00_C_1",
+      "lot_ids": [
+        "V2_B120"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        0.291,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 179,
+      "id": "BP_R3_4x4_4F_R00_C_10",
+      "lot_ids": [
+        "V2_B102"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.152,
+        0.152,
+        0.152,
+        0.152
+      ]
+    },
+    {
+      "number": 180,
+      "id": "BP_R3_4x4_4F_R00_C_11",
+      "lot_ids": [
+        "V2_B521"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 181,
+      "id": "BP_R3_4x4_4F_R00_C_12",
+      "lot_ids": [
+        "V2_B529"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 182,
+      "id": "BP_R3_4x4_4F_R00_C_13",
+      "lot_ids": [
+        "V2_B070"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 183,
+      "id": "BP_R3_4x4_4F_R00_C_14",
+      "lot_ids": [
+        "V2_B347"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.324,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 184,
+      "id": "BP_R3_4x4_4F_R00_C_15",
+      "lot_ids": [
+        "V2_B551"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 185,
+      "id": "BP_R3_4x4_4F_R00_C_16",
+      "lot_ids": [
+        "V2_B553"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 186,
+      "id": "BP_R3_4x4_4F_R00_C_17",
+      "lot_ids": [
+        "V2_B128"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1.721,
+        8.633,
+        0.187,
+        0.187
+      ]
+    },
+    {
+      "number": 187,
+      "id": "BP_R3_4x4_4F_R00_C_2",
+      "lot_ids": [
+        "V2_B411"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        0.291,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 188,
+      "id": "BP_R3_4x4_4F_R00_C_3",
+      "lot_ids": [
+        "V2_B463"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.291,
+        20.823,
+        0.291,
+        0.291
+      ]
+    },
+    {
+      "number": 189,
+      "id": "BP_R3_4x4_4F_R00_C_4",
+      "lot_ids": [
+        "V2_B589"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.389,
+        0.389,
+        0.389,
+        0.389
+      ]
+    },
+    {
+      "number": 190,
+      "id": "BP_R3_4x4_4F_R00_C_5",
+      "lot_ids": [
+        "V2_B418"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.058,
+        0.149,
+        -0.058,
+        -0.058
+      ]
+    },
+    {
+      "number": 191,
+      "id": "BP_R3_4x4_4F_R00_C_6",
+      "lot_ids": [
+        "V2_B479"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 192,
+      "id": "BP_R3_4x4_4F_R00_C_7",
+      "lot_ids": [
+        "V2_B481"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 193,
+      "id": "BP_R3_4x4_4F_R00_C_8",
+      "lot_ids": [
+        "V2_B351"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.016,
+        -0.016,
+        -0.016,
+        -0.016
+      ]
+    },
+    {
+      "number": 194,
+      "id": "BP_R3_4x4_4F_R00_C_9",
+      "lot_ids": [
+        "V2_B354"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.016,
+        -0.016,
+        -0.016,
+        -0.016
+      ]
+    },
+    {
+      "number": 195,
+      "id": "BP_R3_8x8_1F_R00_C_0",
+      "lot_ids": [
+        "V2_B327"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 196,
+      "id": "BP_R3_8x8_1F_R00_C_1",
+      "lot_ids": [
+        "V2_B307"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 197,
+      "id": "BP_R3_8x8_1F_R00_C_2",
+      "lot_ids": [
+        "V2_B338"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 198,
+      "id": "BP_R3_8x8_1F_R00_C_3",
+      "lot_ids": [
+        "V2_B042"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 199,
+      "id": "BP_R3_8x8_2F_R90_C_0",
+      "lot_ids": [
+        "V2_B045"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 200,
+      "id": "BP_R3_8x8_2F_R90_C_1",
+      "lot_ids": [
+        "V2_B259"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 201,
+      "id": "BP_R3_8x8_2F_R90_C_2",
+      "lot_ids": [
+        "V2_B039"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 202,
+      "id": "BP_R3_8x8_3F_Profile85_C_0",
+      "lot_ids": [
+        "V2_B263"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 203,
+      "id": "BP_R3_8x8_3F_Profile85_C_1",
+      "lot_ids": [
+        "V2_B255"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 204,
+      "id": "BP_R3_8x8_3F_Profile85_C_2",
+      "lot_ids": [
+        "V2_B292"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 205,
+      "id": "BP_R3_8x8_3F_Profile85_C_3",
+      "lot_ids": [
+        "V2_B295"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 206,
+      "id": "BP_R3_8x8_3F_Profile85_C_4",
+      "lot_ids": [
+        "V2_B332"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 207,
+      "id": "BP_R3_8x8_3F_Profile85_C_5",
+      "lot_ids": [
+        "V2_B279"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 208,
+      "id": "BP_R3_8x8_3F_R90_C_0",
+      "lot_ids": [
+        "V2_B329"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 209,
+      "id": "BP_R3_8x8_3F_R90_C_1",
+      "lot_ids": [
+        "V2_B314"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 210,
+      "id": "BP_R3_8x8_3F_R90_C_2",
+      "lot_ids": [
+        "V2_B267"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 211,
+      "id": "BP_R3_8x8_3F_R90_C_3",
+      "lot_ids": [
+        "V2_B275"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 212,
+      "id": "BP_R3_8x8_4F_R00_C_0",
+      "lot_ids": [
+        "V2_B047"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 213,
+      "id": "BP_R3_8x8_4F_R00_C_1",
+      "lot_ids": [
+        "V2_B262"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 214,
+      "id": "BP_R3_8x8_4F_R00_C_2",
+      "lot_ids": [
+        "V2_B321"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 215,
+      "id": "BP_R3_8x8_4F_R00_C_3",
+      "lot_ids": [
+        "V2_B323"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 216,
+      "id": "BP_R3_8x8_4F_R00_C_4",
+      "lot_ids": [
+        "V2_B315"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 217,
+      "id": "BP_R3_8x8_4F_R00_C_5",
+      "lot_ids": [
+        "V2_B305"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 218,
+      "id": "BP_R3_8x8_4F_R00_C_6",
+      "lot_ids": [
+        "V2_B318"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 219,
+      "id": "BP_R3_8x8_4F_R00_C_7",
+      "lot_ids": [
+        "V2_B320"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 220,
+      "id": "BP_R3_8x8_4F_R00_C_8",
+      "lot_ids": [
+        "V2_B317"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 221,
+      "id": "BP_R3_Civic_CivicArchive_C_0",
+      "lot_ids": [
+        "V2_B009"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 222,
+      "id": "BP_R3_Civic_CouncilTerrace_C_0",
+      "lot_ids": [
+        "V2_B006"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 223,
+      "id": "BP_R3_Civic_CraftsHall_C_0",
+      "lot_ids": [
+        "V2_B211"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 224,
+      "id": "BP_R3_Civic_CustomsHall_C_0",
+      "lot_ids": [
+        "V2_B598"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.385,
+        -0.385,
+        -0.385,
+        -0.385
+      ]
+    },
+    {
+      "number": 225,
+      "id": "BP_R3_Civic_ExchangeHall_C_0",
+      "lot_ids": [
+        "V2_B037"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 226,
+      "id": "BP_R3_Civic_GateWatchHall_C_0",
+      "lot_ids": [
+        "V2_B159"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 227,
+      "id": "BP_R3_Civic_WaterWard_C_0",
+      "lot_ids": [
+        "V2_B271"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 228,
+      "id": "FIRST4:V2_B031",
+      "lot_ids": [
+        "V2_B031"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 229,
+      "id": "FIRST4:V2_B084",
+      "lot_ids": [
+        "V2_B084"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        0.059,
+        0.059
+      ]
+    },
+    {
+      "number": 230,
+      "id": "FIRST4:V2_B085",
+      "lot_ids": [
+        "V2_B085"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        0.059,
+        0.059
+      ]
+    },
+    {
+      "number": 231,
+      "id": "SAVED_GUILD_CONVERSION:V2_B002",
+      "lot_ids": [
+        "V2_B002"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.216
+      ]
+    },
+    {
+      "number": 232,
+      "id": "R2_CURRENT:V2_B001",
+      "lot_ids": [
+        "V2_B001"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.214,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        0.0
+      ]
+    },
+    {
+      "number": 233,
+      "id": "R2_CURRENT:V2_B003",
+      "lot_ids": [
+        "V2_B003"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 234,
+      "id": "R2_CURRENT:V2_B005",
+      "lot_ids": [
+        "V2_B005"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 235,
+      "id": "R2_CURRENT:V2_B007",
+      "lot_ids": [
+        "V2_B007"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        1200.0,
+        1200.0,
+        0.0
+      ]
+    },
+    {
+      "number": 236,
+      "id": "R2_CURRENT:V2_B008",
+      "lot_ids": [
+        "V2_B008"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        -0.114,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 237,
+      "id": "R2_CURRENT:V2_B011",
+      "lot_ids": [
+        "V2_B011"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 238,
+      "id": "R2_CURRENT:V2_B012",
+      "lot_ids": [
+        "V2_B012"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 239,
+      "id": "R2_CURRENT:V2_B014",
+      "lot_ids": [
+        "V2_B014"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 240,
+      "id": "R2_CURRENT:V2_B015",
+      "lot_ids": [
+        "V2_B015"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 241,
+      "id": "R2_CURRENT:V2_B018",
+      "lot_ids": [
+        "V2_B018"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 242,
+      "id": "R2_CURRENT:V2_B019",
+      "lot_ids": [
+        "V2_B019"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 243,
+      "id": "R2_CURRENT:V2_B020",
+      "lot_ids": [
+        "V2_B020"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 244,
+      "id": "R2_CURRENT:V2_B021",
+      "lot_ids": [
+        "V2_B021"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 245,
+      "id": "R2_CURRENT:V2_B023",
+      "lot_ids": [
+        "V2_B023"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        0.059,
+        0.059
+      ]
+    },
+    {
+      "number": 246,
+      "id": "R2_CURRENT:V2_B024",
+      "lot_ids": [
+        "V2_B024"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        1200.059,
+        1200.059,
+        1200.059,
+        1200.059
+      ]
+    },
+    {
+      "number": 247,
+      "id": "R2_CURRENT:V2_B026",
+      "lot_ids": [
+        "V2_B026"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 248,
+      "id": "R2_CURRENT:V2_B028",
+      "lot_ids": [
+        "V2_B028"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.001
+      ]
+    },
+    {
+      "number": 249,
+      "id": "R2_CURRENT:V2_B029",
+      "lot_ids": [
+        "V2_B029"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 250,
+      "id": "R2_CURRENT:V2_B032",
+      "lot_ids": [
+        "V2_B032"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 251,
+      "id": "R2_CURRENT:V2_B033",
+      "lot_ids": [
+        "V2_B033"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 252,
+      "id": "R2_CURRENT:V2_B034",
+      "lot_ids": [
+        "V2_B034"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 253,
+      "id": "R2_CURRENT:V2_B053",
+      "lot_ids": [
+        "V2_B053"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 254,
+      "id": "R2_CURRENT:V2_B054",
+      "lot_ids": [
+        "V2_B054"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 255,
+      "id": "R2_CURRENT:V2_B055",
+      "lot_ids": [
+        "V2_B055"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 256,
+      "id": "R2_CURRENT:V2_B080",
+      "lot_ids": [
+        "V2_B080"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 257,
+      "id": "R2_CURRENT:V2_B081",
+      "lot_ids": [
+        "V2_B081"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 258,
+      "id": "R2_CURRENT:V2_B082",
+      "lot_ids": [
+        "V2_B082"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 259,
+      "id": "R2_CURRENT:V2_B086",
+      "lot_ids": [
+        "V2_B086"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.059,
+        0.059,
+        0.059,
+        0.059
+      ]
+    },
+    {
+      "number": 260,
+      "id": "R2_CURRENT:V2_B108",
+      "lot_ids": [
+        "V2_B108"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 261,
+      "id": "R2_CURRENT:V2_B109",
+      "lot_ids": [
+        "V2_B109"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 262,
+      "id": "R2_CURRENT:V2_B111",
+      "lot_ids": [
+        "V2_B111"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 263,
+      "id": "R2_CURRENT:V2_B112",
+      "lot_ids": [
+        "V2_B112"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 264,
+      "id": "R2_CURRENT:V2_B113",
+      "lot_ids": [
+        "V2_B113"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 265,
+      "id": "R2_CURRENT:V2_B114",
+      "lot_ids": [
+        "V2_B114"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 266,
+      "id": "R2_CURRENT:V2_B115",
+      "lot_ids": [
+        "V2_B115"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 267,
+      "id": "R2_CURRENT:V2_B116",
+      "lot_ids": [
+        "V2_B116"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.39,
+        -0.39,
+        -0.39,
+        -0.39
+      ]
+    },
+    {
+      "number": 268,
+      "id": "R2_CURRENT:V2_B138",
+      "lot_ids": [
+        "V2_B138"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 269,
+      "id": "R2_CURRENT:V2_B143",
+      "lot_ids": [
+        "V2_B143"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.186,
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 270,
+      "id": "R2_CURRENT:V2_B144",
+      "lot_ids": [
+        "V2_B144"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 271,
+      "id": "R2_CURRENT:V2_B145",
+      "lot_ids": [
+        "V2_B145"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 272,
+      "id": "R2_CURRENT:V2_B147",
+      "lot_ids": [
+        "V2_B147"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1199.749,
+        -0.251,
+        -0.251,
+        1199.749
+      ]
+    },
+    {
+      "number": 273,
+      "id": "R2_CURRENT:V2_B148",
+      "lot_ids": [
+        "V2_B148"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        999.749,
+        -0.251,
+        -0.251,
+        1199.749
+      ]
+    },
+    {
+      "number": 274,
+      "id": "R2_CURRENT:V2_B151",
+      "lot_ids": [
+        "V2_B151"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 275,
+      "id": "R2_CURRENT:V2_B152",
+      "lot_ids": [
+        "V2_B152"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.302
+      ]
+    },
+    {
+      "number": 276,
+      "id": "R2_CURRENT:V2_B153",
+      "lot_ids": [
+        "V2_B153"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        799.749,
+        799.749,
+        799.749,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 277,
+      "id": "R2_CURRENT:V2_B154",
+      "lot_ids": [
+        "V2_B154"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 278,
+      "id": "R2_CURRENT:V2_B156",
+      "lot_ids": [
+        "V2_B156"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.037,
+        -0.037,
+        -0.037,
+        -0.037,
+        -0.037
+      ]
+    },
+    {
+      "number": 279,
+      "id": "R2_CURRENT:V2_B157",
+      "lot_ids": [
+        "V2_B157"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.037,
+        1199.963,
+        1199.963,
+        -0.037
+      ]
+    },
+    {
+      "number": 280,
+      "id": "R2_CURRENT:V2_B158",
+      "lot_ids": [
+        "V2_B158"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.037,
+        -0.037,
+        -0.037,
+        -0.037,
+        -0.037,
+        -0.037
+      ]
+    },
+    {
+      "number": 281,
+      "id": "R2_CURRENT:V2_B163",
+      "lot_ids": [
+        "V2_B163"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 282,
+      "id": "R2_CURRENT:V2_B164",
+      "lot_ids": [
+        "V2_B164"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        1199.825,
+        1199.825
+      ]
+    },
+    {
+      "number": 283,
+      "id": "R2_CURRENT:V2_B165",
+      "lot_ids": [
+        "V2_B165"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        1199.843,
+        1199.825
+      ]
+    },
+    {
+      "number": 284,
+      "id": "R2_CURRENT:V2_B166",
+      "lot_ids": [
+        "V2_B166"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 285,
+      "id": "R2_CURRENT:V2_B167",
+      "lot_ids": [
+        "V2_B167"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 286,
+      "id": "R2_CURRENT:V2_B168",
+      "lot_ids": [
+        "V2_B168"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 287,
+      "id": "R2_CURRENT:V2_B169",
+      "lot_ids": [
+        "V2_B169"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 288,
+      "id": "R2_CURRENT:V2_B170",
+      "lot_ids": [
+        "V2_B170"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        1199.825,
+        1199.825,
+        1199.825,
+        1199.825,
+        -0.175
+      ]
+    },
+    {
+      "number": 289,
+      "id": "R2_CURRENT:V2_B175",
+      "lot_ids": [
+        "V2_B175"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.494,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 290,
+      "id": "R2_CURRENT:V2_B176",
+      "lot_ids": [
+        "V2_B176"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        1200.385,
+        1200.385,
+        1200.385,
+        1200.385,
+        0.385
+      ]
+    },
+    {
+      "number": 291,
+      "id": "R2_CURRENT:V2_B177",
+      "lot_ids": [
+        "V2_B177"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 292,
+      "id": "R2_CURRENT:V2_B178",
+      "lot_ids": [
+        "V2_B178"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 293,
+      "id": "R2_CURRENT:V2_B183",
+      "lot_ids": [
+        "V2_B183"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 294,
+      "id": "R2_CURRENT:V2_B184",
+      "lot_ids": [
+        "V2_B184"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 295,
+      "id": "R2_CURRENT:V2_B185",
+      "lot_ids": [
+        "V2_B185"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 296,
+      "id": "R2_CURRENT:V2_B186",
+      "lot_ids": [
+        "V2_B186"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 297,
+      "id": "R2_CURRENT:V2_B187",
+      "lot_ids": [
+        "V2_B187"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        799.825,
+        799.825,
+        799.825,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 298,
+      "id": "R2_CURRENT:V2_B188",
+      "lot_ids": [
+        "V2_B188"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 299,
+      "id": "R2_CURRENT:V2_B189",
+      "lot_ids": [
+        "V2_B189"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 300,
+      "id": "R2_CURRENT:V2_B190",
+      "lot_ids": [
+        "V2_B190"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.471,
+        -0.175
+      ]
+    },
+    {
+      "number": 301,
+      "id": "R2_CURRENT:V2_B191",
+      "lot_ids": [
+        "V2_B191"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 302,
+      "id": "R2_CURRENT:V2_B192",
+      "lot_ids": [
+        "V2_B192"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 303,
+      "id": "R2_CURRENT:V2_B193",
+      "lot_ids": [
+        "V2_B193"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.385,
+        1200.385,
+        1200.385,
+        1200.385,
+        1200.385,
+        0.385
+      ]
+    },
+    {
+      "number": 304,
+      "id": "R2_CURRENT:V2_B194",
+      "lot_ids": [
+        "V2_B194"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -1.353,
+        0.385,
+        0.385,
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "number": 305,
+      "id": "R2_CURRENT:V2_B195",
+      "lot_ids": [
+        "V2_B195"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.189,
+        -0.175
+      ]
+    },
+    {
+      "number": 306,
+      "id": "R2_CURRENT:V2_B196",
+      "lot_ids": [
+        "V2_B196"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 307,
+      "id": "R2_CURRENT:V2_B197",
+      "lot_ids": [
+        "V2_B197"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 308,
+      "id": "R2_CURRENT:V2_B198",
+      "lot_ids": [
+        "V2_B198"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        1199.825,
+        1199.825
+      ]
+    },
+    {
+      "number": 309,
+      "id": "R2_CURRENT:V2_B199",
+      "lot_ids": [
+        "V2_B199"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.199,
+        0.092,
+        1200.189,
+        1200.092
+      ]
+    },
+    {
+      "number": 310,
+      "id": "R2_CURRENT:V2_B200",
+      "lot_ids": [
+        "V2_B200"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 311,
+      "id": "R2_CURRENT:V2_B201",
+      "lot_ids": [
+        "V2_B201"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.132,
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 312,
+      "id": "R2_CURRENT:V2_B202",
+      "lot_ids": [
+        "V2_B202"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 313,
+      "id": "R2_CURRENT:V2_B203",
+      "lot_ids": [
+        "V2_B203"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        -0.071,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 314,
+      "id": "R2_CURRENT:V2_B204",
+      "lot_ids": [
+        "V2_B204"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        800.092,
+        800.092,
+        800.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 315,
+      "id": "R2_CURRENT:V2_B205",
+      "lot_ids": [
+        "V2_B205"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 316,
+      "id": "R2_CURRENT:V2_B206",
+      "lot_ids": [
+        "V2_B206"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.038,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 317,
+      "id": "R2_CURRENT:V2_B207",
+      "lot_ids": [
+        "V2_B207"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.052,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 318,
+      "id": "R2_CURRENT:V2_B208",
+      "lot_ids": [
+        "V2_B208"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        1200.0,
+        1200.0
+      ]
+    },
+    {
+      "number": 319,
+      "id": "R2_CURRENT:V2_B210",
+      "lot_ids": [
+        "V2_B210"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        0.0
+      ]
+    },
+    {
+      "number": 320,
+      "id": "R2_CURRENT:V2_B219",
+      "lot_ids": [
+        "V2_B219"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 321,
+      "id": "R2_CURRENT:V2_B220",
+      "lot_ids": [
+        "V2_B220"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 322,
+      "id": "R2_CURRENT:V2_B221",
+      "lot_ids": [
+        "V2_B221"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        800.0,
+        800.0,
+        800.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 323,
+      "id": "R2_CURRENT:V2_B222",
+      "lot_ids": [
+        "V2_B222"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 324,
+      "id": "R2_CURRENT:V2_B223",
+      "lot_ids": [
+        "V2_B223"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 325,
+      "id": "R2_CURRENT:V2_B224",
+      "lot_ids": [
+        "V2_B224"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 326,
+      "id": "R2_CURRENT:V2_B225",
+      "lot_ids": [
+        "V2_B225"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        1199.676,
+        1199.676
+      ]
+    },
+    {
+      "number": 327,
+      "id": "R2_CURRENT:V2_B226",
+      "lot_ids": [
+        "V2_B226"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 328,
+      "id": "R2_CURRENT:V2_B228",
+      "lot_ids": [
+        "V2_B228"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.067,
+        0.067,
+        0.067,
+        0.067,
+        0.067,
+        0.067
+      ]
+    },
+    {
+      "number": 329,
+      "id": "R2_CURRENT:V2_B229",
+      "lot_ids": [
+        "V2_B229"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.067,
+        0.067,
+        0.067,
+        0.067
+      ]
+    },
+    {
+      "number": 330,
+      "id": "R2_CURRENT:V2_B235",
+      "lot_ids": [
+        "V2_B235"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 331,
+      "id": "R2_CURRENT:V2_B246",
+      "lot_ids": [
+        "V2_B246"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 332,
+      "id": "R2_CURRENT:V2_B247",
+      "lot_ids": [
+        "V2_B247"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 333,
+      "id": "R2_CURRENT:V2_B248",
+      "lot_ids": [
+        "V2_B248"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 334,
+      "id": "R2_CURRENT:V2_B249",
+      "lot_ids": [
+        "V2_B249"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1200.0,
+        0.0,
+        0.0,
+        1200.0
+      ]
+    },
+    {
+      "number": 335,
+      "id": "R2_CURRENT:V2_B250",
+      "lot_ids": [
+        "V2_B250"
+      ],
+      "status": "OVER_15CM_CANDIDATE",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        1199.909,
+        0.0,
+        0.0,
+        1200.0
+      ]
+    },
+    {
+      "number": 336,
+      "id": "R2_CURRENT:V2_B251",
+      "lot_ids": [
+        "V2_B251"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 337,
+      "id": "R2_CURRENT:V2_B252",
+      "lot_ids": [
+        "V2_B252"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 338,
+      "id": "R2_CURRENT:V2_B253",
+      "lot_ids": [
+        "V2_B253"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 339,
+      "id": "R2_CURRENT:V2_B254",
+      "lot_ids": [
+        "V2_B254"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 340,
+      "id": "R2_CURRENT:V2_B256",
+      "lot_ids": [
+        "V2_B256"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 341,
+      "id": "R2_CURRENT:V2_B257",
+      "lot_ids": [
+        "V2_B257"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 342,
+      "id": "R2_CURRENT:V2_B258",
+      "lot_ids": [
+        "V2_B258"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 343,
+      "id": "R2_CURRENT:V2_B264",
+      "lot_ids": [
+        "V2_B264"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 344,
+      "id": "R2_CURRENT:V2_B265",
+      "lot_ids": [
+        "V2_B265"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 345,
+      "id": "R2_CURRENT:V2_B266",
+      "lot_ids": [
+        "V2_B266"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 346,
+      "id": "R2_CURRENT:V2_B268",
+      "lot_ids": [
+        "V2_B268"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 347,
+      "id": "R2_CURRENT:V2_B269",
+      "lot_ids": [
+        "V2_B269"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 348,
+      "id": "R2_CURRENT:V2_B276",
+      "lot_ids": [
+        "V2_B276"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 349,
+      "id": "R2_CURRENT:V2_B277",
+      "lot_ids": [
+        "V2_B277"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 350,
+      "id": "R2_CURRENT:V2_B278",
+      "lot_ids": [
+        "V2_B278"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 351,
+      "id": "R2_CURRENT:V2_B280",
+      "lot_ids": [
+        "V2_B280"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 352,
+      "id": "R2_CURRENT:V2_B283",
+      "lot_ids": [
+        "V2_B283"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 353,
+      "id": "R2_CURRENT:V2_B284",
+      "lot_ids": [
+        "V2_B284"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 354,
+      "id": "R2_CURRENT:V2_B285",
+      "lot_ids": [
+        "V2_B285"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 355,
+      "id": "R2_CURRENT:V2_B286",
+      "lot_ids": [
+        "V2_B286"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 356,
+      "id": "R2_CURRENT:V2_B287",
+      "lot_ids": [
+        "V2_B287"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 357,
+      "id": "R2_CURRENT:V2_B288",
+      "lot_ids": [
+        "V2_B288"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 358,
+      "id": "R2_CURRENT:V2_B289",
+      "lot_ids": [
+        "V2_B289"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 359,
+      "id": "R2_CURRENT:V2_B291",
+      "lot_ids": [
+        "V2_B291"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 360,
+      "id": "R2_CURRENT:V2_B293",
+      "lot_ids": [
+        "V2_B293"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 361,
+      "id": "R2_CURRENT:V2_B294",
+      "lot_ids": [
+        "V2_B294"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 362,
+      "id": "R2_CURRENT:V2_B296",
+      "lot_ids": [
+        "V2_B296"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 363,
+      "id": "R2_CURRENT:V2_B297",
+      "lot_ids": [
+        "V2_B297"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 364,
+      "id": "R2_CURRENT:V2_B298",
+      "lot_ids": [
+        "V2_B298"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 365,
+      "id": "R2_CURRENT:V2_B299",
+      "lot_ids": [
+        "V2_B299"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 366,
+      "id": "R2_CURRENT:V2_B300",
+      "lot_ids": [
+        "V2_B300"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 367,
+      "id": "R2_CURRENT:V2_B301",
+      "lot_ids": [
+        "V2_B301"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 368,
+      "id": "R2_CURRENT:V2_B302",
+      "lot_ids": [
+        "V2_B302"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 369,
+      "id": "R2_CURRENT:V2_B325",
+      "lot_ids": [
+        "V2_B325"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 370,
+      "id": "R2_CURRENT:V2_B326",
+      "lot_ids": [
+        "V2_B326"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 371,
+      "id": "R2_CURRENT:V2_B330",
+      "lot_ids": [
+        "V2_B330"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "number": 372,
+      "id": "R2_CURRENT:V2_B355",
+      "lot_ids": [
+        "V2_B355"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 373,
+      "id": "R2_CURRENT:V2_B356",
+      "lot_ids": [
+        "V2_B356"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 374,
+      "id": "R2_CURRENT:V2_B422",
+      "lot_ids": [
+        "V2_B422"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 375,
+      "id": "R2_CURRENT:V2_B435",
+      "lot_ids": [
+        "V2_B435"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.261,
+        0.261,
+        0.261,
+        0.261
+      ]
+    },
+    {
+      "number": 376,
+      "id": "R2_CURRENT:V2_B443",
+      "lot_ids": [
+        "V2_B443"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        -0.059,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "number": 377,
+      "id": "R2_CURRENT:V2_B448",
+      "lot_ids": [
+        "V2_B448"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 378,
+      "id": "R2_CURRENT:V2_B449",
+      "lot_ids": [
+        "V2_B449"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 379,
+      "id": "R2_CURRENT:V2_B450",
+      "lot_ids": [
+        "V2_B450"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.409
+      ]
+    },
+    {
+      "number": 380,
+      "id": "R2_CURRENT:V2_B451",
+      "lot_ids": [
+        "V2_B451"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 381,
+      "id": "R2_CURRENT:V2_B453",
+      "lot_ids": [
+        "V2_B453"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 382,
+      "id": "R2_CURRENT:V2_B454",
+      "lot_ids": [
+        "V2_B454"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.473,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 383,
+      "id": "R2_CURRENT:V2_B473",
+      "lot_ids": [
+        "V2_B473"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.092,
+        0.092,
+        0.092,
+        0.092
+      ]
+    },
+    {
+      "number": 384,
+      "id": "R2_CURRENT:V2_B543",
+      "lot_ids": [
+        "V2_B543"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        0.0,
+        0.0,
+        -0.129,
+        0.0
+      ]
+    },
+    {
+      "number": 385,
+      "id": "R2_CURRENT:V2_B569",
+      "lot_ids": [
+        "V2_B569"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.352
+      ]
+    },
+    {
+      "number": 386,
+      "id": "R2_CURRENT:V2_B570",
+      "lot_ids": [
+        "V2_B570"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.251,
+        -0.251,
+        -0.251,
+        -0.251
+      ]
+    },
+    {
+      "number": 387,
+      "id": "R2_CURRENT:V2_B577",
+      "lot_ids": [
+        "V2_B577"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 388,
+      "id": "R2_CURRENT:V2_B578",
+      "lot_ids": [
+        "V2_B578"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.156,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 389,
+      "id": "R2_CURRENT:V2_B579",
+      "lot_ids": [
+        "V2_B579"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 390,
+      "id": "R2_CURRENT:V2_B583",
+      "lot_ids": [
+        "V2_B583"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 391,
+      "id": "R2_CURRENT:V2_B584",
+      "lot_ids": [
+        "V2_B584"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 392,
+      "id": "R2_CURRENT:V2_B585",
+      "lot_ids": [
+        "V2_B585"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.175,
+        -0.175,
+        -0.175,
+        -0.175
+      ]
+    },
+    {
+      "number": 393,
+      "id": "R2_CURRENT:V2_B586",
+      "lot_ids": [
+        "V2_B586"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.271,
+        -0.271,
+        -0.271,
+        -0.162
+      ]
+    },
+    {
+      "number": 394,
+      "id": "R2_CURRENT:V2_B588",
+      "lot_ids": [
+        "V2_B588"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.271,
+        -0.271,
+        -0.107,
+        -0.271
+      ]
+    },
+    {
+      "number": 395,
+      "id": "R2_CURRENT:V2_B595",
+      "lot_ids": [
+        "V2_B595"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 396,
+      "id": "R2_CURRENT:V2_B596",
+      "lot_ids": [
+        "V2_B596"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.313,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 397,
+      "id": "R2_CURRENT:V2_B603",
+      "lot_ids": [
+        "V2_B603"
+      ],
+      "status": "OUTER_HULL_VERTICES_WITHIN_15CM_EXPORTED_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        -0.324,
+        -0.324,
+        -0.324,
+        -0.324
+      ]
+    },
+    {
+      "number": 398,
+      "id": "LANDMARK:HillObservatory",
+      "lot_ids": [
+        "HillObservatory"
+      ],
+      "status": "NOT_RUN_PHYSICAL_CORNER_OR_SUPPORT",
+      "final_candidate_status": "NOT_RUN_FINAL_GEOMETRY_BINDING",
+      "measured_gaps_cm": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "source_hashes": {
+    "census_sha256": "1109ebd43c83890ee7ece6304b07969f9f192cf164e0ce453003e8bdd5880d99",
+    "render_receipt_sha256": "3d62690a37bf7e06b1e3c34fe576f9c7f4d373d46e6762ab7b1590530e471e41"
+  },
+  "placement_binding": {
+    "map_hash": "c2560866f5a66becf49bd6d4b0a2459c196c97d919104b1541c406c12e0a0f6e",
+    "map_source_bound": true,
+    "post_export_changes": [
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_eea22ba1600ae4ba_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_eea22ba1600ae4ba_S.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_ba64f6880fcb16a6_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_8cdecbbffe5680cd_S.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_703f234b3ed2a9b2_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_28ccd471df63b52f_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_8cdecbbffe5680cd_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_95561716905e8b9d_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_53fdaf15a284ce57_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_c0644a82b875e2f1_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_51ee0ed3db4ac0e3_I0.uasset",
+      "SpatialCamera/R3_ObjectFadeClean_01/M_R3O_703f234b3ed2a9b2_S.uasset"
+    ],
+    "all_capital_inventory_mismatches": [],
+    "package_content_inventory_sha256": "636E8C983763FFFEA2B5733BD32A27E2F2683761A1C9A2996CBEAA0C76F2BA7D",
+    "status": "PLACEMENT_MAP_HASH_BOUND_MESH_EXPORT_NOT_FRESHLY_REPEATED"
+  },
+  "excluded_scope": [
+    "B141 incomplete lot",
+    "Outside-wall City records, village buildings and Castle assemblies are not part of398 census; no full-map ground acceptance."
+  ],
+  "prior_attempts_retained": [
+    "ground07_01_console.log: AABB including upper floors",
+    "ground07_02_console.log: bottom AABB empty corners",
+    "ground07_03_console.log: actual physical outer hull vertices"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "REVIEWED_WITH_DEFECTS",
+  "reviewed": "2026-10-14T23:19:48.2165306+08:00",
+  "image": "contact_sheet.jpg",
+  "sample_count": 12,
+  "scope": "One bounded contact sheet; pixel and native full-frame audits remain pending",
+  "observations": [
+    "Visible warm furnishings and lit fireplaces in several rooms",
+    "Close doors/walls, bright patches and dark cellar/doorway areas persist",
+    "At134.48s, source-bound segment is V2_B214: view opens toward street. This alone does not distinguish missing structure from camera fade. Earlier B141 visual label was incorrect and withdrawn; B141 census incompleteness is separate evidence.",
+    "Right-side HUD is normal NavigationText and QuestText; earlier diagnostic-overlay suspicion withdrawn after HCM1HUD.cpp verification"
+  ],
+  "acceptance": "FAIL_PENDING_SCRIPT_METRICS",
+  "correction": "Original overlay suspicion was a tool/model interpretation error, not a game defect. No visual edit applied."
+}

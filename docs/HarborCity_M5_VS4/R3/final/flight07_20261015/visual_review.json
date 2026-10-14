@@ -1,0 +1,11 @@
+{
+  "status": "REVIEWED_WITH_KNOWN_FAILURES",
+  "master_sha256": "f09479e875475c52c490a01abad8d087efec0a9f7bffdcab7485567e8edbb7e2",
+  "reviewed": [
+    "contact_sheet.jpg"
+  ],
+  "method": "One 1600px 12-tile contact sheet; no repeated full-size source browsing",
+  "findings": "12格抽帧覆盖四次实际飞行；可见密集屋顶、港口、城堡边缘和西郊。远景草地接海仍生硬，近屋顶占比高。是四段拼接，不能证明一次连续飞遍全部区域。",
+  "full_listening": "NOT_RUN",
+  "scope": "Visual sampling only; native/depth/all-frame pixel checks reported separately. Normal task/navigation HUD is not editor debug text."
+}

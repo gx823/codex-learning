@@ -1,0 +1,14 @@
+{
+  "status": "REVIEWED_USER_ART_APPROVAL_PENDING",
+  "sheets": [
+    "review_01.jpg",
+    "review_02.jpg"
+  ],
+  "source_images_per_sheet": 8,
+  "observations": [
+    "Eight distinct theme references reviewed, not same-camera measurements",
+    "Author canal reference is itself bright/white; no artificial correction applied",
+    "R3 throne floor bright patch remains; green detail at left pillar needs source/geometry review",
+    "R3 street still much emptier than author reference; no author night duplicate counted"
+  ]
+}

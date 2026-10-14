@@ -1,0 +1,11 @@
+{
+  "status": "REVIEWED_WITH_KNOWN_FAILURES",
+  "master_sha256": "3e2d330f94ca372240c526388ad7ad6d910b631887d935e75afd5fdb672bd915",
+  "reviewed": [
+    "contact_sheet.jpg"
+  ],
+  "method": "One 1600px 12-tile contact sheet; no repeated full-size source browsing",
+  "findings": "12格抽帧可见街面、村落风车、亮着的室内、飞行、夜景、王座厅、战斗及公会对话；仍有近墙/灯柱遮挡、过亮地板与暗部。抽帧未见明显衣物穿帮，不等于全片人工逐帧认证。",
+  "full_listening": "NOT_RUN",
+  "scope": "Visual sampling only; native/depth/all-frame pixel checks reported separately. Normal task/navigation HUD is not editor debug text."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "REVIEWED_WITH_KNOWN_FAILURES",
+  "master_sha256": "b9c6aa6b388dc78dad88f37134017c8afbb0a10e02c84df3a4ebb06b10f64a7d",
+  "reviewed": [
+    "contact_sheet.jpg"
+  ],
+  "method": "One 1600px 12-tile contact sheet; no repeated full-size source browsing",
+  "findings": "12格抽帧可见三条巷道、公会进出/转身、市场、运河和驾车；39.40秒附近大片近物遮挡，44.13秒附近阴影偏黑。驾驶片段没有正常上车动作。",
+  "full_listening": "NOT_RUN",
+  "scope": "Visual sampling only; native/depth/all-frame pixel checks reported separately. Normal task/navigation HUD is not editor debug text."
+}

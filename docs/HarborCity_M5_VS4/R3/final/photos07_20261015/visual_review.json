@@ -1,0 +1,68 @@
+{
+  "status": "REVIEWED_LIMITED_SHEETS_NOT_FULL_ART_ACCEPTANCE",
+  "executable_sha256": "422a063a3da6b73a049461b82882796663c99e2dca2a25f5953fd34ad81686cf",
+  "photos": 147,
+  "reviewed_at": "2026-10-15T00:41:48.715414+08:00",
+  "review_limits": "At most2<=1600px9cell sheets per photo batch. Unviewed generated sheets not claimed reviewed.",
+  "batches": [
+    {
+      "batch": "fixed_epic",
+      "sheets": [
+        "final_fixed_views_sheet_02.jpg",
+        "final_fixed_views_sheet_03.jpg"
+      ],
+      "status": "REVIEWED_WITH_DEFECTS",
+      "observations": [
+        "Street1/2 large side walls remain sparse",
+        "V05 near roofs obscure broad view",
+        "Plaza hanging flowerpots have unclear support in these samples; not a confirmed geometry verdict",
+        "City paving and castle greenery visible; daylight shadows and dusk areas remain dark"
+      ]
+    },
+    {
+      "batch": "interiors19",
+      "sheets": [
+        "final_interiors19_sheet_01.jpg",
+        "final_interiors19_sheet_02.jpg"
+      ],
+      "status": "REVIEWED_WITH_DEFECTS",
+      "observations": [
+        "B010/B017 and several residential rooms still sparse",
+        "B027/B140 light and furnishings visible; bright ceiling patches remain",
+        "B214 view opens toward street; structure versus camera fade not established from this frame",
+        "B141 bakery view is not proof its exterior prefab is complete; separate census remains incomplete"
+      ]
+    },
+    {
+      "batch": "landmarks8",
+      "sheets": [
+        "final_landmarks8_sheet_01.jpg"
+      ],
+      "status": "USER_REVIEW",
+      "observations": [
+        "Eight named modular assemblies pictured; several narrow tower silhouettes share language",
+        "Crowded neighboring roofs/clockwork details limit complete facade views"
+      ]
+    },
+    {
+      "batch": "catalog26",
+      "sheets": [
+        "final_catalog26_sheet_01.jpg",
+        "final_catalog26_sheet_03.jpg"
+      ],
+      "status": "FAIL_COMPLETE_SILHOUETTE_PRESENTATION",
+      "observations": [
+        "26 actual source photos collected, but many views are close/cropped roof details",
+        "Cannot use these pictures as proof of complete distinct building silhouettes"
+      ]
+    },
+    {
+      "batch": "fixed_high",
+      "sheets": [],
+      "status": "SCRIPT_BOUND_NOT_VISUALLY_REPEATED",
+      "observations": [
+        "47 images source-bound, duplicate camera set not reopened; High D2 and C6 were independently reviewed earlier"
+      ]
+    }
+  ]
+}

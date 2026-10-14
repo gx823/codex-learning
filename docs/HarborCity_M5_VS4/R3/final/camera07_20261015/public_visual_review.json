@@ -1,0 +1,8 @@
+{
+  "status": "REVIEWED_WITH_KNOWN_FAILURES",
+  "public_sha256": "c70636c0b6f0414eabf838caaaa1040d80e70b1fd452858d90cd7661a1d60b12",
+  "reviewed": [
+    "public_preview/contact_sheet.jpg"
+  ],
+  "findings": "One12-tile sheet compared against previously reviewed master. No new obvious compression corruption in samples. Original scene/camera/brightness limitations retained; no full listening or all-frame human review."
+}

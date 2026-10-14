@@ -1,0 +1,12 @@
+{
+  "status": "REVIEWED_WITH_DEFECTS",
+  "sheet": "public_preview/contact_sheet.jpg",
+  "scope": "Second and last12tile sheet for final interior video; master/public scripts inspect all retained frames.",
+  "observations": [
+    "Same visible lighting/close-wall limitations as master",
+    "No new visible corruption in sampled public compression",
+    "PixelFAIL/nativepartial/FPSFAIL preserved; no art acceptance"
+  ],
+  "public_sha256": "182afcc51b556b3a90dcdd7c91ea4c3b088f7479e3e64480a8c79069310b9ed0",
+  "binding_note": "Hash attached during final aggregation to the same already-reviewed public file; no additional viewing."
+}

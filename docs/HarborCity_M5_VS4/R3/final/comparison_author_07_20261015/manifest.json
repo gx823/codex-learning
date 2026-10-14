@@ -1,0 +1,154 @@
+{
+  "status": "GENERATED_REQUIRES_VISUAL_REVIEW",
+  "executable": "E:\\GameDev\\Builds\\HarborCity\\M5_VS4\\Candidate_20261014_164156_066_fc840e5a\\Archive\\Windows\\HarborCity\\Binaries\\Win64\\HarborCity-Win64-Shipping.exe",
+  "executable_sha256": "422a063a3da6b73a049461b82882796663c99e2dca2a25f5953fd34ad81686cf",
+  "plan_sha256": "62c34a73a816ea18a6857aad39e64bed3c17717d717a8f760c169c5a1f32cb62",
+  "photos_manifest_sha256": "170483e3a7340dba5765f0fdf8ada6309de2b584fafd3bca02f0a848b57323e1",
+  "pairs": [
+    {
+      "id": "REF01_CITY_PLAZA",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_161432_115_A_author_reference_capture05_deferred_exit\\REF01_CITY_PLAZA.png",
+      "left_sha256": "cc753273b1b91a1cb6854d94514798d3b2545691e58be7ce11784dea773bdb13",
+      "right_jpg": "final_fixed_views__R2_GATE_V01_AFTERNOON.jpg",
+      "left_label": "作者演示 · 广场",
+      "right_label": "R3 候选07 · 广场",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_161432_115_A_author_reference_capture05_deferred_exit/author_result.json",
+        "receipt_sha256": "f5929fcbaee55ce8e5aebdd1b78d300a217af1afdf68d04d35eb7daed0ca5890",
+        "source_map": "/Game/Fantastic_City_Pack/maps/map_city_level"
+      },
+      "jpg": "REF01_CITY_PLAZA.jpg",
+      "jpg_sha256": "1f9ec41e7691611f948d53818b6a40da9a2fbf21f0a0e2ec6299b67f645ff22b",
+      "right_sha256": "25d750d09532e699ea2cd93edb4c66088b3ecdb64c06d558b8916fba506ccbb9"
+    },
+    {
+      "id": "REF02_CITY_STREET",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_161432_115_A_author_reference_capture05_deferred_exit\\REF02_CITY_STREET.png",
+      "left_sha256": "6bec36e52a37e0fe9ccc16d957c6f4b9b09603c7a94edc94412db60c42fef9dd",
+      "right_jpg": "final_fixed_views__R2_GATE_STREET_1_AFTERNOON.jpg",
+      "left_label": "作者演示 · 街道",
+      "right_label": "R3 候选07 · 街道",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_161432_115_A_author_reference_capture05_deferred_exit/author_result.json",
+        "receipt_sha256": "f5929fcbaee55ce8e5aebdd1b78d300a217af1afdf68d04d35eb7daed0ca5890",
+        "source_map": "/Game/Fantastic_City_Pack/maps/map_city_level"
+      },
+      "jpg": "REF02_CITY_STREET.jpg",
+      "jpg_sha256": "070d485ee77f9c348ed361f5974ffe6e7d562b84b54bd52aafab1170f384a170",
+      "right_sha256": "f8ff26f6a383c0c10304090754d33b42e9dfda1a9f37b387b5fee60c2fc035b9"
+    },
+    {
+      "id": "REF03_CITY_CANAL_PROBE",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_161432_115_A_author_reference_capture05_deferred_exit\\REF03_CITY_CANAL_PROBE.png",
+      "left_sha256": "96b2dd474273797a9f554a3dc424c77480a86bd52652a222e3fb4fe41304510c",
+      "right_jpg": "final_fixed_views__R2_GATE_V04_AFTERNOON.jpg",
+      "left_label": "作者演示 · 运河",
+      "right_label": "R3 候选07 · 运河",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_161432_115_A_author_reference_capture05_deferred_exit/author_result.json",
+        "receipt_sha256": "f5929fcbaee55ce8e5aebdd1b78d300a217af1afdf68d04d35eb7daed0ca5890",
+        "source_map": "/Game/Fantastic_City_Pack/maps/map_city_level"
+      },
+      "jpg": "REF03_CITY_CANAL_PROBE.jpg",
+      "jpg_sha256": "641a05d9b985fbc618c34532314c8566a22f65c2d5862a706d2206a5b1c7411c",
+      "right_sha256": "3b5814d675f06b9499f71cacf780838b99e626aee69a3b3832cc803e8962fcc9"
+    },
+    {
+      "id": "REF04_CITY_TAVERN_INTERIOR",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_161432_115_A_author_reference_capture05_deferred_exit\\REF04_CITY_TAVERN_INTERIOR.png",
+      "left_sha256": "664d0fe6d56ded01a124d4c30f060ebe9de3188722f5878046c3efec3f84be1b",
+      "right_jpg": "final_interiors19__FX_DETAIL_INTERIOR_B140.jpg",
+      "left_label": "作者演示 · 酒馆",
+      "right_label": "R3 候选07 · 酒馆",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_161432_115_A_author_reference_capture05_deferred_exit/author_result.json",
+        "receipt_sha256": "f5929fcbaee55ce8e5aebdd1b78d300a217af1afdf68d04d35eb7daed0ca5890",
+        "source_map": "/Game/Fantastic_City_Pack/maps/map_city_level"
+      },
+      "jpg": "REF04_CITY_TAVERN_INTERIOR.jpg",
+      "jpg_sha256": "65d4f7843dbe74254f815546fca4c98b7a83f893ca68f4eb2c4051158394bd80",
+      "right_sha256": "0c3a574f3c076a0d79474ed33bd436f20d50f2bf6d1de4d58e606e2981685c65"
+    },
+    {
+      "id": "REF05_CITY_ALCHEMY_INTERIOR",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_161432_115_A_author_reference_capture05_deferred_exit\\REF05_CITY_ALCHEMY_INTERIOR.png",
+      "left_sha256": "a86dce80e0dfdd83a292b607f0ffbfbe478271f17445cb843c86c07a495ea697",
+      "right_jpg": "final_interiors19__FX_DETAIL_INTERIOR_B004.jpg",
+      "left_label": "作者演示 · 炼金铺",
+      "right_label": "R3 候选07 · 炼金铺",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_161432_115_A_author_reference_capture05_deferred_exit/author_result.json",
+        "receipt_sha256": "f5929fcbaee55ce8e5aebdd1b78d300a217af1afdf68d04d35eb7daed0ca5890",
+        "source_map": "/Game/Fantastic_City_Pack/maps/map_city_level"
+      },
+      "jpg": "REF05_CITY_ALCHEMY_INTERIOR.jpg",
+      "jpg_sha256": "7ca488ad4dc57c6808597b67cf1ea093de926d9e57587f27384987b4f29b5610",
+      "right_sha256": "fb66c254f8ae03c17cb71b49c90e43337df904d15e3fa7da453baf92cbf0990f"
+    },
+    {
+      "id": "REF06_CASTLE_AUTHOR_CAMERA",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_161432_115_A_author_reference_capture05_deferred_exit\\REF06_CASTLE_AUTHOR_CAMERA.png",
+      "left_sha256": "22395aa354a06a617ea07899e5243572505d556c8efdb62e63d58b6a3f53fa66",
+      "right_jpg": "final_fixed_views__R2_GATE_V06_AFTERNOON.jpg",
+      "left_label": "作者演示 · 城堡",
+      "right_label": "R3 候选07 · 城堡",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_161432_115_A_author_reference_capture05_deferred_exit/author_result.json",
+        "receipt_sha256": "f5929fcbaee55ce8e5aebdd1b78d300a217af1afdf68d04d35eb7daed0ca5890",
+        "source_map": "/Game/Fantastic_Highlands_Castle/maps/map_highlands_castle_level"
+      },
+      "jpg": "REF06_CASTLE_AUTHOR_CAMERA.jpg",
+      "jpg_sha256": "c5261d0178deaebda6aaa953b79a71e2d41469d48d00fe831bc53d9d8258e742",
+      "right_sha256": "2a0653192c7891725cef40fe91555068bfd633cb2547afc92657b4d69623651d"
+    },
+    {
+      "id": "REF07_CITY_DISTANT_LANDSCAPE",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_161432_115_A_author_reference_capture05_deferred_exit\\REF07_CITY_DISTANT_LANDSCAPE.png",
+      "left_sha256": "76cb3e2cb757de787de88a0df4abeb83f36f3ca7a57f8ccf67c67088750613fa",
+      "right_jpg": "final_fixed_views__R2_GATE_V12_AFTERNOON.jpg",
+      "left_label": "作者演示 · 远景",
+      "right_label": "R3 候选07 · 远景",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_161432_115_A_author_reference_capture05_deferred_exit/author_result.json",
+        "receipt_sha256": "f5929fcbaee55ce8e5aebdd1b78d300a217af1afdf68d04d35eb7daed0ca5890",
+        "source_map": "/Game/Fantastic_City_Pack/maps/map_city_level"
+      },
+      "jpg": "REF07_CITY_DISTANT_LANDSCAPE.jpg",
+      "jpg_sha256": "6409872ef3cb63448308af022e84501bb56095f511d3bf12fa35297f18365b0b",
+      "right_sha256": "842d45b4c8528946aa2306fb21ad8edf6928737af8b1c60a9ccb719b1d913a7e"
+    },
+    {
+      "id": "REF12_CASTLE_THRONE_V2",
+      "kind": "AUTHOR_THEME_REFERENCE",
+      "left": "D:\\科研学习\\codex学习\\docs\\HarborCity_M5_VS4\\R3\\editor\\20261006_193126_717_A_author_supplement_reframe03\\REF12_CASTLE_THRONE_V2.png",
+      "left_sha256": "fe2a51e18136bc24a99f629172871c9ab1202bc9d762cdea6dfc78f8dd99816b",
+      "right_jpg": "final_interiors19__FX_DETAIL_INTERIOR_THRONE.jpg",
+      "left_label": "作者演示 · 王座厅",
+      "right_label": "R3 候选07 · 王座厅",
+      "scope": "主题对照，场景与机位不同；不作同机位量化比较。作者夜景无独立参考图。",
+      "evidence": {
+        "receipt": "editor/20261006_193126_717_A_author_supplement_reframe03/author_result.json",
+        "receipt_sha256": "4e00c3498851b202df5e9bc9f5c033415a07b0e5f0a4c9cbedb1409db26e77e1",
+        "source_map": "/Game/Fantastic_Highlands_Castle/maps/map_highlands_castle_level"
+      },
+      "jpg": "REF12_CASTLE_THRONE_V2.jpg",
+      "jpg_sha256": "21ba9914bef4993f990ed87aa9d12f0af1597a6cb5e052ada53bdf6c0067af65",
+      "right_sha256": "721732c54077c39a7694b3628a9144c6bb233f4651670a6698d9dd1a255f71fc"
+    }
+  ],
+  "scope": "Rendered screenshots only; proportional resize, no brightness/color corrections. Comparison limitations retained per pair."
+}

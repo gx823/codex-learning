@@ -1,0 +1,33 @@
+{
+  "status": "PASS_CHART_RENDER_REVIEW_ONLY",
+  "sources": {
+    "OVERLAP_AUDIT_FINAL_SUMMARY.json": "bb0fc0cb6dceae4eb970d67e32cd017d7a9eca4716548270aacd8c1ecdb8da0f",
+    "ASSET_COUNTS_CURRENT.json": "79a500698e95bcbf5762d34deec00f62bbbdf611ae7c4b838716f92a3475282f",
+    "ASSET_COUNTS_R2_RECORD.json": "a4865e2f6aee407057520e5fe58eab3c8ec6c45816501fadb7bc4e0bd9bf615f"
+  },
+  "scope": "Aggregate counts only; R2 placement source counts recovered from BUILDING_PLACEMENT_11.json. R2 and R3 denominators/methods differ; no density inference or new exemptions.",
+  "files": [
+    {
+      "name": "CHART_REVIEW.jpg",
+      "bytes": 131649,
+      "sha256": "90e992e89e5f4c7d0003735bca78c0ea7a1ca39726399452d1f5676e65c9c822"
+    },
+    {
+      "name": "OVERLAP_COUNTS.jpg",
+      "bytes": 215208,
+      "sha256": "6bee923bae56d6c78c460aea780d32ba045bc325e08ac72073d6eddb0ea73ae7"
+    },
+    {
+      "name": "PREFAB_DISTRIBUTION.jpg",
+      "bytes": 169523,
+      "sha256": "f89cd192b9bdced2b4e7661ea515e514178f5c447cf6dc244d4140abe4ea27e4"
+    }
+  ],
+  "visual_review": {
+    "images": [
+      "PREFAB_DISTRIBUTION.jpg"
+    ],
+    "review": "One 1560px two-panel chart reviewed; all26 labels/values and different denominators/scales visible. No clipping. Overlap chart byte-identical to previously reviewed original. Not game art acceptance.",
+    "inherited_overlap_review": "final/summary_images/manifest.json"
+  }
+}
