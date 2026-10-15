@@ -1,14 +1,14 @@
-# R3 已交付审阅候选，验收未通过 · 2026-10-15
-GitHub文档与Release已核验；游戏/编辑器已关闭，停止桌面操作并交还试玩。美术与星弓观感PENDING。
-1 存档/往返回归PASS：07主线120/0，新城12/0、旧港18/0；NPC点位与校验未改。
-2 室内2/2次：去12侵入、加52家具/信件+5火焰、去22重复画；每段具名存读45/45；床/地图/B141壳等仍缺。
-3 街面2/2次：Arch01+1，L05/Arch02各缺1；市场/港口墙仍稀，摊位未成排。
-4 B2候选108053→105122、未决298010→294765；无新增已接受豁免。B6覆盖1187/1211。
-5 实际游戏C6仍FAIL/未决；旧汇总B4误判已修，原回执保留。
-6 接送65cm 20/0；枪FAIL、治疗覆盖PASS；C1四FAIL；C-OS NOT_RUN。
-7 最终07完整319/2FAIL；同次系统31/31、音效27/27；历史FLAKY保留。
-7 N五点帧率通过，Epic启动7557MiB超限；D2 13/76PASS；城堡导航断路，30分钟未开始。
-8 四片336/215/69/63秒完成，FPS20.06/13.61/24.09/16.67全未达标；音频达标；147截图、8+8对比完成。
-9 文档、64.3MB审阅ZIP、四公开视频及校验清单已发布；远端6份大小和SHA-256全一致。
-本地包、完整SHA和影片位置见DELIVERY.md；审阅页final/README.md；具体缺口见TEST_REPORT和appendix/ACCEPTANCE_FINAL.md。
-审阅内容提交ff74711；Release：https://github.com/gx823/codex-learning/releases/tag/harborcity-m5-vs4-r3-final-20261015-fc840e5a 。ZIP是上传前快照，最新发布回执见appendix/PUBLICATION.json。
+﻿# R3 镜头/输入修补 · 2026-10-15 · 未全通过，候选可试玩
+EXE：E:/GameDev/Builds/HarborCity/M5_VS4/Candidate_20261015_132233_171_53c25695/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe（Shipping，53c25695）。
+跟手PASS：改前授权旧代码测量副本f3c0526d最大误差High179.858°/Epic179.795°；改后两档0°，起转1帧。原版fc840e5a未改；1帧响应不代表毫秒延迟达标。
+High帧时间FAIL（以下均广场/港口/公会，ms）：平均181.02/21.13/102.29→94.40/22.68/173.97；p99 643.65/127.56/387.11→607.13/224.73/792.20，仍有>50ms长帧。
+High游戏线程：平均12.78/8.28/11.55→6.12/4.03/8.04；p99 32.69/13.21/24.78→16.59/9.34/42.44。
+Epic帧时间：平均157.96/22.94/171.43→157.55/26.45/223.58；p99 910.04/134.45/679.08→890.68/179.73/972.73，不能声称流畅。
+Epic游戏线程：平均12.24/9.23/13.87→8.58/5.38/7.67；p99 44.11/13.44/31.04→25.96/10.30/27.96。
+测量：i7-14650HX/16GB/RTX4060Laptop8GB，UE5.8.2；独立包1080p100%、High60/Epic不限帧、VSync关，三处各20秒真实时钟；不录像/不深度读回。
+C6未清零：两档原生镜头路线各70项PASS；渲染几何Cafe软窗帘各1帧距面约8cm FAIL，开放/WPO/Nanite覆盖BLOCKED；沿用软物只淡化规则。
+两档主线四章/F5F9、双向地图往返、接送、星弓20m及A6均PASS；P菜单0.5–2倍/反转Y/写盘PASS，2560×1440/150%/1707×960焦点60/30/10/60 PASS。
+本地对比片：D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R3/recordings/HarborCity_R3_Camera_BeforeAfter_20261015_53c25695.mp4（30秒/30fps/无音轨，原版→新包）；视频不进git。
+进度图：progress/camera_fix_20261015_menu.jpg；progress/camera_fix_20261015_compare.jpg。
+地图/资产6482项哈希一致；用户原设置只读校验一致；桌面操作结束，UE/录屏已退出。
+旧FAIL/FLAKY保留TEST_REPORT；详见appendix/camera_fix_20261015/CAMERA_FIX_EVIDENCE.md；长帧与C6剩余问题未解决，不预填整体PASS。
