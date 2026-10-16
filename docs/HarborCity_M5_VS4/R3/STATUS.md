@@ -1,4 +1,4 @@
-# R3 修补轮 · 第4项两批已保存并通过存读档 · 2026-10-16
+# R3 修补轮 · 第4项三段已保存并通过存读档 · 2026-10-16
 修补预览EXE：E:/GameDev/Builds/HarborCity/M5_VS4/Candidate_20261016_130303_836_polishshipping/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe
 第1项仍未完成：Epic偶发启动GPU崩溃；ddagrab20秒/30帧近似重复13.38%（要求≤5%）；8前回修。
 High/60 四处平均16.69/16.67/16.67/16.67ms；p99 19.63/19.49/19.59/19.37ms；>50ms均0，快甩无>50ms。
@@ -8,7 +8,7 @@ Epic有效样本平均17.64/16.17/16.39/18.20ms；p99 22.44/19.91/20.83/22.82ms�
 广场/小巷/室内同机位对比通过；FOV未改，星弓肩位参数未改；人物明显放大，室内画面下缘裁到小腿。
 镜头输入/穿墙路线、星弓20m/A6、主线四章/F5F9、地图双向往返实际PASS；退出窗口守卫异常旧记录保留。
 第2项未改地图；上一地图批具名NPC/任务点实际存读档45/45通过。
-图：progress/2026-10-16/polish04_vegetation_partial.jpg；道具polish04_props_partial.jpg；镜头polish02_camera_distance.jpg。
+图：progress/2026-10-16/polish04_planters_partial.jpg；同目录还有props/vegetation_partial及镜头对比。
 第1项已定位局部灯VSM及显存压力；128私有Nanite副本/57,840实例与36处投影调整，Lumen/VSM/100%比例保留。
-第4项已存：140组/241道具移动，另70树灌木移动/缩小、247删除；两批分别处理261/2240对旧穿插，重载/393锚点/NPC存读档通过；仍有3对车内旧问题和其他类别待修。
+第4项已存：241道具+70树灌木+21组合花盆组件移动，247灌木/树删除；各批重载/393锚点/NPC存读档通过。仍有车内旧穿插及两株进入王座厅的灌木待修。
 1/3/4—8仍未完成；预览EXE未含第4项。主线曾焦点超时后重跑，汇总FLAKY保留；恢复与失败见WORK_CHECKPOINT和各RECEIPT。
