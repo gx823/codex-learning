@@ -1,14 +1,14 @@
-﻿# R3 镜头/输入修补 · 2026-10-15 · 未全通过，候选可试玩
-EXE：E:/GameDev/Builds/HarborCity/M5_VS4/Candidate_20261015_132233_171_53c25695/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe（Shipping，53c25695）。
-跟手PASS：改前授权旧代码测量副本f3c0526d最大误差High179.858°/Epic179.795°；改后两档0°，起转1帧。原版fc840e5a未改；1帧响应不代表毫秒延迟达标。
-High帧时间FAIL（以下均广场/港口/公会，ms）：平均181.02/21.13/102.29→94.40/22.68/173.97；p99 643.65/127.56/387.11→607.13/224.73/792.20，仍有>50ms长帧。
-High游戏线程：平均12.78/8.28/11.55→6.12/4.03/8.04；p99 32.69/13.21/24.78→16.59/9.34/42.44。
-Epic帧时间：平均157.96/22.94/171.43→157.55/26.45/223.58；p99 910.04/134.45/679.08→890.68/179.73/972.73，不能声称流畅。
-Epic游戏线程：平均12.24/9.23/13.87→8.58/5.38/7.67；p99 44.11/13.44/31.04→25.96/10.30/27.96。
-测量：i7-14650HX/16GB/RTX4060Laptop8GB，UE5.8.2；独立包1080p100%、High60/Epic不限帧、VSync关，三处各20秒真实时钟；不录像/不深度读回。
-C6未清零：两档原生镜头路线各70项PASS；渲染几何Cafe软窗帘各1帧距面约8cm FAIL，开放/WPO/Nanite覆盖BLOCKED；沿用软物只淡化规则。
-两档主线四章/F5F9、双向地图往返、接送、星弓20m及A6均PASS；P菜单0.5–2倍/反转Y/写盘PASS，2560×1440/150%/1707×960焦点60/30/10/60 PASS。
-本地对比片：D:/科研学习/codex学习/docs/HarborCity_M5_VS4/R3/recordings/HarborCity_R3_Camera_BeforeAfter_20261015_53c25695.mp4（30秒/30fps/无音轨，原版→新包）；视频不进git。
-进度图：progress/camera_fix_20261015_menu.jpg；progress/camera_fix_20261015_compare.jpg。
-地图/资产6482项哈希一致；用户原设置只读校验一致；桌面操作结束，UE/录屏已退出。
-旧FAIL/FLAKY保留TEST_REPORT；详见appendix/camera_fix_20261015/CAMERA_FIX_EVIDENCE.md；长帧与C6剩余问题未解决，不预填整体PASS。
+# R3 修补轮 · 1仍有Epic启动/录像FAIL，按4小时回退进入2 · 2026-10-16
+修补预览EXE：E:/GameDev/Builds/HarborCity/M5_VS4/Candidate_20261016_122639_225_polishshipping/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe
+第1项未完成：最新包Epic启动再次GPU崩溃；ddagrab20秒/30帧近似重复13.38%（≤5%）；8前必须修。
+High/60 四处平均 16.69/16.67/16.67/16.67 ms；p99 19.63/19.49/19.59/19.37 ms；>50ms均0。
+Epic 四处平均 17.64/16.17/16.39/18.20 ms；p99 22.44/19.91/20.83/22.82 ms；>50ms均0。
+以上为有效样本数字：快甩180°四处均无>50ms；Epic虽有两次PASS，最新编译包启动仍FAIL，未验收。
+广场基线64.36ms/p99746.57ms；五版二分首次退化d672f37c；只关局部投影即可恢复约16.67ms。
+128个私有Nanite副本覆盖57,840实例，36处局部投影调整；Lumen/VSM/100%渲染比例保留。
+DXGI基线LOCAL峰值8.117GiB/预算7.020GiB；修补后High约4GiB；共享段有约0.26GiB占用，不据此冒称分页已实测。
+具名NPC/任务实际存读档45/45；主线四章/F5F9、地图往返、星弓、接送、镜头输入均PASS。
+Epic启动崩溃及录像FAIL全部保留；硬件光栅/启动配置尚未形成稳定修复；Insights按用户选择NOT_RUN。
+图：progress/2026-10-16/polish01_turning_video_pending.jpg；录像与完整数字留本地appendix/polish_20261015。
+接着做2镜头距离，再3城堡灯、4穿模、5魔导车、6道路/探索、7空屋；8最终包与性能/录像复验。
+恢复：WORK_CHECKPOINT.json；私有saved_plan及保存前备份保留；素材原件与用户设置未改。
