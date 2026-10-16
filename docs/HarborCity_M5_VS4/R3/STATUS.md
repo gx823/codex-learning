@@ -1,14 +1,14 @@
-# R3 修补轮 · 1仍有Epic启动/录像FAIL，按4小时回退进入2 · 2026-10-16
-修补预览EXE：E:/GameDev/Builds/HarborCity/M5_VS4/Candidate_20261016_122639_225_polishshipping/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe
-第1项未完成：最新包Epic启动再次GPU崩溃；ddagrab20秒/30帧近似重复13.38%（≤5%）；8前必须修。
-High/60 四处平均 16.69/16.67/16.67/16.67 ms；p99 19.63/19.49/19.59/19.37 ms；>50ms均0。
-Epic 四处平均 17.64/16.17/16.39/18.20 ms；p99 22.44/19.91/20.83/22.82 ms；>50ms均0。
-以上为有效样本数字：快甩180°四处均无>50ms；Epic虽有两次PASS，最新编译包启动仍FAIL，未验收。
-广场基线64.36ms/p99746.57ms；五版二分首次退化d672f37c；只关局部投影即可恢复约16.67ms。
-128个私有Nanite副本覆盖57,840实例，36处局部投影调整；Lumen/VSM/100%渲染比例保留。
-DXGI基线LOCAL峰值8.117GiB/预算7.020GiB；修补后High约4GiB；共享段有约0.26GiB占用，不据此冒称分页已实测。
-具名NPC/任务实际存读档45/45；主线四章/F5F9、地图往返、星弓、接送、镜头输入均PASS。
-Epic启动崩溃及录像FAIL全部保留；硬件光栅/启动配置尚未形成稳定修复；Insights按用户选择NOT_RUN。
-图：progress/2026-10-16/polish01_turning_video_pending.jpg；录像与完整数字留本地appendix/polish_20261015。
-接着做2镜头距离，再3城堡灯、4穿模、5魔导车、6道路/探索、7空屋；8最终包与性能/录像复验。
-恢复：WORK_CHECKPOINT.json；私有saved_plan及保存前备份保留；素材原件与用户设置未改。
+# R3 修补轮 · 2镜头距离完成，进入3城堡照明 · 2026-10-16
+修补预览EXE：E:/GameDev/Builds/HarborCity/M5_VS4/Candidate_20261016_130303_836_polishshipping/Archive/Windows/HarborCity/Binaries/Win64/HarborCity-Win64-Shipping.exe
+第1项仍未完成：Epic偶发启动GPU崩溃；ddagrab20秒/30帧近似重复13.38%（要求≤5%）；8前回修。
+High/60 四处平均16.69/16.67/16.67/16.67ms；p99 19.63/19.49/19.59/19.37ms；>50ms均0，快甩无>50ms。
+Epic有效样本平均17.64/16.17/16.39/18.20ms；p99 22.44/19.91/20.83/22.82ms；启动不稳定仍FAIL。
+性能数字来自Candidate_20261016_115554_067；最终包将重测，不能据旧包数字宣称新包通过。
+第2项：室外默认3m、室内约2.2m；P菜单镜头距离2–5m，与灵敏度/反转Y一起保存并重启读回通过。
+广场/小巷/室内同机位对比通过；FOV未改，星弓肩位参数未改；人物明显放大，室内画面下缘裁到小腿。
+镜头输入/穿墙路线、星弓20m/A6、主线四章/F5F9、地图双向往返实际PASS；退出窗口守卫异常旧记录保留。
+第2项未改地图；上一地图批具名NPC/任务点实际存读档45/45通过。
+图：progress/2026-10-16/polish02_camera_distance.jpg；第1项待修图polish01_turning_video_pending.jpg。
+第1项已定位局部灯VSM及显存压力；128私有Nanite副本/57,840实例与36处投影调整，Lumen/VSM/100%比例保留。
+接着3城堡灯、4穿模、5魔导车、6道路/探索、7空屋；8前回修Epic/录像，再做最终包与完整回归。
+恢复见WORK_CHECKPOINT.json；证据STEP1_RECEIPT/STEP2_RECEIPT；只发布JPG与STATUS，私有资产和用户设置保留。
