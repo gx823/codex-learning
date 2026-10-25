@@ -1,101 +1,104 @@
-EXE（本轮最终唯一 Shipping 候选）：E:\GameDev\Builds\HarborCity\M5_VS4\Candidate_20261025_040814_431_d703375a\Archive\Windows\HarborCity\Binaries\Win64\HarborCity-Win64-Shipping.exe
+# HarborCity M5-VS4 R3 · 清穿模第 6 版 + 光照/飞行 · 2026-10-25
 
-2026-10-24 清穿模第5版：DELIVERED_WITH_REMAINING。更新时间：2026-10-25T05:25:34.989920+08:00。
+更新：2026-10-25T23:51:02.146451+08:00。
 
-最终 Shipping 误触发验收：52 组各静站至少10秒、45 个不同站位，并实际往返；误送回 0 次。新增齐膝碰撞 914 件。原始导航候选 416 组，其中 68 组全部原始种子已连通；未修复候选 348 组，逐组记录保留。
+**最终 Shipping EXE**：`E:\GameDev\Builds\HarborCity\M5_VS4\Candidate_20261025_222552_877_f30d03e5\Archive\Windows\HarborCity\Binaries\Win64\HarborCity-Win64-Shipping.exe`
 
-最终第三人称镜头审计 187872 帧：胶囊内 0 帧、近头且人物仍显示 0 帧。整个人物同时隐藏/恢复，植物忽略镜头；原树顶保留360度回归。515个巡查站点已复查，2个树冠站纠正，另23个被挡/水下站点保留待修。
+EXE SHA-256：`B464DEBAA373E1E96E2E0AA0AA5FCF9C2D9A033C15FB490AA5CD1E7B30FF6A5E`。唯一最终 Candidate：`E:\GameDev\Builds\HarborCity\M5_VS4\Candidate_20261025_222552_877_f30d03e5`。
 
-剩余重点：扩大碰撞实走 8 条失败断言（具体对象见附录），无法建立有效接近路线者为 NOT_RUN；部分房间完整任务路径、导航候选、墙脚灰色尖石、半段回墙接缝、运河悬根树、185件/91栏杆及685大件尚未全部视觉验收。没有把未通过项改记为通过。
+**验收数字**：原 15 项 14/15 通过；最终包镜头 237949 帧，胶囊内 0 帧、无玩家俯仰输入时自动俯角超过 60° 0 帧、头部与镜头间非植物不透明遮挡 0 帧。普通室内/柜台站立和实走误送回 0 次。扩大碰撞实走 91/92 个方向通过，NOT_RUN 0。
 
+**仍剩下**：
 
-最终15项原生验收：
+第一、二节仍未全部完成；本轮带以下未完成项交付。
 
-| 项目 | 结果 | 检查数 | 失败数 |
-|---|---|---:|---:|
-| story | PASS | 122 | 0 |
-| travel | PASS | 13 | 0 |
-| oldtravel | PASS | 19 | 0 |
-| ride | PASS | 21 | 0 |
-| named | PASS | 46 | 0 |
-| bow | PASS | 51 | 0 |
-| a6 | PASS | 190 | 0 |
-| follow | PASS | 21 | 0 |
-| alleys | PASS | 73 | 0 |
-| distance | PASS | 17 | 0 |
-| high | PASS | 22 | 0 |
-| safety | PASS | 70 | 0 |
-| close | PASS | 95 | 0 |
-| physics | FAIL_OR_INCOMPLETE | 534 | 8 |
-| medium | PASS | 45 | 0 |
+- 完整导航仍未过：任务入口 B017、任务入口 B010、任务入口 B155、室内 B027_2、室内 B155_1、室内 B155_2。门内实走与完整 HUD 路线分别记账。
+- 扩大碰撞仍有 1 个失败方向：SACK74；0 个未执行方向。其碰撞体和实例绑定检查通过，但连续受阻证据未过，旁边平板车/道具介入；两轮换向诊断仍未通过。四件指定道具共 8 个方向通过，不能据此把整项记为通过。
+- 可达主线路线范围的 31 组导航候选仍均含部分未通或受阻采样；317 组范围外候选仅计数，未全修。
+- ⑭ 室内偏色及高光已改善；B027 暗角仍偏暗，全部房间的窗光方向和白布曝光尚未逐处完成验收。
+- 限时摆放剩余：原 159 件中的 154 件；原 88 段栏杆中的 83 段；673 件大件待分区复核。三批对象有重合，不能相加。
+- 23 个巡查站点已补拍 17 个；另 6 个在原点 3 m 范围内未找到干燥站立面。
+- ⑮ 已补主街/小巷现有灯源附近及北桥下；全域 8—12 m 光源间距未完成逐段验收。
 
-真受困专项包括水下3次、P菜单3次、城堡/运河脱困、室内门口内侧恢复及地板下恢复；正常台面/闲置/对话不作为无路回收理由。Medium 原生测试比较游戏 QualityPreset=1、11组均1、30帧上限。
+## 本轮已保存的修改
 
-按区保存均有存前备份、自动检查、保存、重载和具名NPC存读档；393冻结点保持。预览包和最终包独立，旧包未覆盖。墙接头已用重叠闭合并统一顶线，24/24射线通过；无效第二次下沉已撤回，灰色墙脚未宣称解决。平板车已沿路缘方向重新摆放，最终照片供复核。
+- 自动抬镜头上限 60°；空间不足时收近并隐藏整个人物。玩家主动向下看保留。只有树叶、灌木可忽略镜头，布帘、遮阳篷、摊位、栏杆继续阻挡镜头。
+- 核对真实道具实例和每个碰撞体；修复可实走方向，出生广场紫顶货摊草垛固定列入回归。市场 HCM2InstancedProp_73 #47—#50 移道具，NPC 不动。
+- 平板车归到长椅/木桶一组；黄纸袋归回墙边货物；墙脚尖石贴地，回墙接缝由约 44.8 cm 改为 2 cm 搭接；运河树沿岸移动约 14.3 m，根部落在土面。
+- 室内 102 盏灯调整为暖白为主并降低过曝高光；72 处现有可见灯源补地面光，北桥下 2 处补光；夜间树叶及 6 类绿色地表材质随环境变暗。
+- 翅膀用实际羽片碰撞查询遇墙收拢；滑翔使用独立长发阻尼与风向，落地恢复原参数。
+- 保存批次均走备份、原生自动检查、保存、重载、具名 NPC 存读档。整摊父组件误移动已撤回，最终只调整两件松散货物；撤回的位移不计作修复数量。
 
-按区/类剩余清单（自动检查通过不等于人工视觉通过）：
+## 最终 Shipping 15 项
 
-- canal:CLEAR_AUTOMATED：1 件。
-- canal:REMAINING：18 件。
-- castle:CLEAR_AUTOMATED：4 件。
-- castle:REMAINING：53 件。
-- central:REMAINING：3 件。
-- gate:CLEAR_AUTOMATED：2 件。
-- gate:REMAINING：5 件。
-- interior:CLEAR_AUTOMATED：12 件。
-- interior:REMAINING：52 件。
-- market:CLEAR_AUTOMATED：2 件。
-- market:REMAINING：9 件。
-- port:CLEAR_AUTOMATED：1 件。
-- port:REMAINING：11 件。
-- workshop:CLEAR_AUTOMATED：4 件。
-- workshop:REMAINING：8 件。
-- 91段栏杆中自动检查无问题 3 段，尚未完成全量视觉验收。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_73.Instances#instance=47（market）：REMAINING_NPC_PRIORITY。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_73.Instances#instance=48（market）：REMAINING_NPC_PRIORITY。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_73.Instances#instance=49（market）：REMAINING_NPC_PRIORITY。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_73.Instances#instance=50（market）：REMAINING_NPC_PRIORITY。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_387.Instances#instance=133（workshop）：SAVED_MOVED_NPC_CLEAR。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_387.Instances#instance=145（market）：SAVED_MOVED_NPC_CLEAR。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_387.Instances#instance=163（port）：SAVED_MOVED_NPC_CLEAR。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_388.Instances#instance=129（workshop）：SAVED_MOVED_NPC_CLEAR。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_388.Instances#instance=141（market）：SAVED_MOVED_NPC_CLEAR。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_388.Instances#instance=150（central）：SAVED_MOVED_NPC_CLEAR。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_388.Instances#instance=159（port）：SAVED_MOVED_NPC_CLEAR。
-- 大件优先对象 /Game/HarborCity/M5VS4/Capital/R2_eae16c3bde68/L_CapitalR2.L_CapitalR2:PersistentLevel.HCM2InstancedProp_389.Instances#instance=153（port）：SAVED_MOVED_NPC_CLEAR。
-- 673个落地/高处大件：分区视觉抽查未完成；完整逐件清单保存在 bulk685_final_audit.json。
-- 地面巡查9组和港口缺站：最终补拍结果单列；①⑥⑲同机位和③推车专门对比图尚未完成。
+| 项目 | 结果 |
+|---|---|
+| 主线完整覆盖 | PASS |
+| 首都往返 | PASS |
+| 旧镇往返 | PASS |
+| 载具 | PASS |
+| 具名 NPC 存读档 | PASS |
+| 弓箭 | PASS |
+| 旧镇弓箭最终检查 | PASS |
+| 跟随镜头输入 | PASS |
+| 小巷镜头 | PASS |
+| 2/3/5 米视距 | PASS |
+| High 四处静止和转视角 | PASS |
+| 安全兜底 | PASS |
+| 近墙/门洞/布帘/树顶镜头 | PASS |
+| 扩大碰撞实走 | FAIL_OR_INCOMPLETE |
+| 中画质 30 帧 | PASS |
 
-详细证据：appendix/clipping4_20261024/RECOVERY_FINAL_REVIEW.json、CAMERA_FINAL_AUDIT.json、runtime_final_consolidated.json、COLLISION_FINAL_REMAINING.json、NAVIGATION_FINAL_REVIEW.json、VISUAL_ACCEPTANCE_FINAL.json。
+High 四处 20 秒转视角：广场 60.00 FPS / P99 19.50 ms；港口 60.00 FPS / P99 19.43 ms；公会室内 60.00 FPS / P99 19.54 ms；王座厅 60.00 FPS / P99 19.61 ms。四处另测 180° 快转，全部通过；所有性能采样中超过 50 ms 的帧数 0。详细数据在本机本轮 runtime 目录的 `high_metrics.json`；中画质使用 30 FPS 上限。附加测试均要求相同 EXE SHA-256，开发版结果不混入最终包镜头数字。
 
-原文顺序：REQUEST_CLIPPING4_20261024.md → REQUEST_CLIPPING4_CAMERA_20261024.md（最后一条优先）。不删资产、不缩至90%以下；暂停P、Esc停止；只保留最终JPG和少量关键PNG，不提交录像帧。发布仅限指定progress图片及STATUS。
+## 导航与站立复核
 
-最终补充核对：
+任务房间 HUD 检查 2/5 通过；20 段室内 HUD 检查 17/20 通过；门内实际行走 25/25 通过。完整任务路线未通过的名称见顶部，保留失败结果。
 
-- 九类实际阻挡样本：{'BARREL': 6, 'BENCH': 6, 'CART': 6, 'CRATE': 4, 'HAY': 6, 'PLANTER': 5, 'SACK': 5, 'STALL': 36, 'TABLE': 4}；每类至少3件成立。共 78 件实际阻挡通过，4件失败（TABLE37、TABLE41、CRATE67、STALL69），6 件接近路线无效为 NOT_RUN。
-- 地面补拍30张、216条原生检查通过，港口 port_wall_loop_fwd_006 已补；中央北桥正反两组画面仍过暗，保留视觉待修。最终拼图在 appendix/clipping4_20261024/ground_retakes_final_contact.jpg。
-- 性能环境：i7-14650HX、RTX 4060 Laptop GPU、1920×1080，编辑器关闭、前台独立运行。High四处共8段采样条件有效且目标通过，平均帧率范围 59.99–60.28；详细帧时间与显存见原生采样。Medium原生45项通过、30帧上限。
-- 七区39件摆放完成保存/重载/具名NPC验证；原185件中26件自动检查无问题、159件仍有问题，不代表26件已全部视觉验收。部分室内机位较俯视或局部过亮，平板车贴边间距仍供复核。
+348 组导航候选中，31 组属于本轮可达主线路线范围，317 组在范围外。范围外按区域分组（跨区单列，不重复相加）：港口 16；运河 / 港口 1；运河 / 市场 / 港口 1；运河 61；运河 / 市场 1；运河 / 中央 2；市场 47；城门 / 市场 5；城门 29；城门 / 工坊 3；工坊 39；城堡 / 工坊 4；中央 / 工坊 1；城堡 64；城堡 / 中央 2；中央 41。
 
-交付图（正常场景光照；墙、平板车为保存地图的GameView，其余为最终Shipping）：
+剩余 6 个水下站点：canal_wall_loop_rev_068、port_wall_loop_fwd_004、port_wall_loop_fwd_005、port_wall_loop_rev_067、castle_wall_loop_fwd_063、castle_wall_loop_rev_009。每组原点周围 3 m 已做原生地面检查；未改成远处截图充数。
 
-- [HAY：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_hay.jpg)
-- [BARREL：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_barrel.jpg)
-- [CRATE：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_crate.jpg)
-- [SACK：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_sack.jpg)
-- [PLANTER：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_planter.jpg)
-- [STALL：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_stall.jpg)
-- [CART：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_cart.jpg)
-- [BENCH：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_bench.jpg)
-- [TABLE：实际移动后被对应碰撞阻挡](progress/clipping4_20261024_collision_table.jpg)
-- [公会两凳间柜台：静站10秒，未送回](progress/clipping4_20261024_guild_counter_10s.jpg)
-- [真实落至地板下后恢复到本室门内侧](progress/clipping4_20261024_recovery_inner_door.jpg)
-- [市场同路段3米视距；地面站位](progress/clipping4_20261024_market_fwd.jpg)
-- [市场同路段3米视距；地面站位](progress/clipping4_20261024_market_rev.jpg)
-- [20段室内实走的10秒停留画面；每格原生测试日志单独对应](progress/clipping4_20261024_rooms20.jpg)
-- [⑪正面接缝闭合、墙顶连续；灰色墙脚尖石仍待修。保存地图正常光照GameView。](progress/clipping4_20261024_wall_joint.jpg)
-- [反馈平板车沿路缘方向移动后的正常光照GameView；贴边间距仍供用户复核。](progress/clipping4_20261024_flat_cart.jpg)
+## 限时摆放剩余清单
 
-临时帧清理：删除 2303 张测试临时帧，另清理 13 张工作联系图；保留16张交付JPG、地面最终拼图和8张原生关键PNG。最终Candidate录像帧检查为0；所有数值和失败日志保留。桌面测试进程已结束。
+一般摆放在约 1.5 小时时限内停止。之后只处理用户指定碰撞与入口导航问题。
 
-进度图片与本STATUS发布至 [progress分支](https://github.com/gx823/codex-learning/tree/codex/harborcity-m5-vs3-r2-gate-20260927/docs/HarborCity_M5_VS4/R3/progress)，本轮不推送源码或资产。
+- 原 159 件：剩余 154。按区：室内 52；工坊 8；中央 3；城堡 52；城门 5；市场 9；运河 14；港口 11。按类：家具 27；建筑 2；灌木 5；花槽 9；其他 25；栏杆 83；车辆 1；摊位 1；树木 1。
+- 栏杆：剩余 83 段。按区：城门 4；港口 12；市场 8；运河 14；工坊 6；城堡 39。类别均为栏杆；只按原目标身份扣减，附带同组邻段不重复抵扣。
+- 大件：673 件待复核。按区：城堡 198；工坊 172；运河 53；市场 116；中央 61；室内 43；城门 19；港口 11。按类：花槽 141；其他 129；车辆 117；长椅 46；灯具 50；树木 180；家具 8；灌木 2。
+
+## 正常曝光实拍与对比
+
+所有图片只做整帧缩放和画外文字标注，未增亮、改色或用生成图替代。⑰⑱ 左图明确标为本轮复现旧行为的诊断画面；⑯ 修前来自 d703375a。⑰ 两侧为编辑器游戏复拍，生产代码与最终 Shipping 相同，仅测试脚本增加 0.5 秒等待截图完成；原 Shipping 截图落入下一场景，已弃用。最终 Shipping 的真实楼墙悬停原生审计为 271 帧、羽片穿墙 0 帧，独立保留。
+
+- [平板车：移至长椅、木桶组旁](progress/clipping5_20261025_10_cart.jpg)
+- [公会西侧黄纸袋：归入墙边货物组](progress/clipping5_20261025_11_bag.jpg)
+- [墙脚灰色尖石：压低到街面](progress/clipping5_20261025_12_wall.jpg)
+- [运河树：沿岸移至土面，外露树根落岸](progress/clipping5_20261025_13_tree.jpg)
+- [17 个巡查站点补拍](progress/clipping5_20261025_19_station_retakes.jpg)
+- [公会门口：按 S 退进门洞](progress/clipping5_20261025_01_guild_back.jpg)
+- [公会外墙：只转镜头，不后退](progress/clipping5_20261025_02_guild_turn.jpg)
+- [出生广场货摊：布帘遮挡回归](progress/clipping5_20261025_03_curtain.jpg)
+- [室内 B004_2：镜头收近后的正常视角](progress/clipping5_20261025_04_B004.jpg)
+- [室内 B027_2：镜头收近后的正常视角](progress/clipping5_20261025_04_B027.jpg)
+- [（14） 公会：暖白主光与桌面高光](progress/clipping5_20261025_14_guild.jpg)
+- [（14） B004：木材本色与室内层次](progress/clipping5_20261025_14_B004.jpg)
+- [（14） B027：墙面偏色降低，暗角仍偏暗](progress/clipping5_20261025_14_B027.jpg)
+- [（15） 夜里小巷：人物与路面可见度](progress/clipping5_20261025_15_alley.jpg)
+- [（16） 夜间树冠：随环境变暗](progress/clipping5_20261025_16_canopy.jpg)
+- [（16） 夜间草地：抑制日间亮绿](progress/clipping5_20261025_16_grass.jpg)
+- [（15） 中央北桥下：补充可见地面光](progress/clipping5_20261025_15_bridge.jpg)
+- [PROP_TABLE_37：实际按住移动被挡住](progress/clipping5_20261025_06_table37.jpg)
+- [PROP_TABLE_41：实际按住移动被挡住](progress/clipping5_20261025_07_table41.jpg)
+- [PROP_CRATE_67：实际按住移动被挡住](progress/clipping5_20261025_08_crate67.jpg)
+- [PROP_STALL_69：实际按住移动被挡住](progress/clipping5_20261025_09_stall69.jpg)
+- [（17） 飞近楼边：翅膀遇墙收拢](progress/clipping5_20261025_17_wings.jpg)
+- [（18） 自动滑翔：长发向后下方飘动](progress/clipping5_20261025_18_hair.jpg)
+
+## 本机审计与边界
+
+本轮详细原生证据位于 `D:\科研学习\codex学习\docs\HarborCity_M5_VS4\R3\appendix\clipping5_20261025`：`DELIVERY_REPORT.md`、`CAMERA_FINAL_AUDIT.json`、`COLLISION_FINAL_REMAINING.json`、`NAVIGATION_FINAL_REVIEW.json`、`VISUAL_ACCEPTANCE_FINAL.json`、`PLACEMENT_FINAL_REMAINING.json`、`STATION_RETAKES_FINAL.json`。
+
+飞行墙面回归覆盖本轮实际测试立面，不声称检查过每个屋顶转角。光照有下午/夜间同站点对比，⑮ 全城灯距验收仍未完成。没有删除现有物件或缩到原尺寸的 90% 以下，没有移动冻结 NPC。
+
+录像规则：本轮只保留压缩图片证据；无 PPM/BMP 原始帧，无打包目录中的录像帧。已清理 858 张本轮临时截图，释放 2.33 GiB，保留请求对比图源及关键失败证据。 临时截图清理另有本机收据。桌面操作已停止；最终状态见 `WORK_CHECKPOINT.json`。
